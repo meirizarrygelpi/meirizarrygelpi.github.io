@@ -130,7 +130,7 @@ So besides $(\ref{Heq})$, we also have
 \end{equation}
 and
 \begin{equation}
-p = \frac{\partial G}{\partial \dot{x}} \qquad \dot{x} = \frac{\partial K}{\partial p} \qquad \frac{\partial K}{\partial \dot{p}} = {-\frac{\partial G}{\partial \dot{p}}} \qquad \frac{\partial K}{\partial t} = {-\frac{\partial G}{\partial t}}
+p = \frac{\partial G}{\partial \dot{x}} \qquad \dot{x} = \frac{\partial K}{\partial p} \qquad \frac{\partial K}{\partial \dot{p}} = {-\frac{\partial G}{\partial \dot{p}}} \qquad {-\frac{\partial K}{\partial t}} = \frac{\partial G}{\partial t}
 \end{equation}
 We can collect all the terms with derivatives of $H$ and $G$,
 \begin{equation}
@@ -206,7 +206,7 @@ Using $ (\ref{Hderiv}) $ we find
 \begin{equation} \frac{\mathrm{d} h}{\mathrm{d} t} = \frac{\partial h}{\partial x} \cdot \frac{\partial H}{\partial p} - \frac{\partial H}{\partial x} \cdot \frac{\partial h}{\partial p} + \frac{\partial h}{\partial t} 
 \end{equation}
 This involves the familiar Poisson bracket,
-\begin{equation} \lbrace h , H \rbrace = \frac{\partial h}{\partial x} \cdot \frac{\partial H}{\partial p} - \frac{\partial H}{\partial x} \cdot \frac{\partial h}{\partial p} 
+\begin{equation} [ h , H ] = \frac{\partial h}{\partial x} \cdot \frac{\partial H}{\partial p} - \frac{\partial H}{\partial x} \cdot \frac{\partial h}{\partial p} 
 \end{equation}</p>
 <h1>Harmonic Oscillator</h1>
 <p>During a course on classical mechanics, one is rarely introduced to the dual Lagrangian $K$ or the dual Hamiltonian $G$. Indeed, they are mentioned in <em>Goldstein, Poole and Safko</em> as problems at the end of chapter 8 (alas, with a different sign convention). I suspect the dual functions can be used to study magnetic degrees of freedom. By magnetic, I mean heavy or strongly-coupled.</p>

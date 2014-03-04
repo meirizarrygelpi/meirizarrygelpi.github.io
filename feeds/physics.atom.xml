@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>The Superconformist</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-02-17T00:00:00-05:00</updated><entry><title>Colloquium at Wesleyan</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/wesleyan-talk/" rel="alternate"></link><updated>2014-02-17T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-17:posts/2014/Feb/wesleyan-talk/</id><summary type="html">&lt;p&gt;Next April I will be giving a colloquium talk at Wesleyan University. This will be a good opportunity to share my graduate research with the Wesleyan community. Even though the topic of my research might not be very familiar to the audience, I hope that I get to discuss some interesting physics.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The Superconformist</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-03-04T00:00:00-05:00</updated><entry><title>Informal Seminar</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/informal-seminar/" rel="alternate"></link><updated>2014-03-04T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-04:posts/2014/Mar/informal-seminar/</id><summary type="html">&lt;p&gt;I am thinking of volunteering to give a series of informal seminars on fancy topics in high-energy theoretical physics. Here is a short list of topics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quantum Field Theory: Path integrals, Feynman rules, etc.&lt;/li&gt;
+&lt;li&gt;Yang-Mills theory and the Standard Model&lt;/li&gt;
+&lt;li&gt;Twistor variables and conformal symmetry&lt;/li&gt;
+&lt;li&gt;Supersymmetry and supergravity&lt;/li&gt;
+&lt;li&gt;String theory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The idea is to give a taste of what topic is about, without unnecesary details. However, the devil is always in the details, so not much is going to be gain from this. We'll have to wait and see...&lt;/p&gt;</summary><category term="seminar"></category></entry><entry><title>Colloquium at Wesleyan</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/wesleyan-talk/" rel="alternate"></link><updated>2014-02-17T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-17:posts/2014/Feb/wesleyan-talk/</id><summary type="html">&lt;p&gt;Next April I will be giving a colloquium talk at Wesleyan University. This will be a good opportunity to share my graduate research with the Wesleyan community. Even though the topic of my research might not be very familiar to the audience, I hope that I get to discuss some interesting physics.&lt;/p&gt;
 &lt;p&gt;As a first step to prepare my slides, here is a logical breakdown into three parts.&lt;/p&gt;
 &lt;h1&gt;What is the problem?&lt;/h1&gt;
 &lt;p&gt;I studied elastic scattering of massive, relativistic, scalar particles in $ D = 2 + 1 $ and $ D = 3 + 1 $ dimensions. To be more specific, I computed non-perturbative four-point scattering amplitudes for two-body systems where each body was coupled to a massless mediating field. I consider the cases where the massless mediating field has spin 0, 1 and 2.&lt;/p&gt;
@@ -77,7 +85,7 @@ So besides $(\ref{Heq})$, we also have
 \end{equation}
 and
 \begin{equation}
-p = \frac{\partial G}{\partial \dot{x}} \qquad \dot{x} = \frac{\partial K}{\partial p} \qquad \frac{\partial K}{\partial \dot{p}} = {-\frac{\partial G}{\partial \dot{p}}} \qquad \frac{\partial K}{\partial t} = {-\frac{\partial G}{\partial t}}
+p = \frac{\partial G}{\partial \dot{x}} \qquad \dot{x} = \frac{\partial K}{\partial p} \qquad \frac{\partial K}{\partial \dot{p}} = {-\frac{\partial G}{\partial \dot{p}}} \qquad {-\frac{\partial K}{\partial t}} = \frac{\partial G}{\partial t}
 \end{equation}
 We can collect all the terms with derivatives of $H$ and $G$,
 \begin{equation}
@@ -153,7 +161,7 @@ Using $ (\ref{Hderiv}) $ we find
 \begin{equation} \frac{\mathrm{d} h}{\mathrm{d} t} = \frac{\partial h}{\partial x} \cdot \frac{\partial H}{\partial p} - \frac{\partial H}{\partial x} \cdot \frac{\partial h}{\partial p} + \frac{\partial h}{\partial t} 
 \end{equation}
 This involves the familiar Poisson bracket,
-\begin{equation} \lbrace h , H \rbrace = \frac{\partial h}{\partial x} \cdot \frac{\partial H}{\partial p} - \frac{\partial H}{\partial x} \cdot \frac{\partial h}{\partial p} 
+\begin{equation} [ h , H ] = \frac{\partial h}{\partial x} \cdot \frac{\partial H}{\partial p} - \frac{\partial H}{\partial x} \cdot \frac{\partial h}{\partial p} 
 \end{equation}&lt;/p&gt;
 &lt;h1&gt;Harmonic Oscillator&lt;/h1&gt;
 &lt;p&gt;During a course on classical mechanics, one is rarely introduced to the dual Lagrangian $K$ or the dual Hamiltonian $G$. Indeed, they are mentioned in &lt;em&gt;Goldstein, Poole and Safko&lt;/em&gt; as problems at the end of chapter 8 (alas, with a different sign convention). I suspect the dual functions can be used to study magnetic degrees of freedom. By magnetic, I mean heavy or strongly-coupled.&lt;/p&gt;
