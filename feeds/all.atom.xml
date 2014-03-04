@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The Superconformist</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-03-01T00:00:00-05:00</updated><entry><title>arXiv picks for week 9</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/week-9/" rel="alternate"></link><updated>2014-03-01T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-01:posts/2014/Mar/week-9/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.5260"&gt;Impact factors for Reggeon-gluon transition in $N = 4$ SYM with large number of colours&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.5396"&gt;Partition Functions and Casimir Energies in Higher Spin $AdS_{d+1}/CFT_{d}$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.5698"&gt;Conformal blocks for highly disparate scaling dimensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.5765"&gt;Is It Possible To Embed A 4D, $N = 4$ Supersymmetric Vector Multiplet Within A Completely Off-Shell Adinkra Hologram?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.5674"&gt;Computational Complexity and Black Hole Horizons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.5961"&gt;Radiation and a dynamical UV/IR connection in AdS/CFT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.6322"&gt;Scale Invariance, Conformality, and Generalized Free Fields&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.6327"&gt;The Field Theory of Intersecting D3-branes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.6334"&gt;Models of $ AdS_{2} $ Backreaction and Holography&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.6356"&gt;String theory in target space&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.6805"&gt;Dual-color decompositions at one-loop level in Yang-Mills theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.7062"&gt;Anomalies without an action&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican')) {
+        var s = document.createElement('script');
+        s.id = 'mathjaxscript_pelican';
+        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        s[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+    }
+&lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 8</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/week-8/" rel="alternate"></link><updated>2014-02-22T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-22:posts/2014/Feb/week-8/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.3300"&gt;The four-loop remainder function and multi-Regge behavior at NNLLA in planar $N=4$ super-Yang-Mills theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.3307"&gt;Space-time S-matrix and Flux-tube S-matrix III. The two-particle contributions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.3556"&gt;Large $J$ expansion in ABJM theory revisited&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.5135"&gt;The Holographic Dual of $AdS_{3} \times S_{3} \times S_{3} \times S_{1}$&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican')) {
+        var s = document.createElement('script');
+        s.id = 'mathjaxscript_pelican';
+        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        s[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+    }
+&lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>Colloquium at Wesleyan</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/wesleyan-talk/" rel="alternate"></link><updated>2014-02-17T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-17:posts/2014/Feb/wesleyan-talk/</id><summary type="html">&lt;p&gt;Next April I will be giving a colloquium talk at Wesleyan University. This will be a good opportunity to share my graduate research with the Wesleyan community. Even though the topic of my research might not be very familiar to the audience, I hope that I get to discuss some interesting physics.&lt;/p&gt;
+&lt;p&gt;As a first step to prepare my slides, here is a logical breakdown into three parts.&lt;/p&gt;
+&lt;h1&gt;What is the problem?&lt;/h1&gt;
+&lt;p&gt;I studied elastic scattering of massive, relativistic, scalar particles in $ D = 2 + 1 $ and $ D = 3 + 1 $ dimensions. To be more specific, I computed non-perturbative four-point scattering amplitudes for two-body systems where each body was coupled to a massless mediating field. I consider the cases where the massless mediating field has spin 0, 1 and 2.&lt;/p&gt;
+&lt;h1&gt;How was the problem solved?&lt;/h1&gt;
+&lt;p&gt;The scattering amplitude was written in terms of a two-body path integral. After doing a functional integration over the mediating field, one obtains an effective two-body system. In order to evaluate the resulting two-body path integral, we use the semiclassical approximation.&lt;/p&gt;
+&lt;h1&gt;What results were obtained?&lt;/h1&gt;
+&lt;p&gt;Since the semiclassical approximation is non-perturbative, the resulting scattering amplitudes exhibit features like bound state singularities that are outside of the perturbative regime. One hopes to extend these results to more relevant theories.&lt;/p&gt;
+&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican')) {
+        var s = document.createElement('script');
+        s.id = 'mathjaxscript_pelican';
+        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        s[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+    }
+&lt;/script&gt;
+</summary><category term="semiclassical"></category></entry><entry><title>arXiv picks for week 7</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/week-7/" rel="alternate"></link><updated>2014-02-15T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-15:posts/2014/Feb/week-7/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.1821"&gt;Color-Kinematic Duality in ABJM Theory Without Amplitude Relations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.2516"&gt;On the solutions of the scattering equations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.2973"&gt;Mathieu moonshine in four dimensional $\mathcal{N} = 1$ theories&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican')) {
+        var s = document.createElement('script');
+        s.id = 'mathjaxscript_pelican';
+        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        s[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+    }
+&lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>Lagrangians and Hamiltonians</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/lags-hams/" rel="alternate"></link><updated>2014-02-13T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-13:posts/2014/Feb/lags-hams/</id><summary type="html">&lt;p&gt;The Lagrangian $L(x, \dot{x}, t)$ is a function of the generalized coordinate $x$, the generalized velocity $\dot{x}$, and also time. One is also familiar with the Hamiltonian $H(x, p, t)$, which is a function of the generalized momentum $p$ and the generalized coordinate. These two are related via
+\begin{equation}
+H = \dot{x} \cdot p - L \label{Ham}
+\end{equation}
+From
+\begin{equation}
+\mathrm{d}L = \frac{\partial L}{\partial x} \cdot \mathrm{d}x + \frac{\partial L}{\partial \dot{x}} \cdot \mathrm{d}\dot{x} + \frac{\partial L}{\partial t}\mathrm{d}t
+\end{equation}
+and
+\begin{equation}
+\mathrm{d}H = \frac{\partial H}{\partial x} \cdot \mathrm{d}x + \frac{\partial H}{\partial p} \cdot \mathrm{d}p + \frac{\partial H}{\partial t}\mathrm{d}t
+\end{equation}
+it follows that
+\begin{equation}
+p = \frac{\partial L}{\partial \dot{x}} \qquad \dot{x} = \frac{\partial H}{\partial p} \qquad {- \frac{\partial L}{\partial x}} = \frac{\partial H}{\partial x} \qquad {- \frac{\partial L}{\partial t}} = \frac{\partial H}{\partial t} \label{Heq}
+\end{equation}
+If one assumes the Euler-Lagrange equations,
+\begin{equation}
+\frac{\partial L}{\partial x} = \frac{\mathrm{d}}{\mathrm{d} t} \left( \frac{\partial L}{\partial \dot{x}} \right)
+\end{equation}
+then the relations in $(\ref{Heq})$ become the Hamilton equations.&lt;/p&gt;
+&lt;h1&gt;Dual Functions&lt;/h1&gt;
+&lt;p&gt;Nothing prevents us from postulating the existence of a dual Lagrangian $K(\dot{p}, p, t)$, which is a function of the generalized force $\dot{p}$ and the generalized momentum, and also a dual Hamiltonian $G(\dot{p}, \dot{x}, t)$, which is a function of the generalized force and the generalized velocity. Obviously, we have
+\begin{equation}
+\mathrm{d}K = \frac{\partial K}{\partial \dot{p}} \cdot \mathrm{d} \dot{p} + \frac{\partial K}{\partial p} \cdot \mathrm{d}p + \frac{\partial K}{\partial t} \mathrm{d}t
+\end{equation}
+and
+\begin{equation}
+\mathrm{d}G = \frac{\partial G}{\partial \dot{p}} \cdot \mathrm{d}\dot{p} + \frac{\partial G}{\partial \dot{x}} \cdot \mathrm{d}\dot{x} + \frac{\partial G}{\partial t} \mathrm{d}t
+\end{equation}
+In analogy with $(\ref{Ham})$, we postulate the relations
+\begin{equation}
+H = \dot{x} \cdot p - L \qquad H = -x \cdot \dot{p} + K \qquad G = -x \cdot \dot{p} + L \qquad G = \dot{x} \cdot p - K
+\end{equation}
+So besides $(\ref{Heq})$, we also have
+\begin{equation}
+\dot{p} = {-\frac{\partial H}{\partial x}} \qquad x = \frac{\partial K}{\partial \dot{p}} \qquad \frac{\partial K}{\partial p} = \frac{\partial H}{\partial p} \qquad \frac{\partial K}{\partial t} = \frac{\partial H}{\partial t}
+\end{equation}
+\begin{equation}
+\dot{p} = \frac{\partial L}{\partial x} \qquad x = -\frac{\partial G}{\partial \dot{p}} \qquad \frac{\partial L}{\partial \dot{x}} = \frac{\partial G}{\partial \dot{x}} \qquad \frac{\partial L}{\partial t} = \frac{\partial G}{\partial t}
+\end{equation}
+and
+\begin{equation}
+p = \frac{\partial G}{\partial \dot{x}} \qquad \dot{x} = \frac{\partial K}{\partial p} \qquad \frac{\partial K}{\partial \dot{p}} = {-\frac{\partial G}{\partial \dot{p}}} \qquad \frac{\partial K}{\partial t} = {-\frac{\partial G}{\partial t}}
+\end{equation}
+We can collect all the terms with derivatives of $H$ and $G$,
+\begin{equation}
+\dot{x} = \frac{\partial H}{\partial p} \qquad \dot{p} = - \frac{\partial H}{\partial x} \qquad x = {-\frac{\partial G}{\partial \dot{p}}} \qquad p = \frac{\partial G}{\partial \dot{x}} \label{Hderiv}
+\end{equation}
+and all the terms with derivatives of $L$ and $K$,
+\begin{equation}
+p = \frac{\partial L}{\partial \dot{x}} \qquad x = \frac{\partial K}{\partial \dot{p}} \qquad \dot{p} = \frac{\partial L}{\partial x} \qquad \dot{x} = \frac{\partial K}{\partial p}
+\end{equation}
+which lead to two Euler-Lagrange equations,
+\begin{equation}
+\frac{\partial L}{\partial x} = \frac{\mathrm{d}}{\mathrm{d} t} \left( \frac{\partial L}{\partial \dot{x}} \right) \qquad \frac{\partial K}{\partial p} = \frac{\mathrm{d}}{\mathrm{d} t} \left( \frac{\partial K}{\partial \dot{p}} \right)
+\end{equation}
+We also have the relations among partial time derivatives,
+\begin{equation}
+\frac{\partial H}{\partial t} = {-\frac{\partial G}{\partial t}} \qquad \frac{\partial L}{\partial t} = {-\frac{\partial K}{\partial t}}
+\end{equation}
+It appears that assuming the existence of the dual functions and the relationships via Legendre transforms is equivalent to requiring the Euler-Lagrange equations.&lt;/p&gt;
+&lt;h1&gt;Actions&lt;/h1&gt;
+&lt;p&gt;Note that
+\begin{equation}
+K = \frac{\mathrm{d}}{\mathrm{d} t}(x \cdot p) - L \qquad G = \dot{x} \cdot p - x \cdot \dot{p} - H \qquad L + H = K + G
+\end{equation}
+This suggest that the action $S$ and the dual action $R$ defined by
+\begin{equation}
+    S = \int\limits_{t_{i}}^{t_{f}}\mathrm{d}t \, L \qquad R = \int\limits_{t_{i}}^{t_{f}}\mathrm{d}t \, K
+    \end{equation}
+are related via
+\begin{equation}
+R = x_{f} \cdot p_{f} - x_{i} \cdot p_{i} - S
+\end{equation}
+In some way, this relation can be viewed as a Legendre transform. If $R$ is a function of $p_{i}$ and $p_{f}$, and $S$ is a function of $x_{i}$ and $x_{f}$, it follows that
+\begin{equation}
+p_{f} = \frac{\partial S}{\partial x_{f}} \qquad p_{i} = - \frac{\partial S}{\partial x_{i}} \qquad x_{f} = \frac{\partial R}{\partial p_{f}} \qquad x_{i} = - \frac{\partial R}{\partial p_{i}}
+\end{equation}
+In principle, only two pieces of the temporal boundary data are independent. One can imagine working with $x_{f}$ and $p_{f}$ as the independent pieces of data. Then $x_{i}$ and $p_{i}$ are functions of $x_{f}$ and $p_{f}$. If we want to change the independent pieces of data to be $x_{i}$ and $x_{f}$, we would have to compute the Jacobian and inverse Jacobian matrices
+\begin{equation}
+ \frac{\partial x_{i}}{\partial p_{f}} = - \frac{\partial^{2} R}{\partial p_{f} \partial p_{i}} \qquad \frac{\partial p_{f}}{\partial x_{i}} = \frac{\partial^{2} S}{\partial x_{i} \partial x_{f}}
+ \end{equation}
+Similarly, if we work with $x_{i}$ and $p_{i}$ as independent pieces of data and then switch to $x_{i}$ and $x_{f}$ as the independent pieces of data, the Jacobian and inverse Jacobian matrices are
+\begin{equation}
+ \frac{\partial x_{f}}{\partial p_{i}} = \frac{\partial^{2} R}{\partial p_{i} \partial p_{f}} \qquad \frac{\partial p_{i}}{\partial x_{f}} = - \frac{\partial^{2} S}{\partial x_{f} \partial x_{i}}
+ \end{equation}
+If $S$ and $R$ are well-behaved functions, then it follows that
+\begin{equation}
+\frac{\partial x_{i}}{\partial p_{f}} + \frac{\partial x_{f}}{\partial p_{i}} = 0 \qquad \frac{\partial p_{f}}{\partial x_{i}} + \frac{\partial p_{i}}{\partial x_{f}} = 0
+\end{equation}&lt;/p&gt;
+&lt;h1&gt;Gauge Transformations&lt;/h1&gt;
+&lt;p&gt;Shifting $L$ by the total time derivative of a function of $x$ and $t$ leaves the Euler-Lagrange equations invariant. The action $S$ aquires a shift too:
+\begin{equation}
+L \rightarrow L + \frac{\mathrm{d} \Lambda}{\mathrm{d} t} \quad \Longrightarrow \quad S \rightarrow S + \Lambda(x_{f}, t_{f}) - \Lambda(x_{i}, t_{i})
+\end{equation}
+If we write $L$ in terms of $p$ and $H$, it follows that
+\begin{equation}
+L \rightarrow L + \frac{\mathrm{d} \Lambda}{\mathrm{d} t} \quad \Longrightarrow \quad p \rightarrow p + \frac{\partial \Lambda}{\partial x} \qquad H \rightarrow H - \frac{\partial \Lambda}{\partial t}
+\end{equation}
+These are the familiar gauge transformations of the electromagnetic potentials.&lt;/p&gt;
+&lt;p&gt;We have an analogous situation with $K$. Shifting $K$ by the total time derivative of a function of $p$ and $t$ leaves the Euler-Lagrange equations invariant. The dual action $R$ aquires a shift too:
+\begin{equation}
+K \rightarrow K + \frac{\mathrm{d} \Omega}{\mathrm{d} t} \quad \Longrightarrow \quad R \rightarrow R + \Omega(p_{f}, t_{f}) - \Omega(p_{i}, t_{i})
+\end{equation}
+If we write $K$ in terms of $x$ and $H$, it follows that
+\begin{equation}
+K \rightarrow K + \frac{\mathrm{d} \Omega}{\mathrm{d} t} \quad \Longrightarrow \quad x \rightarrow x + \frac{\partial \Omega}{\partial p} \qquad H \rightarrow H + \frac{\partial \Omega}{\partial t}
+\end{equation}
+Can we introduce dual potentials in momentum space such that these transformations compensate some gauge transformations of the dual potentials? What does this dual gauge theory look like? In the quantum theory, do $Z$ and $\psi$ correspond to Fourier transforms of $A$ and $\phi$, or are they unrelated?&lt;/p&gt;
+&lt;h1&gt;Brackets&lt;/h1&gt;
+&lt;p&gt;Consider a function $ h(x, p, t) $. The total time derivative of $ h $ is
+\begin{equation}
+ \frac{\mathrm{d} h}{\mathrm{d} t} = \frac{\partial h}{\partial x} \cdot \dot{x} + \frac{\partial h}{\partial p} \cdot \dot{p} + \frac{\partial h}{\partial t} 
+ \end{equation}
+Using $ (\ref{Hderiv}) $ we find
+\begin{equation} \frac{\mathrm{d} h}{\mathrm{d} t} = \frac{\partial h}{\partial x} \cdot \frac{\partial H}{\partial p} - \frac{\partial H}{\partial x} \cdot \frac{\partial h}{\partial p} + \frac{\partial h}{\partial t} 
+\end{equation}
+This involves the familiar Poisson bracket,
+\begin{equation} \lbrace h , H \rbrace = \frac{\partial h}{\partial x} \cdot \frac{\partial H}{\partial p} - \frac{\partial H}{\partial x} \cdot \frac{\partial h}{\partial p} 
+\end{equation}&lt;/p&gt;
+&lt;h1&gt;Harmonic Oscillator&lt;/h1&gt;
+&lt;p&gt;During a course on classical mechanics, one is rarely introduced to the dual Lagrangian $K$ or the dual Hamiltonian $G$. Indeed, they are mentioned in &lt;em&gt;Goldstein, Poole and Safko&lt;/em&gt; as problems at the end of chapter 8 (alas, with a different sign convention). I suspect the dual functions can be used to study magnetic degrees of freedom. By magnetic, I mean heavy or strongly-coupled.&lt;/p&gt;
+&lt;p&gt;As an example, let us consider the classical harmonic oscillator. The Hamiltonian for this system is
+\begin{equation}
+H = \frac{p^{2}}{2m} + \frac{1}{2}k x^{2} \label{HarmOsci}
+\end{equation}
+Assuming that $m \geq 0$ and $k \geq 0$, we have $H \geq 0$. The partial derivatives of $H$ are
+\begin{equation}\frac{\partial H}{\partial x} = k x \qquad \frac{\partial H}{\partial p} = \frac{p}{m} \qquad \frac{\partial H}{\partial t} = 0
+\end{equation}
+Using $(\ref{Hderiv})$ leads to
+\begin{equation}\dot{x} = \frac{p}{m} \qquad \dot{p} = -k x
+\end{equation}
+The Lagrangian $L$ is a function of $x$ and $\dot{x}$, so we find
+\begin{equation}L = \dot{x} \cdot p - H = \frac{1}{2}m \dot{x}^{2} - \frac{1}{2}kx^{2}
+\end{equation}
+This should be familiar. Note that in the limit $m \rightarrow 0$ and $k \rightarrow 0$ we have $L \rightarrow 0$. Also, $k$ appears with a positive power, so we can take the $k \rightarrow 0$ limit.&lt;/p&gt;
+&lt;p&gt;The dual Lagrangian $K$ is a function of $p$ and $\dot{p}$, so we find
+\begin{equation}K = x \cdot \dot{p} + H = \frac{p^{2}}{2m} - \frac{\dot{p}^{2}}{2k}
+\end{equation}
+Unlike $L$, in the limit $m \rightarrow 0$ or $k \rightarrow 0$ we find $K \rightarrow \infty$. However, we can see that in the $m \rightarrow \infty$ and $k \rightarrow \infty$ we find $K \rightarrow 0$. The constant $k$ appears in the denominator, so we cannot take $k \rightarrow 0$.&lt;/p&gt;
+&lt;p&gt;We also have the dual Hamiltonian $G$, which is a function of $\dot{x}$ and $\dot{p}$. This gives
+\begin{equation}G = -x \cdot \dot{p} + L = \frac{1}{2}m \dot{x}^{2} + \frac{\dot{p}^{2}}{2k}
+\end{equation}
+Just like for $H$, we have $G \geq 0$ if $m \geq 0$ and $k \geq 0$. Both $H$ and $G$ contain mixed powers of $m$, but $G$ contains a negative power of $k$ while $H$ contains a positive power of $k$. In some ways, $k$ is the coupling parameter for this system, so we can argue that $H$ and $L$ are more compatible with weak-coupling dynamics while $G$ and $K$ are more compatible with strong-coupling dynamics.&lt;/p&gt;
+&lt;p&gt;The Hamiltonian $ (\ref{HarmOsci}) $ is compatible with the $ k \rightarrow 0 $ limit (the free system), and the $ m \rightarrow \infty $ limit (the localized system). Usually we define an angular frequency $ \omega $ via
+\begin{equation} \omega^{2} = \frac{k}{m} 
+\end{equation}
+Note that both taking $ k \rightarrow 0 $ with $ m $ fixed, and $ m \rightarrow \infty $ with $ k $ fixed lead to $ \omega \rightarrow 0 $, which can be interpreted as large period limits.&lt;/p&gt;
+&lt;h2&gt;Free System&lt;/h2&gt;
+&lt;p&gt;Taking the $ k \rightarrow 0 $ limit while keeping $ m $ fixed in $ (\ref{HarmOsci}) $ gives the Hamiltonian for a single-body free system:
+\begin{equation} H = \frac{p^{2}}{2m} 
+\end{equation}
+The Lagrangian becomes
+\begin{equation} L = \frac{1}{2} m \dot{x}^{2} 
+\end{equation}
+which is invariant under $ x \rightarrow x + a $. Note that $ K $ and $ G $ are undefined in this regime. The classical solution gives
+\begin{equation}x(t) = x_{0} + \left(\frac{p_{0}}{m}\right)t \qquad p(t) = p_{0}
+\end{equation}
+That is, the position is a linear function of time and the momentum is constant.&lt;/p&gt;
+&lt;p&gt;It is worth mentioning now that the Hamiltonian for a charged system is found by adding electric and magnetic potentials to the Hamiltonian for a free system:
+\begin{equation}\frac{1}{2m}p^{2} \longrightarrow \frac{1}{2m}[p - e A(x, t)]^{2} + e \phi(x, t)
+\end{equation}
+Using $(\ref{Hderiv})$ we find
+\begin{equation}m \dot{x} = p - e A(x, t)
+\end{equation}
+The Lagrangian becomes
+\begin{equation}L = \dot{x} \cdot p - H = \frac{1}{2}m \dot{x}^{2} + e \dot{x} \cdot A(x, t) - e \phi(x, t)
+\end{equation}
+The gauge transformation
+\begin{equation}A \rightarrow A + \frac{\partial \Lambda}{\partial x} \qquad \phi \rightarrow \phi - \frac{\partial \Lambda}{\partial t}
+\end{equation}
+corresponds to a shift in the Lagrangian
+\begin{equation}L \rightarrow L + e \frac{\mathrm{d} \Lambda}{\mathrm{d} t}
+\end{equation}
+which, as we saw above, does not change the Euler-Lagrange equation.&lt;/p&gt;
+&lt;h2&gt;Localized System&lt;/h2&gt;
+&lt;p&gt;Taking the $ m \rightarrow \infty $ limit while keeping $ k $ fixed in $ (\ref{HarmOsci}) $ gives the Hamiltonian for a localized system:
+\begin{equation} H = \frac{1}{2} k x^{2} 
+\end{equation}
+The dual Lagrangian becomes
+\begin{equation} K = - \frac{\dot{p}^{2}}{2k} 
+\end{equation}
+which is invariant under $ p \rightarrow p + b $. In this regime $ L $ and $ G $ are undefined. The classical solution is now given by
+\begin{equation} x(t) = x_{0} \qquad p(t) = p_{0} - k x_{0} t 
+\end{equation}
+The position is now constant but the momentum is a linear function of time.&lt;/p&gt;
+&lt;p&gt;In analogy with the free system, we introduce a dual charged system by adding dual electric and magnetic potentials to the Hamiltonian for a localized system:
+\begin{equation} \frac{1}{2}k x^{2} \longrightarrow \frac{1}{2}k [x - g Z(p, t)]^{2} + g \psi(p, t) 
+\end{equation}
+Using $ (\ref{Hderiv}) $ we find
+\begin{equation} -\frac{\dot{p}}{k} = x - g Z(p, t) 
+\end{equation}
+The dual Lagrangian becomes
+\begin{equation} K = x \cdot \dot{p} + H = -\frac{\dot{p}^{2}}{2k} + g \dot{p} \cdot Z(p, t) + g \psi(p, t) 
+\end{equation}
+Now the gauge transformation
+\begin{equation} Z \rightarrow Z + \frac{\partial \Omega}{\partial p} \qquad \psi \rightarrow \psi + \frac{\partial \Omega}{\partial t} 
+\end{equation}
+corresponds to a shift in the dual Lagrangian
+\begin{equation} K \rightarrow K + g \frac{\mathrm{d} \Omega}{\mathrm{d} t} 
+\end{equation}
+which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p&gt;
+&lt;h2&gt;General system&lt;/h2&gt;
+&lt;p&gt;Both the free system and the localized system are extreme cases of the harmonic oscillator system. In both cases the Hamiltonian becomes a function of a single mechanical variable. After adding potentials, we have implicit dependence on the second variable.&lt;/p&gt;
+&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican')) {
+        var s = document.createElement('script');
+        s.id = 'mathjaxscript_pelican';
+        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        s[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+    }
+&lt;/script&gt;
+</summary><category term="classical mechanics"></category></entry></feed>
