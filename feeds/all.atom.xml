@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>The Superconformist</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-03-04T00:00:00-05:00</updated><entry><title>Informal Seminar</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/informal-seminar/" rel="alternate"></link><updated>2014-03-04T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-04:posts/2014/Mar/informal-seminar/</id><summary type="html">&lt;p&gt;I am thinking of volunteering to give a series of informal seminars on fancy topics in high-energy theoretical physics. Here is a short list of topics:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The Superconformist</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-03-04T00:00:00-05:00</updated><entry><title>Informal Seminar</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/informal-seminar/" rel="alternate"></link><updated>2014-03-04T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-04:posts/2014/Mar/informal-seminar/</id><summary type="html">&lt;p&gt;I am volunteering to give a series of informal seminars on fancy topics in high-energy theoretical physics. Here is a short list of topics:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Quantum Field Theory: Path integrals, Feynman rules, etc.&lt;/li&gt;
+&lt;li&gt;quantum field theory: path integrals, Feynman diagrams, etc.&lt;/li&gt;
 &lt;li&gt;Yang-Mills theory and the Standard Model&lt;/li&gt;
-&lt;li&gt;Twistor variables and conformal symmetry&lt;/li&gt;
-&lt;li&gt;Supersymmetry and supergravity&lt;/li&gt;
-&lt;li&gt;String theory&lt;/li&gt;
+&lt;li&gt;twistor variables and conformal symmetry&lt;/li&gt;
+&lt;li&gt;supersymmetry and supergravity&lt;/li&gt;
+&lt;li&gt;string theory&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The idea is to give a taste of what topic is about, without unnecesary details. However, the devil is always in the details, so not much is going to be gain from this. We'll have to wait and see...&lt;/p&gt;</summary><category term="seminar"></category></entry><entry><title>arXiv picks for week 9</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/week-9/" rel="alternate"></link><updated>2014-03-01T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-01:posts/2014/Mar/week-9/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
@@ -21,13 +21,15 @@
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.6356"&gt;String theory in target space&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.6805"&gt;Dual-color decompositions at one-loop level in Yang-Mills theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.7062"&gt;Anomalies without an action&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;script type= "text/javascript"&gt;
-    if (!document.getElementById('mathjaxscript_pelican')) {
-        var s = document.createElement('script');
-        s.id = 'mathjaxscript_pelican';
-        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-        s[(window.opera ? "innerHTML" : "text")] =
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
             "MathJax.Hub.Config({" +
             "    config: ['MMLorHTML.js']," +
             "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
@@ -46,7 +48,7 @@
             "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
             "    } " +
             "}); ";
-        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
 </summary><category term="research"></category></entry><entry><title>arXiv picks for week 8</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/week-8/" rel="alternate"></link><updated>2014-02-22T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-22:posts/2014/Feb/week-8/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
@@ -55,13 +57,15 @@
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.3307"&gt;Space-time S-matrix and Flux-tube S-matrix III. The two-particle contributions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.3556"&gt;Large $J$ expansion in ABJM theory revisited&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.5135"&gt;The Holographic Dual of $AdS_{3} \times S_{3} \times S_{3} \times S_{1}$&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;script type= "text/javascript"&gt;
-    if (!document.getElementById('mathjaxscript_pelican')) {
-        var s = document.createElement('script');
-        s.id = 'mathjaxscript_pelican';
-        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-        s[(window.opera ? "innerHTML" : "text")] =
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
             "MathJax.Hub.Config({" +
             "    config: ['MMLorHTML.js']," +
             "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
@@ -80,7 +84,7 @@
             "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
             "    } " +
             "}); ";
-        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
 </summary><category term="research"></category></entry><entry><title>Colloquium at Wesleyan</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/wesleyan-talk/" rel="alternate"></link><updated>2014-02-17T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-17:posts/2014/Feb/wesleyan-talk/</id><summary type="html">&lt;p&gt;Next April I will be giving a colloquium talk at Wesleyan University. This will be a good opportunity to share my graduate research with the Wesleyan community. Even though the topic of my research might not be very familiar to the audience, I hope that I get to discuss some interesting physics.&lt;/p&gt;
@@ -90,13 +94,15 @@
 &lt;h1&gt;How was the problem solved?&lt;/h1&gt;
 &lt;p&gt;The scattering amplitude was written in terms of a two-body path integral. After doing a functional integration over the mediating field, one obtains an effective two-body system. In order to evaluate the resulting two-body path integral, we use the semiclassical approximation.&lt;/p&gt;
 &lt;h1&gt;What results were obtained?&lt;/h1&gt;
-&lt;p&gt;Since the semiclassical approximation is non-perturbative, the resulting scattering amplitudes exhibit features like bound state singularities that are outside of the perturbative regime. One hopes to extend these results to more relevant theories.&lt;/p&gt;
-&lt;script type= "text/javascript"&gt;
-    if (!document.getElementById('mathjaxscript_pelican')) {
-        var s = document.createElement('script');
-        s.id = 'mathjaxscript_pelican';
-        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-        s[(window.opera ? "innerHTML" : "text")] =
+&lt;p&gt;Since the semiclassical approximation is non-perturbative, the resulting scattering amplitudes exhibit features like bound state singularities that are outside of the perturbative regime. One hopes to extend these results to more relevant theories.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
             "MathJax.Hub.Config({" +
             "    config: ['MMLorHTML.js']," +
             "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
@@ -115,7 +121,7 @@
             "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
             "    } " +
             "}); ";
-        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
 </summary><category term="semiclassical"></category></entry><entry><title>arXiv picks for week 7</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/week-7/" rel="alternate"></link><updated>2014-02-15T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-15:posts/2014/Feb/week-7/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
@@ -123,13 +129,15 @@
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.1821"&gt;Color-Kinematic Duality in ABJM Theory Without Amplitude Relations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.2516"&gt;On the solutions of the scattering equations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.2973"&gt;Mathieu moonshine in four dimensional $\mathcal{N} = 1$ theories&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;script type= "text/javascript"&gt;
-    if (!document.getElementById('mathjaxscript_pelican')) {
-        var s = document.createElement('script');
-        s.id = 'mathjaxscript_pelican';
-        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-        s[(window.opera ? "innerHTML" : "text")] =
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
             "MathJax.Hub.Config({" +
             "    config: ['MMLorHTML.js']," +
             "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
@@ -148,7 +156,7 @@
             "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
             "    } " +
             "}); ";
-        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
 </summary><category term="research"></category></entry><entry><title>Lagrangians and Hamiltonians</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/lags-hams/" rel="alternate"></link><updated>2014-02-13T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-13:posts/2014/Feb/lags-hams/</id><summary type="html">&lt;p&gt;The Lagrangian $L(x, \dot{x}, t)$ is a function of the generalized coordinate $x$, the generalized velocity $\dot{x}$, and also time. One is also familiar with the Hamiltonian $H(x, p, t)$, which is a function of the generalized momentum $p$ and the generalized coordinate. These two are related via
@@ -355,13 +363,15 @@ corresponds to a shift in the dual Lagrangian
 \end{equation}
 which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p&gt;
 &lt;h2&gt;General system&lt;/h2&gt;
-&lt;p&gt;Both the free system and the localized system are extreme cases of the harmonic oscillator system. In both cases the Hamiltonian becomes a function of a single mechanical variable. After adding potentials, we have implicit dependence on the second variable.&lt;/p&gt;
-&lt;script type= "text/javascript"&gt;
-    if (!document.getElementById('mathjaxscript_pelican')) {
-        var s = document.createElement('script');
-        s.id = 'mathjaxscript_pelican';
-        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-        s[(window.opera ? "innerHTML" : "text")] =
+&lt;p&gt;Both the free system and the localized system are extreme cases of the harmonic oscillator system. In both cases the Hamiltonian becomes a function of a single mechanical variable. After adding potentials, we have implicit dependence on the second variable.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
             "MathJax.Hub.Config({" +
             "    config: ['MMLorHTML.js']," +
             "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
@@ -380,7 +390,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
             "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
             "    } " +
             "}); ";
-        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
 </summary><category term="classical mechanics"></category></entry></feed>

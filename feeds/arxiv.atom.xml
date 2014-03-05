@@ -13,13 +13,15 @@
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.6356"&gt;String theory in target space&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.6805"&gt;Dual-color decompositions at one-loop level in Yang-Mills theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.7062"&gt;Anomalies without an action&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;script type= "text/javascript"&gt;
-    if (!document.getElementById('mathjaxscript_pelican')) {
-        var s = document.createElement('script');
-        s.id = 'mathjaxscript_pelican';
-        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-        s[(window.opera ? "innerHTML" : "text")] =
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
             "MathJax.Hub.Config({" +
             "    config: ['MMLorHTML.js']," +
             "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
@@ -38,7 +40,7 @@
             "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
             "    } " +
             "}); ";
-        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
 </summary><category term="research"></category></entry><entry><title>arXiv picks for week 8</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/week-8/" rel="alternate"></link><updated>2014-02-22T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-22:posts/2014/Feb/week-8/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
@@ -47,13 +49,15 @@
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.3307"&gt;Space-time S-matrix and Flux-tube S-matrix III. The two-particle contributions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.3556"&gt;Large $J$ expansion in ABJM theory revisited&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.5135"&gt;The Holographic Dual of $AdS_{3} \times S_{3} \times S_{3} \times S_{1}$&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;script type= "text/javascript"&gt;
-    if (!document.getElementById('mathjaxscript_pelican')) {
-        var s = document.createElement('script');
-        s.id = 'mathjaxscript_pelican';
-        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-        s[(window.opera ? "innerHTML" : "text")] =
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
             "MathJax.Hub.Config({" +
             "    config: ['MMLorHTML.js']," +
             "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
@@ -72,7 +76,7 @@
             "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
             "    } " +
             "}); ";
-        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
 </summary><category term="research"></category></entry><entry><title>arXiv picks for week 7</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/week-7/" rel="alternate"></link><updated>2014-02-15T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-15:posts/2014/Feb/week-7/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
@@ -80,13 +84,15 @@
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.1821"&gt;Color-Kinematic Duality in ABJM Theory Without Amplitude Relations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.2516"&gt;On the solutions of the scattering equations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.2973"&gt;Mathieu moonshine in four dimensional $\mathcal{N} = 1$ theories&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;script type= "text/javascript"&gt;
-    if (!document.getElementById('mathjaxscript_pelican')) {
-        var s = document.createElement('script');
-        s.id = 'mathjaxscript_pelican';
-        s.type = 'text/javascript'; s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-        s[(window.opera ? "innerHTML" : "text")] =
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
             "MathJax.Hub.Config({" +
             "    config: ['MMLorHTML.js']," +
             "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
@@ -105,7 +111,7 @@
             "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
             "    } " +
             "}); ";
-        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
 </summary><category term="research"></category></entry></feed>
