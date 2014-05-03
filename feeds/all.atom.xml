@@ -39,7 +39,38 @@
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 17</title><link href="http://meirizarrygelpi.github.io/posts/2014/Apr/week-17/" rel="alternate"></link><updated>2014-04-26T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-04-26:posts/2014/Apr/week-17/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>Points in Space</title><link href="http://meirizarrygelpi.github.io/posts/2014/May/points-in-space/" rel="alternate"></link><updated>2014-05-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-02:posts/2014/May/points-in-space/</id><summary type="html">&lt;p&gt;Consider $N$ distinct points $P_{1}$, $P_{2}$, ..., $P_{N}$ with coordinates $x_{1}$, $x_{2}$, ..., $x_{N}$. One can draw $N^{2}$ lines connecting these $N$ points. If we ommit lines that connect a point to itself, then we have $N(N-1)/2$ possible distinct lines. Out of these, $N$ can be regarded as external lines (corresponding to the edges of a convex polygonal perimeter connecting the $N$ points) and $N(N - 3)/2$ can be regarded as internal lines (the lines inside the perimeter).&lt;/p&gt;
+&lt;p&gt;We start with $N$ distinct position variables. One can imagine making a change of variables$$(x_{1}, x_{2}, ..., x_{N}) \longrightarrow (X, x_{ij})$$where $X$ describes the center-of-mass position of the system, and the $x_{ij}$ variables represent a set of $N - 1$ independent coordinate differences $x_{ij} \equiv x_{i} - x_{j}$. One can construct more than $N - 1$ coordinate differences, but it is only possible to have $N - 1$ linearly independent ones. Indeed, one can write$$N - 1 = \frac{N(N-1)}{2} + N - 1 - \frac{N(N-1)}{2}$$which can be rewritten as$$N - 1 = \frac{N(N-1)}{2} - \frac{(N - 2)(N - 1)}{2}$$So if we want to keep all possible $N(N-1)/2$ coordinate differences available, we need to introduce $(N-2)(N-1)/2$ auxilliary variables (i.e. Lagrange multipliers) that enforce the linear constraints that leave only $N-1$ linearly-independent ones.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="combinatorics"></category><category term="graph theory"></category></entry><entry><title>arXiv picks for week 17</title><link href="http://meirizarrygelpi.github.io/posts/2014/Apr/week-17/" rel="alternate"></link><updated>2014-04-26T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-04-26:posts/2014/Apr/week-17/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1404.4986"&gt;Multiparticle SYM equations of motion and pure spinor BRST blocks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1404.5300"&gt;$\mathcal{N} = 1$ Superconformal Blocks for General Scalar Operators&lt;/a&gt;&lt;/li&gt;
@@ -195,38 +226,7 @@
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>Points in Space</title><link href="http://meirizarrygelpi.github.io/posts/2014/Apr/points-in-space/" rel="alternate"></link><updated>2014-04-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-04-02:posts/2014/Apr/points-in-space/</id><summary type="html">&lt;p&gt;Consider $N$ distinct points $P_{1}$, $P_{2}$, ..., $P_{N}$ with coordinates $x_{1}$, $x_{2}$, ..., $x_{N}$. One can draw $N^{2}$ lines connecting these $N$ points. If we ommit lines that connect a point to itself, then we have $N(N-1)/2$ possible distinct lines. Out of these, $N$ can be regarded as external lines (corresponding to the edges of a convex polygonal perimeter connecting the $N$ points) and $N(N - 3)/2$ can be regarded as internal lines (the lines inside the perimeter).&lt;/p&gt;
-&lt;p&gt;We start with $N$ distinct position variables. One can imagine making a change of variables$$(x_{1}, x_{2}, ..., x_{N}) \longrightarrow (X, x_{ij})$$where $X$ describes the center-of-mass position of the system, and the $x_{ij}$ variables represent a set of $N - 1$ independent coordinate differences $x_{ij} \equiv x_{i} - x_{j}$. One can construct more than $N - 1$ coordinate differences, but it is only possible to have $N - 1$ linearly independent ones. Indeed, one can write$$N - 1 = \frac{N(N-1)}{2} + N - 1 - \frac{N(N-1)}{2}$$which can be rewritten as$$N - 1 = \frac{N(N-1)}{2} - \frac{(N - 2)(N - 1)}{2}$$So if we want to keep all possible $N(N-1)/2$ coordinate differences available, we need to introduce $(N-2)(N-1)/2$ auxilliary variables (i.e. Lagrange multipliers) that enforce the linear constraints that leave only $N-1$ linearly-independent ones.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
-    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-        var mathjaxscript = document.createElement('script');
-        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-        mathjaxscript.type = 'text/javascript';
-        mathjaxscript.src = 'https:' == document.location.protocol
-                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
-                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-            "MathJax.Hub.Config({" +
-            "    config: ['MMLorHTML.js']," +
-            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-            "    displayAlign: 'center'," +
-            "    displayIndent: '0em'," +
-            "    showMathMenu: true," +
-            "    tex2jax: { " +
-            "        inlineMath: [ ['$','$'] ], " +
-            "        displayMath: [ ['$$','$$'] ]," +
-            "        processEscapes: true," +
-            "        preview: 'TeX'," +
-            "    }, " +
-            "    'HTML-CSS': { " +
-            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
-            "    } " +
-            "}); ";
-        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-    }
-&lt;/script&gt;
-</summary><category term="combinatorics"></category><category term="graph theory"></category></entry><entry><title>arXiv picks for week 13</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/week-13/" rel="alternate"></link><updated>2014-03-29T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-29:posts/2014/Mar/week-13/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 13</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/week-13/" rel="alternate"></link><updated>2014-03-29T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-29:posts/2014/Mar/week-13/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.5494"&gt;Topics in Two-Loop Superstring Perturbation Theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.5695"&gt;Addendum to Computational Complexity and Black Hole Horizons&lt;/a&gt;&lt;/li&gt;
