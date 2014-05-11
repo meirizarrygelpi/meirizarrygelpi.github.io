@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Algorithms (Week 1) - The Superconformist</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="The Superconformist" />
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Algorithms (Week 1)"/>
+            <meta property="og:url" content="http://meirizarrygelpi.github.io/posts/2014/May/algorithms-week-1/"/>
+            <meta property="og:description" content="Some notes from week 1 of a MOOC on algorithms from Stanford University via Coursera."/>
+            <meta property="article:published_time" content="2014-05-04" />
+            <meta property="article:section" content="Notes" />
+            <meta property="article:tag" content="algorithms" />
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
+    <link href="http://meirizarrygelpi.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://meirizarrygelpi.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="The Superconformist ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://meirizarrygelpi.github.io/" class="navbar-brand">
+The Superconformist            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://meirizarrygelpi.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://meirizarrygelpi.github.io/posts/2014/May/algorithms-week-1/"
+                       rel="bookmark"
+                       title="Permalink to Algorithms (Week 1)">
+                        Algorithms (Week 1)
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-05-04T00:00:00"> Sun 04 May 2014</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://meirizarrygelpi.github.io/tag/algorithms.html">algorithms</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>As part of my journey towards data science I am taking a MOOC on algorithms by Tim Roughgarden from Stanford University. I took my first MOOC some years ago from MIT and enjoyed it quite a lot. Algorithms are things I know very little about and I hope this is no longer true by the end of the course. As part of my study I will keep some lecture notes with important points from each of the six weeks. Currently, I am planning on solving the programming questions with Python (using this as an opportunity to write some code in Python 3.x).</p>
+<h1>Introduction</h1>
+<p>An <strong>algorithm</strong> is "a set of well-defined rules, a recipe in effect, for solving some computational problem".</p>
+<p>Define a computational problem, with an <em>input</em> and an <em>output</em>, then provide an algorithm that transforms the input into the output.</p>
+<p>The algorithm's designer mantra:</p>
+<blockquote>
+<p>"Perhaps the most important principle for the good algorithm designer is to refuse to be content." - Aho, Hopcroft, and Ullman, <em>The Design and Analysis of Computer Algorithms</em></p>
+</blockquote>
+<p>In other words: <strong><em>Can we do better?</em></strong></p>
+<h2>Merge Sort</h2>
+<p>Merge sort is an old algorithm. A good example of the divide-and-conquer paradigm. One breaks a problem into smaller sub-problems that are solved recursively. Merge sort achives sorting with a number of operations that is less than quadratic in size.</p>
+<p>The sorting problem: as input we are given an array of $N$ numbers, which are not sorted, and we are asked to provide the $N$ numbers in sorted order (say in increasing order).</p>
+<p>I wrote a short function that takes as input a non-negative integer <code>n</code>, and gives as output an unsorted list containing the <code>n + 1</code> integers between <code>0</code> and <code>n</code>. Here it is:</p>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">random</span> <span class="n">import</span> <span class="n">choice</span>
+
+<span class="n">def</span> <span class="n">unsorted_list</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+    <span class="n">l2</span> <span class="o">=</span> <span class="n">list</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+        <span class="n">l2</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">l1</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">l2</span>
+</pre></div>
+
+
+<p>With this function I can create list of integers that need to be sorted. Next, we implement Merge Sort. My implementation involves two parts. The first part is a function that takes as input two sorted lists of integers <code>a</code> and <code>b</code>, and gives as output a third sorted list <code>c</code> made by merging <code>a</code> and <code>b</code>. Here is the code:</p>
+<div class="highlight"><pre><span class="n">def</span> <span class="n">mel_merge</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">i_a</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i_b</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">list</span><span class="p">()</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">i_a</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="n">and</span> <span class="p">(</span><span class="n">i_b</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">:</span>
+        <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">]</span><span class="o">:</span>
+            <span class="n">c</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">])</span>
+            <span class="n">i_a</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">elif</span> <span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">]</span><span class="o">:</span>
+            <span class="n">c</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">])</span>
+            <span class="n">i_b</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nl">else:</span>
+            <span class="n">c</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">])</span>
+            <span class="n">c</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">])</span>
+            <span class="n">i_a</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">i_b</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i_a</span> <span class="o">==</span> <span class="n">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="n">and</span> <span class="p">(</span><span class="n">i_b</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="o">:</span><span class="p">]</span>
+    <span class="n">elif</span> <span class="p">(</span><span class="n">i_b</span> <span class="o">==</span> <span class="n">len</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="n">and</span> <span class="p">(</span><span class="n">i_a</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span><span class="o">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="o">:</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">c</span>
+</pre></div>
+
+
+<p>The second part is a recursive function that takes an unsorted list <code>l</code>, splits it into two smaller lists, then recursively calls itself on those smaller lists producing sorted lists <code>l1</code> and <code>l2</code>, and finally calls <code>mel_merge</code> to merge these two into a sorted list:</p>
+<div class="highlight"><pre><span class="n">def</span> <span class="n">mel_merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">len_l</span> <span class="o">=</span> <span class="n">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">len_l</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">or</span> <span class="p">(</span><span class="n">len_l</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">return</span> <span class="n">l</span>
+    <span class="nl">else:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">len_l</span> <span class="c1">// 2</span>
+        <span class="n">l1</span> <span class="o">=</span> <span class="n">mel_merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="o">:</span><span class="n">k</span><span class="p">])</span>
+        <span class="n">l2</span> <span class="o">=</span> <span class="n">mel_merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="n">k</span><span class="o">:</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">mel_merge</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">)</span>
+</pre></div>
+
+
+<h2>Analysis of Algorithms</h2>
+<p>One can adopt three guiding principles for how to reason about algorithms and also how to define a fast algorithm.</p>
+<p>The first guiding principle is <strong>worst-case analysis</strong>. This principle will help us find results that hold quite generally with no assumptions about the specific details of the input. A related, but different principle is <strong>average-case analysis</strong>, where one makes some assumptions about the frequencies of certain kinds of inputs and develops algorithms optimized for those particular cases. However, this requires some domain knowledge, whereas the worst-case analysis holds in general.</p>
+<p>The second guiding principle consist of not worrying to much about constant factors, or lowest order terms. This means that we are really interested in looking at the leading (dominant) behavior.</p>
+<p>The third guiding principle consist of using asymptotic analysis. This means that we will focus on large input sizes. In some sense, the interesting problems are the ones with large inputs.</p>
+<p>With these three principles we can define a <strong>fast algorithm</strong> as an algorithm where the wors-case running time grows slowly with the input size. For most of the problems we will encounter, the "holy grail" is to find an algorithm that solves the problem in linear time (or close to linear time).</p>
+<h1>Asymptotic Analysis</h1>
+<p>Asymptotic analysis is the language used to discuss the high-level performance of an algorithm. It is coarse enough to suppress specific details like architecture/language/compiler-dependent details. It is also sharp enough to make useful comparisons between different algorithms, especially on large inputs.</p>
+<p>The high-level idea is to supress constant factors (which are system-specific) and lower-order terms (which are irrelevant for large inputs). A somewhat careful analysis of Merge Sort yields a running time of the form$$T(n) = 6n \lg(n) + 6n$$Using asymptotic analysis we just provide $n \lg(n)$. That is, we ignore the constant factor $6$ and the lower-order term $6n$. In this sense we say that the running time of Merge Sort is $O(n \lg(n))$.</p>
+<h2>Big-O</h2>
+<p>In general, we only consider functions defined for positive integers (i.e. sizes of inputs). One such function is the worst-case running time of an algorithm as a function of the input size $n$, which we denote by $T(n)$. If $T(n) = O(f(n))$, this means that eventually (i.e. for all sufficiently large $n$), $T(n)$ is bounded from <em>above</em> by $f(n)$. A more formal definition is:</p>
+<blockquote>
+<p><strong>Big-O Notation:</strong> $T(n) = O(f(n))$ if and only if there exist positive constants $c$ and $n_{0}$ such that$$T(n) \leq c f(n)$$for all $n \geq n_{0}$.</p>
+</blockquote>
+<h2>Big-Omega and Big-Theta</h2>
+<p>Similar to big-O, we use $T(n) = \Omega(g(n))$ to mean that eventually $T(n)$ is bounded from <em>below</em> by $g(n)$. A more formal definition is:</p>
+<blockquote>
+<p><strong>Big-Omega Notation:</strong> $T(n) = \Omega(g(n))$ if and only if there exist positive constants $c$ and $n_{0}$ such that$$T(n) \geq c g(n)$$for all $n \geq n_{0}$.</p>
+</blockquote>
+<p>Finally, we can use $T(n) = \Theta(h(n))$ to mean that both $T(n) = O(h(n))$ and $T(n) = \Omega(h(n))$. That is,</p>
+<blockquote>
+<p><strong>Big-Theta Notation:</strong> $T(n) = \Theta(h(n))$ if there exist positive constants $c_{1}$, $c_{2}$ and $n_{0}$ such that $$c_{1} h(n) \leq T(n) \leq c_{2} h(n)$$for all $n \geq n_{0}$.</p>
+</blockquote>
+<h1>Divide and Conquer Algorithms</h1>
+<p>The divide and conquer paradigm for solving problems consist of two main steps. One first divides the main problem into smaller subproblems, that are solvable (the conquering). After combining the solutions of the smaller subproblems, the starting problem can be solved.</p>
+<h2>Counting Inversions</h2>
+<p>Given an array $A$ of $n$ distinct integers, an <strong>inversion</strong> is a pair of array indices $i$ and $j$ such that $i &lt; j$ and $A_{i} &gt; A_{j}$.</p><script type= "text/javascript">
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+</script>
+
+            </div>
+            <!-- /.entry-content -->
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+            var disqus_identifier = 'algorithms-week-1';
+            var disqus_url = 'http://meirizarrygelpi.github.io/posts/2014/May/algorithms-week-1/';
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
+
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item"><a href="http://twitter.com/melvineloy"><i
+                            class="fa fa-twitter-square fa-lg"></i> Twitter
+                    </a></li>
+                    <li class="list-group-item"><a href="http://github.com/meirizarrygelpi"><i
+                            class="fa fa-github-square fa-lg"></i> GitHub
+                    </a></li>
+                  </ul>
+                </li>
+
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                    <ul class="list-group" id="recentposts">
+                        <li class="list-group-item">
+                            <a href="http://meirizarrygelpi.github.io/posts/2014/May/week-19/">
+                                arXiv picks for week 19
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://meirizarrygelpi.github.io/posts/2014/May/algorithms-week-1/">
+                                Algorithms (Week 1)
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://meirizarrygelpi.github.io/posts/2014/May/week-18/">
+                                arXiv picks for week 18
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://meirizarrygelpi.github.io/posts/2014/May/points-in-space/">
+                                Points in Space
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://meirizarrygelpi.github.io/posts/2014/Apr/week-17/">
+                                arXiv picks for week 17
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="list-group-item"><a href="http://meirizarrygelpi.github.io/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                    <ul class="list-group" id="categories">
+                        <li class="list-group-item">
+                            <a href="http://meirizarrygelpi.github.io/category/arxiv.html">
+                                <i class="fa fa-folder-open fa-lg"></i> arXiv
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://meirizarrygelpi.github.io/category/mathematics.html">
+                                <i class="fa fa-folder-open fa-lg"></i> Mathematics
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://meirizarrygelpi.github.io/category/notes.html">
+                                <i class="fa fa-folder-open fa-lg"></i> Notes
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://meirizarrygelpi.github.io/category/physics.html">
+                                <i class="fa fa-folder-open fa-lg"></i> Physics
+                            </a>
+                        </li>
+                </li>
+
+                <li class="list-group-item"><a href="http://meirizarrygelpi.github.io/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                    <ul class="list-group " id="tags">
+                        <li class="list-group-item tag-1">
+                            <a href="http://meirizarrygelpi.github.io/tag/seminar.html">
+                                seminar
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-1">
+                            <a href="http://meirizarrygelpi.github.io/tag/semiclassical.html">
+                                semiclassical
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-1">
+                            <a href="http://meirizarrygelpi.github.io/tag/classical-mechanics.html">
+                                classical mechanics
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-1">
+                            <a href="http://meirizarrygelpi.github.io/tag/algorithms.html">
+                                algorithms
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-1">
+                            <a href="http://meirizarrygelpi.github.io/tag/graph-theory.html">
+                                graph theory
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-1">
+                            <a href="http://meirizarrygelpi.github.io/tag/combinatorics.html">
+                                combinatorics
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-1">
+                            <a href="http://meirizarrygelpi.github.io/tag/research.html">
+                                research
+                            </a>
+                        </li>
+                    </ul>
+                </li>    
+
+    <li class="list-group-item"><h4><i class="fa fa-github fa-lg"></i><span class="icon-label">GitHub Repos</span></h4>
+        <div id="gh_repos">
+            <p class="list-group-item">Status updating...</p>
+        </div>
+    </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 M.E. Irizarry-Gelpí
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://meirizarrygelpi.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://meirizarrygelpi.github.io/theme/js/respond.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (!window.jXHR) {
+                var jxhr = document.createElement('script');
+                jxhr.type = 'text/javascript';
+                jxhr.src = 'http://meirizarrygelpi.github.io/theme/js/jXHR.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(jxhr, s);
+            }
+
+            github.showRepos({
+                user: 'melvineloy',
+                count: 5,
+                skip_forks: false,
+                target: '#gh_repos'
+            });
+        });
+    </script>
+    <script src="http://meirizarrygelpi.github.io/theme/js/github.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+</body>
+</html>
