@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The Superconformist</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/problems.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-05-04T00:00:00-04:00</updated><entry><title>Algorithm Theory Problems (Week 1)</title><link href="http://meirizarrygelpi.github.io/posts/2014/May/algorithms-theory-problems-week-1/" rel="alternate"></link><updated>2014-05-04T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-04:posts/2014/May/algorithms-theory-problems-week-1/</id><summary type="html">&lt;p&gt;Here are some theory problems that I should consider solving in the near future.&lt;/p&gt;
+&lt;h1&gt;Problem 1&lt;/h1&gt;
+&lt;p&gt;You are given as input an unsorted array of $n$ distinct numbers, where $n$ is a power of $2$. Provide an algorithm that identifies the second largest number in the array, and that uses at most $n + \lg{(n)} - 2$ comparisons.&lt;/p&gt;
+&lt;h1&gt;Problem 2&lt;/h1&gt;
+&lt;p&gt;You are given a unimodal array of $n$ distinct elements, meaning that its entries are in increasing order up until its maximum element, after which its elements are in decreasing order. Provide an algorithm to compute the maximum element that runs in $O(\log(n))$ time.&lt;/p&gt;
+&lt;h1&gt;Problem 3&lt;/h1&gt;
+&lt;p&gt;You are given a sorted (from smallest to largest) array $A$ of $n$ distinct integers which can be positive, negative, or zero. You want to decide whether or not there is an index $i$ such that $A_{i} = i$. Design the fastest algorithm that you can for solving this problem.&lt;/p&gt;
+&lt;h1&gt;Problem 4&lt;/h1&gt;
+&lt;p&gt;Give the best upper bound that you can on the solution to the following recurrence:$$T(1) = 1, \qquad T(n) \leq T([\sqrt{n}]) + 1, \qquad n &amp;gt; 1$$(Here $[x]$ denotes the "floor" function, which rounds down to the nearest integer.)&lt;/p&gt;
+&lt;h1&gt;Problem 5&lt;/h1&gt;
+&lt;p&gt;You are given an $n \times n$ grid of distinct numbers. A number is a local minimum if it is smaller than all of its neighbors. (A neighbor of a number is one immediately above, below, to the left, or the right. Most numbers have four neighbors; numbers on the side have three; the four corners have two.) Use the divide-and-conquer algorithm design paradigm to compute a local minimum with only $O(n)$ comparisons between pairs of numbers. (&lt;strong&gt;Note:&lt;/strong&gt; since there are $n^{2}$ numbers in the input, you cannot afford to look at all of them. &lt;strong&gt;Hint:&lt;/strong&gt; think about what types of recurrences would give you the desired upper bound.)&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="algorithms"></category></entry></feed>
