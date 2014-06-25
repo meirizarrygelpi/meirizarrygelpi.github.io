@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>The Superconformist</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-06-14T00:00:00-04:00</updated><entry><title>arXiv picks for week 24</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/week-24/" rel="alternate"></link><updated>2014-06-14T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-14:posts/2014/Jun/week-24/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The Superconformist</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-06-21T00:00:00-04:00</updated><entry><title>arXiv picks for week 25</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/week-25/" rel="alternate"></link><updated>2014-06-21T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-21:posts/2014/Jun/week-25/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.3629"&gt;The Exact Effective Couplings of 4D $N=2$ gauge theories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.4024"&gt;Deformed one-loop amplitudes in $N = 4$ super-Yang-Mills theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.4142"&gt;Conformal perturbation theory, dimensional regularization and AdS/CFT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.4147"&gt;High-Energy Gravitational Scattering and Bose-Einstein Condensates of Gravitons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.4945"&gt;Wilson loops and minimal area surfaces in hyperbolic space&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.5044"&gt;Massive Nonplanar Two-Loop Maximal Unitarity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.5155"&gt;More on Soft Theorems: Trees, Loops and Strings&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 24</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/week-24/" rel="alternate"></link><updated>2014-06-14T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-14:posts/2014/Jun/week-24/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.1285"&gt;The Appell Function $F_{1}$ and Regge String Scattering Amplitudes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.1443"&gt;The last of the simple remainders&lt;/a&gt;&lt;/li&gt;
