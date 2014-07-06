@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>The Superconformist</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-06-28T00:00:00-04:00</updated><entry><title>arXiv picks for week 26</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/week-26/" rel="alternate"></link><updated>2014-06-28T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-28:posts/2014/Jun/week-26/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The Superconformist</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-07-05T00:00:00-04:00</updated><entry><title>arXiv picks for week 27</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/week-27/" rel="alternate"></link><updated>2014-07-05T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-05:posts/2014/Jul/week-27/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.7652"&gt;Color decomposition of multi-quark one-loop QCD amplitudes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.7828"&gt;The $n_{f}$ terms of the QCD cusp anomalous dimension&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.0074"&gt;Feynman integrals via hyperlogarithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.0298"&gt;Higher Gauge Theory and M-Theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.0708"&gt;Green-Schwarz mechanism and $\alpha^{\prime}$-deformed Courant brackets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.0987"&gt;World-line instantons and the Schwinger effect as a WKB exact path integral&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.7184"&gt;Diagrammatic insights into next-to-soft corrections&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.7273"&gt;Cluster Algebras and the Positive Grassmannian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.7283"&gt;Four-point amplitudes in $\mathcal{N} = 2$ SCQCD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.0992"&gt;Dynamical String Tension in String Theory with Spacetime Weyl Invariance&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 26</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/week-26/" rel="alternate"></link><updated>2014-06-28T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-28:posts/2014/Jun/week-26/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.5904"&gt;Quantum Wronskian approach to six-point gluon scattering amplitudes at strong coupling&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.6103"&gt;Higher Spins &amp;amp; Strings&lt;/a&gt;&lt;/li&gt;
