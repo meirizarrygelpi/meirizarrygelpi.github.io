@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>The Superconformist</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/arxiv.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-07-05T00:00:00-04:00</updated><entry><title>arXiv picks for week 27</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/week-27/" rel="alternate"></link><updated>2014-07-05T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-05:posts/2014/Jul/week-27/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The Superconformist</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/arxiv.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-07-12T00:00:00-04:00</updated><entry><title>arXiv picks for week 28</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/week-28/" rel="alternate"></link><updated>2014-07-12T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-12:posts/2014/Jul/week-28/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.1322"&gt;Poles in the $S$-Matrix of Relativistic Chern-Simons Matter theories from Quantum Mechanics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.1694"&gt;Proceedings of the 1st Asia-Europe-Pacific School of High-Energy Physics (AEPSHEP 12), Fukuoka, Japan, 14 - 27 Oct 2012&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.1736"&gt;Space-time S-matrix and Flux-tube S-matrix IV. Gluons and Fusion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.1855"&gt;Kenneth G. Wilson: Renormalized After-Dinner Anecdotes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.2413"&gt;A new regularization of loop integral, no divergence, no hierarchy problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.2601"&gt;BRST invariant effective action of shadow fields, conformal fields, and AdS/CFT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.2853"&gt;Nonsinglet pentagons and NHMV amplitudes&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 27</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/week-27/" rel="alternate"></link><updated>2014-07-05T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-05:posts/2014/Jul/week-27/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.7652"&gt;Color decomposition of multi-quark one-loop QCD amplitudes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.7828"&gt;The $n_{f}$ terms of the QCD cusp anomalous dimension&lt;/a&gt;&lt;/li&gt;
