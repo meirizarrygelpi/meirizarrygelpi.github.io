@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/research.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-07-23T00:00:00-04:00</updated><entry><title>Flux Tubes and Collinear Limits</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/collinear-flux-tubes/" rel="alternate"></link><updated>2014-07-23T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-23:posts/2014/Jul/collinear-flux-tubes/</id><summary type="html">&lt;p&gt;While skimming through this &lt;a href="http://arxiv.org/abs/1407.4724"&gt;paper&lt;/a&gt;, I was reminded of earlier work:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1006.2788"&gt;An Operator Product Expansion for Polygonal null Wilson Loops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1010.5009"&gt;Bootstrapping Null Polygon Wilson Loops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1102.0062"&gt;Pulling the straps of polygons&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This in turn lead me to more recent stuff:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1303.1396"&gt;Space-time S-matrix and Flux-tube S-matrix at Finite Coupling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1306.2058"&gt;Space-time S-matrix and Flux tube S-matrix II. Extracting and Matching Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.3307"&gt;Space-time S-matrix and Flux-tube S-matrix III. The two-particle contributions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.6350"&gt;On the collinear limit of scattering amplitudes at strong coupling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.1736"&gt;Space-time S-matrix and Flux-tube S-matrix IV. Gluons and Fusion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.3766"&gt;Adjoint BFKL at finite coupling: a short-cut from the collinear limit&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;My task during the coming fall is to figure out if this is related in any way to my own work on scattering amplitudes.&lt;/p&gt;</summary><category term="amplitudes"></category></entry></feed>
