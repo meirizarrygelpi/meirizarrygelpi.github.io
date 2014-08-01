@@ -1,1 +1,0 @@
-This is the repository of my user GitHub Page, [meirizarrygelpi.github.io](http://meirizarrygelpi.github.io)
