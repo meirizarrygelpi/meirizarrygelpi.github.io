@@ -357,7 +357,8 @@
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 10 May 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-05-10:posts/2014/May/week-19/</guid><category>research</category></item><item><title>Algorithm Theory Problems (Week 1)</title><link>http://meirizarrygelpi.github.io/posts/2014/May/algorithms-theory-problems-week-1/</link><description>&lt;p&gt;Here are some theory problems that I should consider solving in the near future.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 10 May 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-05-10:posts/2014/May/week-19/</guid><category>research</category></item><item><title>Algorithm Theory Problems (Week 1)</title><link>http://meirizarrygelpi.github.io/posts/2014/May/algorithms-theory-problems-week-1/</link><description>&lt;p&gt;&lt;em&gt;These problems were taken from Tim Roughgarden's course on algorithms.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Here are some theory problems that I should consider solving in the near future.&lt;/p&gt;
 &lt;h1&gt;Problem 1&lt;/h1&gt;
 &lt;p&gt;You are given as input an unsorted array of $n$ distinct numbers, where $n$ is a power of $2$. Provide an algorithm that identifies the second largest number in the array, and that uses at most $n + \lg{(n)} - 2$ comparisons.&lt;/p&gt;
 &lt;h1&gt;Problem 2&lt;/h1&gt;
