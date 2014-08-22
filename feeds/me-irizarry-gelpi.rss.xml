@@ -1055,11 +1055,11 @@
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 15 Feb 2014 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2014-02-15:posts/2014/Feb/week-7/</guid><category>research</category></item><item><title>Lagrangians and Hamiltonians</title><link>http://meirizarrygelpi.github.io/posts/2014/Feb/lags-hams/</link><description>&lt;p&gt;The Lagrangian $L(x, \dot{x}, t)$ is a function of the generalized coordinate $x$, the generalized velocity $\dot{x}$, and also time. One is also familiar with the Hamiltonian $H(x, p, t)$, which is a function of the generalized momentum $p$ and the generalized coordinate. These two are related via
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 15 Feb 2014 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2014-02-15:posts/2014/Feb/week-7/</guid><category>research</category></item><item><title>Lagrangians and Hamiltonians</title><link>http://meirizarrygelpi.github.io/posts/2014/Feb/lags-hams/</link><description>&lt;p&gt;The Lagrangian $L(x, \dot{x}, t)$ is a function of the generalized coordinate $x$, the generalized velocity $\dot{x}$, and also the time parameter. One is familiar with the Hamiltonian $H(x, p, t)$, which is a function of the generalized momentum $p$ and the generalized coordinate. These two functions are related via
 \begin{equation}
 H = \dot{x} \cdot p - L \label{Ham}
 \end{equation}
-From
+From the identities
 \begin{equation}
 \mathrm{d}L = \frac{\partial L}{\partial x} \cdot \mathrm{d}x + \frac{\partial L}{\partial \dot{x}} \cdot \mathrm{d}\dot{x} + \frac{\partial L}{\partial t}\mathrm{d}t
 \end{equation}
@@ -1071,7 +1071,7 @@ it follows that
 \begin{equation}
 p = \frac{\partial L}{\partial \dot{x}} \qquad \dot{x} = \frac{\partial H}{\partial p} \qquad {- \frac{\partial L}{\partial x}} = \frac{\partial H}{\partial x} \qquad {- \frac{\partial L}{\partial t}} = \frac{\partial H}{\partial t} \label{Heq}
 \end{equation}
-If one assumes the Euler-Lagrange equations,
+If one &lt;em&gt;assumes&lt;/em&gt; the Euler-Lagrange equations,
 \begin{equation}
 \frac{\partial L}{\partial x} = \frac{\mathrm{d}}{\mathrm{d} t} \left( \frac{\partial L}{\partial \dot{x}} \right)
 \end{equation}
