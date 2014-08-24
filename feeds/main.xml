@@ -1329,4 +1329,47 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 5</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jan/week-5/" rel="alternate"></link><updated>2014-01-31T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-01-31:posts/2014/Jan/week-5/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.6242"&gt;A twistor string for the ABJ(M) theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.6438"&gt;The physics and the mixed Hodge structure of Feynman integrals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.6446"&gt;Cluster Polylogarithms for Scattering Amplitudes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.6610"&gt;Permutation Relations of Yangian Invariants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.7431"&gt;Reggeon Field Theory for Large Pomeron Loops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.7014"&gt;Mass Renormalization in String Theory: General States&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.7274"&gt;On Yangian-invariant regularisation of deformed on-shell diagrams in $N=4$ super-Yang-Mills theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.7307"&gt;Quantum mechanics of null polygonal Wilson loops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.7667"&gt;Towards an Effective Field Theory on the Light-Shell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.7690"&gt;OPE Methods for the Holomorphic Higgs Portal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.7691"&gt;The RTT-Realization for the Deformed $gl(2|2)$ Yangian&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
 </summary><category term="research"></category></entry></feed>
