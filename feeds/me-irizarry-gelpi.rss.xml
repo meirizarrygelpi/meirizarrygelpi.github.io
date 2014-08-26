@@ -1763,7 +1763,47 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 09 Nov 2013 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2013-11-09:posts/2013/Nov/week-45/</guid><category>research</category></item><item><title>arXiv picks for week 43</title><link>http://meirizarrygelpi.github.io/posts/2013/Oct/week-43/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 09 Nov 2013 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2013-11-09:posts/2013/Nov/week-45/</guid><category>research</category></item><item><title>arXiv picks for week 44</title><link>http://meirizarrygelpi.github.io/posts/2013/Nov/week-44/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.7385"&gt;On 4D, $N = 1$ Massless Gauge Superfields of Higher Superspin: Integer Case&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.7386"&gt;On 4D, $N = 1$ Massless Gauge Superfields of Higher Superspin: Half-Odd-Integer Case&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.7387"&gt;A Dynamical Theory for Massive Supergravity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.7590"&gt;Holographic collisions in confining theories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.7700"&gt;Epsilon expansion of Appell and Kamp&amp;eacute; de F&amp;eacute;riet functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.7929"&gt;Conformal Quivers and Melting Molecules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.8589"&gt;On the gauge symmetries of Maxwell-like higher-spin Lagrangians&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.8602"&gt;Worldsheet factorization for twistor-strings&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Fri, 01 Nov 2013 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2013-11-01:posts/2013/Nov/week-44/</guid><category>research</category></item><item><title>arXiv picks for week 43</title><link>http://meirizarrygelpi.github.io/posts/2013/Oct/week-43/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.5078"&gt;Bootstrapping the 3d Ising twist defect&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.5268"&gt;From Webs to Polylogarithms&lt;/a&gt;&lt;/li&gt;
