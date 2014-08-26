@@ -1682,4 +1682,46 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.4886"&gt;The role of leading twist operators in the Regge and Lorentzian OPE limits&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.4950"&gt;Wilson loops and Riemann theta functions II&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.5200"&gt;Proof of the Formula of Cachazo, He and Yuan for Yang-Mills Tree Amplitudes in Arbitrary Dimension&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 23 Nov 2013 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2013-11-23:posts/2013/Nov/week-47/</guid><category>research</category></item></channel></rss>
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 23 Nov 2013 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2013-11-23:posts/2013/Nov/week-47/</guid><category>research</category></item><item><title>arXiv picks for week 46</title><link>http://meirizarrygelpi.github.io/posts/2013/Nov/week-46/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.1827"&gt;Three easy exercises in off-shell string-inspired methods&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.1997"&gt;The ABJM Model is a Higher Gauge Theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.2058"&gt;Exact results for Wilson loops in arbitrary representations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.2061"&gt;Analytic structure of the $n=7$ scattering amplitude in $N=4$ SYM theory at multi-Regge kinematics: Conformal Regge Pole Contribution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.2302"&gt;Approaching the BFKL pomeron via integrable classical solutions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.2490"&gt;Semiclassical quantization of classical field theories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.2564"&gt;Ambitwistor strings and the scattering equations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.2611"&gt;The confining trailing string&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.3215"&gt;Modular interpolating functions for $N=4$ SYM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.3600"&gt;Color/kinematics duality for general abelian orbifolds of $N=4$ super Yang-Mills theory&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 16 Nov 2013 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2013-11-16:posts/2013/Nov/week-46/</guid><category>research</category></item></channel></rss>
