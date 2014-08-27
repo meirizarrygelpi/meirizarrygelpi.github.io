@@ -9,7 +9,62 @@
 &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>Mandelstam Momentum Invariants</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/mandelstam-invariants/" rel="alternate"></link><updated>2014-08-26T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-26:posts/2014/Aug/mandelstam-invariants/</id><summary type="html">&lt;p&gt;In this post I would like to gather some facts about Mandelstam momentum invariants. For simplicity, I am going to consider a scattering process with $N$ external quanta. Without loss of generality, I will assume that each external quantum is &lt;strong&gt;incoming&lt;/strong&gt;. I will also restrict to external &lt;strong&gt;scalar&lt;/strong&gt; quanta, so all the information required to specify the state of an external quantum is contained in the &lt;strong&gt;energy-momentum&lt;/strong&gt; vector $p_{a}$ carried by that quantum. I will label each of the external quanta with an integer from $1$ to $N$. Thus, there are $N$ energy-momentum vectors but the &lt;strong&gt;conservation constraint&lt;/strong&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>Threshold and Pseudothreshold Values</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/threshold-and-pseudothresholds/" rel="alternate"></link><updated>2014-08-27T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-27:posts/2014/Aug/threshold-and-pseudothresholds/</id><summary type="html">&lt;p&gt;In this post I will collect some results related to threshold and pseudothreshold values. I will assume that all masses are real and positive, and that two masses with different labels are always distinct.&lt;/p&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;When working with massive quanta, one finds that particular linear combinations of the masses appear quite often. Given $n + 1$ distinct masses, I can construct a &lt;strong&gt;threshold value&lt;/strong&gt; and $2^{n} - 1$ &lt;strong&gt;pseudothreshold values&lt;/strong&gt;. The threshold value is always given by the square of the sum of the masses, while the pseudothrehold values are found by taking the square of a combination of sums and differences of masses. Just like for Mandelstam invariants, we will refer to these values as the $(n + 1)$-threshold and $(n + 1)$-pseudothreshold values. As I will show below, taking the average over the $(n + 1)$-threshold and $(n + 1)$-pseudothreshold values gives the sum of squares of the $n + 1$ masses.&lt;/p&gt;
+&lt;h2&gt;Two Masses&lt;/h2&gt;
+&lt;p&gt;Given two distinct masses, the &lt;strong&gt;2-threshold value&lt;/strong&gt; is
+$$(m_{i} + m_{j})^{2}$$
+and the &lt;strong&gt;2-pseudothreshold value&lt;/strong&gt; is
+$$(m_{i} - m_{j})^{2}.$$
+Note that
+$$\frac{(m_{i} + m_{j})^{2} + (m_{i} - m_{j})^{2}}{2} = m_{i}^{2} + m_{j}^{2}.$$&lt;/p&gt;
+&lt;h2&gt;Three Masses&lt;/h2&gt;
+&lt;p&gt;Given three distinct masses, the &lt;strong&gt;3-threshold value&lt;/strong&gt; is
+$$(m_{i} + m_{j} + m_{k})^{2}$$
+and the three &lt;strong&gt;3-pseudothreshold values&lt;/strong&gt; are
+$$(m_{i} - m_{j} - m_{k})^{2} \qquad (m_{i} - m_{j} + m_{k})^{2} \qquad (m_{i} + m_{j} - m_{k})^{2}.$$
+Note that
+$$\frac{(m_{i} + m_{j} + m_{k})^{2} + (m_{i} - m_{j} - m_{k})^{2} + (m_{i} - m_{j} + m_{k})^{2} + (m_{i} + m_{j} - m_{k})^{2}}{4} = m_{i}^{2} + m_{j}^{2} + m_{k}^{2}.$$&lt;/p&gt;
+&lt;h2&gt;Four Masses&lt;/h2&gt;
+&lt;p&gt;Given four distinct masses, the &lt;strong&gt;4-threshold value&lt;/strong&gt; is
+$$(m_{i} + m_{j} + m_{k} + m_{l})^{2}$$
+and the seven &lt;strong&gt;4-pseudothreshold values&lt;/strong&gt; are
+$$(m_{i} - m_{j} - m_{k} - m_{l})^{2} \qquad (m_{i} - m_{j} + m_{k} + m_{l})^{2} \qquad (m_{i} + m_{j} - m_{k} + m_{l})^{2} \qquad (m_{i} + m_{j} + m_{k} - m_{l})^{2}$$
+and
+$$(m_{i} + m_{j} - m_{k} - m_{l})^{2} \qquad (m_{i} - m_{j} + m_{k} - m_{l})^{2} \qquad (m_{i} - m_{j} - m_{k} + m_{l})^{2}$$
+Note that
+$$\frac{(m_{i} + m_{j} + m_{k} + m_{l})^{2} + (m_{i} - m_{j} - m_{k} - m_{l})^{2} + \ldots + (m_{i} + m_{j} - m_{k} - m_{l})^{2} + \ldots}{8} = m_{i}^{2} + m_{j}^{2} + m_{k}^{2} + m_{l}^{2}.$$&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="kinematics"></category></entry><entry><title>Mandelstam Momentum Invariants</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/mandelstam-invariants/" rel="alternate"></link><updated>2014-08-26T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-26:posts/2014/Aug/mandelstam-invariants/</id><summary type="html">&lt;p&gt;In this post I would like to gather some facts about Mandelstam momentum invariants. For simplicity, I am going to consider a scattering process with $N$ external quanta. Without loss of generality, I will assume that each external quantum is &lt;strong&gt;incoming&lt;/strong&gt;. I will also restrict to external &lt;strong&gt;scalar&lt;/strong&gt; quanta, so all the information required to specify the state of an external quantum is contained in the &lt;strong&gt;energy-momentum&lt;/strong&gt; vector $p_{a}$ carried by that quantum. I will label each of the external quanta with an integer from $1$ to $N$. Thus, there are $N$ energy-momentum vectors but the &lt;strong&gt;conservation constraint&lt;/strong&gt;
 $$p_{1} + p_{2} + \ldots p_{N} = 0$$
 restricts the number of linearly-independent vectors to be $N - 1$.&lt;/p&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;

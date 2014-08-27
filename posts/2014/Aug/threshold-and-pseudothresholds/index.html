@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>arXiv picks for week 9 - M.E. Irizarry-Gelpí</title>
+    <title>Threshold and Pseudothreshold Values - M.E. Irizarry-Gelpí</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +11,11 @@
 
     <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
 
-<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2014/Mar/week-9/">
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2014/Aug/threshold-and-pseudothresholds/">
 
         <meta name="author" content="M.E. Irizarry-Gelpí" />
-        <meta name="keywords" content="research" />
-        <meta name="description" content="Some articles from the arXiv that I have found interesting during week 9 of 2014." />
+        <meta name="keywords" content="kinematics" />
+        <meta name="description" content="Some results regarding threshold and pseudothreshold values." />
 
 
 
@@ -63,10 +63,10 @@ M.E. Irizarry-Gelpí            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://meirizarrygelpi.github.io/posts/2014/Mar/week-9/"
+                    <a href="http://meirizarrygelpi.github.io/posts/2014/Aug/threshold-and-pseudothresholds/"
                        rel="bookmark"
-                       title="Permalink to arXiv picks for week 9">
-                        arXiv picks for week 9
+                       title="Permalink to Threshold and Pseudothreshold Values">
+                        Threshold and Pseudothreshold Values
                     </a>
                 </h1>
             </header>
@@ -76,35 +76,46 @@ M.E. Irizarry-Gelpí            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2014-03-01T00:00:00"> Sat 01 March 2014</time>
+        <i class="fa fa-calendar"></i><time datetime="2014-08-27T00:00:00"> Wed 27 August 2014</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://meirizarrygelpi.github.io/author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
 
         <span class="label label-default">Category</span>
-        <a href="http://meirizarrygelpi.github.io/category/arxiv.html">arXiv</a>
+        <a href="http://meirizarrygelpi.github.io/category/physics.html">Physics</a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="http://meirizarrygelpi.github.io/tag/research.html">research</a>
+	<a href="http://meirizarrygelpi.github.io/tag/kinematics.html">kinematics</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>In no particular order:</p>
-<ol>
-<li><a href="http://arxiv.org/abs/1402.5260">Impact factors for Reggeon-gluon transition in $N = 4$ SYM with large number of colours</a></li>
-<li><a href="http://arxiv.org/abs/1402.5396">Partition Functions and Casimir Energies in Higher Spin $AdS_{d+1}/CFT_{d}$</a></li>
-<li><a href="http://arxiv.org/abs/1402.5698">Conformal blocks for highly disparate scaling dimensions</a></li>
-<li><a href="http://arxiv.org/abs/1402.5765">Is It Possible To Embed A 4D, $N = 4$ Supersymmetric Vector Multiplet Within A Completely Off-Shell Adinkra Hologram?</a></li>
-<li><a href="http://arxiv.org/abs/1402.5674">Computational Complexity and Black Hole Horizons</a></li>
-<li><a href="http://arxiv.org/abs/1402.5961">Radiation and a dynamical UV/IR connection in AdS/CFT</a></li>
-<li><a href="http://arxiv.org/abs/1402.6322">Scale Invariance, Conformality, and Generalized Free Fields</a></li>
-<li><a href="http://arxiv.org/abs/1402.6327">The Field Theory of Intersecting D3-branes</a></li>
-<li><a href="http://arxiv.org/abs/1402.6334">Models of $ AdS_{2} $ Backreaction and Holography</a></li>
-<li><a href="http://arxiv.org/abs/1402.6356">String theory in target space</a></li>
-<li><a href="http://arxiv.org/abs/1402.6805">Dual-color decompositions at one-loop level in Yang-Mills theory</a></li>
-<li><a href="http://arxiv.org/abs/1402.7062">Anomalies without an action</a></li>
-</ol><script type= "text/javascript">
+                <p>In this post I will collect some results related to threshold and pseudothreshold values. I will assume that all masses are real and positive, and that two masses with different labels are always distinct.</p>
+<h2>Introduction</h2>
+<p>When working with massive quanta, one finds that particular linear combinations of the masses appear quite often. Given $n + 1$ distinct masses, I can construct a <strong>threshold value</strong> and $2^{n} - 1$ <strong>pseudothreshold values</strong>. The threshold value is always given by the square of the sum of the masses, while the pseudothrehold values are found by taking the square of a combination of sums and differences of masses. Just like for Mandelstam invariants, we will refer to these values as the $(n + 1)$-threshold and $(n + 1)$-pseudothreshold values. As I will show below, taking the average over the $(n + 1)$-threshold and $(n + 1)$-pseudothreshold values gives the sum of squares of the $n + 1$ masses.</p>
+<h2>Two Masses</h2>
+<p>Given two distinct masses, the <strong>2-threshold value</strong> is
+$$(m_{i} + m_{j})^{2}$$
+and the <strong>2-pseudothreshold value</strong> is
+$$(m_{i} - m_{j})^{2}.$$
+Note that
+$$\frac{(m_{i} + m_{j})^{2} + (m_{i} - m_{j})^{2}}{2} = m_{i}^{2} + m_{j}^{2}.$$</p>
+<h2>Three Masses</h2>
+<p>Given three distinct masses, the <strong>3-threshold value</strong> is
+$$(m_{i} + m_{j} + m_{k})^{2}$$
+and the three <strong>3-pseudothreshold values</strong> are
+$$(m_{i} - m_{j} - m_{k})^{2} \qquad (m_{i} - m_{j} + m_{k})^{2} \qquad (m_{i} + m_{j} - m_{k})^{2}.$$
+Note that
+$$\frac{(m_{i} + m_{j} + m_{k})^{2} + (m_{i} - m_{j} - m_{k})^{2} + (m_{i} - m_{j} + m_{k})^{2} + (m_{i} + m_{j} - m_{k})^{2}}{4} = m_{i}^{2} + m_{j}^{2} + m_{k}^{2}.$$</p>
+<h2>Four Masses</h2>
+<p>Given four distinct masses, the <strong>4-threshold value</strong> is
+$$(m_{i} + m_{j} + m_{k} + m_{l})^{2}$$
+and the seven <strong>4-pseudothreshold values</strong> are
+$$(m_{i} - m_{j} - m_{k} - m_{l})^{2} \qquad (m_{i} - m_{j} + m_{k} + m_{l})^{2} \qquad (m_{i} + m_{j} - m_{k} + m_{l})^{2} \qquad (m_{i} + m_{j} + m_{k} - m_{l})^{2}$$
+and
+$$(m_{i} + m_{j} - m_{k} - m_{l})^{2} \qquad (m_{i} - m_{j} + m_{k} - m_{l})^{2} \qquad (m_{i} - m_{j} - m_{k} + m_{l})^{2}$$
+Note that
+$$\frac{(m_{i} + m_{j} + m_{k} + m_{l})^{2} + (m_{i} - m_{j} - m_{k} - m_{l})^{2} + \ldots + (m_{i} + m_{j} - m_{k} - m_{l})^{2} + \ldots}{8} = m_{i}^{2} + m_{j}^{2} + m_{k}^{2} + m_{l}^{2}.$$</p><script type= "text/javascript">
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
@@ -146,8 +157,8 @@ M.E. Irizarry-Gelpí            </a>
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
 
-                    var disqus_identifier = 'week-9';
-                var disqus_url = 'http://meirizarrygelpi.github.io/posts/2014/Mar/week-9/';
+                    var disqus_identifier = 'threshold-and-pseudothresholds';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/2014/Aug/threshold-and-pseudothresholds/';
 
             var disqus_config = function () {
                 this.language = "en";
