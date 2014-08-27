@@ -9,7 +9,57 @@
 &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 30 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-30:posts/2014/Aug/week-35/</guid><category>research</category></item><item><title>Threshold and Pseudothreshold Values</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/threshold-and-pseudothresholds/</link><description>&lt;p&gt;In this post I will collect some results related to threshold and pseudothreshold values. I will assume that all masses are real and positive, and that two masses with different labels are always distinct.&lt;/p&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 30 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-30:posts/2014/Aug/week-35/</guid><category>research</category></item><item><title>Gram Momentum Invariants</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/gram-invariants/</link><description>&lt;p&gt;In this post I will mention some facts about what I call Gram momentum invariants. I will assume that every energy-momentum vector $p_{I}$ satisfies an on-shell constraint of the form
+$$p_{I}^{2} = - m_{I}^{2}$$
+with the mass $m_{I}$ being real and positive.&lt;/p&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In a &lt;a href="http://meirizarrygelpi.github.io/posts/2014/Aug/mandelstam-invariants/"&gt;previous post&lt;/a&gt; I introduced the Mandelstam momentum invariants. We can construct $n$-Mandelstam invariants with $n$ distinct energy-momentum vectors. With a similar collection of $n$ distinct energy-momentum vectors, we construct an $n$-Gram invariant:
+$$G_{I_{1} I_{2} \cdots I_{n}} = \det{ \begin{pmatrix} p_{I_{1}} \cdot p_{I_{1}} &amp;amp; \cdots &amp;amp; p_{I_{1}} \cdot p_{I_{n}} \\ \vdots &amp;amp; \ddots &amp;amp; \vdots \\ p_{I_{1}} \cdot p_{I_{n}} &amp;amp; \cdots &amp;amp; p_{I_{n}} \cdot p_{I_{n}} \end{pmatrix} }.$$
+That is, an $n$-Gram invariant correspond to the Gram determinant associated with a collection of $n$ energy-momentum vectors. Hence, by construction, the Gram momentum invariants are sensitive to collinearity of the external energy-momentum vectors (i.e. they vanish whenever a pair of energy-momentum vectors are collinear).&lt;/p&gt;
+&lt;h2&gt;Two Quanta&lt;/h2&gt;
+&lt;p&gt;Given two linearly-independent energy-momentum vectors, the &lt;strong&gt;2-Gram&lt;/strong&gt; invariant is
+$$G_{IJ} \equiv \det{ \begin{pmatrix} p_{I}^{2} &amp;amp; p_{I} \cdot p_{J} \\ p_{I} \cdot p_{J} &amp;amp; p_{J}^{2} \end{pmatrix} } = p_{I}^{2} p_{J}^{2} - (p_{I} \cdot p_{J})^{2}.$$
+Using
+$$p_{I}^{2} = - m_{I}^{2} \qquad (p_{I} + p_{J})^{2} = -s_{IJ} \qquad p_{J}^{2} = - m_{J}^{2}$$
+we can write
+$$p_{I} \cdot p_{J} = \frac{m_{I}^{2} + m_{J}^{2} - s_{IJ}}{2}$$
+This allows me to write the 2-Gram invariant in terms of masses and 2-Mandelstam invariants:
+$$G_{IJ} = \frac{1}{4} [s_{IJ} - (m_{I} - m_{J})^{2} ] [ (m_{I} + m_{J})^{2} - s_{IJ}].$$
+In this form, the &lt;strong&gt;sign properties&lt;/strong&gt; of a 2-Gram invariant are obvious. We have $G_{IJ}$ being &lt;strong&gt;negative&lt;/strong&gt; whenever $s_{IJ} &amp;lt; (m_{I} - m_{J})^{2}$ or $s_{IJ} &amp;gt; (m_{I} + m_{J})^{2}$. Part of this region lies &lt;strong&gt;above the 2-threshold&lt;/strong&gt;, and another part lies &lt;strong&gt;below the 2-pseudothreshold&lt;/strong&gt;. On the other hand, we have $G_{IJ}$ being &lt;strong&gt;positive&lt;/strong&gt; whenever $(m_{I} - m_{J})^{2} &amp;lt; s_{IJ} &amp;lt; (m_{I} + m_{J})^{2}$. All of this region lies &lt;strong&gt;below the 2-threshold&lt;/strong&gt; and &lt;strong&gt;above the 2-pseudothreshold&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;Three Quanta&lt;/h2&gt;
+&lt;p&gt;Given three linearly-independent energy-momentum vectors, the &lt;strong&gt;3-Gram&lt;/strong&gt; invariant is
+$$G_{IJK} \equiv \det{ \begin{pmatrix} p_{I}^{2} &amp;amp; p_{I} \cdot p_{J} &amp;amp; p_{I} \cdot p_{K} \\ p_{I} \cdot p_{J} &amp;amp; p_{J}^{2} &amp;amp; p_{J} \cdot p_{K} \\ p_{I} \cdot p_{K} &amp;amp; p_{J} \cdot p_{K} &amp;amp; p_{K}^{2} \end{pmatrix} } = p_{I}^{2} p_{J}^{2} p_{K}^{2} - p_{I}^{2} (p_{J} \cdot p_{K}) - p_{J}^{2} (p_{I} \cdot p_{K}) - p_{K}^{2} (p_{I} \cdot p_{J}) + 2 (p_{I} \cdot p_{J})(p_{I} \cdot p_{K})(p_{J} \cdot p_{K}) .$$
+In general, this cannot be simplified further in terms of masses and Mandelstam invariants.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Thu, 28 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-28:posts/2014/Aug/gram-invariants/</guid><category>kinematics</category></item><item><title>Threshold and Pseudothreshold Values</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/threshold-and-pseudothresholds/</link><description>&lt;p&gt;In this post I will collect some results related to threshold and pseudothreshold values. I will assume that all masses are real and positive, and that two masses with different labels are always distinct.&lt;/p&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;When working with massive quanta, one finds that particular linear combinations of the masses appear quite often. Given $n + 1$ distinct masses, I can construct a &lt;strong&gt;threshold value&lt;/strong&gt; and $2^{n} - 1$ &lt;strong&gt;pseudothreshold values&lt;/strong&gt;. The threshold value is always given by the square of the sum of the masses, while the pseudothrehold values are found by taking the square of a combination of sums and differences of masses. Just like for Mandelstam invariants, we will refer to these values as the $(n + 1)$-threshold and $(n + 1)$-pseudothreshold values. As I will show below, taking the average over the $(n + 1)$-threshold and $(n + 1)$-pseudothreshold values gives the sum of squares of the $n + 1$ masses.&lt;/p&gt;
 &lt;h2&gt;Two Masses&lt;/h2&gt;

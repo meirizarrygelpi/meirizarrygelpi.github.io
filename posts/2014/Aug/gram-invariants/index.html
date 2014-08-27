@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Gram Momentum Invariants - M.E. Irizarry-Gelpí</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
+
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2014/Aug/gram-invariants/">
+
+        <meta name="author" content="M.E. Irizarry-Gelpí" />
+        <meta name="keywords" content="kinematics" />
+        <meta name="description" content="On Gram momentum invariants, with explicit details on the invariants with 2 and 3 quanta." />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/bootstrap.readable.min.css" type="text/css"/>
+    <link href="http://meirizarrygelpi.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://meirizarrygelpi.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://meirizarrygelpi.github.io/" class="navbar-brand">
+M.E. Irizarry-Gelpí            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="http://meirizarrygelpi.github.io/category/arxiv.html">Arxiv</a>
+                        </li>
+                        <li >
+                            <a href="http://meirizarrygelpi.github.io/category/homework.html">Homework</a>
+                        </li>
+                        <li >
+                            <a href="http://meirizarrygelpi.github.io/category/maths.html">Maths</a>
+                        </li>
+                        <li >
+                            <a href="http://meirizarrygelpi.github.io/category/notes.html">Notes</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://meirizarrygelpi.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://meirizarrygelpi.github.io/posts/2014/Aug/gram-invariants/"
+                       rel="bookmark"
+                       title="Permalink to Gram Momentum Invariants">
+                        Gram Momentum Invariants
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-08-28T00:00:00"> Thu 28 August 2014</time>
+    </span>
+            <span class="label label-default">By</span>
+            <a href="http://meirizarrygelpi.github.io/author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
+
+        <span class="label label-default">Category</span>
+        <a href="http://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://meirizarrygelpi.github.io/tag/kinematics.html">kinematics</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>In this post I will mention some facts about what I call Gram momentum invariants. I will assume that every energy-momentum vector $p_{I}$ satisfies an on-shell constraint of the form
+$$p_{I}^{2} = - m_{I}^{2}$$
+with the mass $m_{I}$ being real and positive.</p>
+<h2>Introduction</h2>
+<p>In a <a href="http://meirizarrygelpi.github.io/posts/2014/Aug/mandelstam-invariants/">previous post</a> I introduced the Mandelstam momentum invariants. We can construct $n$-Mandelstam invariants with $n$ distinct energy-momentum vectors. With a similar collection of $n$ distinct energy-momentum vectors, we construct an $n$-Gram invariant:
+$$G_{I_{1} I_{2} \cdots I_{n}} = \det{ \begin{pmatrix} p_{I_{1}} \cdot p_{I_{1}} &amp; \cdots &amp; p_{I_{1}} \cdot p_{I_{n}} \\ \vdots &amp; \ddots &amp; \vdots \\ p_{I_{1}} \cdot p_{I_{n}} &amp; \cdots &amp; p_{I_{n}} \cdot p_{I_{n}} \end{pmatrix} }.$$
+That is, an $n$-Gram invariant correspond to the Gram determinant associated with a collection of $n$ energy-momentum vectors. Hence, by construction, the Gram momentum invariants are sensitive to collinearity of the external energy-momentum vectors (i.e. they vanish whenever a pair of energy-momentum vectors are collinear).</p>
+<h2>Two Quanta</h2>
+<p>Given two linearly-independent energy-momentum vectors, the <strong>2-Gram</strong> invariant is
+$$G_{IJ} \equiv \det{ \begin{pmatrix} p_{I}^{2} &amp; p_{I} \cdot p_{J} \\ p_{I} \cdot p_{J} &amp; p_{J}^{2} \end{pmatrix} } = p_{I}^{2} p_{J}^{2} - (p_{I} \cdot p_{J})^{2}.$$
+Using
+$$p_{I}^{2} = - m_{I}^{2} \qquad (p_{I} + p_{J})^{2} = -s_{IJ} \qquad p_{J}^{2} = - m_{J}^{2}$$
+we can write
+$$p_{I} \cdot p_{J} = \frac{m_{I}^{2} + m_{J}^{2} - s_{IJ}}{2}$$
+This allows me to write the 2-Gram invariant in terms of masses and 2-Mandelstam invariants:
+$$G_{IJ} = \frac{1}{4} [s_{IJ} - (m_{I} - m_{J})^{2} ] [ (m_{I} + m_{J})^{2} - s_{IJ}].$$
+In this form, the <strong>sign properties</strong> of a 2-Gram invariant are obvious. We have $G_{IJ}$ being <strong>negative</strong> whenever $s_{IJ} &lt; (m_{I} - m_{J})^{2}$ or $s_{IJ} &gt; (m_{I} + m_{J})^{2}$. Part of this region lies <strong>above the 2-threshold</strong>, and another part lies <strong>below the 2-pseudothreshold</strong>. On the other hand, we have $G_{IJ}$ being <strong>positive</strong> whenever $(m_{I} - m_{J})^{2} &lt; s_{IJ} &lt; (m_{I} + m_{J})^{2}$. All of this region lies <strong>below the 2-threshold</strong> and <strong>above the 2-pseudothreshold</strong>.</p>
+<h2>Three Quanta</h2>
+<p>Given three linearly-independent energy-momentum vectors, the <strong>3-Gram</strong> invariant is
+$$G_{IJK} \equiv \det{ \begin{pmatrix} p_{I}^{2} &amp; p_{I} \cdot p_{J} &amp; p_{I} \cdot p_{K} \\ p_{I} \cdot p_{J} &amp; p_{J}^{2} &amp; p_{J} \cdot p_{K} \\ p_{I} \cdot p_{K} &amp; p_{J} \cdot p_{K} &amp; p_{K}^{2} \end{pmatrix} } = p_{I}^{2} p_{J}^{2} p_{K}^{2} - p_{I}^{2} (p_{J} \cdot p_{K}) - p_{J}^{2} (p_{I} \cdot p_{K}) - p_{K}^{2} (p_{I} \cdot p_{J}) + 2 (p_{I} \cdot p_{J})(p_{I} \cdot p_{K})(p_{J} \cdot p_{K}) .$$
+In general, this cannot be simplified further in terms of masses and Mandelstam invariants.</p><script type= "text/javascript">
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+</script>
+
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'gram-invariants';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/2014/Aug/gram-invariants/';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 M.E. Irizarry-Gelpí
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://meirizarrygelpi.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://meirizarrygelpi.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://meirizarrygelpi.github.io/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+</body>
+</html>
