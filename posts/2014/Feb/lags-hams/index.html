@@ -107,7 +107,7 @@ If one <em>assumes</em> the Euler-Lagrange equations,
 \frac{\partial L}{\partial x} = \frac{\mathrm{d}}{\mathrm{d} t} \left( \frac{\partial L}{\partial \dot{x}} \right)
 \end{equation}
 then the relations in $(\ref{Heq})$ become the Hamilton equations.</p>
-<h1>Dual Functions</h1>
+<h2>Dual Functions</h2>
 <p>Nothing prevents us from postulating the existence of a dual Lagrangian $K(\dot{p}, p, t)$, which is a function of the generalized force $\dot{p}$ and the generalized momentum, and also a dual Hamiltonian $G(\dot{p}, \dot{x}, t)$, which is a function of the generalized force and the generalized velocity. Obviously, we have
 \begin{equation}
 \mathrm{d}K = \frac{\partial K}{\partial \dot{p}} \cdot \mathrm{d} \dot{p} + \frac{\partial K}{\partial p} \cdot \mathrm{d}p + \frac{\partial K}{\partial t} \mathrm{d}t
@@ -148,7 +148,7 @@ We also have the relations among partial time derivatives,
 \frac{\partial H}{\partial t} = {-\frac{\partial G}{\partial t}} \qquad \frac{\partial L}{\partial t} = {-\frac{\partial K}{\partial t}}
 \end{equation}
 It appears that assuming the existence of the dual functions and the relationships via Legendre transforms is equivalent to requiring the Euler-Lagrange equations.</p>
-<h1>Actions</h1>
+<h2>Actions</h2>
 <p>Note that
 \begin{equation}
 K = \frac{\mathrm{d}}{\mathrm{d} t}(x \cdot p) - L \qquad G = \dot{x} \cdot p - x \cdot \dot{p} - H \qquad L + H = K + G
@@ -177,7 +177,7 @@ If $S$ and $R$ are well-behaved functions, then it follows that
 \begin{equation}
 \frac{\partial x_{i}}{\partial p_{f}} + \frac{\partial x_{f}}{\partial p_{i}} = 0 \qquad \frac{\partial p_{f}}{\partial x_{i}} + \frac{\partial p_{i}}{\partial x_{f}} = 0
 \end{equation}</p>
-<h1>Gauge Transformations</h1>
+<h2>Gauge Transformations</h2>
 <p>Shifting $L$ by the total time derivative of a function of $x$ and $t$ leaves the Euler-Lagrange equations invariant. The action $S$ aquires a shift too:
 \begin{equation}
 L \rightarrow L + \frac{\mathrm{d} \Lambda}{\mathrm{d} t} \quad \Longrightarrow \quad S \rightarrow S + \Lambda(x_{f}, t_{f}) - \Lambda(x_{i}, t_{i})
@@ -196,7 +196,7 @@ If we write $K$ in terms of $x$ and $H$, it follows that
 K \rightarrow K + \frac{\mathrm{d} \Omega}{\mathrm{d} t} \quad \Longrightarrow \quad x \rightarrow x + \frac{\partial \Omega}{\partial p} \qquad H \rightarrow H + \frac{\partial \Omega}{\partial t}
 \end{equation}
 Can we introduce dual potentials in momentum space such that these transformations compensate some gauge transformations of the dual potentials? What does this dual gauge theory look like? In the quantum theory, do $Z$ and $\psi$ correspond to Fourier transforms of $A$ and $\phi$, or are they unrelated?</p>
-<h1>Brackets</h1>
+<h2>Brackets</h2>
 <p>Consider a function $ h(x, p, t) $. The total time derivative of $ h $ is
 \begin{equation}
  \frac{\mathrm{d} h}{\mathrm{d} t} = \frac{\partial h}{\partial x} \cdot \dot{x} + \frac{\partial h}{\partial p} \cdot \dot{p} + \frac{\partial h}{\partial t} 
@@ -207,7 +207,7 @@ Using $ (\ref{Hderiv}) $ we find
 This involves the familiar Poisson bracket,
 \begin{equation} [ h , H ] = \frac{\partial h}{\partial x} \cdot \frac{\partial H}{\partial p} - \frac{\partial H}{\partial x} \cdot \frac{\partial h}{\partial p} 
 \end{equation}</p>
-<h1>Harmonic Oscillator</h1>
+<h2>Harmonic Oscillator</h2>
 <p>During a course on classical mechanics, one is rarely introduced to the dual Lagrangian $K$ or the dual Hamiltonian $G$. Indeed, they are mentioned in <em>Goldstein, Poole and Safko</em> as problems at the end of chapter 8 (alas, with a different sign convention). I suspect the dual functions can be used to study magnetic degrees of freedom. By magnetic, I mean heavy or strongly-coupled.</p>
 <p>As an example, let us consider the classical harmonic oscillator. The Hamiltonian for this system is
 \begin{equation}
@@ -235,7 +235,7 @@ Just like for $H$, we have $G \geq 0$ if $m \geq 0$ and $k \geq 0$. Both $H$ and
 \begin{equation} \omega^{2} = \frac{k}{m} 
 \end{equation}
 Note that both taking $ k \rightarrow 0 $ with $ m $ fixed, and $ m \rightarrow \infty $ with $ k $ fixed lead to $ \omega \rightarrow 0 $, which can be interpreted as large period limits.</p>
-<h2>Free System</h2>
+<h3>Free System</h3>
 <p>Taking the $ k \rightarrow 0 $ limit while keeping $ m $ fixed in $ (\ref{HarmOsci}) $ gives the Hamiltonian for a single-body free system:
 \begin{equation} H = \frac{p^{2}}{2m} 
 \end{equation}
@@ -262,7 +262,7 @@ corresponds to a shift in the Lagrangian
 \begin{equation}L \rightarrow L + e \frac{\mathrm{d} \Lambda}{\mathrm{d} t}
 \end{equation}
 which, as we saw above, does not change the Euler-Lagrange equation.</p>
-<h2>Localized System</h2>
+<h3>Localized System</h3>
 <p>Taking the $ m \rightarrow \infty $ limit while keeping $ k $ fixed in $ (\ref{HarmOsci}) $ gives the Hamiltonian for a localized system:
 \begin{equation} H = \frac{1}{2} k x^{2} 
 \end{equation}
@@ -289,7 +289,7 @@ corresponds to a shift in the dual Lagrangian
 \begin{equation} K \rightarrow K + g \frac{\mathrm{d} \Omega}{\mathrm{d} t} 
 \end{equation}
 which again, as we saw above, does not change the Euler-Lagrange equation.</p>
-<h2>General system</h2>
+<h3>General System</h3>
 <p>Both the free system and the localized system are extreme cases of the harmonic oscillator system. In both cases the Hamiltonian becomes a function of a single mechanical variable. After adding potentials, we have implicit dependence on the second variable.</p><script type= "text/javascript">
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
@@ -434,13 +434,18 @@ which again, as we saw above, does not change the Euler-Lagrange equation.</p>
                 <li class="list-group-item"><a href="http://meirizarrygelpi.github.io/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                     <ul class="list-group " id="tags">
                         <li class="list-group-item tag-1">
+                            <a href="http://meirizarrygelpi.github.io/tag/graph-theory.html">
+                                graph theory
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-1">
                             <a href="http://meirizarrygelpi.github.io/tag/classical-mechanics.html">
                                 classical mechanics
                             </a>
                         </li>
                         <li class="list-group-item tag-1">
-                            <a href="http://meirizarrygelpi.github.io/tag/graph-theory.html">
-                                graph theory
+                            <a href="http://meirizarrygelpi.github.io/tag/kinematics.html">
+                                kinematics
                             </a>
                         </li>
                         <li class="list-group-item tag-1">
@@ -459,11 +464,6 @@ which again, as we saw above, does not change the Euler-Lagrange equation.</p>
                             </a>
                         </li>
                         <li class="list-group-item tag-1">
-                            <a href="http://meirizarrygelpi.github.io/tag/semiclassical.html">
-                                semiclassical
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-1">
                             <a href="http://meirizarrygelpi.github.io/tag/seminar.html">
                                 seminar
                             </a>
@@ -474,8 +474,8 @@ which again, as we saw above, does not change the Euler-Lagrange equation.</p>
                             </a>
                         </li>
                         <li class="list-group-item tag-1">
-                            <a href="http://meirizarrygelpi.github.io/tag/kinematics.html">
-                                kinematics
+                            <a href="http://meirizarrygelpi.github.io/tag/semiclassical.html">
+                                semiclassical
                             </a>
                         </li>
                     </ul>
