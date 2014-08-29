@@ -6,7 +6,102 @@
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.5572"&gt;Anomaly polynomial of general 6d SCFTs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.5866"&gt;Theory Summary and Prospects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.6522"&gt;Chiral algebras of class S&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 30 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-30:posts/2014/Aug/week-35/</guid><category>research</category></item><item><title>Gram Momentum Invariants</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/gram-invariants/</link><description>&lt;p&gt;In this post I will mention some facts about what I call Gram momentum invariants. I will assume that every energy-momentum vector $p_{I}$ satisfies an on-shell constraint of the form
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 30 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-30:posts/2014/Aug/week-35/</guid><category>research</category></item><item><title>Dual Conformal Invariants</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/dual-conformal-invariants/</link><description>&lt;p&gt;In this post I will discuss some aspects of dual conformal symmetry. I will assume that each external energy-momentum vector $p_{I}$ satisfies an on-shell constraint of the form
+$$p_{I}^{2} = - m_{I}^{2}$$
+and that the mass $m_{I}$ is positive and real. During some of the remarks I will take massless limits to illustrate some results. &lt;/p&gt;
+&lt;h2&gt;Traditional Conformal Symmetry&lt;/h2&gt;
+&lt;p&gt;Conformal symmetry is a large set of symmetries of spacetime. It includes translations, Lorentz transformations, dilatations, and conformal boosts. People are most familiar with how conformal symmetry transformations act on the spacetime position vector.&lt;/p&gt;
+&lt;p&gt;Translations and Lorentz transformations are more familiar; together they make Poincaré symmetry. Under a finite translation, the &lt;strong&gt;spacetime position&lt;/strong&gt; vector of an event transforms as
+$$x \longrightarrow x + a.$$
+In order to obtain a translation-invariant quantity, I must use the spacetime position of two events and construct an interval vector. Under the translation $x \longrightarrow x + a$ and $y \longrightarrow y + a$ one can see that $x - y \longrightarrow x - y$. Thus, the simplest Poincaré-invariant is given by $(x - y)^{2}$.&lt;/p&gt;
+&lt;p&gt;Under a &lt;strong&gt;dilatation&lt;/strong&gt; the spacetime position transforms as
+$$x \longrightarrow \lambda x \qquad \lambda &amp;gt; 0$$
+so an easy dilatation-invariant and Poincaré-invariant quantity requires three spacetime position vectors:
+$$\frac{(x - y)^{2}}{(x - z)^{2}}.$$
+It appears that the more symmetry I have, the more information I need to construct an invariant. However, this expression is not invariant under the full conformal symmetry transformations.&lt;/p&gt;
+&lt;p&gt;In order to introduce the remaining conformal symmetry transformation, the conformal boost, it will be useful to introduce a discrete transformation that is not part of the conformal symmetry transformations: the &lt;strong&gt;inversion&lt;/strong&gt;. Under an inversion, the spacetime position vector transforms as
+$$x \longrightarrow \frac{1}{x^{2}} x.$$
+It follows that
+$$(x - y)^{2} \longrightarrow \frac{(x - y)^{2}}{x^{2} y^{2}}.$$
+If I want to construct a quantity that is invariant under translations, Lorentz transformations, dilatations, and inversions, it appears that I need the spacetime position of four events in order to construct the ratio
+$$\frac{(x - y)^{2} (z - w)^{2}}{(x - z)^{2} (y - w)^{2}}.$$
+This quantity is called a &lt;strong&gt;conformal ratio&lt;/strong&gt;. With the same four spacetime position vectors one can construct two other conformal ratios:
+$$ \frac{(x - y)^{2} (z - w)^{2}}{(x - w)^{2} (y - z)^{2}} \qquad \frac{(x - w)^{2} (y - z)^{2}}{(x - z)^{2} (y - w)^{2}}.$$
+It is clear that the product of these two conformal ratios gives the first conformal ratio that I introduced, so given four spacetime position vectors I can construct two independent conformal ratios.&lt;/p&gt;
+&lt;p&gt;Without providing any further details, a &lt;strong&gt;conformal boost&lt;/strong&gt; transformations can be done as a sequence of an inversion, a translation, and another inversion:
+$$x \longrightarrow \frac{1}{x^{2}} x \longrightarrow \frac{1}{(x + b)^{2}} (x + b) \longrightarrow \frac{1}{1 + 2 (x \cdot b) + x^{2} b^{2}} (x + x^{2} b).$$
+Since the conformal ratio is invariant under translations and inversions, it is actually invariant under all of the conformal symmetry transformations. Thus, the simplest conformal-invariant quantity requires four pieces of information. If I have a collection of $N$ points in spacetime, I have to count the number of ways of choosing four of them to make two conformal ratios. Thus, the number of independent conformal ratios is
+$$\mathfrak{C}_{N} = 2 \times {N \choose 4} = \frac{N (N - 1) (N - 2) (N - 3)}{12}, \qquad N \geq 4.$$
+Note that $\mathfrak{C}_{4} = 2$, $\mathfrak{C}_{5} = 10$, and $\mathfrak{C}_{6} = 30$.&lt;/p&gt;
+&lt;h2&gt;Dual Conformal Symmetry&lt;/h2&gt;
+&lt;p&gt;The origins of dual conformal symmetry are still murky. I am going to present it in a way that will make it sound as less of what it is. Dual conformal symmetry is related to even more symmetry: a Yangian's worth of symmetry, which is effectively an infinite amount of symmetry. Since I do not understand that stuff well, I am not going to say anything about it.&lt;/p&gt;
+&lt;p&gt;One way to understand dual conformal symmetry is to consider a scattering process with $N$ external quanta. The conservation constraint is
+$$p_{1} + p_{2} + \ldots + p_{N} = 0.$$
+This constraint can be satisfied explicitly by writting each energy-momentum vector as the difference of &lt;strong&gt;dual position&lt;/strong&gt; vectors:
+$$p_{1} = q_{2} - q_{1} \qquad p_{2} = q_{3} - q_{2} \qquad \cdots \qquad p_{N} = q_{1} - q_{N}.$$
+After this "change of variables" from $p_{I}$ to $q_{I}$ we can consider conformal symmetry transformations acting on the dual position vectors. This conformal symmetry acts on momentum space; it is different from the traditional conformal symmetry. The dual conformal ratios constructed with the dual position vectors are invariant under dual conformal symmetry transformations.&lt;/p&gt;
+&lt;p&gt;However, the way that I introduced the dual position vectors above is not unique. If I think of the dual position vectors as describing the positions of the vertices of a polygon, then the edges of this polygon correspond to the energy-momentum vectors. Drawing the vertices in ascending order, I can see that the energy-momentum vectors are arranged in a particular &lt;strong&gt;order&lt;/strong&gt; (in the case above the order is $1$, $2$, $\ldots$, $N$). There is nothing special about the particular order that I chose above. But choosing another order will change the explicit values of the dual conformal ratios. In other words, just like there are different scattering channels, there are also have different dual conformal channels. The number of dual conformal channels is the same as the number of &lt;strong&gt;inequivalent permutations&lt;/strong&gt; of $N$ integers (permutations that are not related by a cyclic rotation). This number is given by
+$$\mathfrak{D}_{N} = (N - 1)! \qquad N \geq 1.$$
+Note that $\mathfrak{D}_{4} = 6$ and $\mathfrak{D}_{6} = 120$. As I will show below, only half of these dual conformal channels are interesting.&lt;/p&gt;
+&lt;h3&gt;Finding Inequivalent Permutations&lt;/h3&gt;
+&lt;p&gt;An easy way of finding inequivalent permutations is to construct them from smaller ones. I start with one element. There is only $1! = 1$ permutation. Then I add another element. With two elements I have $2! = 2$ permutations. These are $21$ and $12$. However, $12$ follows from $21$ by a cyclic rotation, so only one of these permutations is independent. For convenience I will pick $21$ as the representative. One way to construct the permutation $21$ is to start with the one-element "subpermutation" $1$ and prepend the second element.&lt;/p&gt;
+&lt;p&gt;Then I add another element. With three elements I have $3! = 6$ possible permutations. But it turns out that only two of these permutations are inequivalent. To construct these inequivalent permutations, I take the subpermutation $21$ and its cyclic rotation $12$, and prepend the third element yielding $321$ and $312$. Performing cyclic rotations on $321$ yields $213$ and $132$. Similary, performing cyclic rotations on $312$ yields $123$ and $231$. Note that the two inequivalent classes are related by a reflection.&lt;/p&gt;
+&lt;p&gt;Then I add another element. With four elements I have $4! = 24$ possible permutations. I expect $\mathfrak{D}_{4} = 6$ inequivalent permutations. To construct these, I take the two inequivalent three-element permutations $321$ and $312$ (and also those three-element permutations generated from them by a cyclic rotation), and prepend the fourth element:
+$$4321 \qquad 4213 \qquad 4132,$$
+and
+$$4312 \qquad 4123 \qquad 4231.$$
+Note that these six permutations can be divided into three pairs that are related by reflections (for example, $4321$ and $4123$).&lt;/p&gt;
+&lt;p&gt;This process can be repeated in order to obtain larger permutations.&lt;/p&gt;
+&lt;h2&gt;Four External Quanta&lt;/h2&gt;
+&lt;p&gt;In order to be concrete, I will now do some examples with explicit details. The simplest case is with four external quanta. Let me consider the permutation $4321$. With this order of the external states, the dual position variables are introduced as
+$$p_{1} = q_{2} - q_{1} \qquad p_{2} = q_{3} - q_{2} \qquad p_{3} = q_{4} - q_{3} \qquad p_{4} = q_{1} - q_{4}.$$
+Other possible intervals are $q_{2} - q_{4} = p_{1} + p_{4}$ and $q_{3} - q_{1} = p_{1} + p_{2}$. Using the notation $q_{IJ} \equiv q_{I} - q_{J}$, the &lt;strong&gt;dual conformal ratios&lt;/strong&gt; are given by
+$$r_{1} = \frac{q_{21}^{2} q_{43}^{2}}{q_{24}^{2} q_{31}^{2}} = \frac{p_{1}^{2} p_{3}^{2}}{(p_{1} + p_{4})^{2} (p_{1} + p_{2})^{2}} \qquad r_{2} = \frac{q_{14}^{2} q_{32}^{2}}{q_{21}^{2} q_{43}^{2}} = \frac{p_{4}^{2} p_{2}^{2}}{p_{1}^{2} p_{3}^{2}} \qquad r_{3} = r_{1} r_{2} = \frac{p_{2}^{2} p_{4}^{2}}{(p_{1} + p_{4})^{2} (p_{1} + p_{2})^{2}}.$$
+Writing the dual conformal ratios in terms of the masses and 2-Mandelstam invariants gives
+$$r_{1} = \frac{m_{1}^{2} m_{3}^{2}}{s_{14} s_{12}} \qquad r_{2} = \frac{m_{2}^{2} m_{4}^{2}}{m_{1}^{2} m_{3}^{2}} \qquad r_{3} = \frac{m_{2}^{2} m_{4}^{2}}{s_{14} s_{12}}.$$
+In principle, only one of these dual conformal ratios is relevant, since $r_{2}$ only involves the masses, and $r_{3}$ involves the same 2-Mandelstam invariants as $r_{1}$. Also, note that $r_{1}$ involves the masses in the numerator, so when working with massless states the dual conformal ratio is fixed to vanish.&lt;/p&gt;
+&lt;p&gt;The dual conformal invariants for other inequivalent permutations can be obtained by permuting the labels. For example, in order to go from $4321$ to $4213$, I need the replacement
+$$4 \longrightarrow 4 \qquad 3 \longrightarrow 2 \qquad 2 \longrightarrow 1 \qquad 1 \longrightarrow 3$$
+Thus, the dual conformal ratios become
+$$r_{1} \longrightarrow \frac{m_{3}^{2} m_{2}^{2}}{s_{12} s_{13}} \qquad r_{2} \longrightarrow \frac{m_{1}^{2} m_{4}^{2}}{m_{3}^{2} m_{2}^{2}} \qquad r_{3} \longrightarrow \frac{m_{1}^{2} m_{4}^{2}}{s_{12} s_{13}},$$
+where I have used $s_{34} = s_{12}$ which follows from the conservation constraint.&lt;/p&gt;
+&lt;p&gt;Similarly, in order to go from $4321$ to $4132$, I need the replacement
+$$4 \longrightarrow 4 \qquad 3 \longrightarrow 1 \qquad 2 \longrightarrow 3 \qquad 1 \longrightarrow 2$$
+Thus, the dual conformal ratios become
+$$r_{1} \longrightarrow \frac{m_{2}^{2} m_{1}^{2}}{s_{13} s_{14}} \qquad r_{2} \longrightarrow \frac{m_{3}^{2} m_{4}^{2}}{m_{2}^{2} m_{1}^{2}} \qquad r_{3} \longrightarrow \frac{m_{3}^{2} m_{4}^{2}}{s_{13} s_{14}},$$
+where I have used $s_{24} = s_{13}$ and $s_{23} = s_{14}$ which follow from the conservation constraint.&lt;/p&gt;
+&lt;h2&gt;Six External Quanta&lt;/h2&gt;
+&lt;p&gt;...&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Fri, 29 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-29:posts/2014/Aug/dual-conformal-invariants/</guid><category>kinematics</category></item><item><title>Gram Momentum Invariants</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/gram-invariants/</link><description>&lt;p&gt;In this post I will mention some facts about what I call Gram momentum invariants. I will assume that every energy-momentum vector $p_{I}$ satisfies an on-shell constraint of the form
 $$p_{I}^{2} = - m_{I}^{2}$$
 with the mass $m_{I}$ being real and positive.&lt;/p&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
