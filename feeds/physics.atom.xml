@@ -33,27 +33,27 @@ $$p_{1} + p_{2} + \ldots + p_{N} = 0.$$
 This constraint can be satisfied explicitly by writting each energy-momentum vector as the difference of &lt;strong&gt;dual position&lt;/strong&gt; vectors:
 $$p_{1} = q_{2} - q_{1} \qquad p_{2} = q_{3} - q_{2} \qquad \cdots \qquad p_{N} = q_{1} - q_{N}.$$
 After this "change of variables" from $p_{I}$ to $q_{I}$ you can consider conformal symmetry transformations acting on the dual position vectors. This conformal symmetry acts on momentum space; it is different from the traditional conformal symmetry. The &lt;strong&gt;dual conformal ratios&lt;/strong&gt; constructed with the dual position vectors are invariant under &lt;strong&gt;dual conformal symmetry&lt;/strong&gt; transformations.&lt;/p&gt;
-&lt;p&gt;However, the way that I introduced the dual position vectors above is not unique. If you think of the dual position vectors as describing the positions of the vertices of a polygon, then the edges of this polygon correspond to the energy-momentum vectors. Drawing the vertices in ascending order counter-clockwise, you can see that the energy-momentum vectors are arranged in a particular &lt;strong&gt;order&lt;/strong&gt; (in the case above the order is $1$, $2$, $\ldots$, $N$). There is nothing special about the particular order that I chose above. But choosing another order will change the explicit values of the dual conformal ratios. In other words, just like there are different &lt;strong&gt;scattering channels&lt;/strong&gt;, there are also have different &lt;strong&gt;dual conformal channels&lt;/strong&gt;. The number of dual conformal channels is the same as the number of &lt;strong&gt;inequivalent permutations&lt;/strong&gt; of $N$ integers (permutations that are not related by a cyclic rotation). This number is given by
+&lt;p&gt;However, the way that I introduced the dual position vectors above is not unique. If you think of the dual position vectors as describing the positions of the vertices of a polygon, then the edges of this polygon correspond to the energy-momentum vectors. Drawing the vertices in ascending order counter-clockwise, you can see that the energy-momentum vectors are arranged in a particular &lt;strong&gt;order&lt;/strong&gt; (in the case above the order is ascending, i.e. $1 2 \ldots N$). There is nothing special about the particular order that I chose above, but choosing another order will change the explicit values of the dual conformal ratios. In other words, just like there are different &lt;strong&gt;scattering channels&lt;/strong&gt;, there are also have different &lt;strong&gt;dual conformal channels&lt;/strong&gt;. The number of dual conformal channels is the same as the number of &lt;strong&gt;cyclically-inequivalent permutations&lt;/strong&gt; of $N$ integers (permutations that are not related by a cyclic rotation). This number is given by
 $$\mathfrak{C}_{N} \equiv (N - 1)! \qquad N \geq 1.$$
 Note that $\mathfrak{C}_{4} = 6$ and $\mathfrak{C}_{6} = 120$. As you will see below, only half of these dual conformal channels are interesting because the other half gives the same information due to reflection invariance.&lt;/p&gt;
-&lt;h3&gt;Finding Inequivalent Permutations&lt;/h3&gt;
-&lt;p&gt;An easy way of finding inequivalent permutations is to construct them from smaller ones. You start with one element. There is only $1! = 1$ permutation. Then you add another element. With two elements you have $2! = 2$ possible permutations. These are $12$ and $21$. However, $21$ follows from $12$ by a cyclic rotation, so only one of these permutations is independent (these two permutations are also related by a reflection). For convenience I will pick $12$ as the representative of the cyclic class. One way to construct the permutation $12$ is to start with the one-element "subpermutation" $1$ and append the second element.&lt;/p&gt;
-&lt;p&gt;Then you add a third element. With three elements you have $3! = 6$ possible permutations. But it turns out that only two of these permutations are inequivalent (you expect this, since $\mathfrak{C}_{3} = 2$). To construct these inequivalent permutations, you take the subpermutation $12$ and its cyclic rotation $21$, and append the third element yielding $123$ and $213$. Performing cyclic rotations on $123$ yields $231$ and $312$. Similarly, performing cyclic rotations on $213$ yields $132$ and $321$. Note that the two cyclic classes are related by a reflection.&lt;/p&gt;
-&lt;p&gt;Then you add a fourth element. With four elements you have $4! = 24$ possible permutations. You expect $\mathfrak{C}_{4} = 6$ inequivalent permutations. To construct these, you append the fourth element to each of the permutations in the $123$ and $213$ cyclic classes:
+&lt;h3&gt;Finding Cyclically-Inequivalent Permutations&lt;/h3&gt;
+&lt;p&gt;An easy way of finding cyclically-inequivalent permutations is to construct them from smaller ones. You start with one element. There is only $1! = 1$ permutation. Then you add another element. With two elements you have $2! = 2$ possible permutations. These are $12$ and $21$. However, $21$ follows from $12$ by a cyclic rotation, so only one of these permutations is independent (these two permutations are also related by a reflection). For convenience I will pick $12$ as the representative of the cyclic class. One way to construct the permutation $12$ is to start with the one-element "subpermutation" $1$ and append the second element.&lt;/p&gt;
+&lt;p&gt;Then you add a third element. With three elements you have $3! = 6$ possible permutations. But it turns out that only two of these permutations are cyclically-inequivalent (you expect this, since $\mathfrak{C}_{3} = 2$). To construct these inequivalent permutations, you take the subpermutation $12$ and its cyclic rotation $21$, and append the third element yielding $123$ and $213$. Performing cyclic rotations on $123$ yields $231$ and $312$. Similarly, performing cyclic rotations on $213$ yields $132$ and $321$. Note that the two cyclic classes are related by a reflection.&lt;/p&gt;
+&lt;p&gt;Then you add a fourth element. With four elements you have $4! = 24$ possible permutations. You expect $\mathfrak{C}_{4} = 6$ cyclically-inequivalent permutations. To construct these, you append the fourth element to each of the permutations in the $123$ and $213$ cyclic classes:
 $$1234 \qquad 2314 \qquad 3124,$$
 and
 $$2134 \qquad 1324 \qquad 3214.$$
 Note that these six permutations can be divided into three pairs that are related by reflections (for example, $1234$ and $3214$).&lt;/p&gt;
 &lt;p&gt;This process can be repeated in order to obtain larger permutations.&lt;/p&gt;
 &lt;h2&gt;Four External Quanta&lt;/h2&gt;
-&lt;p&gt;In order to be concrete, I will now do some examples with explicit details. The simplest case is with four external quanta. Let me consider the permutation $1234$. With this order of the external states, the dual position variables are introduced as
+&lt;p&gt;In order to be concrete, I will now do some examples with explicit details. The simplest case is with four external quanta. Let me first consider the permutation $1234$. With this order of the external states, the dual position variables are introduced as
 $$p_{1} = q_{2} - q_{1} \qquad p_{2} = q_{3} - q_{2} \qquad p_{3} = q_{4} - q_{3} \qquad p_{4} = q_{1} - q_{4}.$$
 Other possible intervals are $q_{2} - q_{4} = p_{1} + p_{4}$ and $q_{3} - q_{1} = p_{1} + p_{2}$. Using the notation $q_{IJ} \equiv q_{I} - q_{J}$, the dual conformal ratios are given by
 $$r_{1} = \frac{q_{21}^{2} q_{43}^{2}}{q_{24}^{2} q_{31}^{2}} = \frac{p_{1}^{2} p_{3}^{2}}{(p_{1} + p_{4})^{2} (p_{1} + p_{2})^{2}} \qquad r_{2} = \frac{q_{14}^{2} q_{32}^{2}}{q_{21}^{2} q_{43}^{2}} = \frac{p_{4}^{2} p_{2}^{2}}{p_{1}^{2} p_{3}^{2}} \qquad r_{3} = r_{1} r_{2} = \frac{p_{2}^{2} p_{4}^{2}}{(p_{1} + p_{4})^{2} (p_{1} + p_{2})^{2}}.$$
 Writing the dual conformal ratios in terms of the masses and 2-Mandelstam invariants gives
 $$r_{1} = \frac{m_{1}^{2} m_{3}^{2}}{s_{14} s_{12}} \qquad r_{2} = \frac{m_{2}^{2} m_{4}^{2}}{m_{1}^{2} m_{3}^{2}} \qquad r_{3} = \frac{m_{2}^{2} m_{4}^{2}}{s_{14} s_{12}}.$$
 From a kinematical point of view, only one of these dual conformal ratios is relevant, since $r_{2}$ involves only masses, and $r_{3}$ involves the same 2-Mandelstam invariants as $r_{1}$. Also, note that $r_{1}$ involves the masses in the numerator, so when working with massless states the dual conformal ratio is fixed to vanish.&lt;/p&gt;
-&lt;p&gt;The dual conformal invariants for other cyclic classes can be obtained by permuting the labels. For example, in order to go from $1234$ to $2314$, I need the replacement
+&lt;p&gt;The dual conformal invariants for other cyclic classes can be obtained by permuting the labels. For example, in order to go from $1234$ to $2314$, you need the replacement
 $$1 \longrightarrow 2 \qquad 2 \longrightarrow 3 \qquad 3 \longrightarrow 1 \qquad 4 \longrightarrow 4$$
 Thus, the dual conformal ratios become
 $$r_{1} \longrightarrow \frac{m_{2}^{2} m_{1}^{2}}{s_{13} s_{14}} \qquad r_{2} \longrightarrow \frac{m_{3}^{2} m_{4}^{2}}{m_{2}^{2} m_{1}^{2}} \qquad r_{3} \longrightarrow \frac{m_{3}^{2} m_{4}^{2}}{s_{13} s_{14}},$$
@@ -64,7 +64,14 @@ Thus, the dual conformal ratios become
 $$r_{1} \longrightarrow \frac{m_{3}^{2} m_{2}^{2}}{s_{12} s_{13}} \qquad r_{2} \longrightarrow \frac{m_{1}^{2} m_{4}^{2}}{m_{3}^{2} m_{2}^{2}} \qquad r_{3} \longrightarrow \frac{m_{1}^{2} m_{4}^{2}}{s_{12} s_{13}},$$
 where I have used $s_{34} = s_{12}$ which follows from the conservation constraint.&lt;/p&gt;
 &lt;h2&gt;Six External Quanta&lt;/h2&gt;
-&lt;p&gt;...&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+&lt;p&gt;As the number of external quanta increases, a new feature arises. When $N = 6$ you have $\mathfrak{R}_{6} = 30$ and $\mathfrak{C}_{6} = 120$. There is very little benefit to listing the representatives of all cyclic classes, so for concreteness I will work with the order $123456$. The dual position vectors are introduced via
+$$p_{1} = q_{21} \qquad p_{2} = q_{32} \qquad p_{3} = q_{43} \qquad p_{4} = q_{54} \qquad p_{5} = q_{65} \qquad p_{6} = q_{16},$$
+where $q_{IJ} \equiv q_{I} - q_{J}$. Other possible intervals are
+$$p_{1} + p_{2} = q_{31} \qquad p_{5} + p_{6} = q_{15} \qquad p_{2} + p_{3} = q_{42} \qquad p_{1} + p_{6} = q_{26} \qquad p_{3} + p_{4} = q_{53} \qquad p_{4} + p_{5} = q_{64},$$
+and
+$$p_{1} + p_{2} + p_{3} = q_{41} \qquad p_{1} + p_{5} + p_{6}  = q_{25} \qquad p_{1} + p_{2} + p_{6} = q_{36}.$$
+There are fifteen ways of choosing four elements from a set of six:
+$$1234 \quad 1235 \quad 1236 \quad 1245 \quad 1246 \quad 1256 \quad 1345 \quad 1346 \quad 1356 \quad 1456 \quad 2345 \quad 2346 \quad 2356 \quad 2456 \quad 3456.$$&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
@@ -88,7 +95,7 @@ where I have used $s_{34} = s_{12}$ which follows from the conservation constrai
             "        preview: 'TeX'," +
             "    }, " +
             "    'HTML-CSS': { " +
-            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
             "    } " +
             "}); ";
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
@@ -138,7 +145,7 @@ In general, this cannot be simplified further in terms of masses and Mandelstam 
             "        preview: 'TeX'," +
             "    }, " +
             "    'HTML-CSS': { " +
-            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
             "    } " +
             "}); ";
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
@@ -193,7 +200,7 @@ $$\frac{(m_{I} + m_{J} + m_{K} + m_{L})^{2} + (m_{I} - m_{J} - m_{K} - m_{L})^{2
             "        preview: 'TeX'," +
             "    }, " +
             "    'HTML-CSS': { " +
-            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
             "    } " +
             "}); ";
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
@@ -256,7 +263,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
             "        preview: 'TeX'," +
             "    }, " +
             "    'HTML-CSS': { " +
-            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
             "    } " +
             "}); ";
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
@@ -316,7 +323,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
             "        preview: 'TeX'," +
             "    }, " +
             "    'HTML-CSS': { " +
-            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
             "    } " +
             "}); ";
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
@@ -550,7 +557,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
             "        preview: 'TeX'," +
             "    }, " +
             "    'HTML-CSS': { " +
-            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#333333 ! important'} }" +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
             "    } " +
             "}); ";
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
