@@ -1395,4 +1395,18 @@
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry></feed>
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 41</title><link href="http://meirizarrygelpi.github.io/posts/2013/Oct/week-41/" rel="alternate"></link><updated>2013-10-14T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-10-14:posts/2013/Oct/week-41/</id><summary type="html">&lt;p&gt;This is a bit late... but in no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.1966"&gt;New and Old about Renormalons: in Memoriam Kolya Uraltsev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.1680"&gt;Color-kinematics duality and dimensional reduction for graviton emission in Regge limit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.1575"&gt;Reduction of One Loop Feynman Diagrams in Scalar Field Theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.1254"&gt;Microscopic unitary description of tidal excitations in high-energy string-brane collisions&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 40</title><link href="http://meirizarrygelpi.github.io/posts/2013/Oct/week-40/" rel="alternate"></link><updated>2013-10-03T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-10-03:posts/2013/Oct/week-40/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1309.7416"&gt;Color-Kinematics Duality in One-Loop Four-Gluon Amplitudes with Matter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.0122"&gt;BPS Wilson Loop T-dual to Spinning String in (AdS_{5} \times S_{5})&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.0378"&gt;Complete JIMWLK Evolution at NLO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.0464"&gt;The Effective Field Theory of Large Scale Structures at Two Loops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.0818"&gt;(0,2) Trialities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.1051"&gt;A Two-Loop Five-Gluon Helicity Amplitude in QCD&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry></feed>
