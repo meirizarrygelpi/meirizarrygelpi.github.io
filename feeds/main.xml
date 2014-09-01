@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-08-30T00:00:00-04:00</updated><entry><title>arXiv picks for week 35</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/week-35/" rel="alternate"></link><updated>2014-08-30T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-30:posts/2014/Aug/week-35/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-08-30T00:00:00-04:00</updated><entry><title>arXiv picks for week 35</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/2014-week-35/" rel="alternate"></link><updated>2014-08-30T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-30:posts/2014/Aug/2014-week-35/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.5463"&gt;The Nonperturbative Structure of Hadrons&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.5531"&gt;Amplituhedron cells and Stanley symmetric functions&lt;/a&gt;&lt;/li&gt;
@@ -276,7 +276,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="kinematics"></category></entry><entry><title>arXiv picks for week 34</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/week-34/" rel="alternate"></link><updated>2014-08-23T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-23:posts/2014/Aug/week-34/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="kinematics"></category></entry><entry><title>arXiv picks for week 34</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/2014-week-34/" rel="alternate"></link><updated>2014-08-23T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-23:posts/2014/Aug/2014-week-34/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.3107"&gt;Three-loop master integrals for ladder-box diagrams with one massive leg&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.3410"&gt;Anatomy of the Amplituhedron&lt;/a&gt;&lt;/li&gt;
@@ -315,13 +315,13 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 33</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/week-33/" rel="alternate"></link><updated>2014-08-16T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-16:posts/2014/Aug/week-33/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 33</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/2014-week-33/" rel="alternate"></link><updated>2014-08-16T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-16:posts/2014/Aug/2014-week-33/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.2228"&gt;On asymptotic symmetries and subleading soft graviton theorem&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.2459"&gt;The Amplituhedron from Momentum Twistor Diagrams&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.2530"&gt;QCD Pomeron from AdS/CFT Quantum Spectral Curve&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.2818"&gt;Color kinematic symmetric (BCJ) numerators in a light-like gauge&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 32</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/week-32/" rel="alternate"></link><updated>2014-08-09T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-09:posts/2014/Aug/week-32/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 32</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/2014-week-32/" rel="alternate"></link><updated>2014-08-09T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-09:posts/2014/Aug/2014-week-32/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.0006"&gt;More on the Matter of 6D SCFTs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.0207"&gt;Spectral Networks with Spin&lt;/a&gt;&lt;/li&gt;
@@ -332,7 +332,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.0932"&gt;Volumes of Polytopes Without Triangulations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.0997"&gt;Brane Tilings as On-shell Diagrams&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.1505"&gt;Bootstrapping an NMHV amplitude through three loops&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 31</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/week-31/" rel="alternate"></link><updated>2014-08-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-02:posts/2014/Aug/week-31/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 31</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/2014-week-31/" rel="alternate"></link><updated>2014-08-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-02:posts/2014/Aug/2014-week-31/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.6736"&gt;$N=4$ Scattering Amplitudes and the Deformed Grassmannian&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.7511"&gt;Little String Amplitudes (and the Unreasonable Effectiveness of 6D SYM)&lt;/a&gt;&lt;/li&gt;
@@ -368,7 +368,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 30</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/week-30/" rel="alternate"></link><updated>2014-07-26T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-26:posts/2014/Jul/week-30/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 30</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/2014-week-30/" rel="alternate"></link><updated>2014-07-26T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-26:posts/2014/Jul/2014-week-30/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.4950"&gt;Massive and massless higher spinning particles in odd dimensions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.5164"&gt;Infrared singularities in multi-leg scattering amplitudes&lt;/a&gt;&lt;/li&gt;
@@ -423,7 +423,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.1736"&gt;Space-time S-matrix and Flux-tube S-matrix IV. Gluons and Fusion&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.3766"&gt;Adjoint BFKL at finite coupling: a short-cut from the collinear limit&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;My task during the coming fall is to figure out if this is related in any way to my own work on scattering amplitudes.&lt;/p&gt;</summary><category term="amplitudes"></category></entry><entry><title>arXiv picks for week 29</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/week-29/" rel="alternate"></link><updated>2014-07-19T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-19:posts/2014/Jul/week-29/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;p&gt;My task during the coming fall is to figure out if this is related in any way to my own work on scattering amplitudes.&lt;/p&gt;</summary><category term="amplitudes"></category></entry><entry><title>arXiv picks for week 29</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/2014-week-29/" rel="alternate"></link><updated>2014-07-19T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-19:posts/2014/Jul/2014-week-29/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.3477"&gt;Multiple Gluon Exchange Webs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.3766"&gt;Adjoint BFKL at finite coupling: a short-cut from the collinear limit&lt;/a&gt;&lt;/li&gt;
@@ -465,7 +465,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 28</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/week-28/" rel="alternate"></link><updated>2014-07-12T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-12:posts/2014/Jul/week-28/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 28</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/2014-week-28/" rel="alternate"></link><updated>2014-07-12T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-12:posts/2014/Jul/2014-week-28/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.1322"&gt;Poles in the $S$-Matrix of Relativistic Chern-Simons Matter theories from Quantum Mechanics&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1407.1694"&gt;Proceedings of the 1st Asia-Europe-Pacific School of High-Energy Physics (AEPSHEP 12), Fukuoka, Japan, 14 - 27 Oct 2012&lt;/a&gt;&lt;/li&gt;
@@ -504,7 +504,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 27</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/week-27/" rel="alternate"></link><updated>2014-07-05T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-05:posts/2014/Jul/week-27/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 27</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jul/2014-week-27/" rel="alternate"></link><updated>2014-07-05T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-07-05:posts/2014/Jul/2014-week-27/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.7652"&gt;Color decomposition of multi-quark one-loop QCD amplitudes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.7828"&gt;The $n_{f}$ terms of the QCD cusp anomalous dimension&lt;/a&gt;&lt;/li&gt;
@@ -546,7 +546,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 26</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/week-26/" rel="alternate"></link><updated>2014-06-28T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-28:posts/2014/Jun/week-26/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 26</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/2014-week-26/" rel="alternate"></link><updated>2014-06-28T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-28:posts/2014/Jun/2014-week-26/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.5904"&gt;Quantum Wronskian approach to six-point gluon scattering amplitudes at strong coupling&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.6103"&gt;Higher Spins &amp;amp; Strings&lt;/a&gt;&lt;/li&gt;
@@ -556,7 +556,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.6574"&gt;Constraining subleading soft gluon and graviton theorems&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.6684"&gt;Dynamics of 3D SUSY Gauge Theories with Antisymmetric Matter&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.6987"&gt;Low-Energy Behavior of Gluons and Gravitons from Gauge Invariance&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 25</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/week-25/" rel="alternate"></link><updated>2014-06-21T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-21:posts/2014/Jun/week-25/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 25</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/2014-week-25/" rel="alternate"></link><updated>2014-06-21T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-21:posts/2014/Jun/2014-week-25/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.3629"&gt;The Exact Effective Couplings of 4D $N=2$ gauge theories&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.4024"&gt;Deformed one-loop amplitudes in $N = 4$ super-Yang-Mills theory&lt;/a&gt;&lt;/li&gt;
@@ -595,7 +595,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 24</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/week-24/" rel="alternate"></link><updated>2014-06-14T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-14:posts/2014/Jun/week-24/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 24</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/2014-week-24/" rel="alternate"></link><updated>2014-06-14T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-14:posts/2014/Jun/2014-week-24/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.1285"&gt;The Appell Function $F_{1}$ and Regge String Scattering Amplitudes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1406.1443"&gt;The last of the simple remainders&lt;/a&gt;&lt;/li&gt;
@@ -633,28 +633,28 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 23</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/week-23/" rel="alternate"></link><updated>2014-06-07T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-07:posts/2014/Jun/week-23/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 23</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jun/2014-week-23/" rel="alternate"></link><updated>2014-06-07T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-06-07:posts/2014/Jun/2014-week-23/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.7770"&gt;Integral representations combining ladders and crossed-ladders&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 22</title><link href="http://meirizarrygelpi.github.io/posts/2014/May/week-22/" rel="alternate"></link><updated>2014-05-31T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-31:posts/2014/May/week-22/</id><summary type="html">&lt;p&gt;I had issues with the arXiv RSS feed during the past two weeks, so I might have missed some good ones.&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 22</title><link href="http://meirizarrygelpi.github.io/posts/2014/May/2014-week-22/" rel="alternate"></link><updated>2014-05-31T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-31:posts/2014/May/2014-week-22/</id><summary type="html">&lt;p&gt;I had issues with the arXiv RSS feed during the past two weeks, so I might have missed some good ones.&lt;/p&gt;
 &lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.7086"&gt;Ken Wilson: Solving the Strong Interactions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.7194"&gt;Supersymmetric gauge theories on squashed five-spheres and their gravity duals&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.7248"&gt;From Six to Four and More: Massless and Massive Maximal Super Yang-Mills Amplitudes in 6d and 4d and their Hidden Symmetries&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 21</title><link href="http://meirizarrygelpi.github.io/posts/2014/May/week-21/" rel="alternate"></link><updated>2014-05-24T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-24:posts/2014/May/week-21/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 21</title><link href="http://meirizarrygelpi.github.io/posts/2014/May/2014-week-21/" rel="alternate"></link><updated>2014-05-24T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-24:posts/2014/May/2014-week-21/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.4017"&gt;Evolution and dynamics of cusped light-like Wilson loops&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.4214"&gt;Resumming the string perturbation series&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.5089"&gt;Lattice String Field Theory: The linear dilaton in one dimension&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.5122"&gt;Perturbative gravity at null infinity&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 20</title><link href="http://meirizarrygelpi.github.io/posts/2014/May/week-20/" rel="alternate"></link><updated>2014-05-17T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-17:posts/2014/May/week-20/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 20</title><link href="http://meirizarrygelpi.github.io/posts/2014/May/2014-week-20/" rel="alternate"></link><updated>2014-05-17T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-17:posts/2014/May/2014-week-20/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.3413"&gt;Are Soft Theorems Renormalized?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.3533"&gt;Soft Graviton Theorem in Arbitrary Dimensions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.3658"&gt;Heptagon Amplitude in the Multi-Regge Regime&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.3683"&gt;Multiloop integrals made simple: applications to QCD processes&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 19</title><link href="http://meirizarrygelpi.github.io/posts/2014/May/week-19/" rel="alternate"></link><updated>2014-05-10T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-10:posts/2014/May/week-19/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 19</title><link href="http://meirizarrygelpi.github.io/posts/2014/May/2014-week-19/" rel="alternate"></link><updated>2014-05-10T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-10:posts/2014/May/2014-week-19/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.0644"&gt;$N=4$ Supersymmetry on a Space-Time Lattice&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1405.1015"&gt;On Loop Corrections to Subleading Soft Behavior of Gluons and Gravitons&lt;/a&gt;&lt;/li&gt;
@@ -851,7 +851,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="algorithms"></category></entry><entry><title>arXiv picks for week 18</title><link href="http://meirizarrygelpi.github.io/posts/2014/May/week-18/" rel="alternate"></link><updated>2014-05-03T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-03:posts/2014/May/week-18/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="algorithms"></category></entry><entry><title>arXiv picks for week 18</title><link href="http://meirizarrygelpi.github.io/posts/2014/May/2014-week-18/" rel="alternate"></link><updated>2014-05-03T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-03:posts/2014/May/2014-week-18/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1404.6373"&gt;Unitarity, Crossing Symmetry and Duality of the S-matrix in large N Chern-Simons theories with fundamental matter&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1404.6506"&gt;Wilson loop OPE, analytic continuation and multi-Regge limit&lt;/a&gt;&lt;/li&gt;
@@ -922,7 +922,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="combinatorics"></category><category term="graph theory"></category></entry><entry><title>arXiv picks for week 17</title><link href="http://meirizarrygelpi.github.io/posts/2014/Apr/week-17/" rel="alternate"></link><updated>2014-04-26T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-04-26:posts/2014/Apr/week-17/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="combinatorics"></category><category term="graph theory"></category></entry><entry><title>arXiv picks for week 17</title><link href="http://meirizarrygelpi.github.io/posts/2014/Apr/2014-week-17/" rel="alternate"></link><updated>2014-04-26T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-04-26:posts/2014/Apr/2014-week-17/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1404.4986"&gt;Multiparticle SYM equations of motion and pure spinor BRST blocks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1404.5300"&gt;$\mathcal{N} = 1$ Superconformal Blocks for General Scalar Operators&lt;/a&gt;&lt;/li&gt;
@@ -963,7 +963,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 16</title><link href="http://meirizarrygelpi.github.io/posts/2014/Apr/week-16/" rel="alternate"></link><updated>2014-04-19T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-04-19:posts/2014/Apr/week-16/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 16</title><link href="http://meirizarrygelpi.github.io/posts/2014/Apr/2014-week-16/" rel="alternate"></link><updated>2014-04-19T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-04-19:posts/2014/Apr/2014-week-16/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1404.2929"&gt;Duality Defects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1404.3723"&gt;QCD and strongly coupled gauge theories: challenges and perspectives&lt;/a&gt;&lt;/li&gt;
@@ -1000,7 +1000,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 15</title><link href="http://meirizarrygelpi.github.io/posts/2014/Apr/week-15/" rel="alternate"></link><updated>2014-04-12T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-04-12:posts/2014/Apr/week-15/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 15</title><link href="http://meirizarrygelpi.github.io/posts/2014/Apr/2014-week-15/" rel="alternate"></link><updated>2014-04-12T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-04-12:posts/2014/Apr/2014-week-15/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1404.1076"&gt;A New Class of Particle in $2+1$ Dimensions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1404.1079"&gt;$W$ Symmetry in six dimensions&lt;/a&gt;&lt;/li&gt;
@@ -1039,7 +1039,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 14</title><link href="http://meirizarrygelpi.github.io/posts/2014/Apr/week-14/" rel="alternate"></link><updated>2014-04-05T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-04-05:posts/2014/Apr/week-14/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 14</title><link href="http://meirizarrygelpi.github.io/posts/2014/Apr/2014-week-14/" rel="alternate"></link><updated>2014-04-05T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-04-05:posts/2014/Apr/2014-week-14/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.7613"&gt;$Y$ systems, $Q$ systems, and 4D $\mathcal{N}=2$ supersymmetric QFT&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.8052"&gt;Boundary F-maximization&lt;/a&gt;&lt;/li&gt;
@@ -1078,7 +1078,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 13</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/week-13/" rel="alternate"></link><updated>2014-03-29T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-29:posts/2014/Mar/week-13/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 13</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/2014-week-13/" rel="alternate"></link><updated>2014-03-29T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-29:posts/2014/Mar/2014-week-13/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.5494"&gt;Topics in Two-Loop Superstring Perturbation Theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.5695"&gt;Addendum to Computational Complexity and Black Hole Horizons&lt;/a&gt;&lt;/li&gt;
@@ -1089,7 +1089,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.6829"&gt;Universality of Long-Distance AdS Physics from the CFT Bootstrap&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.6833"&gt;The Scattering Variety&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.6904"&gt;T-duality off shell in 3D Type II superspace&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 12</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/week-12/" rel="alternate"></link><updated>2014-03-22T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-22:posts/2014/Mar/week-12/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 12</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/2014-week-12/" rel="alternate"></link><updated>2014-03-22T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-22:posts/2014/Mar/2014-week-12/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.3398"&gt;On the ABJM four-point amplitude at three loops and BDS exponentiation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.3420"&gt;The Super BMS Algebra, Scattering and Holography&lt;/a&gt;&lt;/li&gt;
@@ -1132,7 +1132,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 11</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/week-11/" rel="alternate"></link><updated>2014-03-15T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-15:posts/2014/Mar/week-11/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 11</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/2014-week-11/" rel="alternate"></link><updated>2014-03-15T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-15:posts/2014/Mar/2014-week-11/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.2336"&gt;Wilson loops in $N=6$ superspace for ABJM theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1403.3385"&gt;Algorithms for the symbolic integration of hyperlogarithms with applications to Feynman integrals&lt;/a&gt;&lt;/li&gt;
@@ -1168,7 +1168,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 10</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/week-10/" rel="alternate"></link><updated>2014-03-08T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-08:posts/2014/Mar/week-10/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 10</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/2014-week-10/" rel="alternate"></link><updated>2014-03-08T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-08:posts/2014/Mar/2014-week-10/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.7374"&gt;The Polynomial Form of the Scattering Equations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.7078"&gt;Two-loop planar master integrals for the production of off-shell vector bosons in hadron collisions&lt;/a&gt;&lt;/li&gt;
@@ -1180,7 +1180,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
 &lt;li&gt;supersymmetry and supergravity&lt;/li&gt;
 &lt;li&gt;string theory&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The idea is to give a taste of what the topic is about, without unnecesary details. However, the devil is always in the details, so not much is going to be gain from this. We'll have to wait and see...&lt;/p&gt;</summary><category term="seminar"></category></entry><entry><title>arXiv picks for week 9</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/week-9/" rel="alternate"></link><updated>2014-03-01T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-01:posts/2014/Mar/week-9/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;p&gt;The idea is to give a taste of what the topic is about, without unnecesary details. However, the devil is always in the details, so not much is going to be gain from this. We'll have to wait and see...&lt;/p&gt;</summary><category term="seminar"></category></entry><entry><title>arXiv picks for week 9</title><link href="http://meirizarrygelpi.github.io/posts/2014/Mar/2014-week-9/" rel="alternate"></link><updated>2014-03-01T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-03-01:posts/2014/Mar/2014-week-9/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.5260"&gt;Impact factors for Reggeon-gluon transition in $N = 4$ SYM with large number of colours&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.5396"&gt;Partition Functions and Casimir Energies in Higher Spin $AdS_{d+1}/CFT_{d}$&lt;/a&gt;&lt;/li&gt;
@@ -1224,7 +1224,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 8</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/week-8/" rel="alternate"></link><updated>2014-02-22T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-22:posts/2014/Feb/week-8/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 8</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/2014-week-8/" rel="alternate"></link><updated>2014-02-22T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-22:posts/2014/Feb/2014-week-8/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.3300"&gt;The four-loop remainder function and multi-Regge behavior at NNLLA in planar $N=4$ super-Yang-Mills theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.3307"&gt;Space-time S-matrix and Flux-tube S-matrix III. The two-particle contributions&lt;/a&gt;&lt;/li&gt;
@@ -1297,7 +1297,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because o
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="semiclassical"></category></entry><entry><title>arXiv picks for week 7</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/week-7/" rel="alternate"></link><updated>2014-02-15T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-15:posts/2014/Feb/week-7/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="semiclassical"></category></entry><entry><title>arXiv picks for week 7</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/2014-week-7/" rel="alternate"></link><updated>2014-02-15T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-15:posts/2014/Feb/2014-week-7/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.1821"&gt;Color-Kinematic Duality in ABJM Theory Without Amplitude Relations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.2516"&gt;On the solutions of the scattering equations&lt;/a&gt;&lt;/li&gt;
@@ -1566,7 +1566,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="classical mechanics"></category></entry><entry><title>arXiv picks for week 6</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/week%206/" rel="alternate"></link><updated>2014-02-10T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-10:posts/2014/Feb/week 6/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="classical mechanics"></category></entry><entry><title>arXiv picks for week 6</title><link href="http://meirizarrygelpi.github.io/posts/2014/Feb/2014-week%206/" rel="alternate"></link><updated>2014-02-10T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-02-10:posts/2014/Feb/2014-week 6/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.0109"&gt;Microscopic and Macroscopic Entropy of Extremal Black Holes in String Theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1402.0390"&gt;The dynamical gluon mass in the massless bound-state formalism&lt;/a&gt;&lt;/li&gt;
@@ -1606,7 +1606,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 5</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jan/week-5/" rel="alternate"></link><updated>2014-01-31T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-01-31:posts/2014/Jan/week-5/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 5</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jan/2014-week-5/" rel="alternate"></link><updated>2014-01-31T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-01-31:posts/2014/Jan/2014-week-5/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.6242"&gt;A twistor string for the ABJ(M) theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.6438"&gt;The physics and the mixed Hodge structure of Feynman integrals&lt;/a&gt;&lt;/li&gt;
@@ -1649,7 +1649,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 4</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jan/week-4/" rel="alternate"></link><updated>2014-01-25T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-01-25:posts/2014/Jan/week-4/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 4</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jan/2014-week-4/" rel="alternate"></link><updated>2014-01-25T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-01-25:posts/2014/Jan/2014-week-4/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.4265"&gt;Rankin-Selberg methods for closed string amplitudes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.4361"&gt;On hyperlogarithms and Feynman integrals with divergences and many scales&lt;/a&gt;&lt;/li&gt;
@@ -1694,11 +1694,11 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 3</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jan/week-3/" rel="alternate"></link><updated>2014-01-18T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-01-18:posts/2014/Jan/week-3/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 3</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jan/2014-week-3/" rel="alternate"></link><updated>2014-01-18T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-01-18:posts/2014/Jan/2014-week-3/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.2975"&gt;Elements of Vasiliev theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.3546"&gt;From multiple unitarity cuts to the coproduct of Feynman integrals&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 2</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jan/week-2/" rel="alternate"></link><updated>2014-01-11T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-01-11:posts/2014/Jan/week-2/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 2</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jan/2014-week-2/" rel="alternate"></link><updated>2014-01-11T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-01-11:posts/2014/Jan/2014-week-2/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.1810"&gt;Covariant Non-Commutative Space-Time&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.2026"&gt;Quantum fields in curved spacetime&lt;/a&gt;&lt;/li&gt;
@@ -1736,14 +1736,14 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 1</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jan/week-1/" rel="alternate"></link><updated>2014-01-04T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-01-04:posts/2014/Jan/week-1/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 1</title><link href="http://meirizarrygelpi.github.io/posts/2014/Jan/2014-week-1/" rel="alternate"></link><updated>2014-01-04T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-01-04:posts/2014/Jan/2014-week-1/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1312.7454"&gt;Adaptive Coarse Graining, Environment, Strong Decoherence, and Quasiclassical Realms&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1312.7743"&gt;Massless scattering at special kinematics as Jacobi polynomials&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1312.7878"&gt;Into the Amplituhedron&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.0139"&gt;Progress on soft gluon exponentiation and long-distance singularities&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1401.0374"&gt;Conformal symmetry of JIMWLK Evolution at NLO&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 52</title><link href="http://meirizarrygelpi.github.io/posts/2013/Dec/week-52/" rel="alternate"></link><updated>2013-12-28T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-12-28:posts/2013/Dec/week-52/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 52</title><link href="http://meirizarrygelpi.github.io/posts/2013/Dec/2013-week-52/" rel="alternate"></link><updated>2013-12-28T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-12-28:posts/2013/Dec/2013-week-52/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1312.6634"&gt;Ken Wilson -- The Early Years&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1312.6651"&gt;Renormalization of Loop Functions in QCD&lt;/a&gt;&lt;/li&gt;
@@ -1780,7 +1780,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 51</title><link href="http://meirizarrygelpi.github.io/posts/2013/Dec/week-51/" rel="alternate"></link><updated>2013-12-21T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-12-21:posts/2013/Dec/week-51/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 51</title><link href="http://meirizarrygelpi.github.io/posts/2013/Dec/2013-week-51/" rel="alternate"></link><updated>2013-12-21T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-12-21:posts/2013/Dec/2013-week-51/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1312.3828"&gt;Ambitwistor strings and the scattering equations at one loop&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1312.3900"&gt;The spectrum of tachyons in AdS/CFT&lt;/a&gt;&lt;/li&gt;
@@ -1818,7 +1818,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 50</title><link href="http://meirizarrygelpi.github.io/posts/2013/Dec/week-50/" rel="alternate"></link><updated>2013-12-14T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-12-14:posts/2013/Dec/week-50/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 50</title><link href="http://meirizarrygelpi.github.io/posts/2013/Dec/2013-week-50/" rel="alternate"></link><updated>2013-12-14T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-12-14:posts/2013/Dec/2013-week-50/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1312.1693"&gt;Bethe Ansatz for Yangian Invariants: Towards Super Yang-Mills Scattering Amplitudes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1312.2000"&gt;Reduction Redux of Adinkras&lt;/a&gt;&lt;/li&gt;
@@ -1859,7 +1859,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 49</title><link href="http://meirizarrygelpi.github.io/posts/2013/Dec/week-49/" rel="alternate"></link><updated>2013-12-07T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-12-07:posts/2013/Dec/week-49/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 49</title><link href="http://meirizarrygelpi.github.io/posts/2013/Dec/2013-week-49/" rel="alternate"></link><updated>2013-12-07T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-12-07:posts/2013/Dec/2013-week-49/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.7559"&gt;Large-$N$ mesons&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1312.0058"&gt;The Coordinate-Space Singularities of Massless Gauge Theories&lt;/a&gt;&lt;/li&gt;
@@ -1902,7 +1902,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 48</title><link href="http://meirizarrygelpi.github.io/posts/2013/Nov/week-48/" rel="alternate"></link><updated>2013-11-30T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-11-30:posts/2013/Nov/week-48/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 48</title><link href="http://meirizarrygelpi.github.io/posts/2013/Nov/2013-week-48/" rel="alternate"></link><updated>2013-11-30T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-11-30:posts/2013/Nov/2013-week-48/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.6067"&gt;Yangian-Like Symmetry of Probe-Brane Actions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.6114"&gt;On the algebraic curves for circular and folded strings in $AdS_{5}\times S_{5}$&lt;/a&gt;&lt;/li&gt;
@@ -1941,7 +1941,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 47</title><link href="http://meirizarrygelpi.github.io/posts/2013/Nov/week-47/" rel="alternate"></link><updated>2013-11-23T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-11-23:posts/2013/Nov/week-47/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 47</title><link href="http://meirizarrygelpi.github.io/posts/2013/Nov/2013-week-47/" rel="alternate"></link><updated>2013-11-23T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-11-23:posts/2013/Nov/2013-week-47/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.3966"&gt;AdS/CFT and applications&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.4156"&gt;Infinite Tension Limit of the Pure Spinor Superstring&lt;/a&gt;&lt;/li&gt;
@@ -1949,7 +1949,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.4886"&gt;The role of leading twist operators in the Regge and Lorentzian OPE limits&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.4950"&gt;Wilson loops and Riemann theta functions II&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.5200"&gt;Proof of the Formula of Cachazo, He and Yuan for Yang-Mills Tree Amplitudes in Arbitrary Dimension&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 46</title><link href="http://meirizarrygelpi.github.io/posts/2013/Nov/week-46/" rel="alternate"></link><updated>2013-11-16T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-11-16:posts/2013/Nov/week-46/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 46</title><link href="http://meirizarrygelpi.github.io/posts/2013/Nov/2013-week-46/" rel="alternate"></link><updated>2013-11-16T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-11-16:posts/2013/Nov/2013-week-46/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.1827"&gt;Three easy exercises in off-shell string-inspired methods&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.1997"&gt;The ABJM Model is a Higher Gauge Theory&lt;/a&gt;&lt;/li&gt;
@@ -1991,7 +1991,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 45</title><link href="http://meirizarrygelpi.github.io/posts/2013/Nov/week-45/" rel="alternate"></link><updated>2013-11-09T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-11-09:posts/2013/Nov/week-45/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 45</title><link href="http://meirizarrygelpi.github.io/posts/2013/Nov/2013-week-45/" rel="alternate"></link><updated>2013-11-09T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-11-09:posts/2013/Nov/2013-week-45/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.0305"&gt;Highly Effective Actions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1311.0836"&gt;New Regimes of Stringy (Holographic) Pomeron and High Multiplicity $pp$ and $pA$ Collisions&lt;/a&gt;&lt;/li&gt;
@@ -2030,7 +2030,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>More Talks at SCGP</title><link href="http://meirizarrygelpi.github.io/posts/2013/Nov/more-talks/" rel="alternate"></link><updated>2013-11-06T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-11-06:posts/2013/Nov/more-talks/</id><summary type="html">&lt;p&gt;The program on scattering amplitudes at the Simons Center for Geometry and Physics is still going on with a great set of talks so far. The homepage for it can be found &lt;a href="http://scgp.stonybrook.edu/scientific/programs/fall-2013-spring-2014-program-details/physics-and-mathematics-of-scattering-amplitudes"&gt;here&lt;/a&gt;.&lt;/p&gt;</summary><category term="talks"></category></entry><entry><title>arXiv picks for week 44</title><link href="http://meirizarrygelpi.github.io/posts/2013/Nov/week-44/" rel="alternate"></link><updated>2013-11-01T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-11-01:posts/2013/Nov/week-44/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>More Talks at SCGP</title><link href="http://meirizarrygelpi.github.io/posts/2013/Nov/more-talks/" rel="alternate"></link><updated>2013-11-06T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-11-06:posts/2013/Nov/more-talks/</id><summary type="html">&lt;p&gt;The program on scattering amplitudes at the Simons Center for Geometry and Physics is still going on with a great set of talks so far. The homepage for it can be found &lt;a href="http://scgp.stonybrook.edu/scientific/programs/fall-2013-spring-2014-program-details/physics-and-mathematics-of-scattering-amplitudes"&gt;here&lt;/a&gt;.&lt;/p&gt;</summary><category term="talks"></category></entry><entry><title>arXiv picks for week 44</title><link href="http://meirizarrygelpi.github.io/posts/2013/Nov/2013-week-44/" rel="alternate"></link><updated>2013-11-01T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-11-01:posts/2013/Nov/2013-week-44/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.7385"&gt;On 4D, $N = 1$ Massless Gauge Superfields of Higher Superspin: Integer Case&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.7386"&gt;On 4D, $N = 1$ Massless Gauge Superfields of Higher Superspin: Half-Odd-Integer Case&lt;/a&gt;&lt;/li&gt;
@@ -2070,7 +2070,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 43</title><link href="http://meirizarrygelpi.github.io/posts/2013/Oct/week-43/" rel="alternate"></link><updated>2013-10-26T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-10-26:posts/2013/Oct/week-43/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 43</title><link href="http://meirizarrygelpi.github.io/posts/2013/Oct/2013-week-43/" rel="alternate"></link><updated>2013-10-26T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-10-26:posts/2013/Oct/2013-week-43/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.5078"&gt;Bootstrapping the 3d Ising twist defect&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.5268"&gt;From Webs to Polylogarithms&lt;/a&gt;&lt;/li&gt;
@@ -2111,7 +2111,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 42</title><link href="http://meirizarrygelpi.github.io/posts/2013/Oct/week-42/" rel="alternate"></link><updated>2013-10-19T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-10-19:posts/2013/Oct/week-42/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 42</title><link href="http://meirizarrygelpi.github.io/posts/2013/Oct/2013-week-42/" rel="alternate"></link><updated>2013-10-19T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-10-19:posts/2013/Oct/2013-week-42/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1111.7319"&gt;A Note on High-Energy Scattering of Open Superstrings&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.4478"&gt;The leading eikonal operator in string-brane scattering at high energy&lt;/a&gt;&lt;/li&gt;
@@ -2151,13 +2151,13 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 41</title><link href="http://meirizarrygelpi.github.io/posts/2013/Oct/week-41/" rel="alternate"></link><updated>2013-10-14T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-10-14:posts/2013/Oct/week-41/</id><summary type="html">&lt;p&gt;This is a bit late... but in no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 41</title><link href="http://meirizarrygelpi.github.io/posts/2013/Oct/2013-week-41/" rel="alternate"></link><updated>2013-10-14T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-10-14:posts/2013/Oct/2013-week-41/</id><summary type="html">&lt;p&gt;This is a bit late... but in no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.1966"&gt;New and Old about Renormalons: in Memoriam Kolya Uraltsev&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.1680"&gt;Color-kinematics duality and dimensional reduction for graviton emission in Regge limit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.1575"&gt;Reduction of One Loop Feynman Diagrams in Scalar Field Theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.1254"&gt;Microscopic unitary description of tidal excitations in high-energy string-brane collisions&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 40</title><link href="http://meirizarrygelpi.github.io/posts/2013/Oct/week-40/" rel="alternate"></link><updated>2013-10-03T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-10-03:posts/2013/Oct/week-40/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 40</title><link href="http://meirizarrygelpi.github.io/posts/2013/Oct/2013-week-40/" rel="alternate"></link><updated>2013-10-03T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-10-03:posts/2013/Oct/2013-week-40/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1309.7416"&gt;Color-Kinematics Duality in One-Loop Four-Gluon Amplitudes with Matter&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1310.0122"&gt;BPS Wilson Loop T-dual to Spinning String in $AdS_{5} \times S_{5}$&lt;/a&gt;&lt;/li&gt;
@@ -2195,7 +2195,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>2014 APS Prizes</title><link href="http://meirizarrygelpi.github.io/posts/2013/Oct/2014-aps-prizes/" rel="alternate"></link><updated>2013-10-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-10-02:posts/2013/Oct/2014-aps-prizes/</id><summary type="html">&lt;p&gt;Among the &lt;a href="http://www.aps.org/programs/honors/prizes/index.cfm"&gt;many prizes&lt;/a&gt; that the American Physical Society gives, the 2014 Dannie Heineman Prize for Mathematical Physics goes to &lt;a href="http://www.aps.org/programs/honors/prizes/prizerecipient.cfm?last_nm=Moore&amp;amp;amp;first_nm=Gregory&amp;amp;amp;year=2014"&gt;G.W. Moore&lt;/a&gt; and the 2014 J.J. Sakurai Prize for Theoretical Particle Physics goes to &lt;a href="http://www.aps.org/programs/honors/prizes/prizerecipient.cfm?last_nm=Dixon&amp;amp;amp;first_nm=Lance&amp;amp;amp;year=2014"&gt;L.J. Dixon&lt;/a&gt;, &lt;a href="http://www.aps.org/programs/honors/prizes/prizerecipient.cfm?last_nm=Kosower&amp;amp;amp;first_nm=David&amp;amp;amp;year=2014"&gt;D.A. Kosower&lt;/a&gt; and &lt;a href="http://www.aps.org/programs/honors/prizes/prizerecipient.cfm?last_nm=Bern&amp;amp;amp;first_nm=Zvi&amp;amp;amp;year=2014"&gt;Z. Bern&lt;/a&gt;. Congratulations to everyone!&lt;/p&gt;</summary><category term="prizes"></category></entry><entry><title>arXiv picks for week 39</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/week-39/" rel="alternate"></link><updated>2013-09-28T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-28:posts/2013/Sep/week-39/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>2014 APS Prizes</title><link href="http://meirizarrygelpi.github.io/posts/2013/Oct/2014-aps-prizes/" rel="alternate"></link><updated>2013-10-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-10-02:posts/2013/Oct/2014-aps-prizes/</id><summary type="html">&lt;p&gt;Among the &lt;a href="http://www.aps.org/programs/honors/prizes/index.cfm"&gt;many prizes&lt;/a&gt; that the American Physical Society gives, the 2014 Dannie Heineman Prize for Mathematical Physics goes to &lt;a href="http://www.aps.org/programs/honors/prizes/prizerecipient.cfm?last_nm=Moore&amp;amp;amp;first_nm=Gregory&amp;amp;amp;year=2014"&gt;G.W. Moore&lt;/a&gt; and the 2014 J.J. Sakurai Prize for Theoretical Particle Physics goes to &lt;a href="http://www.aps.org/programs/honors/prizes/prizerecipient.cfm?last_nm=Dixon&amp;amp;amp;first_nm=Lance&amp;amp;amp;year=2014"&gt;L.J. Dixon&lt;/a&gt;, &lt;a href="http://www.aps.org/programs/honors/prizes/prizerecipient.cfm?last_nm=Kosower&amp;amp;amp;first_nm=David&amp;amp;amp;year=2014"&gt;D.A. Kosower&lt;/a&gt; and &lt;a href="http://www.aps.org/programs/honors/prizes/prizerecipient.cfm?last_nm=Bern&amp;amp;amp;first_nm=Zvi&amp;amp;amp;year=2014"&gt;Z. Bern&lt;/a&gt;. Congratulations to everyone!&lt;/p&gt;</summary><category term="prizes"></category></entry><entry><title>arXiv picks for week 39</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/2013-week-39/" rel="alternate"></link><updated>2013-09-28T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-28:posts/2013/Sep/2013-week-39/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1309.5089"&gt;Conformal Field Theories in Fractional Dimensions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1309.5160"&gt;Classification of 4d $N=2$ gauge theories&lt;/a&gt;&lt;/li&gt;
@@ -2234,7 +2234,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 38</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/week-38/" rel="alternate"></link><updated>2013-09-20T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-20:posts/2013/Sep/week-38/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 38</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/2013-week-38/" rel="alternate"></link><updated>2013-09-20T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-20:posts/2013/Sep/2013-week-38/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1309.3551"&gt;Tropical Amplitudes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1309.3443"&gt;To see Symmetry in a Forest of Trees&lt;/a&gt;&lt;/li&gt;
@@ -2274,7 +2274,7 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>arXiv picks for week 37</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/week-37/" rel="alternate"></link><updated>2013-09-13T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-13:posts/2013/Sep/week-37/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 37</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/2013-week-37/" rel="alternate"></link><updated>2013-09-13T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-13:posts/2013/Sep/2013-week-37/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1309.1581"&gt;One-loop correction to energy of a wavy line string in $AdS_{5}$&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1309.1608"&gt;Particles with non abelian charges&lt;/a&gt;&lt;/li&gt;
@@ -2316,12 +2316,12 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>Korchemsky on Dual Conformal Symmetry</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/korchemsky-on-dual-conformal-symmetry/" rel="alternate"></link><updated>2013-09-09T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-09:posts/2013/Sep/korchemsky-on-dual-conformal-symmetry/</id><summary type="html">&lt;p&gt;Gregory Korchemsky gave a very nice introductory &lt;a href="http://scgp.stonybrook.edu/archives/8588"&gt;talk&lt;/a&gt; on dual conformal symmetry at SCGP. I highly recommend watching it.&lt;/p&gt;</summary><category term="symmetry"></category></entry><entry><title>Review on Scattering Amplitudes</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/review-amplitudes/" rel="alternate"></link><updated>2013-09-08T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-08:posts/2013/Sep/review-amplitudes/</id><summary type="html">&lt;p&gt;This &lt;a href="http://arxiv.org/abs/1308.1697"&gt;review&lt;/a&gt; on scattering amplitudes by Henriette Elvang and Yu-tin Huang appeared earlier last month. It might be a good source for a semester-long seminar. I cannot wait to make time and give it a more careful read.&lt;/p&gt;</summary><category term="amplitudes"></category></entry><entry><title>arXiv picks for week 35</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/week-35/" rel="alternate"></link><updated>2013-09-08T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-08:posts/2013/Sep/week-35/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+</summary><category term="research"></category></entry><entry><title>Korchemsky on Dual Conformal Symmetry</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/korchemsky-on-dual-conformal-symmetry/" rel="alternate"></link><updated>2013-09-09T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-09:posts/2013/Sep/korchemsky-on-dual-conformal-symmetry/</id><summary type="html">&lt;p&gt;Gregory Korchemsky gave a very nice introductory &lt;a href="http://scgp.stonybrook.edu/archives/8588"&gt;talk&lt;/a&gt; on dual conformal symmetry at SCGP. I highly recommend watching it.&lt;/p&gt;</summary><category term="symmetry"></category></entry><entry><title>arXiv picks for week 35</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/2013-week-35/" rel="alternate"></link><updated>2013-09-08T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-08:posts/2013/Sep/2013-week-35/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1308.6567"&gt;The closed-string 3-loop amplitude and S-duality&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1308.6350"&gt;Natural curvature for manifest T-duality&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1308.6676"&gt;Critical points and number of master integrals&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 36</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/week-36/" rel="alternate"></link><updated>2013-09-08T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-08:posts/2013/Sep/week-36/</id><summary type="html">&lt;p&gt;These are some papers that appeared on the arXiv last week and I saved to read later. In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 36</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/2013-week-36/" rel="alternate"></link><updated>2013-09-08T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-08:posts/2013/Sep/2013-week-36/</id><summary type="html">&lt;p&gt;These are some papers that appeared on the arXiv last week and I saved to read later. In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1309.0769"&gt;From correlator functions to event shapes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1309.0804"&gt;On-shell Techniques and Universal Results in Quantum Gravity&lt;/a&gt;&lt;/li&gt;
@@ -2357,4 +2357,4 @@ which again, as we saw above, does not change the Euler-Lagrange equation.&lt;/p
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</summary><category term="research"></category></entry><entry><title>Amplitudes at SCGP</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/amplitudes-scgp/" rel="alternate"></link><updated>2013-09-01T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-01:posts/2013/Sep/amplitudes-scgp/</id><summary type="html">&lt;p&gt;The &lt;a href="http://scgp.stonybrook.edu/"&gt;Simons Center for Geometry and Physics&lt;/a&gt; in Stony Brook is going to be running the program &lt;em&gt;Physics and Mathematics of Scattering Amplitudes&lt;/em&gt; during the fall 2013 semester. It started last week with talks by Henriette Elvang and Johannes Henn. Sadly, I am going to miss the talks in person. But thankfully, there are going to be videos of most of the talks. The talks from last week can be found &lt;a href="http://scgp.stonybrook.edu/archives/8551"&gt;here&lt;/a&gt; and &lt;a href="http://scgp.stonybrook.edu/archives/8574"&gt;here&lt;/a&gt;.&lt;/p&gt;</summary><category term="talks"></category></entry></feed>
+</summary><category term="research"></category></entry><entry><title>Review on Scattering Amplitudes</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/review-amplitudes/" rel="alternate"></link><updated>2013-09-08T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-08:posts/2013/Sep/review-amplitudes/</id><summary type="html">&lt;p&gt;This &lt;a href="http://arxiv.org/abs/1308.1697"&gt;review&lt;/a&gt; on scattering amplitudes by Henriette Elvang and Yu-tin Huang appeared earlier last month. It might be a good source for a semester-long seminar. I cannot wait to make time and give it a more careful read.&lt;/p&gt;</summary><category term="amplitudes"></category></entry><entry><title>Amplitudes at SCGP</title><link href="http://meirizarrygelpi.github.io/posts/2013/Sep/amplitudes-scgp/" rel="alternate"></link><updated>2013-09-01T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2013-09-01:posts/2013/Sep/amplitudes-scgp/</id><summary type="html">&lt;p&gt;The &lt;a href="http://scgp.stonybrook.edu/"&gt;Simons Center for Geometry and Physics&lt;/a&gt; in Stony Brook is going to be running the program &lt;em&gt;Physics and Mathematics of Scattering Amplitudes&lt;/em&gt; during the fall 2013 semester. It started last week with talks by Henriette Elvang and Johannes Henn. Sadly, I am going to miss the talks in person. But thankfully, there are going to be videos of most of the talks. The talks from last week can be found &lt;a href="http://scgp.stonybrook.edu/archives/8551"&gt;here&lt;/a&gt; and &lt;a href="http://scgp.stonybrook.edu/archives/8574"&gt;here&lt;/a&gt;.&lt;/p&gt;</summary><category term="talks"></category></entry></feed>
