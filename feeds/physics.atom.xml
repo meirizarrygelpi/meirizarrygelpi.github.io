@@ -71,7 +71,17 @@ $$p_{1} + p_{2} = q_{31} \qquad p_{5} + p_{6} = q_{15} \qquad p_{2} + p_{3} = q_
 and
 $$p_{1} + p_{2} + p_{3} = q_{41} \qquad p_{1} + p_{5} + p_{6}  = q_{25} \qquad p_{1} + p_{2} + p_{6} = q_{36}.$$
 There are fifteen ways of choosing four elements from a set of six:
-$$1234 \quad 1235 \quad 1236 \quad 1245 \quad 1246 \quad 1256 \quad 1345 \quad 1346 \quad 1356 \quad 1456 \quad 2345 \quad 2346 \quad 2356 \quad 2456 \quad 3456.$$&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+$$1234 \quad 1235 \quad 1236 \quad 1245 \quad 1246 \quad 1256 \quad 1345 \quad 1346 \quad 1356 \quad 1456 \quad 2345 \quad 2346 \quad 2356 \quad 2456 \quad 3456.$$
+First, consider the quartet $1234$. The dual conformal ratios are
+$$\frac{q_{21}^{2} q_{43}^{2}}{q_{31}^{2} q_{42}^{2}} = \frac{m_{1}^{2} m_{3}^{2}}{s_{12} s_{23}} \qquad \frac{q_{41}^{2} q_{32}^{2}}{q_{31}^{2} q_{42}^{2}} = \frac{s_{123} m_{2}^{2}}{s_{12} s_{23}} \qquad \frac{q_{21}^{2} q_{43}^{2}}{q_{41}^{2} q_{32}^{2}} = \frac{m_{1}^{2} m_{3}^{2}}{s_{123} m_{2}^{2}}.$$
+Now you can find dual conformal ratios with three masses and one Mandelstam invariant, and with one mass and three Mandelstam invariants.&lt;/p&gt;
+&lt;p&gt;Next consider the quartet $1245$. The dual conformal ratios are
+$$\frac{q_{21}^{2} q_{54}^{2}}{q_{41}^{2} q_{25}^{2}} = \frac{m_{1}^{2} m_{4}^{2}}{s_{123} s_{156}} \qquad \frac{q_{21}^{2} q_{54}^{2}}{q_{15}^{2} q_{42}^{2}} = \frac{m_{1}^{2} m_{4}^{2}}{s_{56} s_{23}} \qquad \frac{q_{15}^{2} q_{42}^{2}}{q_{41}^{2} q_{25}^{2}} = \frac{s_{56} s_{23}}{s_{123} s_{156}}.$$
+Similarly, for the quartet $2356$ the dual conformal ratios are
+$$\frac{q_{32}^{2} q_{65}^{2}}{q_{53}^{2} q_{26}^{2}} = \frac{m_{2}^{2} m_{5}^{2}}{s_{34} s_{16}} \qquad \frac{q_{32}^{2} q_{65}^{2}}{q_{25}^{2} q_{36}^{2}} = \frac{m_{2}^{2} m_{5}^{2}}{s_{156} s_{126}} \qquad \frac{q_{53}^{2} q_{26}^{2}}{q_{25}^{2} q_{36}^{2}} = \frac{s_{34} s_{16}}{s_{156} s_{126}}.$$
+Finally, for the quartet $1346$ the dual conformal ratios are
+$$\frac{q_{16}^{2} q_{43}^{2}}{q_{31}^{2} q_{64}^{2}} = \frac{m_{6}^{2} m_{3}^{2}}{s_{12} s_{45}} \qquad \frac{q_{16}^{2} q_{43}^{2}}{q_{36}^{2} q_{41}^{2}} = \frac{m_{6}^{2} m_{3}^{2}}{s_{126} s_{123}} \qquad \frac{q_{31}^{2} q_{64}^{2}}{q_{36}^{2} q_{41}^{2}} = \frac{s_{12} s_{45}}{s_{126} s_{123}}.$$
+A shared feature by these three results is the appearance of dual conformal ratios that do not involve any of the masses. Thus, in the massless limit there will be nontrivial dual conformal invariants.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
