@@ -1,5 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-08-30T00:00:00-04:00</updated><entry><title>arXiv picks for week 35</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/2014-week-35/" rel="alternate"></link><updated>2014-08-30T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-30:posts/2014/Aug/2014-week-35/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-09-02T00:00:00-04:00</updated><entry><title>Four-point Inelastic Kinematics (Four Masses)</title><link href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-four-masses/" rel="alternate"></link><updated>2014-09-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-09-02:posts/2014/Sep/4pnt-four-masses/</id><summary type="html">&lt;p&gt;The most general $2 \rightarrow 2$ process has the form
+\begin{equation}
+    A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}) + D(p_{4}). \label{ABCD}
+\end{equation}
+Note that this process has no permutation symmetry; it is &lt;strong&gt;inelastic&lt;/strong&gt;. The four energy-momentum vectors $p_{I}$ satisfy &lt;strong&gt;on-shell&lt;/strong&gt; constraints,
+$$p_{I}^{2} = - m_{I}^{2} \qquad I = 1, 2, 3, 4;$$
+and a &lt;strong&gt;conservation&lt;/strong&gt; constraint,
+$$p_{1} + p_{2} = p_{3} + p_{4}.$$
+I will work with the assumption that quanta $1$ and $2$ are incoming, and quanta $3$ and $4$ are outgoing.&lt;/p&gt;
+&lt;h2&gt;Momentum Invariants&lt;/h2&gt;
+&lt;p&gt;Due to the conservation constraint, there are only three &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants:
+\begin{equation}
+    s \equiv s_{12} = s_{34} \qquad t \equiv t_{13} = t_{24} \qquad u \equiv t_{14} = t_{23}. \label{stu}
+\end{equation}
+These satisfy a linear relation involving the masses:
+$$s + t + u = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2}.$$
+In terms of the 2-Mandelstam invariants and the masses, the &lt;strong&gt;2-Gram&lt;/strong&gt; invariants are:
+$$G_{IJ}(s) = \frac{1}{4} [s - (m_{I} - m_{J})^{2}] [(m_{I} + m_{J})^{2} - s] \qquad IJ = 12, 34;$$
+$$G_{IJ}(t) = \frac{1}{4} [t - (m_{I} - m_{J})^{2}] [(m_{I} + m_{J})^{2} - t] \qquad IJ = 13, 24;$$
+$$G_{IJ}(u) = \frac{1}{4} [u - (m_{I} - m_{J})^{2}] [(m_{I} + m_{J})^{2} - u] \qquad IJ = 14, 23.$$
+There is also a nontrivial &lt;strong&gt;3-Gram&lt;/strong&gt; invariant, but I will not bother with it.&lt;/p&gt;
+&lt;h2&gt;Center-of-Momentum Frame&lt;/h2&gt;
+&lt;p&gt;In the &lt;strong&gt;center-of-momentum reference frame&lt;/strong&gt; you can write the energy-momentum vectors in the form
+$$p_{1} = (E_{1}, \mathbf{p}_{1}) \qquad p_{2} = (E_{2}, -\mathbf{p}_{1}) \qquad p_{3} = (E_{3}, \mathbf{p}_{3}) \qquad p_{4} = (E_{4}, -\mathbf{p}_{3}).$$
+This way, part of the conservation constraint is explicitly satisfied. The remaining part is the conservation of energy
+$$E_{1} + E_{2} = E_{3} + E_{4}.$$
+While in the center-of-momentum frame, you can kinematical quantities in terms of the 2-Mandelstam invariants and the masses.&lt;/p&gt;
+&lt;h3&gt;Energy and Momentum&lt;/h3&gt;
+&lt;p&gt;Using the on-shell constraints, you can write the energies in terms of the spatial momenta:
+$$E_{1} = \sqrt{m_{1}^{2} + \mathbf{p}_{1}^{2}} \qquad E_{2} = \sqrt{m_{2}^{2} + \mathbf{p}_{1}^{2}} \qquad E_{3} = \sqrt{m_{3}^{2} + \mathbf{p}_{3}^{2}} \qquad E_{4} = \sqrt{m_{4}^{2} + \mathbf{p}_{3}^{2}}.$$
+The four energies are manifestly positive. Using $s = -(p_{1} + p_{2})^{2}$ you can find that
+$$s = (E_{1} + E_{2})^{2} = (E_{3} + E_{4})^{2},$$
+which tells you that the variable $s$ has to be positive. With these relations you can solve for some of the energies:
+$$E_{2} = \sqrt{s} - E_{1} \qquad E_{4} = \sqrt{s} - E_{3}.$$
+Using these you can find expressions for the magnitude of the spatial momenta in terms of $s$ and the masses:
+$$\vert \mathbf{p}_{1} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{2 \sqrt{s}} \qquad \vert \mathbf{p}_{3} \vert = \frac{\sqrt{\Lambda_{34}(s)}}{2 \sqrt{s}} \qquad \Lambda_{IJ}(s) \equiv [s - (m_{I} - m_{J})^{2}] [s - (m_{I} + m_{J})^{2}].$$
+With these magnitudes, you can find expressions for the energies in terms of $s$ and the masses:
+$$E_{1} = \frac{s + (m_{1} - m_{2})(m_{1} + m_{2})}{2 \sqrt{s}} \qquad E_{2} = \frac{s - (m_{1} - m_{2})(m_{1} + m_{2})}{2 \sqrt{s}},$$
+and
+$$E_{3} = \frac{s + (m_{3} - m_{4})(m_{3} + m_{4})}{2 \sqrt{s}} \qquad E_{4} = \frac{s - (m_{3} - m_{4})(m_{3} + m_{4})}{2 \sqrt{s}}.$$
+Note that the requirement that the energy be positive leads to a restriction on the values that $s$ can take.&lt;/p&gt;
+&lt;h3&gt;Scattering Angle&lt;/h3&gt;
+&lt;p&gt;With the results for the energies, you can obtain
+$$E_{1} - E_{3} = \frac{(m_{1} - m_{2})(m_{1} + m_{2}) - (m_{3} - m_{4})(m_{3} + m_{4})}{2 \sqrt{s}},$$
+and
+$$E_{1} - E_{4} = \frac{(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})}{2 \sqrt{s}}.$$
+These particular combinations are important, because you also have
+$$\vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} = (E_{1} - E_{3})^{2} - t \qquad \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} = (E_{1} - E_{4})^{2} - u,$$
+and thus
+$$4 (\mathbf{p}_{1} \cdot \mathbf{p}_{3}) = \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} - \vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} = (E_{1} - E_{4})^{2} - (E_{1} - E_{3})^{2} - u + t,$$
+giving
+$$\mathbf{p}_{1} \cdot \mathbf{p}_{3} = \frac{(m_{1} - m_{2})(m_{3} - m_{4})(m_{1} + m_{2})(m_{3} + m_{4}) - s (u - t)}{4 s}.$$
+This result allows you to find an expression for the cosine of the angle between $\mathbf{p}_{1}$ and $\mathbf{p}_{3}$:
+$$z_{s} \equiv \cos{(\theta_{s})} \equiv \frac{\mathbf{p}_{1} \cdot \mathbf{p}_{3}}{\vert \mathbf{p}_{1} \vert \vert \mathbf{p}_{3} \vert} = \frac{(m_{1} - m_{2})(m_{3} - m_{4})(m_{1} + m_{2})(m_{3} + m_{4}) - s (u - t)}{\sqrt{\Lambda_{12}(s)} \sqrt{\Lambda_{34}(s)}}.$$
+Here I have labeled the angle with an $s$ since this is the &lt;strong&gt;scattering angle&lt;/strong&gt; along the $s$-channel.&lt;/p&gt;
+&lt;p&gt;Using
+$$\vert \mathbf{p}_{1} \vert^{2} + \vert \mathbf{p}_{3} \vert^{2} = \frac{(m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} + (m_{3} - m_{4})^{2}(m_{3} + m_{4})^{2} - 2s (u + t)}{4 s},$$
+and
+$$\vert \mathbf{p}_{1} \vert \vert \mathbf{p}_{3} \vert = \left( \vert \mathbf{p}_{1} \vert^{2} + \vert \mathbf{p}_{3} \vert^{2} \right) \left( \frac{\vert \mathbf{p}_{1} \vert}{\vert \mathbf{p}_{3} \vert} + \frac{\vert \mathbf{p}_{3} \vert}{\vert \mathbf{p}_{1} \vert} \right),$$
+leads to another expression for $z_{s}$:
+$$z_{s} = \left[ \frac{\Lambda_{12}(s) + \Lambda_{34}(s)}{\sqrt{\Lambda_{12}(s) \Lambda_{34}(s)}} \right] \left[ \frac{(m_{1} - m_{2})(m_{3} - m_{4})(m_{1} + m_{2})(m_{3} + m_{4}) - s (u - t)}{(m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} + (m_{3} - m_{4})^{2}(m_{3} + m_{4})^{2} - 2s (u + t)} \right].$$
+This result is useful when making some of the masses identical.&lt;/p&gt;
+&lt;h3&gt;Speed and Rapidity&lt;/h3&gt;
+&lt;p&gt;A quantum with mass $m \geq 0$ and energy $E \geq m$ has a &lt;strong&gt;speed&lt;/strong&gt; $0 \leq \vert \mathbf{v} \vert &amp;lt; 1$ (we work with units where $c = 1$) given by
+$$\vert \mathbf{v} \vert = \frac{\sqrt{E^{2} - m^{2}}}{E}$$
+In the center-of-momentum frame, you can write the individual speed of the external quanta in terms of $s$ and the masses:
+$$\vert \mathbf{v}_{1} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{s + (m_{1} - m_{2})(m_{1} + m_{2})} \qquad \vert \mathbf{v}_{2} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{s - (m_{1} - m_{2})(m_{1} + m_{2})},$$
+and
+$$\vert \mathbf{v}_{3} \vert = \frac{\sqrt{\Lambda_{34}(s)}}{s + (m_{3} - m_{4})(m_{3} + m_{4})} \qquad \vert \mathbf{v}_{4} \vert = \frac{\sqrt{\Lambda_{34}(s)}}{s - (m_{3} - m_{4})(m_{3} + m_{4})}.$$
+With the speed $\vert \mathbf{v} \vert$ you can find the &lt;strong&gt;rapidity&lt;/strong&gt; $\varphi$ via
+$$\varphi \equiv \operatorname{artanh}{(\vert \mathbf{v} \vert)}.$$
+Note that since $0 \leq \vert \mathbf{v} \vert &amp;lt; 1$, then it follows that $0 \leq \varphi &amp;lt; \infty$. In the center-of-momentum frame, the individual rapidity of the external quanta are
+$$\varphi_{1} = \frac{1}{2} \log{\left[ \frac{(m_{1} - m_{2})(m_{1} + m_{2}) + s + \sqrt{\Lambda_{12}(s)}}{(m_{1} - m_{2})(m_{1} + m_{2}) + s - \sqrt{\Lambda_{12}(s)}} \right]} \qquad \varphi_{2} = \frac{1}{2} \log{\left[ \frac{(m_{1} - m_{2})(m_{1} + m_{2}) - s - \sqrt{\Lambda_{12}(s)}}{(m_{1} - m_{2})(m_{1} + m_{2}) - s + \sqrt{\Lambda_{12}(s)}} \right]},$$
+and
+$$\varphi_{3} = \frac{1}{2} \log{\left[ \frac{(m_{3} - m_{4})(m_{3} + m_{4}) + s + \sqrt{\Lambda_{34}(s)}}{(m_{3} - m_{4})(m_{3} + m_{4}) + s - \sqrt{\Lambda_{34}(s)}} \right]} \qquad \varphi_{4} = \frac{1}{2} \log{\left[ \frac{(m_{3} - m_{4})(m_{3} + m_{4}) - s - \sqrt{\Lambda_{34}(s)}}{(m_{3} - m_{4})(m_{3} + m_{4}) - s + \sqrt{\Lambda_{34}(s)}} \right]}.$$
+Other results include the sum of the two incoming rapidities,
+$$\varphi_{1} + \varphi_{2} = \frac{1}{2} \log{\left[ \frac{m_{1}^{2} + m_{2}^{2} - s - \sqrt{\Lambda_{12}(s)}}{m_{1}^{2} + m_{2}^{2} - s + \sqrt{\Lambda_{12}(s)}} \right]} = \log{\left[ \frac{(m_{1} + m_{2})^{2} - s + \sqrt{\Lambda_{12}(s)}}{(m_{1} + m_{2})^{2} - s - \sqrt{\Lambda_{12}(s)}} \right]},$$
+and the sum of the two outgoing rapidities,
+$$\varphi_{3} + \varphi_{4} = \frac{1}{2} \log{\left[ \frac{m_{3}^{2} + m_{4}^{2} - s - \sqrt{\Lambda_{34}(s)}}{m_{3}^{2} + m_{4}^{2} - s + \sqrt{\Lambda_{34}(s)}} \right]} = \log{\left[ \frac{(m_{3} + m_{4})^{2} - s + \sqrt{\Lambda_{34}(s)}}{(m_{3} + m_{4})^{2} - s - \sqrt{\Lambda_{34}(s)}} \right]}.$$
+These two expressions appear in loop amplitudes.&lt;/p&gt;
+&lt;h3&gt;Physical Scattering Region&lt;/h3&gt;
+&lt;p&gt;Quantities like the individual energies $E_{I}$ or the spatial momenta $\mathbf{p}_{I}$ have clear physical interpretations. For a scattering process you expect the energies and the magnitude of the spatial momenta to be positive. Requiring $\vert \mathbf{p}_{1} \vert &amp;gt; 0$ and $\vert \mathbf{p}_{3} \vert &amp;gt; 0$ leads to
+$$s &amp;gt; \operatorname{max}{\lbrace (m_{1} + m_{2})^{2}, (m_{3} + m_{4})^{2} \rbrace}.$$
+In other words, $s$ must be above the $s$-channel thresholds. Similarly, requiring $\vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} \geq 0$ and $ \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} \geq 0$ leads to
+\begin{equation}
+4 s t \leq [(m_{1} - m_{2})(m_{1} + m_{2}) - (m_{3} - m_{4})(m_{3} + m_{4})]^{2}, 
+\label{stIneq}
+\end{equation}
+and
+\begin{equation}
+4 s u \leq [(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})]^{2}.
+\label{suIneq}
+\end{equation}&lt;/p&gt;
+&lt;h4&gt;Forward Scattering&lt;/h4&gt;
+&lt;p&gt;When $z_{s} \rightarrow 1$ (i.e. $\theta_{s} \rightarrow 0$), you are in the regime of &lt;strong&gt;forward scattering&lt;/strong&gt;. Using
+$$u_{f} = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2} - s - t_{f},$$
+and setting $z_{s} = 1$ leads to
+$$t_{f} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) - (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - [\sqrt{\Lambda_{12}(s)} - \sqrt{\Lambda_{34}(s)} ]^{2}}{4s},$$
+which in turn leads to
+$$u_{f} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - [\sqrt{\Lambda_{12}(s)} + \sqrt{\Lambda_{34}(s)} ]^{2}}{4s}.$$&lt;/p&gt;
+&lt;h4&gt;Backward Scattering&lt;/h4&gt;
+&lt;p&gt;When $z_{s} \rightarrow -1$ (i.e. $\theta_{s} \rightarrow \pi$), you are in the regime of &lt;strong&gt;backward scattering&lt;/strong&gt;. Using
+$$u_{b} = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2} - s - t_{b},$$
+and setting $z_{s} = -1$ leads to
+$$t_{b} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) - (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - [\sqrt{\Lambda_{12}(s)} + \sqrt{\Lambda_{34}(s)} ]^{2}}{4s},$$
+which in turn leads to
+$$u_{b} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - [\sqrt{\Lambda_{12}(s)} - \sqrt{\Lambda_{34}(s)} ]^{2}}{4s}.$$&lt;/p&gt;
+&lt;h4&gt;Orthogonal Scattering&lt;/h4&gt;
+&lt;p&gt;Forward (backward) scattering corresponds to the special case when the incoming spatial momentum $\mathbf{p}_{1}$ and the outgoing spatial momentum $\mathbf{p}_{3}$ are collinear (anticollinear). When $z_{s} \rightarrow 0$ (i.e. $\theta_{s} \rightarrow \pi / 2$), you are in regime of &lt;strong&gt;orthogonal scattering&lt;/strong&gt; (i.e. $\mathbf{p}_{1}$ and $\mathbf{p}_{3}$ are orthogonal). Using
+$$u_{o} = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2} - s - t_{o}$$
+and setting $z_{s} = 0$ leads to
+$$t_{o} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) - (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - \Lambda_{12}(s) - \Lambda_{34}(s)}{4s},$$
+which in turn leads to
+$$u_{o} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - \Lambda_{12}(s) - \Lambda_{34}(s)}{4s}.$$
+Note that you can interpret $t_{o}$ as the midpoint of the interval $t_{b} &amp;lt; t &amp;lt; t_{f}$. Similarly, you can interpret $u_{o}$ as the midpoint of the interval $u_{f} &amp;lt; u &amp;lt; u_{b}$.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="kinematics"></category><category term="four-point"></category><category term="massive"></category></entry><entry><title>arXiv picks for week 35</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/2014-week-35/" rel="alternate"></link><updated>2014-08-30T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-30:posts/2014/Aug/2014-week-35/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.5463"&gt;The Nonperturbative Structure of Hadrons&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.5531"&gt;Amplituhedron cells and Stanley symmetric functions&lt;/a&gt;&lt;/li&gt;
