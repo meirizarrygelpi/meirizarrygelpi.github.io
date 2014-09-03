@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-09-02T00:00:00-04:00</updated><entry><title>Four-point Inelastic Kinematics (Four Masses)</title><link href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-four-masses/" rel="alternate"></link><updated>2014-09-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-09-02:posts/2014/Sep/4pnt-four-masses/</id><summary type="html">&lt;p&gt;The most general $2 \rightarrow 2$ process has the form
-\begin{equation}
-    A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}) + D(p_{4}). \label{ABCD}
-\end{equation}
+$$A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}) + D(p_{4}).$$
 Note that this process has no permutation symmetry; it is &lt;strong&gt;inelastic&lt;/strong&gt;. The four energy-momentum vectors $p_{I}$ satisfy &lt;strong&gt;on-shell&lt;/strong&gt; constraints,
 $$p_{I}^{2} = - m_{I}^{2} \qquad I = 1, 2, 3, 4;$$
 and a &lt;strong&gt;conservation&lt;/strong&gt; constraint,
@@ -10,9 +8,7 @@ $$p_{1} + p_{2} = p_{3} + p_{4}.$$
 I will work with the assumption that quanta $1$ and $2$ are incoming, and quanta $3$ and $4$ are outgoing.&lt;/p&gt;
 &lt;h2&gt;Momentum Invariants&lt;/h2&gt;
 &lt;p&gt;Due to the conservation constraint, there are only three &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants:
-\begin{equation}
-    s \equiv s_{12} = s_{34} \qquad t \equiv t_{13} = t_{24} \qquad u \equiv t_{14} = t_{23}. \label{stu}
-\end{equation}
+$$s \equiv s_{12} = s_{34} \qquad t \equiv t_{13} = t_{24} \qquad u \equiv t_{14} = t_{23}. $$
 These satisfy a linear relation involving the masses:
 $$s + t + u = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2}.$$
 In terms of the 2-Mandelstam invariants and the masses, the &lt;strong&gt;2-Gram&lt;/strong&gt; invariants are:
@@ -80,18 +76,14 @@ and the sum of the two outgoing rapidities,
 $$\varphi_{3} + \varphi_{4} = \frac{1}{2} \log{\left[ \frac{m_{3}^{2} + m_{4}^{2} - s - \sqrt{\Lambda_{34}(s)}}{m_{3}^{2} + m_{4}^{2} - s + \sqrt{\Lambda_{34}(s)}} \right]} = \log{\left[ \frac{(m_{3} + m_{4})^{2} - s + \sqrt{\Lambda_{34}(s)}}{(m_{3} + m_{4})^{2} - s - \sqrt{\Lambda_{34}(s)}} \right]}.$$
 These two expressions appear in loop amplitudes.&lt;/p&gt;
 &lt;h3&gt;Physical Scattering Region&lt;/h3&gt;
-&lt;p&gt;Quantities like the individual energies $E_{I}$ or the spatial momenta $\mathbf{p}_{I}$ have clear physical interpretations. For a scattering process you expect the energies and the magnitude of the spatial momenta to be positive. Requiring $\vert \mathbf{p}_{1} \vert &amp;gt; 0$ and $\vert \mathbf{p}_{3} \vert &amp;gt; 0$ leads to
+&lt;p&gt;Quantities like the energies $E_{I}$ or the spatial momenta $\mathbf{p}_{I}$ have clear physical interpretations. For a scattering process you expect the energies and the magnitude of the spatial momenta to be positive. Requiring $\vert \mathbf{p}_{1} \vert &amp;gt; 0$ and $\vert \mathbf{p}_{3} \vert &amp;gt; 0$ leads to
 $$s &amp;gt; \operatorname{max}{\lbrace (m_{1} + m_{2})^{2}, (m_{3} + m_{4})^{2} \rbrace}.$$
-In other words, $s$ must be above the $s$-channel thresholds. Similarly, requiring $\vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} \geq 0$ and $ \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} \geq 0$ leads to
-\begin{equation}
-4 s t \leq [(m_{1} - m_{2})(m_{1} + m_{2}) - (m_{3} - m_{4})(m_{3} + m_{4})]^{2}, 
-\label{stIneq}
-\end{equation}
+In other words, $s$ must be above the $s$-channel thresholds. This means that inside the physical scattering region you have $G_{12} &amp;gt; 0$ and $G_{34} &amp;gt; 0$.&lt;/p&gt;
+&lt;p&gt;Similarly, requiring $\vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} \geq 0$ and $ \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} \geq 0$ leads to
+$$4 s t \leq [(m_{1} - m_{2})(m_{1} + m_{2}) - (m_{3} - m_{4})(m_{3} + m_{4})]^{2},$$
 and
-\begin{equation}
-4 s u \leq [(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})]^{2}.
-\label{suIneq}
-\end{equation}&lt;/p&gt;
+$$4 s u \leq [(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})]^{2}.$$
+These inequalities can be reformulated as bounds for the values that $t$ and $u$ can take as functions of $s$ and the masses.&lt;/p&gt;
 &lt;h4&gt;Forward Scattering&lt;/h4&gt;
 &lt;p&gt;When $z_{s} \rightarrow 1$ (i.e. $\theta_{s} \rightarrow 0$), you are in the regime of &lt;strong&gt;forward scattering&lt;/strong&gt;. Using
 $$u_{f} = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2} - s - t_{f},$$
