@@ -106,7 +106,7 @@ M.E. Irizarry-Gelpí            </a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
                 <p>As part of my journey towards data science I am taking a MOOC on algorithms by Tim Roughgarden from Stanford University. I took my first MOOC some years ago from MIT and enjoyed it quite a lot. Algorithms are things I know very little about and I hope this is no longer true by the end of the course. As part of my study I will keep some lecture notes with important points from each of the six weeks. Currently, I am planning on solving the programming questions with Python (using this as an opportunity to write some code in Python 3.x).</p>
-<h1>Introduction</h1>
+<h2>Introduction</h2>
 <p>An <strong>algorithm</strong> is "a set of well-defined rules, a recipe in effect, for solving some computational problem".</p>
 <p>Define a computational problem, with an <em>input</em> and an <em>output</em>, then provide an algorithm that transforms the input into the output.</p>
 <p>The algorithm's designer mantra:</p>
@@ -114,76 +114,76 @@ M.E. Irizarry-Gelpí            </a>
 <p>"Perhaps the most important principle for the good algorithm designer is to refuse to be content." - Aho, Hopcroft, and Ullman, <em>The Design and Analysis of Computer Algorithms</em></p>
 </blockquote>
 <p>In other words: <strong><em>Can we do better?</em></strong></p>
-<h2>Merge Sort</h2>
+<h3>Merge Sort</h3>
 <p>Merge sort is an old algorithm. A good example of the divide-and-conquer paradigm. One breaks a problem into smaller sub-problems that are solved recursively. Merge sort achives sorting with a number of operations that is less than quadratic in size.</p>
 <p>The sorting problem: as input we are given an array of $N$ numbers, which are not sorted, and we are asked to provide the $N$ numbers in sorted order (say in increasing order).</p>
 <p>I wrote a short function that takes as input a non-negative integer <code>n</code>, and gives as output an unsorted list containing the <code>n + 1</code> integers between <code>0</code> and <code>n</code>. Here it is:</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">random</span> <span class="n">import</span> <span class="n">choice</span>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
 
-<span class="n">def</span> <span class="n">unsorted_list</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
-    <span class="n">l2</span> <span class="o">=</span> <span class="n">list</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">x</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">:</span>
+<span class="k">def</span> <span class="nf">unsorted_list</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+    <span class="n">l2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">y</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
-        <span class="n">l2</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-        <span class="n">l1</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">l2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">l1</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">l2</span>
 </pre></div>
 
 
 <p>With this function I can create list of integers that need to be sorted. Next, we implement Merge Sort. My implementation involves two parts. The first part is a function that takes as input two sorted lists of integers <code>a</code> and <code>b</code>, and gives as output a third sorted list <code>c</code> made by merging <code>a</code> and <code>b</code>. Here is the code:</p>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">mel_merge</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span><span class="o">:</span>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">mel_merge</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="n">i_a</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">i_b</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="n">list</span><span class="p">()</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">i_a</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="n">and</span> <span class="p">(</span><span class="n">i_b</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">:</span>
-        <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">]</span><span class="o">:</span>
-            <span class="n">c</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">])</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">i_a</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i_b</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">]:</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">])</span>
             <span class="n">i_a</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">elif</span> <span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">]</span><span class="o">:</span>
-            <span class="n">c</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">]:</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">])</span>
             <span class="n">i_b</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="nl">else:</span>
-            <span class="n">c</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">])</span>
-            <span class="n">c</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">])</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">])</span>
             <span class="n">i_a</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="n">i_b</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">i_a</span> <span class="o">==</span> <span class="n">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="n">and</span> <span class="p">(</span><span class="n">i_b</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">:</span>
-        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="o">:</span><span class="p">]</span>
-    <span class="n">elif</span> <span class="p">(</span><span class="n">i_b</span> <span class="o">==</span> <span class="n">len</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="n">and</span> <span class="p">(</span><span class="n">i_a</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span><span class="o">:</span>
-        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="o">:</span><span class="p">]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i_a</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i_b</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)):</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">:]</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">i_b</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i_a</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">:]</span>
     <span class="k">return</span> <span class="n">c</span>
 </pre></div>
 
 
 <p>The second part is a recursive function that takes an unsorted list <code>l</code>, splits it into two smaller lists, then recursively calls itself on those smaller lists producing sorted lists <code>l1</code> and <code>l2</code>, and finally calls <code>mel_merge</code> to merge these two into a sorted list:</p>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">mel_merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">len_l</span> <span class="o">=</span> <span class="n">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">len_l</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">or</span> <span class="p">(</span><span class="n">len_l</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span><span class="o">:</span>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">mel_merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="n">len_l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">len_l</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">len_l</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">l</span>
-    <span class="nl">else:</span>
-        <span class="n">k</span> <span class="o">=</span> <span class="n">len_l</span> <span class="c1">// 2</span>
-        <span class="n">l1</span> <span class="o">=</span> <span class="n">mel_merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="o">:</span><span class="n">k</span><span class="p">])</span>
-        <span class="n">l2</span> <span class="o">=</span> <span class="n">mel_merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="n">k</span><span class="o">:</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">len_l</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="n">l1</span> <span class="o">=</span> <span class="n">mel_merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">[:</span><span class="n">k</span><span class="p">])</span>
+        <span class="n">l2</span> <span class="o">=</span> <span class="n">mel_merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="n">k</span><span class="p">:])</span>
         <span class="k">return</span> <span class="n">mel_merge</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">)</span>
 </pre></div>
 
 
-<h2>Analysis of Algorithms</h2>
+<h3>Analysis of Algorithms</h3>
 <p>One can adopt three guiding principles for how to reason about algorithms and also how to define a fast algorithm.</p>
 <p>The first guiding principle is <strong>worst-case analysis</strong>. This principle will help us find results that hold quite generally with no assumptions about the specific details of the input. A related, but different principle is <strong>average-case analysis</strong>, where one makes some assumptions about the frequencies of certain kinds of inputs and develops algorithms optimized for those particular cases. However, this requires some domain knowledge, whereas the worst-case analysis holds in general.</p>
 <p>The second guiding principle consist of not worrying to much about constant factors, or lowest order terms. This means that we are really interested in looking at the leading (dominant) behavior.</p>
 <p>The third guiding principle consist of using asymptotic analysis. This means that we will focus on large input sizes. In some sense, the interesting problems are the ones with large inputs.</p>
 <p>With these three principles we can define a <strong>fast algorithm</strong> as an algorithm where the wors-case running time grows slowly with the input size. For most of the problems we will encounter, the "holy grail" is to find an algorithm that solves the problem in linear time (or close to linear time).</p>
-<h1>Asymptotic Analysis</h1>
+<h2>Asymptotic Analysis</h2>
 <p>Asymptotic analysis is the language used to discuss the high-level performance of an algorithm. It is coarse enough to suppress specific details like architecture/language/compiler-dependent details. It is also sharp enough to make useful comparisons between different algorithms, especially on large inputs.</p>
 <p>The high-level idea is to supress constant factors (which are system-specific) and lower-order terms (which are irrelevant for large inputs). A somewhat careful analysis of Merge Sort yields a running time of the form$$T(n) = 6n \lg(n) + 6n$$Using asymptotic analysis we just provide $n \lg(n)$. That is, we ignore the constant factor $6$ and the lower-order term $6n$. In this sense we say that the running time of Merge Sort is $O(n \lg(n))$.</p>
-<h2>Big-O</h2>
+<h3>Big-O</h3>
 <p>In general, we only consider functions defined for positive integers (i.e. sizes of inputs). One such function is the worst-case running time of an algorithm as a function of the input size $n$, which we denote by $T(n)$. If $T(n) = O(f(n))$, this means that eventually (i.e. for all sufficiently large $n$), $T(n)$ is bounded from <em>above</em> by $f(n)$. A more formal definition is:</p>
 <blockquote>
 <p><strong>Big-O Notation:</strong> $T(n) = O(f(n))$ if and only if there exist positive constants $c$ and $n_{0}$ such that$$T(n) \leq c f(n)$$for all $n \geq n_{0}$.</p>
 </blockquote>
-<h2>Big-Omega and Big-Theta</h2>
+<h3>Big-Omega and Big-Theta</h3>
 <p>Similar to big-O, we use $T(n) = \Omega(g(n))$ to mean that eventually $T(n)$ is bounded from <em>below</em> by $g(n)$. A more formal definition is:</p>
 <blockquote>
 <p><strong>Big-Omega Notation:</strong> $T(n) = \Omega(g(n))$ if and only if there exist positive constants $c$ and $n_{0}$ such that$$T(n) \geq c g(n)$$for all $n \geq n_{0}$.</p>
@@ -192,9 +192,9 @@ M.E. Irizarry-Gelpí            </a>
 <blockquote>
 <p><strong>Big-Theta Notation:</strong> $T(n) = \Theta(h(n))$ if there exist positive constants $c_{1}$, $c_{2}$ and $n_{0}$ such that $$c_{1} h(n) \leq T(n) \leq c_{2} h(n)$$for all $n \geq n_{0}$.</p>
 </blockquote>
-<h1>Divide and Conquer Algorithms</h1>
+<h2>Divide and Conquer Algorithms</h2>
 <p>The divide and conquer paradigm for solving problems consist of two main steps. One first divides the main problem into smaller subproblems, that are solvable (the conquering). After combining the solutions of the smaller subproblems, the starting problem can be solved.</p>
-<h2>Counting Inversions</h2>
+<h3>Counting Inversions</h3>
 <p>Given an array $A$ of $n$ distinct integers, an <strong>inversion</strong> is a pair of array indices $i$ and $j$ such that $i &lt; j$ and $A_{i} &gt; A_{j}$.</p><script type= "text/javascript">
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
