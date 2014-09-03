@@ -131,13 +131,13 @@ There is also a nontrivial <strong>3-Gram</strong> invariant, but I will not bot
 $$p_{1} = (E_{1}, \mathbf{p}_{1}) \qquad p_{2} = (E_{2}, -\mathbf{p}_{1}) \qquad p_{3} = (E_{3}, \mathbf{p}_{3}) \qquad p_{4} = (E_{4}, -\mathbf{p}_{3}).$$
 This way, part of the conservation constraint is explicitly satisfied. The remaining part is the conservation of energy
 $$E_{1} + E_{2} = E_{3} + E_{4}.$$
-While in the center-of-momentum frame, you can kinematical quantities in terms of the 2-Mandelstam invariants and the masses.</p>
+While in the center-of-momentum frame, you can write most kinematical quantities in terms of the 2-Mandelstam invariants and the masses.</p>
 <h3>Energy and Momentum</h3>
 <p>Using the on-shell constraints, you can write the energies in terms of the spatial momenta:
 $$E_{1} = \sqrt{m_{1}^{2} + \mathbf{p}_{1}^{2}} \qquad E_{2} = \sqrt{m_{2}^{2} + \mathbf{p}_{1}^{2}} \qquad E_{3} = \sqrt{m_{3}^{2} + \mathbf{p}_{3}^{2}} \qquad E_{4} = \sqrt{m_{4}^{2} + \mathbf{p}_{3}^{2}}.$$
 The four energies are manifestly positive. Using $s = -(p_{1} + p_{2})^{2}$ you can find that
 $$s = (E_{1} + E_{2})^{2} = (E_{3} + E_{4})^{2},$$
-which tells you that the variable $s$ has to be positive. With these relations you can solve for some of the energies:
+which tells you that $s$ has to be positive. With these relations you can solve for some of the energies:
 $$E_{2} = \sqrt{s} - E_{1} \qquad E_{4} = \sqrt{s} - E_{3}.$$
 Using these you can find expressions for the magnitude of the spatial momenta in terms of $s$ and the masses:
 $$\vert \mathbf{p}_{1} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{2 \sqrt{s}} \qquad \vert \mathbf{p}_{3} \vert = \frac{\sqrt{\Lambda_{34}(s)}}{2 \sqrt{s}} \qquad \Lambda_{IJ}(s) \equiv [s - (m_{I} - m_{J})^{2}] [s - (m_{I} + m_{J})^{2}].$$
@@ -163,7 +163,7 @@ Here I have labeled the angle with an $s$ since this is the <strong>scattering a
 <p>Using
 $$\vert \mathbf{p}_{1} \vert^{2} + \vert \mathbf{p}_{3} \vert^{2} = \frac{(m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} + (m_{3} - m_{4})^{2}(m_{3} + m_{4})^{2} - 2s (u + t)}{4 s},$$
 and
-$$\vert \mathbf{p}_{1} \vert \vert \mathbf{p}_{3} \vert = \left( \vert \mathbf{p}_{1} \vert^{2} + \vert \mathbf{p}_{3} \vert^{2} \right) \left( \frac{\vert \mathbf{p}_{1} \vert}{\vert \mathbf{p}_{3} \vert} + \frac{\vert \mathbf{p}_{3} \vert}{\vert \mathbf{p}_{1} \vert} \right),$$
+$$\vert \mathbf{p}_{1} \vert^{2} + \vert \mathbf{p}_{3} \vert^{2} = \vert \mathbf{p}_{1} \vert \vert \mathbf{p}_{3} \vert \left( \frac{\vert \mathbf{p}_{1} \vert}{\vert \mathbf{p}_{3} \vert} + \frac{\vert \mathbf{p}_{3} \vert}{\vert \mathbf{p}_{1} \vert} \right),$$
 leads to another expression for $z_{s}$:
 $$z_{s} = \left[ \frac{\Lambda_{12}(s) + \Lambda_{34}(s)}{\sqrt{\Lambda_{12}(s) \Lambda_{34}(s)}} \right] \left[ \frac{(m_{1} - m_{2})(m_{3} - m_{4})(m_{1} + m_{2})(m_{3} + m_{4}) - s (u - t)}{(m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} + (m_{3} - m_{4})^{2}(m_{3} + m_{4})^{2} - 2s (u + t)} \right].$$
 This result is useful when making some of the masses identical.</p>
@@ -186,7 +186,7 @@ and the sum of the two outgoing rapidities,
 $$\varphi_{3} + \varphi_{4} = \frac{1}{2} \log{\left[ \frac{m_{3}^{2} + m_{4}^{2} - s - \sqrt{\Lambda_{34}(s)}}{m_{3}^{2} + m_{4}^{2} - s + \sqrt{\Lambda_{34}(s)}} \right]} = \log{\left[ \frac{(m_{3} + m_{4})^{2} - s + \sqrt{\Lambda_{34}(s)}}{(m_{3} + m_{4})^{2} - s - \sqrt{\Lambda_{34}(s)}} \right]}.$$
 These two expressions appear in loop amplitudes.</p>
 <h3>Physical Scattering Region</h3>
-<p>Quantities like the energies $E_{I}$ or the spatial momenta $\mathbf{p}_{I}$ have clear physical interpretations. For a scattering process you expect the energies and the magnitude of the spatial momenta to be positive. Requiring $\vert \mathbf{p}_{1} \vert &gt; 0$ and $\vert \mathbf{p}_{3} \vert &gt; 0$ leads to
+<p>Quantities like the energies $E_{I}$ or the spatial momenta $\mathbf{p}_{I}$ have a clear physical interpretation. For a scattering process you expect the energies and the magnitude of the spatial momenta to be positive. Requiring $\vert \mathbf{p}_{1} \vert &gt; 0$ and $\vert \mathbf{p}_{3} \vert &gt; 0$ leads to
 $$s &gt; \operatorname{max}{\lbrace (m_{1} + m_{2})^{2}, (m_{3} + m_{4})^{2} \rbrace}.$$
 In other words, $s$ must be above the $s$-channel thresholds. This means that inside the physical scattering region you have $G_{12} &gt; 0$ and $G_{34} &gt; 0$.</p>
 <p>Similarly, requiring $\vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} \geq 0$ and $ \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} \geq 0$ leads to
