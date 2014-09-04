@@ -1,5 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-09-02T00:00:00-04:00</updated><entry><title>Four-point Inelastic Kinematics (Four Masses)</title><link href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-four-masses/" rel="alternate"></link><updated>2014-09-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-09-02:posts/2014/Sep/4pnt-four-masses/</id><summary type="html">&lt;p&gt;The most general $2 \rightarrow 2$ process has the form
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-09-04T00:00:00-04:00</updated><entry><title>Four-point Elastic Kinematics (Nonidentical Masses)</title><link href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-two-masses/" rel="alternate"></link><updated>2014-09-04T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-09-04:posts/2014/Sep/4pnt-two-masses/</id><summary type="html">&lt;p&gt;In this post I will consider the four-point process
+$$A(p_{1}) + B(p_{2}) \longrightarrow A(p_{3}) + B(p_{4}).$$
+This is a special elastic case of the inelastic process that I considered in a &lt;a href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-four-masses/"&gt;previous post&lt;/a&gt;. Besides on-shell constraints and the conservation constraint, you now need to also impose &lt;strong&gt;elasticity&lt;/strong&gt; constraints:
+$$p_{1}^{2} = p_{3}^{2} \qquad p_{2}^{2} = p_{4}^{2} \quad \Longrightarrow \quad m_{1} = m_{3} \qquad m_{2} = m_{4}.$$
+Below you can see how this feature changes the &lt;a href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-four-masses/"&gt;previous results&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Momentum Invariants&lt;/h2&gt;
+&lt;p&gt;The three &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants remain the same, but now they satisfy the relation
+$$s + t + u = 2m_{1}^{2} + 2m_{2}^{2}.$$
+Due to the elasticity constraint, some of the &lt;strong&gt;2-Gram&lt;/strong&gt; invariants become equal:
+$$G_{34}(s) = G_{12}(s) = \frac{1}{4} [ s - (m_{1} - m_{2})^{2} ] [ (m_{1} + m_{2})^{2} - s ] \qquad G_{23}(u) = G_{14}(u) = \frac{1}{4} [ u - (m_{1} - m_{2})^{2} ] [ (m_{1} + m_{2})^{2} - u ].$$
+The rest of the 2-Gram invariants become much simpler:
+$$G_{13}(t) = \frac{1}{4} t (4m_{1}^{2} - t) \qquad G_{24}(t) = \frac{1}{4} t (4m_{2}^{2} - t).$$
+The &lt;strong&gt;3-Gram&lt;/strong&gt; invariant also acquires a simpler form:
+$$G_{123}(s, t, u) = G_{124}(s, t, u) = G_{134}(s, t, u) = G_{234}(s, t, u) = \frac{1}{4} t [ (m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2} - s u].$$&lt;/p&gt;
+&lt;h2&gt;Center-of-Momentum Frame&lt;/h2&gt;
+&lt;p&gt;Just like before, in the center-of-momentum frame you can write
+$$p_{1} = (E_{1}, \mathbf{p}_{1}) \qquad p_{2} = (E_{2}, -\mathbf{p}_{1}) \qquad p_{3} = (E_{3}, \mathbf{p}_{3}) \qquad p_{4} = (E_{4}, -\mathbf{p}_{3}).$$&lt;/p&gt;
+&lt;h3&gt;Energy and Momentum&lt;/h3&gt;
+&lt;p&gt;Since
+$$\Lambda_{12}(s) = \Lambda_{34}(s) \qquad \Lambda_{IJ}(s) \equiv [ s - (m_{I} - m_{J})^{2} ] [ s - (m_{I} + m_{J})^{2} ],$$
+it follows that the magnitude of $\mathbf{p}_{1}$ and $\mathbf{p}_{3}$ are equal:
+$$\vert \mathbf{p}_{1} \vert = \vert \mathbf{p}_{3} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{2 \sqrt{s}}.$$
+For the &lt;strong&gt;energy&lt;/strong&gt; of each quanta you now find
+$$E_{3} = E_{1} = \frac{s + (m_{1} - m_{2})(m_{1} + m_{2})}{2 \sqrt{s}} \qquad E_{4} = E_{2} = \frac{s - (m_{1} - m_{2})(m_{1} + m_{2})}{2 \sqrt{s}}.$$
+That is, one of the consequences of the elasticity constraints is a body-wise conservation of energy.&lt;/p&gt;
+&lt;h3&gt;Scattering Angle&lt;/h3&gt;
+&lt;p&gt;You now have
+$$\mathbf{p}_{1} \cdot \mathbf{p}_{3} = \frac{(m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} - s (u - t)}{4s},$$
+and
+$$\Lambda_{12}(s) = (m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} - s (u + t).$$
+Using these two results leads to
+$$z_{s} \equiv \cos{(\theta_{s})} \equiv \frac{\mathbf{p}_{1} \cdot \mathbf{p}_{3}}{\vert \mathbf{p}_{1} \vert \vert \mathbf{p}_{3} \vert} = \frac{(m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} - s (u - t)}{(m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} - s (u + t)}.$$&lt;/p&gt;
+&lt;h3&gt;Speed and Rapidity&lt;/h3&gt;
+&lt;p&gt;Due to the elasticity constraints, for the &lt;strong&gt;speed&lt;/strong&gt; of each quanta you now have
+$$\vert \mathbf{v}_{3} \vert = \vert \mathbf{v}_{1} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{s + (m_{1} - m_{2})(m_{1} + m_{2})} \qquad \vert \mathbf{v}_{4} \vert = \vert \mathbf{v}_{2} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{s - (m_{1} - m_{2})(m_{1} + m_{2})},$$
+and for the &lt;strong&gt;rapidity&lt;/strong&gt; of each quanta
+$$\varphi_{3} = \varphi_{1} = \frac{1}{2} \log{\left[ \frac{(m_{1} - m_{2})(m_{1} + m_{2}) + s + \sqrt{\Lambda_{12}(s)}}{(m_{1} - m_{2})(m_{1} + m_{2}) + s - \sqrt{\Lambda_{12}(s)}} \right]} \qquad \varphi_{4} = \varphi_{2} = \frac{1}{2} \log{\left[ \frac{(m_{1} - m_{2})(m_{1} + m_{2}) - s - \sqrt{\Lambda_{12}(s)}}{(m_{1} - m_{2})(m_{1} + m_{2}) - s + \sqrt{\Lambda_{12}(s)}} \right]}.$$
+Another consequence of the elasticity constraints is a body-wise conservation of rapidity (and speed).&lt;/p&gt;
+&lt;h3&gt;Physical Scattering Region&lt;/h3&gt;
+&lt;p&gt;Because of the elasticity constraints, there is only one threshold and one pseudothreshold along the $s$-channel. Requiring $\vert \mathbf{p}_{1} \vert &amp;gt; 0$ leads to
+$$s &amp;gt; (m_{1} + m_{2})^{2}.$$
+That is, $s$ must be above threshold. This condition also guarantees that all individual energies are positive. Similarly, requiring $\vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} \geq 0$ leads to
+$$t \leq 0,$$
+and requiring $ \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} \geq 0$ leads to
+$$s u \leq (m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2}.$$
+As you will see below, these inequalities are saturated at special kinematical configurations.&lt;/p&gt;
+&lt;h4&gt;Forward Scattering&lt;/h4&gt;
+&lt;p&gt;Forward scattering corresponds to setting $z_{s} = 1$. Using
+$$u_{f} = 2m_{1}^{2} + 2m_{2}^{2} - s - t_{f},$$
+and setting $z_{s} = 1$ leads to
+$$t_{f} = 0.$$
+This leads to a &lt;strong&gt;linear relation&lt;/strong&gt; between $u_{f}$ and $s$:
+$$u_{f} = 2m_{1}^{2} + 2m_{2}^{2} - s.$$
+Note that when $t = t_{f}$ you saturate the condition $t \leq 0$.&lt;/p&gt;
+&lt;h4&gt;Backward Scattering&lt;/h4&gt;
+&lt;p&gt;Backward scattering corresponds to setting $z_{s} = -1$. Using
+$$u_{b} = 2m_{1}^{2} + 2m_{2}^{2} - s - t_{b},$$
+and setting $z_{s} = -1$ leads to
+$$t_{b} = - \frac{\Lambda_{12}(s)}{s} = \frac{[s - (m_{1} - m_{2})^{2}] [(m_{1} + m_{2})^{2} - s]}{s}.$$
+In contrast to forward scattering, you now have a &lt;strong&gt;rectihyperbolic relation&lt;/strong&gt; (i.e. a hyperbola with perpendicular asymptotes) between $u_{b}$ and $s$:
+$$u_{b} = \frac{(m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2}}{s}.$$
+Note that when $u = u_{b}$ you saturate the condition $s u \leq (m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2}$.&lt;/p&gt;
+&lt;h4&gt;Orthogonal Scattering&lt;/h4&gt;
+&lt;p&gt;Orthogonal scattering corresponds to setting $z_{s} = 0$. Using
+$$u_{o} = 2m_{1}^{2} + 2m_{2}^{2} - s - t_{o},$$
+and setting $z_{s} = 0$ leads to
+$$t_{o} = -\frac{\Lambda_{12}(s)}{2s}.$$
+It follows that
+$$u_{o} = \frac{2(m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2} - \Lambda_{12}(s)}{2s}.$$&lt;/p&gt;
+&lt;h3&gt;Semiforward Approximation&lt;/h3&gt;
+&lt;p&gt;Like in any four-point process, there are three main kinematic variables: $s$, $t$, and $u$. Of course, due to the conservation constraint only two of these are independent. However, it pays to keep $u$ around some times. The quantity $s$ describes the center-of-momentum energy. The quantity $t$ describes the amount of momentum that is exchanged between the two bodies. Other kinematic variables include the two masses. With all of these dimensionful quantities, you can construct dimensionless ones by taking ratios. For example,
+$$R_{1} \equiv \frac{t}{s} \qquad R_{2} \equiv \frac{s}{m_{1} m_{2}} \qquad R_{3} \equiv \frac{m_{1}}{m_{2}}.$$
+The &lt;strong&gt;semiforward approximation&lt;/strong&gt; is defined as the regime where $R_{1} \rightarrow 0$ with $R_{2}$ and $R_{3}$ kept fixed. This is the regime where $t$ is much smaller than $s$ or the square of the masses, and the speed and rapidity of the external quanta is kept fixed. A corollary of the semiforward approximation is that the ratio $u / s$ is also kept fixed.&lt;/p&gt;
+&lt;h2&gt;Cross Processes&lt;/h2&gt;
+&lt;p&gt;If you cross the incoming $B$ with the outgoing $A$, you find the &lt;strong&gt;inelastic&lt;/strong&gt; process
+$$A(p_{1}) + \bar{A}(\bar{p}_{2}) \longrightarrow \bar{B}(\bar{p}_{3}) + B(p_{4}).$$
+This is the $t$-channel. Similarly, if you cross the incoming $B$ with the outgoing $B$, you find the &lt;strong&gt;elastic&lt;/strong&gt; process
+$$A(p_{1}) + \bar{B}(\bar{p}_{2}) \longrightarrow A(p_{3}) + \bar{B}(\bar{p}_{4}).$$
+This is the $u$-channel.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="kinematics"></category></entry><entry><title>Four-point Inelastic Kinematics (Four Masses)</title><link href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-four-masses/" rel="alternate"></link><updated>2014-09-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-09-02:posts/2014/Sep/4pnt-four-masses/</id><summary type="html">&lt;p&gt;The most general $2 \rightarrow 2$ process has the form
 $$A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}) + D(p_{4}).$$
 Note that this process has no permutation symmetry; it is &lt;strong&gt;inelastic&lt;/strong&gt;. The four energy-momentum vectors $p_{I}$ satisfy &lt;strong&gt;on-shell&lt;/strong&gt; constraints,
 $$p_{I}^{2} = - m_{I}^{2} \qquad I = 1, 2, 3, 4;$$
