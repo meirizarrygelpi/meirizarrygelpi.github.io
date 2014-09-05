@@ -44,7 +44,7 @@ That is, $s$ must be above threshold. This condition also guarantees that all in
 $$t \leq 0,$$
 and requiring $ \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} \geq 0$ leads to
 $$s u \leq (m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2}.$$
-As you will see below, these inequalities are saturated at special kinematical configurations.&lt;/p&gt;
+As you will see below, these inequalities are saturated at special kinematic configurations.&lt;/p&gt;
 &lt;h4&gt;Forward Scattering&lt;/h4&gt;
 &lt;p&gt;Forward scattering corresponds to setting $z_{s} = 1$. Using
 $$u_{f} = 2m_{1}^{2} + 2m_{2}^{2} - s - t_{f},$$
@@ -129,7 +129,7 @@ There is also a nontrivial &lt;strong&gt;3-Gram&lt;/strong&gt; invariant, but I 
 $$p_{1} = (E_{1}, \mathbf{p}_{1}) \qquad p_{2} = (E_{2}, -\mathbf{p}_{1}) \qquad p_{3} = (E_{3}, \mathbf{p}_{3}) \qquad p_{4} = (E_{4}, -\mathbf{p}_{3}).$$
 This way, part of the conservation constraint is explicitly satisfied. The remaining part is the conservation of energy
 $$E_{1} + E_{2} = E_{3} + E_{4}.$$
-While in the center-of-momentum frame, you can write most kinematical quantities in terms of the 2-Mandelstam invariants and the masses.&lt;/p&gt;
+While in the center-of-momentum frame, you can write most kinematic quantities in terms of the 2-Mandelstam invariants and the masses.&lt;/p&gt;
 &lt;h3&gt;Energy and Momentum&lt;/h3&gt;
 &lt;p&gt;Using the on-shell constraints, you can write the energies in terms of the spatial momenta:
 $$E_{1} = \sqrt{m_{1}^{2} + \mathbf{p}_{1}^{2}} \qquad E_{2} = \sqrt{m_{2}^{2} + \mathbf{p}_{1}^{2}} \qquad E_{3} = \sqrt{m_{3}^{2} + \mathbf{p}_{3}^{2}} \qquad E_{4} = \sqrt{m_{4}^{2} + \mathbf{p}_{3}^{2}}.$$
@@ -217,10 +217,10 @@ Note that you can interpret $t_{o}$ as the midpoint of the interval $t_{b} &amp;
 &lt;h2&gt;Cross Processes&lt;/h2&gt;
 &lt;p&gt;You can find two other $2 \rightarrow 2$ processes by &lt;strong&gt;crossing&lt;/strong&gt; an incoming quantum with an outgoing quantum. If you cross $B$ with $C$, you find the process
 $$A(p_{1}) + \bar{C}(\bar{p}_{2}) \longrightarrow \bar{B}(\bar{p}_{3}) + D(p_{4}).$$
-You can use the same kinematical variables above if you let $\bar{p}_{2} = -p_{3}$ and $\bar{p}_{3} = -p_{2}$.&lt;/p&gt;
+You can use the same kinematic variables above if you let $\bar{p}_{2} = -p_{3}$ and $\bar{p}_{3} = -p_{2}$.&lt;/p&gt;
 &lt;p&gt;Similarly, if you cross $B$ with $D$, you find the process
 $$A(p_{1}) + \bar{D}(\bar{p}_{2}) \longrightarrow C(p_{3}) + \bar{B}(\bar{p}_{4}).$$
-Again, you can use the same kinematical variables above if you let $\bar{p}_{2} = -p_{4}$ and $\bar{p}_{4} = -p_{2}$. Note that all of these processes are inelastic.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+Again, you can use the same kinematic variables above if you let $\bar{p}_{2} = -p_{4}$ and $\bar{p}_{4} = -p_{2}$. Note that all of these processes are inelastic.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
