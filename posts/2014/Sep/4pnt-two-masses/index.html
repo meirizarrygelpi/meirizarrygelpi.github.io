@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Four-point Elastic Kinematics (Nonidentical Masses) - M.E. Irizarry-Gelpí</title>
+    <title>Four-point Elastic Kinematics (Two Nonidentical Masses) - M.E. Irizarry-Gelpí</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -84,8 +84,8 @@ M.E. Irizarry-Gelpí            </a>
                 <h1>
                     <a href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-two-masses/"
                        rel="bookmark"
-                       title="Permalink to Four-point Elastic Kinematics (Nonidentical Masses)">
-                        Four-point Elastic Kinematics (Nonidentical Masses)
+                       title="Permalink to Four-point Elastic Kinematics (Two Nonidentical Masses)">
+                        Four-point Elastic Kinematics (Two Nonidentical Masses)
                     </a>
                 </h1>
             </header>
@@ -125,11 +125,12 @@ The <strong>3-Gram</strong> invariant also acquires a simpler form:
 $$G_{123}(s, t, u) = G_{124}(s, t, u) = G_{134}(s, t, u) = G_{234}(s, t, u) = \frac{1}{4} t [ (m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2} - s u].$$</p>
 <h2>Center-of-Momentum Frame</h2>
 <p>Just like before, in the center-of-momentum frame you can write
-$$p_{1} = (E_{1}, \mathbf{p}_{1}) \qquad p_{2} = (E_{2}, -\mathbf{p}_{1}) \qquad p_{3} = (E_{3}, \mathbf{p}_{3}) \qquad p_{4} = (E_{4}, -\mathbf{p}_{3}).$$</p>
+$$p_{1} = (E_{1}, \mathbf{p}_{1}) \qquad p_{2} = (E_{2}, -\mathbf{p}_{1}) \qquad p_{3} = (E_{3}, \mathbf{p}_{3}) \qquad p_{4} = (E_{4}, -\mathbf{p}_{3}).$$
+In this frame you can find expressions for many kinematic quantities in terms of the 2-Mandelstam invariants and the masses.</p>
 <h3>Energy and Momentum</h3>
-<p>Since
-$$\Lambda_{12}(s) = \Lambda_{34}(s) \qquad \Lambda_{IJ}(s) \equiv [ s - (m_{I} - m_{J})^{2} ] [ s - (m_{I} + m_{J})^{2} ],$$
-it follows that the magnitude of $\mathbf{p}_{1}$ and $\mathbf{p}_{3}$ are equal:
+<p>Due to the elasticity constraints, you now have
+$$\Lambda_{12}(s) = \Lambda_{34}(s) \qquad \Lambda_{IJ}(s) \equiv [ s - (m_{I} - m_{J})^{2} ] [ s - (m_{I} + m_{J})^{2} ].$$
+It follows that the magnitude of $\mathbf{p}_{1}$ and $\mathbf{p}_{3}$ are equal:
 $$\vert \mathbf{p}_{1} \vert = \vert \mathbf{p}_{3} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{2 \sqrt{s}}.$$
 For the <strong>energy</strong> of each quanta you now find
 $$E_{3} = E_{1} = \frac{s + (m_{1} - m_{2})(m_{1} + m_{2})}{2 \sqrt{s}} \qquad E_{4} = E_{2} = \frac{s - (m_{1} - m_{2})(m_{1} + m_{2})}{2 \sqrt{s}}.$$
@@ -148,13 +149,14 @@ and for the <strong>rapidity</strong> of each quanta
 $$\varphi_{3} = \varphi_{1} = \frac{1}{2} \log{\left[ \frac{(m_{1} - m_{2})(m_{1} + m_{2}) + s + \sqrt{\Lambda_{12}(s)}}{(m_{1} - m_{2})(m_{1} + m_{2}) + s - \sqrt{\Lambda_{12}(s)}} \right]} \qquad \varphi_{4} = \varphi_{2} = \frac{1}{2} \log{\left[ \frac{(m_{1} - m_{2})(m_{1} + m_{2}) - s - \sqrt{\Lambda_{12}(s)}}{(m_{1} - m_{2})(m_{1} + m_{2}) - s + \sqrt{\Lambda_{12}(s)}} \right]}.$$
 Another consequence of the elasticity constraints is a body-wise conservation of rapidity (and speed).</p>
 <h3>Physical Scattering Region</h3>
-<p>Because of the elasticity constraints, there is only one threshold and one pseudothreshold along the $s$-channel. Requiring $\vert \mathbf{p}_{1} \vert &gt; 0$ leads to
-$$s &gt; (m_{1} + m_{2})^{2}.$$
-That is, $s$ must be above threshold. This condition also guarantees that all individual energies are positive. Similarly, requiring $\vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} \geq 0$ leads to
+<p>Because of the elasticity constraints, there is only one threshold and one pseudothreshold along the $s$-channel. Requiring $\vert \mathbf{p}_{1} \vert \geq 0$ leads to
+$$s \geq (m_{1} + m_{2})^{2}.$$
+That is, $s$ must be at or above threshold. This condition also guarantees that all individual energies are positive (or zero). Note that $s$ being at or above threshold means that $G_{12} \leq 0$.</p>
+<p>Similarly, requiring $\vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} \geq 0$ leads to
 $$t \leq 0,$$
 and requiring $ \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} \geq 0$ leads to
 $$s u \leq (m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2}.$$
-As you will see below, these inequalities are saturated at special kinematic configurations.</p>
+Note that these two inequalities are equivalent to $G_{123} \leq 0$. You can check that these two inequalities are equivalent to the condition $-1 \leq z_{s} \leq 1$. As you will see below, these inequalities are saturated at special kinematic configurations.</p>
 <h4>Forward Scattering</h4>
 <p>Forward scattering corresponds to setting $z_{s} = 1$. Using
 $$u_{f} = 2m_{1}^{2} + 2m_{2}^{2} - s - t_{f},$$
@@ -179,7 +181,7 @@ $$t_{o} = -\frac{\Lambda_{12}(s)}{2s}.$$
 It follows that
 $$u_{o} = \frac{2(m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2} - \Lambda_{12}(s)}{2s}.$$</p>
 <h3>Semiforward Approximation</h3>
-<p>Like in any four-point process, there are three main kinematic variables: $s$, $t$, and $u$. Of course, due to the conservation constraint only two of these are independent. However, it pays to keep $u$ around some times. The quantity $s$ describes the center-of-momentum energy. The quantity $t$ describes the amount of momentum that is exchanged between the two bodies. Other kinematic variables include the two masses. With all of these dimensionful quantities, you can construct dimensionless ones by taking ratios. For example,
+<p>Like in any four-point process, there are three main kinematic variables: $s$, $t$, and $u$. Of course, due to the conservation constraint, only two of these are independent. However, it pays to keep $u$ around sometimes. The quantity $s$ describes the center-of-momentum energy. The quantity $t$ describes the amount of momentum that is exchanged between the two bodies. Other kinematic variables include the two masses. With all of these dimensionful quantities, you can construct <strong>dimensionless</strong> ones by taking ratios. For example,
 $$R_{1} \equiv \frac{t}{s} \qquad R_{2} \equiv \frac{s}{m_{1} m_{2}} \qquad R_{3} \equiv \frac{m_{1}}{m_{2}}.$$
 The <strong>semiforward approximation</strong> is defined as the regime where $R_{1} \rightarrow 0$ with $R_{2}$ and $R_{3}$ kept fixed. This is the regime where $t$ is much smaller than $s$ or the square of the masses, and the speed and rapidity of the external quanta is kept fixed. A corollary of the semiforward approximation is that the ratio $u / s$ is also kept fixed.</p>
 <h2>Cross Processes</h2>
