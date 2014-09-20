@@ -121,7 +121,7 @@ M.E. Irizarry-Gelpí            </a>
 
 
 <p>The second thing I did was change my <code>GOPATH</code> variable. Previously I used a folder in my <a href="https://www.dropbox.com/">Dropbox</a> folder as my main Go directory. Recently I started using <a href="https://www.copy.com/">Copy</a> since it provides more free space. Inside my <code>Copy</code> directory I made a subdirectory called <code>go</code>:</p>
-<div class="highlight"><pre>mkdir <span class="nv">$HOME</span>/Copy/go
+<div class="highlight"><pre><span class="nv">$ </span>mkdir <span class="nv">$HOME</span>/Copy/go
 </pre></div>
 
 
@@ -131,26 +131,26 @@ M.E. Irizarry-Gelpí            </a>
 
 
 <p>After this I went back to the <code>GOPATH</code> directory and made three subdirectories (following the suggestions from <a href="http://golang.org/doc/code.html">here</a>):</p>
-<div class="highlight"><pre><span class="nb">cd</span> <span class="nv">$GOPATH</span>
-mkdir src pkg bin
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> <span class="nv">$GOPATH</span>
+<span class="nv">$ </span>mkdir src pkg bin
 </pre></div>
 
 
 <p>Next I made a directory for my Rosalind work. Since I have a GitHub account, I used:</p>
-<div class="highlight"><pre><span class="nb">cd</span> <span class="nv">$GOPATH</span>/src
-mkdir github.com/meirizarrygelpi/rosalind
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> <span class="nv">$GOPATH</span>/src
+<span class="nv">$ </span>mkdir github.com/meirizarrygelpi/rosalind
 </pre></div>
 
 
 <p>Being ambitious, I plan to eventually solve all the problems in Rosalind. For now I will concentrate on the problems in the <a href="http://rosalind.info/problems/list-view/?location=bioinformatics-textbook-track">Textbook Track</a>:</p>
-<div class="highlight"><pre><span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/meirizarrygelpi/rosalind
-mkdir textbook-track
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/meirizarrygelpi/rosalind
+<span class="nv">$ </span>mkdir textbook-track
 </pre></div>
 
 
 <p>This past week I solved the first six problems (<a href="http://rosalind.info/problems/1a/">1A</a>, <a href="http://rosalind.info/problems/1b/">1B</a>, <a href="http://rosalind.info/problems/1c/">1C</a>, <a href="http://rosalind.info/problems/1d/">1D</a>, <a href="http://rosalind.info/problems/1e/">1E</a>, and <a href="http://rosalind.info/problems/1f/">1F</a>) and started working on <a href="http://rosalind.info/problems/1g/">1G</a>. For each problem you get a <code>.txt</code> file with input, so inside the <code>textbook-track</code> directory I made five subdirectories:</p>
-<div class="highlight"><pre><span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/meirizarrygelpi/rosalind/textbook-track
-mkdir data output problems solvers week01
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/meirizarrygelpi/rosalind/textbook-track
+<span class="nv">$ </span>mkdir data output problems solvers week01
 </pre></div>
 
 
@@ -171,6 +171,42 @@ mkdir data output problems solvers week01
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">k</span><span class="p">)</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="nx">w01</span><span class="p">.</span><span class="nx">MostFrequentExactKMers</span><span class="p">(</span><span class="nx">dna</span><span class="p">,</span> <span class="nx">k</span><span class="p">),</span> <span class="s">&quot; &quot;</span><span class="p">))</span>
 <span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Solve_1B</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">dna</span> <span class="kt">string</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">dna</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">w01</span><span class="p">.</span><span class="nx">ReverseComplement</span><span class="p">(</span><span class="nx">dna</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Solve_1C</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">p</span><span class="p">,</span> <span class="nx">g</span> <span class="kt">string</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">g</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="nx">w01</span><span class="p">.</span><span class="nx">ExactPatternIndex</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">g</span><span class="p">),</span> <span class="s">&quot; &quot;</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Solve_1D</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">g</span> <span class="kt">string</span>
+    <span class="kd">var</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">L</span><span class="p">,</span> <span class="nx">t</span> <span class="kt">int</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">g</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">k</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">L</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">t</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="nx">w01</span><span class="p">.</span><span class="nx">LtClump</span><span class="p">(</span><span class="nx">g</span><span class="p">,</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">L</span><span class="p">,</span> <span class="nx">t</span><span class="p">),</span> <span class="s">&quot; &quot;</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Solve_1E</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">g</span> <span class="kt">string</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">g</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="nx">w01</span><span class="p">.</span><span class="nx">MinGCSkew</span><span class="p">(</span><span class="nx">g</span><span class="p">),</span> <span class="s">&quot; &quot;</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Solve_1F</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">p</span><span class="p">,</span> <span class="nx">t</span> <span class="kt">string</span>
+    <span class="kd">var</span> <span class="nx">d</span> <span class="kt">int</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">t</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">d</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="nx">w01</span><span class="p">.</span><span class="nx">ApproximatePatternIndex</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">d</span><span class="p">),</span> <span class="s">&quot; &quot;</span><span class="p">))</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -188,7 +224,8 @@ mkdir data output problems solvers week01
 
 
 <p>Back in the <code>textbook-track</code> directory, I create a <code>.sh</code> file with the following content:</p>
-<div class="highlight"><pre>go install ./problems/rosalind1A
+<div class="highlight"><pre><span class="c">#!/bin/bash</span>
+go install ./problems/rosalind1A
 cat ./data/1A.txt | rosalind1A &gt; ./output/1A.txt
 </pre></div>
 
