@@ -40,7 +40,7 @@ mkdir textbook-track
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This past week I solved the first five problems (&lt;a href="http://rosalind.info/problems/1a/"&gt;1A&lt;/a&gt;, &lt;a href="http://rosalind.info/problems/1b/"&gt;1B&lt;/a&gt;, &lt;a href="http://rosalind.info/problems/1c/"&gt;1C&lt;/a&gt;, &lt;a href="http://rosalind.info/problems/1d/"&gt;1D&lt;/a&gt;, and &lt;a href="http://rosalind.info/problems/1e/"&gt;1E&lt;/a&gt;) and started working on &lt;a href="http://rosalind.info/problems/1f/"&gt;1F&lt;/a&gt;. For each problem you get a &lt;code&gt;.txt&lt;/code&gt; file with input, so inside the &lt;code&gt;textbook-track&lt;/code&gt; directory I made five subdirectories:&lt;/p&gt;
+&lt;p&gt;This past week I solved the first six problems (&lt;a href="http://rosalind.info/problems/1a/"&gt;1A&lt;/a&gt;, &lt;a href="http://rosalind.info/problems/1b/"&gt;1B&lt;/a&gt;, &lt;a href="http://rosalind.info/problems/1c/"&gt;1C&lt;/a&gt;, &lt;a href="http://rosalind.info/problems/1d/"&gt;1D&lt;/a&gt;, &lt;a href="http://rosalind.info/problems/1e/"&gt;1E&lt;/a&gt;, and &lt;a href="http://rosalind.info/problems/1f/"&gt;1F&lt;/a&gt;) and started working on &lt;a href="http://rosalind.info/problems/1g/"&gt;1G&lt;/a&gt;. For each problem you get a &lt;code&gt;.txt&lt;/code&gt; file with input, so inside the &lt;code&gt;textbook-track&lt;/code&gt; directory I made five subdirectories:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$GOPATH&lt;/span&gt;/src/github.com/meirizarrygelpi/rosalind/textbook-track
 mkdir data output problems solvers week01
 &lt;/pre&gt;&lt;/div&gt;
