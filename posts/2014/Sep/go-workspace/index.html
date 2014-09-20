@@ -120,7 +120,7 @@ M.E. Irizarry-Gelpí            </a>
 </pre></div>
 
 
-<p>The second thing I did was change my <code>GOPATH</code> variable. Previously I used a folder in my <a href="https://www.dropbox.com/">Dropbox</a> folder as my main Go directory. Recently I started using <a href="https://www.copy.com/">Copy</a> since it provides more free space. Inside the <code>Copy</code> directory I made a subdirectory called <code>go</code>:</p>
+<p>The second thing I did was change my <code>GOPATH</code> variable. Previously I used a folder in my <a href="https://www.dropbox.com/">Dropbox</a> folder as my main Go directory. Recently I started using <a href="https://www.copy.com/">Copy</a> since it provides more free space. Inside my <code>Copy</code> directory I made a subdirectory called <code>go</code>:</p>
 <div class="highlight"><pre>mkdir <span class="nv">$HOME</span>/Copy/go
 </pre></div>
 
@@ -130,7 +130,7 @@ M.E. Irizarry-Gelpí            </a>
 </pre></div>
 
 
-<p>After this I went back to the <code>$GOPATH</code> directory and made three subdirectories (following the suggestions from <a href="http://golang.org/doc/code.html">here</a>):</p>
+<p>After this I went back to the <code>GOPATH</code> directory and made three subdirectories (following the suggestions from <a href="http://golang.org/doc/code.html">here</a>):</p>
 <div class="highlight"><pre><span class="nb">cd</span> <span class="nv">$GOPATH</span>
 mkdir src pkg bin
 </pre></div>
@@ -148,7 +148,7 @@ mkdir textbook-track
 </pre></div>
 
 
-<p>This past week I solved the first five problems (<a href="http://rosalind.info/problems/1a/">1A</a>, <a href="http://rosalind.info/problems/1b/">1B</a>, <a href="http://rosalind.info/problems/1c/">1C</a>, <a href="http://rosalind.info/problems/1d/">1D</a>, and <a href="http://rosalind.info/problems/1e/">1E</a>) and started working on <a href="http://rosalind.info/problems/1f/">1F</a>. For each problem you get a <code>txt</code> file with input, so inside the <code>textbook-track</code> directory I made five subdirectories:</p>
+<p>This past week I solved the first five problems (<a href="http://rosalind.info/problems/1a/">1A</a>, <a href="http://rosalind.info/problems/1b/">1B</a>, <a href="http://rosalind.info/problems/1c/">1C</a>, <a href="http://rosalind.info/problems/1d/">1D</a>, and <a href="http://rosalind.info/problems/1e/">1E</a>) and started working on <a href="http://rosalind.info/problems/1f/">1F</a>. For each problem you get a <code>.txt</code> file with input, so inside the <code>textbook-track</code> directory I made five subdirectories:</p>
 <div class="highlight"><pre><span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/meirizarrygelpi/rosalind/textbook-track
 mkdir data output problems solvers week01
 </pre></div>
@@ -174,7 +174,7 @@ mkdir data output problems solvers week01
 </pre></div>
 
 
-<p>My plan is to keep the input files in the <code>data</code> directory, and the output files in the <code>output</code> directory. With Go you can get an executable file by installing your program with the <code>go install</code> tool. Inside the <code>problems</code> directory I have subdirectories of the form <code>rosalind1*</code> where <code>*</code> is a letter from <code>A</code> to <code>H</code>. As an explicit example, let me consider <code>rosalind1A</code>. Inside this directory I have a <code>.go</code> file with the following content:</p>
+<p>My plan is to keep the input <code>.txt</code> files in the <code>data</code> directory, and the output <code>.txt</code> files in the <code>output</code> directory. With Go you can get an executable file by installing your program with the <code>go install</code> tool. Inside the <code>problems</code> directory I have subdirectories of the form <code>rosalind1*</code> where <code>*</code> is a letter from <code>A</code> to <code>H</code>. As an explicit example, let me consider <code>rosalind1A</code>. Inside this directory I have a <code>.go</code> file with the following content:</p>
 <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="p">(</span>
@@ -193,7 +193,7 @@ cat ./data/1A.txt | rosalind1A &gt; ./output/1A.txt
 </pre></div>
 
 
-<p>This <code>.sh</code> file allows me to automate the process of answering a Rosalind problem. The first line uses the <code>go install</code> tool to make an executable file <code>rosalind1A</code>. This executable file lives in the <code>$GOPATH/bin</code> directory. In the second line, I take the contents of <code>data/1A.txt</code>, pipe it to the executable<code>rosalind1A</code> and send the outcome to a <code>output/1A.txt</code>. A similar process is repeated for the other Rosalind problems.</p><script type= "text/javascript">
+<p>This <code>.sh</code> file allows me to automate the process of answering a Rosalind problem. The first line uses the <code>go install</code> tool to make an executable file <code>rosalind1A</code>. This executable file lives in the <code>$GOPATH/bin</code> directory. In the second line, I take the contents of <code>data/1A.txt</code>, pipe it to the executable<code>rosalind1A</code> and send the outcome to a <code>output/1A.txt</code>. A similar process is repeated for the other Rosalind problems. Note that using pipes and filters in the <code>.sh</code> file avoids the need to read and write files with Go.</p><script type= "text/javascript">
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
