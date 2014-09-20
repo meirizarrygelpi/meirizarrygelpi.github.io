@@ -122,7 +122,37 @@ cat ./data/1A.txt | rosalind1A &amp;gt; ./output/1A.txt
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This &lt;code&gt;.sh&lt;/code&gt; file allows me to automate the process of answering a Rosalind problem. The first line uses the &lt;code&gt;go install&lt;/code&gt; tool to make an executable file &lt;code&gt;rosalind1A&lt;/code&gt;. This executable file lives in the &lt;code&gt;$GOPATH/bin&lt;/code&gt; directory. In the second line, I take the contents of &lt;code&gt;data/1A.txt&lt;/code&gt;, pipe it to the executable&lt;code&gt;rosalind1A&lt;/code&gt; and send the outcome to a &lt;code&gt;output/1A.txt&lt;/code&gt;. A similar process is repeated for the other Rosalind problems. Note that using pipes and filters in the &lt;code&gt;.sh&lt;/code&gt; file avoids the need to read and write files with Go.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+&lt;p&gt;This &lt;code&gt;.sh&lt;/code&gt; file allows me to automate the process of answering a Rosalind problem. The first line uses the &lt;code&gt;go install&lt;/code&gt; tool to make an executable file &lt;code&gt;rosalind1A&lt;/code&gt;. This executable file lives in the &lt;code&gt;$GOPATH/bin&lt;/code&gt; directory. In the second line, I take the contents of &lt;code&gt;data/1A.txt&lt;/code&gt;, pipe it to the executable&lt;code&gt;rosalind1A&lt;/code&gt; and send the outcome to a &lt;code&gt;output/1A.txt&lt;/code&gt;. A similar process is repeated for the other Rosalind problems. Note that using pipes and output redirection in the &lt;code&gt;.sh&lt;/code&gt; file avoids the need to read and write files with Go.&lt;/p&gt;
+&lt;p&gt;Just in case the discussion is not clear, here is the output of running &lt;code&gt;tree&lt;/code&gt; inside the &lt;code&gt;textbook-track&lt;/code&gt; directory:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;tree
+.
+├── data
+│   ├── 1A1.txt
+│   ...
+│   └── 1G2.txt
+├── output
+│   ├── 1A1.txt
+│   ...
+│   └── 1F2.txt
+├── problems
+│   ├── rosalind1A
+│   │   └── 1A.go
+│   ...
+│   └── rosalind1H
+│       └── 1H.go
+├── solvers
+│   └── solvers01.go
+├── week01
+│   └── week01.go
+├── week02
+│   └── week02.go
+└── work.sh
+
+14 directories, 38 files
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It is a bit messy, but it works well so far.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';

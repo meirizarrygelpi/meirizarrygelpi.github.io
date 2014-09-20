@@ -230,7 +230,37 @@ cat ./data/1A.txt | rosalind1A &gt; ./output/1A.txt
 </pre></div>
 
 
-<p>This <code>.sh</code> file allows me to automate the process of answering a Rosalind problem. The first line uses the <code>go install</code> tool to make an executable file <code>rosalind1A</code>. This executable file lives in the <code>$GOPATH/bin</code> directory. In the second line, I take the contents of <code>data/1A.txt</code>, pipe it to the executable<code>rosalind1A</code> and send the outcome to a <code>output/1A.txt</code>. A similar process is repeated for the other Rosalind problems. Note that using pipes and filters in the <code>.sh</code> file avoids the need to read and write files with Go.</p><script type= "text/javascript">
+<p>This <code>.sh</code> file allows me to automate the process of answering a Rosalind problem. The first line uses the <code>go install</code> tool to make an executable file <code>rosalind1A</code>. This executable file lives in the <code>$GOPATH/bin</code> directory. In the second line, I take the contents of <code>data/1A.txt</code>, pipe it to the executable<code>rosalind1A</code> and send the outcome to a <code>output/1A.txt</code>. A similar process is repeated for the other Rosalind problems. Note that using pipes and output redirection in the <code>.sh</code> file avoids the need to read and write files with Go.</p>
+<p>Just in case the discussion is not clear, here is the output of running <code>tree</code> inside the <code>textbook-track</code> directory:</p>
+<div class="highlight"><pre><span class="nv">$ </span>tree
+.
+├── data
+│   ├── 1A1.txt
+│   ...
+│   └── 1G2.txt
+├── output
+│   ├── 1A1.txt
+│   ...
+│   └── 1F2.txt
+├── problems
+│   ├── rosalind1A
+│   │   └── 1A.go
+│   ...
+│   └── rosalind1H
+│       └── 1H.go
+├── solvers
+│   └── solvers01.go
+├── week01
+│   └── week01.go
+├── week02
+│   └── week02.go
+└── work.sh
+
+14 directories, 38 files
+</pre></div>
+
+
+<p>It is a bit messy, but it works well so far.</p><script type= "text/javascript">
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
