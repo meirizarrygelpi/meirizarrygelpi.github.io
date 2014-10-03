@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/arxiv.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-09-27T00:00:00-04:00</updated><entry><title>arXiv picks for week 39</title><link href="http://meirizarrygelpi.github.io/posts/2014/Sep/2014-week-39/" rel="alternate"></link><updated>2014-09-27T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-09-27:posts/2014/Sep/2014-week-39/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/arxiv.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-10-04T00:00:00-04:00</updated><entry><title>arXiv picks for week 40</title><link href="http://meirizarrygelpi.github.io/posts/2014/Oct/2014-week-40/" rel="alternate"></link><updated>2014-10-04T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-10-04:posts/2014/Oct/2014-week-40/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1409.7405"&gt;Black Hole Formation and Classicalization in Ultra-Planckian $2 \longrightarrow N$ Scattering&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1409.8087"&gt;Scattering amplitudes in gauge theories with and without supersymmetry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1409.8256"&gt;Einstein-Yang-Mills Scattering Amplitudes From Scattering Equations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1410.0271"&gt;Quark-Quark Forces in Quantum Chromodynamics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1410.0354"&gt;On the Singularity Structure of Maximally Supersymmetric Scattering Amplitudes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1410.0621"&gt;Grassmannians for scattering amplitudes in 4d $\mathcal{N}=4$ SYM and 3d ABJM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1410.0668"&gt;Towards one-loop SYM amplitudes from the pure spinor BRST cohomology&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 39</title><link href="http://meirizarrygelpi.github.io/posts/2014/Sep/2014-week-39/" rel="alternate"></link><updated>2014-09-27T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-09-27:posts/2014/Sep/2014-week-39/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1409.5570"&gt;Algebraic geometry informs perturbative quantum field theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1409.5656"&gt;A Worldsheet Theory for Supergravity&lt;/a&gt;&lt;/li&gt;
