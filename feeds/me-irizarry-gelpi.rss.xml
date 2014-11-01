@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 25 Oct 2014 00:00:00 -0400</lastBuildDate><item><title>arXiv picks for week 43</title><link>http://meirizarrygelpi.github.io/posts/2014/Oct/2014-week-43/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 01 Nov 2014 00:00:00 -0400</lastBuildDate><item><title>arXiv picks for week 44</title><link>http://meirizarrygelpi.github.io/posts/2014/Nov/2014-week-44/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1410.6626"&gt;The Kerr-Newman metric: A Review&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1410.6809"&gt;Relative Entropy and Proximity of Quantum Field Theories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1410.7324"&gt;Computations and generation of elements on the Hopf algebra of Feynman graphs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1410.8184"&gt;Permutation Symmetry of the Scattering Equations&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 01 Nov 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-11-01:posts/2014/Nov/2014-week-44/</guid><category>research</category></item><item><title>arXiv picks for week 43</title><link>http://meirizarrygelpi.github.io/posts/2014/Oct/2014-week-43/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1410.4717"&gt;Lessons from crossing symmetry at large $N$&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1410.4746"&gt;Three-point correlators from string amplitudes: Mixing and Regge spins&lt;/a&gt;&lt;/li&gt;
