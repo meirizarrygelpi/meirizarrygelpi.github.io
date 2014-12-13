@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-12-06T00:00:00-05:00</updated><entry><title>arXiv picks for week 49</title><link href="http://meirizarrygelpi.github.io/posts/2014/Dec/2014-week-49/" rel="alternate"></link><updated>2014-12-06T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-12-06:posts/2014/Dec/2014-week-49/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-12-13T00:00:00-05:00</updated><entry><title>arXiv picks for week 50</title><link href="http://meirizarrygelpi.github.io/posts/2014/Dec/2014-week-50/" rel="alternate"></link><updated>2014-12-13T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-12-13:posts/2014/Dec/2014-week-50/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.2040"&gt;How fundamental are fundamental constants?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.2296"&gt;Lectures on differential equations for Feynman integrals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.2441"&gt;The Ultraviolet Critical Dimension of Half-Maximal Supergravity at Three Loops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.2763"&gt;Asymptotic Symmetries of Massless QED in Even Dimensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.3108"&gt;Soft Theorems from Effective Field Theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.3253"&gt;Discontinuities of multi-Regge amplitudes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.3479"&gt;Scattering Equations and Matrices: From Einstein To Yang-Mills, DBI and NLSM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.3699"&gt;The Double Copy Structure of Soft Gravitons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.3763"&gt;A Symbol of Uniqueness: The Cluster Bootstrap for the 3-Loop MHV Heptagon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.3787"&gt;Infrared behaviour of the one-loop scattering equations and supergravity integrands&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for week 49</title><link href="http://meirizarrygelpi.github.io/posts/2014/Dec/2014-week-49/" rel="alternate"></link><updated>2014-12-06T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-12-06:posts/2014/Dec/2014-week-49/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1411.7392"&gt;A quasi-finite basis for multi-loop Feynman integrals&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1411.7538"&gt;Mathematical aspects of scattering amplitudes&lt;/a&gt;&lt;/li&gt;
@@ -164,15 +176,15 @@
 
 
 &lt;p&gt;Now consider the file &lt;code&gt;text.txt&lt;/code&gt; with contents&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;line1&lt;/span&gt;
-&lt;span class="n"&gt;line2&lt;/span&gt;
-&lt;span class="n"&gt;line3&lt;/span&gt;
-&lt;span class="n"&gt;line4&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;line1
+line2
+line3
+line4
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;At the command line, use&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;go&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;go&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;cat ./text.txt &lt;span class="p"&gt;|&lt;/span&gt; go run read.go
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -202,12 +214,12 @@
 
 
 &lt;p&gt;and a file &lt;code&gt;nums.txt&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;1 2 3 4 5 6 7 8 9 10 11
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;At the command line, use&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nums&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;go&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;go&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;cat ./nums.txt &lt;span class="p"&gt;|&lt;/span&gt; go run array.go
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -461,7 +473,7 @@ In the second form, this looks like the direct sum of an $\mathcal{N} = 2$ massi
 &lt;p&gt;Back in the &lt;code&gt;textbook-track&lt;/code&gt; directory, I create a &lt;code&gt;.sh&lt;/code&gt; file with the following content:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
 go install ./problems/rosalind1A
-cat ./data/1A.txt | rosalind1A &amp;gt; ./output/1A.txt
+cat ./data/1A.txt &lt;span class="p"&gt;|&lt;/span&gt; rosalind1A &amp;gt; ./output/1A.txt
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -491,7 +503,7 @@ cat ./data/1A.txt | rosalind1A &amp;gt; ./output/1A.txt
 │   └── week02.go
 └── work.sh
 
-14 directories, 38 files
+&lt;span class="m"&gt;14&lt;/span&gt; directories, &lt;span class="m"&gt;38&lt;/span&gt; files
 &lt;/pre&gt;&lt;/div&gt;
 
 

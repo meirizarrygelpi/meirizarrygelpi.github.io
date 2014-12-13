@@ -133,15 +133,15 @@ M.E. Irizarry-Gelpí            </a>
 
 
 <p>Now consider the file <code>text.txt</code> with contents</p>
-<div class="highlight"><pre><span class="n">line1</span>
-<span class="n">line2</span>
-<span class="n">line3</span>
-<span class="n">line4</span>
+<div class="highlight"><pre>line1
+line2
+line3
+line4
 </pre></div>
 
 
 <p>At the command line, use</p>
-<div class="highlight"><pre><span class="n">cat</span> <span class="p">.</span><span class="o">/</span><span class="n">text</span><span class="p">.</span><span class="n">txt</span> <span class="o">|</span> <span class="n">go</span> <span class="n">run</span> <span class="n">read</span><span class="p">.</span><span class="n">go</span>
+<div class="highlight"><pre>cat ./text.txt <span class="p">|</span> go run read.go
 </pre></div>
 
 
@@ -171,12 +171,12 @@ M.E. Irizarry-Gelpí            </a>
 
 
 <p>and a file <code>nums.txt</code>:</p>
-<div class="highlight"><pre><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span>
+<div class="highlight"><pre>1 2 3 4 5 6 7 8 9 10 11
 </pre></div>
 
 
 <p>At the command line, use</p>
-<div class="highlight"><pre><span class="n">cat</span> <span class="p">.</span><span class="o">/</span><span class="n">nums</span><span class="p">.</span><span class="n">txt</span> <span class="o">|</span> <span class="n">go</span> <span class="n">run</span> <span class="n">array</span><span class="p">.</span><span class="n">go</span>
+<div class="highlight"><pre>cat ./nums.txt <span class="p">|</span> go run array.go
 </pre></div>
 
 
