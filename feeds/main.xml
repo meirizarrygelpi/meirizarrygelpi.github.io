@@ -1,5 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-12-20T00:00:00-05:00</updated><entry><title>arXiv picks for week 51</title><link href="http://meirizarrygelpi.github.io/posts/2014/Dec/2014-week-51/" rel="alternate"></link><updated>2014-12-20T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-12-20:posts/2014/Dec/2014-week-51/</id><summary type="html">&lt;p&gt;A busy week at the arXiv. In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2014-12-27T00:00:00-05:00</updated><entry><title>arXiv picks for week 52</title><link href="http://meirizarrygelpi.github.io/posts/2014/Dec/2014-week-52/" rel="alternate"></link><updated>2014-12-27T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-12-27:posts/2014/Dec/2014-week-52/</id><summary type="html">&lt;p&gt;A busy week at the arXiv. In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.6526"&gt;6D SCFTs and Gravity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.6536"&gt;Pomeron in the $N=4$ SYM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.6903"&gt;Conformal symmetry for relativistic point particles: an addendum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7117"&gt;An Update on Perturbative $N=8$ Supergravity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7541"&gt;The $\mathcal{N}=2$ superconformal bootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7145"&gt;Exact results on $N=2$ supersymmetric gauge theories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7118"&gt;Families of $N=2$ field theories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7120"&gt;Hitchin systems in $N=2$ field theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7121"&gt;A review on instanton counting and W-algebras&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7124"&gt;$\beta$-deformed matrix models and the 2d/4d correspondence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7134"&gt;Localization for $N=2$ Supersymmetric Gauge Theories in Four Dimensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7126"&gt;Line operators in supersymmetric gauge theories and the 2d-4d relation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7127"&gt;Surface Operators&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7131"&gt;The superconformal index of theories of class $\mathcal{S}$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7128"&gt;A review on SUSY gauge theories on $S^{3}$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7129"&gt;3d Superconformal Theories from Three-Manifolds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7140"&gt;Supersymmetric gauge theories, quantisation of moduli spaces of flat connections, and Liouville theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7132"&gt;Gauge/Vortex duality and AGT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.7133"&gt;B-Model Approaches to Instanton Counting&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for week 51</title><link href="http://meirizarrygelpi.github.io/posts/2014/Dec/2014-week-51/" rel="alternate"></link><updated>2014-12-20T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-12-20:posts/2014/Dec/2014-week-51/</id><summary type="html">&lt;p&gt;A busy week at the arXiv. In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.4084"&gt;Semiclassical partition function for strings dual to Wilson loops with small cusps in ABJM&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1412.4086"&gt;Superforms in Five-Dimensional, $N=1$ Superspace&lt;/a&gt;&lt;/li&gt;
