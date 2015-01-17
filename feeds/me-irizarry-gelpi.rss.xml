@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 10 Jan 2015 00:00:00 -0500</lastBuildDate><item><title>arXiv picks for 2015, week 2</title><link>http://meirizarrygelpi.github.io/posts/2015/Jan/2015-week-2/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 17 Jan 2015 00:00:00 -0500</lastBuildDate><item><title>arXiv picks for 2015, week 3</title><link>http://meirizarrygelpi.github.io/posts/2015/Jan/2015-week-3/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.01975"&gt;From Veneziano to Riemann: A String Theory Statement of the Riemann Hypothesis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.02260"&gt;Worldline approach to semi-classical conformal blocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.02499"&gt;The Super Period Matrix With Ramond Punctures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.03316"&gt;Exponentiation for products of Wilson lines within the generating function approach&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.03500"&gt;CHY representations for gauge theory and gravity amplitudes with up to three massive particles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.03754"&gt;Resummation of non-global logarithms and the BFKL equation&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 17 Jan 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-01-17:posts/2015/Jan/2015-week-3/</guid><category>research</category></item><item><title>arXiv picks for 2015, week 2</title><link>http://meirizarrygelpi.github.io/posts/2015/Jan/2015-week-2/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.00101"&gt;Adinkras, 0-branes, Holoraumy and the SUSY QFT/QM Correspondence&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.00357"&gt;Tinkertoys for the Twisted $E_{6}$ Theory&lt;/a&gt;&lt;/li&gt;
