@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 17 Jan 2015 00:00:00 -0500</lastBuildDate><item><title>arXiv picks for 2015, week 3</title><link>http://meirizarrygelpi.github.io/posts/2015/Jan/2015-week-3/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 24 Jan 2015 00:00:00 -0500</lastBuildDate><item><title>arXiv picks for 2015, week 4</title><link>http://meirizarrygelpi.github.io/posts/2015/Jan/2015-week-4/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.04202"&gt;Wilson Loops and Minimal Surfaces Beyond the Wavy Approximation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.04215"&gt;Kenneth Wilson and lattice QCD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.05378"&gt;Generalized Yang-Mills Theory and Gravity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.05562"&gt;A solution to the non-linear equations of $D=10$ super Yang-Mills theory&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 24 Jan 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-01-24:posts/2015/Jan/2015-week-4/</guid><category>research</category></item><item><title>arXiv picks for 2015, week 3</title><link>http://meirizarrygelpi.github.io/posts/2015/Jan/2015-week-3/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.01975"&gt;From Veneziano to Riemann: A String Theory Statement of the Riemann Hypothesis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.02260"&gt;Worldline approach to semi-classical conformal blocks&lt;/a&gt;&lt;/li&gt;
@@ -1256,9 +1292,9 @@ where $\sigma_{IJ} = +1$ if either $p_{I}$ and $p_{J}$ are both incoming or both
 &lt;h2&gt;Two Quanta&lt;/h2&gt;
 &lt;p&gt;Given two linearly-independent energy-momentum vectors, the &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariant is given by
 $$s_{IJ} = - (p_{I} + p_{J})^{2}.$$
-With $N$ energy-momentum vectors I can make a total of
+With $N$ energy-momentum vectors you can make a total of
 $${N \choose 2} = \frac{N (N - 1)}{2}$$
-possible 2-Mandelstam invariants. However, the conservation constraint allows me to write $N$ of these in terms of the remaining others, so in total we have
+possible 2-Mandelstam invariants. However, the conservation constraint allows you to write $N$ of these in terms of the remaining others, so in total you have
 $$\mathfrak{M}_{2}(N) = \frac{N (N - 1)}{2} - N = \frac{N (N - 3)}{2}, \qquad N \geq 5$$
 independent 2-Mandelstam invariants. Some special cases that I will explore later are $\mathfrak{M}_{2}(6) = 9$ and $\mathfrak{M}_{2}(8) = 20$.&lt;/p&gt;
 &lt;h2&gt;Three Quanta&lt;/h2&gt;
@@ -1267,7 +1303,7 @@ $$s_{IJK} = - (p_{I} + p_{J} + p_{K})^{2}.$$
 A 3-Mandelstam invariant can always be written in terms of 2-Mandelstam invariants and masses:
 $$s_{IJK} = s_{IJ} + s_{IK} + s_{JK} - m_{I}^{2} - m_{J}^{2} - m_{K}^{2}$$
 where I have assumed that $p_{I}^{2} = -m_{I}^{2}$ with $m_{I}$ being real.&lt;/p&gt;
-&lt;p&gt;With $N$ energy-momentum vectors, I can make a total of
+&lt;p&gt;With $N$ energy-momentum vectors, you can make a total of
 $$\mathfrak{M}_{3}(N) = {N \choose 3} = \frac{N (N - 1) (N - 2)}{6}, \qquad N \geq 7$$
 possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{3}(6) = 10$ because of the conservation constraint.&lt;/p&gt;
 &lt;h2&gt;Four Quanta&lt;/h2&gt;
@@ -1275,7 +1311,7 @@ possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{3}(6) = 10$ because o
 $$s_{IJKL} = - (p_{I} + p_{J} + p_{K} + p_{L})^{2}.$$
 Just like a 3-Mandelstam invariant, a 4-Mandelstam invariant can always be written in terms of 2-Mandelstam invariants and masses:
 $$s_{IJKL} = s_{IJ} + s_{IK} + s_{IL} + s_{JK} + s_{JL} + s_{KL} - 2m_{I}^{2} - 2m_{J}^{2} - 2m_{K}^{2} - 2m_{L}^{2}.$$
-With $N$ energy-momentum vectors, I can make a total of
+With $N$ energy-momentum vectors, you can make a total of
 $$\mathfrak{M}_{4}(N) = {N \choose 4} = \frac{N (N - 1) (N - 2) (N - 3)}{24}, \qquad N \geq 9$$
 possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because of the conservation constraint.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
