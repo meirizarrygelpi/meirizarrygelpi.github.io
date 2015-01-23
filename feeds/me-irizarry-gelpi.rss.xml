@@ -1227,7 +1227,7 @@ In general, this cannot be simplified further in terms of masses and Mandelstam 
 &lt;/script&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Thu, 28 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-28:posts/2014/Aug/gram-invariants/</guid><category>kinematics</category></item><item><title>Threshold and Pseudothreshold Values</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/threshold-and-pseudothresholds/</link><description>&lt;p&gt;In this post I will collect some results related to threshold and pseudothreshold values. I will assume that all masses are real and positive, and that two masses with different labels are always distinct.&lt;/p&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;When working with massive quanta, one finds that particular linear combinations of the masses appear quite often. Given $n + 1$ distinct masses, I can construct a &lt;strong&gt;threshold value&lt;/strong&gt; and $2^{n} - 1$ &lt;strong&gt;pseudothreshold values&lt;/strong&gt;. The threshold value is always given by the square of the sum of the masses, while the pseudothrehold values are found by taking the square of a combination of sums and differences of masses. Just like for Mandelstam invariants, we will refer to these values as the $(n + 1)$-threshold and $(n + 1)$-pseudothreshold values. As I will show below, taking the average over the $(n + 1)$-threshold and $(n + 1)$-pseudothreshold values gives the sum of squares of the $n + 1$ masses.&lt;/p&gt;
+&lt;p&gt;When working with massive quanta, you find that particular linear combinations of the masses appear quite often. Given $n + 1$ distinct masses, you can construct a &lt;strong&gt;threshold value&lt;/strong&gt; and $2^{n} - 1$ &lt;strong&gt;pseudothreshold values&lt;/strong&gt;. The threshold value is always given by the square of the sum of the masses, while the pseudothrehold values are found by taking the square of a combination of sums and differences of masses. Just like for Mandelstam invariants, I will refer to these values as the $(n + 1)$-threshold and $(n + 1)$-pseudothreshold values. As I will show below, taking the average over the $(n + 1)$-threshold and $(n + 1)$-pseudothreshold values gives the sum of squares of the $n + 1$ masses.&lt;/p&gt;
 &lt;h2&gt;Two Masses&lt;/h2&gt;
 &lt;p&gt;Given two distinct masses, the &lt;strong&gt;2-threshold value&lt;/strong&gt; is
 $$(m_{I} + m_{J})^{2}$$
@@ -1313,7 +1313,7 @@ Just like a 3-Mandelstam invariant, a 4-Mandelstam invariant can always be writt
 $$s_{IJKL} = s_{IJ} + s_{IK} + s_{IL} + s_{JK} + s_{JL} + s_{KL} - 2m_{I}^{2} - 2m_{J}^{2} - 2m_{K}^{2} - 2m_{L}^{2}.$$
 With $N$ energy-momentum vectors, you can make a total of
 $$\mathfrak{M}_{4}(N) = {N \choose 4} = \frac{N (N - 1) (N - 2) (N - 3)}{24}, \qquad N \geq 9$$
-possible 3-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because of the conservation constraint.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+possible 4-Mandelstam invariants. Note that $\mathfrak{M}_{4}(8) = 35$ because of the conservation constraint.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
