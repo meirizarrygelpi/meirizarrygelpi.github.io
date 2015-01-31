@@ -1184,7 +1184,7 @@ A feature shared by these three results is the appearance of dual conformal rati
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Fri, 29 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-29:posts/2014/Aug/dual-conformal-invariants/</guid><category>kinematics</category></item><item><title>Gram Momentum Invariants</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/gram-invariants/</link><description>&lt;p&gt;In this post I will mention some facts about what I call Gram momentum invariants. I will assume that every energy-momentum vector $p_{I}$ satisfies an on-shell constraint of the form
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Fri, 29 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-29:posts/2014/Aug/dual-conformal-invariants/</guid><category>kinematics</category><category>conformal-symmetry</category></item><item><title>Gram Momentum Invariants</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/gram-invariants/</link><description>&lt;p&gt;In this post I will mention some facts about what I call Gram momentum invariants. I will assume that every energy-momentum vector $p_{I}$ satisfies an on-shell constraint of the form
 $$p_{I}^{2} = - m_{I}^{2}$$
 with the mass $m_{I}$ being real and positive.&lt;/p&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
