@@ -111,11 +111,11 @@ $$p_{I}^{2} = - m_{I}^{2}$$
 with the mass $m_{I}$ being real and positive.</p>
 <h2>Introduction</h2>
 <p>In a <a href="http://meirizarrygelpi.github.io/posts/2014/Aug/mandelstam-invariants/">previous post</a> I introduced the Mandelstam momentum invariants. You can construct $n$-Mandelstam invariants with $n$ distinct energy-momentum vectors. With a similar collection of $n$ distinct energy-momentum vectors, you can also construct an $n$-Gram invariant:
-$$G_{I_{1} I_{2} \cdots I_{n}} = \det{ \begin{pmatrix} p_{I_{1}} \cdot p_{I_{1}} &amp; \cdots &amp; p_{I_{1}} \cdot p_{I_{n}} \\ \vdots &amp; \ddots &amp; \vdots \\ p_{I_{1}} \cdot p_{I_{n}} &amp; \cdots &amp; p_{I_{n}} \cdot p_{I_{n}} \end{pmatrix} }.$$
+$$G_{I_{1} I_{2} \cdots I_{n}} = \det{ \begin{pmatrix} -p_{I_{1}} \cdot p_{I_{1}} &amp; \cdots &amp; -p_{I_{1}} \cdot p_{I_{n}} \\ \vdots &amp; \ddots &amp; \vdots \\ -p_{I_{1}} \cdot p_{I_{n}} &amp; \cdots &amp; -p_{I_{n}} \cdot p_{I_{n}} \end{pmatrix} }.$$
 That is, an $n$-Gram invariant correspond to the Gram determinant associated with a collection of $n$ energy-momentum vectors. Hence, by construction, the Gram momentum invariants are sensitive to collinearity of the external energy-momentum vectors (i.e. they vanish whenever a pair of energy-momentum vectors are collinear).</p>
 <h2>Two Quanta</h2>
 <p>Given two linearly-independent energy-momentum vectors, the <strong>2-Gram</strong> invariant is
-$$G_{IJ} \equiv \det{ \begin{pmatrix} p_{I}^{2} &amp; p_{I} \cdot p_{J} \\ p_{I} \cdot p_{J} &amp; p_{J}^{2} \end{pmatrix} } = p_{I}^{2} p_{J}^{2} - (p_{I} \cdot p_{J})^{2}.$$
+$$G_{IJ} \equiv \det{ \begin{pmatrix} -p_{I}^{2} &amp; -p_{I} \cdot p_{J} \\ -p_{I} \cdot p_{J} &amp; -p_{J}^{2} \end{pmatrix} } = p_{I}^{2} p_{J}^{2} - (p_{I} \cdot p_{J})^{2}.$$
 Using
 $$p_{I}^{2} = - m_{I}^{2} \qquad (p_{I} + p_{J})^{2} = -s_{IJ} \qquad p_{J}^{2} = - m_{J}^{2}$$
 we can write
@@ -125,7 +125,7 @@ $$G_{IJ} = \frac{1}{4} [s_{IJ} - (m_{I} - m_{J})^{2} ] [ (m_{I} + m_{J})^{2} - s
 In this form, the <strong>sign properties</strong> of a 2-Gram invariant are obvious. You have $G_{IJ}$ being <strong>negative</strong> whenever $s_{IJ} &lt; (m_{I} - m_{J})^{2}$ or $s_{IJ} &gt; (m_{I} + m_{J})^{2}$. Part of this region lies <strong>above the 2-threshold</strong>, and another part lies <strong>below the 2-pseudothreshold</strong>. On the other hand, you have $G_{IJ}$ being <strong>positive</strong> whenever $(m_{I} - m_{J})^{2} &lt; s_{IJ} &lt; (m_{I} + m_{J})^{2}$. All of this region lies <strong>below the 2-threshold</strong> and <strong>above the 2-pseudothreshold</strong>.</p>
 <h2>Three Quanta</h2>
 <p>Given three linearly-independent energy-momentum vectors, the <strong>3-Gram</strong> invariant is
-$$G_{IJK} \equiv \det{ \begin{pmatrix} p_{I}^{2} &amp; p_{I} \cdot p_{J} &amp; p_{I} \cdot p_{K} \\ p_{I} \cdot p_{J} &amp; p_{J}^{2} &amp; p_{J} \cdot p_{K} \\ p_{I} \cdot p_{K} &amp; p_{J} \cdot p_{K} &amp; p_{K}^{2} \end{pmatrix} } = p_{I}^{2} p_{J}^{2} p_{K}^{2} - p_{I}^{2} (p_{J} \cdot p_{K})^{2} - p_{J}^{2} (p_{I} \cdot p_{K})^{2} - p_{K}^{2} (p_{I} \cdot p_{J})^{2} + 2 (p_{I} \cdot p_{J})(p_{I} \cdot p_{K})(p_{J} \cdot p_{K}) .$$
+$$G_{IJK} \equiv \det{ \begin{pmatrix} -p_{I}^{2} &amp; -p_{I} \cdot p_{J} &amp; -p_{I} \cdot p_{K} \\ -p_{I} \cdot p_{J} &amp; -p_{J}^{2} &amp; -p_{J} \cdot p_{K} \\ -p_{I} \cdot p_{K} &amp; -p_{J} \cdot p_{K} &amp; -p_{K}^{2} \end{pmatrix} } = -p_{I}^{2} p_{J}^{2} p_{K}^{2} + p_{I}^{2} (p_{J} \cdot p_{K})^{2} + p_{J}^{2} (p_{I} \cdot p_{K})^{2} + p_{K}^{2} (p_{I} \cdot p_{J})^{2} - 2 (p_{I} \cdot p_{J})(p_{I} \cdot p_{K})(p_{J} \cdot p_{K}) .$$
 In general, this cannot be simplified further in terms of masses and Mandelstam invariants.</p><script type= "text/javascript">
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
