@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 01 Feb 2015 00:00:00 -0500</lastBuildDate><item><title>Cross-Ratio Versus Conformal Ratio</title><link>http://meirizarrygelpi.github.io/posts/2015/Feb/cross-vs-conformal/</link><description>&lt;p&gt;I recently learned the difference between a cross-ratio invariant and a conformal ratio invariant, thanks to this &lt;a href="http://en.wikipedia.org/wiki/Cross-ratio"&gt;Wikipedia entry&lt;/a&gt;.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 07 Feb 2015 00:00:00 -0500</lastBuildDate><item><title>arXiv picks for 2015, week 6</title><link>http://meirizarrygelpi.github.io/posts/2015/Feb/2015-week-6/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1502.00510"&gt;F-theory from Fundamental Five-branes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1502.00655"&gt;Graviton Amplitudes from Collinear Limits of Gauge Amplitudes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1502.01254"&gt;Regge behavior saves String Theory from causality violations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1502.01437"&gt;Analytic bootstrap at large spin&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 07 Feb 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-02-07:posts/2015/Feb/2015-week-6/</guid><category>research</category></item><item><title>Cross-Ratio Versus Conformal Ratio</title><link>http://meirizarrygelpi.github.io/posts/2015/Feb/cross-vs-conformal/</link><description>&lt;p&gt;I recently learned the difference between a cross-ratio invariant and a conformal ratio invariant, thanks to this &lt;a href="http://en.wikipedia.org/wiki/Cross-ratio"&gt;Wikipedia entry&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Cross-Ratio&lt;/h2&gt;
 &lt;p&gt;The cross-ratio is a &lt;strong&gt;projective&lt;/strong&gt; invariant. Given the coordinates of four points on the complex plane, the &lt;strong&gt;cross-ratio&lt;/strong&gt; is defined as
 $$P(1, 2, 3, 4) = \frac{(z_{1} - z_{3}) (z_{2} - z_{4})}{(z_{2} - z_{3}) (z_{1} - z_{4})} .$$
@@ -1012,7 +1018,7 @@ This is the $u$-channel.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Thu, 04 Sep 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-09-04:posts/2014/Sep/4pnt-two-masses/</guid><category>kinematics</category></item><item><title>Four-point Inelastic Kinematics (Four Masses)</title><link>http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-four-masses/</link><description>&lt;p&gt;The most general $2 \rightarrow 2$ process has the form
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Thu, 04 Sep 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-09-04:posts/2014/Sep/4pnt-two-masses/</guid><category>kinematics</category><category>four-point</category><category>massive</category></item><item><title>Four-point Inelastic Kinematics (Four Masses)</title><link>http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-four-masses/</link><description>&lt;p&gt;The most general $2 \rightarrow 2$ process has the form
 $$A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}) + D(p_{4}).$$
 Note that this process has no permutation symmetry; it is &lt;strong&gt;inelastic&lt;/strong&gt;. The four energy-momentum vectors $p_{I}$ satisfy &lt;strong&gt;on-shell&lt;/strong&gt; constraints,
 $$p_{I}^{2} = - m_{I}^{2} \qquad I = 1, 2, 3, 4;$$
