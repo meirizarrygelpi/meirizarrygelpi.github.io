@@ -198,7 +198,7 @@ This is the $u$-channel.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     }
 &lt;/script&gt;
 </summary><category term="kinematics"></category><category term="four-point"></category><category term="massive"></category></entry><entry><title>Four-point Inelastic Kinematics (Four Masses)</title><link href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-four-masses/" rel="alternate"></link><updated>2014-09-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-09-02:posts/2014/Sep/4pnt-four-masses/</id><summary type="html">&lt;p&gt;The most general $2 \rightarrow 2$ process has the form
-$$A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}) + D(p_{4}).$$
+$$A(p_{1}) + B(p_{2}) \longrightarrow Z(p_{3}) + Y(p_{4}).$$
 Note that this process has no permutation symmetry; it is &lt;strong&gt;inelastic&lt;/strong&gt;. The four energy-momentum vectors $p_{I}$ satisfy &lt;strong&gt;on-shell&lt;/strong&gt; constraints,
 $$p_{I}^{2} = - m_{I}^{2} \qquad I = 1, 2, 3, 4;$$
 and a &lt;strong&gt;conservation&lt;/strong&gt; constraint,
@@ -305,11 +305,11 @@ which in turn leads to
 $$u_{o} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - \Lambda_{12}(s) - \Lambda_{34}(s)}{4s}.$$
 Note that you can interpret $t_{o}$ as the midpoint of the interval $t_{b} &amp;lt; t &amp;lt; t_{f}$. Similarly, you can interpret $u_{o}$ as the midpoint of the interval $u_{f} &amp;lt; u &amp;lt; u_{b}$.&lt;/p&gt;
 &lt;h2&gt;Cross Processes&lt;/h2&gt;
-&lt;p&gt;You can find two other $2 \rightarrow 2$ processes by &lt;strong&gt;crossing&lt;/strong&gt; an incoming quantum with an outgoing quantum. If you cross $B$ with $C$, you find the process
-$$A(p_{1}) + \bar{C}(\bar{p}_{2}) \longrightarrow \bar{B}(\bar{p}_{3}) + D(p_{4}).$$
+&lt;p&gt;You can find two other $2 \rightarrow 2$ processes by &lt;strong&gt;crossing&lt;/strong&gt; an incoming quantum with an outgoing quantum. If you cross $B$ with $Z$, you find the process
+$$A(p_{1}) + \bar{Z}(\bar{p}_{2}) \longrightarrow \bar{B}(\bar{p}_{3}) + Y(p_{4}).$$
 You can use the same kinematic variables above if you let $\bar{p}_{2} = -p_{3}$ and $\bar{p}_{3} = -p_{2}$.&lt;/p&gt;
-&lt;p&gt;Similarly, if you cross $B$ with $D$, you find the process
-$$A(p_{1}) + \bar{D}(\bar{p}_{2}) \longrightarrow C(p_{3}) + \bar{B}(\bar{p}_{4}).$$
+&lt;p&gt;Similarly, if you cross $B$ with $Y$, you find the process
+$$A(p_{1}) + \bar{Y}(\bar{p}_{2}) \longrightarrow Z(p_{3}) + \bar{B}(\bar{p}_{4}).$$
 Again, you can use the same kinematic variables above if you let $\bar{p}_{2} = -p_{4}$ and $\bar{p}_{4} = -p_{2}$. Note that all of these processes are inelastic.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
