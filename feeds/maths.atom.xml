@@ -34,8 +34,8 @@ $$C_{4}(n) = 24 S_{4}(n - 3) + 36 S_{3}(n - 2) + 14 S_{2}(n - 1) + S_{1}(n)$$
 That is, you can divide a tesseract array into 24 pentatopic arrays, 36 tetrahedral arrays, 14 triangular arrays and one linear array. The way I found this was to first write
 $$C_{4}(n) = 24 S_{4}(n - 3) + a S_{3}(n - 2) + b S_{2}(n - 1) + c S_{1}(n)$$
 and solve the equation $C_{4}(n) - n^{4} = 0$. Using this technique you can show that
-$$C_{5}(n) = 120 S_{5}(n - 4) + 240 S_{4}(n-3) + 150 S_{3}(n - 2) + 45 S_{2}(n - 1) + S_{1}(n)$$
-That is, you can divide a 5-cube into 120 5-simplex arrays, 240 4-simplex arrays, 150 3-simplex arrays, 45 2-simplex arrays, and one 1-simplex array.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+$$C_{5}(n) = 120 S_{5}(n - 4) + 240 S_{4}(n-3) + 150 S_{3}(n - 2) + 30 S_{2}(n - 1) + S_{1}(n)$$
+That is, you can divide a 5-cube into 120 5-simplex arrays, 240 4-simplex arrays, 150 3-simplex arrays, 30 2-simplex arrays, and one 1-simplex array.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
