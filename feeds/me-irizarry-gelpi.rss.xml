@@ -6,7 +6,71 @@
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1504.02759"&gt;The two-loop superstring five-point amplitude and S-duality&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1504.03255"&gt;The two-loop sunrise integral around four space-time dimensions and generalisations of the Clausen and Glaisher functions towards the elliptic case&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1504.03617"&gt;A worldline approach to colored particles&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 18 Apr 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-04-18:posts/2015/Apr/2015-week-16/</guid><category>research</category></item><item><title>arXiv picks for 2015, week 15</title><link>http://meirizarrygelpi.github.io/posts/2015/Apr/2015-week-15/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 18 Apr 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-04-18:posts/2015/Apr/2015-week-16/</guid><category>research</category></item><item><title>Tesseracts and Pentatopes</title><link>http://meirizarrygelpi.github.io/posts/2015/Apr/tesseracts-and-pentatopes/</link><description>&lt;p&gt;Recall the factorial numbers $n!$
+$$1, \quad 2, \quad 6, \quad 24, \quad \ldots$$
+and the binomial coefficients $B(n, k)$:
+$$B(n, k) \equiv \frac{n!}{(n - k)! k!}$$
+With the binomial coefficients, you can define the $n$-th $k$-simplex number $S_{k}(n)$:
+$$S_{k}(n) \equiv B(n - k + 1, k)$$
+When $k = 1$, you have the &lt;strong&gt;line&lt;/strong&gt; numbers:
+$$S_{1}(n) = n$$
+When $k = 2$, you have the &lt;strong&gt;triangle&lt;/strong&gt; numbers:
+$$S_{2}(n) = \frac{n (n + 1)}{2}$$
+When $k = 3$, you have the &lt;strong&gt;tetrahedron&lt;/strong&gt; numbers:
+$$S_{3}(n) = \frac{n (n + 1)(n + 2)}{6}$$
+When $k = 4$, you have the &lt;strong&gt;pentatope&lt;/strong&gt; numbers:
+$$S_{4}(n) = \frac{n (n + 1)(n + 2)(n + 3)}{24}$$
+Besides the $k$-simplex numbers, you also have the $k$-cube numbers $C_{k}(n)$:
+$$C_{k}(n) = n^{k}$$
+The cases $k = 2$, $k = 3$, and $k = 4$ are, respectively, the &lt;strong&gt;square&lt;/strong&gt;, &lt;strong&gt;cube&lt;/strong&gt;, and &lt;strong&gt;tesseract&lt;/strong&gt; numbers. The $k$-cube numbers correspond to the number of entries in a $k$-array. For example, a 2-array of size $n$ is an $n \times n$ square matrix. I have been thinking about $k$-simplex and $k$-cube numbers lately because I have been thinking about matrices and tensors. The $k$-volume of a $k$-cube and the $k$-volume of a $k$-simplex are related via:
+$$\text{vol}(C_{k}) = k! \times \text{vol}(S_{k})$$
+For example, take $k = 2$. A square can be divided into two triangles with the same area. You can translate this statement into a property of square matrices. An $n \times n$ square matrix has $n^{2}$ entries (its area). These $n^{2}$ entries can be divided into two identical triangular domains with $S_{2}(n - 1)$ entries and one linear domain between the two triangles with $S_{1}(n)$ entries. Thus,
+$$C_{2}(n) = 2 S_{2}(n - 1) + S_{1}(n)$$
+Equivalently, you can absorb the interface between the two triangles into one of them, and arrive at the result that the sum of two consecutive triangle numbers is a square number:
+$$C_{2}(n) = S_{2}(n - 1) + S_{2}(n)$$
+But here the size of each triangular domain is different.&lt;/p&gt;
+&lt;p&gt;Similarly, a cube can be divided into six tetrahedra with the same volume. You can translate this statement into a property of an $n \times n \times n$ tensors. An $n \times n \times n$ tensor has $n^{3}$ entries (its volume). These entries can be divided into six identical tetrahedral domains with $S_{3}(n-2)$ entries, six identical triangular domains with $S_{2}(n-1)$ entries, and one linear domain with $S_{1}(n)$ entries. Thus,
+$$C_{3}(n) = 6 S_{3}(n - 2) + 6 S_{2}(n - 1) + S_{1}(n)$$
+Since
+$$S_{3}(n) = S_{3}(n-1) + S_{2}(n)$$
+you can absorb the interface triangular domains into the tetrahedral domains.&lt;/p&gt;
+&lt;p&gt;I tried to find the analogous result in four dimensions. Since $4! = 24$, a tesseract can be divided into 24 equal pentatopes. Thus, you can imagine that
+$$C_{4}(n) = 24 S_{4}(n - 3) + \ldots$$
+It took me some effort to find the full result:
+$$C_{4}(n) = 24 S_{4}(n - 3) + 36 S_{3}(n - 2) + 14 S_{2}(n - 1) + S_{1}(n)$$
+That is, you can divide a tesseract array into 24 pentatopic arrays, 36 tetrahedral arrays, 14 triangular arrays and one linear array. The way I found this was to first write
+$$C_{4}(n) = 24 S_{4}(n - 3) + a S_{3}(n - 2) + b S_{2}(n - 1) + c S_{1}(n)$$
+and solve the equation $C_{4}(n) - n^{4} = 0$.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Fri, 17 Apr 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-04-17:posts/2015/Apr/tesseracts-and-pentatopes/</guid><category>geometry</category></item><item><title>arXiv picks for 2015, week 15</title><link>http://meirizarrygelpi.github.io/posts/2015/Apr/2015-week-15/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1504.00315"&gt;BCFW recursion for TMD parton scattering&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1504.00876"&gt;Amplitudes for High Energy Factorization via BCFW recursion&lt;/a&gt;&lt;/li&gt;
