@@ -120,29 +120,32 @@ When $k = 3$, you have the <strong>tetrahedron</strong> numbers:
 $$S_{3}(n) = \frac{n (n + 1)(n + 2)}{6}$$
 When $k = 4$, you have the <strong>pentatope</strong> numbers:
 $$S_{4}(n) = \frac{n (n + 1)(n + 2)(n + 3)}{24}$$
-Besides the $k$-simplex numbers, you also have the $k$-cube numbers $C_{k}(n)$:
+Besides the $k$-simplex numbers, you also have the $n$-th $k$-cube number $C_{k}(n)$:
 $$C_{k}(n) = n^{k}$$
-The cases $k = 2$, $k = 3$, and $k = 4$ are, respectively, the <strong>square</strong>, <strong>cube</strong>, and <strong>tesseract</strong> numbers. The $k$-cube numbers correspond to the number of entries in a $k$-array. For example, a 2-array of size $n$ is an $n \times n$ square matrix. I have been thinking about $k$-simplex and $k$-cube numbers lately because I have been thinking about matrices and tensors. The $k$-volume of a $k$-cube and the $k$-volume of a $k$-simplex are related via:
+The cases $k = 2$, $k = 3$, and $k = 4$ are, respectively, the <strong>square</strong>, <strong>cube</strong>, and <strong>tesseract</strong> numbers. The $n$-th $k$-cube number corresponds to the number of entries in a $k$-array of size $n$. For example, a 2-array of size $n$ is an $n \times n$ square matrix. I have been thinking about $k$-simplex and $k$-cube numbers lately because I have been thinking about matrices and tensors. The $k$-volume of a $k$-cube and the $k$-volume of a $k$-simplex are related via:
 $$\text{vol}(C_{k}) = k! \times \text{vol}(S_{k})$$
-For example, take $k = 2$. A square can be divided into two triangles with the same area. You can translate this statement into a property of square matrices. An $n \times n$ square matrix has $n^{2}$ entries (its area). These $n^{2}$ entries can be divided into two identical triangular domains with $S_{2}(n - 1)$ entries and one linear domain between the two triangles with $S_{1}(n)$ entries. Thus,
+For example, take $k = 2$. A square can be divided into two triangles with the same area. You can translate this statement into a property of square matrices. An $n \times n$ square matrix has $n^{2}$ entries (its "area"). These $n^{2}$ entries can be divided into two identical triangular domains with $S_{2}(n - 1)$ entries, and one linear domain between the two triangles with $S_{1}(n)$ entries. Thus,
 $$C_{2}(n) = 2 S_{2}(n - 1) + S_{1}(n)$$
 Equivalently, you can absorb the interface between the two triangles into one of them, and arrive at the result that the sum of two consecutive triangle numbers is a square number:
 $$C_{2}(n) = S_{2}(n - 1) + S_{2}(n)$$
 But here the size of each triangular domain is different.</p>
-<p>Similarly, a cube can be divided into six tetrahedra with the same volume. You can translate this statement into a property of an $n \times n \times n$ tensors. An $n \times n \times n$ tensor has $n^{3}$ entries (its volume). These entries can be divided into six identical tetrahedral domains with $S_{3}(n-2)$ entries, six identical triangular domains with $S_{2}(n-1)$ entries, and one linear domain with $S_{1}(n)$ entries. Thus,
+<p>Similarly, a cube can be divided into six tetrahedra with the same volume. You can translate this statement into a property of an $n \times n \times n$ tensors. An $n \times n \times n$ tensor has $n^{3}$ entries (its "volume"). These entries can be divided into six identical tetrahedral domains with $S_{3}(n-2)$ entries, six identical triangular domains with $S_{2}(n-1)$ entries, and one linear domain with $S_{1}(n)$ entries. Thus,
 $$C_{3}(n) = 6 S_{3}(n - 2) + 6 S_{2}(n - 1) + S_{1}(n)$$
 Since
-$$S_{3}(n) = S_{3}(n-1) + S_{2}(n)$$
+$$S_{3}(n+1) = S_{3}(n) + S_{2}(n+1)$$
 you can absorb the interface triangular domains into the tetrahedral domains.</p>
 <p>I tried to find the analogous result in four dimensions. Since $4! = 24$, a tesseract can be divided into 24 equal pentatopes. Thus, you can imagine that
 $$C_{4}(n) = 24 S_{4}(n - 3) + \ldots$$
 It took me some effort to find the full result:
 $$C_{4}(n) = 24 S_{4}(n - 3) + 36 S_{3}(n - 2) + 14 S_{2}(n - 1) + S_{1}(n)$$
-That is, you can divide a tesseract array into 24 pentatopic arrays, 36 tetrahedral arrays, 14 triangular arrays and one linear array. The way I found this was to first write
+That is, you can divide a tesseract array into 24 pentatopic arrays, 36 tetrahedral arrays, 14 triangular arrays and one linear array. I found this by first writing
 $$C_{4}(n) = 24 S_{4}(n - 3) + a S_{3}(n - 2) + b S_{2}(n - 1) + c S_{1}(n)$$
-and solve the equation $C_{4}(n) - n^{4} = 0$. Using this technique you can show that
-$$C_{5}(n) = 120 S_{5}(n - 4) + 240 S_{4}(n-3) + 150 S_{3}(n - 2) + 30 S_{2}(n - 1) + S_{1}(n)$$
-That is, you can divide a 5-cube into 120 5-simplex arrays, 240 4-simplex arrays, 150 3-simplex arrays, 30 2-simplex arrays, and one 1-simplex array.</p><script type= "text/javascript">
+and then solving the equation $C_{4}(n) - n^{4} = 0$. Using this technique you can also show that
+$$C_{5}(n) = 120 S_{5}(n - 4) + 240 S_{4}(n - 3) + 150 S_{3}(n - 2) + 30 S_{2}(n - 1) + S_{1}(n)$$
+That is, you can divide a 5-cube into 120 5-simplex arrays, 240 4-simplex arrays, 150 3-simplex arrays, 30 2-simplex arrays, and one 1-simplex array.</p>
+<p>It seems that in general, you have
+$$C_{k}(n) = \sum_{l = 0}^{k - 1} c_{k - l} S_{k - l}(n - k + l + 1)$$
+I wonder if there is an expression for $c_{k - l}$.</p><script type= "text/javascript">
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
