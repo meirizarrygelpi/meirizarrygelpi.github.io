@@ -12,32 +12,47 @@ This product function has two important properties:&lt;/p&gt;
 &lt;li&gt;It is linear in both variables.&lt;/li&gt;
 &lt;li&gt;It results in another rectangular matrix.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;I will refer to this product function as the line product function.&lt;/p&gt;
+&lt;p&gt;I will refer to this product function as the &lt;strong&gt;line product&lt;/strong&gt; function.&lt;/p&gt;
 &lt;p&gt;You have the transpose function $T$ that takes an $(m \times n)$-matrix, and returns an $(n \times m)$-matrix:
 $$T: \mathbb{R}^{m \times n} \rightarrow \mathbb{R}^{n \times m}.$$
 The transpose function satisfies the property $T(T(A)) = A$ for any $(m \times n)$-matrix $A$.&lt;/p&gt;
 &lt;p&gt;There are two ways to describe a $d$-vector as a matrix: either as a $(d \times 1)$-matrix (a column vector), or as an $(1 \times d)$-matrix (a row vector). Let $U$ be a $(d \times 1)$-matrix and $W$ be a $(1 \times d)$-matrix. Then $P(U, V)$ is a $(d \times d)$-matrix (the outer product), and $P(V, U)$ is a scalar (the inner product).&lt;/p&gt;
-&lt;p&gt;A square $n$-matrix is an $(n \times n)$-matrix. The $n$-identity matrix is a very important square $n$-matrix.&lt;/p&gt;
+&lt;p&gt;An $n$-square matrix is an $(n \times n)$-matrix. The $n$-identity matrix is an important example of a $n$-square matrix. The line product of two $n$-square matrices $A$ and $B$ is another $n$-square matrix. However, in general $P(A, B) \neq P(B, A)$. Indeed, the commutator function $[A, B]$ quantifies this discrepancy:
+$$[A, B] = P(A, B) - P(B, A).$$
+The line product function is noncommutative.&lt;/p&gt;
 &lt;h2&gt;3-Hypermatrices&lt;/h2&gt;
 &lt;p&gt;3-Hypermatrices are the next step in the ladder. These objects carry three indices and can be represented as a cuboidal array of numbers. A $(p \times q \times r)$-hypermatrix with real components is an element of $\mathbb{R}^{p \times q \times r}$.&lt;/p&gt;
-&lt;p&gt;Since a hypermatrix has three indices, the line product function no longer returns another hypermatrix. After treating a hypermatrix as a triangle, and noticing that you can make a triangle from three other triangles, I arrived at the triangle product function:
+&lt;p&gt;Since a 3-hypermatrix has three indices, the line product function no longer returns another 3-hypermatrix. After treating the index structure of a 3-hypermatrix as a triangle, and noticing that you can make a triangle from three other triangles, I arrived at the &lt;strong&gt;triangle product&lt;/strong&gt; function:
 $$\Delta : \mathbb{R}^{a \times p \times q} \otimes \mathbb{R}^{p \times b \times r} \otimes \mathbb{R}^{q \times r \times c} \rightarrow \mathbb{R}^{a \times b \times c}.$$
 In index form, this looks like
-$$D_{abc} = A_{apq} B_{pbr} C_{qrc}.$$
+$$\Delta_{abc} = A_{apq} B_{pbr} C_{qrc}.$$
 This product function shares the same two properties from above with the line product function.&lt;/p&gt;
-&lt;p&gt;Before I introduce the five transpose functions, it is useful to introduce to auxiliary functions:
-$$S: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times a \times b}, \quad M: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times b \times a},$$
-which satisfy the properties $S(S(S(A))) = A$ and $M(M(A)) = A$ for any $(a \times b \times c)$-hypermatrix $A$. With these in hand, the five transpose functions are:
-$$S, \quad S \circ S, \quad M, \quad S \circ M, \quad S \circ S \circ M.$$
-Together with the identity function, these six operations form the smallest nonabelian group, the dihedral group of order 6.&lt;/p&gt;
-&lt;p&gt;There are three ways to describe a $d$-vector as a hypermatrix: either as a $(d \times 1 \times 1)$-hypermatrix, as a $(1 \times d \times 1)$-hypermatrix, or as a $(1 \times 1 \times d)$-hypermatrix. Let $X$ be a $(d \times 1 \times 1)$-hypermatrix, $Y$ be a $(1 \times d \times 1)$-hypermatrix, and $Z$ be a $(1 \times 1 \times d)$-hypermatrix. Then:&lt;/p&gt;
+&lt;p&gt;Before I introduce the five transpose functions that can act on a 3-hypermatrix, it is useful to introduce two auxiliary functions:
+$$C: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times a \times b}, \quad M: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times b \times a},$$
+which satisfy the properties $C(C(C(A))) = A$ and $M(M(A)) = A$ for any $(a \times b \times c)$-hypermatrix $A$. With these in hand, the five transpose functions are:
+$$C, \quad C \circ C, \quad M, \quad C \circ M, \quad C \circ C \circ M.$$
+Together with the identity function $I$, these six operations form the smallest nonabelian group, the dihedral group of order 6. Alternatively, you can introduce two swap functions:
+$$S_{12}: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{b \times a \times c}, \quad S_{23}: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{a \times c \times b}. $$
+which satisfy $S_{12}(S_{12}(A)) = A$ and $S_{23}(S_{23}(A)) = A$. Then the five transpose functions are
+$$S_{12}, \quad S_{23}, \quad S_{12} \circ S_{23}, \quad S_{23} \circ S_{12}, \quad S_{12} \circ S_{23} \circ S_{12}. $$
+Note that $S_{12} \circ S_{23} = C$ and $S_{12} \circ S_{23} \circ S_{12} = M$.&lt;/p&gt;
+&lt;p&gt;There are three ways to describe a $d$-vector as a 3-hypermatrix: either as a $(d \times 1 \times 1)$-hypermatrix, as a $(1 \times d \times 1)$-hypermatrix, or as a $(1 \times 1 \times d)$-hypermatrix. Let $X$ be a $(d \times 1 \times 1)$-hypermatrix, $Y$ be a $(1 \times d \times 1)$-hypermatrix, and $Z$ be a $(1 \times 1 \times d)$-hypermatrix. Then:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$\Delta(X, Y, Z)$ is a $(d \times d \times d)$-hypermatrix, $X_{a} Y_{b} Z_{c}$&lt;/li&gt;
-&lt;li&gt;$\Delta(X, Z, Y)$ is a $(d \times 1 \times 1)$-hypermatrix, $(Z \cdot Y) X_{a}$&lt;/li&gt;
-&lt;li&gt;$\Delta(Z, Y, X)$ is a $(1 \times d \times 1)$-hypermatrix, $(Z \cdot X) Y_{b}$&lt;/li&gt;
-&lt;li&gt;$\Delta(Y, X, Z)$ is a $(1 \times 1 \times d)$-hypermatrix, $(Y \cdot X) Z_{c}$&lt;/li&gt;
+&lt;li&gt;$\Delta(X, Y, Z)$ is a $(d \times d \times d)$-hypermatrix, i.e. the polyadic tensor $X_{a} Y_{b} Z_{c}$&lt;/li&gt;
+&lt;li&gt;$\Delta(X, Z, Y)$ is a $(d \times 1 \times 1)$-hypermatrix, i.e. the vector $(Z \cdot Y) X_{a}$&lt;/li&gt;
+&lt;li&gt;$\Delta(Z, Y, X)$ is a $(1 \times d \times 1)$-hypermatrix, i.e. the vector $(Z \cdot X) Y_{b}$&lt;/li&gt;
+&lt;li&gt;$\Delta(Y, X, Z)$ is a $(1 \times 1 \times d)$-hypermatrix, i.e. the vector $(Y \cdot X) Z_{c}$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Note that $\Delta(Z, X, Y)$ and $\Delta(Y, Z, X)$ are not well-defined.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+&lt;p&gt;Note that $\Delta(Z, X, Y)$ and $\Delta(Y, Z, X)$ are not well-defined.&lt;/p&gt;
+&lt;p&gt;There are three ways to describe a $n$-square matrix as a 3-hypermatrix: either as a $(1 \times n \times n)$-hypermatrix, as an $(n \times 1 \times n)$-hypermatrix, or as an $(n \times n \times 1)$-hypermatrix. Let $F$ be a $(1 \times n \times n)$-hypermatrix, $G$ be a $(n \times 1 \times n)$-hypermatrix, and $H$ be a $(n \times n \times 1)$-hypermatrix. Then:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\Delta(F, G, H)$ is an $(1 \times 1 \times 1)$-hypermatrix, i.e. the scalar $\operatorname{tr}{(F G H)}$&lt;/li&gt;
+&lt;li&gt;$\Delta(F, H, G)$ is an $(1 \times n \times n)$-hypermatrix, i.e. the $n$-square matrix $\operatorname{tr}{(HG)} F_{ab}$&lt;/li&gt;
+&lt;li&gt;$\Delta(H, G, F)$ is an $(n \times 1 \times n)$-hypermatrix, i.e. the $n$-square matrix $\operatorname{tr}{(HF)} G_{ab}$&lt;/li&gt;
+&lt;li&gt;$\Delta(G, F, H)$ is an $(n \times n \times 1)$-hypermatrix, i.e. the $n$-square matrix $\operatorname{tr}{(FG)} H_{ab}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that $\Delta(H, F, G)$ and $\Delta(G, H, F)$ are not well-defined.&lt;/p&gt;
+&lt;p&gt;An $n$-cube 3-hypermatrix is an $(n \times n \times n)$-hypermatrix. The $n$-identity 3-hypermatrix is an important example of an $n$-cube 3-hypermatrix. The triangle product of three $n$-cube 3-hypermatrices $A$, $B$ and $C$ is another $n$-cube 3-hypermatrix.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
