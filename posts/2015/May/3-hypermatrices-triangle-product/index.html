@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Tesseracts and Pentatopes - M.E. Irizarry-Gelpí</title>
+    <title>The Triangle Product and 3-Hypermatrices - M.E. Irizarry-Gelpí</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +11,11 @@
 
     <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
 
-<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2015/Apr/tesseracts-and-pentatopes/">
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2015/May/3-hypermatrices-triangle-product/">
 
         <meta name="author" content="M.E. Irizarry-Gelpí" />
-        <meta name="keywords" content="geometry" />
-        <meta name="description" content="A puzzle involving tesseract and pentatope numbers." />
+        <meta name="keywords" content="hypermatrix" />
+        <meta name="description" content="Thoughts on hypermatrices." />
 
 
 
@@ -79,10 +79,10 @@ M.E. Irizarry-Gelpí            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://meirizarrygelpi.github.io/posts/2015/Apr/tesseracts-and-pentatopes/"
+                    <a href="http://meirizarrygelpi.github.io/posts/2015/May/3-hypermatrices-triangle-product/"
                        rel="bookmark"
-                       title="Permalink to Tesseracts and Pentatopes">
-                        Tesseracts and Pentatopes
+                       title="Permalink to The Triangle Product and 3-Hypermatrices">
+                        The Triangle Product and 3-Hypermatrices
                     </a>
                 </h1>
             </header>
@@ -92,7 +92,7 @@ M.E. Irizarry-Gelpí            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2015-04-17T00:00:00-04:00"> Fri 17 April 2015</time>
+        <i class="fa fa-calendar"></i><time datetime="2015-05-06T00:00:00-04:00"> Wed 06 May 2015</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://meirizarrygelpi.github.io/author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
@@ -102,51 +102,49 @@ M.E. Irizarry-Gelpí            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="http://meirizarrygelpi.github.io/tag/geometry.html">geometry</a>
+	<a href="http://meirizarrygelpi.github.io/tag/hypermatrix.html">hypermatrix</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Recall the factorial function $n!$
-$$n! = \prod_{k = 1}^{n}k$$
-and the binomial coefficients $B(n, k)$:
-$$B(n, k) \equiv \frac{n!}{(n - k)! k!}$$
-With the binomial coefficients, you can define the $n$-th $k$-simplex number $S_{k}(n)$:
-$$S_{k}(n) \equiv B(n - k + 1, k)$$
-When $k = 1$, you have the <strong>line</strong> numbers:
-$$S_{1}(n) = n$$
-When $k = 2$, you have the <strong>triangle</strong> numbers:
-$$S_{2}(n) = \frac{n (n + 1)}{2}$$
-When $k = 3$, you have the <strong>tetrahedron</strong> numbers:
-$$S_{3}(n) = \frac{n (n + 1)(n + 2)}{6}$$
-When $k = 4$, you have the <strong>pentatope</strong> numbers:
-$$S_{4}(n) = \frac{n (n + 1)(n + 2)(n + 3)}{24}$$
-Besides the $k$-simplex numbers, you also have the $n$-th $k$-cube number $C_{k}(n)$:
-$$C_{k}(n) = n^{k}$$
-The cases $k = 2$, $k = 3$, and $k = 4$ are, respectively, the <strong>square</strong>, <strong>cube</strong>, and <strong>tesseract</strong> numbers. The $n$-th $k$-cube number corresponds to the number of entries in a $k$-array of size $n$. For example, a 2-array of size $n$ is an $n \times n$ square matrix. I have been thinking about $k$-simplex and $k$-cube numbers lately because I have been thinking about square matrices and cubic hypermatrices.</p>
-<p>The $k$-volume of a $k$-cube and the $k$-volume of a $k$-simplex are related via:
-$$\text{vol}(C_{k}) = k! \times \text{vol}(S_{k})$$
-For example, take $k = 2$. A square can be divided into two triangles with the same area. You can translate this statement into a property of square matrices. An $n \times n$ square matrix has $n^{2}$ entries (its "area"). These $n^{2}$ entries can be divided into two identical triangular domains with $S_{2}(n - 1)$ entries, and one linear domain between the two triangles with $S_{1}(n)$ entries. Thus,
-$$C_{2}(n) = 2 S_{2}(n - 1) + S_{1}(n)$$
-Equivalently, you can absorb the interface between the two triangles into one of them, and arrive at the result that the sum of two consecutive triangle numbers is a square number:
-$$C_{2}(n) = S_{2}(n - 1) + S_{2}(n)$$
-But here the size of each triangular domain is different.</p>
-<p>Similarly, a cube can be divided into six tetrahedra with the same volume. You can translate this statement into a property of $n \times n \times n$ hypermatrices. An $n \times n \times n$ hypermatrix has $n^{3}$ entries (its "volume"). These entries can be divided into six identical tetrahedral domains with $S_{3}(n-2)$ entries, six identical triangular domains with $S_{2}(n-1)$ entries, and one linear domain with $S_{1}(n)$ entries. Thus,
-$$C_{3}(n) = 6 S_{3}(n - 2) + 6 S_{2}(n - 1) + S_{1}(n)$$
-Since
-$$S_{3}(n+1) = S_{3}(n) + S_{2}(n+1)$$
-you can absorb the interface triangular domains into the tetrahedral domains.</p>
-<p>I tried to find the analogous result in four dimensions. Since $4! = 24$, a tesseract can be divided into 24 identical pentatopes. Thus, you can imagine that
-$$C_{4}(n) = 24 S_{4}(n - 3) + \ldots$$
-It took me some effort to find the full result:
-$$C_{4}(n) = 24 S_{4}(n - 3) + 36 S_{3}(n - 2) + 14 S_{2}(n - 1) + S_{1}(n)$$
-That is, you can divide a tesseract array into 24 pentatopic arrays, 36 tetrahedral arrays, 14 triangular arrays and one linear array. I found this by first writing
-$$C_{4}(n) = 24 S_{4}(n - 3) + a S_{3}(n - 2) + b S_{2}(n - 1) + c S_{1}(n)$$
-and then solving the equation $C_{4}(n) - n^{4} = 0$. Using this technique you can also show that
-$$C_{5}(n) = 120 S_{5}(n - 4) + 240 S_{4}(n - 3) + 150 S_{3}(n - 2) + 30 S_{2}(n - 1) + S_{1}(n)$$
-That is, you can divide a 5-cube into 120 5-simplex arrays, 240 4-simplex arrays, 150 3-simplex arrays, 30 2-simplex arrays, and one 1-simplex array.</p>
-<p>It seems that in general, you have
-$$C_{k}(n) = \sum_{l = 1}^{k} _{k}c_{l} S_{l}(n - l + 1)$$
-I wonder if there is a neat expression for $_{k}c_{l}$.</p><script type= "text/javascript">
+                <p>Lately I have been thinking a lot about linear algebra and matrices. Indeed, I have been thinking about higher-dimensional generalizations involving $p \times q \times r$ 3-hypermatrices. This was triggered by reading <a href="http://radar.oreilly.com/2015/03/lets-build-open-source-tensor-libraries-for-data-science.html">this blog post on tensors</a>. First, let me review the story of $d$-vectors and $(m \times n)$-matrices.</p>
+<h2>0-Hypermatrices</h2>
+<p>0-Hypermatrices are scalars. These objects carry no indices and can be represented by just a single (real or complex) number.</p>
+<h2>1-Hypermatrices</h2>
+<p>1-Hypermatrices are vectors. These objects carry one index and can be represented as linear arrays of numbers. A $d$-vector with real components is an element of $\mathbb{R}^{d}$.</p>
+<h2>2-Hypermatrices</h2>
+<p>2-Hypermatrices are traditional matrices. These objects carry two indices and can be represented as rectangular arrays of numbers. An $(m \times n)$-matrix with real components is an element of $\mathbb{R}^{m \times n}$. You have the matrix product function $P$ that takes an $(m \times p)$-matrix and a $(p \times n)$-matrix, and returns an $(m \times n)$-matrix:
+$$P: \mathbb{R}^{m \times p} \otimes \mathbb{R}^{p \times n} \rightarrow \mathbb{R}^{m \times n}.$$
+This product function has two important properties:</p>
+<ol>
+<li>It is linear in both variables.</li>
+<li>It results in another rectangular matrix.</li>
+</ol>
+<p>I will refer to this product function as the line product function.</p>
+<p>You have the transpose function $T$ that takes an $(m \times n)$-matrix, and returns an $(n \times m)$-matrix:
+$$T: \mathbb{R}^{m \times n} \rightarrow \mathbb{R}^{n \times m}.$$
+The transpose function satisfies the property $T(T(A)) = A$ for any $(m \times n)$-matrix $A$.</p>
+<p>There are two ways to describe a $d$-vector as a matrix: either as a $(d \times 1)$-matrix (a column vector), or as an $(1 \times d)$-matrix (a row vector). Let $U$ be a $(d \times 1)$-matrix and $W$ be a $(1 \times d)$-matrix. Then $P(U, V)$ is a $(d \times d)$-matrix (the outer product), and $P(V, U)$ is a scalar (the inner product).</p>
+<p>A square $n$-matrix is an $(n \times n)$-matrix. The $n$-identity matrix is a very important square $n$-matrix.</p>
+<h2>3-Hypermatrices</h2>
+<p>3-Hypermatrices are the next step in the ladder. These objects carry three indices and can be represented as a cuboidal array of numbers. A $(p \times q \times r)$-hypermatrix with real components is an element of $\mathbb{R}^{p \times q \times r}$.</p>
+<p>Since a hypermatrix has three indices, the line product function no longer returns another hypermatrix. After treating a hypermatrix as a triangle, and noticing that you can make a triangle from three other triangles, I arrived at the triangle product function:
+$$\Delta : \mathbb{R}^{a \times p \times q} \otimes \mathbb{R}^{p \times b \times r} \otimes \mathbb{R}^{q \times r \times c} \rightarrow \mathbb{R}^{a \times b \times c}.$$
+In index form, this looks like
+$$D_{abc} = A_{apq} B_{pbr} C_{qrc}.$$
+This product function shares the same two properties from above with the line product function.</p>
+<p>Before I introduce the five transpose functions, it is useful to introduce to auxiliary functions:
+$$S: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times a \times b}, \quad M: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times b \times a},$$
+which satisfy the properties $S(S(S(A))) = A$ and $M(M(A)) = A$ for any $(a \times b \times c)$-hypermatrix $A$. With these in hand, the five transpose functions are:
+$$S, \quad S \circ S, \quad M, \quad S \circ M, \quad S \circ S \circ M.$$
+Together with the identity function, these six operations form the smallest nonabelian group, the dihedral group of order 6.</p>
+<p>There are three ways to describe a $d$-vector as a hypermatrix: either as a $(d \times 1 \times 1)$-hypermatrix, as a $(1 \times d \times 1)$-hypermatrix, or as a $(1 \times 1 \times d)$-hypermatrix. Let $X$ be a $(d \times 1 \times 1)$-hypermatrix, $Y$ be a $(1 \times d \times 1)$-hypermatrix, and $Z$ be a $(1 \times 1 \times d)$-hypermatrix. Then:</p>
+<ul>
+<li>$\Delta(X, Y, Z)$ is a $(d \times d \times d)$-hypermatrix, $X_{a} Y_{b} Z_{c}$</li>
+<li>$\Delta(X, Z, Y)$ is a $(d \times 1 \times 1)$-hypermatrix, $(Z \cdot Y) X_{a}$</li>
+<li>$\Delta(Z, Y, X)$ is a $(1 \times d \times 1)$-hypermatrix, $(Z \cdot X) Y_{b}$</li>
+<li>$\Delta(Y, X, Z)$ is a $(1 \times 1 \times d)$-hypermatrix, $(Y \cdot X) Z_{c}$</li>
+</ul>
+<p>Note that $\Delta(Z, X, Y)$ and $\Delta(Y, Z, X)$ are not well-defined.</p><script type= "text/javascript">
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
@@ -188,8 +186,8 @@ I wonder if there is a neat expression for $_{k}c_{l}$.</p><script type= "text/j
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
 
-                    var disqus_identifier = 'tesseracts-and-pentatopes';
-                var disqus_url = 'http://meirizarrygelpi.github.io/posts/2015/Apr/tesseracts-and-pentatopes/';
+                    var disqus_identifier = '3-hypermatrices-triangle-product';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/2015/May/3-hypermatrices-triangle-product/';
 
             var disqus_config = function () {
                 this.language = "en";

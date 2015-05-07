@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-05-02T00:00:00-04:00</updated><entry><title>arXiv picks for 2015, week 18</title><link href="http://meirizarrygelpi.github.io/posts/2015/May/2015-week-18/" rel="alternate"></link><updated>2015-05-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-05-02:posts/2015/May/2015-week-18/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-05-06T00:00:00-04:00</updated><entry><title>The Triangle Product and 3-Hypermatrices</title><link href="http://meirizarrygelpi.github.io/posts/2015/May/3-hypermatrices-triangle-product/" rel="alternate"></link><updated>2015-05-06T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-05-06:posts/2015/May/3-hypermatrices-triangle-product/</id><summary type="html">&lt;p&gt;Lately I have been thinking a lot about linear algebra and matrices. Indeed, I have been thinking about higher-dimensional generalizations involving $p \times q \times r$ 3-hypermatrices. This was triggered by reading &lt;a href="http://radar.oreilly.com/2015/03/lets-build-open-source-tensor-libraries-for-data-science.html"&gt;this blog post on tensors&lt;/a&gt;. First, let me review the story of $d$-vectors and $(m \times n)$-matrices.&lt;/p&gt;
+&lt;h2&gt;0-Hypermatrices&lt;/h2&gt;
+&lt;p&gt;0-Hypermatrices are scalars. These objects carry no indices and can be represented by just a single (real or complex) number.&lt;/p&gt;
+&lt;h2&gt;1-Hypermatrices&lt;/h2&gt;
+&lt;p&gt;1-Hypermatrices are vectors. These objects carry one index and can be represented as linear arrays of numbers. A $d$-vector with real components is an element of $\mathbb{R}^{d}$.&lt;/p&gt;
+&lt;h2&gt;2-Hypermatrices&lt;/h2&gt;
+&lt;p&gt;2-Hypermatrices are traditional matrices. These objects carry two indices and can be represented as rectangular arrays of numbers. An $(m \times n)$-matrix with real components is an element of $\mathbb{R}^{m \times n}$. You have the matrix product function $P$ that takes an $(m \times p)$-matrix and a $(p \times n)$-matrix, and returns an $(m \times n)$-matrix:
+$$P: \mathbb{R}^{m \times p} \otimes \mathbb{R}^{p \times n} \rightarrow \mathbb{R}^{m \times n}.$$
+This product function has two important properties:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;It is linear in both variables.&lt;/li&gt;
+&lt;li&gt;It results in another rectangular matrix.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I will refer to this product function as the line product function.&lt;/p&gt;
+&lt;p&gt;You have the transpose function $T$ that takes an $(m \times n)$-matrix, and returns an $(n \times m)$-matrix:
+$$T: \mathbb{R}^{m \times n} \rightarrow \mathbb{R}^{n \times m}.$$
+The transpose function satisfies the property $T(T(A)) = A$ for any $(m \times n)$-matrix $A$.&lt;/p&gt;
+&lt;p&gt;There are two ways to describe a $d$-vector as a matrix: either as a $(d \times 1)$-matrix (a column vector), or as an $(1 \times d)$-matrix (a row vector). Let $U$ be a $(d \times 1)$-matrix and $W$ be a $(1 \times d)$-matrix. Then $P(U, V)$ is a $(d \times d)$-matrix (the outer product), and $P(V, U)$ is a scalar (the inner product).&lt;/p&gt;
+&lt;p&gt;A square $n$-matrix is an $(n \times n)$-matrix. The $n$-identity matrix is a very important square $n$-matrix.&lt;/p&gt;
+&lt;h2&gt;3-Hypermatrices&lt;/h2&gt;
+&lt;p&gt;3-Hypermatrices are the next step in the ladder. These objects carry three indices and can be represented as a cuboidal array of numbers. A $(p \times q \times r)$-hypermatrix with real components is an element of $\mathbb{R}^{p \times q \times r}$.&lt;/p&gt;
+&lt;p&gt;Since a hypermatrix has three indices, the line product function no longer returns another hypermatrix. After treating a hypermatrix as a triangle, and noticing that you can make a triangle from three other triangles, I arrived at the triangle product function:
+$$\Delta : \mathbb{R}^{a \times p \times q} \otimes \mathbb{R}^{p \times b \times r} \otimes \mathbb{R}^{q \times r \times c} \rightarrow \mathbb{R}^{a \times b \times c}.$$
+In index form, this looks like
+$$D_{abc} = A_{apq} B_{pbr} C_{qrc}.$$
+This product function shares the same two properties from above with the line product function.&lt;/p&gt;
+&lt;p&gt;Before I introduce the five transpose functions, it is useful to introduce to auxiliary functions:
+$$S: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times a \times b}, \quad M: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times b \times a},$$
+which satisfy the properties $S(S(S(A))) = A$ and $M(M(A)) = A$ for any $(a \times b \times c)$-hypermatrix $A$. With these in hand, the five transpose functions are:
+$$S, \quad S \circ S, \quad M, \quad S \circ M, \quad S \circ S \circ M.$$
+Together with the identity function, these six operations form the smallest nonabelian group, the dihedral group of order 6.&lt;/p&gt;
+&lt;p&gt;There are three ways to describe a $d$-vector as a hypermatrix: either as a $(d \times 1 \times 1)$-hypermatrix, as a $(1 \times d \times 1)$-hypermatrix, or as a $(1 \times 1 \times d)$-hypermatrix. Let $X$ be a $(d \times 1 \times 1)$-hypermatrix, $Y$ be a $(1 \times d \times 1)$-hypermatrix, and $Z$ be a $(1 \times 1 \times d)$-hypermatrix. Then:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\Delta(X, Y, Z)$ is a $(d \times d \times d)$-hypermatrix, $X_{a} Y_{b} Z_{c}$&lt;/li&gt;
+&lt;li&gt;$\Delta(X, Z, Y)$ is a $(d \times 1 \times 1)$-hypermatrix, $(Z \cdot Y) X_{a}$&lt;/li&gt;
+&lt;li&gt;$\Delta(Z, Y, X)$ is a $(1 \times d \times 1)$-hypermatrix, $(Z \cdot X) Y_{b}$&lt;/li&gt;
+&lt;li&gt;$\Delta(Y, X, Z)$ is a $(1 \times 1 \times d)$-hypermatrix, $(Y \cdot X) Z_{c}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that $\Delta(Z, X, Y)$ and $\Delta(Y, Z, X)$ are not well-defined.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="hypermatrix"></category></entry><entry><title>arXiv picks for 2015, week 18</title><link href="http://meirizarrygelpi.github.io/posts/2015/May/2015-week-18/" rel="alternate"></link><updated>2015-05-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-05-02:posts/2015/May/2015-week-18/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1504.07904"&gt;Four-point correlation function of stress-energy tensors in $N=4$ superconformal theories&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1504.08007"&gt;Tests of conjectures on multiple Watson values&lt;/a&gt;&lt;/li&gt;
@@ -48,8 +116,8 @@
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1504.02759"&gt;The two-loop superstring five-point amplitude and S-duality&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1504.03255"&gt;The two-loop sunrise integral around four space-time dimensions and generalisations of the Clausen and Glaisher functions towards the elliptic case&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1504.03617"&gt;A worldline approach to colored particles&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>Tesseracts and Pentatopes</title><link href="http://meirizarrygelpi.github.io/posts/2015/Apr/tesseracts-and-pentatopes/" rel="alternate"></link><updated>2015-04-17T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-04-17:posts/2015/Apr/tesseracts-and-pentatopes/</id><summary type="html">&lt;p&gt;Recall the factorial numbers $n!$
-$$1, \quad 2, \quad 6, \quad 24, \quad \ldots$$
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>Tesseracts and Pentatopes</title><link href="http://meirizarrygelpi.github.io/posts/2015/Apr/tesseracts-and-pentatopes/" rel="alternate"></link><updated>2015-04-17T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-04-17:posts/2015/Apr/tesseracts-and-pentatopes/</id><summary type="html">&lt;p&gt;Recall the factorial function $n!$
+$$n! = \prod_{k = 1}^{n}k$$
 and the binomial coefficients $B(n, k)$:
 $$B(n, k) \equiv \frac{n!}{(n - k)! k!}$$
 With the binomial coefficients, you can define the $n$-th $k$-simplex number $S_{k}(n)$:
@@ -87,8 +155,8 @@ and then solving the equation $C_{4}(n) - n^{4} = 0$. Using this technique you c
 $$C_{5}(n) = 120 S_{5}(n - 4) + 240 S_{4}(n - 3) + 150 S_{3}(n - 2) + 30 S_{2}(n - 1) + S_{1}(n)$$
 That is, you can divide a 5-cube into 120 5-simplex arrays, 240 4-simplex arrays, 150 3-simplex arrays, 30 2-simplex arrays, and one 1-simplex array.&lt;/p&gt;
 &lt;p&gt;It seems that in general, you have
-$$C_{k}(n) = \sum_{l = 1}^{k} c_{l} S_{l}(n - l + 1)$$
-I wonder if there is a neat expression for $c_{l}$.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+$$C_{k}(n) = \sum_{l = 1}^{k} _{k}c_{l} S_{l}(n - l + 1)$$
+I wonder if there is a neat expression for $_{k}c_{l}$.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
