@@ -106,60 +106,68 @@ M.E. Irizarry-Gelpí            </a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Lately I have been thinking a lot about linear algebra and matrices. Indeed, I have been thinking about higher-dimensional generalizations involving $p \times q \times r$ 3-hypermatrices. This was triggered by reading <a href="http://radar.oreilly.com/2015/03/lets-build-open-source-tensor-libraries-for-data-science.html">this blog post on tensors</a>. First, let me review the story of $d$-vectors and $(m \times n)$-matrices.</p>
+                <p>Lately I have been thinking a lot about linear algebra and matrices. Indeed, I have been thinking about higher-dimensional generalizations involving $(p \times q \times r)$-hypermatrices. This was triggered by reading <a href="http://radar.oreilly.com/2015/03/lets-build-open-source-tensor-libraries-for-data-science.html">this blog post on tensors</a>. First, let me review the story of $d$-vectors and $(m \times n)$-matrices.</p>
 <h2>0-Hypermatrices</h2>
 <p>0-Hypermatrices are scalars. These objects carry no indices and can be represented by just a single (real or complex) number.</p>
 <h2>1-Hypermatrices</h2>
 <p>1-Hypermatrices are vectors. These objects carry one index and can be represented as linear arrays of numbers. A $d$-vector with real components is an element of $\mathbb{R}^{d}$.</p>
 <h2>2-Hypermatrices</h2>
 <p>2-Hypermatrices are traditional matrices. These objects carry two indices and can be represented as rectangular arrays of numbers. An $(m \times n)$-matrix with real components is an element of $\mathbb{R}^{m \times n}$.</p>
-<p>You have the matrix product function $P$ that takes an $(m \times p)$-matrix and a $(p \times n)$-matrix, and returns an $(m \times n)$-matrix:
-$$P: \mathbb{R}^{m \times p} \otimes \mathbb{R}^{p \times n} \rightarrow \mathbb{R}^{m \times n}.$$
-This product function has two important properties:</p>
+<p>You have the matrix multiplication operation $P_{1}$ that takes an $(m \times p)$-matrix and a $(p \times n)$-matrix, and returns an $(m \times n)$-matrix:
+$$P_{1}: \mathbb{R}^{m \times p} \otimes \mathbb{R}^{p \times n} \rightarrow \mathbb{R}^{m \times n}.$$
+This multiplication operation has two important properties:</p>
 <ol>
 <li>It is linear in both variables.</li>
 <li>It results in another rectangular matrix.</li>
 </ol>
-<p>I will refer to this product function as the <strong>line product</strong> function.</p>
-<p>You have the transpose function $T$ that takes an $(m \times n)$-matrix, and returns an $(n \times m)$-matrix:
+<p>I will refer to this multiplication operation as the <strong>line product</strong> operation.</p>
+<p>You have the transpose operation $T$ that takes an $(m \times n)$-matrix, and returns an $(n \times m)$-matrix:
 $$T: \mathbb{R}^{m \times n} \rightarrow \mathbb{R}^{n \times m}.$$
-The transpose function satisfies the property $T(T(A)) = A$ for any $(m \times n)$-matrix $A$.</p>
-<p>There are two ways to describe a $d$-vector as a matrix: either as a $(d \times 1)$-matrix (a column vector), or as an $(1 \times d)$-matrix (a row vector). Let $U$ be a $(d \times 1)$-matrix and $W$ be a $(1 \times d)$-matrix. Then $P(U, V)$ is a $(d \times d)$-matrix (the outer product), and $P(V, U)$ is a scalar (the inner product).</p>
-<p>An $n$-square matrix is an $(n \times n)$-matrix. The $n$-identity matrix is an important example of a $n$-square matrix. The line product of two $n$-square matrices $A$ and $B$ is another $n$-square matrix. However, in general $P(A, B) \neq P(B, A)$. Indeed, the commutator function $[A, B]$ quantifies this discrepancy:
-$$[A, B] = P(A, B) - P(B, A).$$
-The line product function is noncommutative.</p>
+The transpose function satisfies the property $T \circ T(A) = A$ for any $(m \times n)$-matrix $A$.</p>
+<p>There are two ways to describe a $d$-vector as a matrix: either as a $(d \times 1)$-matrix (a column vector), or as a $(1 \times d)$-matrix (a row vector). Let $U$ be a $(d \times 1)$-matrix and $W$ be a $(1 \times d)$-matrix. Then $P_{1}(U, V)$ is a $(d \times d)$-matrix (the outer product), and $P_{1}(V, U)$ is a scalar (the inner product).</p>
+<p>An $n$-square matrix is an $(n \times n)$-matrix. The $n$-identity matrix $I_{n}$ is an important example of a $n$-square matrix:
+$$I_{n} = \begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1
+\end{pmatrix}$$
+The line product of two $n$-square matrices $A$ and $B$ is another $n$-square matrix. However, in general $P_{1}(A, B) \neq P_{1}(B, A)$. Indeed, the commutator function $[A, B]$ quantifies this discrepancy:
+$$[A, B] = P_{1}(A, B) - P_{1}(B, A).$$
+The line product is noncommutative.</p>
 <h2>3-Hypermatrices</h2>
 <p>3-Hypermatrices are the next step in the ladder. These objects carry three indices and can be represented as a cuboidal array of numbers. A $(p \times q \times r)$-hypermatrix with real components is an element of $\mathbb{R}^{p \times q \times r}$.</p>
-<p>Since a 3-hypermatrix has three indices, the line product function no longer returns another 3-hypermatrix. After treating the index structure of a 3-hypermatrix as a triangle, and noticing that you can make a triangle from three other triangles, I arrived at the <strong>triangle product</strong> function:
-$$\Delta : \mathbb{R}^{a \times p \times q} \otimes \mathbb{R}^{p \times b \times r} \otimes \mathbb{R}^{q \times r \times c} \rightarrow \mathbb{R}^{a \times b \times c}.$$
-In index form, this looks like
-$$\Delta_{abc} = A_{apq} B_{pbr} C_{qrc}.$$
-This product function shares the same two properties from above with the line product function.</p>
-<p>Before I introduce the five transpose functions that can act on a 3-hypermatrix, it is useful to introduce two auxiliary functions:
+<p>Since a 3-hypermatrix has three indices, the line product no longer returns another 3-hypermatrix. After treating the index structure of a 3-hypermatrix as a triangle, and noticing that you can make a triangle from three other triangles, I arrived at the <strong>triangle product</strong>:
+$$P_{2} : \mathbb{R}^{a \times p \times q} \otimes \mathbb{R}^{p \times b \times r} \otimes \mathbb{R}^{q \times r \times c} \rightarrow \mathbb{R}^{a \times b \times c}.$$
+In index form, $D = P_{2}(A, B, C)$ looks like
+$$D_{abc} = A_{apq} B_{pbr} C_{qrc}.$$
+This multiplication operation shares the same two properties from above with the line product: it is linear in each of the 3-hypermatrices, and it results in another 3-hypermatrix.</p>
+<p>Before I introduce the five transposition operations that can act on a 3-hypermatrix, it is useful to introduce two auxiliary operations:
 $$R: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times a \times b}, \quad M: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times b \times a},$$
-which satisfy the properties $R(R(R(A))) = A$ and $M(M(A)) = A$ for any $(a \times b \times c)$-hypermatrix $A$. With these in hand, the five transpose functions are:
+which satisfy the properties $R \circ R \circ R(A) = A$ and $M\circ M(A) = A$ for any $(a \times b \times c)$-hypermatrix $A$. With these in hand, the five transposition operations are:
 $$R, \quad R \circ R, \quad M, \quad R \circ M, \quad R \circ R \circ M.$$
-Together with the identity function $I$, these six operations form the smallest nonabelian group, the dihedral group of order 6. Alternatively, you can introduce two swap functions:
+Together with the identity operation $I$, these six operations form the smallest nonabelian group, the dihedral group of order 6. Alternatively, you can introduce two swap operations:
 $$S_{12}: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{b \times a \times c}, \quad S_{23}: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{a \times c \times b}. $$
-which satisfy $S_{12}(S_{12}(A)) = A$ and $S_{23}(S_{23}(A)) = A$. Then the five transpose functions are
+which satisfy $S_{12} \circ S_{12}(A) = A$ and $S_{23} \circ S_{23}(A) = A$. Then, the five transposition operations are
 $$S_{12}, \quad S_{23}, \quad S_{12} \circ S_{23}, \quad S_{23} \circ S_{12}, \quad S_{12} \circ S_{23} \circ S_{12}. $$
-Note that $S_{12} \circ S_{23} = R$ and $S_{12} \circ S_{23} \circ S_{12} = M$. If the entries of the 3-hypermatrix are complex, you can enhance the transposition group by adding a complex conjugation function $C$ and five hermitian transpose functions. Thus, the hermitian transposition group has order 12.</p>
+Note that $S_{12} \circ S_{23} = R$ and $S_{12} \circ S_{23} \circ S_{12} = M$. If the entries of the 3-hypermatrix are complex, you can enhance the transposition group by adding a complex conjugation operation $C$ and five Hermite transposition operations. Thus, the Hermite transposition group has order 12 and corresponds to the dihedral group of order 12.</p>
 <p>There are three ways to describe a $d$-vector as a 3-hypermatrix: either as a $(d \times 1 \times 1)$-hypermatrix, as a $(1 \times d \times 1)$-hypermatrix, or as a $(1 \times 1 \times d)$-hypermatrix. Let $X$ be a $(d \times 1 \times 1)$-hypermatrix, $Y$ be a $(1 \times d \times 1)$-hypermatrix, and $Z$ be a $(1 \times 1 \times d)$-hypermatrix. Then:</p>
 <ul>
-<li>$\Delta(X, Y, Z)$ is a $(d \times d \times d)$-hypermatrix, i.e. the polyadic tensor $X_{a} Y_{b} Z_{c}$</li>
-<li>$\Delta(X, Z, Y)$ is a $(d \times 1 \times 1)$-hypermatrix, i.e. the vector $(Z \cdot Y) X_{a}$</li>
-<li>$\Delta(Z, Y, X)$ is a $(1 \times d \times 1)$-hypermatrix, i.e. the vector $(Z \cdot X) Y_{b}$</li>
-<li>$\Delta(Y, X, Z)$ is a $(1 \times 1 \times d)$-hypermatrix, i.e. the vector $(Y \cdot X) Z_{c}$</li>
+<li>$P_{2}(X, Y, Z)$ is a $(d \times d \times d)$-hypermatrix, i.e. the polyadic tensor $X_{a} Y_{b} Z_{c}$</li>
+<li>$P_{2}(X, Z, Y)$ is a $(d \times 1 \times 1)$-hypermatrix, i.e. the vector $(Z \cdot Y) X_{a}$</li>
+<li>$P_{2}(Z, Y, X)$ is a $(1 \times d \times 1)$-hypermatrix, i.e. the vector $(Z \cdot X) Y_{b}$</li>
+<li>$P_{2}(Y, X, Z)$ is a $(1 \times 1 \times d)$-hypermatrix, i.e. the vector $(Y \cdot X) Z_{c}$</li>
 </ul>
-<p>Note that $\Delta(Z, X, Y)$ and $\Delta(Y, Z, X)$ are not well-defined.</p>
+<p>Note that $P_{2}(Z, X, Y)$ and $P_{2}(Y, Z, X)$ are not well-defined because of dimensional issues. If $X$ is such that the entries $X_{a}$ satisfy $X_{a}X_{a} = 1$, then $X$ satisfies the relation $P_{2}(X, X, X) = X$.</p>
 <p>There are three ways to describe a $n$-square matrix as a 3-hypermatrix: either as a $(1 \times n \times n)$-hypermatrix, as an $(n \times 1 \times n)$-hypermatrix, or as an $(n \times n \times 1)$-hypermatrix. Let $F$ be a $(1 \times n \times n)$-hypermatrix, $G$ be a $(n \times 1 \times n)$-hypermatrix, and $H$ be a $(n \times n \times 1)$-hypermatrix. Then:</p>
 <ul>
-<li>$\Delta(F, G, H)$ is an $(1 \times 1 \times 1)$-hypermatrix, i.e. the scalar $\operatorname{tr}{(F G H)}$</li>
-<li>$\Delta(F, H, G)$ is an $(1 \times n \times n)$-hypermatrix, i.e. the $n$-square matrix $\operatorname{tr}{(HG)} F_{ab}$</li>
-<li>$\Delta(H, G, F)$ is an $(n \times 1 \times n)$-hypermatrix, i.e. the $n$-square matrix $\operatorname{tr}{(HF)} G_{ab}$</li>
-<li>$\Delta(G, F, H)$ is an $(n \times n \times 1)$-hypermatrix, i.e. the $n$-square matrix $\operatorname{tr}{(FG)} H_{ab}$</li>
+<li>$P_{2}(F, G, H)$ is an $(1 \times 1 \times 1)$-hypermatrix, i.e. the scalar $\operatorname{tr}{(F G H)}$</li>
+<li>$P_{2}(F, H, G)$ is an $(1 \times n \times n)$-hypermatrix, i.e. the $n$-square matrix $\operatorname{tr}{(HG)} F_{ab}$</li>
+<li>$P_{2}(H, G, F)$ is an $(n \times 1 \times n)$-hypermatrix, i.e. the $n$-square matrix $\operatorname{tr}{(HF)} G_{ab}$</li>
+<li>$P_{2}(G, F, H)$ is an $(n \times n \times 1)$-hypermatrix, i.e. the $n$-square matrix $\operatorname{tr}{(FG)} H_{ab}$</li>
 </ul>
-<p>Note that $\Delta(H, F, G)$ and $\Delta(G, H, F)$ are not well-defined.</p>
+<p>Note that $P_{2}(H, F, G)$ and $P_{2}(G, H, F)$ are not well-defined because of dimensional issues.</p>
 <p>An $n$-cube 3-hypermatrix is an $(n \times n \times n)$-hypermatrix. The $n$-identity 3-hypermatrix is an important example of an $n$-cube 3-hypermatrix. The triangle product of three $n$-cube 3-hypermatrices $A$, $B$ and $C$ is another $n$-cube 3-hypermatrix.</p><script type= "text/javascript">
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
