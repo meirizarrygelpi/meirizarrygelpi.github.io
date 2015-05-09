@@ -5,7 +5,8 @@
 &lt;h2&gt;1-Hypermatrices&lt;/h2&gt;
 &lt;p&gt;1-Hypermatrices are vectors. These objects carry one index and can be represented as linear arrays of numbers. A $d$-vector with real components is an element of $\mathbb{R}^{d}$.&lt;/p&gt;
 &lt;h2&gt;2-Hypermatrices&lt;/h2&gt;
-&lt;p&gt;2-Hypermatrices are traditional matrices. These objects carry two indices and can be represented as rectangular arrays of numbers. An $(m \times n)$-matrix with real components is an element of $\mathbb{R}^{m \times n}$. You have the matrix product function $P$ that takes an $(m \times p)$-matrix and a $(p \times n)$-matrix, and returns an $(m \times n)$-matrix:
+&lt;p&gt;2-Hypermatrices are traditional matrices. These objects carry two indices and can be represented as rectangular arrays of numbers. An $(m \times n)$-matrix with real components is an element of $\mathbb{R}^{m \times n}$.&lt;/p&gt;
+&lt;p&gt;You have the matrix product function $P$ that takes an $(m \times p)$-matrix and a $(p \times n)$-matrix, and returns an $(m \times n)$-matrix:
 $$P: \mathbb{R}^{m \times p} \otimes \mathbb{R}^{p \times n} \rightarrow \mathbb{R}^{m \times n}.$$
 This product function has two important properties:&lt;/p&gt;
 &lt;ol&gt;
@@ -28,14 +29,14 @@ In index form, this looks like
 $$\Delta_{abc} = A_{apq} B_{pbr} C_{qrc}.$$
 This product function shares the same two properties from above with the line product function.&lt;/p&gt;
 &lt;p&gt;Before I introduce the five transpose functions that can act on a 3-hypermatrix, it is useful to introduce two auxiliary functions:
-$$C: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times a \times b}, \quad M: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times b \times a},$$
-which satisfy the properties $C(C(C(A))) = A$ and $M(M(A)) = A$ for any $(a \times b \times c)$-hypermatrix $A$. With these in hand, the five transpose functions are:
-$$C, \quad C \circ C, \quad M, \quad C \circ M, \quad C \circ C \circ M.$$
+$$R: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times a \times b}, \quad M: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times b \times a},$$
+which satisfy the properties $R(R(R(A))) = A$ and $M(M(A)) = A$ for any $(a \times b \times c)$-hypermatrix $A$. With these in hand, the five transpose functions are:
+$$R, \quad R \circ R, \quad M, \quad R \circ M, \quad R \circ R \circ M.$$
 Together with the identity function $I$, these six operations form the smallest nonabelian group, the dihedral group of order 6. Alternatively, you can introduce two swap functions:
 $$S_{12}: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{b \times a \times c}, \quad S_{23}: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{a \times c \times b}. $$
 which satisfy $S_{12}(S_{12}(A)) = A$ and $S_{23}(S_{23}(A)) = A$. Then the five transpose functions are
 $$S_{12}, \quad S_{23}, \quad S_{12} \circ S_{23}, \quad S_{23} \circ S_{12}, \quad S_{12} \circ S_{23} \circ S_{12}. $$
-Note that $S_{12} \circ S_{23} = C$ and $S_{12} \circ S_{23} \circ S_{12} = M$.&lt;/p&gt;
+Note that $S_{12} \circ S_{23} = R$ and $S_{12} \circ S_{23} \circ S_{12} = M$. If the entries of the 3-hypermatrix are complex, you can enhance the transposition group by adding a complex conjugation function $C$ and five hermitian transpose functions. Thus, the hermitian transposition group has order 12.&lt;/p&gt;
 &lt;p&gt;There are three ways to describe a $d$-vector as a 3-hypermatrix: either as a $(d \times 1 \times 1)$-hypermatrix, as a $(1 \times d \times 1)$-hypermatrix, or as a $(1 \times 1 \times d)$-hypermatrix. Let $X$ be a $(d \times 1 \times 1)$-hypermatrix, $Y$ be a $(1 \times d \times 1)$-hypermatrix, and $Z$ be a $(1 \times 1 \times d)$-hypermatrix. Then:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;$\Delta(X, Y, Z)$ is a $(d \times d \times d)$-hypermatrix, i.e. the polyadic tensor $X_{a} Y_{b} Z_{c}$&lt;/li&gt;
