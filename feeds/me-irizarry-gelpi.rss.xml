@@ -221,7 +221,7 @@ and then solving the equation $C_{4}(n) - n^{4} = 0$. Using this technique you c
 $$C_{5}(n) = 120 S_{5}(n - 4) + 240 S_{4}(n - 3) + 150 S_{3}(n - 2) + 30 S_{2}(n - 1) + S_{1}(n)$$
 That is, you can divide a 5-cube into 120 5-simplex arrays, 240 4-simplex arrays, 150 3-simplex arrays, 30 2-simplex arrays, and one 1-simplex array.&lt;/p&gt;
 &lt;p&gt;It seems that in general, you have
-$$C_{k}(n) = \sum_{l = 1}^{k} _{k}c_{l} S_{l}(n - l + 1)$$
+$$C_{k}(n) = \sum_{l = 1}^{k} {_{k}c_{l}} S_{l}(n - l + 1)$$
 I wonder if there is a neat expression for $_{k}c_{l}$.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
