@@ -41,69 +41,104 @@
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1505.00009"&gt;Geometry of 6D RG Flows&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1505.00963"&gt;The Epsilon-Expansion from Conformal Field Theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1505.01000"&gt;Assuming Regge trajectories in holographic QCD: from OPE to Chiral Perturbation Theory&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>The Triangle Product and 3-Hypermatrices</title><link href="http://meirizarrygelpi.github.io/posts/2015/May/3-hypermatrices-triangle-product/" rel="alternate"></link><updated>2015-05-06T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-05-06:posts/2015/May/3-hypermatrices-triangle-product/</id><summary type="html">&lt;p&gt;Lately I have been thinking a lot about linear algebra and matrices. Indeed, I have been thinking about higher-dimensional generalizations involving $(p \times q \times r)$-hypermatrices. This was triggered by reading &lt;a href="http://radar.oreilly.com/2015/03/lets-build-open-source-tensor-libraries-for-data-science.html"&gt;this blog post on tensors&lt;/a&gt;. First, let me review the story of $d$-vectors and $(m \times n)$-matrices.&lt;/p&gt;
-&lt;h2&gt;0-Hypermatrices&lt;/h2&gt;
-&lt;p&gt;0-Hypermatrices are scalars. These objects carry no indices and can be represented by just a single (real or complex) number.&lt;/p&gt;
-&lt;h2&gt;1-Hypermatrices&lt;/h2&gt;
-&lt;p&gt;1-Hypermatrices are vectors. These objects carry one index and can be represented as linear arrays of numbers. A $d$-vector with real components is an element of $\mathbb{R}^{d}$.&lt;/p&gt;
-&lt;h2&gt;2-Hypermatrices&lt;/h2&gt;
-&lt;p&gt;2-Hypermatrices are traditional matrices. These objects carry two indices and can be represented as rectangular arrays of numbers. An $(m \times n)$-matrix with real components is an element of $\mathbb{R}^{m \times n}$.&lt;/p&gt;
-&lt;p&gt;You have the matrix multiplication operation $P_{1}$ that takes an $(m \times p)$-matrix and a $(p \times n)$-matrix, and returns an $(m \times n)$-matrix:
-$$P_{1}: \mathbb{R}^{m \times p} \otimes \mathbb{R}^{p \times n} \rightarrow \mathbb{R}^{m \times n}.$$
-This multiplication operation has two important properties:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;It is linear in both variables.&lt;/li&gt;
-&lt;li&gt;It results in another rectangular matrix.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;I will refer to this multiplication operation as the &lt;strong&gt;line product&lt;/strong&gt; operation.&lt;/p&gt;
-&lt;p&gt;You have the transpose operation $T$ that takes an $(m \times n)$-matrix, and returns an $(n \times m)$-matrix:
-$$T: \mathbb{R}^{m \times n} \rightarrow \mathbb{R}^{n \times m}.$$
-The transpose function satisfies the property $T \circ T(A) = A$ for any $(m \times n)$-matrix $A$.&lt;/p&gt;
-&lt;p&gt;There are two ways to describe a $d$-vector as a matrix: either as a $(d \times 1)$-matrix (a column vector), or as a $(1 \times d)$-matrix (a row vector). Let $U$ be a $(d \times 1)$-matrix and $W$ be a $(1 \times d)$-matrix. Then $P_{1}(U, V)$ is a $(d \times d)$-matrix (the outer product), and $P_{1}(V, U)$ is a scalar (the inner product).&lt;/p&gt;
-&lt;p&gt;An $n$-square matrix is an $(n \times n)$-matrix. The $n$-identity matrix $I_{n}$ is an important example of a $n$-square matrix:
-$$I_{n} = \begin{pmatrix}
-1 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\
-0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\
-0 &amp;amp; 0 &amp;amp; 1 &amp;amp; \cdots &amp;amp; 0 \\
-\vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\
-0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 1
-\end{pmatrix}$$
-The line product of two $n$-square matrices $A$ and $B$ is another $n$-square matrix. However, in general $P_{1}(A, B) \neq P_{1}(B, A)$. Indeed, the commutator function $[A, B]$ quantifies this discrepancy:
-$$[A, B] = P_{1}(A, B) - P_{1}(B, A).$$
-The line product is noncommutative.&lt;/p&gt;
-&lt;h2&gt;3-Hypermatrices&lt;/h2&gt;
-&lt;p&gt;3-Hypermatrices are the next step in the ladder. These objects carry three indices and can be represented as a cuboidal array of numbers. A $(p \times q \times r)$-hypermatrix with real components is an element of $\mathbb{R}^{p \times q \times r}$.&lt;/p&gt;
-&lt;p&gt;Since a 3-hypermatrix has three indices, the line product no longer returns another 3-hypermatrix. After treating the index structure of a 3-hypermatrix as a triangle, and noticing that you can make a triangle from three other triangles, I arrived at the &lt;strong&gt;triangle product&lt;/strong&gt;:
-$$P_{2} : \mathbb{R}^{a \times p \times q} \otimes \mathbb{R}^{p \times b \times r} \otimes \mathbb{R}^{q \times r \times c} \rightarrow \mathbb{R}^{a \times b \times c}.$$
-In index form, $D = P_{2}(A, B, C)$ looks like
-$$D_{abc} = A_{apq} B_{pbr} C_{qrc}.$$
-This multiplication operation shares the same two properties from above with the line product: it is linear in each of the 3-hypermatrices, and it results in another 3-hypermatrix.&lt;/p&gt;
-&lt;p&gt;Before I introduce the five transposition operations that can act on a 3-hypermatrix, it is useful to introduce two auxiliary operations:
-$$R: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times a \times b}, \quad M: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{c \times b \times a},$$
-which satisfy the properties $R \circ R \circ R(A) = A$ and $M\circ M(A) = A$ for any $(a \times b \times c)$-hypermatrix $A$. With these in hand, the five transposition operations are:
-$$R, \quad R \circ R, \quad M, \quad R \circ M, \quad R \circ R \circ M.$$
-Together with the identity operation $I$, these six operations form the smallest nonabelian group, the dihedral group of order 6. Alternatively, you can introduce two swap operations:
-$$S_{12}: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{b \times a \times c}, \quad S_{23}: \mathbb{R}^{a \times b \times c} \rightarrow \mathbb{R}^{a \times c \times b}. $$
-which satisfy $S_{12} \circ S_{12}(A) = A$ and $S_{23} \circ S_{23}(A) = A$. Then, the five transposition operations are
-$$S_{12}, \quad S_{23}, \quad S_{12} \circ S_{23}, \quad S_{23} \circ S_{12}, \quad S_{12} \circ S_{23} \circ S_{12}. $$
-Note that $S_{12} \circ S_{23} = R$ and $S_{12} \circ S_{23} \circ S_{12} = M$. If the entries of the 3-hypermatrix are complex, you can enhance the transposition group by adding a complex conjugation operation $C$ and five Hermite transposition operations. Thus, the Hermite transposition group has order 12 and corresponds to the dihedral group of order 12.&lt;/p&gt;
-&lt;p&gt;There are three ways to describe a $d$-vector as a 3-hypermatrix: either as a $(d \times 1 \times 1)$-hypermatrix, as a $(1 \times d \times 1)$-hypermatrix, or as a $(1 \times 1 \times d)$-hypermatrix. Let $X$ be a $(d \times 1 \times 1)$-hypermatrix, $Y$ be a $(1 \times d \times 1)$-hypermatrix, and $Z$ be a $(1 \times 1 \times d)$-hypermatrix. Then:&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>The Triangle Product of 3-Hypermatrices</title><link href="http://meirizarrygelpi.github.io/posts/2015/May/triangle-product-3-hypermatrices/" rel="alternate"></link><updated>2015-05-06T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-05-06:posts/2015/May/triangle-product-3-hypermatrices/</id><summary type="html">&lt;p&gt;Lately, I have been thinking about vectors, matrices and linear algebra. Indeed, I have been thinking about higher-dimensional generalizations of matrices, i.e. from two-dimensional arrays of numbers to three-dimensional arrays of numbers. This was triggered by reading &lt;a href="http://radar.oreilly.com/2015/03/lets-build-open-source-tensor-libraries-for-data-science.html"&gt;this blog post on tensors&lt;/a&gt;. In this post I will propose some generalizations to many of the properties of matrices to the case of 3-hypermatrices.&lt;/p&gt;
+&lt;h2&gt;$k$-Orthotopic Arrays&lt;/h2&gt;
+&lt;p&gt;A matrix is a rectangular array of elements. The 3-dimensional analog of a rectangle is the cuboid (also known as a 3-orthotope). Arranging elements into a cuboidal array yields what I will call a cuboidal 3-hypermatrix. A square matrix is a special case where the 2-dimensional array has a square shape. The 3-dimensional analog of a square is the cube. Arranging elements into a cubic array yields what I will call a cubic 3-hypermatrix.&lt;/p&gt;
+&lt;p&gt;More generally, the $k$-dimensional analog of a rectangle is the $k$-orthotope, and the $k$-dimensional analog of a square is the $k$-cube. Arranging elements into a $k$-orthotopic array yields an orthotopic $k$-hypermatrix. Similarly, arranging elements into a $k$-cubic array yields a hypercubic $k$-hypermatrix.&lt;/p&gt;
+&lt;p&gt;The discussion below will have the following form: I will first introduce a property of a matrix, then I will propose the analog of the property for 3-hypermatrices, and finally I will comment on the general case for $k$-hypermatrices.&lt;/p&gt;
+&lt;h2&gt;Size&lt;/h2&gt;
+&lt;p&gt;The size of a rectangular matrix $\mathbf{A}$ is given by a 2-tuple of natural numbers:
+$$\operatorname{size}{(\mathbf{A})} = (m, n) \in \mathbb{N}^{2}.$$
+Here $m$ is the number of rows, and $n$ is the number of columns. I will refer to $m$ as the capacity of the row-axis, and $n$ as the capacity of the column-axis. The set of all possible matrices with size $(m, n)$ is denoted by $\mathbb{A}_{m \times n}$. The set of all possible rectangular matrices is denoted by $\mathbb{A}_{2}$. It is given by
+$$\mathbb{A}_{2} = \bigcup_{(m, n) \in \mathbb{N}^{2}} \mathbb{A}_{m \times n}.$$
+The set of square matrices is a subset of this space. The 2-tuples of natural numbers can be arranged in a semi-infinite triangular array, similar to Pascal's triangle:
+$$(1, 1)$$
+$$(1, 2) \quad (2, 1)$$
+$$(1, 3) \quad (2, 2) \quad (3, 1)$$
+$$(1, 4) \quad (2, 3) \quad (3, 2) \quad (4, 1)$$
+$$(1, 5) \quad (2, 4) \quad (3, 3) \quad (4, 2) \quad (5, 1)$$
+The 2-tuple on top of the triangle describes the size of matrices that correspond to scalars (plain numbers). The left outer edge of the triangle describes the size of matrices that correspond to row vectors. Similarly, the right outer edge of the triangle describes the size of matrices that correspond to column vectors. Finally, the internal triangle, with $(2, 2)$ being on top, describes the size of rectangular matrices.&lt;/p&gt;
+&lt;p&gt;In a similar manner, the size of an orthotopic 3-hypermatrix $\mathbf{A}$ is given by a 3-tuple of natural numbers:
+$$\operatorname{size}{(\mathbf{A})} = (a, b, c) \in \mathbb{N}^{3}.$$
+I will refer to $a$ as the capacity of the 1-axis, to $b$ as the capacity of the 2-axis, and $c$ as the capacity of the 3-axis. The set of all possible orthotopic 3-hypermatrices with size $(a, b, c)$ is denoted by $\mathbb{A}_{a \times b \times c}$. The set of all possible orthotopic 3-matrices is denoted by $\mathbb{A}_{3}$. It is given by
+$$\mathbb{A}_{3} = \bigcup_{(a, b, c) \in \mathbb{N}^{3}} \mathbb{A}_{a \times b \times c}.$$
+The set of cubic 3-hypermatrices is a subset of this space. The 3-tuples of natural numbers can be arranged in a semi-infinite tetrahedral array, similar to Pascal's tetrahedron. The top vertex of this tetrahedron describes the size of 3-hypermatrices that correspond to scalars. Each of the three edges from the top vertex correspond to the size of 3-hypermatrices that correspond to vectors (three kinds now). Each of the three faces correspond to the size of 3-hypermatrices that correspond to matrices. The internal tetrahedron, with the 3-tuple $(2, 2, 2)$ being on top, describes the size of orthotopic 3-hypermatrices.&lt;/p&gt;
+&lt;p&gt;More generally, the size of an orthotopic $k$-hypermatrix $\mathbf{A}$ is given by a $k$-tuple of natural numbers:
+$$\operatorname{size}{(\mathbf{A})} = t = (n_{1}, n_{2}, \ldots, n_{k}) \in \mathbb{N}^{k}.$$
+I will refer to $n_{j}$ as the capacity of the $j$-axis. The set of all possible orthotopic $k$-hypermatrices with size $t$ is denoted by $\mathbb{A}_{t}$. The set of all possible orthotopic $k$-matrices is denoted by $\mathbb{A}_{k}$. It is given by
+$$\mathbb{A}_{k} = \bigcup_{t \in \mathbb{N}^{k}} \mathbb{A}_{t}.$$
+The set of hypercubic $k$-hypermatrices is a subset of this space.&lt;/p&gt;
+&lt;h2&gt;Addition&lt;/h2&gt;
+&lt;p&gt;Given two rectangular matrices $\mathbf{A}$ and $\mathbf{B}$, both with size $(m, n)$, the operation $\operatorname{add}_{2}(\mathbf{A}, \mathbf{B})$ returns a third matrix with size $(m, n)$. Thus,
+$$\operatorname{add}_{2} : \mathbb{A}_{m \times n} \times \mathbb{A}_{m \times n} \longrightarrow \mathbb{A}_{m \times n}.$$
+The elements of the matrix $\operatorname{add}_{2}(\mathbf{A}, \mathbf{B})$ are found by element-wise adding the elements of $\mathbf{A}$ with the elements of $\mathbf{B}$. The addition operation on matrices is commutative:
+$$\operatorname{add}_{2}(\mathbf{A}, \mathbf{B}) = \operatorname{add}_{2}(\mathbf{B}, \mathbf{A}).$$
+It is also associative:
+$$\operatorname{add}_{2}(\operatorname{add}_{2}(\mathbf{A}, \mathbf{B}), \mathbf{C}) = \operatorname{add}_{2}(\mathbf{A}, \operatorname{add}_{2}(\mathbf{B}, \mathbf{C})).$$
+In a very similar manner, you can define the operation $\operatorname{add}_{3}$, and more generally $\operatorname{add}_{k}$ for adding two hypermatrices of the same size. These operations are also associative and commutative.&lt;/p&gt;
+&lt;h2&gt;Cayley Transposition&lt;/h2&gt;
+&lt;p&gt;A rectangular matrix $\mathbf{A}$ with size $(m, n)$ has a total of $m \cdot n$ elements. These can be rearranged into a rectangular matrix $T(\mathbf{A})$ with size $(n, m)$ by swapping the row-axis with the column-axis. This operation is called the Cayley transposition:
+$$T: \mathbb{A}_{m \times n} \longrightarrow \mathbb{A}_{n \times m}.$$
+The Cayley transposition is an involution:
+$$T \circ T = I,$$
+where $I$ is the identity operation. The operations $I$ and $T$ form $S_{2}$, the symmetric group of degree 2.&lt;/p&gt;
+&lt;p&gt;Similarly, an orthotopic 3-hypermatrix with size $(a, b, c)$ has a total of $a \cdot b \cdot c$ elements. These can be rearranged into five other orthotopic 3-hypermatrices, corresponding to the $3! - 1 = 5$ permutations of its three axes. Thus, there are five Cayley transpositions:
+$$T_{1}: \mathbb{A}_{a \times b \times c} \longrightarrow \mathbb{A}_{b \times a \times c},$$
+$$T_{2}: \mathbb{A}_{a \times b \times c} \longrightarrow \mathbb{A}_{a \times c \times b},$$
+$$T_{3}: \mathbb{A}_{a \times b \times c} \longrightarrow \mathbb{A}_{c \times b \times a},$$
+$$T_{4}: \mathbb{A}_{a \times b \times c} \longrightarrow \mathbb{A}_{c \times a \times b},$$
+$$T_{5}: \mathbb{A}_{a \times b \times c} \longrightarrow \mathbb{A}_{b \times c \times a}.$$
+Three of these are involutions:
+$$T_{1} \circ T_{1} = I, \quad T_{2} \circ T_{2} = I, \quad T_{3} \circ T_{3} = I.$$
+The other two are each other's inverses:
+$$T_{4} \circ T_{5} = I, \quad T_{5} \circ T_{4} = I.$$
+The five Cayley transpositions and the identity operation form $S_{3}$, the symmetric group of degree 3.&lt;/p&gt;
+&lt;p&gt;More generally, an orthotopic $k$-hypermatrix can be rearranged into $k! - 1$ different orthotopic $k$-hypermatrices. Thus, you will have $k! - 1$ Cayley transpositions $T_{j}$. Only $k$ of these are involutions. Together with the identity element, the $k! - 1$ Cayley transpositions form $S_{k}$, the symmetric group of degree $k$.&lt;/p&gt;
+&lt;h2&gt;Complex Conjugation&lt;/h2&gt;
+&lt;p&gt;If a rectangular matrix $\mathbf{A}$ has complex elements, then the complex conjugation operation $C$ returns a matrix $C(\mathbf{A})$ with the same size as $\mathbf{A}$, but with element-wise complex conjugation. This operation is an involution:
+$$C \circ C = I$$
+The operation $C$ together with the identity operation form $S_{2}$, the symmetric group of degree 2.&lt;/p&gt;
+&lt;p&gt;Complex conjugation can be defined in the same way for 3-hypermatrices, and also for $k$-hypermatrices.&lt;/p&gt;
+&lt;h2&gt;Hermite Transposition&lt;/h2&gt;
+&lt;p&gt;The Hermite transposition operation $H$ on a rectangular matrix $\mathbf{A}$ is defined by composing complex conjugation with Cayley transposition:
+$$H(\mathbf{A}) = C \circ T(\mathbf{A}) = T \circ C(\mathbf{A}).$$
+Hermite transposition on a matrix is an involution. The operations $C$, $T$, $H$, and the identity form the group $S_{2} \times S_{2}$, which is equivalent to the dihedral group of order 4.&lt;/p&gt;
+&lt;p&gt;There are five Cayley transpositions on a 3-hypermatrix, so there are five Hermite transpositions:
+$$H_{j} = C \circ T_{j} = T_{j} \circ C.$$
+Only three of these are involutions. The composition of two distinct Hermite transpositions is a Cayley transposition. The five Hermite transpositions, together with the five Cayley transpositions, $C$ and the identity operation form the group $S_{3} \times S_{2}$, which is equivalent to the dihedral group of order 12.&lt;/p&gt;
+&lt;p&gt;A similar story holds for $k$-hypermatrices: you have $k! - 1$ Hermite transpositions, some of them are involutions, and together with the $k! - 1$ Cayley transpositions, the complex conjugation operation, and the identity operation they form the group $S_{k} \times S_{2}$ with $2 (k !)$ elements.&lt;/p&gt;
+&lt;h2&gt;Multiplication&lt;/h2&gt;
+&lt;p&gt;The matrix multiplication operation $\operatorname{mul}_{2}$ takes a matrix $\mathbf{A}$ with size $(m, p)$, and a matrix $\mathbf{B}$ with size $(p, n)$, and returns a matrix $\operatorname{mul}_{2}{(\mathbf{A}, \mathbf{B})}$ with size $(m, n)$. That is,
+$$\operatorname{mul}_{2}: \mathbb{A}_{m \times p} \times \mathbb{A}_{p \times n} \longrightarrow \mathbb{A}_{m \times n}.$$
+If the elements of $\mathbf{A}$ are denoted by $A_{\alpha \mu}$, the elements of $\mathbf{B}$ are denoted by $B_{\mu \beta}$, and the elements of $\mathbf{C} = \operatorname{mul}_{2}{(\mathbf{A}, \mathbf{B})}$ are denoted by $C_{\alpha \beta}$, then
+$$C_{\alpha \beta} = \sum_{\mu = 1}^{p} A_{\alpha \mu} B_{\mu \beta}.$$
+That is, the elements of $\mathbf{C}$ are found by contracting the column-axis of $\mathbf{A}$ with the row-axis of $\mathbf{B}$. It is for this reason that the capacity of the column-axis of $\mathbf{A}$ must equal the capacity of the row-axis of $\mathbf{B}$.&lt;/p&gt;
+&lt;p&gt;The multiplication operation satisfies the property
+$$T(\operatorname{mul}_{2}{(\mathbf{A}, \mathbf{B})}) = \operatorname{mul}_{2}{(T(\mathbf{B}), T(\mathbf{A}))}.$$
+This is how you distribute the Cayley transposition operation on a product of matrices.&lt;/p&gt;
+&lt;p&gt;One way to motivate the matrix multiplication operation is by viewing each rectangular matrix as a line with two endpoints: the row-axis and the column-axis. The operation $\operatorname{mul}_{2}$ takes two lines and concatenates them to return another line. The concatenation contracts the column-axis of the first matrix with the row-axis of the second matrix.&lt;/p&gt;
+&lt;p&gt;I want the 3-hypermatrix multiplication operation $\operatorname{mul}_{3}$ to return a 3-hypermatrix. A 3-hypermatrix has three axes. Viewing each orthotopic 3-hypermatrix as a triangle (a 2-simplex), it appears one needs to concatenate three triangles to return another triangle. This leads me to introduce the triangle product operation, which is a ternary operation:
+$$\operatorname{mul}_{3}: \mathbb{A}_{a \times p \times q} \times \mathbb{A}_{p \times b \times r} \times \mathbb{A}_{q \times r \times c} \longrightarrow \mathbb{A}_{a \times b \times c}.$$
+Let $\mathbf{A}$ be a 3-hypermatrix with size $(a, p, q)$, $\mathbf{B}$ be a 3-hypermatrix with size $(p, b, r)$, and $\mathbf{C}$ be a 3-hypermatrix with size $(q, r, c)$. The triangle product $\mathbf{D} = \operatorname{mul}_{3}{(\mathbf{A}, \mathbf{B}, \mathbf{C})}$ is a 3-hypermatrix with size $(a, b, c)$. The elements of $\mathbf{D}$ are given by
+$$D_{\alpha \beta \gamma} = \sum_{\mu = 1}^{p} \sum_{\nu = 1}^{q} \sum_{\rho = 1}^{r} A_{\alpha \mu \nu} B_{\mu \beta \rho} C_{\nu \rho \gamma}.$$
+Here are more details:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$P_{2}(X, Y, Z)$ is a $(d \times d \times d)$-hypermatrix, i.e. the polyadic tensor $X_{a} Y_{b} Z_{c}$&lt;/li&gt;
-&lt;li&gt;$P_{2}(X, Z, Y)$ is a $(d \times 1 \times 1)$-hypermatrix, i.e. the vector $(Z \cdot Y) X_{a}$&lt;/li&gt;
-&lt;li&gt;$P_{2}(Z, Y, X)$ is a $(1 \times d \times 1)$-hypermatrix, i.e. the vector $(Z \cdot X) Y_{b}$&lt;/li&gt;
-&lt;li&gt;$P_{2}(Y, X, Z)$ is a $(1 \times 1 \times d)$-hypermatrix, i.e. the vector $(Y \cdot X) Z_{c}$&lt;/li&gt;
+&lt;li&gt;The 1-axis of $\mathbf{A}$ survives as the 1-axis of $\mathbf{D}$.&lt;/li&gt;
+&lt;li&gt;The 2-axis of $\mathbf{A}$ is contracted with the 1-axis of $\mathbf{B}$.&lt;/li&gt;
+&lt;li&gt;The 3-axis of $\mathbf{A}$ is contracted with the 1-axis of $\mathbf{C}$.&lt;/li&gt;
+&lt;li&gt;The 2-axis of $\mathbf{B}$ survives as the 2-axis of $\mathbf{D}$.&lt;/li&gt;
+&lt;li&gt;The 3-axis of $\mathbf{B}$ is contracted with the 2-axis of $\mathbf{C}$.&lt;/li&gt;
+&lt;li&gt;The 3-axis of $\mathbf{C}$ survives as the 3-axis of $\mathbf{D}$.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Note that $P_{2}(Z, X, Y)$ and $P_{2}(Y, Z, X)$ are not well-defined because of dimensional issues. If $X$ is such that the entries $X_{a}$ satisfy $X_{a}X_{a} = 1$, then $X$ satisfies the relation $P_{2}(X, X, X) = X$.&lt;/p&gt;
-&lt;p&gt;There are three ways to describe a $n$-square matrix as a 3-hypermatrix: either as a $(1 \times n \times n)$-hypermatrix, as an $(n \times 1 \times n)$-hypermatrix, or as an $(n \times n \times 1)$-hypermatrix. Let $F$ be a $(1 \times n \times n)$-hypermatrix, $G$ be a $(n \times 1 \times n)$-hypermatrix, and $H$ be a $(n \times n \times 1)$-hypermatrix. Then:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$P_{2}(F, G, H)$ is an $(1 \times 1 \times 1)$-hypermatrix, i.e. the scalar $\operatorname{tr}{(F G H)}$&lt;/li&gt;
-&lt;li&gt;$P_{2}(F, H, G)$ is an $(1 \times n \times n)$-hypermatrix, i.e. the $n$-square matrix $\operatorname{tr}{(HG)} F_{ab}$&lt;/li&gt;
-&lt;li&gt;$P_{2}(H, G, F)$ is an $(n \times 1 \times n)$-hypermatrix, i.e. the $n$-square matrix $\operatorname{tr}{(HF)} G_{ab}$&lt;/li&gt;
-&lt;li&gt;$P_{2}(G, F, H)$ is an $(n \times n \times 1)$-hypermatrix, i.e. the $n$-square matrix $\operatorname{tr}{(FG)} H_{ab}$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Note that $P_{2}(H, F, G)$ and $P_{2}(G, H, F)$ are not well-defined because of dimensional issues.&lt;/p&gt;
-&lt;p&gt;An $n$-cube 3-hypermatrix is an $(n \times n \times n)$-hypermatrix. The $n$-identity 3-hypermatrix is an important example of an $n$-cube 3-hypermatrix. The triangle product of three $n$-cube 3-hypermatrices $A$, $B$ and $C$ is another $n$-cube 3-hypermatrix.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+&lt;p&gt;The triangle product satisfies these properties:
+$$T_{1}(\operatorname{mul}_{3}{(\mathbf{A}, \mathbf{B}, \mathbf{C})}) = \operatorname{mul}_{3}{(T_{1}(\mathbf{B}), T_{1}(\mathbf{A}), T_{1}(\mathbf{C}))},$$
+$$T_{2}(\operatorname{mul}_{3}{(\mathbf{A}, \mathbf{B}, \mathbf{C})}) = \operatorname{mul}_{3}{(T_{2}(\mathbf{A}), T_{2}(\mathbf{C}), T_{2}(\mathbf{B}))},$$
+$$T_{3}(\operatorname{mul}_{3}{(\mathbf{A}, \mathbf{B}, \mathbf{C})}) = \operatorname{mul}_{3}{(T_{3}(\mathbf{C}), T_{3}(\mathbf{B}), T_{3}(\mathbf{A}))},$$
+$$T_{4}(\operatorname{mul}_{3}{(\mathbf{A}, \mathbf{B}, \mathbf{C})}) = \operatorname{mul}_{3}{(T_{4}(\mathbf{C}), T_{4}(\mathbf{A}), T_{4}(\mathbf{B}))},$$
+$$T_{5}(\operatorname{mul}_{3}{(\mathbf{A}, \mathbf{B}, \mathbf{C})}) = \operatorname{mul}_{3}{(T_{5}(\mathbf{B}), T_{5}(\mathbf{C}), T_{5}(\mathbf{A}))}.$$
+These are natural generalizations of the properties for matrices.&lt;/p&gt;
+&lt;p&gt;Presumably, for the case of $k$-hypermatrices, the multiplication operation $\operatorname{mul}_{k}$ takes $k$ orthotopic $k$-hypermatrices and returns another orthotopic $k$-hypermatrix. The contraction is done in such a way as to preserve the $k$-simplex structure.&lt;/p&gt;
+&lt;p&gt;I will explore more properties of the triangle product in a future post.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
     if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
         var mathjaxscript = document.createElement('script');
         mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
