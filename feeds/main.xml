@@ -1,5 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-05-31T00:00:00-04:00</updated><entry><title>arXiv picks for 2015, week 22</title><link href="http://meirizarrygelpi.github.io/posts/2015/May/2015-week-22/" rel="alternate"></link><updated>2015-05-31T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-05-31:posts/2015/May/2015-week-22/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-06-04T00:00:00-04:00</updated><entry><title>Semiclassical Dimensional Analysis</title><link href="http://meirizarrygelpi.github.io/posts/2015/Jun/semiclassical-dimensional-analysis/" rel="alternate"></link><updated>2015-06-04T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-06-04:posts/2015/Jun/semiclassical-dimensional-analysis/</id><summary type="html">&lt;p&gt;Before we begin, a note on units. I will work with a system of units where velocity and speed are dimensionless, and the speed of light sets the scale. Thus, $c = 1$. This means that time and length have the same dimensions, as well as momentum, energy, and mass:
+$$ [\text{time}] = [\text{length}] \qquad [\text{momentum}] = [\text{energy}] = [\text{mass}].$$
+However, I will keep $\hbar$ dimensionful. Since $\hbar$ has the same units as action and also angular momentum, you have the relation
+$$[\text{length}] + [\text{mass}] = [\hbar].$$
+I will prefer to work with mass and $\hbar$ as the independent units. Thus, the units of a quantity $Q$ can be decomposed as
+$$[Q] = \Delta_{\hbar}(Q) [\hbar] + \Delta_{m}(Q) [\text{mass}].$$
+Here $\Delta_{\hbar}(Q)$ is the $\hbar$-dimension of $Q$, and $\Delta_{m}(Q)$ is the mass-dimension of $Q$.&lt;/p&gt;
+&lt;h2&gt;Particles and Waves&lt;/h2&gt;
+&lt;p&gt;Two very important problems in classical physics are the study of interacting particles, and the study of interacting waves. Particles are discrete objects, so they are better described classically with mechanical variables likes position and momentum. On the other hand, waves are better described classically as excitations of continuous objects known as fields. Thus, when you do &lt;strong&gt;classical mechanics&lt;/strong&gt;, you work with particles; when you do &lt;strong&gt;classical field theory&lt;/strong&gt;, you work with waves.&lt;/p&gt;
+&lt;p&gt;For example, the action functional for a free relativistic scalar particle is
+$$S_{m} = \int \mathrm{d} \tau \left[ - \dot{x} \cdot p + \frac{1}{2} v (p^{2} + m^{2}) \right].$$
+Here $m$ is a constant with units of mass. Note that the action is given as an integral along the worldline. Since this is a classical theory, there are no explicit factors of $\hbar$. However, the action functional has units of $\hbar$. From the second term in $S_{m}$, it follows that
+$$[v \mathrm{d}\tau] = [\hbar] - 2 [\text{mass}].$$
+In contrast with the free relativistic scalar particle, the action functional for a free relativistic scalar wave is
+$$S_{\kappa} = \frac{1}{2} \int \mathrm{d} x \left[ \phi \left(-\frac{1}{2}\partial^{2} + \frac{1}{2}\kappa^{2} \right) \phi \right].$$
+Here $\kappa$ is a constant with units of inverse distance. Now the action is an integral along the region where the field lives, usually the entirety of spacetime. Again, this is a classical theory so there are no explicit factors of $\hbar$. Since the action has units of $\hbar$, it follows that wave field $\phi$ has units
+$$[\phi] = \left( \frac{3 - D}{2} \right) [\hbar] + \left( \frac{D - 2}{2} \right) [\text{mass}].$$
+Here $D$ is the number of spacetime dimensions.&lt;/p&gt;
+&lt;h2&gt;Scalar Intermedium&lt;/h2&gt;
+&lt;p&gt;One way to introduce interactions between many relativistic particles is to couple each to a dynamical intermedium. This intermedium takes the form of a spacetime field. The result is a model where classical relativistic particles interact by emiting and absorbing classical relativistic waves. For example, the action functional for a system of two relativistic massive particles coupled to a dynamical scalar intermedium field $\Phi$ is
+$$S = S_{1}[x_{1}, \Phi] + S_{2}[x_{2}, \Phi] + S_{\text{kin}}[\Phi],$$
+where $S_{1} $ and $S_{2} $ contain the kinetic term and coupling to $\Phi$ for each particle,
+$$S_{1}[x_{1}, \Phi] = \int \mathrm{d} \tau_{1} \left[ - \dot{x}_{1} \cdot p_{1} + \frac{1}{2} v_{1} (p^{2}_{1} + m^{2}_{1} + 2 q_{1} \Phi) \right], \quad S_{2}[x_{2}, \Phi] = \int \mathrm{d} \tau_{2} \left[ - \dot{x}_{2} \cdot p_{2} + \frac{1}{2} v_{2} (p^{2}_{2} + m^{2}_{2} + 2 q_{2} \Phi) \right];$$
+and $S_{\text{kin}}$ contains the kinetic term that makes $\Phi$ dynamical,
+$$S_{\text{kin}} = \frac{1}{2g^{2}_{1}} \int \mathrm{d}x \left[ \Phi \left(- \frac{1}{2} \partial^{2} \right) \Phi \right].$$
+Here $q_{1}$ and $q_{2}$ are (dimensionless) charges that allow a decoupling in the limits $q_{1} \rightarrow 0$ and $q_{2} \rightarrow 0$, and $g_{1}$ is a coupling strength. From $S_{1}$ and $S_{2}$ it follows that $\Phi$ has dimensions
+$$[\Phi] = 2 [\text{mass}].$$
+This is true in any number of spacetime dimensions. Thus, from $S_{\text{kin}}$ it follows that $g_{1}$ has dimensions
+$$[g_{1}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{6 - D}{2} \right) [\text{mass}].$$
+This result can be compared with a similar system: two relativistic waves coupled to a dynamical intermedium:
+$$S = S_{1}[\phi_{1}, \varphi] + S_{2}[\phi_{2}, \varphi] + S_{\text{kin}}[\varphi],$$
+where $S_{1}$ and $S_{2}$ contain the kinetic term and coupling to $\varphi$ for each scalar wave,
+$$S_{1}[\phi_{1}, \varphi] = \frac{1}{2} \int \mathrm{d} x \left[ \phi_{1} \left(-\frac{1}{2}\partial^{2} + \frac{1}{2}\kappa^{2}_{1} + q_{1} \varphi \right) \phi_{1} \right], \qquad S_{2}[\phi_{2}, \varphi] = \frac{1}{2} \int \mathrm{d} x \left[ \phi_{2} \left(-\frac{1}{2}\partial^{2} + \frac{1}{2}\kappa^{2}_{2} + q_{2} \varphi \right) \phi_{2} \right],$$
+and $S_{\text{kin}}$ contains the kinetic term that makes $\varphi$ dynamical,
+$$S_{\text{kin}} = \frac{1}{2 f_{1}^{2}} \int \mathrm{d}x \left[ \varphi \left( - \frac{1}{2} \partial^{2} \right) \varphi \right].$$
+Here, as before, $q_{1}$ and $q_{2}$ are (dimensionless) charges, and $f_{1}$ is a coupling strength. From $S_{1}$ and $S_{2}$ it follows that $\varphi$ has dimensions
+$$[\varphi] = -2 [\hbar] + 2 [\text{mass}],$$
+and thus $\phi_{1}$ and $\phi_{2}$ have the familiar dimensions:
+$$[\phi_{1}] = [\phi_{2}] = \left( \frac{3 - D}{2} \right) [\hbar] + \left( \frac{D - 2}{2} \right) [\text{mass}].$$
+Note that already we have found a big difference: the dimensions of $\varphi$ and $\Phi$ are not the same. Furthermore, from $S_{\text{kin}}$ it follows that $f_{1}$ has dimensions
+$$[f_{1}] = \left( \frac{D - 7}{2} \right) [\hbar] + \left( \frac{6 - D}{2} \right) [\text{mass}].$$
+Although $g_{1}$ and $f_{1}$ have the same mass-dimension, their $\hbar$-dimension is very different. Indeed, when $3 &amp;lt; D &amp;lt; 7$, you have $\Delta_{\hbar}(g_{1}) &amp;gt; 0$ but $\Delta_{\hbar}(f_{1}) &amp;lt; 0$.&lt;/p&gt;
+&lt;h2&gt;Higher Degree Scalar Intermedium&lt;/h2&gt;
+&lt;p&gt;In the above discussion the interaction has degree-3 because the interaction term is cubic in fields. You can consider more general interactions with degree-$(n + 2)$ with $n$ a natural number. In the particle system, you have
+$$\int \mathrm{d}\tau_{1} v_{1} q_{1} \Phi \quad \longrightarrow \int \mathrm{d}\tau_{1} v_{1} q_{1} \Phi^{n},$$
+and
+$$\frac{1}{2g^{2}_{1}} \int \mathrm{d}x \left[ \Phi \left(- \frac{1}{2} \partial^{2} \right) \Phi \right] \quad \longrightarrow \quad \frac{1}{2(g_{n}^{2})^{1/n}} \int \mathrm{d}x \left[ \Phi \left(- \frac{1}{2} \partial^{2} \right) \Phi \right].$$
+Thus, $\Phi$ has dimensions
+$$[\Phi] = \frac{2}{n} [\text{mass}],$$
+and the coupling strength $g_{n}$ has dimensions
+$$[g_{n}] = \left( \frac{nD - 3n}{2} \right) [\hbar] + \left( \frac{4 + 2n - nD}{2} \right) [\text{mass}].$$
+On the other hand, in the wave system you have
+$$\int \mathrm{d}x \left[ q_{1} \phi_{1} \varphi \phi_{1} \right] \quad \longrightarrow \quad \int \mathrm{d}x \left[ q_{1} \phi_{1} \varphi^{n} \phi_{1} \right],$$
+and
+$$\frac{1}{2 f_{1}^{2}} \int \mathrm{d}x \left[ \varphi \left( - \frac{1}{2} \partial^{2} \right) \varphi \right] \quad \longrightarrow \quad \frac{1}{2 (f_{n}^{2})^{1/n}} \int \mathrm{d}x \left[ \varphi \left( - \frac{1}{2} \partial^{2} \right) \varphi \right].$$
+Thus, $\varphi$ has dimensions
+$$[\varphi] = -\frac{2}{n}[\hbar] + \frac{2}{n}[\text{mass}],$$
+and the coupling strength $f_{n}$ has dimensions
+$$[f_{n}] = \left( \frac{nD - 3n - 4}{2} \right) [\hbar] + \left( \frac{4 + 2n - nD}{2} \right) [\text{mass}].$$
+Some important cases are $n = 2$ (i.e. degree-4):
+$$[g_{2}] = \left( D - 3 \right) [\hbar] + \left( 4 - D \right) [\text{mass}], \qquad [f_{2}] = \left( D - 5 \right) [\hbar] + \left( 4 - D \right) [\text{mass}];$$
+and $n = 4$ (i.e. degree-6):
+$$[g_{4}] = 2\left( D - 3 \right) [\hbar] + 2\left( 3 - D \right) [\text{mass}], \qquad [f_{4}] = 2\left( D - 4 \right) [\hbar] + 2\left( 3 - D \right) [\text{mass}].$$
+In general, for $D &amp;gt; 3$ it follows that $\Delta_{\hbar}(g_{n}) &amp;gt; 0$. Something is special about $D = 3$, because $\Delta_{\hbar}(g_{n}) = 0$ for any $n$. Indeed, $g_{4}$ is dimensionless in $D = 3$.&lt;/p&gt;
+&lt;h2&gt;Vector Intermedium&lt;/h2&gt;
+&lt;p&gt;Coupling matter to a vector intermedium leads to gauge theory. A particle is coupled to a vector intermedium $V$ via the replacement
+$$p \longrightarrow p - q A,$$
+where $q$ is a dimensionless charge. Thus, the field $A$ has dimensions
+$$[A] = [\text{mass}].$$
+Similarly, a wave is coupled to a vector intermedium $V$ via the replacement
+$$\partial \longrightarrow \partial + qV,$$
+where $q$ is a dimensionless charge. Thus, the field $V$ has dimensions
+$$[V] = -[\hbar] + [\text{mass}].$$
+I will consider three kinds of dynamics for the vector intermedium.&lt;/p&gt;
+&lt;h3&gt;Maxwell Intermedium&lt;/h3&gt;
+&lt;p&gt;The kinetic term for the Maxwell vector intermedium $A$ coupling charged particles is
+$$\frac{1}{2 e^{2}} \int \mathrm{d}x \, F^{2}, \qquad F_{ab} = \partial_{a} A_{b} - \partial_{b} A_{a}.$$
+Thus, the coupling strength $e$ has units
+$$[e] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{4 - D}{2} \right) [\text{mass}].$$
+Similarly, the kinetic term for the Maxwell vector intermedium $V$ coupling charged waves is
+$$\frac{1}{2 h^{2}} \int \mathrm{d}x \, W^{2}, \qquad W_{ab} = \partial_{a} V_{b} - \partial_{b} V_{a}.$$
+Thus, the coupling strength $h$ has units
+$$[h] = \left( \frac{D - 5}{2} \right) [\hbar] + \left( \frac{4 - D}{2} \right) [\text{mass}].$$
+You find a similar result as above: for $3 &amp;lt; D &amp;lt; 5$ (i.e. $D = 4$) you have $\Delta_{\hbar}(e) &amp;gt; 0$ but $\Delta_{\hbar}(h) &amp;lt; 0$.&lt;/p&gt;
+&lt;h3&gt;Yang-Mills Intermedium&lt;/h3&gt;
+&lt;p&gt;The kinetic term for the Yang-Mills intermedium $V$ coupling charged waves is found by modifying the field strength:
+$$W_{ab} = \partial_{a} V_{b} - \partial_{b} V_{a} \longrightarrow Y_{ab} = \partial_{a} V_{b} - \partial_{b} V_{a} + [V_{a}, V_{b}].$$
+This does not lead to any changes in the dimensions of the coupling strength $h$. Furthermore, since $Y$ does not contain any explicit factors of $\hbar$, the corresponding kinetic term describes a classical field theory. This is worth mentioning because the kinetic term for the Yang-Mills intermedium $A$ coupling charged particles does contain explicit factors of $\hbar$:
+$$F_{ab} = \partial_{a} A_{b} - \partial_{b} A_{a} \longrightarrow G_{ab} = \partial_{a} A_{b} - \partial_{b} A_{a} + \frac{1}{\hbar} [A_{a}, A_{b}].$$
+This implies that the naive formulation of particles that carries nonabelian charge is not classical. Perhaps the commutator in $G$ should be demoted into a Poisson bracket, but then $A$ needs to be a function in phase space.&lt;/p&gt;
+&lt;h3&gt;Chern-Simons Intermedium&lt;/h3&gt;
+&lt;p&gt;In odd number of spacetime dimensions you can have a vector Chern-Simons intermedium. The kinetic term is proportional to the integral of the corresponding Chern-Simons form:
+$$k \int \mathrm{d}x \, \Omega.$$
+For a Chern-Simons intermedium coupling charged waves, you use $V$ to construct $\Omega$. This means that $\Omega$ has dimensions of inverse volume, and thus the Chern-Simons coupling strength $k$ has dimensions
+$$[k] = [\hbar].$$
+This result holds in any odd number of spacetime dimensions.&lt;/p&gt;
+&lt;p&gt;On the other hand, for a Chern-Simons intermedium coupling charged particles, you use $A$ to construct $\Omega$. In $D = 2n + 1$, the Chern-Simons form is
+$$\Omega = F^{n} \wedge A + \ldots $$
+Since $F$ has units
+$$[F] = -[\hbar] + 2[\text{mass}],$$
+the Chern-Simons form has units
+$$[\Omega] = -n [\hbar] + (2n + 1) [\text{mass}],$$
+and thus, the Chern-Simons coupling strength $k$ has dimensions
+$$[k] = \left( \frac{1 - D}{2} \right) [\hbar].$$
+So you find that $\Delta_{\hbar}(k) &amp;gt; 0$ for waves, but $\Delta_{\hbar}(k) &amp;lt; 0$ for particles. In both cases the Chern-Simons coupling has vanishing mass-dimension.&lt;/p&gt;
+&lt;h2&gt;Higher Spin Intermedium&lt;/h2&gt;
+&lt;p&gt;Besides the vector intermedium, there are higher spin intermedia. A spin-$N$ intermedium coupling particles is included via a term in the action of the form
+$$\int \mathrm{d} \tau v \left[ \left( \frac{1}{v} \right)^{N} \dot{x}^{a_{1}} \cdots \dot{x}^{a_{N}} H_{a_{1} \cdots a_{N}} \right].$$
+Thus, the spin-$N$ field $H$ has dimensions
+$$[H] = (2 - N) [\text{mass}].$$
+From the standard kinetic term,
+$$\frac{1}{2 e_{N}^{2}} \int \mathrm{d} x [H \partial^{2} H],$$
+it follows that the coupling strength $e_{N}$ has dimensions
+$$[e_{N}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{6 - 2N - D}{2} \right) [\text{mass}].$$
+Similarly, a spin-$N$ intermedium coupling waves is included via a term in the action of the form
+$$\int \mathrm{d}x \left[ \phi \left( J^{a_{1} \cdots a_{N}} \partial_{a_{1}} \cdots \partial_{a_{N}} \right) \phi \right].$$
+This leads to the spin-$N$ field $J$ having dimensions
+$$[J] = (N - 2) [\hbar] + (2 - N) [\text{mass}].$$
+From the standard kinetic term,
+$$\frac{1}{2 h_{N}^{2}} \int \mathrm{d} x [J \partial^{2} J],$$
+it follows that the coupling strength $h_{N}$ has dimensions
+$$[h_{N}] = \left( \frac{D - 7 + 2N}{2} \right) [\hbar] + \left( \frac{6 - 2N - D}{2} \right) [\text{mass}].$$
+An important example is the gravitational coupling, which corresponds to $N = 2$:
+$$[e_{2}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{2 - D}{2} \right) [\text{mass}], \qquad [h_{2}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{2 - D}{2} \right) [\text{mass}].$$
+Curiously, these two couplings have the same dimensions. Indeed, for $D &amp;gt; 3$ you have $\Delta_{\hbar}(e_{2}) &amp;gt; 0$.&lt;/p&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="dimensional analysis"></category><category term="semiclassical"></category></entry><entry><title>arXiv picks for 2015, week 22</title><link href="http://meirizarrygelpi.github.io/posts/2015/May/2015-week-22/" rel="alternate"></link><updated>2015-05-31T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-05-31:posts/2015/May/2015-week-22/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1505.05886"&gt;Local Integrand Representations of All Two-Loop Amplitudes in Planar SYM&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1505.06207"&gt;Semichiral Fields on $S^2$ and Generalized Kähler Geometry&lt;/a&gt;&lt;/li&gt;
