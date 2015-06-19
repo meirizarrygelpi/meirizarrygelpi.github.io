@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 13 Jun 2015 00:00:00 -0400</lastBuildDate><item><title>arXiv picks for 2015, week 24</title><link>http://meirizarrygelpi.github.io/posts/2015/Jun/2015-week-24/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.02880"&gt;Top-forms of Leading Singularities in Nonplanar Multi-loop Amplitudes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.02906"&gt;New Symmetries of QED&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.02961"&gt;Regge Trajectories by 0-Brane Matrix Dynamics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.03714"&gt;Gravitomagnetism in Massive Gravity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.03757"&gt;Renormalizability Properties of Supergravity&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 13 Jun 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-06-13:posts/2015/Jun/2015-week-24/</guid><category>research</category></item><item><title>arXiv picks for 2015, week 25</title><link>http://meirizarrygelpi.github.io/posts/2015/Jun/2015-week-25/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 20 Jun 2015 00:00:00 -0400</lastBuildDate><item><title>arXiv picks for 2015, week 25</title><link>http://meirizarrygelpi.github.io/posts/2015/Jun/2015-week-25/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.03871"&gt;Duality walls and defects in 5d $N=1$ theories&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.04086"&gt;An Introduction To The Web-Based Formalism&lt;/a&gt;&lt;/li&gt;
@@ -48,7 +41,14 @@
         (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
     }
 &lt;/script&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 13 Jun 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-06-13:posts/2015/Jun/2015-week-25/</guid><category>research</category></item><item><title>Introduction to Big Data and Data Science</title><link>http://meirizarrygelpi.github.io/posts/2015/Jun/intro-big-data-data-science/</link><description>&lt;p&gt;&lt;em&gt;These are my notes from lecture 1 of the MOOC CS100.1x Introduction to Big Data with Apache Spark by BerkeleyX.&lt;/em&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 20 Jun 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-06-20:posts/2015/Jun/2015-week-25/</guid><category>research</category></item><item><title>arXiv picks for 2015, week 24</title><link>http://meirizarrygelpi.github.io/posts/2015/Jun/2015-week-24/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.02880"&gt;Top-forms of Leading Singularities in Nonplanar Multi-loop Amplitudes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.02906"&gt;New Symmetries of QED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.02961"&gt;Regge Trajectories by 0-Brane Matrix Dynamics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.03714"&gt;Gravitomagnetism in Massive Gravity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.03757"&gt;Renormalizability Properties of Supergravity&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 13 Jun 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-06-13:posts/2015/Jun/2015-week-24/</guid><category>research</category></item><item><title>Introduction to Big Data and Data Science</title><link>http://meirizarrygelpi.github.io/posts/2015/Jun/intro-big-data-data-science/</link><description>&lt;p&gt;&lt;em&gt;These are my notes from lecture 1 of the MOOC CS100.1x Introduction to Big Data with Apache Spark by BerkeleyX.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The outline of this lecture is:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Brief History of Data Analysis&lt;/li&gt;
