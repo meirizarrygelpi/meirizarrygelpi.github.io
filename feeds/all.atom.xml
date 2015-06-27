@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-06-20T00:00:00-04:00</updated><entry><title>arXiv picks for 2015, week 25</title><link href="http://meirizarrygelpi.github.io/posts/2015/Jun/2015-week-25/" rel="alternate"></link><updated>2015-06-20T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-06-20:posts/2015/Jun/2015-week-25/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-06-27T00:00:00-04:00</updated><entry><title>arXiv picks for 2015, week 26</title><link href="http://meirizarrygelpi.github.io/posts/2015/Jun/2015-week-26/" rel="alternate"></link><updated>2015-06-27T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-06-27:posts/2015/Jun/2015-week-26/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.06134"&gt;Amplitudes for massive vector and scalar bosons in spontaneously-broken gauge theory from the CHY representation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.07243"&gt;Feynman integrals and hyperlogarithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.07307"&gt;Holomorphy, triality and non-perturbative beta function in 2d supersymmetric QCD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.07508"&gt;Surface Operators and Separation of Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.06753"&gt;Evidence for C-theorems in 6D SCFTs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.07551"&gt;On Soft Theorems And Form Factors In $N=4$ SYM Theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.07706"&gt;New Formulation of the Type IIB Superstring Action in $AdS_{5} \times S^{5}$&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for 2015, week 25</title><link href="http://meirizarrygelpi.github.io/posts/2015/Jun/2015-week-25/" rel="alternate"></link><updated>2015-06-20T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-06-20:posts/2015/Jun/2015-week-25/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.03871"&gt;Duality walls and defects in 5d $N=1$ theories&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.04086"&gt;An Introduction To The Web-Based Formalism&lt;/a&gt;&lt;/li&gt;
@@ -367,7 +406,7 @@ Curiously, these two couplings have the same dimensions. Indeed, for $D &amp;gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1505.00009"&gt;Geometry of 6D RG Flows&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1505.00963"&gt;The Epsilon-Expansion from Conformal Field Theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1505.01000"&gt;Assuming Regge trajectories in holographic QCD: from OPE to Chiral Perturbation Theory&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>The Triangle Product of 3-Hypermatrices</title><link href="http://meirizarrygelpi.github.io/posts/2015/May/triangle-product-3-hypermatrices/" rel="alternate"></link><updated>2015-05-06T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-05-06:posts/2015/May/triangle-product-3-hypermatrices/</id><summary type="html">&lt;p&gt;Lately, I have been thinking about vectors, matrices and linear algebra. Indeed, I have been thinking about higher-dimensional generalizations of matrices, i.e. from two-dimensional arrays of numbers to three-dimensional arrays of numbers. This was triggered by reading &lt;a href="http://radar.oreilly.com/2015/03/lets-build-open-source-tensor-libraries-for-data-science.html"&gt;this blog post on tensors&lt;/a&gt;. In this post I will propose some generalizations to many of the properties of matrices to the case of 3-hypermatrices.&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>The Triangle Product for 3-Hypermatrices</title><link href="http://meirizarrygelpi.github.io/posts/2015/May/triangle-product-3-hypermatrices/" rel="alternate"></link><updated>2015-05-06T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-05-06:posts/2015/May/triangle-product-3-hypermatrices/</id><summary type="html">&lt;p&gt;Lately, I have been thinking about vectors, matrices and linear algebra. Indeed, I have been thinking about higher-dimensional generalizations of matrices, i.e. from two-dimensional arrays of numbers to three-dimensional arrays of numbers. This was triggered by reading &lt;a href="http://radar.oreilly.com/2015/03/lets-build-open-source-tensor-libraries-for-data-science.html"&gt;this blog post on tensors&lt;/a&gt;. In this post I will propose some generalizations to many of the properties of matrices to the case of 3-hypermatrices.&lt;/p&gt;
 &lt;h2&gt;$k$-Orthotopic Arrays&lt;/h2&gt;
 &lt;p&gt;A matrix is a rectangular array of elements. The 3-dimensional analog of a rectangle is the cuboid (also known as a 3-orthotope). Arranging elements into a cuboidal array yields what I will call a cuboidal 3-hypermatrix. A square matrix is a special case where the 2-dimensional array has a square shape. The 3-dimensional analog of a square is the cube. Arranging elements into a cubic array yields what I will call a cubic 3-hypermatrix.&lt;/p&gt;
 &lt;p&gt;More generally, the $k$-dimensional analog of a rectangle is the $k$-orthotope, and the $k$-dimensional analog of a square is the $k$-cube. Arranging elements into a $k$-orthotopic array yields an orthotopic $k$-hypermatrix. Similarly, arranging elements into a $k$-cubic array yields a hypercubic $k$-hypermatrix.&lt;/p&gt;
