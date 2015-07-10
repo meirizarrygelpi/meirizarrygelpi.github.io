@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-07-04T00:00:00-04:00</updated><entry><title>arXiv picks for 2015, week 27</title><link href="http://meirizarrygelpi.github.io/posts/2015/Jul/2015-week-27/" rel="alternate"></link><updated>2015-07-04T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-07-04:posts/2015/Jul/2015-week-27/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-07-11T00:00:00-04:00</updated><entry><title>arXiv picks for 2015, week 28</title><link href="http://meirizarrygelpi.github.io/posts/2015/Jul/2015-week-28/" rel="alternate"></link><updated>2015-07-11T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-07-11:posts/2015/Jul/2015-week-28/</id><summary type="html">&lt;p&gt;A very busy week at the arXiv! In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.00823"&gt;Gluon Reggeization in Yang-Mills Theories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.00938"&gt;Double-soft behavior for scalars and gluons from string theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.00997"&gt;Scattering Equations and Feynman Diagrams&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.01359"&gt;Symmetries of Feynman integrals and the Integration By Parts method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.01370"&gt;Simple variables for $AdS_{5} \times S^{5}$ superspace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.01504"&gt;On Yangian symmetry of scattering amplitudes and the dilatation operator in $N=4$ super Yang-Mills&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.01582"&gt;Differential Equations, Associators, and Recurrences for Amplitudes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.01595"&gt;Excited States of Open Strings From $N=4$ SYM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.01604"&gt;Glueballs as rotating folded closed strings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.01669"&gt;Critical Super F-theories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.01950"&gt;Hedgehog Bases for $A_{n}$ Cluster Polylogarithms and An Application to Six-Point Amplitudes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.02167"&gt;An Introduction to Webs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.02172"&gt;Some tree-level string amplitudes in the NSR formalism&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.02207"&gt;All tree amplitudes of supersymmetric Einstein-Yang-Mills theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.02254"&gt;Relations between elliptic multiple zeta values and a special derivation algebra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.02474"&gt;Bonus Symmetry for Super Wilson Loops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.02584"&gt;Electromagnetic Memory&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for 2015, week 27</title><link href="http://meirizarrygelpi.github.io/posts/2015/Jul/2015-week-27/" rel="alternate"></link><updated>2015-07-04T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-07-04:posts/2015/Jul/2015-week-27/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.08130"&gt;Contact interactions between particle worldlines&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1506.08172"&gt;Parametrization of cosets for $AdS_{5} \times S^{5}$ superstring action&lt;/a&gt;&lt;/li&gt;
