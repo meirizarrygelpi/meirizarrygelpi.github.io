@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-07-11T00:00:00-04:00</updated><entry><title>arXiv picks for 2015, week 28</title><link href="http://meirizarrygelpi.github.io/posts/2015/Jul/2015-week-28/" rel="alternate"></link><updated>2015-07-11T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-07-11:posts/2015/Jul/2015-week-28/</id><summary type="html">&lt;p&gt;A very busy week at the arXiv! In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-07-18T00:00:00-04:00</updated><entry><title>arXiv picks for 2015, week 29</title><link href="http://meirizarrygelpi.github.io/posts/2015/Jul/2015-week-29/" rel="alternate"></link><updated>2015-07-18T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-07-18:posts/2015/Jul/2015-week-29/</id><summary type="html">&lt;p&gt;Another very busy week at the arXiv! In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.02787"&gt;Euclidean Wilson loops and Minimal Area Surfaces in Minkowski $AdS_{3}$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.02936"&gt;Towards a Worldsheet Description of $N=8$ Supergravity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.03005"&gt;Spectrum and Quantum Symmetries of the $AdS_{5} \times S^{5}$ Superstring&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.03061"&gt;Type II chiral affine Lie algebras and string actions in doubled space&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.03214"&gt;Top-forms of Leading Singularities in Nonplanar Multi-loop Amplitudes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.03226"&gt;QCD Amplitudes: new perspectives on Feynman integral calculus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.03527"&gt;FaRe: a Mathematica package for tensor reduction of Feynman integrals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.03592"&gt;How to Recover a Qubit That Has Fallen Into a Black Hole&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.04010"&gt;NNLO BFKL Pomeron eigenvalue in $N=4$ SYM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.04424"&gt;Accidental Symmetries and the Conformal Bootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for 2015, week 28</title><link href="http://meirizarrygelpi.github.io/posts/2015/Jul/2015-week-28/" rel="alternate"></link><updated>2015-07-11T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-07-11:posts/2015/Jul/2015-week-28/</id><summary type="html">&lt;p&gt;A very busy week at the arXiv! In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.00823"&gt;Gluon Reggeization in Yang-Mills Theories&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1507.00938"&gt;Double-soft behavior for scalars and gluons from string theory&lt;/a&gt;&lt;/li&gt;
