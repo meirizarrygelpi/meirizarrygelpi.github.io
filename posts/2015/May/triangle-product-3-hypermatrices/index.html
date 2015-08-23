@@ -142,12 +142,12 @@ It is also associative:
 $$\operatorname{add}_{2}(\operatorname{add}_{2}(\mathbf{A}, \mathbf{B}), \mathbf{C}) = \operatorname{add}_{2}(\mathbf{A}, \operatorname{add}_{2}(\mathbf{B}, \mathbf{C})).$$
 In a very similar manner, you can define the operation $\operatorname{add}_{3}$, and more generally $\operatorname{add}_{k}$ for adding two hypermatrices of the same size. These operations are also associative and commutative.</p>
 <h2>Cayley Transposition</h2>
-<p>A rectangular matrix $\mathbf{A}$ with size $(m, n)$ has a total of $m \cdot n$ elements. These can be rearranged into a rectangular matrix $T(\mathbf{A})$ with size $(n, m)$ by swapping the row-axis with the column-axis. This operation is called the Cayley transposition:
+<p>A rectangular matrix $\mathbf{A}$ with size $(m, n)$ has a total of $mn$ elements. These can be rearranged into a rectangular matrix $T(\mathbf{A})$ with size $(n, m)$ by swapping the row-axis with the column-axis. This operation is called the Cayley transposition:
 $$T: \mathbb{A}_{m \times n} \longrightarrow \mathbb{A}_{n \times m}.$$
 The Cayley transposition is an involution:
 $$T \circ T = I,$$
 where $I$ is the identity operation. The operations $I$ and $T$ form $S_{2}$, the symmetric group of degree 2.</p>
-<p>Similarly, an orthotopic 3-hypermatrix with size $(a, b, c)$ has a total of $a \cdot b \cdot c$ elements. These can be rearranged into five other orthotopic 3-hypermatrices, corresponding to the $3! - 1 = 5$ permutations of its three axes. Thus, there are five Cayley transpositions:
+<p>Similarly, an orthotopic 3-hypermatrix with size $(a, b, c)$ has a total of $abc$ elements. These can be rearranged into five other orthotopic 3-hypermatrices, corresponding to the $3! - 1 = 5$ permutations of its three axes. Thus, there are five Cayley transpositions:
 $$T_{1}: \mathbb{A}_{a \times b \times c} \longrightarrow \mathbb{A}_{b \times a \times c},$$
 $$T_{2}: \mathbb{A}_{a \times b \times c} \longrightarrow \mathbb{A}_{a \times c \times b},$$
 $$T_{3}: \mathbb{A}_{a \times b \times c} \longrightarrow \mathbb{A}_{c \times b \times a},$$

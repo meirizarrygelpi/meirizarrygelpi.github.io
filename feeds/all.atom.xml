@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-08-15T00:00:00-04:00</updated><entry><title>arXiv picks for 2015, week 33</title><link href="http://meirizarrygelpi.github.io/posts/2015/Aug/2015-week-33/" rel="alternate"></link><updated>2015-08-15T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-08-15:posts/2015/Aug/2015-week-33/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-08-22T00:00:00-04:00</updated><entry><title>arXiv picks for 2015, week 34</title><link href="http://meirizarrygelpi.github.io/posts/2015/Aug/2015-week-34/" rel="alternate"></link><updated>2015-08-22T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-08-22:posts/2015/Aug/2015-week-34/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1508.03611"&gt;Superconformal partial waves in Grassmannian field theories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1508.03627"&gt;Integration Rules for Loop Scattering Equations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1508.03717"&gt;Master integrals for the four-loop Sudakov form factor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1508.04135"&gt;Gravity duals of $(0,2)$ SCFTs from M5-branes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1508.04139"&gt;Higher Spin Interactions in Four Dimensions: Vasiliev vs. Fronsdal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1508.04219"&gt;Mellin-Barnes Representation of the Topological String&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1508.04437"&gt;Three-Charge Black Holes and Quarter BPS States in Little String Theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1508.04715"&gt;Fermion Path Integrals And Topological Phases&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;script type= "text/javascript"&gt;
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#3e3f3a ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+&lt;/script&gt;
+</summary><category term="research"></category></entry><entry><title>arXiv picks for 2015, week 33</title><link href="http://meirizarrygelpi.github.io/posts/2015/Aug/2015-week-33/" rel="alternate"></link><updated>2015-08-15T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-08-15:posts/2015/Aug/2015-week-33/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1508.02554"&gt;Gravity with a cosmological constant from rational curves&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1508.02857"&gt;BFKL pomeron in the next-to-next-to-leading approximation in the planar $N=4$ SYM theory&lt;/a&gt;&lt;/li&gt;
@@ -747,12 +787,12 @@ It is also associative:
 $$\operatorname{add}_{2}(\operatorname{add}_{2}(\mathbf{A}, \mathbf{B}), \mathbf{C}) = \operatorname{add}_{2}(\mathbf{A}, \operatorname{add}_{2}(\mathbf{B}, \mathbf{C})).$$
 In a very similar manner, you can define the operation $\operatorname{add}_{3}$, and more generally $\operatorname{add}_{k}$ for adding two hypermatrices of the same size. These operations are also associative and commutative.&lt;/p&gt;
 &lt;h2&gt;Cayley Transposition&lt;/h2&gt;
-&lt;p&gt;A rectangular matrix $\mathbf{A}$ with size $(m, n)$ has a total of $m \cdot n$ elements. These can be rearranged into a rectangular matrix $T(\mathbf{A})$ with size $(n, m)$ by swapping the row-axis with the column-axis. This operation is called the Cayley transposition:
+&lt;p&gt;A rectangular matrix $\mathbf{A}$ with size $(m, n)$ has a total of $mn$ elements. These can be rearranged into a rectangular matrix $T(\mathbf{A})$ with size $(n, m)$ by swapping the row-axis with the column-axis. This operation is called the Cayley transposition:
 $$T: \mathbb{A}_{m \times n} \longrightarrow \mathbb{A}_{n \times m}.$$
 The Cayley transposition is an involution:
 $$T \circ T = I,$$
 where $I$ is the identity operation. The operations $I$ and $T$ form $S_{2}$, the symmetric group of degree 2.&lt;/p&gt;
-&lt;p&gt;Similarly, an orthotopic 3-hypermatrix with size $(a, b, c)$ has a total of $a \cdot b \cdot c$ elements. These can be rearranged into five other orthotopic 3-hypermatrices, corresponding to the $3! - 1 = 5$ permutations of its three axes. Thus, there are five Cayley transpositions:
+&lt;p&gt;Similarly, an orthotopic 3-hypermatrix with size $(a, b, c)$ has a total of $abc$ elements. These can be rearranged into five other orthotopic 3-hypermatrices, corresponding to the $3! - 1 = 5$ permutations of its three axes. Thus, there are five Cayley transpositions:
 $$T_{1}: \mathbb{A}_{a \times b \times c} \longrightarrow \mathbb{A}_{b \times a \times c},$$
 $$T_{2}: \mathbb{A}_{a \times b \times c} \longrightarrow \mathbb{A}_{a \times c \times b},$$
 $$T_{3}: \mathbb{A}_{a \times b \times c} \longrightarrow \mathbb{A}_{c \times b \times a},$$
