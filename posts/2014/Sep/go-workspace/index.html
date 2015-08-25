@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>My Go Workspace for Rosalind - M.E. Irizarry-Gelpí</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
+
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2014/Sep/go-workspace/">
+
+        <meta name="author" content="M.E. Irizarry-Gelpí" />
+        <meta name="keywords" content="go,rosalind,bioinformatics" />
+        <meta name="description" content="Some comments about my Go workspace for solving problems in rosalind." />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/bootstrap.sandstone.min.css" type="text/css"/>
+    <link href="http://meirizarrygelpi.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://meirizarrygelpi.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://meirizarrygelpi.github.io/" class="navbar-brand">
+M.E. Irizarry-Gelpí            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="http://meirizarrygelpi.github.io/category/arxiv.html">Arxiv</a>
+                        </li>
+                        <li >
+                            <a href="http://meirizarrygelpi.github.io/category/maths.html">Maths</a>
+                        </li>
+                        <li >
+                            <a href="http://meirizarrygelpi.github.io/category/notes.html">Notes</a>
+                        </li>
+                        <li >
+                            <a href="http://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://meirizarrygelpi.github.io/category/programming.html">Programming</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://meirizarrygelpi.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://meirizarrygelpi.github.io/posts/2014/Sep/go-workspace/"
+                       rel="bookmark"
+                       title="Permalink to My Go Workspace for Rosalind">
+                        My Go Workspace for Rosalind
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-09-20T00:00:00-04:00"> Sat 20 September 2014</time>
+    </span>
+            <span class="label label-default">By</span>
+            <a href="http://meirizarrygelpi.github.io/author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
+
+        <span class="label label-default">Category</span>
+        <a href="http://meirizarrygelpi.github.io/category/programming.html">Programming</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://meirizarrygelpi.github.io/tag/go.html">go</a>
+        /
+	<a href="http://meirizarrygelpi.github.io/tag/rosalind.html">rosalind</a>
+        /
+	<a href="http://meirizarrygelpi.github.io/tag/bioinformatics.html">bioinformatics</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>About a year ago I took a wonderful MOOC called <em>Bioinformatics Algorithms</em>. The people behind this MOOC also developed <a href="https://stepic.org/">stepic.org</a> and <a href="http://rosalind.info/">rosalind.info</a>. Project Rosalind is very similar to <a href="https://projecteuler.net/">Project Euler</a>, a website where you can find problems that are meant to be solved with some programming. You can find all the homework problems from the MOOC in <a href="http://rosalind.info/">rosalind.info</a> under "Textbook Track".</p>
+<p>The MOOC is going to be offered <a href="https://www.coursera.org/course/bioinformatics">again</a> this coming October, and next February the <a href="https://www.coursera.org/course/bioinformatics2">second part</a> will be offered for the first time. Last year I used Python 2.x for all my MOOC work. Since I liked to MOOC so much, and I am a bit crazy, I decided to take it again this year. First I thought of translating the Python 2.x source code from last year to Python 3.x. However, this might be somewhat trivial (at some point I should switch to Python 3.x anyway). So instead, I have decided to adapt my Python 2.x source code to <a href="http://golang.org/">Go</a>. Currently I know very little Go, but last year I knew very little Python and still managed to pass the MOOC. My goal this year is to learn as much as possible, both about bioinformatics, and about the Go programming language.</p>
+<p>This week I started by establishing a workspace and workflow. The first thing I did was update my Go version. I use Ubuntu Linux, and the Go version that is available via <code>apt-get</code> is version 1.2.1. Updating was surprisingly easy and painless. I followed the steps listed <a href="http://golang.org/doc/install">here</a>. The only nontrivial step was adding this line to my <code>.bashrc</code> file:</p>
+<div class="highlight"><pre><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/go/bin
+</pre></div>
+
+
+<p>The second thing I did was change my <code>GOPATH</code> variable. Previously I used a folder in my <a href="https://www.dropbox.com/">Dropbox</a> folder as my main Go directory. Recently I started using <a href="https://www.copy.com/">Copy</a> since it provides more free space. Inside my <code>Copy</code> directory I made a subdirectory called <code>go</code>:</p>
+<div class="highlight"><pre><span class="nv">$ </span>mkdir <span class="nv">$HOME</span>/Copy/go
+</pre></div>
+
+
+<p>Then I added the following line to my <code>.bashrc</code> file:</p>
+<div class="highlight"><pre><span class="nb">export </span><span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/Copy/go
+</pre></div>
+
+
+<p>After this I went back to the <code>GOPATH</code> directory and made three subdirectories (following the suggestions from <a href="http://golang.org/doc/code.html">here</a>):</p>
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> <span class="nv">$GOPATH</span>
+<span class="nv">$ </span>mkdir src pkg bin
+</pre></div>
+
+
+<p>Next I made a directory for my Rosalind work. Since I have a GitHub account, I used:</p>
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> <span class="nv">$GOPATH</span>/src
+<span class="nv">$ </span>mkdir github.com/meirizarrygelpi/rosalind
+</pre></div>
+
+
+<p>Being ambitious, I plan to eventually solve all the problems in Rosalind. For now I will concentrate on the problems in the <a href="http://rosalind.info/problems/list-view/?location=bioinformatics-textbook-track">Textbook Track</a>:</p>
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/meirizarrygelpi/rosalind
+<span class="nv">$ </span>mkdir textbook-track
+</pre></div>
+
+
+<p>This past week I solved the first six problems (<a href="http://rosalind.info/problems/1a/">1A</a>, <a href="http://rosalind.info/problems/1b/">1B</a>, <a href="http://rosalind.info/problems/1c/">1C</a>, <a href="http://rosalind.info/problems/1d/">1D</a>, <a href="http://rosalind.info/problems/1e/">1E</a>, and <a href="http://rosalind.info/problems/1f/">1F</a>) and started working on <a href="http://rosalind.info/problems/1g/">1G</a>. For each problem you get a <code>.txt</code> file with input, so inside the <code>textbook-track</code> directory I made five subdirectories:</p>
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/meirizarrygelpi/rosalind/textbook-track
+<span class="nv">$ </span>mkdir data output problems solvers week01
+</pre></div>
+
+
+<p>The <code>week01</code> directory contains a <code>.go</code> file with the <code>week01</code> package: the functions that do the hard work. I am not going to give any spoilers by sharing the contents of that file! The <code>solvers</code> directory contains the <code>solvers</code> package: the functions that read the data and print the answer in a specific way. Inside the <code>solvers</code> directory I have a <code>.go</code> file with the following content:</p>
+<div class="highlight"><pre><span class="kn">package</span> <span class="nx">solvers</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;strings&quot;</span>
+
+    <span class="nx">w01</span> <span class="s">&quot;github.com/meirizarrygelpi/rosalind/textbook-track/week01&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">Solve_1A</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">dna</span> <span class="kt">string</span>
+    <span class="kd">var</span> <span class="nx">k</span> <span class="kt">int</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">dna</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">k</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="nx">w01</span><span class="p">.</span><span class="nx">MostFrequentExactKMers</span><span class="p">(</span><span class="nx">dna</span><span class="p">,</span> <span class="nx">k</span><span class="p">),</span> <span class="s">&quot; &quot;</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Solve_1B</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">dna</span> <span class="kt">string</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">dna</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">w01</span><span class="p">.</span><span class="nx">ReverseComplement</span><span class="p">(</span><span class="nx">dna</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Solve_1C</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">p</span><span class="p">,</span> <span class="nx">g</span> <span class="kt">string</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">g</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="nx">w01</span><span class="p">.</span><span class="nx">ExactPatternIndex</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">g</span><span class="p">),</span> <span class="s">&quot; &quot;</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Solve_1D</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">g</span> <span class="kt">string</span>
+    <span class="kd">var</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">L</span><span class="p">,</span> <span class="nx">t</span> <span class="kt">int</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">g</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">k</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">L</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">t</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="nx">w01</span><span class="p">.</span><span class="nx">LtClump</span><span class="p">(</span><span class="nx">g</span><span class="p">,</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">L</span><span class="p">,</span> <span class="nx">t</span><span class="p">),</span> <span class="s">&quot; &quot;</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Solve_1E</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">g</span> <span class="kt">string</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">g</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="nx">w01</span><span class="p">.</span><span class="nx">MinGCSkew</span><span class="p">(</span><span class="nx">g</span><span class="p">),</span> <span class="s">&quot; &quot;</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Solve_1F</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">p</span><span class="p">,</span> <span class="nx">t</span> <span class="kt">string</span>
+    <span class="kd">var</span> <span class="nx">d</span> <span class="kt">int</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">t</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanln</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">d</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="nx">w01</span><span class="p">.</span><span class="nx">ApproximatePatternIndex</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">d</span><span class="p">),</span> <span class="s">&quot; &quot;</span><span class="p">))</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>My plan is to keep the input <code>.txt</code> files in the <code>data</code> directory, and the output <code>.txt</code> files in the <code>output</code> directory. With Go you can get an executable file by installing your program with the <code>go install</code> tool. Inside the <code>problems</code> directory I have subdirectories of the form <code>rosalind1*</code> where <code>*</code> is a letter from <code>A</code> to <code>H</code>. As an explicit example, let me consider <code>rosalind1A</code>. Inside this directory I have a <code>.go</code> file with the following content:</p>
+<div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="nx">sol</span> <span class="s">&quot;github.com/meirizarrygelpi/rosalind/textbook-track/solvers&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">sol</span><span class="p">.</span><span class="nx">Solve_1A</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Back in the <code>textbook-track</code> directory, I create a <code>.sh</code> file with the following content:</p>
+<div class="highlight"><pre><span class="c">#!/bin/bash</span>
+go install ./problems/rosalind1A
+cat ./data/1A.txt <span class="p">|</span> rosalind1A &gt; ./output/1A.txt
+</pre></div>
+
+
+<p>This <code>.sh</code> file allows me to automate the process of answering a Rosalind problem. The first line uses the <code>go install</code> tool to make an executable file <code>rosalind1A</code>. This executable file lives in the <code>$GOPATH/bin</code> directory. In the second line, I take the contents of <code>data/1A.txt</code>, pipe it to the executable<code>rosalind1A</code> and send the outcome to a <code>output/1A.txt</code>. A similar process is repeated for the other Rosalind problems. Note that using pipes and output redirection in the <code>.sh</code> file avoids the need to read and write files with Go.</p>
+<p>Just in case the discussion is not clear, here is the output of running <code>tree</code> inside the <code>textbook-track</code> directory:</p>
+<div class="highlight"><pre><span class="nv">$ </span>tree
+.
+├── data
+│   ├── 1A1.txt
+│   ...
+│   └── 1G2.txt
+├── output
+│   ├── 1A1.txt
+│   ...
+│   └── 1F2.txt
+├── problems
+│   ├── rosalind1A
+│   │   └── 1A.go
+│   ...
+│   └── rosalind1H
+│       └── 1H.go
+├── solvers
+│   └── solvers01.go
+├── week01
+│   └── week01.go
+├── week02
+│   └── week02.go
+└── work.sh
+
+<span class="m">14</span> directories, <span class="m">38</span> files
+</pre></div>
+
+
+<p>It is a bit messy, but it works well so far.</p>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2015 M.E. Irizarry-Gelpí
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://meirizarrygelpi.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://meirizarrygelpi.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://meirizarrygelpi.github.io/theme/js/respond.min.js"></script>
+
+</body>
+</html>
