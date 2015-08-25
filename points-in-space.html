@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Points in Space - M.E. Irizarry-Gelpí</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="./images/world.png" rel="icon">
+
+<link rel="canonical" href="./points-in-space.html">
+
+        <meta name="author" content="M.E. Irizarry-Gelpí" />
+        <meta name="keywords" content="combinatorics,graph theory" />
+        <meta name="description" content="Some results involving a collection of \(N\) points living in some space. if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="./theme/css/bootstrap.sandstone.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="./theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+
+        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="./" class="navbar-brand">
+M.E. Irizarry-Gelpí            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="./category/arxiv.html">Arxiv</a>
+                        </li>
+                        <li class="active">
+                            <a href="./category/maths.html">Maths</a>
+                        </li>
+                        <li >
+                            <a href="./category/notes.html">Notes</a>
+                        </li>
+                        <li >
+                            <a href="./category/physics.html">Physics</a>
+                        </li>
+                        <li >
+                            <a href="./category/programming.html">Programming</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="./archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="./points-in-space.html"
+                       rel="bookmark"
+                       title="Permalink to Points in Space">
+                        Points in Space
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-05-02T00:00:00-04:00"> Fri 02 May 2014</time>
+    </span>
+            <span class="label label-default">By</span>
+            <a href="./author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
+
+        <span class="label label-default">Category</span>
+        <a href="./category/maths.html">Maths</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/combinatorics.html">combinatorics</a>
+        /
+	<a href="./tag/graph-theory.html">graph theory</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Consider <span class="math">\(N\)</span> distinct points <span class="math">\(P_{1}\)</span>, <span class="math">\(P_{2}\)</span>, ..., <span class="math">\(P_{N}\)</span> with coordinates <span class="math">\(x_{1}\)</span>, <span class="math">\(x_{2}\)</span>, ..., <span class="math">\(x_{N}\)</span>. One can draw <span class="math">\(N^{2}\)</span> lines connecting these <span class="math">\(N\)</span> points. If we ommit lines that connect a point to itself, then we have <span class="math">\(N(N-1)/2\)</span> possible distinct lines. Out of these, <span class="math">\(N\)</span> can be regarded as external lines (corresponding to the edges of a convex polygonal perimeter connecting the <span class="math">\(N\)</span> points) and <span class="math">\(N(N - 3)/2\)</span> can be regarded as internal lines (the lines inside the perimeter).</p>
+<p>We start with <span class="math">\(N\)</span> distinct position variables. One can imagine making a change of variables</p>
+<div class="math">$$(x_{1}, x_{2}, ..., x_{N}) \longrightarrow (X, x_{ij})$$</div>
+<p>where <span class="math">\(X\)</span> describes the center-of-mass position of the system, and the <span class="math">\(x_{ij}\)</span> variables represent a set of <span class="math">\(N - 1\)</span> independent coordinate differences <span class="math">\(x_{ij} \equiv x_{i} - x_{j}\)</span>. One can construct more than <span class="math">\(N - 1\)</span> coordinate differences, but it is only possible to have <span class="math">\(N - 1\)</span> linearly independent ones. Indeed, one can write</p>
+<div class="math">$$N - 1 = \frac{N(N-1)}{2} + N - 1 - \frac{N(N-1)}{2}$$</div>
+<p>which can be rewritten as</p>
+<div class="math">$$N - 1 = \frac{N(N-1)}{2} - \frac{(N - 2)(N - 1)}{2}$$</div>
+<p>So if we want to keep all possible <span class="math">\(N(N-1)/2\)</span> coordinate differences available, we need to introduce <span class="math">\((N-2)(N-1)/2\)</span> auxilliary variables (i.e. Lagrange multipliers) that enforce the linear constraints that leave only <span class="math">\(N-1\)</span> linearly-independent ones.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2015 M.E. Irizarry-Gelpí
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="./theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="./theme/js/respond.min.js"></script>
+
+</body>
+</html>
