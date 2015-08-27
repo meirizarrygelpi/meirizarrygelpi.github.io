@@ -1491,79 +1491,79 @@ and the binomial coefficients &lt;span class="math"&gt;\(B(n, k)\)&lt;/span&gt;:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$B(n, k) \equiv \frac{n!}{(n - k)! k!}$$&lt;/div&gt;
 &lt;p&gt;
-With the binomial coefficients, you can define the &lt;span class="math"&gt;\(n\)&lt;/span&gt;-th &lt;span class="math"&gt;\(k\)&lt;/span&gt;-simplex number &lt;span class="math"&gt;\(S\_{k}(n)\)&lt;/span&gt;:
+With the binomial coefficients, you can define the &lt;span class="math"&gt;\(n\)&lt;/span&gt;-th &lt;span class="math"&gt;\(k\)&lt;/span&gt;-simplex number &lt;span class="math"&gt;\(S_{k}(n)\)&lt;/span&gt;:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S\_{k}(n) \equiv B(n - k + 1, k)$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S_{k}(n) \equiv B(n - k + 1, k)$$&lt;/div&gt;
 &lt;p&gt;
 When &lt;span class="math"&gt;\(k = 1\)&lt;/span&gt;, you have the &lt;strong&gt;line&lt;/strong&gt; numbers:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S\_{1}(n) = n$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S_{1}(n) = n$$&lt;/div&gt;
 &lt;p&gt;
 When &lt;span class="math"&gt;\(k = 2\)&lt;/span&gt;, you have the &lt;strong&gt;triangle&lt;/strong&gt; numbers:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S\_{2}(n) = \frac{n (n + 1)}{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S_{2}(n) = \frac{n (n + 1)}{2}$$&lt;/div&gt;
 &lt;p&gt;
 When &lt;span class="math"&gt;\(k = 3\)&lt;/span&gt;, you have the &lt;strong&gt;tetrahedron&lt;/strong&gt; numbers:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S\_{3}(n) = \frac{n (n + 1)(n + 2)}{6}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S_{3}(n) = \frac{n (n + 1)(n + 2)}{6}$$&lt;/div&gt;
 &lt;p&gt;
 When &lt;span class="math"&gt;\(k = 4\)&lt;/span&gt;, you have the &lt;strong&gt;pentatope&lt;/strong&gt; numbers:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S\_{4}(n) = \frac{n (n + 1)(n + 2)(n + 3)}{24}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S_{4}(n) = \frac{n (n + 1)(n + 2)(n + 3)}{24}$$&lt;/div&gt;
 &lt;p&gt;
-Besides the &lt;span class="math"&gt;\(k\)&lt;/span&gt;-simplex numbers, you also have the &lt;span class="math"&gt;\(n\)&lt;/span&gt;-th &lt;span class="math"&gt;\(k\)&lt;/span&gt;-cube number &lt;span class="math"&gt;\(C\_{k}(n)\)&lt;/span&gt;:
+Besides the &lt;span class="math"&gt;\(k\)&lt;/span&gt;-simplex numbers, you also have the &lt;span class="math"&gt;\(n\)&lt;/span&gt;-th &lt;span class="math"&gt;\(k\)&lt;/span&gt;-cube number &lt;span class="math"&gt;\(C_{k}(n)\)&lt;/span&gt;:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$C\_{k}(n) = n^{k}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$C_{k}(n) = n^{k}$$&lt;/div&gt;
 &lt;p&gt;
 The cases &lt;span class="math"&gt;\(k = 2\)&lt;/span&gt;, &lt;span class="math"&gt;\(k = 3\)&lt;/span&gt;, and &lt;span class="math"&gt;\(k = 4\)&lt;/span&gt; are, respectively, the &lt;strong&gt;square&lt;/strong&gt;, &lt;strong&gt;cube&lt;/strong&gt;, and &lt;strong&gt;tesseract&lt;/strong&gt; numbers. The &lt;span class="math"&gt;\(n\)&lt;/span&gt;-th &lt;span class="math"&gt;\(k\)&lt;/span&gt;-cube number corresponds to the number of entries in a &lt;span class="math"&gt;\(k\)&lt;/span&gt;-array of size &lt;span class="math"&gt;\(n\)&lt;/span&gt;. For example, a 2-array of size &lt;span class="math"&gt;\(n\)&lt;/span&gt; is an &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt; square matrix. I have been thinking about &lt;span class="math"&gt;\(k\)&lt;/span&gt;-simplex and &lt;span class="math"&gt;\(k\)&lt;/span&gt;-cube numbers lately because I have been thinking about square matrices and cubic hypermatrices.&lt;/p&gt;
 &lt;p&gt;The &lt;span class="math"&gt;\(k\)&lt;/span&gt;-volume of a &lt;span class="math"&gt;\(k\)&lt;/span&gt;-cube and the &lt;span class="math"&gt;\(k\)&lt;/span&gt;-volume of a &lt;span class="math"&gt;\(k\)&lt;/span&gt;-simplex are related via:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\text{vol}(C\_{k}) = k! \times \text{vol}(S\_{k})$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\text{vol}(C_{k}) = k! \times \text{vol}(S_{k})$$&lt;/div&gt;
 &lt;p&gt;
 Trivially,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$C\_{1}(n) = S\_{1}(n)$$&lt;/div&gt;
+&lt;div class="math"&gt;$$C_{1}(n) = S_{1}(n)$$&lt;/div&gt;
 &lt;p&gt;
-That is, a 1-cube is also a 1-simplex. As a first nontrivial example, take &lt;span class="math"&gt;\(k = 2\)&lt;/span&gt;. A square can be divided into two triangles with the same area. You can translate this statement into a property of square matrices. An &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt; square matrix has &lt;span class="math"&gt;\(n^{2}\)&lt;/span&gt; entries (its "area"). These &lt;span class="math"&gt;\(n^{2}\)&lt;/span&gt; entries can be divided into two identical triangular domains with &lt;span class="math"&gt;\(S\_{2}(n - 1)\)&lt;/span&gt; entries, and one linear domain between the two triangles with &lt;span class="math"&gt;\(S\_{1}(n)\)&lt;/span&gt; entries. Thus,
+That is, a 1-cube is also a 1-simplex. As a first nontrivial example, take &lt;span class="math"&gt;\(k = 2\)&lt;/span&gt;. A square can be divided into two triangles with the same area. You can translate this statement into a property of square matrices. An &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt; square matrix has &lt;span class="math"&gt;\(n^{2}\)&lt;/span&gt; entries (its "area"). These &lt;span class="math"&gt;\(n^{2}\)&lt;/span&gt; entries can be divided into two identical triangular domains with &lt;span class="math"&gt;\(S_{2}(n - 1)\)&lt;/span&gt; entries, and one linear domain between the two triangles with &lt;span class="math"&gt;\(S_{1}(n)\)&lt;/span&gt; entries. Thus,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$C\_{2}(n) = S\_{1}(n) + 2 S\_{2}(n - 1)$$&lt;/div&gt;
+&lt;div class="math"&gt;$$C_{2}(n) = S_{1}(n) + 2 S_{2}(n - 1)$$&lt;/div&gt;
 &lt;p&gt;
 Equivalently, you can absorb the interface between the two triangles into one of them, and arrive at the result that the sum of two consecutive triangle numbers is a square number:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$C\_{2}(n) = S\_{2}(n) + S\_{2}(n - 1)$$&lt;/div&gt;
+&lt;div class="math"&gt;$$C_{2}(n) = S_{2}(n) + S_{2}(n - 1)$$&lt;/div&gt;
 &lt;p&gt;
 But here the size of each triangular domain is different.&lt;/p&gt;
-&lt;p&gt;Similarly, a cube can be divided into six tetrahedra with the same volume. You can translate this statement into a property of &lt;span class="math"&gt;\(n \times n \times n\)&lt;/span&gt; hypermatrices. An &lt;span class="math"&gt;\(n \times n \times n\)&lt;/span&gt; hypermatrix has &lt;span class="math"&gt;\(n^{3}\)&lt;/span&gt; entries (its "volume"). These entries can be divided into six identical tetrahedral domains with &lt;span class="math"&gt;\(S\_{3}(n-2)\)&lt;/span&gt; entries, six identical triangular domains with &lt;span class="math"&gt;\(S\_{2}(n-1)\)&lt;/span&gt; entries, and one linear domain with &lt;span class="math"&gt;\(S\_{1}(n)\)&lt;/span&gt; entries. Thus,
+&lt;p&gt;Similarly, a cube can be divided into six tetrahedra with the same volume. You can translate this statement into a property of &lt;span class="math"&gt;\(n \times n \times n\)&lt;/span&gt; hypermatrices. An &lt;span class="math"&gt;\(n \times n \times n\)&lt;/span&gt; hypermatrix has &lt;span class="math"&gt;\(n^{3}\)&lt;/span&gt; entries (its "volume"). These entries can be divided into six identical tetrahedral domains with &lt;span class="math"&gt;\(S_{3}(n-2)\)&lt;/span&gt; entries, six identical triangular domains with &lt;span class="math"&gt;\(S_{2}(n-1)\)&lt;/span&gt; entries, and one linear domain with &lt;span class="math"&gt;\(S_{1}(n)\)&lt;/span&gt; entries. Thus,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$C\_{3}(n) = S\_{1}(n) + 6 S\_{2}(n - 1) + 6 S\_{3}(n - 2)$$&lt;/div&gt;
+&lt;div class="math"&gt;$$C_{3}(n) = S_{1}(n) + 6 S_{2}(n - 1) + 6 S_{3}(n - 2)$$&lt;/div&gt;
 &lt;p&gt;
 Since
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S\_{3}(n+1) = S\_{2}(n+1) + S\_{3}(n)$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S_{3}(n+1) = S_{2}(n+1) + S_{3}(n)$$&lt;/div&gt;
 &lt;p&gt;
 you can absorb the interface triangular domains into the tetrahedral domains.&lt;/p&gt;
 &lt;p&gt;I tried to find the analogous result in four dimensions. Since &lt;span class="math"&gt;\(4! = 24\)&lt;/span&gt;, a tesseract can be divided into 24 identical pentatopes. Thus, you can imagine that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$C\_{4}(n) = \ldots + 24 S\_{4}(n - 3)$$&lt;/div&gt;
+&lt;div class="math"&gt;$$C_{4}(n) = \ldots + 24 S_{4}(n - 3)$$&lt;/div&gt;
 &lt;p&gt;
 It took me some effort to find the full result:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$C\_{4}(n) = S\_{1}(n) + 14 S\_{2}(n - 1) + 36 S\_{3}(n - 2) + 24 S\_{4}(n - 3)$$&lt;/div&gt;
+&lt;div class="math"&gt;$$C_{4}(n) = S_{1}(n) + 14 S_{2}(n - 1) + 36 S_{3}(n - 2) + 24 S_{4}(n - 3)$$&lt;/div&gt;
 &lt;p&gt;
 That is, you can divide a tesseract array into one linear array, 14 triangular arrays, 36 tetrahedral arrays, and 24 pentatopic arrays. I found this by first writing
 &lt;/p&gt;
-&lt;div class="math"&gt;$$C\_{4}(n) = a S\_{1}(n) + b S\_{2}(n - 1) + c S\_{3}(n - 2) + 24 S\_{4}(n - 3)$$&lt;/div&gt;
+&lt;div class="math"&gt;$$C_{4}(n) = a S_{1}(n) + b S_{2}(n - 1) + c S_{3}(n - 2) + 24 S_{4}(n - 3)$$&lt;/div&gt;
 &lt;p&gt;
-and then solving the equation &lt;span class="math"&gt;\(C\_{4}(n) - n^{4} = 0\)&lt;/span&gt;. Using this technique you can also show that
+and then solving the equation &lt;span class="math"&gt;\(C_{4}(n) - n^{4} = 0\)&lt;/span&gt;. Using this technique you can also show that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$C\_{5}(n) = S\_{1}(n) + 30 S\_{2}(n - 1) + 150 S\_{3}(n - 2) + 240 S\_{4}(n - 3) + 120 S\_{5}(n - 4)$$&lt;/div&gt;
+&lt;div class="math"&gt;$$C_{5}(n) = S_{1}(n) + 30 S_{2}(n - 1) + 150 S_{3}(n - 2) + 240 S_{4}(n - 3) + 120 S_{5}(n - 4)$$&lt;/div&gt;
 &lt;p&gt;
 That is, you can divide a 5-cube into a one 1-simplex array, 30 2-simplex arrays, 150 3-simplex arrays, 240 4-simplex arrays, and 120 5-simplex arrays.&lt;/p&gt;
 &lt;p&gt;It seems that in general, you have
 &lt;/p&gt;
-&lt;div class="math"&gt;$$C\_{k}(n) = \sum\_{l = 1}^{k} N\_{k}(l) S\_{l}(n - l + 1)$$&lt;/div&gt;
+&lt;div class="math"&gt;$$C_{k}(n) = \sum_{l = 1}^{k} N_{k}(l) S_{l}(n - l + 1)$$&lt;/div&gt;
 &lt;p&gt;
-For a long time I wondered if there is a neat expression for &lt;span class="math"&gt;\(N\_{k}(l)\)&lt;/span&gt;. I have to confessed of being lazy and not actively trying to find &lt;span class="math"&gt;\(N\_{k}(l)\)&lt;/span&gt; based on what I know of &lt;span class="math"&gt;\(C\_{k}(n)\)&lt;/span&gt; and &lt;span class="math"&gt;\(S\_{k}(n)\)&lt;/span&gt;. In the end, I rediscovered the &lt;a href="https://oeis.org/"&gt;Online Encyclopedia of Integer Sequences&lt;/a&gt; and searched "24, 36, 14, 1" there. The first hit is the sequence &lt;a href="https://oeis.org/A090582"&gt;A090582&lt;/a&gt;. After searching for "1, 14, 36, 24" I found the sequence &lt;a href="https://oeis.org/A019538"&gt;A019538&lt;/a&gt;. Both of these sequences are related to Stirling numbers of the second kind.&lt;/p&gt;
+For a long time I wondered if there is a neat expression for &lt;span class="math"&gt;\(N_{k}(l)\)&lt;/span&gt;. I have to confessed of being lazy and not actively trying to find &lt;span class="math"&gt;\(N_{k}(l)\)&lt;/span&gt; based on what I know of &lt;span class="math"&gt;\(C_{k}(n)\)&lt;/span&gt; and &lt;span class="math"&gt;\(S_{k}(n)\)&lt;/span&gt;. In the end, I rediscovered the &lt;a href="https://oeis.org/"&gt;Online Encyclopedia of Integer Sequences&lt;/a&gt; and searched "24, 36, 14, 1" there. The first hit is the sequence &lt;a href="https://oeis.org/A090582"&gt;A090582&lt;/a&gt;. After searching for "1, 14, 36, 24" I found the sequence &lt;a href="https://oeis.org/A019538"&gt;A019538&lt;/a&gt;. Both of these sequences are related to Stirling numbers of the second kind.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
