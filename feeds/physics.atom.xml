@@ -9,22 +9,22 @@ However, I will keep &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt; dimensionfu
 &lt;p&gt;
 I will prefer to work with mass and &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt; as the independent units. Thus, the units of a quantity &lt;span class="math"&gt;\(Q\)&lt;/span&gt; can be decomposed as
 &lt;/p&gt;
-&lt;div class="math"&gt;$$[Q] = \Delta\_{\hbar}(Q) [\hbar] + \Delta\_{m}(Q) [\text{mass}].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$[Q] = \Delta_{\hbar}(Q) [\hbar] + \Delta_{m}(Q) [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
-Here &lt;span class="math"&gt;\(\Delta\_{\hbar}(Q)\)&lt;/span&gt; is the &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;-dimension of &lt;span class="math"&gt;\(Q\)&lt;/span&gt;, and &lt;span class="math"&gt;\(\Delta\_{m}(Q)\)&lt;/span&gt; is the mass-dimension of &lt;span class="math"&gt;\(Q\)&lt;/span&gt;.&lt;/p&gt;
+Here &lt;span class="math"&gt;\(\Delta_{\hbar}(Q)\)&lt;/span&gt; is the &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;-dimension of &lt;span class="math"&gt;\(Q\)&lt;/span&gt;, and &lt;span class="math"&gt;\(\Delta_{m}(Q)\)&lt;/span&gt; is the mass-dimension of &lt;span class="math"&gt;\(Q\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2&gt;Particles and Waves&lt;/h2&gt;
 &lt;p&gt;Two very important problems in classical physics are the study of interacting particles, and the study of interacting waves. Particles are discrete objects, so they are better described classically with mechanical variables likes position and momentum. On the other hand, waves are better described classically as excitations of continuous objects known as fields. Thus, when you do &lt;strong&gt;classical mechanics&lt;/strong&gt;, you work with particles; when you do &lt;strong&gt;classical field theory&lt;/strong&gt;, you work with waves.&lt;/p&gt;
 &lt;p&gt;For example, the action functional for a free relativistic scalar particle is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S\_{m} = \int \mathrm{d} \tau \left[ - \dot{x} \cdot p + \frac{1}{2} v (p^{2} + m^{2}) \right].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S_{m} = \int \mathrm{d} \tau \left[ - \dot{x} \cdot p + \frac{1}{2} v (p^{2} + m^{2}) \right].$$&lt;/div&gt;
 &lt;p&gt;
-Here &lt;span class="math"&gt;\(m\)&lt;/span&gt; is a constant with units of mass. Note that the action is given as an integral along the worldline. Since this is a classical theory, there are no explicit factors of &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;. However, the action functional has units of &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;. From the second term in &lt;span class="math"&gt;\(S\_{m}\)&lt;/span&gt;, it follows that
+Here &lt;span class="math"&gt;\(m\)&lt;/span&gt; is a constant with units of mass. Note that the action is given as an integral along the worldline. Since this is a classical theory, there are no explicit factors of &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;. However, the action functional has units of &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;. From the second term in &lt;span class="math"&gt;\(S_{m}\)&lt;/span&gt;, it follows that
 &lt;/p&gt;
 &lt;div class="math"&gt;$$[v \mathrm{d}\tau] = [\hbar] - 2 [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
 In contrast with the free relativistic scalar particle, the action functional for a free relativistic scalar wave is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S\_{\kappa} = \frac{1}{2} \int \mathrm{d} x \left[ \phi \left(-\frac{1}{2}\partial^{2} + \frac{1}{2}\kappa^{2} \right) \phi \right].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S_{\kappa} = \frac{1}{2} \int \mathrm{d} x \left[ \phi \left(-\frac{1}{2}\partial^{2} + \frac{1}{2}\kappa^{2} \right) \phi \right].$$&lt;/div&gt;
 &lt;p&gt;
 Here &lt;span class="math"&gt;\(\kappa\)&lt;/span&gt; is a constant with units of inverse distance. Now the action is an integral along the region where the field lives, usually the entirety of spacetime. Again, this is a classical theory so there are no explicit factors of &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;. Since the action has units of &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;, it follows that wave field &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; has units
 &lt;/p&gt;
@@ -34,91 +34,91 @@ Here &lt;span class="math"&gt;\(D\)&lt;/span&gt; is the number of spacetime dime
 &lt;h2&gt;Scalar Intermedium&lt;/h2&gt;
 &lt;p&gt;One way to introduce interactions between many relativistic particles is to couple each to a dynamical intermedium. This intermedium takes the form of a spacetime field. The result is a model where classical relativistic particles interact by emiting and absorbing classical relativistic waves. For example, the action functional for a system of two relativistic massive particles coupled to a dynamical scalar intermedium field &lt;span class="math"&gt;\(\Phi\)&lt;/span&gt; is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S = S\_{1}[x\_{1}, \Phi] + S\_{2}[x\_{2}, \Phi] + S\_{\text{kin}}[\Phi],$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S = S_{1}[x_{1}, \Phi] + S_{2}[x_{2}, \Phi] + S_{\text{kin}}[\Phi],$$&lt;/div&gt;
 &lt;p&gt;
-where &lt;span class="math"&gt;\(S\_{1} $ and $S\_{2} $ contain the kinetic term and coupling to $\Phi\)&lt;/span&gt; for each particle,
+where &lt;span class="math"&gt;\(S_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(S_{2}\)&lt;/span&gt; contain the kinetic term and coupling to &lt;span class="math"&gt;\(\Phi\)&lt;/span&gt; for each particle,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S\_{1}[x\_{1}, \Phi] = \int \mathrm{d} \tau\_{1} \left[ - \dot{x}\_{1} \cdot p\_{1} + \frac{1}{2} v\_{1} (p^{2}\_{1} + m^{2}\_{1} + 2 q\_{1} \Phi) \right], \quad S\_{2}[x\_{2}, \Phi] = \int \mathrm{d} \tau\_{2} \left[ - \dot{x}\_{2} \cdot p\_{2} + \frac{1}{2} v\_{2} (p^{2}\_{2} + m^{2}\_{2} + 2 q\_{2} \Phi) \right];$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S_{1}[x_{1}, \Phi] = \int \mathrm{d} \tau_{1} \left[ - \dot{x}_{1} \cdot p_{1} + \frac{1}{2} v_{1} (p^{2}_{1} + m^{2}_{1} + 2 q_{1} \Phi) \right], \quad S_{2}[x_{2}, \Phi] = \int \mathrm{d} \tau_{2} \left[ - \dot{x}_{2} \cdot p_{2} + \frac{1}{2} v_{2} (p^{2}_{2} + m^{2}_{2} + 2 q_{2} \Phi) \right];$$&lt;/div&gt;
 &lt;p&gt;
-and &lt;span class="math"&gt;\(S\_{\text{kin}}\)&lt;/span&gt; contains the kinetic term that makes &lt;span class="math"&gt;\(\Phi\)&lt;/span&gt; dynamical,
+and &lt;span class="math"&gt;\(S_{\text{kin}}\)&lt;/span&gt; contains the kinetic term that makes &lt;span class="math"&gt;\(\Phi\)&lt;/span&gt; dynamical,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S\_{\text{kin}} = \frac{1}{2g^{2}\_{1}} \int \mathrm{d}x \left[ \Phi \left(- \frac{1}{2} \partial^{2} \right) \Phi \right].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S_{\text{kin}} = \frac{1}{2g^{2}_{1}} \int \mathrm{d}x \left[ \Phi \left(- \frac{1}{2} \partial^{2} \right) \Phi \right].$$&lt;/div&gt;
 &lt;p&gt;
-Here &lt;span class="math"&gt;\(q\_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(q\_{2}\)&lt;/span&gt; are (dimensionless) charges that allow a decoupling in the limits &lt;span class="math"&gt;\(q\_{1} \rightarrow 0\)&lt;/span&gt; and &lt;span class="math"&gt;\(q\_{2} \rightarrow 0\)&lt;/span&gt;, and &lt;span class="math"&gt;\(g\_{1}\)&lt;/span&gt; is a coupling strength. From &lt;span class="math"&gt;\(S\_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(S\_{2}\)&lt;/span&gt; it follows that &lt;span class="math"&gt;\(\Phi\)&lt;/span&gt; has dimensions
+Here &lt;span class="math"&gt;\(q_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(q_{2}\)&lt;/span&gt; are (dimensionless) charges that allow a decoupling in the limits &lt;span class="math"&gt;\(q_{1} \rightarrow 0\)&lt;/span&gt; and &lt;span class="math"&gt;\(q_{2} \rightarrow 0\)&lt;/span&gt;, and &lt;span class="math"&gt;\(g_{1}\)&lt;/span&gt; is a coupling strength. From &lt;span class="math"&gt;\(S_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(S_{2}\)&lt;/span&gt; it follows that &lt;span class="math"&gt;\(\Phi\)&lt;/span&gt; has dimensions
 &lt;/p&gt;
 &lt;div class="math"&gt;$$[\Phi] = 2 [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
-This is true in any number of spacetime dimensions. Thus, from &lt;span class="math"&gt;\(S\_{\text{kin}}\)&lt;/span&gt; it follows that &lt;span class="math"&gt;\(g\_{1}\)&lt;/span&gt; has dimensions
+This is true in any number of spacetime dimensions. Thus, from &lt;span class="math"&gt;\(S_{\text{kin}}\)&lt;/span&gt; it follows that &lt;span class="math"&gt;\(g_{1}\)&lt;/span&gt; has dimensions
 &lt;/p&gt;
-&lt;div class="math"&gt;$$[g\_{1}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{6 - D}{2} \right) [\text{mass}].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$[g_{1}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{6 - D}{2} \right) [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
 This result can be compared with a similar system: two relativistic waves coupled to a dynamical intermedium:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S = S\_{1}[\phi\_{1}, \varphi] + S\_{2}[\phi\_{2}, \varphi] + S\_{\text{kin}}[\varphi],$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S = S_{1}[\phi_{1}, \varphi] + S_{2}[\phi_{2}, \varphi] + S_{\text{kin}}[\varphi],$$&lt;/div&gt;
 &lt;p&gt;
-where &lt;span class="math"&gt;\(S\_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(S\_{2}\)&lt;/span&gt; contain the kinetic term and coupling to &lt;span class="math"&gt;\(\varphi\)&lt;/span&gt; for each scalar wave,
+where &lt;span class="math"&gt;\(S_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(S_{2}\)&lt;/span&gt; contain the kinetic term and coupling to &lt;span class="math"&gt;\(\varphi\)&lt;/span&gt; for each scalar wave,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S\_{1}[\phi\_{1}, \varphi] = \frac{1}{2} \int \mathrm{d} x \left[ \phi\_{1} \left(-\frac{1}{2}\partial^{2} + \frac{1}{2}\kappa^{2}\_{1} + q\_{1} \varphi \right) \phi\_{1} \right], \qquad S\_{2}[\phi\_{2}, \varphi] = \frac{1}{2} \int \mathrm{d} x \left[ \phi\_{2} \left(-\frac{1}{2}\partial^{2} + \frac{1}{2}\kappa^{2}\_{2} + q\_{2} \varphi \right) \phi\_{2} \right],$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S_{1}[\phi_{1}, \varphi] = \frac{1}{2} \int \mathrm{d} x \left[ \phi_{1} \left(-\frac{1}{2}\partial^{2} + \frac{1}{2}\kappa^{2}_{1} + q_{1} \varphi \right) \phi_{1} \right], \qquad S_{2}[\phi_{2}, \varphi] = \frac{1}{2} \int \mathrm{d} x \left[ \phi_{2} \left(-\frac{1}{2}\partial^{2} + \frac{1}{2}\kappa^{2}_{2} + q_{2} \varphi \right) \phi_{2} \right],$$&lt;/div&gt;
 &lt;p&gt;
-and &lt;span class="math"&gt;\(S\_{\text{kin}}\)&lt;/span&gt; contains the kinetic term that makes &lt;span class="math"&gt;\(\varphi\)&lt;/span&gt; dynamical,
+and &lt;span class="math"&gt;\(S_{\text{kin}}\)&lt;/span&gt; contains the kinetic term that makes &lt;span class="math"&gt;\(\varphi\)&lt;/span&gt; dynamical,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$S\_{\text{kin}} = \frac{1}{2 f\_{1}^{2}} \int \mathrm{d}x \left[ \varphi \left( - \frac{1}{2} \partial^{2} \right) \varphi \right].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$S_{\text{kin}} = \frac{1}{2 f_{1}^{2}} \int \mathrm{d}x \left[ \varphi \left( - \frac{1}{2} \partial^{2} \right) \varphi \right].$$&lt;/div&gt;
 &lt;p&gt;
-Here, as before, &lt;span class="math"&gt;\(q\_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(q\_{2}\)&lt;/span&gt; are (dimensionless) charges, and &lt;span class="math"&gt;\(f\_{1}\)&lt;/span&gt; is a coupling strength. From &lt;span class="math"&gt;\(S\_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(S\_{2}\)&lt;/span&gt; it follows that &lt;span class="math"&gt;\(\varphi\)&lt;/span&gt; has dimensions
+Here, as before, &lt;span class="math"&gt;\(q_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(q_{2}\)&lt;/span&gt; are (dimensionless) charges, and &lt;span class="math"&gt;\(f_{1}\)&lt;/span&gt; is a coupling strength. From &lt;span class="math"&gt;\(S_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(S_{2}\)&lt;/span&gt; it follows that &lt;span class="math"&gt;\(\varphi\)&lt;/span&gt; has dimensions
 &lt;/p&gt;
 &lt;div class="math"&gt;$$[\varphi] = -2 [\hbar] + 2 [\text{mass}],$$&lt;/div&gt;
 &lt;p&gt;
-and thus &lt;span class="math"&gt;\(\phi\_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\phi\_{2}\)&lt;/span&gt; have the familiar dimensions:
+and thus &lt;span class="math"&gt;\(\phi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\phi_{2}\)&lt;/span&gt; have the familiar dimensions:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$[\phi\_{1}] = [\phi\_{2}] = \left( \frac{3 - D}{2} \right) [\hbar] + \left( \frac{D - 2}{2} \right) [\text{mass}].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$[\phi_{1}] = [\phi_{2}] = \left( \frac{3 - D}{2} \right) [\hbar] + \left( \frac{D - 2}{2} \right) [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
-Note that already we have found a big difference: the dimensions of &lt;span class="math"&gt;\(\varphi\)&lt;/span&gt; and &lt;span class="math"&gt;\(\Phi\)&lt;/span&gt; are not the same. Furthermore, from &lt;span class="math"&gt;\(S\_{\text{kin}}\)&lt;/span&gt; it follows that &lt;span class="math"&gt;\(f\_{1}\)&lt;/span&gt; has dimensions
+Note that already we have found a big difference: the dimensions of &lt;span class="math"&gt;\(\varphi\)&lt;/span&gt; and &lt;span class="math"&gt;\(\Phi\)&lt;/span&gt; are not the same. Furthermore, from &lt;span class="math"&gt;\(S_{\text{kin}}\)&lt;/span&gt; it follows that &lt;span class="math"&gt;\(f_{1}\)&lt;/span&gt; has dimensions
 &lt;/p&gt;
-&lt;div class="math"&gt;$$[f\_{1}] = \left( \frac{D - 7}{2} \right) [\hbar] + \left( \frac{6 - D}{2} \right) [\text{mass}].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$[f_{1}] = \left( \frac{D - 7}{2} \right) [\hbar] + \left( \frac{6 - D}{2} \right) [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
-Although &lt;span class="math"&gt;\(g\_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(f\_{1}\)&lt;/span&gt; have the same mass-dimension, their &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;-dimension is very different. Indeed, when &lt;span class="math"&gt;\(3 &amp;lt; D &amp;lt; 7\)&lt;/span&gt;, you have &lt;span class="math"&gt;\(\Delta\_{\hbar}(g\_{1}) &amp;gt; 0\)&lt;/span&gt; but &lt;span class="math"&gt;\(\Delta\_{\hbar}(f\_{1}) &amp;lt; 0\)&lt;/span&gt;.&lt;/p&gt;
+Although &lt;span class="math"&gt;\(g_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(f_{1}\)&lt;/span&gt; have the same mass-dimension, their &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;-dimension is very different. Indeed, when &lt;span class="math"&gt;\(3 &amp;lt; D &amp;lt; 7\)&lt;/span&gt;, you have &lt;span class="math"&gt;\(\Delta_{\hbar}(g_{1}) &amp;gt; 0\)&lt;/span&gt; but &lt;span class="math"&gt;\(\Delta_{\hbar}(f_{1}) &amp;lt; 0\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2&gt;Higher Degree Scalar Intermedium&lt;/h2&gt;
 &lt;p&gt;In the above discussion the interaction has degree-3 because the interaction term is cubic in fields. You can consider more general interactions with degree-&lt;span class="math"&gt;\((n + 2)\)&lt;/span&gt; with &lt;span class="math"&gt;\(n\)&lt;/span&gt; a natural number. In the particle system, you have
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\int \mathrm{d}\tau\_{1} v\_{1} q\_{1} \Phi \quad \longrightarrow \int \mathrm{d}\tau\_{1} v\_{1} q\_{1} \Phi^{n},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\int \mathrm{d}\tau_{1} v_{1} q_{1} \Phi \quad \longrightarrow \int \mathrm{d}\tau_{1} v_{1} q_{1} \Phi^{n},$$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{1}{2g^{2}\_{1}} \int \mathrm{d}x \left[ \Phi \left(- \frac{1}{2} \partial^{2} \right) \Phi \right] \quad \longrightarrow \quad \frac{1}{2(g\_{n}^{2})^{1/n}} \int \mathrm{d}x \left[ \Phi \left(- \frac{1}{2} \partial^{2} \right) \Phi \right].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{1}{2g^{2}_{1}} \int \mathrm{d}x \left[ \Phi \left(- \frac{1}{2} \partial^{2} \right) \Phi \right] \quad \longrightarrow \quad \frac{1}{2(g_{n}^{2})^{1/n}} \int \mathrm{d}x \left[ \Phi \left(- \frac{1}{2} \partial^{2} \right) \Phi \right].$$&lt;/div&gt;
 &lt;p&gt;
 Thus, &lt;span class="math"&gt;\(\Phi\)&lt;/span&gt; has dimensions
 &lt;/p&gt;
 &lt;div class="math"&gt;$$[\Phi] = \frac{2}{n} [\text{mass}],$$&lt;/div&gt;
 &lt;p&gt;
-and the coupling strength &lt;span class="math"&gt;\(g\_{n}\)&lt;/span&gt; has dimensions
+and the coupling strength &lt;span class="math"&gt;\(g_{n}\)&lt;/span&gt; has dimensions
 &lt;/p&gt;
-&lt;div class="math"&gt;$$[g\_{n}] = \left( \frac{nD - 3n}{2} \right) [\hbar] + \left( \frac{4 + 2n - nD}{2} \right) [\text{mass}].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$[g_{n}] = \left( \frac{nD - 3n}{2} \right) [\hbar] + \left( \frac{4 + 2n - nD}{2} \right) [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
 On the other hand, in the wave system you have
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\int \mathrm{d}x \left[ q\_{1} \phi\_{1} \varphi \phi\_{1} \right] \quad \longrightarrow \quad \int \mathrm{d}x \left[ q\_{1} \phi\_{1} \varphi^{n} \phi\_{1} \right],$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\int \mathrm{d}x \left[ q_{1} \phi_{1} \varphi \phi_{1} \right] \quad \longrightarrow \quad \int \mathrm{d}x \left[ q_{1} \phi_{1} \varphi^{n} \phi_{1} \right],$$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{1}{2 f\_{1}^{2}} \int \mathrm{d}x \left[ \varphi \left( - \frac{1}{2} \partial^{2} \right) \varphi \right] \quad \longrightarrow \quad \frac{1}{2 (f\_{n}^{2})^{1/n}} \int \mathrm{d}x \left[ \varphi \left( - \frac{1}{2} \partial^{2} \right) \varphi \right].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{1}{2 f_{1}^{2}} \int \mathrm{d}x \left[ \varphi \left( - \frac{1}{2} \partial^{2} \right) \varphi \right] \quad \longrightarrow \quad \frac{1}{2 (f_{n}^{2})^{1/n}} \int \mathrm{d}x \left[ \varphi \left( - \frac{1}{2} \partial^{2} \right) \varphi \right].$$&lt;/div&gt;
 &lt;p&gt;
 Thus, &lt;span class="math"&gt;\(\varphi\)&lt;/span&gt; has dimensions
 &lt;/p&gt;
 &lt;div class="math"&gt;$$[\varphi] = -\frac{2}{n}[\hbar] + \frac{2}{n}[\text{mass}],$$&lt;/div&gt;
 &lt;p&gt;
-and the coupling strength &lt;span class="math"&gt;\(f\_{n}\)&lt;/span&gt; has dimensions
+and the coupling strength &lt;span class="math"&gt;\(f_{n}\)&lt;/span&gt; has dimensions
 &lt;/p&gt;
-&lt;div class="math"&gt;$$[f\_{n}] = \left( \frac{nD - 3n - 4}{2} \right) [\hbar] + \left( \frac{4 + 2n - nD}{2} \right) [\text{mass}].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$[f_{n}] = \left( \frac{nD - 3n - 4}{2} \right) [\hbar] + \left( \frac{4 + 2n - nD}{2} \right) [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
 Some important cases are &lt;span class="math"&gt;\(n = 2\)&lt;/span&gt; (i.e. degree-4):
 &lt;/p&gt;
-&lt;div class="math"&gt;$$[g\_{2}] = \left( D - 3 \right) [\hbar] + \left( 4 - D \right) [\text{mass}], \qquad [f\_{2}] = \left( D - 5 \right) [\hbar] + \left( 4 - D \right) [\text{mass}];$$&lt;/div&gt;
+&lt;div class="math"&gt;$$[g_{2}] = \left( D - 3 \right) [\hbar] + \left( 4 - D \right) [\text{mass}], \qquad [f_{2}] = \left( D - 5 \right) [\hbar] + \left( 4 - D \right) [\text{mass}];$$&lt;/div&gt;
 &lt;p&gt;
 and &lt;span class="math"&gt;\(n = 4\)&lt;/span&gt; (i.e. degree-6):
 &lt;/p&gt;
-&lt;div class="math"&gt;$$[g\_{4}] = 2\left( D - 3 \right) [\hbar] + 2\left( 3 - D \right) [\text{mass}], \qquad [f\_{4}] = 2\left( D - 4 \right) [\hbar] + 2\left( 3 - D \right) [\text{mass}].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$[g_{4}] = 2\left( D - 3 \right) [\hbar] + 2\left( 3 - D \right) [\text{mass}], \qquad [f_{4}] = 2\left( D - 4 \right) [\hbar] + 2\left( 3 - D \right) [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
-In general, for &lt;span class="math"&gt;\(D &amp;gt; 3\)&lt;/span&gt; it follows that &lt;span class="math"&gt;\(\Delta\_{\hbar}(g\_{n}) &amp;gt; 0\)&lt;/span&gt;. Something is special about &lt;span class="math"&gt;\(D = 3\)&lt;/span&gt;, because &lt;span class="math"&gt;\(\Delta\_{\hbar}(g\_{n}) = 0\)&lt;/span&gt; for any &lt;span class="math"&gt;\(n\)&lt;/span&gt;. Indeed, &lt;span class="math"&gt;\(g\_{4}\)&lt;/span&gt; is dimensionless in &lt;span class="math"&gt;\(D = 3\)&lt;/span&gt;.&lt;/p&gt;
+In general, for &lt;span class="math"&gt;\(D &amp;gt; 3\)&lt;/span&gt; it follows that &lt;span class="math"&gt;\(\Delta_{\hbar}(g_{n}) &amp;gt; 0\)&lt;/span&gt;. Something is special about &lt;span class="math"&gt;\(D = 3\)&lt;/span&gt;, because &lt;span class="math"&gt;\(\Delta_{\hbar}(g_{n}) = 0\)&lt;/span&gt; for any &lt;span class="math"&gt;\(n\)&lt;/span&gt;. Indeed, &lt;span class="math"&gt;\(g_{4}\)&lt;/span&gt; is dimensionless in &lt;span class="math"&gt;\(D = 3\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2&gt;Vector Intermedium&lt;/h2&gt;
 &lt;p&gt;Coupling matter to a vector intermedium leads to gauge theory. A particle is coupled to a vector intermedium &lt;span class="math"&gt;\(V\)&lt;/span&gt; via the replacement
 &lt;/p&gt;
@@ -140,7 +140,7 @@ I will consider three kinds of dynamics for the vector intermedium.&lt;/p&gt;
 &lt;h3&gt;Maxwell Intermedium&lt;/h3&gt;
 &lt;p&gt;The kinetic term for the Maxwell vector intermedium &lt;span class="math"&gt;\(A\)&lt;/span&gt; coupling charged particles is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{1}{2 e^{2}} \int \mathrm{d}x \, F^{2}, \qquad F\_{ab} = \partial\_{a} A\_{b} - \partial\_{b} A\_{a}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{1}{2 e^{2}} \int \mathrm{d}x \, F^{2}, \qquad F_{ab} = \partial_{a} A_{b} - \partial_{b} A_{a}.$$&lt;/div&gt;
 &lt;p&gt;
 Thus, the coupling strength &lt;span class="math"&gt;\(e\)&lt;/span&gt; has units
 &lt;/p&gt;
@@ -148,21 +148,21 @@ Thus, the coupling strength &lt;span class="math"&gt;\(e\)&lt;/span&gt; has unit
 &lt;p&gt;
 Similarly, the kinetic term for the Maxwell vector intermedium &lt;span class="math"&gt;\(V\)&lt;/span&gt; coupling charged waves is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{1}{2 h^{2}} \int \mathrm{d}x \, W^{2}, \qquad W\_{ab} = \partial\_{a} V\_{b} - \partial\_{b} V\_{a}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{1}{2 h^{2}} \int \mathrm{d}x \, W^{2}, \qquad W_{ab} = \partial_{a} V_{b} - \partial_{b} V_{a}.$$&lt;/div&gt;
 &lt;p&gt;
 Thus, the coupling strength &lt;span class="math"&gt;\(h\)&lt;/span&gt; has units
 &lt;/p&gt;
 &lt;div class="math"&gt;$$[h] = \left( \frac{D - 5}{2} \right) [\hbar] + \left( \frac{4 - D}{2} \right) [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
-You find a similar result as above: for &lt;span class="math"&gt;\(3 &amp;lt; D &amp;lt; 5\)&lt;/span&gt; (i.e. &lt;span class="math"&gt;\(D = 4\)&lt;/span&gt;) you have &lt;span class="math"&gt;\(\Delta\_{\hbar}(e) &amp;gt; 0\)&lt;/span&gt; but &lt;span class="math"&gt;\(\Delta\_{\hbar}(h) &amp;lt; 0\)&lt;/span&gt;.&lt;/p&gt;
+You find a similar result as above: for &lt;span class="math"&gt;\(3 &amp;lt; D &amp;lt; 5\)&lt;/span&gt; (i.e. &lt;span class="math"&gt;\(D = 4\)&lt;/span&gt;) you have &lt;span class="math"&gt;\(\Delta_{\hbar}(e) &amp;gt; 0\)&lt;/span&gt; but &lt;span class="math"&gt;\(\Delta_{\hbar}(h) &amp;lt; 0\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h3&gt;Yang-Mills Intermedium&lt;/h3&gt;
 &lt;p&gt;The kinetic term for the Yang-Mills intermedium &lt;span class="math"&gt;\(V\)&lt;/span&gt; coupling charged waves is found by modifying the field strength:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$W\_{ab} = \partial\_{a} V\_{b} - \partial\_{b} V\_{a} \longrightarrow Y\_{ab} = \partial\_{a} V\_{b} - \partial\_{b} V\_{a} + [V\_{a}, V\_{b}].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$W_{ab} = \partial_{a} V_{b} - \partial_{b} V_{a} \longrightarrow Y_{ab} = \partial_{a} V_{b} - \partial_{b} V_{a} + [V_{a}, V_{b}].$$&lt;/div&gt;
 &lt;p&gt;
 This does not lead to any changes in the dimensions of the coupling strength &lt;span class="math"&gt;\(h\)&lt;/span&gt;. Furthermore, since &lt;span class="math"&gt;\(Y\)&lt;/span&gt; does not contain any explicit factors of &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;, the corresponding kinetic term describes a classical field theory. This is worth mentioning because the kinetic term for the Yang-Mills intermedium &lt;span class="math"&gt;\(A\)&lt;/span&gt; coupling charged particles does contain explicit factors of &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$F\_{ab} = \partial\_{a} A\_{b} - \partial\_{b} A\_{a} \longrightarrow G\_{ab} = \partial\_{a} A\_{b} - \partial\_{b} A\_{a} + \frac{1}{\hbar} [A\_{a}, A\_{b}].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$F_{ab} = \partial_{a} A_{b} - \partial_{b} A_{a} \longrightarrow G_{ab} = \partial_{a} A_{b} - \partial_{b} A_{a} + \frac{1}{\hbar} [A_{a}, A_{b}].$$&lt;/div&gt;
 &lt;p&gt;
 This implies that the naive formulation of particles that carries nonabelian charge is not classical. Perhaps the commutator in &lt;span class="math"&gt;\(G\)&lt;/span&gt; should be demoted into a Poisson bracket, but then &lt;span class="math"&gt;\(A\)&lt;/span&gt; needs to be a function in phase space.&lt;/p&gt;
 &lt;h3&gt;Chern-Simons Intermedium&lt;/h3&gt;
@@ -191,11 +191,11 @@ and thus, the Chern-Simons coupling strength &lt;span class="math"&gt;\(k\)&lt;/
 &lt;/p&gt;
 &lt;div class="math"&gt;$$[k] = \left( \frac{1 - D}{2} \right) [\hbar].$$&lt;/div&gt;
 &lt;p&gt;
-So you find that &lt;span class="math"&gt;\(\Delta\_{\hbar}(k) &amp;gt; 0\)&lt;/span&gt; for waves, but &lt;span class="math"&gt;\(\Delta\_{\hbar}(k) &amp;lt; 0\)&lt;/span&gt; for particles. In both cases the Chern-Simons coupling has vanishing mass-dimension.&lt;/p&gt;
+So you find that &lt;span class="math"&gt;\(\Delta_{\hbar}(k) &amp;gt; 0\)&lt;/span&gt; for waves, but &lt;span class="math"&gt;\(\Delta_{\hbar}(k) &amp;lt; 0\)&lt;/span&gt; for particles. In both cases the Chern-Simons coupling has vanishing mass-dimension.&lt;/p&gt;
 &lt;h2&gt;Higher Spin Intermedium&lt;/h2&gt;
 &lt;p&gt;Besides the vector intermedium, there are higher spin intermedia. A spin-&lt;span class="math"&gt;\(N\)&lt;/span&gt; intermedium coupling particles is included via a term in the action of the form
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\int \mathrm{d} \tau v \left[ \left( \frac{1}{v} \right)^{N} \dot{x}^{a\_{1}} \cdots \dot{x}^{a\_{N}} H\_{a\_{1} \cdots a\_{N}} \right].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\int \mathrm{d} \tau v \left[ \left( \frac{1}{v} \right)^{N} \dot{x}^{a_{1}} \cdots \dot{x}^{a_{N}} H_{a_{1} \cdots a_{N}} \right].$$&lt;/div&gt;
 &lt;p&gt;
 Thus, the spin-&lt;span class="math"&gt;\(N\)&lt;/span&gt; field &lt;span class="math"&gt;\(H\)&lt;/span&gt; has dimensions
 &lt;/p&gt;
@@ -203,15 +203,15 @@ Thus, the spin-&lt;span class="math"&gt;\(N\)&lt;/span&gt; field &lt;span class=
 &lt;p&gt;
 From the standard kinetic term,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{1}{2 e\_{N}^{2}} \int \mathrm{d} x [H \partial^{2} H],$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{1}{2 e_{N}^{2}} \int \mathrm{d} x [H \partial^{2} H],$$&lt;/div&gt;
 &lt;p&gt;
-it follows that the coupling strength &lt;span class="math"&gt;\(e\_{N}\)&lt;/span&gt; has dimensions
+it follows that the coupling strength &lt;span class="math"&gt;\(e_{N}\)&lt;/span&gt; has dimensions
 &lt;/p&gt;
-&lt;div class="math"&gt;$$[e\_{N}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{6 - 2N - D}{2} \right) [\text{mass}].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$[e_{N}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{6 - 2N - D}{2} \right) [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
 Similarly, a spin-&lt;span class="math"&gt;\(N\)&lt;/span&gt; intermedium coupling waves is included via a term in the action of the form
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\int \mathrm{d}x \left[ \phi \left( J^{a\_{1} \cdots a\_{N}} \partial\_{a\_{1}} \cdots \partial\_{a\_{N}} \right) \phi \right].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\int \mathrm{d}x \left[ \phi \left( J^{a_{1} \cdots a_{N}} \partial_{a_{1}} \cdots \partial_{a_{N}} \right) \phi \right].$$&lt;/div&gt;
 &lt;p&gt;
 This leads to the spin-&lt;span class="math"&gt;\(N\)&lt;/span&gt; field &lt;span class="math"&gt;\(J\)&lt;/span&gt; having dimensions
 &lt;/p&gt;
@@ -219,17 +219,17 @@ This leads to the spin-&lt;span class="math"&gt;\(N\)&lt;/span&gt; field &lt;spa
 &lt;p&gt;
 From the standard kinetic term,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{1}{2 h\_{N}^{2}} \int \mathrm{d} x [J \partial^{2} J],$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{1}{2 h_{N}^{2}} \int \mathrm{d} x [J \partial^{2} J],$$&lt;/div&gt;
 &lt;p&gt;
-it follows that the coupling strength &lt;span class="math"&gt;\(h\_{N}\)&lt;/span&gt; has dimensions
+it follows that the coupling strength &lt;span class="math"&gt;\(h_{N}\)&lt;/span&gt; has dimensions
 &lt;/p&gt;
-&lt;div class="math"&gt;$$[h\_{N}] = \left( \frac{D - 7 + 2N}{2} \right) [\hbar] + \left( \frac{6 - 2N - D}{2} \right) [\text{mass}].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$[h_{N}] = \left( \frac{D - 7 + 2N}{2} \right) [\hbar] + \left( \frac{6 - 2N - D}{2} \right) [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
 An important example is the gravitational coupling, which corresponds to &lt;span class="math"&gt;\(N = 2\)&lt;/span&gt;:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$[e\_{2}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{2 - D}{2} \right) [\text{mass}], \qquad [h\_{2}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{2 - D}{2} \right) [\text{mass}].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$[e_{2}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{2 - D}{2} \right) [\text{mass}], \qquad [h_{2}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{2 - D}{2} \right) [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;
-Curiously, these two couplings have the same dimensions. Indeed, for &lt;span class="math"&gt;\(D &amp;gt; 3\)&lt;/span&gt; you have &lt;span class="math"&gt;\(\Delta\_{\hbar}(e\_{2}) &amp;gt; 0\)&lt;/span&gt;.&lt;/p&gt;
+Curiously, these two couplings have the same dimensions. Indeed, for &lt;span class="math"&gt;\(D &amp;gt; 3\)&lt;/span&gt; you have &lt;span class="math"&gt;\(\Delta_{\hbar}(e_{2}) &amp;gt; 0\)&lt;/span&gt;.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
