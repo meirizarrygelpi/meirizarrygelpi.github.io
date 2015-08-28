@@ -2064,34 +2064,34 @@ Indeed, now you have &lt;strong&gt;two&lt;/strong&gt; independent conformal rati
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.06577"&gt;Bulk-Boundary Duality, Gauge Invariance, and Quantum Error Correction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1501.06860"&gt;On factorization of multiparticle pentagons&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 31 Jan 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-01-31:posts/2015/Jan/2015-week-5/</guid><category>research</category></item><item><title>Dihedral Momentum Invariants</title><link>http://meirizarrygelpi.github.io/posts/2015/Jan/dihedral-invariants/</link><description>&lt;p&gt;In this post I introduce what I call dihedral momentum invariants. As usual, I will assume that every energy-momentum vector &lt;span class="math"&gt;\(p\_{I}\)&lt;/span&gt; satisfies an on-shell constraint of the form
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 31 Jan 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-01-31:posts/2015/Jan/2015-week-5/</guid><category>research</category></item><item><title>Dihedral Momentum Invariants</title><link>http://meirizarrygelpi.github.io/posts/2015/Jan/dihedral-invariants/</link><description>&lt;p&gt;In this post I introduce what I call dihedral momentum invariants. As usual, I will assume that every energy-momentum vector &lt;span class="math"&gt;\(p_{I}\)&lt;/span&gt; satisfies an on-shell constraint of the form
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p\_{I}^{2} = -m\_{I}^{2} $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{I}^{2} = -m_{I}^{2} $$&lt;/div&gt;
 &lt;p&gt;
-with the mass &lt;span class="math"&gt;\(m\_{I}\)&lt;/span&gt; being real and positive.&lt;/p&gt;
+with the mass &lt;span class="math"&gt;\(m_{I}\)&lt;/span&gt; being real and positive.&lt;/p&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;The &lt;a href="http://meirizarrygelpi.github.io/posts/2014/Aug/mandelstam-invariants/"&gt;Mandelstam momentum invariants&lt;/a&gt; pretty much tell you almost all of the kinematic information (specially if you are only working with scalar quanta). Indeed, once you have all the 2-Mandelstam invariants, you can use them to write all higher non-trivial Mandelstam invariants. So the 2-Mandelstam invariants are special. You also know about &lt;a href="http://meirizarrygelpi.github.io/posts/2014/Aug/gram-invariants/"&gt;Gram momentum invariants&lt;/a&gt;. Since the 2-Gram invariant is &lt;strong&gt;quadratic&lt;/strong&gt; in the 2-Mandelstam invariant, inverting this relation introduces complicated non-polynomial relations. The dihedral momentum invariant is &lt;strong&gt;linear&lt;/strong&gt; in the 2-Mandelstam invariant. Further more, it is also &lt;strong&gt;dimensionless&lt;/strong&gt;. Given two linearly-independent energy-momentum vectors, the dihedral momentum invariant is defined as
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\xi\_{IJ} \equiv - \frac{p\_{I} \cdot p\_{J}}{\sqrt{-p\_{I}^{2}} \sqrt{-p\_{J}^{2}}} = \frac{s\_{IJ} - m\_{I}^{2} - m\_{J}^{2}}{2 m\_{I} m\_{J}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\xi_{IJ} \equiv - \frac{p_{I} \cdot p_{J}}{\sqrt{-p_{I}^{2}} \sqrt{-p_{J}^{2}}} = \frac{s_{IJ} - m_{I}^{2} - m_{J}^{2}}{2 m_{I} m_{J}}.$$&lt;/div&gt;
 &lt;p&gt;
 In the second step I have used the definition of the 2-Mandelstam invariant, and the on-shell constraint, to relate the dihedral invariant to the 2-Mandelstam invariant.&lt;/p&gt;
-&lt;p&gt;Note two special cases: when &lt;span class="math"&gt;\(s\_{IJ} = (m\_{I} + m\_{J})^{2}\)&lt;/span&gt; you have &lt;span class="math"&gt;\(\xi\_{IJ} = 1\)&lt;/span&gt;, and when &lt;span class="math"&gt;\(s\_{IJ} = (m\_{I} - m\_{J})^{2}\)&lt;/span&gt; you have &lt;span class="math"&gt;\(\xi\_{IJ} = -1\)&lt;/span&gt;. If the energy-momentum vectors lived in a space with Euclidean signature, then &lt;span class="math"&gt;\(\xi\_{IJ}\)&lt;/span&gt; would correspond to a cosine function, which has a bounded range. However, in a space with Minkowski signature, &lt;span class="math"&gt;\(\xi\_{IJ}\)&lt;/span&gt; does not has a bounded range. Indeed, &lt;span class="math"&gt;\(\xi\_{IJ}\)&lt;/span&gt; only allows a cosine interpretation in the kinematic region
+&lt;p&gt;Note two special cases: when &lt;span class="math"&gt;\(s_{IJ} = (m_{I} + m_{J})^{2}\)&lt;/span&gt; you have &lt;span class="math"&gt;\(\xi_{IJ} = 1\)&lt;/span&gt;, and when &lt;span class="math"&gt;\(s_{IJ} = (m_{I} - m_{J})^{2}\)&lt;/span&gt; you have &lt;span class="math"&gt;\(\xi_{IJ} = -1\)&lt;/span&gt;. If the energy-momentum vectors lived in a space with Euclidean signature, then &lt;span class="math"&gt;\(\xi_{IJ}\)&lt;/span&gt; would correspond to a cosine function, which has a bounded range. However, in a space with Minkowski signature, &lt;span class="math"&gt;\(\xi_{IJ}\)&lt;/span&gt; does not has a bounded range. Indeed, &lt;span class="math"&gt;\(\xi_{IJ}\)&lt;/span&gt; only allows a cosine interpretation in the kinematic region
 &lt;/p&gt;
-&lt;div class="math"&gt;$$(m\_{I} - m\_{J})^{2} \leq s\_{IJ} \leq (m\_{I} + m\_{J})^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$(m_{I} - m_{J})^{2} \leq s_{IJ} \leq (m_{I} + m_{J})^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 Outside of this kinematic region is the scattering region.&lt;/p&gt;
 &lt;h2&gt;2-Gram Invariant&lt;/h2&gt;
 &lt;p&gt;Writting the 2-Gram invariant in terms of the dihedral invariant, you find
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G_{IJ} = m\_{I}^{2} m\_{J}^{2} (\xi\_{IJ} + 1) (\xi\_{IJ} - 1) .$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{IJ} = m_{I}^{2} m_{J}^{2} (\xi_{IJ} + 1) (\xi_{IJ} - 1) .$$&lt;/div&gt;
 &lt;p&gt;
-In this form, the geometrical meaning of &lt;span class="math"&gt;\(\sqrt{G\_{IJ}}\)&lt;/span&gt; as the area of the 2-parallelotope generated by &lt;span class="math"&gt;\(p\_{I}\)&lt;/span&gt; and &lt;span class="math"&gt;\(p\_{J}\)&lt;/span&gt; is more transparent.&lt;/p&gt;
+In this form, the geometrical meaning of &lt;span class="math"&gt;\(\sqrt{G_{IJ}}\)&lt;/span&gt; as the area of the 2-parallelotope generated by &lt;span class="math"&gt;\(p_{I}\)&lt;/span&gt; and &lt;span class="math"&gt;\(p_{J}\)&lt;/span&gt; is more transparent.&lt;/p&gt;
 &lt;h2&gt;3-Gram Invariant&lt;/h2&gt;
 &lt;p&gt;The expression for the 3-Gram invariant in terms of the three 2-Mandelstam invariants is not very illuminating. Using the three corresponding dihedral invariants, you find
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G_{IJK} = m\_{I}^{2} m\_{J}^{2} m\_{K}^{2} (1 - \xi\_{IJ}^{2} - \xi\_{IK}^{2} - \xi\_{JK}^{2} + 2 \xi\_{IJ} \xi\_{IK} \xi\_{JK} ) .$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{IJK} = m_{I}^{2} m_{J}^{2} m_{K}^{2} (1 - \xi_{IJ}^{2} - \xi_{IK}^{2} - \xi_{JK}^{2} + 2 \xi_{IJ} \xi_{IK} \xi_{JK} ) .$$&lt;/div&gt;
 &lt;p&gt;
-This expression might not be very useful to determine the sign properties of &lt;span class="math"&gt;\(G_{IJK}\)&lt;/span&gt;, but it is a start. Again, the geometrical meaning of &lt;span class="math"&gt;\(\sqrt{G\_{IJK}}\)&lt;/span&gt; as the volume of the 3-parallelotope generated by &lt;span class="math"&gt;\(p\_{I}\)&lt;/span&gt;, &lt;span class="math"&gt;\(p\_{J}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(p\_{K}\)&lt;/span&gt; is more transparent.&lt;/p&gt;
+This expression might not be very useful to determine the sign properties of &lt;span class="math"&gt;\(G_{IJK}\)&lt;/span&gt;, but it is a start. Again, the geometrical meaning of &lt;span class="math"&gt;\(\sqrt{G_{IJK}}\)&lt;/span&gt; as the volume of the 3-parallelotope generated by &lt;span class="math"&gt;\(p_{I}\)&lt;/span&gt;, &lt;span class="math"&gt;\(p_{J}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(p_{K}\)&lt;/span&gt; is more transparent.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -3699,11 +3699,11 @@ Again, you can use the same kinematic variables above if you let &lt;span class=
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.5572"&gt;Anomaly polynomial of general 6d SCFTs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.5866"&gt;Theory Summary and Prospects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1408.6522"&gt;Chiral algebras of class S&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 30 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-30:posts/2014/Aug/2014-week-35/</guid><category>research</category></item><item><title>Dual Conformal Invariants</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/dual-conformal-invariants/</link><description>&lt;p&gt;In this post I will discuss some aspects of dual conformal symmetry. I will assume that each external energy-momentum vector &lt;span class="math"&gt;\(p\_{I}\)&lt;/span&gt; satisfies an on-shell constraint of the form
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 30 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-30:posts/2014/Aug/2014-week-35/</guid><category>research</category></item><item><title>Dual Conformal Invariants</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/dual-conformal-invariants/</link><description>&lt;p&gt;In this post I will discuss some aspects of dual conformal symmetry. I will assume that each external energy-momentum vector &lt;span class="math"&gt;\(p_{I}\)&lt;/span&gt; satisfies an on-shell constraint of the form
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{I}^{2} = - m\_{I}^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{I}^{2} = - m_{I}^{2}$$&lt;/div&gt;
 &lt;p&gt;
-and that the mass &lt;span class="math"&gt;\(m\_{I}\)&lt;/span&gt; is positive and real. During some of the remarks I will take massless limits to illustrate some results. &lt;/p&gt;
+and that the mass &lt;span class="math"&gt;\(m_{I}\)&lt;/span&gt; is positive and real. During some of the remarks I will take massless limits to illustrate some results. &lt;/p&gt;
 &lt;h2&gt;Traditional Conformal Symmetry&lt;/h2&gt;
 &lt;p&gt;Conformal symmetry is a large set of symmetries of spacetime. It includes translations, Lorentz transformations, dilatations, and conformal boosts. You might be more familiar with how conformal symmetry transformations act on the spacetime position vector.&lt;/p&gt;
 &lt;p&gt;Translations and Lorentz transformations are familiar; together they make Poincaré symmetry. Under a finite translation, the &lt;strong&gt;spacetime position&lt;/strong&gt; vector of an event transforms as
@@ -3743,29 +3743,29 @@ It is clear that the product of these two conformal ratios gives the first confo
 &lt;p&gt;
 Since the conformal ratio is invariant under translations and inversions, it is actually invariant under all of the conformal symmetry transformations. Thus, the simplest conformal-invariant quantity requires &lt;strong&gt;four&lt;/strong&gt; pieces of information. If you have a collection of &lt;span class="math"&gt;\(N\)&lt;/span&gt; points in spacetime, you have to count the number of ways of choosing four of them to make two conformal ratios. Thus, the number of independent conformal ratios is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\mathfrak{R}\_{N} \equiv 2 \times {N \choose 4} = \frac{N (N - 1) (N - 2) (N - 3)}{12}, \qquad N \geq 4.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\mathfrak{R}_{N} \equiv 2 \times {N \choose 4} = \frac{N (N - 1) (N - 2) (N - 3)}{12}, \qquad N \geq 4.$$&lt;/div&gt;
 &lt;p&gt;
-Note that &lt;span class="math"&gt;\(\mathfrak{R}\_{4} = 2\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathfrak{R}\_{6} = 30\)&lt;/span&gt;.&lt;/p&gt;
+Note that &lt;span class="math"&gt;\(\mathfrak{R}_{4} = 2\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathfrak{R}_{6} = 30\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2&gt;Dual Conformal Symmetry&lt;/h2&gt;
 &lt;p&gt;The origins of dual conformal symmetry are still murky. I am going to present it in a way that will make it sound as less of what it is. Dual conformal symmetry is related to even more symmetry: a &lt;strong&gt;Yangian&lt;/strong&gt; symmetry, which is effectively an &lt;strong&gt;infinite&lt;/strong&gt; amount of symmetry. Since I do not understand that stuff well, I am not going to say anything about it.&lt;/p&gt;
 &lt;p&gt;One way to understand dual conformal symmetry is to consider a scattering process with &lt;span class="math"&gt;\(N\)&lt;/span&gt; external quanta. The conservation constraint is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{1} + p\_{2} + \ldots + p\_{N} = 0.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{1} + p_{2} + \ldots + p_{N} = 0.$$&lt;/div&gt;
 &lt;p&gt;
 This constraint can be satisfied explicitly by writting each energy-momentum vector as the difference of &lt;strong&gt;dual position&lt;/strong&gt; vectors:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{1} = q\_{2} - q\_{1} \qquad p\_{2} = q\_{3} - q\_{2} \qquad \cdots \qquad p\_{N} = q\_{1} - q\_{N}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{1} = q_{2} - q_{1} \qquad p_{2} = q_{3} - q_{2} \qquad \cdots \qquad p_{N} = q_{1} - q_{N}.$$&lt;/div&gt;
 &lt;p&gt;
-After this "change of variables" from &lt;span class="math"&gt;\(p\_{I}\)&lt;/span&gt; to &lt;span class="math"&gt;\(q\_{I}\)&lt;/span&gt; you can consider conformal symmetry transformations acting on the dual position vectors. This conformal symmetry acts on momentum space (e.g. dilatation of the &lt;strong&gt;dual&lt;/strong&gt; position vector); it is different from the traditional conformal symmetry (e.g. dilatation of the &lt;strong&gt;spacetime&lt;/strong&gt; position vector). The &lt;strong&gt;dual conformal ratios&lt;/strong&gt; constructed with the dual position vectors are invariant under &lt;strong&gt;dual conformal symmetry&lt;/strong&gt; transformations.&lt;/p&gt;
+After this "change of variables" from &lt;span class="math"&gt;\(p_{I}\)&lt;/span&gt; to &lt;span class="math"&gt;\(q_{I}\)&lt;/span&gt; you can consider conformal symmetry transformations acting on the dual position vectors. This conformal symmetry acts on momentum space (e.g. dilatation of the &lt;strong&gt;dual&lt;/strong&gt; position vector); it is different from the traditional conformal symmetry (e.g. dilatation of the &lt;strong&gt;spacetime&lt;/strong&gt; position vector). The &lt;strong&gt;dual conformal ratios&lt;/strong&gt; constructed with the dual position vectors are invariant under &lt;strong&gt;dual conformal symmetry&lt;/strong&gt; transformations.&lt;/p&gt;
 &lt;p&gt;However, the way that I introduced the dual position vectors above is not unique. If you think of the dual position vectors as describing the positions of the vertices of a polygon, then the edges of this polygon correspond to the energy-momentum vectors. Drawing the vertices in ascending order counter-clockwise, you can see that the energy-momentum vectors are arranged in a particular &lt;strong&gt;order&lt;/strong&gt; (in the case above the order is ascending, i.e. &lt;span class="math"&gt;\(1 2 \ldots N\)&lt;/span&gt;). There is nothing special about the particular order that I chose above, but choosing another order will change the explicit values of the dual conformal ratios. In other words, just like there are different &lt;strong&gt;scattering channels&lt;/strong&gt;, there are also have different &lt;strong&gt;dual conformal channels&lt;/strong&gt;. The number of dual conformal channels is the same as the number of &lt;strong&gt;cyclically-inequivalent permutations&lt;/strong&gt; of &lt;span class="math"&gt;\(N\)&lt;/span&gt; integers (permutations that are not related by a cyclic rotation). This number is given by
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\mathfrak{C}\_{N} \equiv (N - 1)! \qquad N \geq 1.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\mathfrak{C}_{N} \equiv (N - 1)! \qquad N \geq 1.$$&lt;/div&gt;
 &lt;p&gt;
-Note that &lt;span class="math"&gt;\(\mathfrak{C}\_{4} = 6\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathfrak{C}\_{6} = 120\)&lt;/span&gt;. As you will see below, only half of these dual conformal channels are interesting because the other half gives the same information due to reflection invariance.&lt;/p&gt;
+Note that &lt;span class="math"&gt;\(\mathfrak{C}_{4} = 6\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathfrak{C}_{6} = 120\)&lt;/span&gt;. As you will see below, only half of these dual conformal channels are interesting because the other half gives the same information due to reflection invariance.&lt;/p&gt;
 &lt;h3&gt;Finding Cyclically-Inequivalent Permutations&lt;/h3&gt;
 &lt;p&gt;An easy way of finding cyclically-inequivalent permutations is to construct them from smaller ones. You start with one element. There is only &lt;span class="math"&gt;\(1! = 1\)&lt;/span&gt; permutation. Then you add another element. With two elements you have &lt;span class="math"&gt;\(2! = 2\)&lt;/span&gt; possible permutations. These are &lt;span class="math"&gt;\(12\)&lt;/span&gt; and &lt;span class="math"&gt;\(21\)&lt;/span&gt;. However, &lt;span class="math"&gt;\(21\)&lt;/span&gt; follows from &lt;span class="math"&gt;\(12\)&lt;/span&gt; by a cyclic rotation, so only one of these permutations is independent (these two permutations are also related by a reflection). For convenience I will pick &lt;span class="math"&gt;\(12\)&lt;/span&gt; as the representative of the cyclic class. One way to construct the permutation &lt;span class="math"&gt;\(12\)&lt;/span&gt; is to start with the one-element "subpermutation" &lt;span class="math"&gt;\(1\)&lt;/span&gt; and append the second element.&lt;/p&gt;
-&lt;p&gt;Then you add a third element. With three elements you have &lt;span class="math"&gt;\(3! = 6\)&lt;/span&gt; possible permutations. But it turns out that only two of these permutations are cyclically-inequivalent (you expect this, since &lt;span class="math"&gt;\(\mathfrak{C}\_{3} = 2\)&lt;/span&gt;). To construct these inequivalent permutations, you take the subpermutation &lt;span class="math"&gt;\(12\)&lt;/span&gt; and its cyclic rotation &lt;span class="math"&gt;\(21\)&lt;/span&gt;, and append the third element yielding &lt;span class="math"&gt;\(123\)&lt;/span&gt; and &lt;span class="math"&gt;\(213\)&lt;/span&gt;. Performing cyclic rotations on &lt;span class="math"&gt;\(123\)&lt;/span&gt; yields &lt;span class="math"&gt;\(231\)&lt;/span&gt; and &lt;span class="math"&gt;\(312\)&lt;/span&gt;. Similarly, performing cyclic rotations on &lt;span class="math"&gt;\(213\)&lt;/span&gt; yields &lt;span class="math"&gt;\(132\)&lt;/span&gt; and &lt;span class="math"&gt;\(321\)&lt;/span&gt;. Note that the two cyclic classes are related by a reflection.&lt;/p&gt;
-&lt;p&gt;Then you add a fourth element. With four elements you have &lt;span class="math"&gt;\(4! = 24\)&lt;/span&gt; possible permutations. You expect &lt;span class="math"&gt;\(\mathfrak{C}\_{4} = 6\)&lt;/span&gt; cyclically-inequivalent permutations. To construct these, you append the fourth element to each of the permutations in the &lt;span class="math"&gt;\(123\)&lt;/span&gt; and &lt;span class="math"&gt;\(213\)&lt;/span&gt; cyclic classes:
+&lt;p&gt;Then you add a third element. With three elements you have &lt;span class="math"&gt;\(3! = 6\)&lt;/span&gt; possible permutations. But it turns out that only two of these permutations are cyclically-inequivalent (you expect this, since &lt;span class="math"&gt;\(\mathfrak{C}_{3} = 2\)&lt;/span&gt;). To construct these inequivalent permutations, you take the subpermutation &lt;span class="math"&gt;\(12\)&lt;/span&gt; and its cyclic rotation &lt;span class="math"&gt;\(21\)&lt;/span&gt;, and append the third element yielding &lt;span class="math"&gt;\(123\)&lt;/span&gt; and &lt;span class="math"&gt;\(213\)&lt;/span&gt;. Performing cyclic rotations on &lt;span class="math"&gt;\(123\)&lt;/span&gt; yields &lt;span class="math"&gt;\(231\)&lt;/span&gt; and &lt;span class="math"&gt;\(312\)&lt;/span&gt;. Similarly, performing cyclic rotations on &lt;span class="math"&gt;\(213\)&lt;/span&gt; yields &lt;span class="math"&gt;\(132\)&lt;/span&gt; and &lt;span class="math"&gt;\(321\)&lt;/span&gt;. Note that the two cyclic classes are related by a reflection.&lt;/p&gt;
+&lt;p&gt;Then you add a fourth element. With four elements you have &lt;span class="math"&gt;\(4! = 24\)&lt;/span&gt; possible permutations. You expect &lt;span class="math"&gt;\(\mathfrak{C}_{4} = 6\)&lt;/span&gt; cyclically-inequivalent permutations. To construct these, you append the fourth element to each of the permutations in the &lt;span class="math"&gt;\(123\)&lt;/span&gt; and &lt;span class="math"&gt;\(213\)&lt;/span&gt; cyclic classes:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$1234 \qquad 2314 \qquad 3124,$$&lt;/div&gt;
 &lt;p&gt;
@@ -3778,47 +3778,47 @@ Note that these six permutations can be divided into three pairs that are relate
 &lt;h2&gt;Four External Quanta&lt;/h2&gt;
 &lt;p&gt;In order to be concrete, I will now do some examples with explicit details. The simplest case is with four external quanta. Let me first consider the permutation &lt;span class="math"&gt;\(1234\)&lt;/span&gt;. With this order of the external states, the dual position variables are introduced as
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{1} = q\_{2} - q\_{1} \qquad p\_{2} = q\_{3} - q\_{2} \qquad p\_{3} = q\_{4} - q\_{3} \qquad p\_{4} = q\_{1} - q\_{4}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{1} = q_{2} - q_{1} \qquad p_{2} = q_{3} - q_{2} \qquad p_{3} = q_{4} - q_{3} \qquad p_{4} = q_{1} - q_{4}.$$&lt;/div&gt;
 &lt;p&gt;
-Other possible intervals are &lt;span class="math"&gt;\(q\_{2} - q\_{4} = p\_{1} + p\_{4}\)&lt;/span&gt; and &lt;span class="math"&gt;\(q\_{3} - q\_{1} = p\_{1} + p\_{2}\)&lt;/span&gt;. Using the notation &lt;span class="math"&gt;\(q\_{IJ} \equiv q\_{I} - q\_{J}\)&lt;/span&gt;, the dual conformal ratios are given by
+Other possible intervals are &lt;span class="math"&gt;\(q_{2} - q_{4} = p_{1} + p_{4}\)&lt;/span&gt; and &lt;span class="math"&gt;\(q_{3} - q_{1} = p_{1} + p_{2}\)&lt;/span&gt;. Using the notation &lt;span class="math"&gt;\(q_{IJ} \equiv q_{I} - q_{J}\)&lt;/span&gt;, the dual conformal ratios are given by
 &lt;/p&gt;
-&lt;div class="math"&gt;$$r\_{1} = \frac{q\_{21}^{2} q\_{43}^{2}}{q\_{24}^{2} q\_{31}^{2}} = \frac{p\_{1}^{2} p\_{3}^{2}}{(p\_{1} + p\_{4})^{2} (p\_{1} + p\_{2})^{2}} \qquad r\_{2} = \frac{q\_{14}^{2} q\_{32}^{2}}{q\_{21}^{2} q\_{43}^{2}} = \frac{p\_{4}^{2} p\_{2}^{2}}{p\_{1}^{2} p\_{3}^{2}} \qquad r\_{3} = r\_{1} r\_{2} = \frac{p\_{2}^{2} p\_{4}^{2}}{(p\_{1} + p\_{4})^{2} (p\_{1} + p\_{2})^{2}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$r_{1} = \frac{q_{21}^{2} q_{43}^{2}}{q_{24}^{2} q_{31}^{2}} = \frac{p_{1}^{2} p_{3}^{2}}{(p_{1} + p_{4})^{2} (p_{1} + p_{2})^{2}} \qquad r_{2} = \frac{q_{14}^{2} q_{32}^{2}}{q_{21}^{2} q_{43}^{2}} = \frac{p_{4}^{2} p_{2}^{2}}{p_{1}^{2} p_{3}^{2}} \qquad r_{3} = r_{1} r_{2} = \frac{p_{2}^{2} p_{4}^{2}}{(p_{1} + p_{4})^{2} (p_{1} + p_{2})^{2}}.$$&lt;/div&gt;
 &lt;p&gt;
 Writing the dual conformal ratios in terms of the masses and 2-Mandelstam invariants gives
 &lt;/p&gt;
-&lt;div class="math"&gt;$$r\_{1} = \frac{m\_{1}^{2} m\_{3}^{2}}{s\_{14} s\_{12}} \qquad r\_{2} = \frac{m\_{2}^{2} m\_{4}^{2}}{m\_{1}^{2} m\_{3}^{2}} \qquad r\_{3} = \frac{m\_{2}^{2} m\_{4}^{2}}{s\_{14} s\_{12}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$r_{1} = \frac{m_{1}^{2} m_{3}^{2}}{s_{14} s_{12}} \qquad r_{2} = \frac{m_{2}^{2} m_{4}^{2}}{m_{1}^{2} m_{3}^{2}} \qquad r_{3} = \frac{m_{2}^{2} m_{4}^{2}}{s_{14} s_{12}}.$$&lt;/div&gt;
 &lt;p&gt;
-From a kinematical point of view, only one of these dual conformal ratios is relevant, since &lt;span class="math"&gt;\(r\_{2}\)&lt;/span&gt; involves only masses, and &lt;span class="math"&gt;\(r\_{3}\)&lt;/span&gt; involves the same 2-Mandelstam invariants as &lt;span class="math"&gt;\(r\_{1}\)&lt;/span&gt;. Also, note that &lt;span class="math"&gt;\(r\_{1}\)&lt;/span&gt; involves the masses in the numerator, so when working with massless states the dual conformal ratio is fixed to vanish.&lt;/p&gt;
+From a kinematical point of view, only one of these dual conformal ratios is relevant, since &lt;span class="math"&gt;\(r_{2}\)&lt;/span&gt; involves only masses, and &lt;span class="math"&gt;\(r_{3}\)&lt;/span&gt; involves the same 2-Mandelstam invariants as &lt;span class="math"&gt;\(r_{1}\)&lt;/span&gt;. Also, note that &lt;span class="math"&gt;\(r_{1}\)&lt;/span&gt; involves the masses in the numerator, so when working with massless states the dual conformal ratio is fixed to vanish.&lt;/p&gt;
 &lt;p&gt;The dual conformal invariants for other cyclic classes can be obtained by permuting the labels. For example, in order to go from &lt;span class="math"&gt;\(1234\)&lt;/span&gt; to &lt;span class="math"&gt;\(2314\)&lt;/span&gt;, you need the replacement
 &lt;/p&gt;
 &lt;div class="math"&gt;$$1 \longrightarrow 2 \qquad 2 \longrightarrow 3 \qquad 3 \longrightarrow 1 \qquad 4 \longrightarrow 4$$&lt;/div&gt;
 &lt;p&gt;
 Thus, the dual conformal ratios become
 &lt;/p&gt;
-&lt;div class="math"&gt;$$r\_{1} \longrightarrow \frac{m\_{2}^{2} m\_{1}^{2}}{s\_{13} s\_{14}} \qquad r\_{2} \longrightarrow \frac{m\_{3}^{2} m\_{4}^{2}}{m\_{2}^{2} m\_{1}^{2}} \qquad r\_{3} \longrightarrow \frac{m\_{3}^{2} m\_{4}^{2}}{s\_{13} s\_{14}},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$r_{1} \longrightarrow \frac{m_{2}^{2} m_{1}^{2}}{s_{13} s_{14}} \qquad r_{2} \longrightarrow \frac{m_{3}^{2} m_{4}^{2}}{m_{2}^{2} m_{1}^{2}} \qquad r_{3} \longrightarrow \frac{m_{3}^{2} m_{4}^{2}}{s_{13} s_{14}},$$&lt;/div&gt;
 &lt;p&gt;
-where I have used &lt;span class="math"&gt;\(s\_{24} = s\_{13}\)&lt;/span&gt; and &lt;span class="math"&gt;\(s\_{23} = s\_{14}\)&lt;/span&gt; which follow from the conservation constraint.&lt;/p&gt;
+where I have used &lt;span class="math"&gt;\(s_{24} = s_{13}\)&lt;/span&gt; and &lt;span class="math"&gt;\(s_{23} = s_{14}\)&lt;/span&gt; which follow from the conservation constraint.&lt;/p&gt;
 &lt;p&gt;Similarly, in order to go from &lt;span class="math"&gt;\(1234\)&lt;/span&gt; to &lt;span class="math"&gt;\(3124\)&lt;/span&gt;, I need the replacement
 &lt;/p&gt;
 &lt;div class="math"&gt;$$1 \longrightarrow 3 \qquad 2 \longrightarrow 1 \qquad 3 \longrightarrow 2 \qquad 4 \longrightarrow 4$$&lt;/div&gt;
 &lt;p&gt;
 Thus, the dual conformal ratios become
 &lt;/p&gt;
-&lt;div class="math"&gt;$$r\_{1} \longrightarrow \frac{m\_{3}^{2} m\_{2}^{2}}{s\_{12} s\_{13}} \qquad r\_{2} \longrightarrow \frac{m\_{1}^{2} m\_{4}^{2}}{m\_{3}^{2} m\_{2}^{2}} \qquad r\_{3} \longrightarrow \frac{m\_{1}^{2} m\_{4}^{2}}{s\_{12} s\_{13}},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$r_{1} \longrightarrow \frac{m_{3}^{2} m_{2}^{2}}{s_{12} s_{13}} \qquad r_{2} \longrightarrow \frac{m_{1}^{2} m_{4}^{2}}{m_{3}^{2} m_{2}^{2}} \qquad r_{3} \longrightarrow \frac{m_{1}^{2} m_{4}^{2}}{s_{12} s_{13}},$$&lt;/div&gt;
 &lt;p&gt;
-where I have used &lt;span class="math"&gt;\(s\_{34} = s\_{12}\)&lt;/span&gt; which follows from the conservation constraint.&lt;/p&gt;
+where I have used &lt;span class="math"&gt;\(s_{34} = s_{12}\)&lt;/span&gt; which follows from the conservation constraint.&lt;/p&gt;
 &lt;h2&gt;Six External Quanta&lt;/h2&gt;
-&lt;p&gt;As the number of external quanta increases, a new feature arises. When &lt;span class="math"&gt;\(N = 6\)&lt;/span&gt; you have &lt;span class="math"&gt;\(\mathfrak{R}\_{6} = 30\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathfrak{C}\_{6} = 120\)&lt;/span&gt;. There is very little benefit to listing the representatives of all cyclic classes, so for concreteness I will work with the order &lt;span class="math"&gt;\(123456\)&lt;/span&gt;. The dual position vectors are introduced via
+&lt;p&gt;As the number of external quanta increases, a new feature arises. When &lt;span class="math"&gt;\(N = 6\)&lt;/span&gt; you have &lt;span class="math"&gt;\(\mathfrak{R}_{6} = 30\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathfrak{C}_{6} = 120\)&lt;/span&gt;. There is very little benefit to listing the representatives of all cyclic classes, so for concreteness I will work with the order &lt;span class="math"&gt;\(123456\)&lt;/span&gt;. The dual position vectors are introduced via
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{1} = q\_{21} \qquad p\_{2} = q\_{32} \qquad p\_{3} = q\_{43} \qquad p\_{4} = q\_{54} \qquad p\_{5} = q\_{65} \qquad p\_{6} = q\_{16},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{1} = q_{21} \qquad p_{2} = q_{32} \qquad p_{3} = q_{43} \qquad p_{4} = q_{54} \qquad p_{5} = q_{65} \qquad p_{6} = q_{16},$$&lt;/div&gt;
 &lt;p&gt;
-where &lt;span class="math"&gt;\(q\_{IJ} \equiv q\_{I} - q\_{J}\)&lt;/span&gt;. Other possible intervals are
+where &lt;span class="math"&gt;\(q_{IJ} \equiv q_{I} - q_{J}\)&lt;/span&gt;. Other possible intervals are
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{1} + p\_{2} = q\_{31} \qquad p\_{5} + p\_{6} = q\_{15} \qquad p\_{2} + p\_{3} = q\_{42} \qquad p\_{1} + p\_{6} = q\_{26} \qquad p\_{3} + p\_{4} = q\_{53} \qquad p\_{4} + p\_{5} = q\_{64},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{1} + p_{2} = q_{31} \qquad p_{5} + p_{6} = q_{15} \qquad p_{2} + p_{3} = q_{42} \qquad p_{1} + p_{6} = q_{26} \qquad p_{3} + p_{4} = q_{53} \qquad p_{4} + p_{5} = q_{64},$$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{1} + p\_{2} + p\_{3} = q\_{41} \qquad p\_{1} + p\_{5} + p\_{6}  = q\_{25} \qquad p\_{1} + p\_{2} + p\_{6} = q\_{36}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{1} + p_{2} + p_{3} = q_{41} \qquad p_{1} + p_{5} + p_{6}  = q_{25} \qquad p_{1} + p_{2} + p_{6} = q_{36}.$$&lt;/div&gt;
 &lt;p&gt;
 There are fifteen ways of choosing four elements from a set of six:
 &lt;/p&gt;
@@ -3826,29 +3826,29 @@ There are fifteen ways of choosing four elements from a set of six:
 &lt;p&gt;
 First, consider the quartet &lt;span class="math"&gt;\(1234\)&lt;/span&gt;. The dual conformal ratios are
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{q\_{21}^{2} q\_{43}^{2}}{q\_{31}^{2} q\_{42}^{2}} = \frac{m\_{1}^{2} m\_{3}^{2}}{s\_{12} s\_{23}} \qquad \frac{q\_{41}^{2} q\_{32}^{2}}{q\_{31}^{2} q\_{42}^{2}} = \frac{s\_{123} m\_{2}^{2}}{s\_{12} s\_{23}} \qquad \frac{q\_{21}^{2} q\_{43}^{2}}{q\_{41}^{2} q\_{32}^{2}} = \frac{m\_{1}^{2} m\_{3}^{2}}{s\_{123} m\_{2}^{2}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{q_{21}^{2} q_{43}^{2}}{q_{31}^{2} q_{42}^{2}} = \frac{m_{1}^{2} m_{3}^{2}}{s_{12} s_{23}} \qquad \frac{q_{41}^{2} q_{32}^{2}}{q_{31}^{2} q_{42}^{2}} = \frac{s_{123} m_{2}^{2}}{s_{12} s_{23}} \qquad \frac{q_{21}^{2} q_{43}^{2}}{q_{41}^{2} q_{32}^{2}} = \frac{m_{1}^{2} m_{3}^{2}}{s_{123} m_{2}^{2}}.$$&lt;/div&gt;
 &lt;p&gt;
 You find the familiar dual conformal ratio with two masses and two Mandelstam invariants, along with dual conformal ratios with three masses and one Mandelstam invariant, as well as with one mass and three Mandelstam invariants. Five other quartets are found after a cyclic shift:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$1234 \longrightarrow 2345 \longrightarrow 3456 \longrightarrow 1456 \longrightarrow 1256 \longrightarrow 1236. $$&lt;/div&gt;
 &lt;p&gt;Next, consider the quartet &lt;span class="math"&gt;\(1235\)&lt;/span&gt;. The dual conformal ratios are
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{q\_{21}^{2} q\_{53}^{2}}{q\_{31}^{2} q\_{25}^{2}} = \frac{m\_{1}^{2} s\_{34}}{s\_{12} s\_{156}} \qquad \frac{q\_{15}^{2} q\_{32}^{2}}{q\_{41}^{2} q\_{25}^{2}} = \frac{s\_{56} m\_{2}^{2}}{s\_{12} s\_{156}} \qquad \frac{q\_{21}^{2} q\_{53}^{2}}{q\_{15}^{2} q\_{32}^{2}} = \frac{m\_{1}^{2} s\_{34}}{s\_{56} m\_{2}^{2}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{q_{21}^{2} q_{53}^{2}}{q_{31}^{2} q_{25}^{2}} = \frac{m_{1}^{2} s_{34}}{s_{12} s_{156}} \qquad \frac{q_{15}^{2} q_{32}^{2}}{q_{41}^{2} q_{25}^{2}} = \frac{s_{56} m_{2}^{2}}{s_{12} s_{156}} \qquad \frac{q_{21}^{2} q_{53}^{2}}{q_{15}^{2} q_{32}^{2}} = \frac{m_{1}^{2} s_{34}}{s_{56} m_{2}^{2}}.$$&lt;/div&gt;
 &lt;p&gt;
 One new feature is the appearance of dual conformal ratios with one mass in both the numerator and denominator. Five other quartets are found after a cyclic shift:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$1235 \longrightarrow 2346 \longrightarrow 1345 \longrightarrow 2456 \longrightarrow 1356 \longrightarrow 1246. $$&lt;/div&gt;
 &lt;p&gt;Finally, consider the quartet &lt;span class="math"&gt;\(1245\)&lt;/span&gt;. The dual conformal ratios are
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{q\_{21}^{2} q\_{54}^{2}}{q\_{41}^{2} q\_{25}^{2}} = \frac{m\_{1}^{2} m\_{4}^{2}}{s\_{123} s\_{156}} \qquad \frac{q\_{21}^{2} q\_{54}^{2}}{q\_{15}^{2} q\_{42}^{2}} = \frac{m\_{1}^{2} m\_{4}^{2}}{s\_{56} s\_{23}} \qquad \frac{q\_{15}^{2} q\_{42}^{2}}{q\_{41}^{2} q\_{25}^{2}} = \frac{s\_{56} s\_{23}}{s\_{123} s\_{156}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{q_{21}^{2} q_{54}^{2}}{q_{41}^{2} q_{25}^{2}} = \frac{m_{1}^{2} m_{4}^{2}}{s_{123} s_{156}} \qquad \frac{q_{21}^{2} q_{54}^{2}}{q_{15}^{2} q_{42}^{2}} = \frac{m_{1}^{2} m_{4}^{2}}{s_{56} s_{23}} \qquad \frac{q_{15}^{2} q_{42}^{2}}{q_{41}^{2} q_{25}^{2}} = \frac{s_{56} s_{23}}{s_{123} s_{156}}.$$&lt;/div&gt;
 &lt;p&gt;
 Two other quartets are found after a cyclic shift. One of them is &lt;span class="math"&gt;\(2356\)&lt;/span&gt;, with dual conformal ratios
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{q\_{32}^{2} q\_{65}^{2}}{q\_{53}^{2} q\_{26}^{2}} = \frac{m\_{2}^{2} m\_{5}^{2}}{s\_{34} s\_{16}} \qquad \frac{q\_{32}^{2} q\_{65}^{2}}{q\_{25}^{2} q\_{36}^{2}} = \frac{m\_{2}^{2} m\_{5}^{2}}{s\_{156} s\_{126}} \qquad \frac{q\_{53}^{2} q\_{26}^{2}}{q\_{25}^{2} q\_{36}^{2}} = \frac{s\_{34} s\_{16}}{s\_{156} s\_{126}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{q_{32}^{2} q_{65}^{2}}{q_{53}^{2} q_{26}^{2}} = \frac{m_{2}^{2} m_{5}^{2}}{s_{34} s_{16}} \qquad \frac{q_{32}^{2} q_{65}^{2}}{q_{25}^{2} q_{36}^{2}} = \frac{m_{2}^{2} m_{5}^{2}}{s_{156} s_{126}} \qquad \frac{q_{53}^{2} q_{26}^{2}}{q_{25}^{2} q_{36}^{2}} = \frac{s_{34} s_{16}}{s_{156} s_{126}}.$$&lt;/div&gt;
 &lt;p&gt;
 The other one is &lt;span class="math"&gt;\(1346\)&lt;/span&gt;, with dual conformal ratios
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{q\_{16}^{2} q\_{43}^{2}}{q\_{31}^{2} q\_{64}^{2}} = \frac{m\_{6}^{2} m\_{3}^{2}}{s\_{12} s\_{45}} \qquad \frac{q\_{16}^{2} q\_{43}^{2}}{q\_{36}^{2} q\_{41}^{2}} = \frac{m\_{6}^{2} m\_{3}^{2}}{s\_{126} s\_{123}} \qquad \frac{q\_{31}^{2} q\_{64}^{2}}{q\_{36}^{2} q\_{41}^{2}} = \frac{s\_{12} s\_{45}}{s\_{126} s\_{123}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{q_{16}^{2} q_{43}^{2}}{q_{31}^{2} q_{64}^{2}} = \frac{m_{6}^{2} m_{3}^{2}}{s_{12} s_{45}} \qquad \frac{q_{16}^{2} q_{43}^{2}}{q_{36}^{2} q_{41}^{2}} = \frac{m_{6}^{2} m_{3}^{2}}{s_{126} s_{123}} \qquad \frac{q_{31}^{2} q_{64}^{2}}{q_{36}^{2} q_{41}^{2}} = \frac{s_{12} s_{45}}{s_{126} s_{123}}.$$&lt;/div&gt;
 &lt;p&gt;
 A feature shared by these three results is the appearance of dual conformal ratios that do not involve any of the masses. Thus, in the massless limit there will be nontrivial dual conformal invariants.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -3906,48 +3906,48 @@ A feature shared by these three results is the appearance of dual conformal rati
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Fri, 29 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-29:posts/2014/Aug/dual-conformal-invariants/</guid><category>kinematics</category><category>conformal-symmetry</category></item><item><title>Gram Momentum Invariants</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/gram-invariants/</link><description>&lt;p&gt;In this post I will mention some facts about what I call Gram momentum invariants. I will assume that every energy-momentum vector &lt;span class="math"&gt;\(p\_{I}\)&lt;/span&gt; satisfies an on-shell constraint of the form
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Fri, 29 Aug 2014 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2014-08-29:posts/2014/Aug/dual-conformal-invariants/</guid><category>kinematics</category><category>conformal-symmetry</category></item><item><title>Gram Momentum Invariants</title><link>http://meirizarrygelpi.github.io/posts/2014/Aug/gram-invariants/</link><description>&lt;p&gt;In this post I will mention some facts about what I call Gram momentum invariants. I will assume that every energy-momentum vector &lt;span class="math"&gt;\(p_{I}\)&lt;/span&gt; satisfies an on-shell constraint of the form
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{I}^{2} = - m\_{I}^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{I}^{2} = - m_{I}^{2}$$&lt;/div&gt;
 &lt;p&gt;
-with the mass &lt;span class="math"&gt;\(m\_{I}\)&lt;/span&gt; being real and positive.&lt;/p&gt;
+with the mass &lt;span class="math"&gt;\(m_{I}\)&lt;/span&gt; being real and positive.&lt;/p&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In a &lt;a href="http://meirizarrygelpi.github.io/posts/2014/Aug/mandelstam-invariants/"&gt;previous post&lt;/a&gt; I introduced the Mandelstam momentum invariants. You can construct &lt;span class="math"&gt;\(n\)&lt;/span&gt;-Mandelstam invariants with &lt;span class="math"&gt;\(n\)&lt;/span&gt; distinct energy-momentum vectors. With a similar collection of &lt;span class="math"&gt;\(n\)&lt;/span&gt; distinct energy-momentum vectors, you can also construct an &lt;span class="math"&gt;\(n\)&lt;/span&gt;-Gram invariant:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G\_{I\_{1} I\_{2} \cdots I\_{n}} = -\det{ \begin{pmatrix} p\_{I\_{1}} \cdot p\_{I\_{1}} &amp;amp; \cdots &amp;amp; p\_{I\_{1}} \cdot p\_{I\_{n}} \\\\ \vdots &amp;amp; \ddots &amp;amp; \vdots \\\\ p\_{I\_{1}} \cdot p\_{I\_{n}} &amp;amp; \cdots &amp;amp; p\_{I\_{n}} \cdot p\_{I\_{n}} \end{pmatrix} }.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{I_{1} I_{2} \cdots I_{n}} = -\det{ \begin{pmatrix} p_{I_{1}} \cdot p_{I_{1}} &amp;amp; \cdots &amp;amp; p_{I_{1}} \cdot p_{I_{n}} \\ \vdots &amp;amp; \ddots &amp;amp; \vdots \\ p_{I_{1}} \cdot p_{I_{n}} &amp;amp; \cdots &amp;amp; p_{I_{n}} \cdot p_{I_{n}} \end{pmatrix} }.$$&lt;/div&gt;
 &lt;p&gt;
 That is, an &lt;span class="math"&gt;\(n\)&lt;/span&gt;-Gram invariant correspond to the Gram determinant associated with a collection of &lt;span class="math"&gt;\(n\)&lt;/span&gt; energy-momentum vectors. Hence, by construction, the Gram momentum invariants are sensitive to collinearity of the external energy-momentum vectors (i.e. they vanish whenever a pair of energy-momentum vectors are collinear).&lt;/p&gt;
 &lt;h2&gt;Two Quanta&lt;/h2&gt;
 &lt;p&gt;Given two linearly-independent energy-momentum vectors, the &lt;strong&gt;2-Gram&lt;/strong&gt; invariant is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G\_{IJ} \equiv -\det{ \begin{pmatrix} p\_{I}^{2} &amp;amp; p\_{I} \cdot p\_{J} \\\\ p\_{I} \cdot p\_{J} &amp;amp; p\_{J}^{2} \end{pmatrix} } = -p\_{I}^{2} p\_{J}^{2} + (p\_{I} \cdot p\_{J})^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{IJ} \equiv -\det{ \begin{pmatrix} p_{I}^{2} &amp;amp; p_{I} \cdot p_{J} \\ p_{I} \cdot p_{J} &amp;amp; p_{J}^{2} \end{pmatrix} } = -p_{I}^{2} p_{J}^{2} + (p_{I} \cdot p_{J})^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 Using
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{I}^{2} = - m\_{I}^{2} \qquad (p\_{I} + p\_{J})^{2} = -s\_{IJ} \qquad p\_{J}^{2} = - m\_{J}^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{I}^{2} = - m_{I}^{2} \qquad (p_{I} + p_{J})^{2} = -s_{IJ} \qquad p_{J}^{2} = - m_{J}^{2}$$&lt;/div&gt;
 &lt;p&gt;
 we can write
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{I} \cdot p\_{J} = \frac{m\_{I}^{2} + m\_{J}^{2} - s\_{IJ}}{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{I} \cdot p_{J} = \frac{m_{I}^{2} + m_{J}^{2} - s_{IJ}}{2}$$&lt;/div&gt;
 &lt;p&gt;
 This allows you to write the 2-Gram invariant in terms of masses and 2-Mandelstam invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G\_{IJ} = \frac{1}{4} \[s\_{IJ} - (m\_{I} - m\_{J})^{2}\] \[s\_{IJ} - (m\_{I} + m\_{J})^{2}\].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{IJ} = \frac{1}{4} \[s_{IJ} - (m_{I} - m_{J})^{2}\] \[s_{IJ} - (m_{I} + m_{J})^{2}\].$$&lt;/div&gt;
 &lt;p&gt;
-In this form, the &lt;strong&gt;sign properties&lt;/strong&gt; of a 2-Gram invariant are obvious. You have &lt;span class="math"&gt;\(G\_{IJ}\)&lt;/span&gt; being &lt;strong&gt;positive&lt;/strong&gt; whenever &lt;span class="math"&gt;\(s\_{IJ} &amp;lt; (m\_{I} - m\_{J})^{2}\)&lt;/span&gt; or &lt;span class="math"&gt;\(s\_{IJ} &amp;gt; (m\_{I} + m\_{J})^{2}\)&lt;/span&gt;. Part of this region lies &lt;strong&gt;above the 2-threshold&lt;/strong&gt;; the another part lies &lt;strong&gt;below the 2-pseudothreshold&lt;/strong&gt;. On the other hand, you have &lt;span class="math"&gt;\(G\_{IJ}\)&lt;/span&gt; being &lt;strong&gt;negative&lt;/strong&gt; whenever &lt;span class="math"&gt;\((m\_{I} - m\_{J})^{2} &amp;lt; s\_{IJ} &amp;lt; (m\_{I} + m\_{J})^{2}\)&lt;/span&gt;. All of this region lies &lt;strong&gt;below the 2-threshold&lt;/strong&gt; and &lt;strong&gt;above the 2-pseudothreshold&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Expanding the expression for &lt;span class="math"&gt;\(G\_{IJ}\)&lt;/span&gt; you find a surprisingly symmetric expression:
+In this form, the &lt;strong&gt;sign properties&lt;/strong&gt; of a 2-Gram invariant are obvious. You have &lt;span class="math"&gt;\(G_{IJ}\)&lt;/span&gt; being &lt;strong&gt;positive&lt;/strong&gt; whenever &lt;span class="math"&gt;\(s_{IJ} &amp;lt; (m_{I} - m_{J})^{2}\)&lt;/span&gt; or &lt;span class="math"&gt;\(s_{IJ} &amp;gt; (m_{I} + m_{J})^{2}\)&lt;/span&gt;. Part of this region lies &lt;strong&gt;above the 2-threshold&lt;/strong&gt;; the another part lies &lt;strong&gt;below the 2-pseudothreshold&lt;/strong&gt;. On the other hand, you have &lt;span class="math"&gt;\(G_{IJ}\)&lt;/span&gt; being &lt;strong&gt;negative&lt;/strong&gt; whenever &lt;span class="math"&gt;\((m_{I} - m_{J})^{2} &amp;lt; s_{IJ} &amp;lt; (m_{I} + m_{J})^{2}\)&lt;/span&gt;. All of this region lies &lt;strong&gt;below the 2-threshold&lt;/strong&gt; and &lt;strong&gt;above the 2-pseudothreshold&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Expanding the expression for &lt;span class="math"&gt;\(G_{IJ}\)&lt;/span&gt; you find a surprisingly symmetric expression:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G\_{IJ} = \frac{1}{4} \left( s^{2} + m\_{I}^{4} + m\_{J}^{4} - 2 m\_{I}^{2} s - 2 m\_{J}^{2} s - 2 m\_{I}^{2} m\_{J}^{2} \right). $$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{IJ} = \frac{1}{4} \left( s^{2} + m_{I}^{4} + m_{J}^{4} - 2 m_{I}^{2} s - 2 m_{J}^{2} s - 2 m_{I}^{2} m_{J}^{2} \right). $$&lt;/div&gt;
 &lt;p&gt;
 This can be rewritten in terms of a symmetric multivariate polynomial:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G\_{IJ} = \frac{1}{4}\Upsilon\_{2}(s\_{IJ}, m\_{I}^{2}, m\_{J}^{2}), \qquad \Upsilon\_{2}(x, y, z) = x^{2} + y^{2} + z^{2} - 2 xy - 2 xz - 2 yz .$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{IJ} = \frac{1}{4}\Upsilon_{2}(s_{IJ}, m_{I}^{2}, m_{J}^{2}), \qquad \Upsilon_{2}(x, y, z) = x^{2} + y^{2} + z^{2} - 2 xy - 2 xz - 2 yz .$$&lt;/div&gt;
 &lt;p&gt;
-The function &lt;span class="math"&gt;\(\Upsilon\_{2}\)&lt;/span&gt; is a &lt;strong&gt;Källén polynomial&lt;/strong&gt;.&lt;/p&gt;
+The function &lt;span class="math"&gt;\(\Upsilon_{2}\)&lt;/span&gt; is a &lt;strong&gt;Källén polynomial&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2&gt;Three Quanta&lt;/h2&gt;
 &lt;p&gt;Given three linearly-independent energy-momentum vectors, the &lt;strong&gt;3-Gram&lt;/strong&gt; invariant is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G\_{IJK} \equiv -\det{ \begin{pmatrix} p\_{I}^{2} &amp;amp; p\_{I} \cdot p\_{J} &amp;amp; p\_{I} \cdot p\_{K} \\\\ p\_{I} \cdot p\_{J} &amp;amp; p\_{J}^{2} &amp;amp; p\_{J} \cdot p\_{K} \\\\ p\_{I} \cdot p\_{K} &amp;amp; p\_{J} \cdot p\_{K} &amp;amp; p\_{K}^{2} \end{pmatrix} } = -p\_{I}^{2} p\_{J}^{2} p\_{K}^{2} + p\_{I}^{2} (p\_{J} \cdot p\_{K})^{2} + p\_{J}^{2} (p\_{I} \cdot p\_{K})^{2} + p\_{K}^{2} (p\_{I} \cdot p\_{J})^{2} - 2 (p\_{I} \cdot p\_{J})(p\_{I} \cdot p\_{K})(p\_{J} \cdot p\_{K}) .$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{IJK} \equiv -\det{ \begin{pmatrix} p_{I}^{2} &amp;amp; p_{I} \cdot p_{J} &amp;amp; p_{I} \cdot p_{K} \\ p_{I} \cdot p_{J} &amp;amp; p_{J}^{2} &amp;amp; p_{J} \cdot p_{K} \\ p_{I} \cdot p_{K} &amp;amp; p_{J} \cdot p_{K} &amp;amp; p_{K}^{2} \end{pmatrix} } = -p_{I}^{2} p_{J}^{2} p_{K}^{2} + p_{I}^{2} (p_{J} \cdot p_{K})^{2} + p_{J}^{2} (p_{I} \cdot p_{K})^{2} + p_{K}^{2} (p_{I} \cdot p_{J})^{2} - 2 (p_{I} \cdot p_{J})(p_{I} \cdot p_{K})(p_{J} \cdot p_{K}) .$$&lt;/div&gt;
 &lt;p&gt;
 In general, this cannot be simplified further in terms of masses and Mandelstam invariants.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
