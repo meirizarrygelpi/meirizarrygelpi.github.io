@@ -3244,140 +3244,140 @@ cat ./data/1A.txt &lt;span class="p"&gt;|&lt;/span&gt; rosalind1A &amp;gt; ./out
 }
 &lt;/script&gt;</summary><category term="research"></category></entry><entry><title>Four-point Elastic Kinematics (Two Nonidentical Masses)</title><link href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-two-masses/" rel="alternate"></link><updated>2014-09-04T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-09-04:posts/2014/Sep/4pnt-two-masses/</id><summary type="html">&lt;p&gt;In this post I will consider the four-point process
 &lt;/p&gt;
-&lt;div class="math"&gt;$$A(p\_{1}) + B(p\_{2}) \longrightarrow A(p\_{3}) + B(p\_{4}).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$A(p_{1}) + B(p_{2}) \longrightarrow A(p_{3}) + B(p_{4}).$$&lt;/div&gt;
 &lt;p&gt;
 This is a special elastic case of the inelastic process that I considered in a &lt;a href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-four-masses/"&gt;previous post&lt;/a&gt;. Besides on-shell constraints and the conservation constraint, you now need to also impose &lt;strong&gt;elasticity&lt;/strong&gt; constraints:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{1}^{2} = p\_{3}^{2} \qquad p\_{2}^{2} = p\_{4}^{2} \quad \Longrightarrow \quad m\_{1} = m\_{3} \qquad m\_{2} = m\_{4}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{1}^{2} = p_{3}^{2} \qquad p_{2}^{2} = p_{4}^{2} \quad \Longrightarrow \quad m_{1} = m_{3} \qquad m_{2} = m_{4}.$$&lt;/div&gt;
 &lt;p&gt;
 Below you can see how this feature changes the &lt;a href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-four-masses/"&gt;previous results&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Momentum Invariants&lt;/h2&gt;
 &lt;p&gt;The three &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants remain the same, but now they satisfy the relation
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s + t + u = 2m\_{1}^{2} + 2m\_{2}^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s + t + u = 2m_{1}^{2} + 2m_{2}^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 Due to the elasticity constraint, some of the &lt;strong&gt;2-Gram&lt;/strong&gt; invariants become equal:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G\_{34}(s) = G\_{12}(s) = \frac{1}{4} \[ s - (m\_{1} - m\_{2})^{2} \] \[ s - (m\_{1} + m\_{2})^{2} \] \qquad G\_{23}(u) = G\_{14}(u) = \frac{1}{4} \[ u - (m\_{1} - m\_{2})^{2} \] \[ u - (m\_{1} + m\_{2})^{2} \].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{34}(s) = G_{12}(s) = \frac{1}{4} [ s - (m_{1} - m_{2})^{2} ] [ s - (m_{1} + m_{2})^{2} ] \qquad G_{23}(u) = G_{14}(u) = \frac{1}{4} [ u - (m_{1} - m_{2})^{2} ] [ u - (m_{1} + m_{2})^{2} ].$$&lt;/div&gt;
 &lt;p&gt;
 The rest of the 2-Gram invariants become much simpler:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G\_{13}(t) = \frac{1}{4} t (t - 4m\_{1}^{2} ) \qquad G\_{24}(t) = \frac{1}{4} t (t - 4m\_{2}^{2} ).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{13}(t) = \frac{1}{4} t (t - 4m_{1}^{2} ) \qquad G_{24}(t) = \frac{1}{4} t (t - 4m_{2}^{2} ).$$&lt;/div&gt;
 &lt;p&gt;
 The &lt;strong&gt;3-Gram&lt;/strong&gt; invariant also acquires a simpler form:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G\_{123}(s, t, u) = G\_{124}(s, t, u) = G\_{134}(s, t, u) = G\_{234}(s, t, u) = \frac{1}{4} t \[ su - (m\_{1} - m\_{2})^{2} (m\_{1} + m\_{2})^{2}\].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{123}(s, t, u) = G_{124}(s, t, u) = G_{134}(s, t, u) = G_{234}(s, t, u) = \frac{1}{4} t [ su - (m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2}].$$&lt;/div&gt;
 &lt;h2&gt;Center-of-Momentum Frame&lt;/h2&gt;
 &lt;p&gt;Just like before, in the center-of-momentum frame you can write
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{1} = (E\_{1}, \mathbf{p}\_{1}) \qquad p\_{2} = (E\_{2}, -\mathbf{p}\_{1}) \qquad p\_{3} = (E\_{3}, \mathbf{p}\_{3}) \qquad p\_{4} = (E\_{4}, -\mathbf{p}\_{3}).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{1} = (E_{1}, \mathbf{p}_{1}) \qquad p_{2} = (E_{2}, -\mathbf{p}_{1}) \qquad p_{3} = (E_{3}, \mathbf{p}_{3}) \qquad p_{4} = (E_{4}, -\mathbf{p}_{3}).$$&lt;/div&gt;
 &lt;p&gt;
 In this frame you can find expressions for many kinematic quantities in terms of the 2-Mandelstam invariants and the masses.&lt;/p&gt;
 &lt;h3&gt;Energy and Momentum&lt;/h3&gt;
 &lt;p&gt;Due to the elasticity constraints, you now have
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\Lambda\_{12}(s) = \Lambda\_{34}(s) \qquad \Lambda\_{IJ}(s) \equiv \[ s - (m\_{I} - m\_{J})^{2} \] \[ s - (m\_{I} + m\_{J})^{2} \].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\Lambda_{12}(s) = \Lambda_{34}(s) \qquad \Lambda_{IJ}(s) \equiv [ s - (m_{I} - m_{J})^{2} ] [ s - (m_{I} + m_{J})^{2} ].$$&lt;/div&gt;
 &lt;p&gt;
-It follows that the magnitude of &lt;span class="math"&gt;\(\mathbf{p}\_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathbf{p}\_{3}\)&lt;/span&gt; are equal:
+It follows that the magnitude of &lt;span class="math"&gt;\(\mathbf{p}_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathbf{p}_{3}\)&lt;/span&gt; are equal:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\vert \mathbf{p}\_{1} \vert = \vert \mathbf{p}\_{3} \vert = \frac{\sqrt{\Lambda\_{12}(s)}}{2 \sqrt{s}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\vert \mathbf{p}_{1} \vert = \vert \mathbf{p}_{3} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{2 \sqrt{s}}.$$&lt;/div&gt;
 &lt;p&gt;
 For the &lt;strong&gt;energy&lt;/strong&gt; of each quanta you now find
 &lt;/p&gt;
-&lt;div class="math"&gt;$$E\_{3} = E\_{1} = \frac{s + (m\_{1} - m\_{2})(m\_{1} + m\_{2})}{2 \sqrt{s}} \qquad E\_{4} = E\_{2} = \frac{s - (m\_{1} - m\_{2})(m\_{1} + m\_{2})}{2 \sqrt{s}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$E_{3} = E_{1} = \frac{s + (m_{1} - m_{2})(m_{1} + m_{2})}{2 \sqrt{s}} \qquad E_{4} = E_{2} = \frac{s - (m_{1} - m_{2})(m_{1} + m_{2})}{2 \sqrt{s}}.$$&lt;/div&gt;
 &lt;p&gt;
 That is, one of the consequences of the elasticity constraints is a body-wise conservation of energy.&lt;/p&gt;
 &lt;h3&gt;Scattering Angle&lt;/h3&gt;
 &lt;p&gt;You now have
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\mathbf{p}\_{1} \cdot \mathbf{p}\_{3} = \frac{(m\_{1} - m\_{2})^{2}(m\_{1} + m\_{2})^{2} - s (u - t)}{4s},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\mathbf{p}_{1} \cdot \mathbf{p}_{3} = \frac{(m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} - s (u - t)}{4s},$$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\Lambda\_{12}(s) = (m\_{1} - m\_{2})^{2}(m\_{1} + m\_{2})^{2} - s (u + t).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\Lambda_{12}(s) = (m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} - s (u + t).$$&lt;/div&gt;
 &lt;p&gt;
 Using these two results leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$z\_{s} \equiv \cos{(\theta\_{s})} \equiv \frac{\mathbf{p}\_{1} \cdot \mathbf{p}\_{3}}{\vert \mathbf{p}\_{1} \vert \vert \mathbf{p}\_{3} \vert} = \frac{(m\_{1} - m\_{2})^{2}(m\_{1} + m\_{2})^{2} - s (u - t)}{(m\_{1} - m\_{2})^{2}(m\_{1} + m\_{2})^{2} - s (u + t)}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$z_{s} \equiv \cos{(\theta_{s})} \equiv \frac{\mathbf{p}_{1} \cdot \mathbf{p}_{3}}{\vert \mathbf{p}_{1} \vert \vert \mathbf{p}_{3} \vert} = \frac{(m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} - s (u - t)}{(m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} - s (u + t)}.$$&lt;/div&gt;
 &lt;h3&gt;Speed and Rapidity&lt;/h3&gt;
 &lt;p&gt;Due to the elasticity constraints, for the &lt;strong&gt;speed&lt;/strong&gt; of each quanta you now have
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\vert \mathbf{v}\_{3} \vert = \vert \mathbf{v}\_{1} \vert = \frac{\sqrt{\Lambda\_{12}(s)}}{s + (m\_{1} - m\_{2})(m\_{1} + m\_{2})} \qquad \vert \mathbf{v}\_{4} \vert = \vert \mathbf{v}\_{2} \vert = \frac{\sqrt{\Lambda\_{12}(s)}}{s - (m\_{1} - m\_{2})(m\_{1} + m\_{2})},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\vert \mathbf{v}_{3} \vert = \vert \mathbf{v}_{1} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{s + (m_{1} - m_{2})(m_{1} + m_{2})} \qquad \vert \mathbf{v}_{4} \vert = \vert \mathbf{v}_{2} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{s - (m_{1} - m_{2})(m_{1} + m_{2})},$$&lt;/div&gt;
 &lt;p&gt;
 and for the &lt;strong&gt;rapidity&lt;/strong&gt; of each quanta
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\varphi\_{3} = \varphi\_{1} = \frac{1}{2} \log{\left\[ \frac{(m\_{1} - m\_{2})(m\_{1} + m\_{2}) + s + \sqrt{\Lambda\_{12}(s)}}{(m\_{1} - m\_{2})(m\_{1} + m\_{2}) + s - \sqrt{\Lambda\_{12}(s)}} \right\]} \qquad \varphi\_{4} = \varphi\_{2} = \frac{1}{2} \log{\left\[ \frac{(m\_{1} - m\_{2})(m\_{1} + m\_{2}) - s - \sqrt{\Lambda\_{12}(s)}}{(m\_{1} - m\_{2})(m\_{1} + m\_{2}) - s + \sqrt{\Lambda\_{12}(s)}} \right\]}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\varphi_{3} = \varphi_{1} = \frac{1}{2} \log{\left[ \frac{(m_{1} - m_{2})(m_{1} + m_{2}) + s + \sqrt{\Lambda_{12}(s)}}{(m_{1} - m_{2})(m_{1} + m_{2}) + s - \sqrt{\Lambda_{12}(s)}} \right]} \qquad \varphi_{4} = \varphi_{2} = \frac{1}{2} \log{\left[ \frac{(m_{1} - m_{2})(m_{1} + m_{2}) - s - \sqrt{\Lambda_{12}(s)}}{(m_{1} - m_{2})(m_{1} + m_{2}) - s + \sqrt{\Lambda_{12}(s)}} \right]}.$$&lt;/div&gt;
 &lt;p&gt;
 Another consequence of the elasticity constraints is a body-wise conservation of rapidity (and speed).&lt;/p&gt;
 &lt;h3&gt;Physical Scattering Region&lt;/h3&gt;
-&lt;p&gt;Because of the elasticity constraints, there is only one threshold and one pseudothreshold along the &lt;span class="math"&gt;\(s\)&lt;/span&gt;-channel. Requiring &lt;span class="math"&gt;\(\vert \mathbf{p}\_{1} \vert \geq 0\)&lt;/span&gt; leads to
+&lt;p&gt;Because of the elasticity constraints, there is only one threshold and one pseudothreshold along the &lt;span class="math"&gt;\(s\)&lt;/span&gt;-channel. Requiring &lt;span class="math"&gt;\(\vert \mathbf{p}_{1} \vert \geq 0\)&lt;/span&gt; leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s \geq (m\_{1} + m\_{2})^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s \geq (m_{1} + m_{2})^{2}.$$&lt;/div&gt;
 &lt;p&gt;
-That is, &lt;span class="math"&gt;\(s\)&lt;/span&gt; must be at or above threshold. This condition also guarantees that all individual energies are positive (or zero). Note that &lt;span class="math"&gt;\(s\)&lt;/span&gt; being at or above threshold means that &lt;span class="math"&gt;\(G\_{12} \geq 0\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Similarly, requiring &lt;span class="math"&gt;\(\vert \mathbf{p}\_{1} - \mathbf{p}\_{3} \vert^{2} \geq 0\)&lt;/span&gt; leads to
+That is, &lt;span class="math"&gt;\(s\)&lt;/span&gt; must be at or above threshold. This condition also guarantees that all individual energies are positive (or zero). Note that &lt;span class="math"&gt;\(s\)&lt;/span&gt; being at or above threshold means that &lt;span class="math"&gt;\(G_{12} \geq 0\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Similarly, requiring &lt;span class="math"&gt;\(\vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} \geq 0\)&lt;/span&gt; leads to
 &lt;/p&gt;
 &lt;div class="math"&gt;$$t \leq 0,$$&lt;/div&gt;
 &lt;p&gt;
-and requiring &lt;span class="math"&gt;\( \vert \mathbf{p}\_{1} + \mathbf{p}\_{3} \vert^{2} \geq 0\)&lt;/span&gt; leads to
+and requiring &lt;span class="math"&gt;\( \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} \geq 0\)&lt;/span&gt; leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s u \leq (m\_{1} - m\_{2})^{2} (m\_{1} + m\_{2})^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s u \leq (m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2}.$$&lt;/div&gt;
 &lt;p&gt;
-Note that these two inequalities are equivalent to &lt;span class="math"&gt;\(G_{123} \geq 0\)&lt;/span&gt;. You can check that these two inequalities are equivalent to the condition &lt;span class="math"&gt;\(-1 \leq z\_{s} \leq 1\)&lt;/span&gt;. As you will see below, these inequalities are saturated at special kinematic configurations.&lt;/p&gt;
+Note that these two inequalities are equivalent to &lt;span class="math"&gt;\(G_{123} \geq 0\)&lt;/span&gt;. You can check that these two inequalities are equivalent to the condition &lt;span class="math"&gt;\(-1 \leq z_{s} \leq 1\)&lt;/span&gt;. As you will see below, these inequalities are saturated at special kinematic configurations.&lt;/p&gt;
 &lt;h4&gt;Forward Scattering&lt;/h4&gt;
-&lt;p&gt;Forward scattering corresponds to setting &lt;span class="math"&gt;\(z\_{s} = 1\)&lt;/span&gt;. Using
+&lt;p&gt;Forward scattering corresponds to setting &lt;span class="math"&gt;\(z_{s} = 1\)&lt;/span&gt;. Using
 &lt;/p&gt;
-&lt;div class="math"&gt;$$u\_{f} = 2m\_{1}^{2} + 2m\_{2}^{2} - s - t\_{f},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$u_{f} = 2m_{1}^{2} + 2m_{2}^{2} - s - t_{f},$$&lt;/div&gt;
 &lt;p&gt;
-and setting &lt;span class="math"&gt;\(z\_{s} = 1\)&lt;/span&gt; leads to
+and setting &lt;span class="math"&gt;\(z_{s} = 1\)&lt;/span&gt; leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$t\_{f} = 0.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$t_{f} = 0.$$&lt;/div&gt;
 &lt;p&gt;
-This leads to a &lt;strong&gt;linear relation&lt;/strong&gt; between &lt;span class="math"&gt;\(u\_{f}\)&lt;/span&gt; and &lt;span class="math"&gt;\(s\)&lt;/span&gt;:
+This leads to a &lt;strong&gt;linear relation&lt;/strong&gt; between &lt;span class="math"&gt;\(u_{f}\)&lt;/span&gt; and &lt;span class="math"&gt;\(s\)&lt;/span&gt;:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$u\_{f} = 2m\_{1}^{2} + 2m\_{2}^{2} - s.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$u_{f} = 2m_{1}^{2} + 2m_{2}^{2} - s.$$&lt;/div&gt;
 &lt;p&gt;
-Note that when &lt;span class="math"&gt;\(t = t\_{f}\)&lt;/span&gt; you saturate the condition &lt;span class="math"&gt;\(t \leq 0\)&lt;/span&gt;.&lt;/p&gt;
+Note that when &lt;span class="math"&gt;\(t = t_{f}\)&lt;/span&gt; you saturate the condition &lt;span class="math"&gt;\(t \leq 0\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h4&gt;Backward Scattering&lt;/h4&gt;
-&lt;p&gt;Backward scattering corresponds to setting &lt;span class="math"&gt;\(z\_{s} = -1\)&lt;/span&gt;. Using
+&lt;p&gt;Backward scattering corresponds to setting &lt;span class="math"&gt;\(z_{s} = -1\)&lt;/span&gt;. Using
 &lt;/p&gt;
-&lt;div class="math"&gt;$$u\_{b} = 2m\_{1}^{2} + 2m\_{2}^{2} - s - t\_{b},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$u_{b} = 2m_{1}^{2} + 2m_{2}^{2} - s - t_{b},$$&lt;/div&gt;
 &lt;p&gt;
-and setting &lt;span class="math"&gt;\(z\_{s} = -1\)&lt;/span&gt; leads to
+and setting &lt;span class="math"&gt;\(z_{s} = -1\)&lt;/span&gt; leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$t\_{b} = - \frac{\Lambda\_{12}(s)}{s} = \frac{\[s - (m\_{1} - m\_{2})^{2}\] \[(m\_{1} + m\_{2})^{2} - s\]}{s}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$t_{b} = - \frac{\Lambda_{12}(s)}{s} = \frac{[s - (m_{1} - m_{2})^{2}] [(m_{1} + m_{2})^{2} - s]}{s}.$$&lt;/div&gt;
 &lt;p&gt;
-In contrast to forward scattering, you now have a &lt;strong&gt;rectihyperbolic relation&lt;/strong&gt; (i.e. a hyperbola with perpendicular asymptotes) between &lt;span class="math"&gt;\(u\_{b}\)&lt;/span&gt; and &lt;span class="math"&gt;\(s\)&lt;/span&gt;:
+In contrast to forward scattering, you now have a &lt;strong&gt;rectihyperbolic relation&lt;/strong&gt; (i.e. a hyperbola with perpendicular asymptotes) between &lt;span class="math"&gt;\(u_{b}\)&lt;/span&gt; and &lt;span class="math"&gt;\(s\)&lt;/span&gt;:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$u\_{b} = \frac{(m\_{1} - m\_{2})^{2} (m\_{1} + m\_{2})^{2}}{s}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$u_{b} = \frac{(m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2}}{s}.$$&lt;/div&gt;
 &lt;p&gt;
-Note that when &lt;span class="math"&gt;\(u = u\_{b}\)&lt;/span&gt; you saturate the condition &lt;span class="math"&gt;\(s u \leq (m\_{1} - m\_{2})^{2} (m\_{1} + m\_{2})^{2}\)&lt;/span&gt;.&lt;/p&gt;
+Note that when &lt;span class="math"&gt;\(u = u_{b}\)&lt;/span&gt; you saturate the condition &lt;span class="math"&gt;\(s u \leq (m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h4&gt;Orthogonal Scattering&lt;/h4&gt;
-&lt;p&gt;Orthogonal scattering corresponds to setting &lt;span class="math"&gt;\(z\_{s} = 0\)&lt;/span&gt;. Using
+&lt;p&gt;Orthogonal scattering corresponds to setting &lt;span class="math"&gt;\(z_{s} = 0\)&lt;/span&gt;. Using
 &lt;/p&gt;
-&lt;div class="math"&gt;$$u\_{o} = 2m\_{1}^{2} + 2m\_{2}^{2} - s - t\_{o},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$u_{o} = 2m_{1}^{2} + 2m_{2}^{2} - s - t_{o},$$&lt;/div&gt;
 &lt;p&gt;
-and setting &lt;span class="math"&gt;\(z\_{s} = 0\)&lt;/span&gt; leads to
+and setting &lt;span class="math"&gt;\(z_{s} = 0\)&lt;/span&gt; leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$t\_{o} = -\frac{\Lambda\_{12}(s)}{2s}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$t_{o} = -\frac{\Lambda_{12}(s)}{2s}.$$&lt;/div&gt;
 &lt;p&gt;
 It follows that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$u\_{o} = \frac{2(m\_{1} - m\_{2})^{2} (m\_{1} + m\_{2})^{2} - \Lambda\_{12}(s)}{2s}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$u_{o} = \frac{2(m_{1} - m_{2})^{2} (m_{1} + m_{2})^{2} - \Lambda_{12}(s)}{2s}.$$&lt;/div&gt;
 &lt;h3&gt;Semiforward Approximation&lt;/h3&gt;
 &lt;p&gt;Like in any four-point process, there are three main kinematic variables: &lt;span class="math"&gt;\(s\)&lt;/span&gt;, &lt;span class="math"&gt;\(t\)&lt;/span&gt;, and &lt;span class="math"&gt;\(u\)&lt;/span&gt;. Of course, due to the conservation constraint, only two of these are independent. However, it pays to keep &lt;span class="math"&gt;\(u\)&lt;/span&gt; around sometimes. The quantity &lt;span class="math"&gt;\(s\)&lt;/span&gt; describes the center-of-momentum energy. The quantity &lt;span class="math"&gt;\(t\)&lt;/span&gt; describes the amount of momentum that is exchanged between the two bodies. Other kinematic variables include the two masses. With all of these dimensionful quantities, you can construct &lt;strong&gt;dimensionless&lt;/strong&gt; ones by taking ratios. For example,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$R\_{1} \equiv \frac{t}{s} \qquad R\_{2} \equiv \frac{s}{m\_{1} m\_{2}} \qquad R\_{3} \equiv \frac{m\_{1}}{m\_{2}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$R_{1} \equiv \frac{t}{s} \qquad R_{2} \equiv \frac{s}{m_{1} m_{2}} \qquad R_{3} \equiv \frac{m_{1}}{m_{2}}.$$&lt;/div&gt;
 &lt;p&gt;
-The &lt;strong&gt;semiforward approximation&lt;/strong&gt; is defined as the regime where &lt;span class="math"&gt;\(R\_{1} \rightarrow 0\)&lt;/span&gt; with &lt;span class="math"&gt;\(R\_{2}\)&lt;/span&gt; and &lt;span class="math"&gt;\(R\_{3}\)&lt;/span&gt; kept fixed. This is the regime where &lt;span class="math"&gt;\(t\)&lt;/span&gt; is much smaller than &lt;span class="math"&gt;\(s\)&lt;/span&gt; or the square of the masses, and the speed and rapidity of the external quanta is kept fixed. A corollary of the semiforward approximation is that the ratio &lt;span class="math"&gt;\(u / s\)&lt;/span&gt; is also kept fixed.&lt;/p&gt;
+The &lt;strong&gt;semiforward approximation&lt;/strong&gt; is defined as the regime where &lt;span class="math"&gt;\(R_{1} \rightarrow 0\)&lt;/span&gt; with &lt;span class="math"&gt;\(R_{2}\)&lt;/span&gt; and &lt;span class="math"&gt;\(R_{3}\)&lt;/span&gt; kept fixed. This is the regime where &lt;span class="math"&gt;\(t\)&lt;/span&gt; is much smaller than &lt;span class="math"&gt;\(s\)&lt;/span&gt; or the square of the masses, and the speed and rapidity of the external quanta is kept fixed. A corollary of the semiforward approximation is that the ratio &lt;span class="math"&gt;\(u / s\)&lt;/span&gt; is also kept fixed.&lt;/p&gt;
 &lt;h2&gt;Cross Processes&lt;/h2&gt;
 &lt;p&gt;If you cross the incoming &lt;span class="math"&gt;\(B\)&lt;/span&gt; with the outgoing &lt;span class="math"&gt;\(A\)&lt;/span&gt;, you find the &lt;strong&gt;inelastic&lt;/strong&gt; process
 &lt;/p&gt;
-&lt;div class="math"&gt;$$A(p\_{1}) + \bar{A}(\bar{p}\_{2}) \longrightarrow \bar{B}(\bar{p}\_{3}) + B(p\_{4}).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$A(p_{1}) + \bar{A}(\bar{p}_{2}) \longrightarrow \bar{B}(\bar{p}_{3}) + B(p_{4}).$$&lt;/div&gt;
 &lt;p&gt;
 This is the &lt;span class="math"&gt;\(t\)&lt;/span&gt;-channel. Similarly, if you cross the incoming &lt;span class="math"&gt;\(B\)&lt;/span&gt; with the outgoing &lt;span class="math"&gt;\(B\)&lt;/span&gt;, you find the &lt;strong&gt;elastic&lt;/strong&gt; process
 &lt;/p&gt;
-&lt;div class="math"&gt;$$A(p\_{1}) + \bar{B}(\bar{p}\_{2}) \longrightarrow A(p\_{3}) + \bar{B}(\bar{p}\_{4}).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$A(p_{1}) + \bar{B}(\bar{p}_{2}) \longrightarrow A(p_{3}) + \bar{B}(\bar{p}_{4}).$$&lt;/div&gt;
 &lt;p&gt;
 This is the &lt;span class="math"&gt;\(u\)&lt;/span&gt;-channel.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -3437,106 +3437,106 @@ This is the &lt;span class="math"&gt;\(u\)&lt;/span&gt;-channel.&lt;/p&gt;
 }
 &lt;/script&gt;</summary><category term="kinematics"></category><category term="four-point"></category><category term="massive"></category></entry><entry><title>Four-point Inelastic Kinematics (Four Masses)</title><link href="http://meirizarrygelpi.github.io/posts/2014/Sep/4pnt-four-masses/" rel="alternate"></link><updated>2014-09-02T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-09-02:posts/2014/Sep/4pnt-four-masses/</id><summary type="html">&lt;p&gt;The most general &lt;span class="math"&gt;\(2 \rightarrow 2\)&lt;/span&gt; process has the form
 &lt;/p&gt;
-&lt;div class="math"&gt;$$A(p\_{1}) + B(p\_{2}) \longrightarrow Z(p\_{3}) + Y(p\_{4}).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$A(p_{1}) + B(p_{2}) \longrightarrow Z(p_{3}) + Y(p_{4}).$$&lt;/div&gt;
 &lt;p&gt;
-Note that this process has no permutation symmetry; it is &lt;strong&gt;inelastic&lt;/strong&gt;. The four energy-momentum vectors &lt;span class="math"&gt;\(p\_{I}\)&lt;/span&gt; satisfy &lt;strong&gt;on-shell&lt;/strong&gt; constraints,
+Note that this process has no permutation symmetry; it is &lt;strong&gt;inelastic&lt;/strong&gt;. The four energy-momentum vectors &lt;span class="math"&gt;\(p_{I}\)&lt;/span&gt; satisfy &lt;strong&gt;on-shell&lt;/strong&gt; constraints,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{I}^{2} = - m\_{I}^{2} \qquad I = 1, 2, 3, 4;$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{I}^{2} = - m_{I}^{2} \qquad I = 1, 2, 3, 4;$$&lt;/div&gt;
 &lt;p&gt;
 and a &lt;strong&gt;conservation&lt;/strong&gt; constraint,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{1} + p\_{2} = p\_{3} + p\_{4}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{1} + p_{2} = p_{3} + p_{4}.$$&lt;/div&gt;
 &lt;p&gt;
 I will work with the assumption that quanta &lt;span class="math"&gt;\(1\)&lt;/span&gt; and &lt;span class="math"&gt;\(2\)&lt;/span&gt; are incoming, and quanta &lt;span class="math"&gt;\(3\)&lt;/span&gt; and &lt;span class="math"&gt;\(4\)&lt;/span&gt; are outgoing.&lt;/p&gt;
 &lt;h2&gt;Momentum Invariants&lt;/h2&gt;
 &lt;p&gt;Due to the conservation constraint, there are only three &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s \equiv -(p\_{1} + p\_{2})^{2} = -(p\_{3} + p\_{4})^{2} \qquad t \equiv -(p\_{1} - p\_{3})^{2} = -(p\_{2} - p\_{4})^{2} \qquad u \equiv -(p\_{1} - p\_{4})^{2} = -(p\_{2} - p\_{3})^{2}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$s \equiv -(p_{1} + p_{2})^{2} = -(p_{3} + p_{4})^{2} \qquad t \equiv -(p_{1} - p_{3})^{2} = -(p_{2} - p_{4})^{2} \qquad u \equiv -(p_{1} - p_{4})^{2} = -(p_{2} - p_{3})^{2}. $$&lt;/div&gt;
 &lt;p&gt;
 These satisfy a linear relation involving the masses:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s + t + u = m\_{1}^{2} + m\_{2}^{2} + m\_{3}^{2} + m\_{4}^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s + t + u = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 In terms of the 2-Mandelstam invariants and the masses, the &lt;strong&gt;2-Gram&lt;/strong&gt; invariants are:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G\_{IJ}(s) = \frac{1}{4} \[s - (m\_{I} - m\_{J})^{2}\] \[s - (m\_{I} + m\_{J})^{2}\] \qquad (I, J) = (1, 2), (3, 4);$$&lt;/div&gt;
-&lt;div class="math"&gt;$$G\_{IJ}(t) = \frac{1}{4} \[t - (m\_{I} - m\_{J})^{2}\] \[t - (m\_{I} + m\_{J})^{2}\] \qquad (I, J) = (1, 3), (2, 4);$$&lt;/div&gt;
-&lt;div class="math"&gt;$$G\_{IJ}(u) = \frac{1}{4} \[u - (m\_{I} - m\_{J})^{2}\] \[u - (m\_{I} + m\_{J})^{2}\] \qquad (I, J) = (1, 4), (2, 3).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{IJ}(s) = \frac{1}{4} [s - (m_{I} - m_{J})^{2}] [s - (m_{I} + m_{J})^{2}] \qquad (I, J) = (1, 2), (3, 4);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{IJ}(t) = \frac{1}{4} [t - (m_{I} - m_{J})^{2}] [t - (m_{I} + m_{J})^{2}] \qquad (I, J) = (1, 3), (2, 4);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{IJ}(u) = \frac{1}{4} [u - (m_{I} - m_{J})^{2}] [u - (m_{I} + m_{J})^{2}] \qquad (I, J) = (1, 4), (2, 3).$$&lt;/div&gt;
 &lt;p&gt;
 There is also a nontrivial &lt;strong&gt;3-Gram&lt;/strong&gt; invariant, but I will not bother with it.&lt;/p&gt;
 &lt;h2&gt;Center-of-Momentum Frame&lt;/h2&gt;
 &lt;p&gt;In the &lt;strong&gt;center-of-momentum reference frame&lt;/strong&gt; you can write the energy-momentum vectors in the form
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{1} = (E\_{1}, \mathbf{p}\_{1}) \qquad p\_{2} = (E\_{2}, -\mathbf{p}\_{1}) \qquad p\_{3} = (E\_{3}, \mathbf{p}\_{3}) \qquad p\_{4} = (E\_{4}, -\mathbf{p}\_{3}).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{1} = (E_{1}, \mathbf{p}_{1}) \qquad p_{2} = (E_{2}, -\mathbf{p}_{1}) \qquad p_{3} = (E_{3}, \mathbf{p}_{3}) \qquad p_{4} = (E_{4}, -\mathbf{p}_{3}).$$&lt;/div&gt;
 &lt;p&gt;
 This way, part of the conservation constraint is explicitly satisfied. The remaining part is the conservation of energy
 &lt;/p&gt;
-&lt;div class="math"&gt;$$E\_{1} + E\_{2} = E\_{3} + E\_{4}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$E_{1} + E_{2} = E_{3} + E_{4}.$$&lt;/div&gt;
 &lt;p&gt;
 While in the center-of-momentum frame, you can write most kinematic quantities in terms of the 2-Mandelstam invariants and the masses.&lt;/p&gt;
 &lt;h3&gt;Energy and Momentum&lt;/h3&gt;
 &lt;p&gt;Using the on-shell constraints, you can write the energies in terms of the spatial momenta:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$E\_{1} = \sqrt{m\_{1}^{2} + \mathbf{p}\_{1}^{2}} \qquad E\_{2} = \sqrt{m\_{2}^{2} + \mathbf{p}\_{1}^{2}} \qquad E\_{3} = \sqrt{m\_{3}^{2} + \mathbf{p}\_{3}^{2}} \qquad E\_{4} = \sqrt{m\_{4}^{2} + \mathbf{p}\_{3}^{2}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$E_{1} = \sqrt{m_{1}^{2} + \mathbf{p}_{1}^{2}} \qquad E_{2} = \sqrt{m_{2}^{2} + \mathbf{p}_{1}^{2}} \qquad E_{3} = \sqrt{m_{3}^{2} + \mathbf{p}_{3}^{2}} \qquad E_{4} = \sqrt{m_{4}^{2} + \mathbf{p}_{3}^{2}}.$$&lt;/div&gt;
 &lt;p&gt;
-The four energies are manifestly positive. Using &lt;span class="math"&gt;\(s = -(p\_{1} + p\_{2})^{2}\)&lt;/span&gt; you can find that
+The four energies are manifestly positive. Using &lt;span class="math"&gt;\(s = -(p_{1} + p_{2})^{2}\)&lt;/span&gt; you can find that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s = (E\_{1} + E\_{2})^{2} = (E\_{3} + E\_{4})^{2},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s = (E_{1} + E_{2})^{2} = (E_{3} + E_{4})^{2},$$&lt;/div&gt;
 &lt;p&gt;
 which tells you that &lt;span class="math"&gt;\(s\)&lt;/span&gt; has to be positive. With these relations you can solve for some of the energies:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$E\_{2} = \sqrt{s} - E\_{1} \qquad E\_{4} = \sqrt{s} - E\_{3}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$E_{2} = \sqrt{s} - E_{1} \qquad E_{4} = \sqrt{s} - E_{3}.$$&lt;/div&gt;
 &lt;p&gt;
 Using these you can find expressions for the magnitude of the spatial momenta in terms of &lt;span class="math"&gt;\(s\)&lt;/span&gt; and the masses:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\vert \mathbf{p}\_{1} \vert = \frac{\sqrt{\Lambda\_{12}(s)}}{2 \sqrt{s}} \qquad \vert \mathbf{p}\_{3} \vert = \frac{\sqrt{\Lambda\_{34}(s)}}{2 \sqrt{s}} \qquad \Lambda\_{IJ}(s) \equiv \[s - (m\_{I} - m\_{J})^{2}\] \[s - (m\_{I} + m\_{J})^{2}\].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\vert \mathbf{p}_{1} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{2 \sqrt{s}} \qquad \vert \mathbf{p}_{3} \vert = \frac{\sqrt{\Lambda_{34}(s)}}{2 \sqrt{s}} \qquad \Lambda_{IJ}(s) \equiv [s - (m_{I} - m_{J})^{2}] [s - (m_{I} + m_{J})^{2}].$$&lt;/div&gt;
 &lt;p&gt;
 With these magnitudes, you can find expressions for the energies in terms of &lt;span class="math"&gt;\(s\)&lt;/span&gt; and the masses:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$E\_{1} = \frac{s + (m\_{1} - m\_{2})(m\_{1} + m\_{2})}{2 \sqrt{s}} \qquad E\_{2} = \frac{s - (m\_{1} - m\_{2})(m\_{1} + m\_{2})}{2 \sqrt{s}},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$E_{1} = \frac{s + (m_{1} - m_{2})(m_{1} + m_{2})}{2 \sqrt{s}} \qquad E_{2} = \frac{s - (m_{1} - m_{2})(m_{1} + m_{2})}{2 \sqrt{s}},$$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$E\_{3} = \frac{s + (m\_{3} - m\_{4})(m\_{3} + m\_{4})}{2 \sqrt{s}} \qquad E\_{4} = \frac{s - (m\_{3} - m\_{4})(m\_{3} + m\_{4})}{2 \sqrt{s}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$E_{3} = \frac{s + (m_{3} - m_{4})(m_{3} + m_{4})}{2 \sqrt{s}} \qquad E_{4} = \frac{s - (m_{3} - m_{4})(m_{3} + m_{4})}{2 \sqrt{s}}.$$&lt;/div&gt;
 &lt;p&gt;
 Note that the requirement that the energy be positive leads to a restriction on the values that &lt;span class="math"&gt;\(s\)&lt;/span&gt; can take.&lt;/p&gt;
 &lt;h3&gt;Scattering Angle&lt;/h3&gt;
 &lt;p&gt;With the results for the energies, you can obtain
 &lt;/p&gt;
-&lt;div class="math"&gt;$$E\_{1} - E\_{3} = \frac{(m\_{1} - m\_{2})(m\_{1} + m\_{2}) - (m\_{3} - m\_{4})(m\_{3} + m\_{4})}{2 \sqrt{s}},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$E_{1} - E_{3} = \frac{(m_{1} - m_{2})(m_{1} + m_{2}) - (m_{3} - m_{4})(m_{3} + m_{4})}{2 \sqrt{s}},$$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$E\_{1} - E\_{4} = \frac{(m\_{1} - m\_{2})(m\_{1} + m\_{2}) + (m\_{3} - m\_{4})(m\_{3} + m\_{4})}{2 \sqrt{s}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$E_{1} - E_{4} = \frac{(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})}{2 \sqrt{s}}.$$&lt;/div&gt;
 &lt;p&gt;
 These particular combinations are important, because you also have
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\vert \mathbf{p}\_{1} - \mathbf{p}\_{3} \vert^{2} = (E\_{1} - E\_{3})^{2} - t \qquad \vert \mathbf{p}\_{1} + \mathbf{p}\_{3} \vert^{2} = (E\_{1} - E\_{4})^{2} - u,$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} = (E_{1} - E_{3})^{2} - t \qquad \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} = (E_{1} - E_{4})^{2} - u,$$&lt;/div&gt;
 &lt;p&gt;
 and thus
 &lt;/p&gt;
-&lt;div class="math"&gt;$$4 (\mathbf{p}\_{1} \cdot \mathbf{p}\_{3}) = \vert \mathbf{p}\_{1} + \mathbf{p}\_{3} \vert^{2} - \vert \mathbf{p}\_{1} - \mathbf{p}\_{3} \vert^{2} = (E\_{1} - E\_{4})^{2} - (E\_{1} - E\_{3})^{2} - u + t,$$&lt;/div&gt;
+&lt;div class="math"&gt;$$4 (\mathbf{p}_{1} \cdot \mathbf{p}_{3}) = \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} - \vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} = (E_{1} - E_{4})^{2} - (E_{1} - E_{3})^{2} - u + t,$$&lt;/div&gt;
 &lt;p&gt;
 giving
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\mathbf{p}\_{1} \cdot \mathbf{p}\_{3} = \frac{(m\_{1} - m\_{2})(m\_{3} - m\_{4})(m\_{1} + m\_{2})(m\_{3} + m\_{4}) - s (u - t)}{4 s}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\mathbf{p}_{1} \cdot \mathbf{p}_{3} = \frac{(m_{1} - m_{2})(m_{3} - m_{4})(m_{1} + m_{2})(m_{3} + m_{4}) - s (u - t)}{4 s}.$$&lt;/div&gt;
 &lt;p&gt;
-This result allows you to find an expression for the cosine of the angle between &lt;span class="math"&gt;\(\mathbf{p}\_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathbf{p}\_{3}\)&lt;/span&gt;:
+This result allows you to find an expression for the cosine of the angle between &lt;span class="math"&gt;\(\mathbf{p}_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathbf{p}_{3}\)&lt;/span&gt;:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$z\_{s} \equiv \cos{(\theta\_{s})} \equiv \frac{\mathbf{p}\_{1} \cdot \mathbf{p}\_{3}}{\vert \mathbf{p}\_{1} \vert \vert \mathbf{p}\_{3} \vert} = \frac{(m\_{1} - m\_{2})(m\_{3} - m\_{4})(m\_{1} + m\_{2})(m\_{3} + m\_{4}) - s (u - t)}{\sqrt{\Lambda\_{12}(s)} \sqrt{\Lambda\_{34}(s)}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$z_{s} \equiv \cos{(\theta_{s})} \equiv \frac{\mathbf{p}_{1} \cdot \mathbf{p}_{3}}{\vert \mathbf{p}_{1} \vert \vert \mathbf{p}_{3} \vert} = \frac{(m_{1} - m_{2})(m_{3} - m_{4})(m_{1} + m_{2})(m_{3} + m_{4}) - s (u - t)}{\sqrt{\Lambda_{12}(s)} \sqrt{\Lambda_{34}(s)}}.$$&lt;/div&gt;
 &lt;p&gt;
 Here I have labeled the angle with an &lt;span class="math"&gt;\(s\)&lt;/span&gt; since this is the &lt;strong&gt;scattering angle&lt;/strong&gt; along the &lt;span class="math"&gt;\(s\)&lt;/span&gt;-channel.&lt;/p&gt;
 &lt;p&gt;Using
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\vert \mathbf{p}\_{1} \vert^{2} + \vert \mathbf{p}\_{3} \vert^{2} = \frac{(m\_{1} - m\_{2})^{2}(m\_{1} + m\_{2})^{2} + (m\_{3} - m\_{4})^{2}(m\_{3} + m\_{4})^{2} - 2s (u + t)}{4 s},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\vert \mathbf{p}_{1} \vert^{2} + \vert \mathbf{p}_{3} \vert^{2} = \frac{(m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} + (m_{3} - m_{4})^{2}(m_{3} + m_{4})^{2} - 2s (u + t)}{4 s},$$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\vert \mathbf{p}\_{1} \vert^{2} + \vert \mathbf{p}\_{3} \vert^{2} = \vert \mathbf{p}\_{1} \vert \vert \mathbf{p}\_{3} \vert \left( \frac{\vert \mathbf{p}\_{1} \vert}{\vert \mathbf{p}\_{3} \vert} + \frac{\vert \mathbf{p}\_{3} \vert}{\vert \mathbf{p}\_{1} \vert} \right),$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\vert \mathbf{p}_{1} \vert^{2} + \vert \mathbf{p}_{3} \vert^{2} = \vert \mathbf{p}_{1} \vert \vert \mathbf{p}_{3} \vert \left( \frac{\vert \mathbf{p}_{1} \vert}{\vert \mathbf{p}_{3} \vert} + \frac{\vert \mathbf{p}_{3} \vert}{\vert \mathbf{p}_{1} \vert} \right),$$&lt;/div&gt;
 &lt;p&gt;
-leads to another expression for &lt;span class="math"&gt;\(z\_{s}\)&lt;/span&gt;:
+leads to another expression for &lt;span class="math"&gt;\(z_{s}\)&lt;/span&gt;:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$z\_{s} = \left\[ \frac{\Lambda\_{12}(s) + \Lambda\_{34}(s)}{\sqrt{\Lambda\_{12}(s) \Lambda\_{34}(s)}} \right\] \left\[ \frac{(m\_{1} - m\_{2})(m\_{3} - m\_{4})(m\_{1} + m\_{2})(m\_{3} + m\_{4}) - s (u - t)}{(m\_{1} - m\_{2})^{2}(m\_{1} + m\_{2})^{2} + (m\_{3} - m\_{4})^{2}(m\_{3} + m\_{4})^{2} - 2s (u + t)} \right\].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$z_{s} = \left[ \frac{\Lambda_{12}(s) + \Lambda_{34}(s)}{\sqrt{\Lambda_{12}(s) \Lambda_{34}(s)}} \right] \left[ \frac{(m_{1} - m_{2})(m_{3} - m_{4})(m_{1} + m_{2})(m_{3} + m_{4}) - s (u - t)}{(m_{1} - m_{2})^{2}(m_{1} + m_{2})^{2} + (m_{3} - m_{4})^{2}(m_{3} + m_{4})^{2} - 2s (u + t)} \right].$$&lt;/div&gt;
 &lt;p&gt;
 This result is useful when making some of the masses identical.&lt;/p&gt;
 &lt;h3&gt;Speed and Rapidity&lt;/h3&gt;
@@ -3546,11 +3546,11 @@ This result is useful when making some of the masses identical.&lt;/p&gt;
 &lt;p&gt;
 In the center-of-momentum frame, you can write the individual speed of the external quanta in terms of &lt;span class="math"&gt;\(s\)&lt;/span&gt; and the masses:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\vert \mathbf{v}\_{1} \vert = \frac{\sqrt{\Lambda\_{12}(s)}}{s + (m\_{1} - m\_{2})(m\_{1} + m\_{2})} \qquad \vert \mathbf{v}\_{2} \vert = \frac{\sqrt{\Lambda\_{12}(s)}}{s - (m\_{1} - m\_{2})(m\_{1} + m\_{2})},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\vert \mathbf{v}_{1} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{s + (m_{1} - m_{2})(m_{1} + m_{2})} \qquad \vert \mathbf{v}_{2} \vert = \frac{\sqrt{\Lambda_{12}(s)}}{s - (m_{1} - m_{2})(m_{1} + m_{2})},$$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\vert \mathbf{v}\_{3} \vert = \frac{\sqrt{\Lambda\_{34}(s)}}{s + (m\_{3} - m\_{4})(m\_{3} + m\_{4})} \qquad \vert \mathbf{v}\_{4} \vert = \frac{\sqrt{\Lambda\_{34}(s)}}{s - (m\_{3} - m\_{4})(m\_{3} + m\_{4})}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\vert \mathbf{v}_{3} \vert = \frac{\sqrt{\Lambda_{34}(s)}}{s + (m_{3} - m_{4})(m_{3} + m_{4})} \qquad \vert \mathbf{v}_{4} \vert = \frac{\sqrt{\Lambda_{34}(s)}}{s - (m_{3} - m_{4})(m_{3} + m_{4})}.$$&lt;/div&gt;
 &lt;p&gt;
 With the speed &lt;span class="math"&gt;\(\vert \mathbf{v} \vert\)&lt;/span&gt; you can find the &lt;strong&gt;rapidity&lt;/strong&gt; &lt;span class="math"&gt;\(\varphi\)&lt;/span&gt; via
 &lt;/p&gt;
@@ -3558,85 +3558,85 @@ With the speed &lt;span class="math"&gt;\(\vert \mathbf{v} \vert\)&lt;/span&gt; 
 &lt;p&gt;
 Note that since &lt;span class="math"&gt;\(0 \leq \vert \mathbf{v} \vert &amp;lt; 1\)&lt;/span&gt;, then it follows that &lt;span class="math"&gt;\(0 \leq \varphi &amp;lt; \infty\)&lt;/span&gt;. In the center-of-momentum frame, the individual rapidity of the external quanta are
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\varphi\_{1} = \frac{1}{2} \log{\left\[ \frac{(m\_{1} - m\_{2})(m\_{1} + m\_{2}) + s + \sqrt{\Lambda\_{12}(s)}}{(m\_{1} - m\_{2})(m\_{1} + m\_{2}) + s - \sqrt{\Lambda\_{12}(s)}} \right\]} \qquad \varphi\_{2} = \frac{1}{2} \log{\left\[ \frac{(m\_{1} - m\_{2})(m\_{1} + m\_{2}) - s - \sqrt{\Lambda\_{12}(s)}}{(m\_{1} - m\_{2})(m\_{1} + m\_{2}) - s + \sqrt{\Lambda\_{12}(s)}} \right\]},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\varphi_{1} = \frac{1}{2} \log{\left[ \frac{(m_{1} - m_{2})(m_{1} + m_{2}) + s + \sqrt{\Lambda_{12}(s)}}{(m_{1} - m_{2})(m_{1} + m_{2}) + s - \sqrt{\Lambda_{12}(s)}} \right]} \qquad \varphi_{2} = \frac{1}{2} \log{\left[ \frac{(m_{1} - m_{2})(m_{1} + m_{2}) - s - \sqrt{\Lambda_{12}(s)}}{(m_{1} - m_{2})(m_{1} + m_{2}) - s + \sqrt{\Lambda_{12}(s)}} \right]},$$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\varphi\_{3} = \frac{1}{2} \log{\left\[ \frac{(m\_{3} - m\_{4})(m\_{3} + m\_{4}) + s + \sqrt{\Lambda\_{34}(s)}}{(m\_{3} - m\_{4})(m\_{3} + m\_{4}) + s - \sqrt{\Lambda\_{34}(s)}} \right\]} \qquad \varphi\_{4} = \frac{1}{2} \log{\left\[ \frac{(m\_{3} - m\_{4})(m\_{3} + m\_{4}) - s - \sqrt{\Lambda\_{34}(s)}}{(m\_{3} - m\_{4})(m\_{3} + m\_{4}) - s + \sqrt{\Lambda\_{34}(s)}} \right\]}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\varphi_{3} = \frac{1}{2} \log{\left[ \frac{(m_{3} - m_{4})(m_{3} + m_{4}) + s + \sqrt{\Lambda_{34}(s)}}{(m_{3} - m_{4})(m_{3} + m_{4}) + s - \sqrt{\Lambda_{34}(s)}} \right]} \qquad \varphi_{4} = \frac{1}{2} \log{\left[ \frac{(m_{3} - m_{4})(m_{3} + m_{4}) - s - \sqrt{\Lambda_{34}(s)}}{(m_{3} - m_{4})(m_{3} + m_{4}) - s + \sqrt{\Lambda_{34}(s)}} \right]}.$$&lt;/div&gt;
 &lt;p&gt;
 Other results include the sum of the two incoming rapidities,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\varphi\_{1} + \varphi\_{2} = \frac{1}{2} \log{\left\[ \frac{m\_{1}^{2} + m\_{2}^{2} - s - \sqrt{\Lambda\_{12}(s)}}{m\_{1}^{2} + m\_{2}^{2} - s + \sqrt{\Lambda\_{12}(s)}} \right\]} = \log{\left\[ \frac{(m\_{1} + m\_{2})^{2} - s + \sqrt{\Lambda\_{12}(s)}}{(m\_{1} + m\_{2})^{2} - s - \sqrt{\Lambda\_{12}(s)}} \right\]},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\varphi_{1} + \varphi_{2} = \frac{1}{2} \log{\left[ \frac{m_{1}^{2} + m_{2}^{2} - s - \sqrt{\Lambda_{12}(s)}}{m_{1}^{2} + m_{2}^{2} - s + \sqrt{\Lambda_{12}(s)}} \right]} = \log{\left[ \frac{(m_{1} + m_{2})^{2} - s + \sqrt{\Lambda_{12}(s)}}{(m_{1} + m_{2})^{2} - s - \sqrt{\Lambda_{12}(s)}} \right]},$$&lt;/div&gt;
 &lt;p&gt;
 and the sum of the two outgoing rapidities,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\varphi\_{3} + \varphi\_{4} = \frac{1}{2} \log{\left\[ \frac{m\_{3}^{2} + m\_{4}^{2} - s - \sqrt{\Lambda\_{34}(s)}}{m\_{3}^{2} + m\_{4}^{2} - s + \sqrt{\Lambda\_{34}(s)}} \right\]} = \log{\left\[ \frac{(m\_{3} + m\_{4})^{2} - s + \sqrt{\Lambda\_{34}(s)}}{(m\_{3} + m\_{4})^{2} - s - \sqrt{\Lambda\_{34}(s)}} \right\]}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\varphi_{3} + \varphi_{4} = \frac{1}{2} \log{\left[ \frac{m_{3}^{2} + m_{4}^{2} - s - \sqrt{\Lambda_{34}(s)}}{m_{3}^{2} + m_{4}^{2} - s + \sqrt{\Lambda_{34}(s)}} \right]} = \log{\left[ \frac{(m_{3} + m_{4})^{2} - s + \sqrt{\Lambda_{34}(s)}}{(m_{3} + m_{4})^{2} - s - \sqrt{\Lambda_{34}(s)}} \right]}.$$&lt;/div&gt;
 &lt;p&gt;
 These two expressions appear in loop amplitudes.&lt;/p&gt;
 &lt;h3&gt;Physical Scattering Region&lt;/h3&gt;
-&lt;p&gt;Quantities like the energies &lt;span class="math"&gt;\(E\_{I}\)&lt;/span&gt; or the spatial momenta &lt;span class="math"&gt;\(\mathbf{p}\_{I}\)&lt;/span&gt; have a clear physical interpretation. For a scattering process you expect the energies and the magnitude of the spatial momenta to be positive. Requiring &lt;span class="math"&gt;\(\vert \mathbf{p}\_{1} \vert &amp;gt; 0\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vert \mathbf{p}\_{3} \vert &amp;gt; 0\)&lt;/span&gt; leads to
+&lt;p&gt;Quantities like the energies &lt;span class="math"&gt;\(E_{I}\)&lt;/span&gt; or the spatial momenta &lt;span class="math"&gt;\(\mathbf{p}_{I}\)&lt;/span&gt; have a clear physical interpretation. For a scattering process you expect the energies and the magnitude of the spatial momenta to be positive. Requiring &lt;span class="math"&gt;\(\vert \mathbf{p}_{1} \vert &amp;gt; 0\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vert \mathbf{p}_{3} \vert &amp;gt; 0\)&lt;/span&gt; leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s &amp;gt; \operatorname{max}{\lbrace (m\_{1} + m\_{2})^{2}, (m\_{3} + m\_{4})^{2} \rbrace}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s &amp;gt; \operatorname{max}{\lbrace (m_{1} + m_{2})^{2}, (m_{3} + m_{4})^{2} \rbrace}.$$&lt;/div&gt;
 &lt;p&gt;
-In other words, &lt;span class="math"&gt;\(s\)&lt;/span&gt; must be above the &lt;span class="math"&gt;\(s\)&lt;/span&gt;-channel thresholds. This means that inside the physical scattering region you have &lt;span class="math"&gt;\(G\_{12} &amp;gt; 0\)&lt;/span&gt; and &lt;span class="math"&gt;\(G\_{34} &amp;gt; 0\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Similarly, requiring &lt;span class="math"&gt;\(\vert \mathbf{p}\_{1} - \mathbf{p}\_{3} \vert^{2} \geq 0\)&lt;/span&gt; and &lt;span class="math"&gt;\( \vert \mathbf{p}\_{1} + \mathbf{p}\_{3} \vert^{2} \geq 0\)&lt;/span&gt; leads to
+In other words, &lt;span class="math"&gt;\(s\)&lt;/span&gt; must be above the &lt;span class="math"&gt;\(s\)&lt;/span&gt;-channel thresholds. This means that inside the physical scattering region you have &lt;span class="math"&gt;\(G_{12} &amp;gt; 0\)&lt;/span&gt; and &lt;span class="math"&gt;\(G_{34} &amp;gt; 0\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Similarly, requiring &lt;span class="math"&gt;\(\vert \mathbf{p}_{1} - \mathbf{p}_{3} \vert^{2} \geq 0\)&lt;/span&gt; and &lt;span class="math"&gt;\( \vert \mathbf{p}_{1} + \mathbf{p}_{3} \vert^{2} \geq 0\)&lt;/span&gt; leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$4 s t \leq [(m\_{1} - m\_{2})(m\_{1} + m\_{2}) - (m\_{3} - m\_{4})(m\_{3} + m\_{4})]^{2},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$4 s t \leq [(m_{1} - m_{2})(m_{1} + m_{2}) - (m_{3} - m_{4})(m_{3} + m_{4})]^{2},$$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$4 s u \leq [(m\_{1} - m\_{2})(m\_{1} + m\_{2}) + (m\_{3} - m\_{4})(m\_{3} + m\_{4})]^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$4 s u \leq [(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})]^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 These inequalities can be reformulated as bounds for the values that &lt;span class="math"&gt;\(t\)&lt;/span&gt; and &lt;span class="math"&gt;\(u\)&lt;/span&gt; can take as functions of &lt;span class="math"&gt;\(s\)&lt;/span&gt; and the masses.&lt;/p&gt;
 &lt;h4&gt;Forward Scattering&lt;/h4&gt;
-&lt;p&gt;When &lt;span class="math"&gt;\(z\_{s} \rightarrow 1\)&lt;/span&gt; (i.e. &lt;span class="math"&gt;\(\theta\_{s} \rightarrow 0\)&lt;/span&gt;), you are in the regime of &lt;strong&gt;forward scattering&lt;/strong&gt;. Using
+&lt;p&gt;When &lt;span class="math"&gt;\(z_{s} \rightarrow 1\)&lt;/span&gt; (i.e. &lt;span class="math"&gt;\(\theta_{s} \rightarrow 0\)&lt;/span&gt;), you are in the regime of &lt;strong&gt;forward scattering&lt;/strong&gt;. Using
 &lt;/p&gt;
-&lt;div class="math"&gt;$$u\_{f} = m\_{1}^{2} + m\_{2}^{2} + m\_{3}^{2} + m\_{4}^{2} - s - t\_{f},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$u_{f} = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2} - s - t_{f},$$&lt;/div&gt;
 &lt;p&gt;
-and setting &lt;span class="math"&gt;\(z\_{s} = 1\)&lt;/span&gt; leads to
+and setting &lt;span class="math"&gt;\(z_{s} = 1\)&lt;/span&gt; leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$t\_{f} = \frac{\[(m\_{1} - m\_{2})(m\_{1} + m\_{2}) - (m\_{3} - m\_{4})(m\_{3} + m\_{4})\]^{2} - \[\sqrt{\Lambda\_{12}(s)} - \sqrt{\Lambda\_{34}(s)} \]^{2}}{4s},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$t_{f} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) - (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - [\sqrt{\Lambda_{12}(s)} - \sqrt{\Lambda_{34}(s)} ]^{2}}{4s},$$&lt;/div&gt;
 &lt;p&gt;
 which in turn leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$u\_{f} = \frac{\[(m\_{1} - m\_{2})(m\_{1} + m\_{2}) + (m\_{3} - m\_{4})(m\_{3} + m\_{4})\]^{2} - \[\sqrt{\Lambda\_{12}(s)} + \sqrt{\Lambda\_{34}(s)} \]^{2}}{4s}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$u_{f} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - [\sqrt{\Lambda_{12}(s)} + \sqrt{\Lambda_{34}(s)} ]^{2}}{4s}.$$&lt;/div&gt;
 &lt;h4&gt;Backward Scattering&lt;/h4&gt;
-&lt;p&gt;When &lt;span class="math"&gt;\(z\_{s} \rightarrow -1\)&lt;/span&gt; (i.e. &lt;span class="math"&gt;\(\theta\_{s} \rightarrow \pi\)&lt;/span&gt;), you are in the regime of &lt;strong&gt;backward scattering&lt;/strong&gt;. Using
+&lt;p&gt;When &lt;span class="math"&gt;\(z_{s} \rightarrow -1\)&lt;/span&gt; (i.e. &lt;span class="math"&gt;\(\theta_{s} \rightarrow \pi\)&lt;/span&gt;), you are in the regime of &lt;strong&gt;backward scattering&lt;/strong&gt;. Using
 &lt;/p&gt;
-&lt;div class="math"&gt;$$u\_{b} = m\_{1}^{2} + m\_{2}^{2} + m\_{3}^{2} + m\_{4}^{2} - s - t\_{b},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$u_{b} = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2} - s - t_{b},$$&lt;/div&gt;
 &lt;p&gt;
-and setting &lt;span class="math"&gt;\(z\_{s} = -1\)&lt;/span&gt; leads to
+and setting &lt;span class="math"&gt;\(z_{s} = -1\)&lt;/span&gt; leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$t\_{b} = \frac{\[(m\_{1} - m\_{2})(m\_{1} + m\_{2}) - (m\_{3} - m\_{4})(m\_{3} + m\_{4})\]^{2} - \[\sqrt{\Lambda\_{12}(s)} + \sqrt{\Lambda\_{34}(s)} \]^{2}}{4s},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$t_{b} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) - (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - [\sqrt{\Lambda_{12}(s)} + \sqrt{\Lambda_{34}(s)} ]^{2}}{4s},$$&lt;/div&gt;
 &lt;p&gt;
 which in turn leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$u\_{b} = \frac{\[(m\_{1} - m\_{2})(m\_{1} + m\_{2}) + (m\_{3} - m\_{4})(m\_{3} + m\_{4})\]^{2} - \[\sqrt{\Lambda\_{12}(s)} - \sqrt{\Lambda\_{34}(s)} \]^{2}}{4s}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$u_{b} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - [\sqrt{\Lambda_{12}(s)} - \sqrt{\Lambda_{34}(s)} ]^{2}}{4s}.$$&lt;/div&gt;
 &lt;h4&gt;Orthogonal Scattering&lt;/h4&gt;
-&lt;p&gt;Forward (backward) scattering corresponds to the special case when the incoming spatial momentum &lt;span class="math"&gt;\(\mathbf{p}\_{1}\)&lt;/span&gt; and the outgoing spatial momentum &lt;span class="math"&gt;\(\mathbf{p}\_{3}\)&lt;/span&gt; are collinear (anticollinear). When &lt;span class="math"&gt;\(z\_{s} \rightarrow 0\)&lt;/span&gt; (i.e. &lt;span class="math"&gt;\(\theta\_{s} \rightarrow \pi / 2\)&lt;/span&gt;), you are in regime of &lt;strong&gt;orthogonal scattering&lt;/strong&gt; (i.e. &lt;span class="math"&gt;\(\mathbf{p}\_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathbf{p}\_{3}\)&lt;/span&gt; are orthogonal). Using
+&lt;p&gt;Forward (backward) scattering corresponds to the special case when the incoming spatial momentum &lt;span class="math"&gt;\(\mathbf{p}_{1}\)&lt;/span&gt; and the outgoing spatial momentum &lt;span class="math"&gt;\(\mathbf{p}_{3}\)&lt;/span&gt; are collinear (anticollinear). When &lt;span class="math"&gt;\(z_{s} \rightarrow 0\)&lt;/span&gt; (i.e. &lt;span class="math"&gt;\(\theta_{s} \rightarrow \pi / 2\)&lt;/span&gt;), you are in regime of &lt;strong&gt;orthogonal scattering&lt;/strong&gt; (i.e. &lt;span class="math"&gt;\(\mathbf{p}_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathbf{p}_{3}\)&lt;/span&gt; are orthogonal). Using
 &lt;/p&gt;
-&lt;div class="math"&gt;$$u\_{o} = m\_{1}^{2} + m\_{2}^{2} + m\_{3}^{2} + m\_{4}^{2} - s - t\_{o}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$u_{o} = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2} - s - t_{o}$$&lt;/div&gt;
 &lt;p&gt;
-and setting &lt;span class="math"&gt;\(z\_{s} = 0\)&lt;/span&gt; leads to
+and setting &lt;span class="math"&gt;\(z_{s} = 0\)&lt;/span&gt; leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$t\_{o} = \frac{\[(m\_{1} - m\_{2})(m\_{1} + m\_{2}) - (m\_{3} - m\_{4})(m\_{3} + m\_{4})\]^{2} - \Lambda\_{12}(s) - \Lambda\_{34}(s)}{4s},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$t_{o} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) - (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - \Lambda_{12}(s) - \Lambda_{34}(s)}{4s},$$&lt;/div&gt;
 &lt;p&gt;
 which in turn leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$u\_{o} = \frac{\[(m\_{1} - m\_{2})(m\_{1} + m\_{2}) + (m\_{3} - m\_{4})(m\_{3} + m\_{4})\]^{2} - \Lambda\_{12}(s) - \Lambda\_{34}(s)}{4s}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$u_{o} = \frac{[(m_{1} - m_{2})(m_{1} + m_{2}) + (m_{3} - m_{4})(m_{3} + m_{4})]^{2} - \Lambda_{12}(s) - \Lambda_{34}(s)}{4s}.$$&lt;/div&gt;
 &lt;p&gt;
-Note that you can interpret &lt;span class="math"&gt;\(t\_{o}\)&lt;/span&gt; as the midpoint of the interval &lt;span class="math"&gt;\(t\_{b} &amp;lt; t &amp;lt; t\_{f}\)&lt;/span&gt;. Similarly, you can interpret &lt;span class="math"&gt;\(u\_{o}\)&lt;/span&gt; as the midpoint of the interval &lt;span class="math"&gt;\(u\_{f} &amp;lt; u &amp;lt; u\_{b}\)&lt;/span&gt;.&lt;/p&gt;
+Note that you can interpret &lt;span class="math"&gt;\(t_{o}\)&lt;/span&gt; as the midpoint of the interval &lt;span class="math"&gt;\(t_{b} &amp;lt; t &amp;lt; t_{f}\)&lt;/span&gt;. Similarly, you can interpret &lt;span class="math"&gt;\(u_{o}\)&lt;/span&gt; as the midpoint of the interval &lt;span class="math"&gt;\(u_{f} &amp;lt; u &amp;lt; u_{b}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2&gt;Cross Processes&lt;/h2&gt;
 &lt;p&gt;You can find two other &lt;span class="math"&gt;\(2 \rightarrow 2\)&lt;/span&gt; processes by &lt;strong&gt;crossing&lt;/strong&gt; an incoming quantum with an outgoing quantum. If you cross &lt;span class="math"&gt;\(B\)&lt;/span&gt; with &lt;span class="math"&gt;\(Z\)&lt;/span&gt;, you find the process
 &lt;/p&gt;
-&lt;div class="math"&gt;$$A(p\_{1}) + \bar{Z}(\bar{p}\_{2}) \longrightarrow \bar{B}(\bar{p}\_{3}) + Y(p\_{4}).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$A(p_{1}) + \bar{Z}(\bar{p}_{2}) \longrightarrow \bar{B}(\bar{p}_{3}) + Y(p_{4}).$$&lt;/div&gt;
 &lt;p&gt;
-You can use the same kinematic variables above if you let &lt;span class="math"&gt;\(\bar{p}\_{2} = -p\_{3}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\bar{p}\_{3} = -p\_{2}\)&lt;/span&gt;.&lt;/p&gt;
+You can use the same kinematic variables above if you let &lt;span class="math"&gt;\(\bar{p}_{2} = -p_{3}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\bar{p}_{3} = -p_{2}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Similarly, if you cross &lt;span class="math"&gt;\(B\)&lt;/span&gt; with &lt;span class="math"&gt;\(Y\)&lt;/span&gt;, you find the process
 &lt;/p&gt;
-&lt;div class="math"&gt;$$A(p\_{1}) + \bar{Y}(\bar{p}\_{2}) \longrightarrow Z(p\_{3}) + \bar{B}(\bar{p}\_{4}).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$A(p_{1}) + \bar{Y}(\bar{p}_{2}) \longrightarrow Z(p_{3}) + \bar{B}(\bar{p}_{4}).$$&lt;/div&gt;
 &lt;p&gt;
-Again, you can use the same kinematic variables above if you let &lt;span class="math"&gt;\(\bar{p}\_{2} = -p\_{4}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\bar{p}\_{4} = -p\_{2}\)&lt;/span&gt;. Note that all of these processes are inelastic.&lt;/p&gt;
+Again, you can use the same kinematic variables above if you let &lt;span class="math"&gt;\(\bar{p}_{2} = -p_{4}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\bar{p}_{4} = -p_{2}\)&lt;/span&gt;. Note that all of these processes are inelastic.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -3932,7 +3932,7 @@ we can write
 &lt;p&gt;
 This allows you to write the 2-Gram invariant in terms of masses and 2-Mandelstam invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G_{IJ} = \frac{1}{4} \[s_{IJ} - (m_{I} - m_{J})^{2}\] \[s_{IJ} - (m_{I} + m_{J})^{2}\].$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{IJ} = \frac{1}{4} [s_{IJ} - (m_{I} - m_{J})^{2}] [s_{IJ} - (m_{I} + m_{J})^{2}].$$&lt;/div&gt;
 &lt;p&gt;
 In this form, the &lt;strong&gt;sign properties&lt;/strong&gt; of a 2-Gram invariant are obvious. You have &lt;span class="math"&gt;\(G_{IJ}\)&lt;/span&gt; being &lt;strong&gt;positive&lt;/strong&gt; whenever &lt;span class="math"&gt;\(s_{IJ} &amp;lt; (m_{I} - m_{J})^{2}\)&lt;/span&gt; or &lt;span class="math"&gt;\(s_{IJ} &amp;gt; (m_{I} + m_{J})^{2}\)&lt;/span&gt;. Part of this region lies &lt;strong&gt;above the 2-threshold&lt;/strong&gt;; the another part lies &lt;strong&gt;below the 2-pseudothreshold&lt;/strong&gt;. On the other hand, you have &lt;span class="math"&gt;\(G_{IJ}\)&lt;/span&gt; being &lt;strong&gt;negative&lt;/strong&gt; whenever &lt;span class="math"&gt;\((m_{I} - m_{J})^{2} &amp;lt; s_{IJ} &amp;lt; (m_{I} + m_{J})^{2}\)&lt;/span&gt;. All of this region lies &lt;strong&gt;below the 2-threshold&lt;/strong&gt; and &lt;strong&gt;above the 2-pseudothreshold&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Expanding the expression for &lt;span class="math"&gt;\(G_{IJ}\)&lt;/span&gt; you find a surprisingly symmetric expression:
@@ -4011,43 +4011,43 @@ In general, this cannot be simplified further in terms of masses and Mandelstam 
 &lt;h2&gt;Two Masses&lt;/h2&gt;
 &lt;p&gt;Given two distinct masses, the &lt;strong&gt;2-threshold value&lt;/strong&gt; is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$(m\_{I} + m\_{J})^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$(m_{I} + m_{J})^{2}$$&lt;/div&gt;
 &lt;p&gt;
 and the &lt;strong&gt;2-pseudothreshold value&lt;/strong&gt; is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$(m\_{I} - m\_{J})^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$(m_{I} - m_{J})^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 Note that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{(m\_{I} + m\_{J})^{2} + (m\_{I} - m\_{J})^{2}}{2} = m\_{I}^{2} + m\_{J}^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{(m_{I} + m_{J})^{2} + (m_{I} - m_{J})^{2}}{2} = m_{I}^{2} + m_{J}^{2}.$$&lt;/div&gt;
 &lt;h2&gt;Three Masses&lt;/h2&gt;
 &lt;p&gt;Given three distinct masses, the &lt;strong&gt;3-threshold value&lt;/strong&gt; is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$(m\_{I} + m\_{J} + m\_{K})^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$(m_{I} + m_{J} + m_{K})^{2}$$&lt;/div&gt;
 &lt;p&gt;
 and the three &lt;strong&gt;3-pseudothreshold values&lt;/strong&gt; are
 &lt;/p&gt;
-&lt;div class="math"&gt;$$(m\_{I} - m\_{J} - m\_{K})^{2} \qquad (m\_{I} - m\_{J} + m\_{K})^{2} \qquad (m\_{I} + m\_{J} - m\_{K})^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$(m_{I} - m_{J} - m_{K})^{2} \qquad (m_{I} - m_{J} + m_{K})^{2} \qquad (m_{I} + m_{J} - m_{K})^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 Note that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{(m\_{I} + m\_{J} + m\_{K})^{2} + (m\_{I} - m\_{J} - m\_{K})^{2} + (m\_{I} - m\_{J} + m\_{K})^{2} + (m\_{I} + m\_{J} - m\_{K})^{2}}{4} = m\_{I}^{2} + m\_{J}^{2} + m\_{K}^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{(m_{I} + m_{J} + m_{K})^{2} + (m_{I} - m_{J} - m_{K})^{2} + (m_{I} - m_{J} + m_{K})^{2} + (m_{I} + m_{J} - m_{K})^{2}}{4} = m_{I}^{2} + m_{J}^{2} + m_{K}^{2}.$$&lt;/div&gt;
 &lt;h2&gt;Four Masses&lt;/h2&gt;
 &lt;p&gt;Given four distinct masses, the &lt;strong&gt;4-threshold value&lt;/strong&gt; is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$(m\_{I} + m\_{J} + m\_{K} + m\_{L})^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$(m_{I} + m_{J} + m_{K} + m_{L})^{2}$$&lt;/div&gt;
 &lt;p&gt;
 and the seven &lt;strong&gt;4-pseudothreshold values&lt;/strong&gt; are
 &lt;/p&gt;
-&lt;div class="math"&gt;$$(m\_{I} - m\_{J} - m\_{K} - m\_{L})^{2} \qquad (m\_{I} - m\_{J} + m\_{K} + m\_{L})^{2} \qquad (m\_{I} + m\_{J} - m\_{K} + m\_{L})^{2} \qquad (m\_{I} + m\_{J} + m\_{K} - m\_{L})^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$(m_{I} - m_{J} - m_{K} - m_{L})^{2} \qquad (m_{I} - m_{J} + m_{K} + m_{L})^{2} \qquad (m_{I} + m_{J} - m_{K} + m_{L})^{2} \qquad (m_{I} + m_{J} + m_{K} - m_{L})^{2}$$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$(m\_{I} + m\_{J} - m\_{K} - m\_{L})^{2} \qquad (m\_{I} - m\_{J} + m\_{K} - m\_{L})^{2} \qquad (m\_{I} - m\_{J} - m\_{K} + m\_{L})^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$(m_{I} + m_{J} - m_{K} - m_{L})^{2} \qquad (m_{I} - m_{J} + m_{K} - m_{L})^{2} \qquad (m_{I} - m_{J} - m_{K} + m_{L})^{2}$$&lt;/div&gt;
 &lt;p&gt;
 Note that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\frac{(m\_{I} + m\_{J} + m\_{K} + m\_{L})^{2} + (m\_{I} - m\_{J} - m\_{K} - m\_{L})^{2} + \ldots + (m\_{I} + m\_{J} - m\_{K} - m\_{L})^{2} + \ldots}{8} = m\_{I}^{2} + m\_{J}^{2} + m\_{K}^{2} + m\_{L}^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{(m_{I} + m_{J} + m_{K} + m_{L})^{2} + (m_{I} - m_{J} - m_{K} - m_{L})^{2} + \ldots + (m_{I} + m_{J} - m_{K} - m_{L})^{2} + \ldots}{8} = m_{I}^{2} + m_{J}^{2} + m_{K}^{2} + m_{L}^{2}.$$&lt;/div&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -4103,25 +4103,25 @@ Note that
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="kinematics"></category></entry><entry><title>Mandelstam Momentum Invariants</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/mandelstam-invariants/" rel="alternate"></link><updated>2014-08-26T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-26:posts/2014/Aug/mandelstam-invariants/</id><summary type="html">&lt;p&gt;In this post I would like to gather some facts about Mandelstam momentum invariants. For simplicity, I am going to consider a scattering process with &lt;span class="math"&gt;\(N\)&lt;/span&gt; external quanta. Without loss of generality, I will assume that each external quantum is &lt;strong&gt;incoming&lt;/strong&gt;. I will also restrict to external &lt;strong&gt;scalar&lt;/strong&gt; quanta, so all the information required to specify the state of an external quantum is contained in the &lt;strong&gt;energy-momentum&lt;/strong&gt; vector &lt;span class="math"&gt;\(p\_{a}\)&lt;/span&gt; carried by that quantum. I will label each of the external quanta with an integer from &lt;span class="math"&gt;\(1\)&lt;/span&gt; to &lt;span class="math"&gt;\(N\)&lt;/span&gt;. Thus, there are &lt;span class="math"&gt;\(N\)&lt;/span&gt; energy-momentum vectors but the &lt;strong&gt;conservation constraint&lt;/strong&gt;
+&lt;/script&gt;</summary><category term="kinematics"></category></entry><entry><title>Mandelstam Momentum Invariants</title><link href="http://meirizarrygelpi.github.io/posts/2014/Aug/mandelstam-invariants/" rel="alternate"></link><updated>2014-08-26T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-08-26:posts/2014/Aug/mandelstam-invariants/</id><summary type="html">&lt;p&gt;In this post I would like to gather some facts about Mandelstam momentum invariants. For simplicity, I am going to consider a scattering process with &lt;span class="math"&gt;\(N\)&lt;/span&gt; external quanta. Without loss of generality, I will assume that each external quantum is &lt;strong&gt;incoming&lt;/strong&gt;. I will also restrict to external &lt;strong&gt;scalar&lt;/strong&gt; quanta, so all the information required to specify the state of an external quantum is contained in the &lt;strong&gt;energy-momentum&lt;/strong&gt; vector &lt;span class="math"&gt;\(p_{a}\)&lt;/span&gt; carried by that quantum. I will label each of the external quanta with an integer from &lt;span class="math"&gt;\(1\)&lt;/span&gt; to &lt;span class="math"&gt;\(N\)&lt;/span&gt;. Thus, there are &lt;span class="math"&gt;\(N\)&lt;/span&gt; energy-momentum vectors but the &lt;strong&gt;conservation constraint&lt;/strong&gt;
 &lt;/p&gt;
-&lt;div class="math"&gt;$$p\_{1} + p\_{2} + \ldots p\_{N} = 0$$&lt;/div&gt;
+&lt;div class="math"&gt;$$p_{1} + p_{2} + \ldots p_{N} = 0$$&lt;/div&gt;
 &lt;p&gt;
 restricts the number of linearly-independent vectors to be &lt;span class="math"&gt;\(N - 1\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;The Mandelstam momentum invariants are Lorentz scalar quantities that are made from linear combinations of energy-momentum vectors of different external quanta. Given &lt;span class="math"&gt;\(n\)&lt;/span&gt; distinct energy-momentum vectors, the &lt;span class="math"&gt;\(n\)&lt;/span&gt; quanta Mandelstam momentum invariant is defined by
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s\_{I\_{1} I\_{2} \ldots I\_{n}} \equiv - (p\_{I\_{1}} + p\_{I\_{2}} + \ldots + p\_{I\_{n}})^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s_{I_{1} I_{2} \ldots I_{n}} \equiv - (p_{I_{1}} + p_{I_{2}} + \ldots + p_{I_{n}})^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 Since I have assumed that each external quantum is incoming, the linear combination only involves positive signs. For simplicity, I will refer to such an invariant as an &lt;span class="math"&gt;\(n\)&lt;/span&gt;-Mandelstam invariant. If some of the external quanta are incoming, and some are outgoing, then the &lt;span class="math"&gt;\(n\)&lt;/span&gt;-Mandelstam invariant is given by
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s\_{I\_{1} I\_{2} \ldots I\_{n}} \equiv - (p\_{I\_{1}} + \sigma\_{I\_{1}I\_{2}} p\_{I\_{2}} + \ldots + \sigma\_{I\_{1} I\_{n}} p\_{I\_{n}})^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s_{I_{1} I_{2} \ldots I_{n}} \equiv - (p_{I_{1}} + \sigma_{I_{1}I_{2}} p_{I_{2}} + \ldots + \sigma_{I_{1} I_{n}} p_{I_{n}})^{2}$$&lt;/div&gt;
 &lt;p&gt;
-where &lt;span class="math"&gt;\(\sigma\_{IJ} = +1\)&lt;/span&gt; if either &lt;span class="math"&gt;\(p\_{I}\)&lt;/span&gt; and &lt;span class="math"&gt;\(p\_{J}\)&lt;/span&gt; are both incoming or both outgoing, and &lt;span class="math"&gt;\(\sigma\_{IJ} = -1\)&lt;/span&gt; otherwise.&lt;/p&gt;
+where &lt;span class="math"&gt;\(\sigma_{IJ} = +1\)&lt;/span&gt; if either &lt;span class="math"&gt;\(p_{I}\)&lt;/span&gt; and &lt;span class="math"&gt;\(p_{J}\)&lt;/span&gt; are both incoming or both outgoing, and &lt;span class="math"&gt;\(\sigma_{IJ} = -1\)&lt;/span&gt; otherwise.&lt;/p&gt;
 &lt;h2&gt;Two Quanta&lt;/h2&gt;
 &lt;p&gt;Given two linearly-independent energy-momentum vectors, the &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariant is given by
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s\_{IJ} = - (p\_{I} + p\_{J})^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s_{IJ} = - (p_{I} + p_{J})^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 With &lt;span class="math"&gt;\(N\)&lt;/span&gt; energy-momentum vectors you can make a total of
 &lt;/p&gt;
@@ -4129,38 +4129,38 @@ With &lt;span class="math"&gt;\(N\)&lt;/span&gt; energy-momentum vectors you can
 &lt;p&gt;
 possible 2-Mandelstam invariants. However, the conservation constraint allows you to write &lt;span class="math"&gt;\(N\)&lt;/span&gt; of these in terms of the remaining others, so in total you have
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\mathfrak{M}\_{2}(N) = \frac{N (N - 1)}{2} - N = \frac{N (N - 3)}{2}, \qquad N \geq 5$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\mathfrak{M}_{2}(N) = \frac{N (N - 1)}{2} - N = \frac{N (N - 3)}{2}, \qquad N \geq 5$$&lt;/div&gt;
 &lt;p&gt;
-independent 2-Mandelstam invariants. Some special cases that I will explore later are &lt;span class="math"&gt;\(\mathfrak{M}\_{2}(6) = 9\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathfrak{M}\_{2}(8) = 20\)&lt;/span&gt;.&lt;/p&gt;
+independent 2-Mandelstam invariants. Some special cases that I will explore later are &lt;span class="math"&gt;\(\mathfrak{M}_{2}(6) = 9\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathfrak{M}_{2}(8) = 20\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2&gt;Three Quanta&lt;/h2&gt;
 &lt;p&gt;Given three linearly-independent energy-momentum vectors, the &lt;strong&gt;3-Mandelstam&lt;/strong&gt; invariant is given by
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s\_{IJK} = - (p\_{I} + p\_{J} + p\_{K})^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s_{IJK} = - (p_{I} + p_{J} + p_{K})^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 A 3-Mandelstam invariant can always be written in terms of 2-Mandelstam invariants and masses:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s\_{IJK} = s\_{IJ} + s\_{IK} + s\_{JK} - m\_{I}^{2} - m\_{J}^{2} - m\_{K}^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s_{IJK} = s_{IJ} + s_{IK} + s_{JK} - m_{I}^{2} - m_{J}^{2} - m_{K}^{2}$$&lt;/div&gt;
 &lt;p&gt;
-where I have assumed that &lt;span class="math"&gt;\(p\_{I}^{2} = -m\_{I}^{2}\)&lt;/span&gt; with &lt;span class="math"&gt;\(m\_{I}\)&lt;/span&gt; being real.&lt;/p&gt;
+where I have assumed that &lt;span class="math"&gt;\(p_{I}^{2} = -m_{I}^{2}\)&lt;/span&gt; with &lt;span class="math"&gt;\(m_{I}\)&lt;/span&gt; being real.&lt;/p&gt;
 &lt;p&gt;With &lt;span class="math"&gt;\(N\)&lt;/span&gt; energy-momentum vectors, you can make a total of
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\mathfrak{M}\_{3}(N) = {N \choose 3} = \frac{N (N - 1) (N - 2)}{6}, \qquad N \geq 7$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\mathfrak{M}_{3}(N) = {N \choose 3} = \frac{N (N - 1) (N - 2)}{6}, \qquad N \geq 7$$&lt;/div&gt;
 &lt;p&gt;
-possible 3-Mandelstam invariants. Note that &lt;span class="math"&gt;\(\mathfrak{M}\_{3}(6) = 10\)&lt;/span&gt; because of the conservation constraint.&lt;/p&gt;
+possible 3-Mandelstam invariants. Note that &lt;span class="math"&gt;\(\mathfrak{M}_{3}(6) = 10\)&lt;/span&gt; because of the conservation constraint.&lt;/p&gt;
 &lt;h2&gt;Four Quanta&lt;/h2&gt;
 &lt;p&gt;Given four linearly-independent energy-momentum vectors, the &lt;strong&gt;4-Mandelstam&lt;/strong&gt; invariant is given by
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s\_{IJKL} = - (p\_{I} + p\_{J} + p\_{K} + p\_{L})^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s_{IJKL} = - (p_{I} + p_{J} + p_{K} + p_{L})^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 Just like a 3-Mandelstam invariant, a 4-Mandelstam invariant can always be written in terms of 2-Mandelstam invariants and masses:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$s\_{IJKL} = s\_{IJ} + s\_{IK} + s\_{IL} + s\_{JK} + s\_{JL} + s\_{KL} - 2m\_{I}^{2} - 2m\_{J}^{2} - 2m\_{K}^{2} - 2m\_{L}^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$s_{IJKL} = s_{IJ} + s_{IK} + s_{IL} + s_{JK} + s_{JL} + s_{KL} - 2m_{I}^{2} - 2m_{J}^{2} - 2m_{K}^{2} - 2m_{L}^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 With &lt;span class="math"&gt;\(N\)&lt;/span&gt; energy-momentum vectors, you can make a total of
 &lt;/p&gt;
-&lt;div class="math"&gt;$$\mathfrak{M}\_{4}(N) = {N \choose 4} = \frac{N (N - 1) (N - 2) (N - 3)}{24}, \qquad N \geq 9$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\mathfrak{M}_{4}(N) = {N \choose 4} = \frac{N (N - 1) (N - 2) (N - 3)}{24}, \qquad N \geq 9$$&lt;/div&gt;
 &lt;p&gt;
-possible 4-Mandelstam invariants. Note that &lt;span class="math"&gt;\(\mathfrak{M}\_{4}(8) = 35\)&lt;/span&gt; because of the conservation constraint.&lt;/p&gt;
+possible 4-Mandelstam invariants. Note that &lt;span class="math"&gt;\(\mathfrak{M}_{4}(8) = 35\)&lt;/span&gt; because of the conservation constraint.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
