@@ -1,5 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 10 Oct 2015 00:00:00 -0400</lastBuildDate><item><title>arXiv picks for 2015, week 41</title><link>http://meirizarrygelpi.github.io/posts/2015/Oct/2015-week-41/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 17 Oct 2015 00:00:00 -0400</lastBuildDate><item><title>arXiv picks for 2015, week 42</title><link>http://meirizarrygelpi.github.io/posts/2015/Oct/2015-week-42/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1510.02549"&gt;Tadpoles, Cephalopods, and `Complete Normal Ordering'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 17 Oct 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-10-17:posts/2015/Oct/2015-week-42/</guid><category>research</category></item><item><title>Sudakov Kinematics</title><link>http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/</link><description>&lt;p&gt;Recently I learned a cool trick. It allows you to write a set of slow momenta in terms of null momenta. By slow momentum I mean an energy-momentum vector that describes a quantum that moves slower than light. By null momentum I mean an energy-momentum vector that describes a quantum that moves at the same speed as light. For concreteness, consider a 2-to-2 scattering process:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}) + D(p_{4}). $$&lt;/div&gt;
+&lt;p&gt;
+You have the conservation constraint,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$p_{1} + p_{2} = p_{3} + p_{4}, $$&lt;/div&gt;
+&lt;p&gt;
+and the on-shell constraints,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1}^{2} + m_{1}^{2} = 0, \qquad p_{2}^{2} + m_{2}^{2} = 0, \qquad p_{3}^{2} + m_{3}^{2} = 0, \qquad p_{4}^{2} + m_{4}^{2} = 0. $$&lt;/div&gt;
+&lt;p&gt;
+Traditionally, you use the Mandelstam invariants to describe the kinematics of this process:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s = -(p_{1} + p_{2})^{2} = -(p_{3} + p_{4})^{2}, \qquad t = -(p_{1} - p_{3})^{2} = -(p_{4} - p_{2})^{2} , \qquad u = -(p_{1} - p_{4})^{2} = -(p_{3} - p_{2})^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+Due to the conservation constraint, the three Mandelstam invariants satisfy a linear constraint:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s + t + u = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+I will refer to the process of writing all physically-relevant quantities (e.g. energy, spatial momentum, speed, rapidity, scattering angles) in terms of the masses and the Mandelstam invariants as the Mandelstam kinematic analysis.&lt;/p&gt;
+&lt;p&gt;What I call the Sudakov kinematic analysis consist of decomposing the incoming/outgoing slow momenta into incoming/outgoing null momenta. That is, let &lt;span class="math"&gt;\(k_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(k_{2}\)&lt;/span&gt;, &lt;span class="math"&gt;\(k_{3}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(k_{4}\)&lt;/span&gt; be null momenta and consider
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = k_{1} - \frac{m_{1}^{2}}{2 \left( k_{1} \cdot k_{2} \right)} k_{2}, \qquad p_{2} = k_{2} - \frac{m_{2}^{2}}{2 \left( k_{1} \cdot k_{2} \right)} k_{1}, \qquad p_{3} = k_{3} - \frac{m_{3}^{2}}{2 \left( k_{3} \cdot k_{4} \right)} k_{4}, \qquad p_{4} = k_{4} - \frac{m_{4}^{2}}{2 \left( k_{3} \cdot k_{4} \right)} k_{3}. $$&lt;/div&gt;
+&lt;p&gt;
+This is valid because, in general, a linear combination of two null vectors is not null. The conservation constraint becomes
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left[ 1 - \frac{m_{2}^{2}}{2 \left( k_{1} \cdot k_{2} \right)} \right] k_{1} + \left[ 1 - \frac{m_{1}^{2}}{2 \left( k_{1} \cdot k_{2} \right)} \right] k_{2} = \left[ 1 - \frac{m_{4}^{2}}{2 \left( k_{3} \cdot k_{4} \right)} \right] k_{3} + \left[ 1 - \frac{m_{3}^{2}}{2 \left( k_{3} \cdot k_{4} \right)} \right] k_{4}. $$&lt;/div&gt;
+&lt;p&gt;
+You can introduce six Sudakov invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{12} = - (k_{1} + k_{2})^{2}, \qquad T_{13} = -(k_{1} - k_{3})^{2}, \qquad U_{14} = -(k_{1} - k_{4})^{2}, \qquad U_{23} = -(k_{3} - k_{2})^{2}, \qquad T_{24} = -(k_{4} - k_{2})^{2}, \qquad S_{34} = -(k_{3} + k_{4})^{2}.$$&lt;/div&gt;
+&lt;p&gt;
+In principle, you can write these invariants in terms of the masses and the Mandelstam invariants. The system of six equations to solve is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s = \left( 1 + \frac{m_{1}^{2}}{S_{12}} \right) \left( 1 + \frac{m_{2}^{2}}{S_{12}} \right) S_{12}, \qquad s = \left( 1 + \frac{m_{3}^{2}}{S_{34}} \right) \left( 1 + \frac{m_{4}^{2}}{S_{34}} \right) S_{34}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ t = m_{1}^{2} + m_{3}^{2} + T_{13} + \left( \frac{m_{3}^{2}}{S_{34}} \right) U_{14} + \left( \frac{m_{1}^{2}}{S_{12}} \right) U_{23} + \left( \frac{m_{1}^{2} m_{3}^{2}}{S_{12} S_{34}} \right) T_{24}, \qquad t = m_{2}^{2} + m_{4}^{2} + T_{24} + \left( \frac{m_{4}^{2}}{S_{34}} \right) U_{23} + \left( \frac{m_{2}^{2}}{S_{12}} \right) U_{14} + \left( \frac{m_{2}^{2} m_{4}^{2}}{S_{12} S_{34}} \right) T_{13};$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ u = m_{1}^{2} + m_{4}^{2} + U_{14} + \left( \frac{m_{4}^{2}}{S_{34}} \right) T_{13} + \left( \frac{m_{1}^{2}}{S_{12}} \right) T_{24} + \left( \frac{ m_{1}^{2} m_{4}^{2}}{S_{12} S_{34}} \right) U_{23}, \qquad u = m_{2}^{2} + m_{3}^{2} + U_{23} + \left( \frac{m_{3}^{2}}{S_{34}} \right) T_{24} + \left( \frac{m_{2}^{2}}{S_{12}} \right) T_{13} + \left( \frac{m_{2}^{2} m_{3}^{2}}{S_{12} S_{34}} \right) U_{14}.$$&lt;/div&gt;
+&lt;p&gt;
+The solution is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{12} = \frac{1}{2} \left( s - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left[ s - \left( m_{1} - m_{2} \right)^{2} \right] \left[ s - \left( m_{1} + m_{2} \right)^{2} \right] } \right);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{34} = \frac{1}{2} \left( s - m_{3}^{2} - m_{4}^{2} + \sqrt{ \left[ s - \left( m_{3} - m_{4} \right)^{2} \right] \left[ s - \left( m_{3} + m_{4} \right)^{2} \right] } \right);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ T_{13} = \frac{S_{12}^{2} S_{34}^{2}}{\left(S_{12}^{2} - m_{1}^{2} m_{2}^{2} \right) \left(S_{34}^{2} - m_{3}^{2} m_{4}^{2} \right)} \left[\left( t - m_{1}^{2} - m_{3}^{2} \right) - \frac{m_{3}^{2}}{S_{34}} \left( u - m_{1}^{2} - m_{4}^{2} \right) - \frac{m_{1}^{2}}{S_{12}} \left( u - m_{2}^{2} - m_{3}^{2} \right) + \frac{m_{1}^{2} m_{3}^{2}}{S_{12} S_{34}} \left( t - m_{2}^{2} - m_{4}^{2} \right) \right] ;$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ T_{24} = \frac{S_{12}^{2} S_{34}^{2}}{\left(S_{12}^{2} - m_{1}^{2} m_{2}^{2} \right) \left(S_{34}^{2} - m_{3}^{2} m_{4}^{2} \right)} \left[ \left( t - m_{2}^{2} - m_{4}^{2} \right) - \frac{m_{4}^{2}}{S_{34}} \left( u - m_{2}^{2} - m_{3}^{2} \right) - \frac{m_{2}^{2}}{S_{12}} \left( u - m_{1}^{2} - m_{4}^{2} \right) + \frac{m_{2}^{2} m_{4}^{2}}{S_{12} S_{34}} \left( t - m_{1}^{2} - m_{3}^{2} \right) \right] ;$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ U_{14} = \frac{S_{12}^{2} S_{34}^{2}}{\left(S_{12}^{2} - m_{1}^{2} m_{2}^{2} \right) \left(S_{34}^{2} - m_{3}^{2} m_{4}^{2} \right)} \left[ \left( u - m_{1}^{2} - m_{4}^{2} \right) - \frac{m_{4}^{2}}{S_{34}} \left( t - m_{1}^{2} - m_{3}^{2} \right) - \frac{m_{1}^{2}}{S_{12}} \left( t - m_{2}^{2} - m_{4}^{2} \right) + \frac{m_{1}^{2} m_{4}^{2}}{S_{12} S_{34}} \left( u - m_{2}^{2} - m_{3}^{2} \right) \right] ;$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ U_{23} = \frac{S_{12}^{2} S_{34}^{2}}{\left(S_{12}^{2} - m_{1}^{2} m_{2}^{2} \right) \left(S_{34}^{2} - m_{3}^{2} m_{4}^{2} \right)} \left[ \left( u - m_{2}^{2} - m_{3}^{2} \right) - \frac{m_{3}^{2}}{S_{34}} \left( t - m_{2}^{2} - m_{4}^{2} \right) - \frac{m_{2}^{2}}{S_{12}} \left( t - m_{1}^{2} - m_{3}^{2} \right) + \frac{m_{2}^{2} m_{3}^{2}}{S_{12} S_{34}} \left( u - m_{1}^{2} - m_{4}^{2} \right) \right] .$$&lt;/div&gt;
+&lt;p&gt;
+Note that in four spacetime dimensions all Sudakov invariants can be written in terms of twistor products.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Wed, 14 Oct 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-10-14:posts/2015/Oct/sudakov-kinematics/</guid><category>kinematics</category></item><item><title>arXiv picks for 2015, week 41</title><link>http://meirizarrygelpi.github.io/posts/2015/Oct/2015-week-41/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1510.01324"&gt;4d &lt;span class="math"&gt;\(N=2\)&lt;/span&gt; SCFT and singularity theory Part I: Classification&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1510.01332"&gt;The Exact Bremsstrahlung Function in &lt;span class="math"&gt;\(N=2\)&lt;/span&gt; Superconformal Field Theories&lt;/a&gt;&lt;/li&gt;

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Sudakov Kinematics - M.E. Irizarry-Gelpí</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
+
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/">
+
+        <meta name="author" content="M.E. Irizarry-Gelpí" />
+        <meta name="keywords" content="kinematics" />
+        <meta name="description" content="On expressing slow momenta in terms of null momenta." />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/bootstrap.sandstone.min.css" type="text/css"/>
+    <link href="http://meirizarrygelpi.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://meirizarrygelpi.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://meirizarrygelpi.github.io/" class="navbar-brand">
+M.E. Irizarry-Gelpí            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="http://meirizarrygelpi.github.io/feeds/main.xml">Feed</a></li>
+                    <li><a href="https://www.dropbox.com/s/258h9d7izdtt43i/cvMEIrizarryGelpi.pdf?dl=0">CV</a></li>
+                        <li >
+                            <a href="http://meirizarrygelpi.github.io/category/arxiv.html">Arxiv</a>
+                        </li>
+                        <li >
+                            <a href="http://meirizarrygelpi.github.io/category/maths.html">Maths</a>
+                        </li>
+                        <li >
+                            <a href="http://meirizarrygelpi.github.io/category/notes.html">Notes</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+                        </li>
+                        <li >
+                            <a href="http://meirizarrygelpi.github.io/category/programming.html">Programming</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://meirizarrygelpi.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/"
+                       rel="bookmark"
+                       title="Permalink to Sudakov Kinematics">
+                        Sudakov Kinematics
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-10-14T00:00:00-04:00"> Wed 14 October 2015</time>
+    </span>
+            <span class="label label-default">By</span>
+            <a href="http://meirizarrygelpi.github.io/author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
+
+        <span class="label label-default">Category</span>
+        <a href="http://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://meirizarrygelpi.github.io/tag/kinematics.html">kinematics</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Recently I learned a cool trick. It allows you to write a set of slow momenta in terms of null momenta. By slow momentum I mean an energy-momentum vector that describes a quantum that moves slower than light. By null momentum I mean an energy-momentum vector that describes a quantum that moves at the same speed as light. For concreteness, consider a 2-to-2 scattering process:
+</p>
+<div class="math">$$ A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}) + D(p_{4}). $$</div>
+<p>
+You have the conservation constraint,
+</p>
+<div class="math">$$p_{1} + p_{2} = p_{3} + p_{4}, $$</div>
+<p>
+and the on-shell constraints,
+</p>
+<div class="math">$$ p_{1}^{2} + m_{1}^{2} = 0, \qquad p_{2}^{2} + m_{2}^{2} = 0, \qquad p_{3}^{2} + m_{3}^{2} = 0, \qquad p_{4}^{2} + m_{4}^{2} = 0. $$</div>
+<p>
+Traditionally, you use the Mandelstam invariants to describe the kinematics of this process:
+</p>
+<div class="math">$$ s = -(p_{1} + p_{2})^{2} = -(p_{3} + p_{4})^{2}, \qquad t = -(p_{1} - p_{3})^{2} = -(p_{4} - p_{2})^{2} , \qquad u = -(p_{1} - p_{4})^{2} = -(p_{3} - p_{2})^{2}. $$</div>
+<p>
+Due to the conservation constraint, the three Mandelstam invariants satisfy a linear constraint:
+</p>
+<div class="math">$$ s + t + u = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2}. $$</div>
+<p>
+I will refer to the process of writing all physically-relevant quantities (e.g. energy, spatial momentum, speed, rapidity, scattering angles) in terms of the masses and the Mandelstam invariants as the Mandelstam kinematic analysis.</p>
+<p>What I call the Sudakov kinematic analysis consist of decomposing the incoming/outgoing slow momenta into incoming/outgoing null momenta. That is, let <span class="math">\(k_{1}\)</span>, <span class="math">\(k_{2}\)</span>, <span class="math">\(k_{3}\)</span>, and <span class="math">\(k_{4}\)</span> be null momenta and consider
+</p>
+<div class="math">$$ p_{1} = k_{1} - \frac{m_{1}^{2}}{2 \left( k_{1} \cdot k_{2} \right)} k_{2}, \qquad p_{2} = k_{2} - \frac{m_{2}^{2}}{2 \left( k_{1} \cdot k_{2} \right)} k_{1}, \qquad p_{3} = k_{3} - \frac{m_{3}^{2}}{2 \left( k_{3} \cdot k_{4} \right)} k_{4}, \qquad p_{4} = k_{4} - \frac{m_{4}^{2}}{2 \left( k_{3} \cdot k_{4} \right)} k_{3}. $$</div>
+<p>
+This is valid because, in general, a linear combination of two null vectors is not null. The conservation constraint becomes
+</p>
+<div class="math">$$ \left[ 1 - \frac{m_{2}^{2}}{2 \left( k_{1} \cdot k_{2} \right)} \right] k_{1} + \left[ 1 - \frac{m_{1}^{2}}{2 \left( k_{1} \cdot k_{2} \right)} \right] k_{2} = \left[ 1 - \frac{m_{4}^{2}}{2 \left( k_{3} \cdot k_{4} \right)} \right] k_{3} + \left[ 1 - \frac{m_{3}^{2}}{2 \left( k_{3} \cdot k_{4} \right)} \right] k_{4}. $$</div>
+<p>
+You can introduce six Sudakov invariants:
+</p>
+<div class="math">$$ S_{12} = - (k_{1} + k_{2})^{2}, \qquad T_{13} = -(k_{1} - k_{3})^{2}, \qquad U_{14} = -(k_{1} - k_{4})^{2}, \qquad U_{23} = -(k_{3} - k_{2})^{2}, \qquad T_{24} = -(k_{4} - k_{2})^{2}, \qquad S_{34} = -(k_{3} + k_{4})^{2}.$$</div>
+<p>
+In principle, you can write these invariants in terms of the masses and the Mandelstam invariants. The system of six equations to solve is
+</p>
+<div class="math">$$ s = \left( 1 + \frac{m_{1}^{2}}{S_{12}} \right) \left( 1 + \frac{m_{2}^{2}}{S_{12}} \right) S_{12}, \qquad s = \left( 1 + \frac{m_{3}^{2}}{S_{34}} \right) \left( 1 + \frac{m_{4}^{2}}{S_{34}} \right) S_{34}; $$</div>
+<div class="math">$$ t = m_{1}^{2} + m_{3}^{2} + T_{13} + \left( \frac{m_{3}^{2}}{S_{34}} \right) U_{14} + \left( \frac{m_{1}^{2}}{S_{12}} \right) U_{23} + \left( \frac{m_{1}^{2} m_{3}^{2}}{S_{12} S_{34}} \right) T_{24}, \qquad t = m_{2}^{2} + m_{4}^{2} + T_{24} + \left( \frac{m_{4}^{2}}{S_{34}} \right) U_{23} + \left( \frac{m_{2}^{2}}{S_{12}} \right) U_{14} + \left( \frac{m_{2}^{2} m_{4}^{2}}{S_{12} S_{34}} \right) T_{13};$$</div>
+<div class="math">$$ u = m_{1}^{2} + m_{4}^{2} + U_{14} + \left( \frac{m_{4}^{2}}{S_{34}} \right) T_{13} + \left( \frac{m_{1}^{2}}{S_{12}} \right) T_{24} + \left( \frac{ m_{1}^{2} m_{4}^{2}}{S_{12} S_{34}} \right) U_{23}, \qquad u = m_{2}^{2} + m_{3}^{2} + U_{23} + \left( \frac{m_{3}^{2}}{S_{34}} \right) T_{24} + \left( \frac{m_{2}^{2}}{S_{12}} \right) T_{13} + \left( \frac{m_{2}^{2} m_{3}^{2}}{S_{12} S_{34}} \right) U_{14}.$$</div>
+<p>
+The solution is
+</p>
+<div class="math">$$ S_{12} = \frac{1}{2} \left( s - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left[ s - \left( m_{1} - m_{2} \right)^{2} \right] \left[ s - \left( m_{1} + m_{2} \right)^{2} \right] } \right);$$</div>
+<div class="math">$$ S_{34} = \frac{1}{2} \left( s - m_{3}^{2} - m_{4}^{2} + \sqrt{ \left[ s - \left( m_{3} - m_{4} \right)^{2} \right] \left[ s - \left( m_{3} + m_{4} \right)^{2} \right] } \right);$$</div>
+<div class="math">$$ T_{13} = \frac{S_{12}^{2} S_{34}^{2}}{\left(S_{12}^{2} - m_{1}^{2} m_{2}^{2} \right) \left(S_{34}^{2} - m_{3}^{2} m_{4}^{2} \right)} \left[\left( t - m_{1}^{2} - m_{3}^{2} \right) - \frac{m_{3}^{2}}{S_{34}} \left( u - m_{1}^{2} - m_{4}^{2} \right) - \frac{m_{1}^{2}}{S_{12}} \left( u - m_{2}^{2} - m_{3}^{2} \right) + \frac{m_{1}^{2} m_{3}^{2}}{S_{12} S_{34}} \left( t - m_{2}^{2} - m_{4}^{2} \right) \right] ;$$</div>
+<div class="math">$$ T_{24} = \frac{S_{12}^{2} S_{34}^{2}}{\left(S_{12}^{2} - m_{1}^{2} m_{2}^{2} \right) \left(S_{34}^{2} - m_{3}^{2} m_{4}^{2} \right)} \left[ \left( t - m_{2}^{2} - m_{4}^{2} \right) - \frac{m_{4}^{2}}{S_{34}} \left( u - m_{2}^{2} - m_{3}^{2} \right) - \frac{m_{2}^{2}}{S_{12}} \left( u - m_{1}^{2} - m_{4}^{2} \right) + \frac{m_{2}^{2} m_{4}^{2}}{S_{12} S_{34}} \left( t - m_{1}^{2} - m_{3}^{2} \right) \right] ;$$</div>
+<div class="math">$$ U_{14} = \frac{S_{12}^{2} S_{34}^{2}}{\left(S_{12}^{2} - m_{1}^{2} m_{2}^{2} \right) \left(S_{34}^{2} - m_{3}^{2} m_{4}^{2} \right)} \left[ \left( u - m_{1}^{2} - m_{4}^{2} \right) - \frac{m_{4}^{2}}{S_{34}} \left( t - m_{1}^{2} - m_{3}^{2} \right) - \frac{m_{1}^{2}}{S_{12}} \left( t - m_{2}^{2} - m_{4}^{2} \right) + \frac{m_{1}^{2} m_{4}^{2}}{S_{12} S_{34}} \left( u - m_{2}^{2} - m_{3}^{2} \right) \right] ;$$</div>
+<div class="math">$$ U_{23} = \frac{S_{12}^{2} S_{34}^{2}}{\left(S_{12}^{2} - m_{1}^{2} m_{2}^{2} \right) \left(S_{34}^{2} - m_{3}^{2} m_{4}^{2} \right)} \left[ \left( u - m_{2}^{2} - m_{3}^{2} \right) - \frac{m_{3}^{2}}{S_{34}} \left( t - m_{2}^{2} - m_{4}^{2} \right) - \frac{m_{2}^{2}}{S_{12}} \left( t - m_{1}^{2} - m_{3}^{2} \right) + \frac{m_{2}^{2} m_{3}^{2}}{S_{12} S_{34}} \left( u - m_{1}^{2} - m_{4}^{2} \right) \right] .$$</div>
+<p>
+Note that in four spacetime dimensions all Sudakov invariants can be written in terms of twistor products.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'sudakov-kinematics';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2015 M.E. Irizarry-Gelpí
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://meirizarrygelpi.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://meirizarrygelpi.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://meirizarrygelpi.github.io/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+</body>
+</html>
