@@ -1,5 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-10-14T00:00:00-04:00</updated><entry><title>Sudakov Kinematics</title><link href="http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/" rel="alternate"></link><updated>2015-10-14T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-10-14:posts/2015/Oct/sudakov-kinematics/</id><summary type="html">&lt;p&gt;Recently I learned a cool trick. It allows you to write a set of slow momenta in terms of null momenta. By slow momentum I mean an energy-momentum vector that describes a quantum that moves slower than light. By null momentum I mean an energy-momentum vector that describes a quantum that moves at the same speed as light. For concreteness, consider a 2-to-2 scattering process:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-11-13T00:00:00-05:00</updated><entry><title>Three-Point Sudakov Kinematics</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-point-sudakov/" rel="alternate"></link><updated>2015-11-13T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-13:posts/2015/Nov/three-point-sudakov/</id><summary type="html">&lt;p&gt;Consider a three-point scattering process of the form
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}). $$&lt;/div&gt;
+&lt;p&gt;
+You have a conservation constraint,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} + p_{2} = p_{3}; $$&lt;/div&gt;
+&lt;p&gt;
+and three on-shell constraints:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1}^{2} = -m_{1}^{2}, \qquad p_{2}^{2} = -m_{2}^{2}, \qquad p_{3}^{2} = \left( p_{1} + p_{2} \right)^{2} = -s. $$&lt;/div&gt;
+&lt;p&gt;
+From the conservation constraint, you find three relations
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ -m_{1}^{2} + p_{1} \cdot p_{2} = p_{1} \cdot p_{3}, \qquad -m_{2}^{2} + p_{1} \cdot p_{2} = p_{2} \cdot p_{3}, \qquad p_{1} \cdot p_{3} + p_{2} \cdot p_{3} = -s. $$&lt;/div&gt;
+&lt;p&gt;
+Solving these yields
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} \cdot p_{2} = \frac{m_{1}^{2} + m_{2}^{2} - s}{2}, \qquad p_{1} \cdot p_{3} = \frac{m_{2}^{2} - m_{1}^{2} - s}{2}, \qquad p_{2} \cdot p_{3} = \frac{m_{1}^{2} - m_{2}^{2} - s}{2}.$$&lt;/div&gt;
+&lt;p&gt;
+Next you introduce null Sudakov momenta:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} - \frac{m_{2}^{2}}{T_{23}} n_{3}, \qquad p_{3} = n_{3} - \frac{s}{T_{31}} n_{1}.$$&lt;/div&gt;
+&lt;p&gt;
+Here I have also introduced three Sudakov invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{12} \equiv - \left( n_{1} + n_{2} \right)^{2}, \qquad T_{23} \equiv - \left( n_{2} - n_{3} \right)^{2}, \qquad T_{31} \equiv - \left( n_{3} - n_{1} \right)^{2}.$$&lt;/div&gt;
+&lt;p&gt;
+In terms of the Sudakov momenta, you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s - m_{1}^{2} - m_{2}^{2} = S_{12} + m_{2}^{2} \left( \frac{T_{31}}{T_{23}} \right) + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}}, \qquad m_{1}^{2} - m_{2}^{2} - s = T_{23} + s \left( \frac{S_{12}}{T_{31}} \right) + \frac{s m_{2}^{2}}{T_{23}}, \qquad m_{2}^{2} - m_{1}^{2} - s = T_{31} + m_{1}^{2} \left( \frac{T_{23}}{S_{12}} \right) + \frac{s m_{1}^{2}}{T_{31}}.$$&lt;/div&gt;
+&lt;p&gt;
+Now you introduce Regge-Mandelstam invariants,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r_{12} \equiv \frac{s - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}, \qquad r_{23} \equiv \frac{m_{1}^{2} - m_{2}^{2} - s}{2 m_{2} \sqrt{s}}, \qquad r_{31} \equiv \frac{m_{2}^{2} - m_{1}^{2} - s}{2 m_{1} \sqrt{s}};$$&lt;/div&gt;
+&lt;p&gt;
+and Regge-Sudakov invariants,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}, \qquad R_{23} \equiv \frac{T_{23}}{m_{2} \sqrt{s}}, \qquad R_{31} \equiv \frac{T_{31}}{m_{1} \sqrt{s}}.$$&lt;/div&gt;
+&lt;p&gt;
+The relations above become
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 2 r_{12} = R_{12} + \frac{R_{31}}{R_{23}} + \frac{1}{R_{12}}, \qquad 2 r_{23} = R_{23} + \frac{R_{12}}{R_{31}} + \frac{1}{R_{23}}, \qquad 2 r_{31} = R_{31} + \frac{R_{23}}{R_{12}} + \frac{1}{R_{31}}.$$&lt;/div&gt;
+&lt;p&gt;
+The solution to these equations is very complicated. Furthermore, these equations appear in the null decomposition of three independent slow quanta. Using the simpler version above, in terms of the Sudakov invariants, the solution is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{12} = -m_{1}^{2}, \qquad T_{23} = -m_{2}^{2}, \qquad T_{31} = -s.$$&lt;/div&gt;
+&lt;p&gt;
+Thus,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ R_{12} = - \frac{m_{1}}{m_{2}}, \qquad R_{23} = - \frac{m_{2}}{\sqrt{s}}, \qquad R_{31} = - \frac{\sqrt{s}}{m_{1}} .$$&lt;/div&gt;
+&lt;p&gt;
+It follows that,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} - n_{2}, \qquad p_{2} = n_{2} + n_{3}, \qquad p_{3} = n_{3} + n_{1}.$$&lt;/div&gt;
+&lt;p&gt;
+That is, the three slow momenta can be written as very simple combinations of null momenta.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="kinematics"></category></entry><entry><title>Sudakov Kinematics</title><link href="http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/" rel="alternate"></link><updated>2015-10-14T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-10-14:posts/2015/Oct/sudakov-kinematics/</id><summary type="html">&lt;p&gt;Recently I learned a cool trick. It allows you to write a set of slow momenta in terms of null momenta. By slow momentum I mean an energy-momentum vector that describes a quantum that moves slower than light. By null momentum I mean an energy-momentum vector that describes a quantum that moves at the same speed as light. For concreteness, consider a 2-to-2 scattering process:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}) + D(p_{4}). $$&lt;/div&gt;
 &lt;p&gt;
