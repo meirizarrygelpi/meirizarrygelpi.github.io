@@ -1,5 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-11-21T00:00:00-05:00</updated><entry><title>arXiv picks for 2015, week 47</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-47/" rel="alternate"></link><updated>2015-11-21T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-21:posts/2015/Nov/2015-week-47/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-11-25T00:00:00-05:00</updated><entry><title>Two-Quantum Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-quantum-sudakov/" rel="alternate"></link><updated>2015-11-25T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-25:posts/2015/Nov/two-quantum-sudakov/</id><summary type="html">&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive quantum. That is, you do not have any conservation constraint relating these two momentum vectors. But you still have two &lt;strong&gt;on-shell constraints&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1}^{2} = m_{1}^{2}, \qquad p_{2}^{2} = m_{2}^{2}.$$&lt;/div&gt;
+&lt;p&gt;
+You can introduce a &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s_{12} \equiv \left( p_{1} + p_{2} \right)^{2}.$$&lt;/div&gt;
+&lt;p&gt;
+You can also introduce the corresponding &lt;strong&gt;Regge-Mandelstam&lt;/strong&gt; invariant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r_{12} \equiv \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}.$$&lt;/div&gt;
+&lt;p&gt;
+There is one &lt;strong&gt;2-Gram&lt;/strong&gt; invariant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{12} \equiv - \det{ \begin{pmatrix} p_{1}^{2} &amp;amp; p_{1} \cdot p_{2} \\ p_{2} \cdot p_{1} &amp;amp; p_{2}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right] = m_{1}^{2} m_{2}^{2} \left( r_{12}^{2} - 1 \right).$$&lt;/div&gt;
+&lt;p&gt;
+All of these invariants are present in any two-quantum problem.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;two-quantum Sudakov decomposition&lt;/strong&gt; is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}.$$&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{2}\)&lt;/span&gt; are null vectors, and I have introduced a &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{12} \equiv \left( n_{1} + n_{2} \right)^{2}.$$&lt;/div&gt;
+&lt;p&gt;
+This decomposition can be thought of as a way to explicitly solve the on-shell constraints. The goal now is to write the 2-Sudakov invariant &lt;span class="math"&gt;\(S_{12}\)&lt;/span&gt; in terms of the Mandelstam invariant &lt;span class="math"&gt;\(s_{12}\)&lt;/span&gt; and the masses. In order to do this, it is helpful to also introduce a &lt;strong&gt;Regge-Sudakov&lt;/strong&gt; invariant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}.$$&lt;/div&gt;
+&lt;p&gt;
+Using the identity
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r_{12} = \frac{p_{1} \cdot p_{2}}{m_{1} m_{2}},$$&lt;/div&gt;
+&lt;p&gt;
+you find the relation
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 2r_{12} = R_{12} + \frac{1}{R_{12}}.$$&lt;/div&gt;
+&lt;p&gt;
+Solving this gives
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ R_{12} = r_{12} + \sqrt{r_{12}^{2} - 1}.$$&lt;/div&gt;
+&lt;p&gt;
+Thus,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{12} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right).$$&lt;/div&gt;
+&lt;p&gt;
+Note that in order for &lt;span class="math"&gt;\(S_{12}\)&lt;/span&gt; to be real, you need
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r_{12} \leq -1 \text{ or } r_{12} \geq 1.$$&lt;/div&gt;
+&lt;p&gt;
+That is,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s_{12} \leq \left( m_{1} - m_{2} \right)^{2} \text{ or } s_{12} \geq \left( m_{1} + m_{2} \right)^{2}.$$&lt;/div&gt;
+&lt;p&gt;
+This is equivalent to &lt;span class="math"&gt;\(G_{12} \geq 0\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The following relations are useful:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{12} = \frac{2 m_{1}^{2} m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \frac{\left(S_{12} + m_{1}^{2} \right) \left(S_{12} + m_{2}^{2} \right)}{S_{12}} = s_{12} ;$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12}^{2} = m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} = \frac{r_{12} + \sqrt{ r_{12}^{2} - 1 }}{r_{12} - \sqrt{ r_{12}^{2} - 1 }};$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12}^{2} + m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} + 1 = \frac{2 r_{12}}{r_{12} - \sqrt{ r_{12}^{2} - 1 }};$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12}^{2} - m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{\sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} - 1 = \frac{2 \sqrt{r_{12}^{2} - 1}}{r_{12} - \sqrt{ r_{12}^{2} - 1 }};$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \frac{S_{12}^{2} + m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} - m_{2}^{2};$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \frac{S_{12}^{2} - m_{1}^{2} m_{2}^{2}}{S_{12}} = \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} };$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \frac{S_{12}}{m_{1}^{2}} \frac{S_{12} + m_{1}^{2}}{S_{12} + m_{2}^{2}} = \frac{s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \frac{S_{12}}{m_{2}^{2}} \frac{S_{12} + m_{2}^{2}}{S_{12} + m_{1}^{2}} = \frac{s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}.$$&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="sudakov"></category></entry><entry><title>arXiv picks for 2015, week 47</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-47/" rel="alternate"></link><updated>2015-11-21T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-21:posts/2015/Nov/2015-week-47/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.04074"&gt;Lectures on Conformal Field Theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.04288"&gt;Tensor networks for gauge field theories&lt;/a&gt;&lt;/li&gt;
