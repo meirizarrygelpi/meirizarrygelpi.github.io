@@ -130,7 +130,7 @@ All of these invariants are present in any two-quantum problem.</p>
 <p>
 Here <span class="math">\(n_{1}\)</span> and <span class="math">\(n_{2}\)</span> are null vectors, and I have introduced a <strong>2-Sudakov</strong> invariant:
 </p>
-<div class="math">$$ S_{12} \equiv \left( n_{1} + n_{2} \right)^{2}.$$</div>
+<div class="math">$$ S_{12} \equiv \left( n_{1} + n_{2} \right)^{2} = 2 \left( n_{1} \cdot n_{2} \right).$$</div>
 <p>
 This decomposition can be thought of as a way to explicitly solve the on-shell constraints. The goal now is to write the 2-Sudakov invariant <span class="math">\(S_{12}\)</span> in terms of the Mandelstam invariant <span class="math">\(s_{12}\)</span> and the masses. In order to do this, it is helpful to also introduce a <strong>Regge-Sudakov</strong> invariant:
 </p>
@@ -163,20 +163,20 @@ That is,
 This is equivalent to <span class="math">\(G_{12} \geq 0\)</span>.</p>
 <p>The following relations are useful:
 </p>
-<div class="math">$$ S_{12} = \frac{2 m_{1}^{2} m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$</div>
-<div class="math">$$ S_{12} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
-<div class="math">$$ S_{12} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
+<div class="math">$$ S_{12} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right), \qquad S_{12} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
 <div class="math">$$ \frac{\left(S_{12} + m_{1}^{2} \right) \left(S_{12} + m_{2}^{2} \right)}{S_{12}} = s_{12} ;$$</div>
+<div class="math">$$ S_{12} = \frac{2 m_{1}^{2} m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$</div>
 <div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
-<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
-<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
+<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right), \qquad \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
+<div class="math">$$ S_{12} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} - m_{2}^{2}, \qquad S_{12} - \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} };$$</div>
+<div class="math">$$ S_{12} + 2 m_{1}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} + m_{1}^{2} - m_{2}^{2}, \qquad S_{12} + 2 m_{2}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} + m_{2}^{2};$$</div>
+<div class="math">$$ \frac{S_{12} \left( S_{12} + m_{1}^{2} \right)}{m_{1}^{2} \left( S_{12} + m_{2}^{2} \right)} = \frac{s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$</div>
+<div class="math">$$ \frac{S_{12} \left( S_{12} + m_{2}^{2} \right)}{m_{2}^{2} \left( S_{12} + m_{1}^{2} \right)} = \frac{s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$</div>
 <div class="math">$$ S_{12}^{2} = m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} = \frac{r_{12} + \sqrt{ r_{12}^{2} - 1 }}{r_{12} - \sqrt{ r_{12}^{2} - 1 }};$$</div>
 <div class="math">$$ S_{12}^{2} + m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} + 1 = \frac{2 r_{12}}{r_{12} - \sqrt{ r_{12}^{2} - 1 }};$$</div>
-<div class="math">$$ S_{12}^{2} - m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{\sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} - 1 = \frac{2 \sqrt{r_{12}^{2} - 1}}{r_{12} - \sqrt{ r_{12}^{2} - 1 }};$$</div>
-<div class="math">$$ \frac{S_{12}^{2} + m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} - m_{2}^{2};$$</div>
-<div class="math">$$ \frac{S_{12}^{2} - m_{1}^{2} m_{2}^{2}}{S_{12}} = \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} };$$</div>
-<div class="math">$$ \frac{S_{12}}{m_{1}^{2}} \frac{S_{12} + m_{1}^{2}}{S_{12} + m_{2}^{2}} = \frac{s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$</div>
-<div class="math">$$ \frac{S_{12}}{m_{2}^{2}} \frac{S_{12} + m_{2}^{2}}{S_{12} + m_{1}^{2}} = \frac{s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}.$$</div>
+<div class="math">$$ S_{12}^{2} - m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{\sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} - 1 = \frac{2 \sqrt{r_{12}^{2} - 1}}{r_{12} - \sqrt{ r_{12}^{2} - 1 }}.$$</div>
+<p>
+The logarithm of some of these expressions appear as rapidities in the center-of-momentum frame for either a 2-to-<span class="math">\(N\)</span> or an <span class="math">\(N\)</span>-to-2 scattering problem.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
