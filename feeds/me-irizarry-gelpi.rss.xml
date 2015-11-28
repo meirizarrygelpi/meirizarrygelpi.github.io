@@ -7,7 +7,102 @@
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.07455"&gt;Poisson equation for the Mercedes diagram in string theory at genus one&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.06955"&gt;Nambu at Work&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.08025"&gt;Conformal Collider Physics from the Lightcone Bootstrap&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 28 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-28:posts/2015/Nov/2015-week-48/</guid><category>research</category></item><item><title>Three-Quantum Kinematics</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/three-quantum-kinematics/</link><description>&lt;p&gt;In this post I will consider the kinematics of problems with three independent momentum vectors, each of which describe a distinct massive quantum. That is, you do not have any conservation constraint relating these three vectors. But you still have three on-shell constraints:
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 28 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-28:posts/2015/Nov/2015-week-48/</guid><category>research</category></item><item><title>Contiguous Three-Quantum Sudakov Decomposition</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-quantum-sudakov/</link><description>&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-quantum-kinematics/"&gt;kinematics of three-quantum problems&lt;/a&gt;. The &lt;strong&gt;contiguous Sudakov decomposition&lt;/strong&gt; is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{31}} n_{1}.$$&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(n_{2}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(n_{3}\)&lt;/span&gt; are null &lt;strong&gt;Sudakov&lt;/strong&gt; vectors, and I have introduced three &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{12} \equiv \left( n_{1} + n_{2} \right)^{2}, \qquad S_{23} \equiv \left( n_{2} + n_{3} \right)^{2}, \qquad S_{31} \equiv \left( n_{3} + n_{1} \right)^{2}.$$&lt;/div&gt;
+&lt;p&gt;
+The goal now is to write the 2-Sudakov invariants in terms of the Mandelstam invariants and the masses. In order to do this, it is helpful to also introduce &lt;strong&gt;Regge-Sudakov&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}, \qquad R_{23} \equiv \frac{S_{23}}{m_{2} m_{3}}, \qquad R_{31} \equiv \frac{S_{31}}{m_{3} m_{1}}.$$&lt;/div&gt;
+&lt;p&gt;
+Using the identities
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r_{12} = \frac{p_{1} \cdot p_{2}}{m_{1} m_{2}}, \qquad r_{23} = \frac{p_{2} \cdot p_{3}}{m_{2} m_{3}}, \qquad r_{31} = \frac{p_{3} \cdot p_{1}}{m_{3} m_{1}},$$&lt;/div&gt;
+&lt;p&gt;
+you find the relations
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 2r_{12} = R_{12} + \frac{R_{31}}{R_{23}} + \frac{1}{R_{12}}, \qquad 2r_{23} = R_{23} + \frac{R_{12}}{R_{31}} + \frac{1}{R_{23}}, \qquad 2r_{31} = R_{31} + \frac{R_{23}}{R_{12}} + \frac{1}{R_{31}}.$$&lt;/div&gt;
+&lt;p&gt;
+Note that you can obtain the second and third equations from the first one by cyclically shifting the integer labels. The solution should also exhibit this property. Solving this system of equations gives
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ R_{12} = \frac{r_{12} \left[ g_{123} - 1 + \sqrt{ g_{123} \left( g_{123} - 1 \right)} \right] + r_{23} r_{31}}{g_{123} + g_{31}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{23} = \frac{r_{23} \left[ g_{123} - 1 + \sqrt{ g_{123} \left( g_{123} - 1 \right)} \right] + r_{31} r_{12}}{g_{123} + g_{12}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{31} = \frac{r_{31} \left[ g_{123} - 1 + \sqrt{ g_{123} \left( g_{123} - 1 \right)} \right] + r_{12} r_{23}}{g_{123} + g_{23}}. $$&lt;/div&gt;
+&lt;p&gt;
+Thus,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{12} = \frac{1}{4} \left[ \frac{ 2 \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{1}^{2} m_{2}^{2} \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) }{G_{123} + m_{2}^{2} G_{31}} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{23} = \frac{1}{4} \left[ \frac{ 2 \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{2}^{2} m_{3}^{2} \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) }{G_{123} + m_{3}^{2} G_{12}} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{31} = \frac{1}{4} \left[ \frac{ 2 \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{3}^{2} m_{1}^{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) }{G_{123} + m_{1}^{2} G_{23}} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+I have implicitly assumed that all Regge-Mandelstam invariants, and all Regge-Gram invariants are positive.&lt;/p&gt;
+&lt;p&gt;Note the massless limits:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{1} \rightarrow 0} S_{12} = \lim_{m_{1} \rightarrow 0} \frac{G_{123} \left( s_{12} - m_{2}^{2} \right)}{G_{123} + m_{2}^{2} G_{31}} , \qquad \lim_{m_{2} \rightarrow 0} S_{12} = s_{12} - m_{1}^{2}, \qquad \lim_{m_{3} \rightarrow 0} S_{12} = \lim_{m_{3} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{12} - m_{1}^{2} - m_{2}^{2} \right) G_{123} + m_{1}^{2} m_{2}^{2} \left( s_{23} - m_{2}^{2} \right) \left( s_{31} - m_{1}^{2} \right) }{G_{123} + m_{2}^{2} G_{31}} \right]; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{2} \rightarrow 0} S_{23} = \lim_{m_{2} \rightarrow 0} \frac{G_{123} \left( s_{23} - m_{3}^{2} \right)}{G_{123} + m_{3}^{2} G_{12}} , \qquad \lim_{m_{3} \rightarrow 0} S_{23} = s_{23} - m_{2}^{2}, \qquad \lim_{m_{1} \rightarrow 0} S_{23} = \lim_{m_{1} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{23} - m_{2}^{2} - m_{3}^{2} \right) G_{123} + m_{2}^{2} m_{3}^{2} \left( s_{31} - m_{3}^{2} \right) \left( s_{12} - m_{2}^{2} \right) }{G_{123} + m_{3}^{2} G_{12}} \right]; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{3} \rightarrow 0} S_{31} = \lim_{m_{3} \rightarrow 0} \frac{G_{123} \left( s_{31} - m_{1}^{2} \right)}{G_{123} + m_{1}^{2} G_{23}} , \qquad \lim_{m_{1} \rightarrow 0} S_{31} = s_{31} - m_{3}^{2}, \qquad \lim_{m_{2} \rightarrow 0} S_{31} = \lim_{m_{2} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{31} - m_{3}^{2} - m_{1}^{2} \right) G_{123} + m_{3}^{2} m_{1}^{2} \left( s_{12} - m_{1}^{2} \right) \left( s_{23} - m_{3}^{2} \right) }{G_{123} + m_{1}^{2} G_{12}} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+Thus, when all three masses vanish the Sudakov vectors become the momenta of the quanta, and the 2-Mandelstam invariants become the 2-Sudakov invariants. &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Thu, 26 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/contiguous-three-quantum-sudakov/</guid><category>sudakov</category></item><item><title>Three-Quantum Kinematics</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/three-quantum-kinematics/</link><description>&lt;p&gt;In this post I will consider the kinematics of problems with three independent momentum vectors, each of which describe a distinct massive quantum. That is, you do not have any conservation constraint relating these three vectors. But you still have three on-shell constraints:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{1}^{2} = m_{1}^{2}, \qquad p_{2}^{2} = m_{2}^{2}, \qquad p_{3}^{2} = m_{3}^{2}.$$&lt;/div&gt;
 &lt;p&gt;
