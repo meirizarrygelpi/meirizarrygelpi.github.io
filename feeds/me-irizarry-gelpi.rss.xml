@@ -1,5 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 28 Nov 2015 00:00:00 -0500</lastBuildDate><item><title>arXiv picks for 2015, week 48</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-48/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 01 Dec 2015 00:00:00 -0500</lastBuildDate><item><title>Two-Quantum Rapidity from Sudakov Decomposition</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/two-quantum-rapidity/</link><description>&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-quantum-sudakov/"&gt;two-quantum Sudakov decomposition&lt;/a&gt;. I found that the Regge-Mandelstam invariant &lt;span class="math"&gt;\(r_{12}\)&lt;/span&gt; and the Regge-Sudakov invariant &lt;span class="math"&gt;\(R_{12}\)&lt;/span&gt; satisfy the equation
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}. $$&lt;/div&gt;
+&lt;p&gt;
+You can introduce a rapidity &lt;span class="math"&gt;\(\rho_{12}\)&lt;/span&gt; via
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ R_{12} = \exp{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \log{ \left( R_{12} \right) } . $$&lt;/div&gt;
+&lt;p&gt;
+Thus,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r_{12} = \operatorname{cosh}{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \operatorname{acosh}{ \left( r_{12} \right) } . $$&lt;/div&gt;
+&lt;p&gt;
+You also have the Regge-Gram invariant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ g_{12} \equiv \frac{G_{12}}{m_{1}^{2} m_{2}^{2}} = r_{12}^{2} - 1 = \operatorname{sinh}^{2}{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \operatorname{asinh}{ \left( \sqrt{ g_{12} } \right) }. $$&lt;/div&gt;
+&lt;p&gt;
+In terms of the Mandelstam invariant and the two masses, you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \rho_{12} = \log{ \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{2 m_{1} m_{2}} \right) }. $$&lt;/div&gt;
+&lt;p&gt;
+The double and half argument formulas are also relevant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \operatorname{cosh}{ \left( 2 \rho_{12} \right) } = \operatorname{cosh}^{2}{ \left( \rho_{12} \right) } + \operatorname{sinh}^{2}{ \left( \rho_{12} \right) } = 2 r_{12}^{2} - 1, \qquad \operatorname{sinh}{ \left( 2 \rho_{12} \right) } = 2\operatorname{cosh}{ \left( \rho_{12} \right) } \operatorname{sinh}{ \left( \rho_{12} \right) } = 2 r_{12} \sqrt{r_{12}^{2} - 1} ; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \operatorname{cosh}^{2}{ \left( \frac{\rho_{12}}{2} \right) } = \frac{r_{12} + 1}{2} = \frac{s_{12} - \left( m_{1} - m_{2} \right)^{2}}{4 m_{1} m_{2}}, \qquad \operatorname{sinh}^{2}{ \left( \frac{\rho_{12}}{2} \right) } = \frac{r_{12} - 1}{2} = \frac{s_{12} - \left( m_{1} + m_{2} \right)^{2}}{4 m_{1} m_{2}}. $$&lt;/div&gt;
+&lt;p&gt;
+These provide an argument for restricting only to the range &lt;span class="math"&gt;\(s_{12} \geq \left( m_{1} + m_{2} \right)^{2}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Tue, 01 Dec 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-12-01:posts/2015/Dec/two-quantum-rapidity/</guid><category>sudakov</category></item><item><title>arXiv picks for 2015, week 48</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-48/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.06652"&gt;Overcoming Obstacles to Colour-Kinematics Duality at Two Loops&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.06716"&gt;One-Loop Soft Theorems via Dual Superconformal Symmetry&lt;/a&gt;&lt;/li&gt;
