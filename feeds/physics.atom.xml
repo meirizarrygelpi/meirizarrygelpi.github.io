@@ -88,7 +88,19 @@ Here &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ S_{12} \equiv \left( n_{1} + n_{2} \right)^{2}, \qquad S_{23} \equiv \left( n_{2} + n_{3} \right)^{2}, \qquad S_{31} \equiv \left( n_{3} + n_{1} \right)^{2}.$$&lt;/div&gt;
 &lt;p&gt;
-The goal now is to write the 2-Sudakov invariants in terms of the Mandelstam invariants and the masses. In order to do this, it is helpful to also introduce &lt;strong&gt;Regge-Sudakov&lt;/strong&gt; invariants:
+The above decomposition can be written in matrix form:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \begin{pmatrix} p_{1} \\ p_{2} \\ p_{3} \end{pmatrix} = A \cdot \begin{pmatrix} n_{1} \\ n_{2} \\ n_{3} \end{pmatrix}, \qquad A \equiv \begin{pmatrix} 1 &amp;amp; \dfrac{m_{1}^{2}}{S_{12}} &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; \dfrac{m_{2}^{2}}{S_{23}} \\ \dfrac{m_{3}^{2}}{S_{31}} &amp;amp; 0 &amp;amp; 1 \end{pmatrix} . $$&lt;/div&gt;
+&lt;p&gt;
+The determinant of this matrix is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \det{\left( A \right)} = 1 + \frac{m_{1}^{2} m_{2}^{2} m_{3}^{2}}{S_{12} S_{23} S_{31}} = \frac{S_{12} S_{23} S_{31} + m_{1}^{2} m_{2}^{2} m_{3}^{2}}{S_{12} S_{23} S_{31}} . $$&lt;/div&gt;
+&lt;p&gt;
+The inverse of this matrix is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ A^{-1} = \frac{1}{\det{\left( A \right)}} \begin{pmatrix} 1 &amp;amp; - \dfrac{m_{1}^{2}}{S_{12}} &amp;amp; \dfrac{m_{1}^{2} m_{2}^{2}}{S_{12} S_{23}} \\ \dfrac{m_{2}^{2} m_{3}^{2}}{S_{23} S_{31}} &amp;amp; 1 &amp;amp; - \dfrac{m_{2}^{2}}{S_{23}} \\ - \dfrac{m_{3}^{2}}{S_{31}} &amp;amp; \dfrac{m_{3}^{2} m_{1}^{2}}{S_{31} S_{12}} &amp;amp; 1 \end{pmatrix}. $$&lt;/div&gt;
+&lt;p&gt;
+My goal is to write the 2-Sudakov invariants in terms of the Mandelstam invariants and the masses. In order to do this, it is helpful to also introduce &lt;strong&gt;Regge-Sudakov&lt;/strong&gt; invariants:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}, \qquad R_{23} \equiv \frac{S_{23}}{m_{2} m_{3}}, \qquad R_{31} \equiv \frac{S_{31}}{m_{3} m_{1}}.$$&lt;/div&gt;
 &lt;p&gt;
@@ -112,7 +124,7 @@ Thus,
 &lt;div class="math"&gt;$$ S_{23} = \frac{1}{4} \left[ \frac{ 2 \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{2}^{2} m_{3}^{2} \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) }{G_{123} + m_{3}^{2} G_{12}} \right], $$&lt;/div&gt;
 &lt;div class="math"&gt;$$ S_{31} = \frac{1}{4} \left[ \frac{ 2 \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{3}^{2} m_{1}^{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) }{G_{123} + m_{1}^{2} G_{23}} \right]. $$&lt;/div&gt;
 &lt;p&gt;
-I have implicitly assumed that all Regge-Mandelstam invariants, and all Regge-Gram invariants are positive.&lt;/p&gt;
+I have implicitly assumed that all Regge-Mandelstam invariants, as well as all Regge-Gram invariants, are positive.&lt;/p&gt;
 &lt;p&gt;Note the massless limits:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \lim_{m_{1} \rightarrow 0} S_{12} = \lim_{m_{1} \rightarrow 0} \frac{G_{123} \left( s_{12} - m_{2}^{2} \right)}{G_{123} + m_{2}^{2} G_{31}} , \qquad \lim_{m_{2} \rightarrow 0} S_{12} = s_{12} - m_{1}^{2}, \qquad \lim_{m_{3} \rightarrow 0} S_{12} = \lim_{m_{3} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{12} - m_{1}^{2} - m_{2}^{2} \right) G_{123} + m_{1}^{2} m_{2}^{2} \left( s_{23} - m_{2}^{2} \right) \left( s_{31} - m_{1}^{2} \right) }{G_{123} + m_{2}^{2} G_{31}} \right]; $$&lt;/div&gt;
