@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Two-Quantum Rapidity from Sudakov Decomposition - M.E. Irizarry-Gelpí</title>
+    <title>Two-Body Sudakov Decomposition - M.E. Irizarry-Gelpí</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +11,11 @@
 
     <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
 
-<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2015/Dec/two-quantum-rapidity/">
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/">
 
         <meta name="author" content="M.E. Irizarry-Gelpí" />
-        <meta name="keywords" content="sudakov" />
-        <meta name="description" content="A rapidity interpretation for the two-quantum Sudakov decomposition." />
+        <meta name="keywords" content="sudakov,two-body" />
+        <meta name="description" content="The simplest example of a Sudakov decomposition involves two quanta." />
 
 
 
@@ -80,10 +80,10 @@ M.E. Irizarry-Gelpí            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://meirizarrygelpi.github.io/posts/2015/Dec/two-quantum-rapidity/"
+                    <a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/"
                        rel="bookmark"
-                       title="Permalink to Two-Quantum Rapidity from Sudakov Decomposition">
-                        Two-Quantum Rapidity from Sudakov Decomposition
+                       title="Permalink to Two-Body Sudakov Decomposition">
+                        Two-Body Sudakov Decomposition
                     </a>
                 </h1>
             </header>
@@ -93,7 +93,7 @@ M.E. Irizarry-Gelpí            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2015-12-01T00:00:00-05:00"> Tue 01 December 2015</time>
+        <i class="fa fa-calendar"></i><time datetime="2015-11-25T00:00:00-05:00"> Wed 25 November 2015</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://meirizarrygelpi.github.io/author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
@@ -104,35 +104,81 @@ M.E. Irizarry-Gelpí            </a>
 
 <span class="label label-default">Tags</span>
 	<a href="http://meirizarrygelpi.github.io/tag/sudakov.html">sudakov</a>
+        /
+	<a href="http://meirizarrygelpi.github.io/tag/two-body.html">two-body</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>In a previous post I discussed the <a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-quantum-sudakov/">two-quantum Sudakov decomposition</a>. I found that the Regge-Mandelstam invariant <span class="math">\(r_{12}\)</span> and the Regge-Sudakov invariant <span class="math">\(R_{12}\)</span> satisfy the equation
+                <p>In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive quantum. That is, you do not have any conservation constraint relating these two momentum vectors. But you still have two <strong>on-shell constraints</strong>:
 </p>
-<div class="math">$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}. $$</div>
+<div class="math">$$ p_{1}^{2} = m_{1}^{2}, \qquad p_{2}^{2} = m_{2}^{2}.$$</div>
 <p>
-You can introduce a rapidity <span class="math">\(\rho_{12}\)</span> via
+You can introduce a <strong>2-Mandelstam</strong> invariant:
 </p>
-<div class="math">$$ R_{12} = \exp{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \log{ \left( R_{12} \right) } . $$</div>
+<div class="math">$$ s_{12} \equiv \left( p_{1} + p_{2} \right)^{2}.$$</div>
+<p>
+You can also introduce the corresponding <strong>Regge-Mandelstam</strong> invariant:
+</p>
+<div class="math">$$ r_{12} \equiv \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}.$$</div>
+<p>
+There is one <strong>2-Gram</strong> invariant:
+</p>
+<div class="math">$$ G_{12} \equiv - \det{ \begin{pmatrix} p_{1}^{2} &amp; p_{1} \cdot p_{2} \\ p_{2} \cdot p_{1} &amp; p_{2}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right] = m_{1}^{2} m_{2}^{2} \left( r_{12}^{2} - 1 \right).$$</div>
+<p>
+All of these invariants are present in any two-body problem.</p>
+<p>The <strong>two-body Sudakov decomposition</strong> is given by
+</p>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}.$$</div>
+<p>
+Here <span class="math">\(n_{1}\)</span> and <span class="math">\(n_{2}\)</span> are null vectors, and I have introduced a <strong>2-Sudakov</strong> invariant:
+</p>
+<div class="math">$$ S_{12} \equiv \left( n_{1} + n_{2} \right)^{2} = 2 \left( n_{1} \cdot n_{2} \right).$$</div>
+<p>
+This decomposition can be thought of as a way to explicitly solve the on-shell constraints. The goal now is to write the 2-Sudakov invariant <span class="math">\(S_{12}\)</span> in terms of the Mandelstam invariant <span class="math">\(s_{12}\)</span> and the masses. In order to do this, it is helpful to also introduce a <strong>Regge-Sudakov</strong> invariant:
+</p>
+<div class="math">$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}.$$</div>
+<p>
+Using the identity
+</p>
+<div class="math">$$ r_{12} = \frac{p_{1} \cdot p_{2}}{m_{1} m_{2}},$$</div>
+<p>
+you find the relation
+</p>
+<div class="math">$$ 2r_{12} = R_{12} + \frac{1}{R_{12}}.$$</div>
+<p>
+Solving this gives
+</p>
+<div class="math">$$ R_{12} = r_{12} + \sqrt{r_{12}^{2} - 1}.$$</div>
 <p>
 Thus,
 </p>
-<div class="math">$$ r_{12} = \operatorname{cosh}{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \operatorname{acosh}{ \left( r_{12} \right) } . $$</div>
+<div class="math">$$ S_{12} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right).$$</div>
 <p>
-You also have the Regge-Gram invariant:
+Note that in order for <span class="math">\(S_{12}\)</span> to be real, you need
 </p>
-<div class="math">$$ g_{12} \equiv \frac{G_{12}}{m_{1}^{2} m_{2}^{2}} = r_{12}^{2} - 1 = \operatorname{sinh}^{2}{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \operatorname{asinh}{ \left( \sqrt{ g_{12} } \right) }. $$</div>
+<div class="math">$$ r_{12} \leq -1 \text{ or } r_{12} \geq 1.$$</div>
 <p>
-In terms of the Mandelstam invariant and the two masses, you have
+That is,
 </p>
-<div class="math">$$ \rho_{12} = \log{ \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{2 m_{1} m_{2}} \right) }. $$</div>
+<div class="math">$$ s_{12} \leq \left( m_{1} - m_{2} \right)^{2} \text{ or } s_{12} \geq \left( m_{1} + m_{2} \right)^{2}.$$</div>
 <p>
-The double and half argument formulas are also relevant:
+This is equivalent to <span class="math">\(G_{12} \geq 0\)</span>.</p>
+<p>The following relations are useful:
 </p>
-<div class="math">$$ \operatorname{cosh}{ \left( 2 \rho_{12} \right) } = \operatorname{cosh}^{2}{ \left( \rho_{12} \right) } + \operatorname{sinh}^{2}{ \left( \rho_{12} \right) } = 2 r_{12}^{2} - 1, \qquad \operatorname{sinh}{ \left( 2 \rho_{12} \right) } = 2\operatorname{cosh}{ \left( \rho_{12} \right) } \operatorname{sinh}{ \left( \rho_{12} \right) } = 2 r_{12} \sqrt{r_{12}^{2} - 1} ; $$</div>
-<div class="math">$$ \operatorname{cosh}^{2}{ \left( \frac{\rho_{12}}{2} \right) } = \frac{r_{12} + 1}{2} = \frac{s_{12} - \left( m_{1} - m_{2} \right)^{2}}{4 m_{1} m_{2}}, \qquad \operatorname{sinh}^{2}{ \left( \frac{\rho_{12}}{2} \right) } = \frac{r_{12} - 1}{2} = \frac{s_{12} - \left( m_{1} + m_{2} \right)^{2}}{4 m_{1} m_{2}}. $$</div>
+<div class="math">$$ S_{12} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right), \qquad S_{12} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
+<div class="math">$$ \frac{\left(S_{12} + m_{1}^{2} \right) \left(S_{12} + m_{2}^{2} \right)}{S_{12}} = s_{12} ;$$</div>
+<div class="math">$$ S_{12} = \frac{2 m_{1}^{2} m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$</div>
+<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
+<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right), \qquad \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
+<div class="math">$$ S_{12} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} - m_{2}^{2}, \qquad S_{12} - \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} };$$</div>
+<div class="math">$$ S_{12} + 2 m_{1}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} + m_{1}^{2} - m_{2}^{2}, \qquad S_{12} + 2 m_{2}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} + m_{2}^{2};$$</div>
+<div class="math">$$ \frac{S_{12} \left( S_{12} + m_{1}^{2} \right)}{m_{1}^{2} \left( S_{12} + m_{2}^{2} \right)} = \frac{s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$</div>
+<div class="math">$$ \frac{S_{12} \left( S_{12} + m_{2}^{2} \right)}{m_{2}^{2} \left( S_{12} + m_{1}^{2} \right)} = \frac{s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$</div>
+<div class="math">$$ S_{12}^{2} = m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} = \frac{r_{12} + \sqrt{ r_{12}^{2} - 1 }}{r_{12} - \sqrt{ r_{12}^{2} - 1 }};$$</div>
+<div class="math">$$ S_{12}^{2} + m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} + 1 = \frac{2 r_{12}}{r_{12} - \sqrt{ r_{12}^{2} - 1 }};$$</div>
+<div class="math">$$ S_{12}^{2} - m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{\sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} - 1 = \frac{2 \sqrt{r_{12}^{2} - 1}}{r_{12} - \sqrt{ r_{12}^{2} - 1 }}.$$</div>
 <p>
-These provide an argument for restricting only to the range <span class="math">\(s_{12} \geq \left( m_{1} + m_{2} \right)^{2}\)</span>.</p>
+The logarithm of some of these expressions appear as rapidities in the center-of-momentum frame for either a 2-to-<span class="math">\(N\)</span> or an <span class="math">\(N\)</span>-to-2 scattering problem.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -200,8 +246,8 @@ These provide an argument for restricting only to the range <span class="math">\
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
 
-                    var disqus_identifier = 'two-quantum-rapidity';
-                var disqus_url = 'http://meirizarrygelpi.github.io/posts/2015/Dec/two-quantum-rapidity/';
+                    var disqus_identifier = 'two-body-sudakov';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/';
 
             var disqus_config = function () {
                 this.language = "en";

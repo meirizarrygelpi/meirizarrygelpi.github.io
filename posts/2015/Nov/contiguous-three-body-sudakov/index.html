@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Three-Quantum Kinematics - M.E. Irizarry-Gelpí</title>
+    <title>Contiguous Three-Body Sudakov Decomposition - M.E. Irizarry-Gelpí</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +11,11 @@
 
     <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
 
-<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-quantum-kinematics/">
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/">
 
         <meta name="author" content="M.E. Irizarry-Gelpí" />
-        <meta name="keywords" content="sudakov" />
-        <meta name="description" content="Kinematics for three-quantum problems." />
+        <meta name="keywords" content="sudakov,three-body" />
+        <meta name="description" content="A three-body problem with contiguous Sudakov null momenta." />
 
 
 
@@ -80,10 +80,10 @@ M.E. Irizarry-Gelpí            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-quantum-kinematics/"
+                    <a href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/"
                        rel="bookmark"
-                       title="Permalink to Three-Quantum Kinematics">
-                        Three-Quantum Kinematics
+                       title="Permalink to Contiguous Three-Body Sudakov Decomposition">
+                        Contiguous Three-Body Sudakov Decomposition
                     </a>
                 </h1>
             </header>
@@ -104,60 +104,63 @@ M.E. Irizarry-Gelpí            </a>
 
 <span class="label label-default">Tags</span>
 	<a href="http://meirizarrygelpi.github.io/tag/sudakov.html">sudakov</a>
+        /
+	<a href="http://meirizarrygelpi.github.io/tag/three-body.html">three-body</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>In this post I will consider the kinematics of problems with three independent momentum vectors, each of which describe a distinct massive quantum. That is, you do not have any conservation constraint relating these three vectors. But you still have three on-shell constraints:
+                <p>In a previous post I discussed the <a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/">kinematics of three-body problems</a>. The <strong>contiguous three-body Sudakov decomposition</strong> is given by
 </p>
-<div class="math">$$ p_{1}^{2} = m_{1}^{2}, \qquad p_{2}^{2} = m_{2}^{2}, \qquad p_{3}^{2} = m_{3}^{2}.$$</div>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{31}} n_{1}.$$</div>
 <p>
-You can introduce three <strong>2-Mandelstam</strong> invariants:
+Here <span class="math">\(n_{1}\)</span>, <span class="math">\(n_{2}\)</span>, and <span class="math">\(n_{3}\)</span> are null <strong>Sudakov</strong> vectors, and I have introduced three <strong>2-Sudakov</strong> invariants:
 </p>
-<div class="math">$$ s_{12} \equiv \left( p_{1} + p_{2} \right)^{2}, \qquad s_{23} \equiv \left( p_{2} + p_{3} \right)^{2}, \qquad s_{31} \equiv \left( p_{3} + p_{1} \right)^{2};$$</div>
+<div class="math">$$ S_{12} \equiv \left( n_{1} + n_{2} \right)^{2}, \qquad S_{23} \equiv \left( n_{2} + n_{3} \right)^{2}, \qquad S_{31} \equiv \left( n_{3} + n_{1} \right)^{2}.$$</div>
 <p>
-and one <strong>3-Mandelstam</strong> invariant:
+The above decomposition can be written in matrix form:
 </p>
-<div class="math">$$ s_{123} \equiv \left( p_{1} + p_{2} + p_{3} \right)^{2} = s_{12} + s_{23} + s_{31} - m_{1}^{2} - m_{2}^{2} - m_{3}^{2}.$$</div>
+<div class="math">$$ \begin{pmatrix} p_{1} \\ p_{2} \\ p_{3} \end{pmatrix} = A \cdot \begin{pmatrix} n_{1} \\ n_{2} \\ n_{3} \end{pmatrix}, \qquad A \equiv \begin{pmatrix} 1 &amp; \dfrac{m_{1}^{2}}{S_{12}} &amp; 0 \\ 0 &amp; 1 &amp; \dfrac{m_{2}^{2}}{S_{23}} \\ \dfrac{m_{3}^{2}}{S_{31}} &amp; 0 &amp; 1 \end{pmatrix} . $$</div>
 <p>
-You can also introduce three <strong>Regge-Mandelstam</strong> invariants:
+The determinant of this matrix is
 </p>
-<div class="math">$$ r_{12} \equiv \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}, \qquad r_{23} \equiv \frac{s_{23} - m_{2}^{2} - m_{3}^{2}}{2 m_{2} m_{3}}, \qquad r_{31} \equiv \frac{s_{31} - m_{3}^{2} - m_{1}^{2}}{2 m_{3} m_{1}}.$$</div>
+<div class="math">$$ \det{\left( A \right)} = 1 + \frac{m_{1}^{2} m_{2}^{2} m_{3}^{2}}{S_{12} S_{23} S_{31}} = \frac{S_{12} S_{23} S_{31} + m_{1}^{2} m_{2}^{2} m_{3}^{2}}{S_{12} S_{23} S_{31}} . $$</div>
 <p>
-There are three <strong>2-Gram</strong> invariants:
+The inverse of this matrix is
 </p>
-<div class="math">$$ G_{12} \equiv - \det{ \begin{pmatrix} p_{1}^{2} &amp; p_{1} \cdot p_{2} \\ p_{2} \cdot p_{1} &amp; p_{2}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right] = m_{1}^{2} m_{2}^{2} \left( r_{12}^{2} - 1 \right);$$</div>
-<div class="math">$$ G_{23} \equiv - \det{ \begin{pmatrix} p_{2}^{2} &amp; p_{2} \cdot p_{3} \\ p_{3} \cdot p_{2} &amp; p_{3}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right)^{2} - 4 m_{2}^{2} m_{3}^{2} \right] = m_{2}^{2} m_{3}^{2} \left( r_{23}^{2} - 1 \right);$$</div>
-<div class="math">$$ G_{31} \equiv - \det{ \begin{pmatrix} p_{3}^{2} &amp; p_{3} \cdot p_{1} \\ p_{1} \cdot p_{3} &amp; p_{1}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right)^{2} - 4 m_{3}^{2} m_{1}^{2} \right] = m_{3}^{2} m_{1}^{2} \left( r_{31}^{2} - 1 \right);$$</div>
+<div class="math">$$ A^{-1} = \frac{1}{\det{\left( A \right)}} \begin{pmatrix} 1 &amp; - \dfrac{m_{1}^{2}}{S_{12}} &amp; \dfrac{m_{1}^{2} m_{2}^{2}}{S_{12} S_{23}} \\ \dfrac{m_{2}^{2} m_{3}^{2}}{S_{23} S_{31}} &amp; 1 &amp; - \dfrac{m_{2}^{2}}{S_{23}} \\ - \dfrac{m_{3}^{2}}{S_{31}} &amp; \dfrac{m_{3}^{2} m_{1}^{2}}{S_{31} S_{12}} &amp; 1 \end{pmatrix}. $$</div>
 <p>
-and one <strong>3-Gram</strong> invariant:
+My goal is to write the 2-Sudakov invariants in terms of the Mandelstam invariants and the masses. In order to do this, it is helpful to also introduce <strong>Regge-Sudakov</strong> invariants:
 </p>
-<div class="math">$$G_{123} = \det{ \begin{pmatrix} p_{1}^{2} &amp; p_{1} \cdot p_{2} &amp; p_{1} \cdot p_{3} \\ p_{2} \cdot p_{1} &amp; p_{2}^{2} &amp; p_{2} \cdot p_{3} \\ p_{3} \cdot p_{1} &amp; p_{3} \cdot p_{2} &amp; p_{3}^{2} \end{pmatrix} }  = m_{1}^{2} m_{2}^{2} m_{3}^{2} \left( 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{23}^{2} - r_{31}^{2} + 1 \right).$$</div>
+<div class="math">$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}, \qquad R_{23} \equiv \frac{S_{23}}{m_{2} m_{3}}, \qquad R_{31} \equiv \frac{S_{31}}{m_{3} m_{1}}.$$</div>
 <p>
-More explicitly,
+Using the identities
 </p>
-<div class="math">$$ G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) - m_{1}^{2} \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right)^{2} - m_{2}^{2} \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right)^{2} - m_{3}^{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} + 4 m_{1}^{2} m_{2}^{2} m_{3}^{2} \right]. $$</div>
+<div class="math">$$ r_{12} = \frac{p_{1} \cdot p_{2}}{m_{1} m_{2}}, \qquad r_{23} = \frac{p_{2} \cdot p_{3}}{m_{2} m_{3}}, \qquad r_{31} = \frac{p_{3} \cdot p_{1}}{m_{3} m_{1}},$$</div>
 <p>
-Note the <strong>massless limits</strong> of the Gram invariants:
+you find the relations
 </p>
-<div class="math">$$ \lim_{m_{1} \rightarrow 0} G_{12} = \frac{1}{4} \left( s_{12} - m_{2}^{2} \right)^{2}, \qquad \lim_{m_{2} \rightarrow 0} G_{12} = \frac{1}{4} \left( s_{12} - m_{1}^{2} \right)^{2}; $$</div>
-<div class="math">$$ \lim_{m_{2} \rightarrow 0} G_{23} = \frac{1}{4} \left( s_{23} - m_{3}^{2} \right)^{2}, \qquad \lim_{m_{3} \rightarrow 0} G_{23} = \frac{1}{4} \left( s_{23} - m_{2}^{2} \right)^{2}; $$</div>
-<div class="math">$$ \lim_{m_{3} \rightarrow 0} G_{12} = \frac{1}{4} \left( s_{31} - m_{1}^{2} \right)^{2}, \qquad \lim_{m_{1} \rightarrow 0} G_{31} = \frac{1}{4} \left( s_{31} - m_{3}^{2} \right)^{2}; $$</div>
-<div class="math">$$ \lim_{m_{1} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} \right) - m_{2}^{2} \left( s_{31} - m_{3}^{2} \right)^{2} - m_{3}^{2} \left( s_{12} - m_{2}^{2} \right)^{2} \right], $$</div>
-<div class="math">$$ \lim_{m_{2} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} \right) \left( s_{23} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) - m_{1}^{2} \left( s_{23} - m_{3}^{2} \right)^{2} - m_{3}^{2} \left( s_{12} - m_{1}^{2} \right)^{2} \right], $$</div>
-<div class="math">$$ \lim_{m_{3} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} \right) \left( s_{31} - m_{1}^{2} \right) - m_{1}^{2} \left( s_{23} - m_{2}^{2} \right)^{2} - m_{2}^{2} \left( s_{31} - m_{1}^{2} \right)^{2} \right]; $$</div>
-<div class="math">$$ \lim_{m_{1} \rightarrow 0} \lim_{m_{2} \rightarrow 0} G_{123} = \frac{1}{4} \left[ s_{12} \left( s_{23} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} \right) - m_{3}^{2} s_{12}^{2} \right], $$</div>
-<div class="math">$$ \lim_{m_{2} \rightarrow 0} \lim_{m_{3} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} \right) s_{23} \left( s_{31} - m_{1}^{2} \right) - m_{1}^{2} s_{23}^{2} \right], $$</div>
-<div class="math">$$ \lim_{m_{3} \rightarrow 0} \lim_{m_{1} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} \right) s_{31} - m_{2}^{2} s_{31}^{2} \right]. $$</div>
+<div class="math">$$ 2r_{12} = R_{12} + \frac{R_{31}}{R_{23}} + \frac{1}{R_{12}}, \qquad 2r_{23} = R_{23} + \frac{R_{12}}{R_{31}} + \frac{1}{R_{23}}, \qquad 2r_{31} = R_{31} + \frac{R_{23}}{R_{12}} + \frac{1}{R_{31}}.$$</div>
 <p>
-For convenience, I will also introduce <strong>Regge-Gram</strong> invariants:
+Note that you can obtain the second and third equations from the first one by cyclically shifting the integer labels. The solution should also exhibit this property. Solving this system of equations gives
 </p>
-<div class="math">$$ g_{12} \equiv \frac{G_{12}}{m_{1}^{2} m_{2}^{2}}, \qquad g_{23} \equiv \frac{G_{23}}{m_{2}^{2} m_{3}^{2}}, \qquad g_{31} \equiv \frac{G_{31}}{m_{3}^{2} m_{1}^{2}}, \qquad g_{123} \equiv \frac{G_{123}}{m_{1}^{2} m_{2}^{2} m_{3}^{2}}.$$</div>
+<div class="math">$$ R_{12} = \frac{r_{12} \left[ g_{123} - 1 + \sqrt{ g_{123} \left( g_{123} - 1 \right)} \right] + r_{23} r_{31}}{g_{123} + g_{31}}, $$</div>
+<div class="math">$$ R_{23} = \frac{r_{23} \left[ g_{123} - 1 + \sqrt{ g_{123} \left( g_{123} - 1 \right)} \right] + r_{31} r_{12}}{g_{123} + g_{12}}, $$</div>
+<div class="math">$$ R_{31} = \frac{r_{31} \left[ g_{123} - 1 + \sqrt{ g_{123} \left( g_{123} - 1 \right)} \right] + r_{12} r_{23}}{g_{123} + g_{23}}. $$</div>
 <p>
-Note that
+Thus,
 </p>
-<div class="math">$$ g_{123} + g_{12} = 2 r_{12} r_{23} r_{31} - r_{23}^{2} - r_{31}^{2}, \qquad g_{123} + g_{23} = 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{31}^{2}, \qquad g_{123} + g_{31} = 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{23}^{2}. $$</div>
+<div class="math">$$ S_{12} = \frac{1}{4} \left[ \frac{ 2 \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{1}^{2} m_{2}^{2} \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) }{G_{123} + m_{2}^{2} G_{31}} \right], $$</div>
+<div class="math">$$ S_{23} = \frac{1}{4} \left[ \frac{ 2 \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{2}^{2} m_{3}^{2} \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) }{G_{123} + m_{3}^{2} G_{12}} \right], $$</div>
+<div class="math">$$ S_{31} = \frac{1}{4} \left[ \frac{ 2 \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{3}^{2} m_{1}^{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) }{G_{123} + m_{1}^{2} G_{23}} \right]. $$</div>
 <p>
-All of these invariants are present in any three-quantum problem.</p>
+I have implicitly assumed that all Regge-Mandelstam invariants, as well as all Regge-Gram invariants, are positive.</p>
+<p>Note the massless limits:
+</p>
+<div class="math">$$ \lim_{m_{1} \rightarrow 0} S_{12} = \lim_{m_{1} \rightarrow 0} \frac{G_{123} \left( s_{12} - m_{2}^{2} \right)}{G_{123} + m_{2}^{2} G_{31}} , \qquad \lim_{m_{2} \rightarrow 0} S_{12} = s_{12} - m_{1}^{2}, \qquad \lim_{m_{3} \rightarrow 0} S_{12} = \lim_{m_{3} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{12} - m_{1}^{2} - m_{2}^{2} \right) G_{123} + m_{1}^{2} m_{2}^{2} \left( s_{23} - m_{2}^{2} \right) \left( s_{31} - m_{1}^{2} \right) }{G_{123} + m_{2}^{2} G_{31}} \right]; $$</div>
+<div class="math">$$ \lim_{m_{2} \rightarrow 0} S_{23} = \lim_{m_{2} \rightarrow 0} \frac{G_{123} \left( s_{23} - m_{3}^{2} \right)}{G_{123} + m_{3}^{2} G_{12}} , \qquad \lim_{m_{3} \rightarrow 0} S_{23} = s_{23} - m_{2}^{2}, \qquad \lim_{m_{1} \rightarrow 0} S_{23} = \lim_{m_{1} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{23} - m_{2}^{2} - m_{3}^{2} \right) G_{123} + m_{2}^{2} m_{3}^{2} \left( s_{31} - m_{3}^{2} \right) \left( s_{12} - m_{2}^{2} \right) }{G_{123} + m_{3}^{2} G_{12}} \right]; $$</div>
+<div class="math">$$ \lim_{m_{3} \rightarrow 0} S_{31} = \lim_{m_{3} \rightarrow 0} \frac{G_{123} \left( s_{31} - m_{1}^{2} \right)}{G_{123} + m_{1}^{2} G_{23}} , \qquad \lim_{m_{1} \rightarrow 0} S_{31} = s_{31} - m_{3}^{2}, \qquad \lim_{m_{2} \rightarrow 0} S_{31} = \lim_{m_{2} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{31} - m_{3}^{2} - m_{1}^{2} \right) G_{123} + m_{3}^{2} m_{1}^{2} \left( s_{12} - m_{1}^{2} \right) \left( s_{23} - m_{3}^{2} \right) }{G_{123} + m_{1}^{2} G_{12}} \right]. $$</div>
+<p>
+Thus, when all three masses vanish the Sudakov vectors become the momenta of the quanta, and the 2-Mandelstam invariants become the 2-Sudakov invariants. </p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -225,8 +228,8 @@ All of these invariants are present in any three-quantum problem.</p>
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
 
-                    var disqus_identifier = 'three-quantum-kinematics';
-                var disqus_url = 'http://meirizarrygelpi.github.io/posts/2015/Nov/three-quantum-kinematics/';
+                    var disqus_identifier = 'contiguous-three-body-sudakov';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/';
 
             var disqus_config = function () {
                 this.language = "en";

@@ -68,11 +68,11 @@
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="research"></category></entry><entry><title>Three-Quantum Composite Kinematics</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/three-quantum-composite-kinematics/" rel="alternate"></link><updated>2015-12-02T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-02:posts/2015/Dec/three-quantum-composite-kinematics/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-quantum-kinematics/"&gt;kinematics of three-quantum problems&lt;/a&gt;. In that post I only discussed invariants that only involve the momenta of individual quanta. That situation can also be called &lt;strong&gt;simple kinematics&lt;/strong&gt;. You can also introduce &lt;strong&gt;2-composite momenta&lt;/strong&gt;:
+&lt;/script&gt;</summary><category term="research"></category></entry><entry><title>Three-Body Composite Kinematics</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/three-body-composite-kinematics/" rel="alternate"></link><updated>2015-12-02T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-02:posts/2015/Dec/three-body-composite-kinematics/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/"&gt;kinematics of three-body problems&lt;/a&gt;. In that post I only discussed invariants that only involve the momenta of individual quanta. That situation can also be called &lt;strong&gt;simple kinematics&lt;/strong&gt;. You can also introduce &lt;strong&gt;2-composite momenta&lt;/strong&gt;:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{12} \equiv p_{1} + p_{2}, \qquad p_{23} \equiv p_{2} + p_{3}, \qquad p_{31} \equiv p_{3} + p_{1}. $$&lt;/div&gt;
 &lt;p&gt;
-Note that
+These vectors involve the momenta of two quanta. Note that
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ s_{123} \equiv \left( p_{1} + p_{2} + p_{3} \right)^{2} = \left( p_{12} + p_{3} \right)^{2} = \left( p_{23} + p_{1} \right)^{2} = \left( p_{31} + p_{2} \right)^{2}. $$&lt;/div&gt;
 &lt;p&gt;
@@ -152,17 +152,17 @@ Finally, you have the 3-Gram invariant with the three 2-composite momenta:
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="kinematics"></category><category term="three-body"></category></entry><entry><title>Two-Quantum Rapidity from Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/two-quantum-rapidity/" rel="alternate"></link><updated>2015-12-01T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-01:posts/2015/Dec/two-quantum-rapidity/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-quantum-sudakov/"&gt;two-quantum Sudakov decomposition&lt;/a&gt;. I found that the Regge-Mandelstam invariant &lt;span class="math"&gt;\(r_{12}\)&lt;/span&gt; and the Regge-Sudakov invariant &lt;span class="math"&gt;\(R_{12}\)&lt;/span&gt; satisfy the equation
+&lt;/script&gt;</summary><category term="kinematics"></category><category term="three-body"></category></entry><entry><title>Two-Body Rapidity from Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/two-body-rapidity/" rel="alternate"></link><updated>2015-12-01T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-01:posts/2015/Dec/two-body-rapidity/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/"&gt;two-body Sudakov decomposition&lt;/a&gt;. I found that the Regge-Mandelstam invariant &lt;span class="math"&gt;\(r_{12}\)&lt;/span&gt; and the Regge-Sudakov invariant &lt;span class="math"&gt;\(R_{12}\)&lt;/span&gt; satisfy the equation
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}. $$&lt;/div&gt;
 &lt;p&gt;
 You can introduce a rapidity &lt;span class="math"&gt;\(\rho_{12}\)&lt;/span&gt; via
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ R_{12} = \exp{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \log{ \left( R_{12} \right) } . $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{12} = \exp{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \log{ \left( R_{12} \right) }. $$&lt;/div&gt;
 &lt;p&gt;
 Thus,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ r_{12} = \operatorname{cosh}{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \operatorname{acosh}{ \left( r_{12} \right) } . $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{12} = \operatorname{cosh}{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \operatorname{acosh}{ \left( r_{12} \right) }. $$&lt;/div&gt;
 &lt;p&gt;
 You also have the Regge-Gram invariant:
 &lt;/p&gt;
@@ -233,7 +233,7 @@ These provide an argument for restricting only to the range &lt;span class="math
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="sudakov"></category></entry><entry><title>arXiv picks for 2015, week 48</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-48/" rel="alternate"></link><updated>2015-11-28T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-28:posts/2015/Nov/2015-week-48/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/script&gt;</summary><category term="sudakov"></category><category term="two-body"></category></entry><entry><title>arXiv picks for 2015, week 48</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-48/" rel="alternate"></link><updated>2015-11-28T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-28:posts/2015/Nov/2015-week-48/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.06652"&gt;Overcoming Obstacles to Colour-Kinematics Duality at Two Loops&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.06716"&gt;One-Loop Soft Theorems via Dual Superconformal Symmetry&lt;/a&gt;&lt;/li&gt;
@@ -241,7 +241,7 @@ These provide an argument for restricting only to the range &lt;span class="math
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.07455"&gt;Poisson equation for the Mercedes diagram in string theory at genus one&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.06955"&gt;Nambu at Work&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.08025"&gt;Conformal Collider Physics from the Lightcone Bootstrap&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>Contiguous Three-Quantum Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-quantum-sudakov/" rel="alternate"></link><updated>2015-11-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/contiguous-three-quantum-sudakov/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-quantum-kinematics/"&gt;kinematics of three-quantum problems&lt;/a&gt;. The &lt;strong&gt;contiguous Sudakov decomposition&lt;/strong&gt; is given by
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>Contiguous Three-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/" rel="alternate"></link><updated>2015-11-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/contiguous-three-body-sudakov/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/"&gt;kinematics of three-body problems&lt;/a&gt;. The &lt;strong&gt;contiguous three-body Sudakov decomposition&lt;/strong&gt; is given by
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{31}} n_{1}.$$&lt;/div&gt;
 &lt;p&gt;
@@ -348,7 +348,7 @@ Thus, when all three masses vanish the Sudakov vectors become the momenta of the
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="sudakov"></category></entry><entry><title>Three-Quantum Kinematics</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-quantum-kinematics/" rel="alternate"></link><updated>2015-11-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/three-quantum-kinematics/</id><summary type="html">&lt;p&gt;In this post I will consider the kinematics of problems with three independent momentum vectors, each of which describe a distinct massive quantum. That is, you do not have any conservation constraint relating these three vectors. But you still have three on-shell constraints:
+&lt;/script&gt;</summary><category term="sudakov"></category><category term="three-body"></category></entry><entry><title>Three-Body Kinematics</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/" rel="alternate"></link><updated>2015-11-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/three-body-kinematics/</id><summary type="html">&lt;p&gt;In this post I will consider the kinematics of problems with three independent momentum vectors, each of which describe a distinct massive quantum. That is, you do not have any conservation constraint relating these three vectors. But you still have three on-shell constraints:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{1}^{2} = m_{1}^{2}, \qquad p_{2}^{2} = m_{2}^{2}, \qquad p_{3}^{2} = m_{3}^{2}.$$&lt;/div&gt;
 &lt;p&gt;
@@ -398,7 +398,7 @@ Note that
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ g_{123} + g_{12} = 2 r_{12} r_{23} r_{31} - r_{23}^{2} - r_{31}^{2}, \qquad g_{123} + g_{23} = 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{31}^{2}, \qquad g_{123} + g_{31} = 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{23}^{2}. $$&lt;/div&gt;
 &lt;p&gt;
-All of these invariants are present in any three-quantum problem.&lt;/p&gt;
+All of these invariants are present in any three-body problem.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -454,7 +454,7 @@ All of these invariants are present in any three-quantum problem.&lt;/p&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="sudakov"></category></entry><entry><title>Two-Quantum Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-quantum-sudakov/" rel="alternate"></link><updated>2015-11-25T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-25:posts/2015/Nov/two-quantum-sudakov/</id><summary type="html">&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive quantum. That is, you do not have any conservation constraint relating these two momentum vectors. But you still have two &lt;strong&gt;on-shell constraints&lt;/strong&gt;:
+&lt;/script&gt;</summary><category term="sudakov"></category><category term="three-body"></category></entry><entry><title>Two-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/" rel="alternate"></link><updated>2015-11-25T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-25:posts/2015/Nov/two-body-sudakov/</id><summary type="html">&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive quantum. That is, you do not have any conservation constraint relating these two momentum vectors. But you still have two &lt;strong&gt;on-shell constraints&lt;/strong&gt;:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{1}^{2} = m_{1}^{2}, \qquad p_{2}^{2} = m_{2}^{2}.$$&lt;/div&gt;
 &lt;p&gt;
@@ -470,8 +470,8 @@ There is one &lt;strong&gt;2-Gram&lt;/strong&gt; invariant:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ G_{12} \equiv - \det{ \begin{pmatrix} p_{1}^{2} &amp;amp; p_{1} \cdot p_{2} \\ p_{2} \cdot p_{1} &amp;amp; p_{2}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right] = m_{1}^{2} m_{2}^{2} \left( r_{12}^{2} - 1 \right).$$&lt;/div&gt;
 &lt;p&gt;
-All of these invariants are present in any two-quantum problem.&lt;/p&gt;
-&lt;p&gt;The &lt;strong&gt;two-quantum Sudakov decomposition&lt;/strong&gt; is given by
+All of these invariants are present in any two-body problem.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;two-body Sudakov decomposition&lt;/strong&gt; is given by
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}.$$&lt;/div&gt;
 &lt;p&gt;
@@ -579,7 +579,7 @@ The logarithm of some of these expressions appear as rapidities in the center-of
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="sudakov"></category></entry><entry><title>arXiv picks for 2015, week 47</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-47/" rel="alternate"></link><updated>2015-11-21T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-21:posts/2015/Nov/2015-week-47/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/script&gt;</summary><category term="sudakov"></category><category term="two-body"></category></entry><entry><title>arXiv picks for 2015, week 47</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-47/" rel="alternate"></link><updated>2015-11-21T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-21:posts/2015/Nov/2015-week-47/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.04074"&gt;Lectures on Conformal Field Theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.04288"&gt;Tensor networks for gauge field theories&lt;/a&gt;&lt;/li&gt;
@@ -705,7 +705,7 @@ The relations above become
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ 2 r_{12} = R_{12} + \frac{R_{31}}{R_{23}} + \frac{1}{R_{12}}, \qquad 2 r_{23} = R_{23} + \frac{R_{12}}{R_{31}} + \frac{1}{R_{23}}, \qquad 2 r_{31} = R_{31} + \frac{R_{23}}{R_{12}} + \frac{1}{R_{31}}.$$&lt;/div&gt;
 &lt;p&gt;
-The solution to these equations is very complicated. Furthermore, these equations appear in the null decomposition of three independent slow quanta. Using the simpler version above, in terms of the Sudakov invariants, the solution is
+The solution to these equations is very complicated. Furthermore, these equations appear in the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/"&gt;null decomposition of three independent massive quanta&lt;/a&gt;. Using the simpler version above, in terms of the Sudakov invariants, the solution is
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ S_{12} = -m_{1}^{2}, \qquad T_{23} = -m_{2}^{2}, \qquad T_{31} = -m_{3}^{2}.$$&lt;/div&gt;
 &lt;p&gt;
@@ -717,7 +717,7 @@ It follows that,
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{1} = n_{1} - n_{2}, \qquad p_{2} = n_{2} + n_{3}, \qquad p_{3} = n_{3} + n_{1}.$$&lt;/div&gt;
 &lt;p&gt;
-That is, the three slow momenta can be written as very simple combinations of null momenta.&lt;/p&gt;
+That is, the three massive momenta can be written as very simple combinations of null momenta.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
