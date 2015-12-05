@@ -1,5 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-01T00:00:00-05:00</updated><entry><title>Two-Quantum Rapidity from Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/two-quantum-rapidity/" rel="alternate"></link><updated>2015-12-01T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-01:posts/2015/Dec/two-quantum-rapidity/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-quantum-sudakov/"&gt;two-quantum Sudakov decomposition&lt;/a&gt;. I found that the Regge-Mandelstam invariant &lt;span class="math"&gt;\(r_{12}\)&lt;/span&gt; and the Regge-Sudakov invariant &lt;span class="math"&gt;\(R_{12}\)&lt;/span&gt; satisfy the equation
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-05T00:00:00-05:00</updated><entry><title>arXiv picks for 2015, week 49</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/2015-week-49/" rel="alternate"></link><updated>2015-12-05T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-05:posts/2015/Dec/2015-week-49/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.08220"&gt;Covariant Action for Type IIB Supergravity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.08517"&gt;The KLT relations in unimodular gravity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.08782"&gt;Gauss-Bonnet Black Holes and Holographic Heat Engines Beyond Large &lt;span class="math"&gt;\(N\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.09333"&gt;Group-theory relations for partial amplitudes in gauge theories with orthogonal group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.09404"&gt;The Pentabox Master Integrals with the Simplified Differential Equations approach&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.09441"&gt;General Solution of the Scattering Equations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.00013"&gt;Unitarity violation at the Wilson-Fisher fixed point in 4-epsilon dimensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.00026"&gt;Ultraviolet and Infrared Divergences in Superstring Theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.00161"&gt;Baryons, monopoles and dualities in Chern-Simons-matter theories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.00555"&gt;Nonperturbative enhancement of superloop at strong coupling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.00803"&gt;On the soft limit of closed string amplitudes with massive states&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="research"></category></entry><entry><title>Three-Quantum Composite Kinematics</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/three-quantum-composite-kinematics/" rel="alternate"></link><updated>2015-12-02T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-02:posts/2015/Dec/three-quantum-composite-kinematics/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-quantum-kinematics/"&gt;kinematics of three-quantum problems&lt;/a&gt;. In that post I only discussed invariants that only involve the momenta of individual quanta. That situation can also be called &lt;strong&gt;simple kinematics&lt;/strong&gt;. You can also introduce &lt;strong&gt;2-composite momenta&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{12} \equiv p_{1} + p_{2}, \qquad p_{23} \equiv p_{2} + p_{3}, \qquad p_{31} \equiv p_{3} + p_{1}. $$&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s_{123} \equiv \left( p_{1} + p_{2} + p_{3} \right)^{2} = \left( p_{12} + p_{3} \right)^{2} = \left( p_{23} + p_{1} \right)^{2} = \left( p_{31} + p_{2} \right)^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+For a 2-Gram invariant, you need two momentum vectors. You have three 2-Gram invariants where one momentum vector is 2-composite and the other is simple:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{(12)3} \equiv -\det{ \begin{pmatrix} p_{12}^{2} &amp;amp; p_{12} \cdot p_{3} \\ p_{3} \cdot p_{12} &amp;amp; p_{3}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{123} - s_{12} - m_{3}^{2} \right)^{2} - 4 s_{12} m_{3}^{2} \right] = \frac{1}{4} \left[ \left( s_{23} + s_{31} - m_{1}^{2} - m_{2}^{2} - 2 m_{3}^{2} \right)^{2} - 4 s_{12} m_{3}^{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{(23)1} \equiv -\det{ \begin{pmatrix} p_{23}^{2} &amp;amp; p_{23} \cdot p_{1} \\ p_{1} \cdot p_{23} &amp;amp; p_{1}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{123} - s_{23} - m_{1}^{2} \right)^{2} - 4 s_{23} m_{1}^{2} \right] = \frac{1}{4} \left[ \left( s_{31} + s_{12} - 2m_{1}^{2} - m_{2}^{2} - m_{3}^{2} \right)^{2} - 4 s_{23} m_{1}^{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{(31)2} \equiv -\det{ \begin{pmatrix} p_{31}^{2} &amp;amp; p_{31} \cdot p_{2} \\ p_{2} \cdot p_{31} &amp;amp; p_{2}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{123} - s_{31} - m_{2}^{2} \right)^{2} - 4 s_{31} m_{2}^{2} \right] = \frac{1}{4} \left[ \left( s_{12} + s_{23} - m_{1}^{2} - 2m_{2}^{2} - m_{3}^{2} \right)^{2} - 4 s_{31} m_{2}^{2} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+In terms of Regge-Mandelstam invariants you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{(12)3} = m_{3}^{2} \left[ \left( m_{2} r_{23} + m_{1} r_{31} \right)^{2} - \left(m_{1}^{2} + m_{2}^{2} + 2 m_{1} m_{2} r_{12} \right) \right] = G_{23} + G_{31} + 2 m_{1} m_{2} m_{3}^{2} \left( r_{23} r_{31} - r_{12} \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{(23)1} = m_{1}^{2} \left[ \left( m_{3} r_{31} + m_{2} r_{12} \right)^{2} - \left(m_{2}^{2} + m_{3}^{2} + 2 m_{2} m_{3} r_{23} \right) \right] = G_{31} + G_{12} + 2 m_{2} m_{3} m_{1}^{2} \left( r_{31} r_{12} - r_{23} \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{(31)2} = m_{2}^{2} \left[ \left( m_{1} r_{12} + m_{3} r_{23} \right)^{2} - \left(m_{3}^{2} + m_{1}^{2} + 2 m_{3} m_{1} r_{31} \right) \right] = G_{12} + G_{23} + 2 m_{3} m_{1} m_{2}^{2} \left( r_{12} r_{23} - r_{31} \right). $$&lt;/div&gt;
+&lt;p&gt;
+There are three 2-Gram invariants where each momentum is 2-composite:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{(12)(23)} \equiv -\det{ \begin{pmatrix} p_{12}^{2} &amp;amp; p_{12} \cdot p_{23} \\ p_{23} \cdot p_{12} &amp;amp; p_{23}^{2} \end{pmatrix} } = G_{12} + G_{23} + G_{31} + 2 m_{2} m_{3} m_{1}^{2} \left( r_{31} r_{12} - r_{23} \right) - 2 m_{3} m_{1} m_{2}^{2} \left(r_{12} r_{23} - r_{31} \right) + 2 m_{1} m_{2} m_{3}^{2} \left(r_{23} r_{31} - r_{12} \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{(23)(31)} \equiv -\det{ \begin{pmatrix} p_{23}^{2} &amp;amp; p_{23} \cdot p_{31} \\ p_{31} \cdot p_{23} &amp;amp; p_{31}^{2} \end{pmatrix} } = G_{23} + G_{31} + G_{12} + 2 m_{3} m_{1} m_{2}^{2} \left(r_{12} r_{23} - r_{31} \right) - 2 m_{1} m_{2} m_{3}^{2} \left(r_{23} r_{31} - r_{12} \right) + 2 m_{2} m_{3} m_{1}^{2} \left( r_{31} r_{12} - r_{23} \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{(31)(12)} \equiv -\det{ \begin{pmatrix} p_{31}^{2} &amp;amp; p_{31} \cdot p_{12} \\ p_{12} \cdot p_{31} &amp;amp; p_{12}^{2} \end{pmatrix} } = G_{31} + G_{12} + G_{23} + 2 m_{1} m_{2} m_{3}^{2} \left(r_{23} r_{31} - r_{12} \right) - 2 m_{2} m_{3} m_{1}^{2} \left( r_{31} r_{12} - r_{23} \right) + 2 m_{3} m_{1} m_{2}^{2} \left(r_{12} r_{23} - r_{31} \right). $$&lt;/div&gt;
+&lt;p&gt;
+Finally, you have the 3-Gram invariant with the three 2-composite momenta:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{(12)(23)(31)} = \det{ \begin{pmatrix} p_{12}^{2} &amp;amp; p_{12} \cdot p_{23} &amp;amp; p_{12} \cdot p_{31} \\ p_{23} \cdot p_{12} &amp;amp; p_{23}^{2} &amp;amp; p_{23} \cdot p_{31} \\ p_{31} \cdot p_{12} &amp;amp; p_{31} \cdot p_{23} &amp;amp; p_{31}^{2} \end{pmatrix} }. $$&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="kinematics"></category><category term="three-body"></category></entry><entry><title>Two-Quantum Rapidity from Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/two-quantum-rapidity/" rel="alternate"></link><updated>2015-12-01T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-01:posts/2015/Dec/two-quantum-rapidity/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-quantum-sudakov/"&gt;two-quantum Sudakov decomposition&lt;/a&gt;. I found that the Regge-Mandelstam invariant &lt;span class="math"&gt;\(r_{12}\)&lt;/span&gt; and the Regge-Sudakov invariant &lt;span class="math"&gt;\(R_{12}\)&lt;/span&gt; satisfy the equation
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}. $$&lt;/div&gt;
 &lt;p&gt;
@@ -88,76 +241,7 @@ These provide an argument for restricting only to the range &lt;span class="math
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.07455"&gt;Poisson equation for the Mercedes diagram in string theory at genus one&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.06955"&gt;Nambu at Work&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.08025"&gt;Conformal Collider Physics from the Lightcone Bootstrap&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>arXiv picks for 2015, week 49</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-49/" rel="alternate"></link><updated>2015-11-28T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-28:posts/2015/Nov/2015-week-49/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.08220"&gt;Covariant Action for Type IIB Supergravity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.08517"&gt;The KLT relations in unimodular gravity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.08782"&gt;Gauss-Bonnet Black Holes and Holographic Heat Engines Beyond Large &lt;span class="math"&gt;\(N\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.09333"&gt;Group-theory relations for partial amplitudes in gauge theories with orthogonal group&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.09404"&gt;The Pentabox Master Integrals with the Simplified Differential Equations approach&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.09441"&gt;General Solution of the Scattering Equations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.00013"&gt;Unitarity violation at the Wilson-Fisher fixed point in 4-epsilon dimensions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.00026"&gt;Ultraviolet and Infrared Divergences in Superstring Theory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.00161"&gt;Baryons, monopoles and dualities in Chern-Simons-matter theories&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.00555"&gt;Nonperturbative enhancement of superloop at strong coupling&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.00803"&gt;On the soft limit of closed string amplitudes with massive states&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-    
-    var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript'; 
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</summary><category term="research"></category></entry><entry><title>Contiguous Three-Quantum Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-quantum-sudakov/" rel="alternate"></link><updated>2015-11-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/contiguous-three-quantum-sudakov/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-quantum-kinematics/"&gt;kinematics of three-quantum problems&lt;/a&gt;. The &lt;strong&gt;contiguous Sudakov decomposition&lt;/strong&gt; is given by
+&lt;/ol&gt;</summary><category term="research"></category></entry><entry><title>Contiguous Three-Quantum Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-quantum-sudakov/" rel="alternate"></link><updated>2015-11-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/contiguous-three-quantum-sudakov/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-quantum-kinematics/"&gt;kinematics of three-quantum problems&lt;/a&gt;. The &lt;strong&gt;contiguous Sudakov decomposition&lt;/strong&gt; is given by
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{31}} n_{1}.$$&lt;/div&gt;
 &lt;p&gt;
