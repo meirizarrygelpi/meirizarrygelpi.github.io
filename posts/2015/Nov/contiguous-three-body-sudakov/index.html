@@ -117,19 +117,20 @@ Here <span class="math">\(n_{1}\)</span>, <span class="math">\(n_{2}\)</span>, a
 </p>
 <div class="math">$$ S_{12} \equiv \left( n_{1} + n_{2} \right)^{2}, \qquad S_{23} \equiv \left( n_{2} + n_{3} \right)^{2}, \qquad S_{31} \equiv \left( n_{3} + n_{1} \right)^{2}.$$</div>
 <p>
-The above decomposition can be written in matrix form:
+The labeling of the Sudakov vectors is such that in a massless limit <span class="math">\(m_{i} \rightarrow 0\)</span> the momentum <span class="math">\(p_{i}\)</span> becomes the null vector <span class="math">\(n_{i}\)</span>. From the <a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/">two-body decomposition</a> you expect each Sudakov vector to carry the content of many individual quanta. The above decomposition can be written in matrix form:
 </p>
-<div class="math">$$ \begin{pmatrix} p_{1} \\ p_{2} \\ p_{3} \end{pmatrix} = A \cdot \begin{pmatrix} n_{1} \\ n_{2} \\ n_{3} \end{pmatrix}, \qquad A \equiv \begin{pmatrix} 1 &amp; \dfrac{m_{1}^{2}}{S_{12}} &amp; 0 \\ 0 &amp; 1 &amp; \dfrac{m_{2}^{2}}{S_{23}} \\ \dfrac{m_{3}^{2}}{S_{31}} &amp; 0 &amp; 1 \end{pmatrix} . $$</div>
+<div class="math">$$ \begin{pmatrix} p_{1} \\ p_{2} \\ p_{3} \end{pmatrix} = \mathcal{S}_{3} \cdot \begin{pmatrix} n_{1} \\ n_{2} \\ n_{3} \end{pmatrix}, \qquad \mathcal{S}_{3} \equiv \begin{pmatrix} 1 &amp; \dfrac{m_{1}^{2}}{S_{12}} &amp; 0 \\ 0 &amp; 1 &amp; \dfrac{m_{2}^{2}}{S_{23}} \\ \dfrac{m_{3}^{2}}{S_{31}} &amp; 0 &amp; 1 \end{pmatrix} . $$</div>
 <p>
 The determinant of this matrix is
 </p>
-<div class="math">$$ \det{\left( A \right)} = 1 + \frac{m_{1}^{2} m_{2}^{2} m_{3}^{2}}{S_{12} S_{23} S_{31}} = \frac{S_{12} S_{23} S_{31} + m_{1}^{2} m_{2}^{2} m_{3}^{2}}{S_{12} S_{23} S_{31}} . $$</div>
+<div class="math">$$ \det{\left( \mathcal{S}_{3} \right)} = 1 + \frac{m_{1}^{2} m_{2}^{2} m_{3}^{2}}{S_{12} S_{23} S_{31}} = \frac{S_{12} S_{23} S_{31} + m_{1}^{2} m_{2}^{2} m_{3}^{2}}{S_{12} S_{23} S_{31}} . $$</div>
 <p>
 The inverse of this matrix is
 </p>
-<div class="math">$$ A^{-1} = \frac{1}{\det{\left( A \right)}} \begin{pmatrix} 1 &amp; - \dfrac{m_{1}^{2}}{S_{12}} &amp; \dfrac{m_{1}^{2} m_{2}^{2}}{S_{12} S_{23}} \\ \dfrac{m_{2}^{2} m_{3}^{2}}{S_{23} S_{31}} &amp; 1 &amp; - \dfrac{m_{2}^{2}}{S_{23}} \\ - \dfrac{m_{3}^{2}}{S_{31}} &amp; \dfrac{m_{3}^{2} m_{1}^{2}}{S_{31} S_{12}} &amp; 1 \end{pmatrix}. $$</div>
+<div class="math">$$ \operatorname{inv}{\left( \mathcal{S}_{3} \right)} = \frac{1}{\det{\left( \mathcal{S}_{3} \right)}} \begin{pmatrix} 1 &amp; - \dfrac{m_{1}^{2}}{S_{12}} &amp; \dfrac{m_{1}^{2} m_{2}^{2}}{S_{12} S_{23}} \\ \dfrac{m_{2}^{2} m_{3}^{2}}{S_{23} S_{31}} &amp; 1 &amp; - \dfrac{m_{2}^{2}}{S_{23}} \\ - \dfrac{m_{3}^{2}}{S_{31}} &amp; \dfrac{m_{3}^{2} m_{1}^{2}}{S_{31} S_{12}} &amp; 1 \end{pmatrix}. $$</div>
 <p>
-My goal is to write the 2-Sudakov invariants in terms of the Mandelstam invariants and the masses. In order to do this, it is helpful to also introduce <strong>Regge-Sudakov</strong> invariants:
+Thus, each Sudakov vector can be written as a linear combination of the three momenta. In other words, each massive body contributes to each null vector.</p>
+<p>My goal is to write the 2-Sudakov invariants in terms of the Mandelstam invariants and the masses. In order to do this, it is helpful to also introduce <strong>Regge-Sudakov</strong> invariants:
 </p>
 <div class="math">$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}, \qquad R_{23} \equiv \frac{S_{23}}{m_{2} m_{3}}, \qquad R_{31} \equiv \frac{S_{31}}{m_{3} m_{1}}.$$</div>
 <p>
