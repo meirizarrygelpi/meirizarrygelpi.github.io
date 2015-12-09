@@ -117,27 +117,25 @@ These vectors involve the momenta of two quanta. Note that
 </p>
 <div class="math">$$ s_{123} \equiv \left( p_{1} + p_{2} + p_{3} \right)^{2} = \left( p_{12} + p_{3} \right)^{2} = \left( p_{23} + p_{1} \right)^{2} = \left( p_{31} + p_{2} \right)^{2}. $$</div>
 <p>
-For a 2-Gram invariant, you need two momentum vectors. You have three 2-Gram invariants where one momentum vector is 2-composite and the other is simple:
+For Regge-Mandelstam and 2-Gram invariants, you need two momentum vectors. Taking one vector to be 2-composite and the other to be simple but complementary, you have three <strong>composite Regge-Mandelstam</strong> invariants:
+</p>
+<div class="math">$$ r_{(12)3} \equiv \frac{s_{123} - s_{12} - m_{3}^{2}}{2 \sqrt{s_{12}} m_{3}} = \frac{s_{23} + s_{31} - m_{1}^{2} - m_{2}^{2} - 2 m_{3}^{2}}{2 \sqrt{s_{12}} m_{3}} = \frac{m_{2} r_{23} + m_{1} r_{31}}{\sqrt{s_{12}}}; $$</div>
+<div class="math">$$ r_{(23)1} \equiv \frac{s_{123} - s_{23} - m_{1}^{2}}{2 \sqrt{s_{23}} m_{1}} = \frac{s_{31} + s_{12} - m_{2}^{2} - m_{3}^{2} - 2 m_{1}^{2}}{2 \sqrt{s_{23}} m_{1}} = \frac{m_{3} r_{31} + m_{2} r_{12}}{\sqrt{s_{23}}}; $$</div>
+<div class="math">$$ r_{(31)2} \equiv \frac{s_{123} - s_{31} - m_{2}^{2}}{2 \sqrt{s_{31}} m_{2}} = \frac{s_{12} + s_{23} - m_{3}^{2} - m_{1}^{2} - 2 m_{2}^{2}}{2 \sqrt{s_{31}} m_{2}} = \frac{m_{1} r_{12} + m_{3} r_{23}}{\sqrt{s_{31}}}. $$</div>
+<p>
+and three <strong>composite 2-Gram</strong> invariants:
 </p>
 <div class="math">$$ G_{(12)3} \equiv -\det{ \begin{pmatrix} p_{12}^{2} &amp; p_{12} \cdot p_{3} \\ p_{3} \cdot p_{12} &amp; p_{3}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{123} - s_{12} - m_{3}^{2} \right)^{2} - 4 s_{12} m_{3}^{2} \right] = \frac{1}{4} \left[ \left( s_{23} + s_{31} - m_{1}^{2} - m_{2}^{2} - 2 m_{3}^{2} \right)^{2} - 4 s_{12} m_{3}^{2} \right], $$</div>
 <div class="math">$$ G_{(23)1} \equiv -\det{ \begin{pmatrix} p_{23}^{2} &amp; p_{23} \cdot p_{1} \\ p_{1} \cdot p_{23} &amp; p_{1}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{123} - s_{23} - m_{1}^{2} \right)^{2} - 4 s_{23} m_{1}^{2} \right] = \frac{1}{4} \left[ \left( s_{31} + s_{12} - 2m_{1}^{2} - m_{2}^{2} - m_{3}^{2} \right)^{2} - 4 s_{23} m_{1}^{2} \right], $$</div>
 <div class="math">$$ G_{(31)2} \equiv -\det{ \begin{pmatrix} p_{31}^{2} &amp; p_{31} \cdot p_{2} \\ p_{2} \cdot p_{31} &amp; p_{2}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{123} - s_{31} - m_{2}^{2} \right)^{2} - 4 s_{31} m_{2}^{2} \right] = \frac{1}{4} \left[ \left( s_{12} + s_{23} - m_{1}^{2} - 2m_{2}^{2} - m_{3}^{2} \right)^{2} - 4 s_{31} m_{2}^{2} \right]. $$</div>
 <p>
-In terms of Regge-Mandelstam invariants you have
+In terms of simple Regge-Mandelstam and 2-Gram invariants you have
 </p>
 <div class="math">$$ G_{(12)3} = m_{3}^{2} \left[ \left( m_{2} r_{23} + m_{1} r_{31} \right)^{2} - \left(m_{1}^{2} + m_{2}^{2} + 2 m_{1} m_{2} r_{12} \right) \right] = G_{23} + G_{31} + 2 m_{1} m_{2} m_{3}^{2} \left( r_{23} r_{31} - r_{12} \right); $$</div>
 <div class="math">$$ G_{(23)1} = m_{1}^{2} \left[ \left( m_{3} r_{31} + m_{2} r_{12} \right)^{2} - \left(m_{2}^{2} + m_{3}^{2} + 2 m_{2} m_{3} r_{23} \right) \right] = G_{31} + G_{12} + 2 m_{2} m_{3} m_{1}^{2} \left( r_{31} r_{12} - r_{23} \right); $$</div>
 <div class="math">$$ G_{(31)2} = m_{2}^{2} \left[ \left( m_{1} r_{12} + m_{3} r_{23} \right)^{2} - \left(m_{3}^{2} + m_{1}^{2} + 2 m_{3} m_{1} r_{31} \right) \right] = G_{12} + G_{23} + 2 m_{3} m_{1} m_{2}^{2} \left( r_{12} r_{23} - r_{31} \right). $$</div>
 <p>
-There are three 2-Gram invariants where each momentum is 2-composite:
-</p>
-<div class="math">$$ G_{(12)(23)} \equiv -\det{ \begin{pmatrix} p_{12}^{2} &amp; p_{12} \cdot p_{23} \\ p_{23} \cdot p_{12} &amp; p_{23}^{2} \end{pmatrix} } = G_{12} + G_{23} + G_{31} + 2 m_{2} m_{3} m_{1}^{2} \left( r_{31} r_{12} - r_{23} \right) - 2 m_{3} m_{1} m_{2}^{2} \left(r_{12} r_{23} - r_{31} \right) + 2 m_{1} m_{2} m_{3}^{2} \left(r_{23} r_{31} - r_{12} \right); $$</div>
-<div class="math">$$ G_{(23)(31)} \equiv -\det{ \begin{pmatrix} p_{23}^{2} &amp; p_{23} \cdot p_{31} \\ p_{31} \cdot p_{23} &amp; p_{31}^{2} \end{pmatrix} } = G_{23} + G_{31} + G_{12} + 2 m_{3} m_{1} m_{2}^{2} \left(r_{12} r_{23} - r_{31} \right) - 2 m_{1} m_{2} m_{3}^{2} \left(r_{23} r_{31} - r_{12} \right) + 2 m_{2} m_{3} m_{1}^{2} \left( r_{31} r_{12} - r_{23} \right); $$</div>
-<div class="math">$$ G_{(31)(12)} \equiv -\det{ \begin{pmatrix} p_{31}^{2} &amp; p_{31} \cdot p_{12} \\ p_{12} \cdot p_{31} &amp; p_{12}^{2} \end{pmatrix} } = G_{31} + G_{12} + G_{23} + 2 m_{1} m_{2} m_{3}^{2} \left(r_{23} r_{31} - r_{12} \right) - 2 m_{2} m_{3} m_{1}^{2} \left( r_{31} r_{12} - r_{23} \right) + 2 m_{3} m_{1} m_{2}^{2} \left(r_{12} r_{23} - r_{31} \right). $$</div>
-<p>
-Finally, you have the 3-Gram invariant with the three 2-composite momenta:
-</p>
-<div class="math">$$ G_{(12)(23)(31)} = \det{ \begin{pmatrix} p_{12}^{2} &amp; p_{12} \cdot p_{23} &amp; p_{12} \cdot p_{31} \\ p_{23} \cdot p_{12} &amp; p_{23}^{2} &amp; p_{23} \cdot p_{31} \\ p_{31} \cdot p_{12} &amp; p_{31} \cdot p_{23} &amp; p_{31}^{2} \end{pmatrix} }. $$</div>
+Other invariants involving 2-composite momenta are not complementary (i.e. they repeat bodies).</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
