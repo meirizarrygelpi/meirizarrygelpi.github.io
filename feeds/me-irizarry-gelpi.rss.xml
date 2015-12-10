@@ -1,5 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 09 Dec 2015 00:00:00 -0500</lastBuildDate><item><title>Recursive Three-Body Sudakov Decomposition</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/recursive-three-body-sudakov/</link><description>&lt;p&gt;In two previous posts I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/"&gt;simple&lt;/a&gt; and &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/three-body-composite-kinematics/"&gt;composite&lt;/a&gt; kinematics of three-body problems. The &lt;strong&gt;recursive Sudakov decomposition&lt;/strong&gt; is done in two two-body stages. First, you write
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 10 Dec 2015 00:00:00 -0500</lastBuildDate><item><title>Four-Body Sudakov Decompositions</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/four-body-decompositions/</link><description>&lt;p&gt;In previous posts I discussed &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/"&gt;two-body&lt;/a&gt; and three-body Sudakov decompositions (&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-point-sudakov/"&gt;here&lt;/a&gt;, &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/"&gt;here&lt;/a&gt;, and &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/recursive-three-body-sudakov/"&gt;here&lt;/a&gt;). By Sudakov decomposition, I mean the process of assigning a null vector to each massive vector. In the two-body problem this decomposition is unique, but for the three-body problem there are least four distinct ones (one contiguous and three recursive). Here in this post, I will consider four-body problems and the many kinds of Sudakov decompostions that can be done.&lt;/p&gt;
+&lt;p&gt;There are plenty of kinematic variables in a four-body problem. You have four &lt;strong&gt;on-shell&lt;/strong&gt; constraints:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left\Vert p_{i} \right\Vert^{2} = m_{i}^{2}; $$&lt;/div&gt;
+&lt;p&gt;
+six &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s_{ij} \equiv \left\Vert p_{i} + p_{j} \right\Vert^{2}; $$&lt;/div&gt;
+&lt;p&gt;
+six &lt;strong&gt;Regge-Mandelstam&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r_{ij} \equiv \frac{s_{ij} - m_{i}^{2} - m_{j}^{2}}{2 m_{i} m_{j}}; $$&lt;/div&gt;
+&lt;p&gt;
+six &lt;strong&gt;2-Gram&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{ij} \equiv -\det{ \begin{pmatrix} \left\Vert p_{i} \right\Vert^{2} &amp;amp; p_{i} \cdot p_{j} \\ p_{j} \cdot p_{i} &amp;amp; \left\Vert p_{j} \right\Vert^{2} \end{pmatrix} }; $$&lt;/div&gt;
+&lt;p&gt;
+four &lt;strong&gt;3-Mandelstam&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s_{ijk} \equiv \left\Vert p_{i} + p_{j} + p_{k} \right\Vert^{2}; $$&lt;/div&gt;
+&lt;p&gt;
+four &lt;strong&gt;3-Gram&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{ijk} \equiv \det{ \begin{pmatrix} \left\Vert p_{i} \right\Vert^{2} &amp;amp; p_{i} \cdot p_{j} &amp;amp; p_{i} \cdot p_{k} \\ p_{j} \cdot p_{i} &amp;amp; \left\Vert p_{j} \right\Vert^{2} &amp;amp; p_{j} \cdot p_{k} \\ p_{k} \cdot p_{i} &amp;amp; p_{k} \cdot p_{i} &amp;amp; \left\Vert p_{k} \right\Vert^{2} \end{pmatrix} }; $$&lt;/div&gt;
+&lt;p&gt;
+one &lt;strong&gt;4-Mandelstam&lt;/strong&gt; invariant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s_{1234} \equiv \left\Vert p_{1} + p_{2} + p_{3} + p_{4} \right\Vert^{2}; $$&lt;/div&gt;
+&lt;p&gt;
+and one &lt;strong&gt;4-Gram&lt;/strong&gt; invariant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{1234} \equiv -\det{ \begin{pmatrix} \left\Vert p_{1} \right\Vert^{2} &amp;amp; p_{1} \cdot p_{2} &amp;amp; p_{1} \cdot p_{3} &amp;amp; p_{1} \cdot p_{4} \\ p_{2} \cdot p_{1} &amp;amp; \left\Vert p_{2} \right\Vert^{2} &amp;amp; p_{2} \cdot p_{3} &amp;amp; p_{2} \cdot p_{4} \\ p_{3} \cdot p_{1} &amp;amp; p_{3} \cdot p_{2} &amp;amp; \left\Vert p_{3} \right\Vert^{2} &amp;amp; p_{3} \cdot p_{4} \\ p_{4} \cdot p_{1} &amp;amp; p_{4} \cdot p_{2} &amp;amp; p_{4} \cdot p_{3} &amp;amp; \left\Vert p_{4} \right\Vert^{2} \end{pmatrix} }. $$&lt;/div&gt;
+&lt;p&gt;
+You also have &lt;strong&gt;Regge-Gram&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ g_{ij} \equiv \frac{G_{ij}}{m_{i}^{2} m_{j}^{2}}, \qquad g_{ijk} \equiv \frac{G_{ijk}}{m_{i}^{2} m_{j}^{2} m_{k}^{2}}, \qquad g_{1234} \equiv \frac{G_{1234}}{m_{1}^{2} m_{2}^{2} m_{3}^{2} m_{4}^{2}}. $$&lt;/div&gt;
+&lt;p&gt;
+All of these invariants should be enough to describe any four-body problem.&lt;/p&gt;
+&lt;h2&gt;Contiguous&lt;/h2&gt;
+&lt;p&gt;The four-body generalization of the contiguous three-body Sudakov decomposition is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}. $$&lt;/div&gt;
+&lt;p&gt;
+Here the &lt;span class="math"&gt;\(n_{i}\)&lt;/span&gt; vectors are null, and I have introduced &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{ij} \equiv \left\Vert n_{i} + n_{j} \right\Vert^{2} = 2 \left( n_{i} \cdot n_{j} \right). $$&lt;/div&gt;
+&lt;p&gt;
+There are two other 2-Sudakov invariants besides the four that appear explicitly in the decomposition. Like before, the goal is to write the 2-Sudakov invariants in terms of 2-Mandelstam invariants and masses. Introduce &lt;strong&gt;Regge-Sudakov&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ R_{ij} \equiv \frac{S_{ij}}{m_{i} m_{j}}. $$&lt;/div&gt;
+&lt;p&gt;
+Using the six identities of the form
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r_{ij} = \frac{p_{i} \cdot p_{j}}{m_{i} m_{j}}, $$&lt;/div&gt;
+&lt;p&gt;
+you find the relations:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 2r_{12} = R_{12} + \frac{R_{13}}{R_{23}} + \frac{1}{R_{12}}, \qquad 2r_{23} = R_{23} + \frac{R_{24}}{R_{34}} + \frac{1}{R_{23}}, \qquad 2r_{34} = R_{34} + \frac{R_{13}}{R_{41}} + \frac{1}{R_{34}}, \qquad 2r_{41} = R_{41} + \frac{R_{24}}{R_{12}} + \frac{1}{R_{41}}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2r_{13} = R_{13} + \frac{R_{41}}{R_{34}} + \frac{R_{23}}{R_{12}} + \frac{R_{24}}{R_{12} R_{34}}, \qquad 2r_{24} = R_{24} + \frac{R_{12}}{R_{41}} + \frac{R_{34}}{R_{23}} + \frac{R_{13}}{R_{23} R_{41}}. $$&lt;/div&gt;
+&lt;p&gt;
+This set of equations is harder to solve than the analogous set for the three-body case.&lt;/p&gt;
+&lt;p&gt;Actually, there are two other non-equivalent contiguous four-body Sudakov decompositions:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{41}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{24}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}; $$&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{24}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}. $$&lt;/div&gt;
+&lt;h2&gt;Non-Contiguous&lt;/h2&gt;
+&lt;p&gt;With four bodies you can also perform a non-contiguous Sudakov decomposition where you combine two two-body decompositions. For example,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}. $$&lt;/div&gt;
+&lt;p&gt;
+Then
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}, \qquad 2 r_{34} = R_{34} + \frac{1}{R_{34}}; $$&lt;/div&gt;
+&lt;p&gt;
+and you have a linear system for the remaining Regge-Sudakov invariants. I discussed a particular case of this decomposition for a &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/"&gt;four-point process&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Just like contiguous decompositions, there are two other non-equivalent non-contiguous four-body Sudakov decompositions:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{13}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}; \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{24}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{24}} n_{2}; $$&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{41}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}; \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{23}} n_{2}. $$&lt;/div&gt;
+&lt;h2&gt;Recursive&lt;/h2&gt;
+&lt;p&gt;There are two kinds of recursive decompositions. Both kinds begin with a two-body step involving a 3-composite vector and a simple vector. For example, with
+&lt;/p&gt;
+&lt;div class="math"&gt;$$p_{123} \equiv p_{1} + p_{2} + p_{3}; \qquad s_{1234} = \left\Vert p_{123} + p_{4} \right\Vert^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+The two-body decompsition is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{123} = n_{123} + \frac{s_{123}}{S_{(123)4}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{(123)4}} n_{123}; $$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(n_{123}\)&lt;/span&gt; is a null vector, and
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{(123)4} \equiv \left\Vert n_{123} + n_{4} \right\Vert^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+From
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \frac{p_{123} \cdot p_{4}}{\sqrt{s_{123}} m_{4}} = \frac{s_{1234} - s_{123} - m_{4}^{2}}{2 \sqrt{s_{123}} m_{4}}, $$&lt;/div&gt;
+&lt;p&gt;
+it follows that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{(123)4} = \frac{1}{2} \left( s_{1234} - s_{123} - m_{4}^{2} + \sqrt{ \left( s_{1234} - s_{123} - m_{4}^{2} \right)^{2} - 4 s_{123} m_{4}^{2}} \right). $$&lt;/div&gt;
+&lt;p&gt;
+At this step you have a null vector for &lt;span class="math"&gt;\(p_{4}\)&lt;/span&gt;. What is left is to find null vectors for the rest of the massive momenta. Here is where the fork arises. You can either perform a contiguous three-body decomposition, or a recursive three-body decomposition. The outcome in both cases will be very different from the contiguous four-body decomposition above.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Thu, 10 Dec 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-12-10:posts/2015/Dec/four-body-decompositions/</guid><category>sudakov</category><category>four-body</category></item><item><title>Recursive Three-Body Sudakov Decomposition</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/recursive-three-body-sudakov/</link><description>&lt;p&gt;In two previous posts I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/"&gt;simple&lt;/a&gt; and &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/three-body-composite-kinematics/"&gt;composite&lt;/a&gt; kinematics of three-body problems. The &lt;strong&gt;recursive Sudakov decomposition&lt;/strong&gt; is done in two two-body stages. First, you write
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}.$$&lt;/div&gt;
 &lt;p&gt;
@@ -182,9 +344,9 @@ For Regge-Mandelstam and 2-Gram invariants, you need two momentum vectors. Takin
 &lt;p&gt;
 and three &lt;strong&gt;composite 2-Gram&lt;/strong&gt; invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ G_{(12)3} \equiv -\det{ \begin{pmatrix} p_{12}^{2} &amp;amp; p_{12} \cdot p_{3} \\ p_{3} \cdot p_{12} &amp;amp; p_{3}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{123} - s_{12} - m_{3}^{2} \right)^{2} - 4 s_{12} m_{3}^{2} \right] = \frac{1}{4} \left[ \left( s_{23} + s_{31} - m_{1}^{2} - m_{2}^{2} - 2 m_{3}^{2} \right)^{2} - 4 s_{12} m_{3}^{2} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ G_{(23)1} \equiv -\det{ \begin{pmatrix} p_{23}^{2} &amp;amp; p_{23} \cdot p_{1} \\ p_{1} \cdot p_{23} &amp;amp; p_{1}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{123} - s_{23} - m_{1}^{2} \right)^{2} - 4 s_{23} m_{1}^{2} \right] = \frac{1}{4} \left[ \left( s_{31} + s_{12} - 2m_{1}^{2} - m_{2}^{2} - m_{3}^{2} \right)^{2} - 4 s_{23} m_{1}^{2} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ G_{(31)2} \equiv -\det{ \begin{pmatrix} p_{31}^{2} &amp;amp; p_{31} \cdot p_{2} \\ p_{2} \cdot p_{31} &amp;amp; p_{2}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{123} - s_{31} - m_{2}^{2} \right)^{2} - 4 s_{31} m_{2}^{2} \right] = \frac{1}{4} \left[ \left( s_{12} + s_{23} - m_{1}^{2} - 2m_{2}^{2} - m_{3}^{2} \right)^{2} - 4 s_{31} m_{2}^{2} \right]. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{(12)3} \equiv -\det{ \begin{pmatrix} \left\Vert p_{12} \right\Vert^{2} &amp;amp; p_{12} \cdot p_{3} \\ p_{3} \cdot p_{12} &amp;amp; \left\Vert p_{3} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{123} - s_{12} - m_{3}^{2} \right)^{2} - 4 s_{12} m_{3}^{2} \right] = \frac{1}{4} \left[ \left( s_{23} + s_{31} - m_{1}^{2} - m_{2}^{2} - 2 m_{3}^{2} \right)^{2} - 4 s_{12} m_{3}^{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{(23)1} \equiv -\det{ \begin{pmatrix} \left\Vert p_{23} \right\Vert^{2} &amp;amp; p_{23} \cdot p_{1} \\ p_{1} \cdot p_{23} &amp;amp; \left\Vert p_{1} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{123} - s_{23} - m_{1}^{2} \right)^{2} - 4 s_{23} m_{1}^{2} \right] = \frac{1}{4} \left[ \left( s_{31} + s_{12} - 2m_{1}^{2} - m_{2}^{2} - m_{3}^{2} \right)^{2} - 4 s_{23} m_{1}^{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{(31)2} \equiv -\det{ \begin{pmatrix} \left\Vert p_{31} \right\Vert^{2} &amp;amp; p_{31} \cdot p_{2} \\ p_{2} \cdot p_{31} &amp;amp; \left\Vert p_{2} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{123} - s_{31} - m_{2}^{2} \right)^{2} - 4 s_{31} m_{2}^{2} \right] = \frac{1}{4} \left[ \left( s_{12} + s_{23} - m_{1}^{2} - 2m_{2}^{2} - m_{3}^{2} \right)^{2} - 4 s_{31} m_{2}^{2} \right]. $$&lt;/div&gt;
 &lt;p&gt;
 In terms of simple Regge-Mandelstam and 2-Gram invariants you have
 &lt;/p&gt;
@@ -463,13 +625,13 @@ You can also introduce three &lt;strong&gt;Regge-Mandelstam&lt;/strong&gt; invar
 &lt;p&gt;
 There are three &lt;strong&gt;2-Gram&lt;/strong&gt; invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ G_{12} \equiv - \det{ \begin{pmatrix} p_{1}^{2} &amp;amp; p_{1} \cdot p_{2} \\ p_{2} \cdot p_{1} &amp;amp; p_{2}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right] = m_{1}^{2} m_{2}^{2} \left( r_{12}^{2} - 1 \right);$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ G_{23} \equiv - \det{ \begin{pmatrix} p_{2}^{2} &amp;amp; p_{2} \cdot p_{3} \\ p_{3} \cdot p_{2} &amp;amp; p_{3}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right)^{2} - 4 m_{2}^{2} m_{3}^{2} \right] = m_{2}^{2} m_{3}^{2} \left( r_{23}^{2} - 1 \right);$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ G_{31} \equiv - \det{ \begin{pmatrix} p_{3}^{2} &amp;amp; p_{3} \cdot p_{1} \\ p_{1} \cdot p_{3} &amp;amp; p_{1}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right)^{2} - 4 m_{3}^{2} m_{1}^{2} \right] = m_{3}^{2} m_{1}^{2} \left( r_{31}^{2} - 1 \right);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{12} \equiv - \det{ \begin{pmatrix} \left\Vert p_{1} \right\Vert^{2} &amp;amp; p_{1} \cdot p_{2} \\ p_{2} \cdot p_{1} &amp;amp; \left\Vert p_{2} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right] = m_{1}^{2} m_{2}^{2} \left( r_{12}^{2} - 1 \right);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{23} \equiv - \det{ \begin{pmatrix} \left\Vert p_{2} \right\Vert^{2} &amp;amp; p_{2} \cdot p_{3} \\ p_{3} \cdot p_{2} &amp;amp; \left\Vert p_{3} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right)^{2} - 4 m_{2}^{2} m_{3}^{2} \right] = m_{2}^{2} m_{3}^{2} \left( r_{23}^{2} - 1 \right);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{31} \equiv - \det{ \begin{pmatrix} \left\Vert p_{3} \right\Vert^{2} &amp;amp; p_{3} \cdot p_{1} \\ p_{1} \cdot p_{3} &amp;amp; \left\Vert p_{1} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right)^{2} - 4 m_{3}^{2} m_{1}^{2} \right] = m_{3}^{2} m_{1}^{2} \left( r_{31}^{2} - 1 \right);$$&lt;/div&gt;
 &lt;p&gt;
 and one &lt;strong&gt;3-Gram&lt;/strong&gt; invariant:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$G_{123} = \det{ \begin{pmatrix} p_{1}^{2} &amp;amp; p_{1} \cdot p_{2} &amp;amp; p_{1} \cdot p_{3} \\ p_{2} \cdot p_{1} &amp;amp; p_{2}^{2} &amp;amp; p_{2} \cdot p_{3} \\ p_{3} \cdot p_{1} &amp;amp; p_{3} \cdot p_{2} &amp;amp; p_{3}^{2} \end{pmatrix} }  = m_{1}^{2} m_{2}^{2} m_{3}^{2} \left( 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{23}^{2} - r_{31}^{2} + 1 \right).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$G_{123} = \det{ \begin{pmatrix} \left\Vert p_{1} \right\Vert^{2} &amp;amp; p_{1} \cdot p_{2} &amp;amp; p_{1} \cdot p_{3} \\ p_{2} \cdot p_{1} &amp;amp; \left\Vert p_{2} \right\Vert^{2} &amp;amp; p_{2} \cdot p_{3} \\ p_{3} \cdot p_{1} &amp;amp; p_{3} \cdot p_{2} &amp;amp; \left\Vert p_{3} \right\Vert^{2} \end{pmatrix} }  = m_{1}^{2} m_{2}^{2} m_{3}^{2} \left( 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{23}^{2} - r_{31}^{2} + 1 \right).$$&lt;/div&gt;
 &lt;p&gt;
 More explicitly,
 &lt;/p&gt;
@@ -565,7 +727,7 @@ You can also introduce the corresponding &lt;strong&gt;Regge-Mandelstam&lt;/stro
 &lt;p&gt;
 There is one &lt;strong&gt;2-Gram&lt;/strong&gt; invariant:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ G_{12} \equiv - \det{ \begin{pmatrix} p_{1}^{2} &amp;amp; p_{1} \cdot p_{2} \\ p_{2} \cdot p_{1} &amp;amp; p_{2}^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right] = m_{1}^{2} m_{2}^{2} \left( r_{12}^{2} - 1 \right).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{12} \equiv - \det{ \begin{pmatrix} \left\Vert p_{1} \right\Vert^{2} &amp;amp; p_{1} \cdot p_{2} \\ p_{2} \cdot p_{1} &amp;amp; \left\Vert p_{2} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right] = m_{1}^{2} m_{2}^{2} \left( r_{12}^{2} - 1 \right).$$&lt;/div&gt;
 &lt;p&gt;
 All of these invariants are present in any two-body problem.&lt;/p&gt;
 &lt;p&gt;The &lt;strong&gt;two-body Sudakov decomposition&lt;/strong&gt; is given by
