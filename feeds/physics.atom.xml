@@ -9,7 +9,7 @@ This is just a two-body Sudakov decomposition of two of the three momenta. Next,
 &lt;p&gt;
 Here &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(n_{2}\)&lt;/span&gt;, &lt;span class="math"&gt;\(n_{12}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(n_{3}\)&lt;/span&gt; are null vectors, and I have introduced two &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{12} \equiv \left( n_{1} + n_{2} \right)^{2} = 2 \left( n_{1} \cdot n_{2} \right), \qquad S_{(12)3} \equiv \left( n_{12} + n_{3} \right)^{2} = 2 \left( n_{12} \cdot n_{3} \right).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} \equiv \left\Vert n_{1} + n_{2} \right\Vert^{2} = 2 \left( n_{1} \cdot n_{2} \right), \qquad S_{(12)3} \equiv \left\Vert n_{12} + n_{3} \right\Vert^{2} = 2 \left( n_{12} \cdot n_{3} \right).$$&lt;/div&gt;
 &lt;p&gt;
 From the familiar &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/"&gt;two-body Sudakov decomposition&lt;/a&gt; you have
 &lt;/p&gt;
@@ -18,7 +18,7 @@ From the familiar &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/tw
 &lt;p&gt;
 But you can further introduce two other 2-Sudakov invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{23} \equiv \left( n_{2} + n_{3} \right)^{2} = 2 \left( n_{2} \cdot n_{3} \right), \qquad S_{31} \equiv \left( n_{3} + n_{1} \right)^{2} = 2 \left( n_{3} \cdot n_{1} \right).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{23} \equiv \left\Vert n_{2} + n_{3} \right\Vert^{2} = 2 \left( n_{2} \cdot n_{3} \right), \qquad S_{31} \equiv \left\Vert n_{3} + n_{1} \right\Vert^{2} = 2 \left( n_{3} \cdot n_{1} \right).$$&lt;/div&gt;
 &lt;p&gt;
 The goal here is to write these 2-Sudakov invariants in terms of the Mandelstam invariants and the masses. Using
 &lt;/p&gt;
@@ -103,7 +103,7 @@ Note that &lt;span class="math"&gt;\(R_{23}\)&lt;/span&gt; and &lt;span class="m
 &lt;p&gt;
 These vectors involve the momenta of two quanta. Note that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ s_{123} \equiv \left( p_{1} + p_{2} + p_{3} \right)^{2} = \left( p_{12} + p_{3} \right)^{2} = \left( p_{23} + p_{1} \right)^{2} = \left( p_{31} + p_{2} \right)^{2}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ s_{123} \equiv \left\Vert p_{1} + p_{2} + p_{3} \right\Vert^{2} = \left\Vert p_{12} + p_{3} \right\Vert^{2} = \left\Vert p_{23} + p_{1} \right\Vert^{2} = \left\Vert p_{31} + p_{2} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;
 For Regge-Mandelstam and 2-Gram invariants, you need two momentum vectors. Taking one vector to be 2-composite and the other to be simple but complementary, you have three &lt;strong&gt;composite Regge-Mandelstam&lt;/strong&gt; invariants:
 &lt;/p&gt;
@@ -266,7 +266,7 @@ These provide an argument for restricting only to the range &lt;span class="math
 &lt;p&gt;
 Here &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(n_{2}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(n_{3}\)&lt;/span&gt; are null &lt;strong&gt;Sudakov&lt;/strong&gt; vectors, and I have introduced three &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{12} \equiv \left( n_{1} + n_{2} \right)^{2}, \qquad S_{23} \equiv \left( n_{2} + n_{3} \right)^{2}, \qquad S_{31} \equiv \left( n_{3} + n_{1} \right)^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} \equiv \left\Vert n_{1} + n_{2} \right\Vert^{2}, \qquad S_{23} \equiv \left\Vert n_{2} + n_{3} \right\Vert^{2}, \qquad S_{31} \equiv \left\Vert n_{3} + n_{1} \right\Vert^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 The labeling of the Sudakov vectors is such that in a massless limit &lt;span class="math"&gt;\(m_{i} \rightarrow 0\)&lt;/span&gt; the momentum &lt;span class="math"&gt;\(p_{i}\)&lt;/span&gt; becomes the null vector &lt;span class="math"&gt;\(n_{i}\)&lt;/span&gt;. From the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/"&gt;two-body decomposition&lt;/a&gt; you expect each Sudakov vector to carry the content of many individual quanta. The above decomposition can be written in matrix form:
 &lt;/p&gt;
@@ -370,15 +370,15 @@ Thus, when all three masses vanish the Sudakov vectors become the momenta of the
 }
 &lt;/script&gt;</summary><category term="sudakov"></category><category term="three-body"></category></entry><entry><title>Three-Body Kinematics</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/" rel="alternate"></link><updated>2015-11-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/three-body-kinematics/</id><summary type="html">&lt;p&gt;In this post I will consider the kinematics of problems with three independent momentum vectors, each of which describe a distinct massive quantum. That is, you do not have any conservation constraint relating these three vectors. But you still have three on-shell constraints:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1}^{2} = m_{1}^{2}, \qquad p_{2}^{2} = m_{2}^{2}, \qquad p_{3}^{2} = m_{3}^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \left\Vert p_{1} \right\Vert^{2} = m_{1}^{2}, \qquad \left\Vert p_{2} \right\Vert^{2} = m_{2}^{2}, \qquad \left\Vert p_{3} \right\Vert^{2} = m_{3}^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 You can introduce three &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ s_{12} \equiv \left( p_{1} + p_{2} \right)^{2}, \qquad s_{23} \equiv \left( p_{2} + p_{3} \right)^{2}, \qquad s_{31} \equiv \left( p_{3} + p_{1} \right)^{2};$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ s_{12} \equiv \left\Vert p_{1} + p_{2} \right\Vert^{2}, \qquad s_{23} \equiv \left\Vert p_{2} + p_{3} \right\Vert^{2}, \qquad s_{31} \equiv \left\Vert p_{3} + p_{1} \right\Vert^{2};$$&lt;/div&gt;
 &lt;p&gt;
 and one &lt;strong&gt;3-Mandelstam&lt;/strong&gt; invariant:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ s_{123} \equiv \left( p_{1} + p_{2} + p_{3} \right)^{2} = s_{12} + s_{23} + s_{31} - m_{1}^{2} - m_{2}^{2} - m_{3}^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ s_{123} \equiv \left\Vert p_{1} + p_{2} + p_{3} \right\Vert^{2} = s_{12} + s_{23} + s_{31} - m_{1}^{2} - m_{2}^{2} - m_{3}^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 You can also introduce three &lt;strong&gt;Regge-Mandelstam&lt;/strong&gt; invariants:
 &lt;/p&gt;
@@ -476,11 +476,11 @@ All of these invariants are present in any three-body problem.&lt;/p&gt;
 }
 &lt;/script&gt;</summary><category term="sudakov"></category><category term="three-body"></category></entry><entry><title>Two-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/" rel="alternate"></link><updated>2015-11-25T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-25:posts/2015/Nov/two-body-sudakov/</id><summary type="html">&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive quantum. That is, you do not have any conservation constraint relating these two momentum vectors. But you still have two &lt;strong&gt;on-shell constraints&lt;/strong&gt;:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1}^{2} = m_{1}^{2}, \qquad p_{2}^{2} = m_{2}^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \left\Vert p_{1} \right\Vert^{2} = m_{1}^{2}, \qquad \left\Vert p_{2} \right\Vert^{2} = m_{2}^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 You can introduce a &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariant:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ s_{12} \equiv \left( p_{1} + p_{2} \right)^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ s_{12} \equiv \left\Vert p_{1} + p_{2} \right\Vert^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 You can also introduce the corresponding &lt;strong&gt;Regge-Mandelstam&lt;/strong&gt; invariant:
 &lt;/p&gt;
@@ -497,7 +497,7 @@ All of these invariants are present in any two-body problem.&lt;/p&gt;
 &lt;p&gt;
 Here &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{2}\)&lt;/span&gt; are null vectors, and I have introduced a &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariant:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{12} \equiv \left( n_{1} + n_{2} \right)^{2} = 2 \left( n_{1} \cdot n_{2} \right).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} \equiv \left\Vert n_{1} + n_{2} \right\Vert^{2} = 2 \left( n_{1} \cdot n_{2} \right).$$&lt;/div&gt;
 &lt;p&gt;
 This decomposition can be thought of as a way to explicitly solve the on-shell constraints. The labeling of the null vectors is such that in a massless limit &lt;span class="math"&gt;\(m_{i} \rightarrow 0\)&lt;/span&gt; the momentum &lt;span class="math"&gt;\(p_{i}\)&lt;/span&gt; becomes the null vector &lt;span class="math"&gt;\(n_{i}\)&lt;/span&gt;. At first glance, this might lead you to believe that &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt; is only associated with &lt;span class="math"&gt;\(p_{1}\)&lt;/span&gt;, but that is not the case. In matrix form, the above decomposition is
 &lt;/p&gt;
@@ -623,7 +623,7 @@ You have a conservation constraint,
 &lt;p&gt;
 and three on-shell constraints:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1}^{2} = m_{1}^{2}, \qquad p_{2}^{2} = m_{2}^{2}, \qquad p_{3}^{2} = m_{3}^{2}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \left\Vert p_{1} \right\Vert^{2} = m_{1}^{2}, \qquad \left\Vert p_{2} \right\Vert^{2} = m_{2}^{2}, \qquad \left\Vert p_{3} \right\Vert^{2} = m_{3}^{2}. $$&lt;/div&gt;
 &lt;p&gt;
 From the conservation constraint, you find three relations
 &lt;/p&gt;
@@ -639,7 +639,7 @@ Next you introduce null Sudakov momenta:
 &lt;p&gt;
 Here I have also introduced three Sudakov invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{12} \equiv \left( n_{1} + n_{2} \right)^{2}, \qquad T_{23} \equiv \left( n_{2} - n_{3} \right)^{2}, \qquad T_{31} \equiv \left( n_{3} - n_{1} \right)^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} \equiv \left\Vert n_{1} + n_{2} \right\Vert^{2}, \qquad T_{23} \equiv \left\Vert n_{2} - n_{3} \right\Vert^{2}, \qquad T_{31} \equiv \left\Vert n_{3} - n_{1} \right\Vert^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 In terms of the Sudakov invariants, you have
 &lt;/p&gt;
@@ -735,11 +735,11 @@ You have the conservation constraint,
 &lt;p&gt;
 and the on-shell constraints,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1}^{2} + m_{1}^{2} = 0, \qquad p_{2}^{2} + m_{2}^{2} = 0, \qquad p_{3}^{2} + m_{3}^{2} = 0, \qquad p_{4}^{2} + m_{4}^{2} = 0. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \left\Vert p_{1} \right\Vert^{2} + m_{1}^{2} = 0, \qquad \left\Vert p_{2} \right\Vert^{2} + m_{2}^{2} = 0, \qquad \left\Vert p_{3} \right\Vert^{2} + m_{3}^{2} = 0, \qquad \left\Vert p_{4} \right\Vert^{2} + m_{4}^{2} = 0. $$&lt;/div&gt;
 &lt;p&gt;
 Traditionally, you use the Mandelstam invariants to describe the kinematics of this process:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ s = -(p_{1} + p_{2})^{2} = -(p_{3} + p_{4})^{2}, \qquad t = -(p_{1} - p_{3})^{2} = -(p_{4} - p_{2})^{2} , \qquad u = -(p_{1} - p_{4})^{2} = -(p_{3} - p_{2})^{2}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ s = -\left\Vert p_{1} + p_{2} \right\Vert^{2} = -\left\Vert p_{3} + p_{4} \right\Vert^{2}, \qquad t = -\left\Vert p_{1} - p_{3} \right\Vert^{2} = -\left\Vert p_{4} - p_{2} \right\Vert^{2} , \qquad u = -\left\Vert p_{1} - p_{4} \right\Vert^{2} = -\left\Vert p_{3} - p_{2} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;
 Due to the conservation constraint, the three Mandelstam invariants satisfy a linear constraint:
 &lt;/p&gt;
@@ -756,7 +756,7 @@ This is valid because, in general, a linear combination of two null vectors is n
 &lt;p&gt;
 You can introduce six Sudakov invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{12} = - (k_{1} + k_{2})^{2}, \qquad T_{13} = -(k_{1} - k_{3})^{2}, \qquad U_{14} = -(k_{1} - k_{4})^{2}, \qquad U_{23} = -(k_{3} - k_{2})^{2}, \qquad T_{24} = -(k_{4} - k_{2})^{2}, \qquad S_{34} = -(k_{3} + k_{4})^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} = - \left\Vert k_{1} + k_{2} \right\Vert^{2}, \qquad T_{13} = -\left\Vert k_{1} - k_{3} \right\Vert^{2}, \qquad U_{14} = -\left\Vert k_{1} - k_{4} \right\Vert^{2}, \qquad U_{23} = -\left\Vert k_{3} - k_{2} \right\Vert^{2}, \qquad T_{24} = -\left\Vert k_{4} - k_{2} \right\Vert^{2}, \qquad S_{34} = -\left\Vert k_{3} + k_{4} \right\Vert^{2}.$$&lt;/div&gt;
 &lt;p&gt;
 In principle, you can write these invariants in terms of the masses and the Mandelstam invariants. The system of six equations to solve is
 &lt;/p&gt;
