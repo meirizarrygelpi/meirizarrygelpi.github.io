@@ -1,5 +1,270 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/maths.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-05-06T00:00:00-04:00</updated><entry><title>The Triangle Product for 3-Hypermatrices</title><link href="http://meirizarrygelpi.github.io/posts/2015/May/triangle-product-3-hypermatrices/" rel="alternate"></link><updated>2015-05-06T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-05-06:posts/2015/May/triangle-product-3-hypermatrices/</id><summary type="html">&lt;p&gt;Lately, I have been thinking about vectors, matrices and linear algebra. Indeed, I have been thinking about higher-dimensional generalizations of matrices, i.e. from two-dimensional arrays of numbers to three-dimensional arrays of numbers. This was triggered by reading &lt;a href="http://radar.oreilly.com/2015/03/lets-build-open-source-tensor-libraries-for-data-science.html"&gt;this blog post on tensors&lt;/a&gt;. In this post I will propose some generalizations to many of the properties of matrices to the case of 3-hypermatrices.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/maths.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-13T00:00:00-05:00</updated><entry><title>NumPy Implementation of the Triangle Product</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/numpy-triangle-product/" rel="alternate"></link><updated>2015-12-13T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-13:posts/2015/Dec/numpy-triangle-product/</id><summary type="html">&lt;p&gt;In this post I will discuss an implementation of the triangle product for 3-arrays in NumPy. You start by importing and setting the seed of the random number generator:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;itertools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;product&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;
+
+&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A 3-array with random integer entries between 0 and 9, and size &lt;span class="math"&gt;\(\left(2, 3, 4\right)\)&lt;/span&gt; can be obtain with &lt;code&gt;random.random_integers(0, 9, (2, 3, 4))&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Given three 3-arrays &lt;code&gt;A&lt;/code&gt;, &lt;code&gt;B&lt;/code&gt;, and &lt;code&gt;C&lt;/code&gt;, the triangle product can be implemented by the function &lt;code&gt;mul_3&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;mul_3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;q&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;
+    &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;
+    &lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;
+    &lt;span class="n"&gt;D&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zeros&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;product&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;xrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="nb"&gt;xrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="nb"&gt;xrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+        &lt;span class="n"&gt;P&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zeros&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;product&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;xrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="nb"&gt;xrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="nb"&gt;xrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+            &lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;D&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is a very yanky implementation, since it implicitly assumes that the size of the three input arrays are such that the triangle product exists. For example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;q&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random_integers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random_integers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random_integers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="n"&gt;D&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mul_3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here &lt;code&gt;A&lt;/code&gt; has size &lt;span class="math"&gt;\(\left(2, 3, 4\right)\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;B&lt;/code&gt; has size &lt;span class="math"&gt;\(\left(3, 2, 5\right)\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;C&lt;/code&gt; has size &lt;span class="math"&gt;\(\left(4, 5, 2\right)\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and &lt;code&gt;D&lt;/code&gt; has size &lt;span class="math"&gt;\(\left(2, 2, 2\right)\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[[&lt;/span&gt; &lt;span class="mf"&gt;2206.&lt;/span&gt;  &lt;span class="mf"&gt;2374.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;3832.&lt;/span&gt;  &lt;span class="mf"&gt;3985.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;3386.&lt;/span&gt;  &lt;span class="mf"&gt;3821.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;5417.&lt;/span&gt;  &lt;span class="mf"&gt;5907.&lt;/span&gt;&lt;span class="p"&gt;]]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now lets consider three cubic 3-arrays with the same size:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+
+&lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random_integers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;Y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random_integers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;Z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random_integers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can compute six triangle products corresponding to the six possible permutations of the inputs:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \operatorname{mul}_{3}\left(\mathbf{X}, \mathbf{Y}, \mathbf{Z} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Y}, \mathbf{Z}, \mathbf{X} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Z}, \mathbf{X}, \mathbf{Y} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Z}, \mathbf{Y}, \mathbf{X} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Y}, \mathbf{X}, \mathbf{Z} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{X}, \mathbf{Z}, \mathbf{Y} \right). $$&lt;/div&gt;
+&lt;p&gt;
+Each of these products yields a different 3-array. Explicitly, &lt;code&gt;mul_3(X, Y, Z)&lt;/code&gt; gives:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[[&lt;/span&gt; &lt;span class="mf"&gt;2917.&lt;/span&gt;  &lt;span class="mf"&gt;3313.&lt;/span&gt;  &lt;span class="mf"&gt;1870.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2174.&lt;/span&gt;  &lt;span class="mf"&gt;2617.&lt;/span&gt;  &lt;span class="mf"&gt;1412.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;3773.&lt;/span&gt;  &lt;span class="mf"&gt;4375.&lt;/span&gt;  &lt;span class="mf"&gt;2698.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;2658.&lt;/span&gt;  &lt;span class="mf"&gt;2780.&lt;/span&gt;  &lt;span class="mf"&gt;1955.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2173.&lt;/span&gt;  &lt;span class="mf"&gt;2202.&lt;/span&gt;  &lt;span class="mf"&gt;1575.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;3498.&lt;/span&gt;  &lt;span class="mf"&gt;3706.&lt;/span&gt;  &lt;span class="mf"&gt;2647.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;3017.&lt;/span&gt;  &lt;span class="mf"&gt;4176.&lt;/span&gt;  &lt;span class="mf"&gt;1873.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2775.&lt;/span&gt;  &lt;span class="mf"&gt;3216.&lt;/span&gt;  &lt;span class="mf"&gt;1796.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;4315.&lt;/span&gt;  &lt;span class="mf"&gt;5436.&lt;/span&gt;  &lt;span class="mf"&gt;2937.&lt;/span&gt;&lt;span class="p"&gt;]]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;mul_3(Y, Z, X)&lt;/code&gt; gives:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[[&lt;/span&gt; &lt;span class="mf"&gt;2268.&lt;/span&gt;  &lt;span class="mf"&gt;2044.&lt;/span&gt;  &lt;span class="mf"&gt;4254.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2243.&lt;/span&gt;  &lt;span class="mf"&gt;1942.&lt;/span&gt;  &lt;span class="mf"&gt;3578.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;1716.&lt;/span&gt;  &lt;span class="mf"&gt;1550.&lt;/span&gt;  &lt;span class="mf"&gt;3384.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;2904.&lt;/span&gt;  &lt;span class="mf"&gt;2824.&lt;/span&gt;  &lt;span class="mf"&gt;5646.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2578.&lt;/span&gt;  &lt;span class="mf"&gt;1982.&lt;/span&gt;  &lt;span class="mf"&gt;4482.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;1880.&lt;/span&gt;  &lt;span class="mf"&gt;2172.&lt;/span&gt;  &lt;span class="mf"&gt;4745.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;3205.&lt;/span&gt;  &lt;span class="mf"&gt;1942.&lt;/span&gt;  &lt;span class="mf"&gt;4949.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2626.&lt;/span&gt;  &lt;span class="mf"&gt;1557.&lt;/span&gt;  &lt;span class="mf"&gt;3865.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2362.&lt;/span&gt;  &lt;span class="mf"&gt;1574.&lt;/span&gt;  &lt;span class="mf"&gt;3979.&lt;/span&gt;&lt;span class="p"&gt;]]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;mul_3(Z, X, Y)&lt;/code&gt; gives:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[[&lt;/span&gt; &lt;span class="mf"&gt;3406.&lt;/span&gt;  &lt;span class="mf"&gt;2945.&lt;/span&gt;  &lt;span class="mf"&gt;3785.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2895.&lt;/span&gt;  &lt;span class="mf"&gt;3055.&lt;/span&gt;  &lt;span class="mf"&gt;3398.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;4697.&lt;/span&gt;  &lt;span class="mf"&gt;4184.&lt;/span&gt;  &lt;span class="mf"&gt;5530.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;2469.&lt;/span&gt;  &lt;span class="mf"&gt;2436.&lt;/span&gt;  &lt;span class="mf"&gt;3299.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2165.&lt;/span&gt;  &lt;span class="mf"&gt;2311.&lt;/span&gt;  &lt;span class="mf"&gt;2924.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;3114.&lt;/span&gt;  &lt;span class="mf"&gt;2966.&lt;/span&gt;  &lt;span class="mf"&gt;4680.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;2491.&lt;/span&gt;  &lt;span class="mf"&gt;2186.&lt;/span&gt;  &lt;span class="mf"&gt;2813.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2238.&lt;/span&gt;  &lt;span class="mf"&gt;2178.&lt;/span&gt;  &lt;span class="mf"&gt;2546.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;3777.&lt;/span&gt;  &lt;span class="mf"&gt;3448.&lt;/span&gt;  &lt;span class="mf"&gt;4690.&lt;/span&gt;&lt;span class="p"&gt;]]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;mul_3(Z, Y, X)&lt;/code&gt; gives:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[[&lt;/span&gt; &lt;span class="mf"&gt;2826.&lt;/span&gt;  &lt;span class="mf"&gt;2768.&lt;/span&gt;  &lt;span class="mf"&gt;4890.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2035.&lt;/span&gt;  &lt;span class="mf"&gt;2209.&lt;/span&gt;  &lt;span class="mf"&gt;3423.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;3515.&lt;/span&gt;  &lt;span class="mf"&gt;3538.&lt;/span&gt;  &lt;span class="mf"&gt;6302.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;2528.&lt;/span&gt;  &lt;span class="mf"&gt;1922.&lt;/span&gt;  &lt;span class="mf"&gt;3687.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;1987.&lt;/span&gt;  &lt;span class="mf"&gt;1414.&lt;/span&gt;  &lt;span class="mf"&gt;2816.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;3282.&lt;/span&gt;  &lt;span class="mf"&gt;2555.&lt;/span&gt;  &lt;span class="mf"&gt;5036.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;2446.&lt;/span&gt;  &lt;span class="mf"&gt;2282.&lt;/span&gt;  &lt;span class="mf"&gt;3737.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;1475.&lt;/span&gt;  &lt;span class="mf"&gt;1930.&lt;/span&gt;  &lt;span class="mf"&gt;3222.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2569.&lt;/span&gt;  &lt;span class="mf"&gt;2898.&lt;/span&gt;  &lt;span class="mf"&gt;5009.&lt;/span&gt;&lt;span class="p"&gt;]]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;mul_3(Y, X, Z)&lt;/code&gt; gives:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[[&lt;/span&gt; &lt;span class="mf"&gt;2481.&lt;/span&gt;  &lt;span class="mf"&gt;2799.&lt;/span&gt;  &lt;span class="mf"&gt;1741.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2148.&lt;/span&gt;  &lt;span class="mf"&gt;2367.&lt;/span&gt;  &lt;span class="mf"&gt;1561.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;3692.&lt;/span&gt;  &lt;span class="mf"&gt;4362.&lt;/span&gt;  &lt;span class="mf"&gt;2781.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;3121.&lt;/span&gt;  &lt;span class="mf"&gt;3833.&lt;/span&gt;  &lt;span class="mf"&gt;2235.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2612.&lt;/span&gt;  &lt;span class="mf"&gt;3306.&lt;/span&gt;  &lt;span class="mf"&gt;1817.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;4718.&lt;/span&gt;  &lt;span class="mf"&gt;5600.&lt;/span&gt;  &lt;span class="mf"&gt;3897.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;2579.&lt;/span&gt;  &lt;span class="mf"&gt;3197.&lt;/span&gt;  &lt;span class="mf"&gt;1738.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2491.&lt;/span&gt;  &lt;span class="mf"&gt;2674.&lt;/span&gt;  &lt;span class="mf"&gt;1571.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;4290.&lt;/span&gt;  &lt;span class="mf"&gt;4765.&lt;/span&gt;  &lt;span class="mf"&gt;2884.&lt;/span&gt;&lt;span class="p"&gt;]]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;mul_3(X, Z, Y)&lt;/code&gt; gives:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[[&lt;/span&gt; &lt;span class="mf"&gt;2678.&lt;/span&gt;  &lt;span class="mf"&gt;2724.&lt;/span&gt;  &lt;span class="mf"&gt;4463.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;1895.&lt;/span&gt;  &lt;span class="mf"&gt;2292.&lt;/span&gt;  &lt;span class="mf"&gt;3367.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;1890.&lt;/span&gt;  &lt;span class="mf"&gt;2000.&lt;/span&gt;  &lt;span class="mf"&gt;3541.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;2439.&lt;/span&gt;  &lt;span class="mf"&gt;2352.&lt;/span&gt;  &lt;span class="mf"&gt;3538.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2421.&lt;/span&gt;  &lt;span class="mf"&gt;1986.&lt;/span&gt;  &lt;span class="mf"&gt;3397.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2128.&lt;/span&gt;  &lt;span class="mf"&gt;2008.&lt;/span&gt;  &lt;span class="mf"&gt;3253.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;2381.&lt;/span&gt;  &lt;span class="mf"&gt;3040.&lt;/span&gt;  &lt;span class="mf"&gt;4967.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;2234.&lt;/span&gt;  &lt;span class="mf"&gt;2564.&lt;/span&gt;  &lt;span class="mf"&gt;4066.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;1952.&lt;/span&gt;  &lt;span class="mf"&gt;2343.&lt;/span&gt;  &lt;span class="mf"&gt;3900.&lt;/span&gt;&lt;span class="p"&gt;]]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Thus, the 2-array notion of non-commutativity carries over to 3-arrays with the triangle product.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="three-array"></category></entry><entry><title>The Triangle Product for 3-Hypermatrices</title><link href="http://meirizarrygelpi.github.io/posts/2015/May/triangle-product-3-hypermatrices/" rel="alternate"></link><updated>2015-05-06T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-05-06:posts/2015/May/triangle-product-3-hypermatrices/</id><summary type="html">&lt;p&gt;Lately, I have been thinking about vectors, matrices and linear algebra. Indeed, I have been thinking about higher-dimensional generalizations of matrices, i.e. from two-dimensional arrays of numbers to three-dimensional arrays of numbers. This was triggered by reading &lt;a href="http://radar.oreilly.com/2015/03/lets-build-open-source-tensor-libraries-for-data-science.html"&gt;this blog post on tensors&lt;/a&gt;. In this post I will propose some generalizations to many of the properties of matrices to the case of 3-hypermatrices.&lt;/p&gt;
 &lt;h2&gt;&lt;span class="math"&gt;\(k\)&lt;/span&gt;-Orthotopic Arrays&lt;/h2&gt;
 &lt;p&gt;A matrix is a rectangular array of elements. The 3-dimensional analog of a rectangle is the cuboid (also known as a 3-orthotope). Arranging elements into a cuboidal array yields what I will call a cuboidal 3-hypermatrix. A square matrix is a special case where the 2-dimensional array has a square shape. The 3-dimensional analog of a square is the cube. Arranging elements into a cubic array yields what I will call a cubic 3-hypermatrix.&lt;/p&gt;
 &lt;p&gt;More generally, the &lt;span class="math"&gt;\(k\)&lt;/span&gt;-dimensional analog of a rectangle is the &lt;span class="math"&gt;\(k\)&lt;/span&gt;-orthotope, and the &lt;span class="math"&gt;\(k\)&lt;/span&gt;-dimensional analog of a square is the &lt;span class="math"&gt;\(k\)&lt;/span&gt;-cube. Arranging elements into a &lt;span class="math"&gt;\(k\)&lt;/span&gt;-orthotopic array yields an orthotopic &lt;span class="math"&gt;\(k\)&lt;/span&gt;-hypermatrix. Similarly, arranging elements into a &lt;span class="math"&gt;\(k\)&lt;/span&gt;-cubic array yields a hypercubic &lt;span class="math"&gt;\(k\)&lt;/span&gt;-hypermatrix.&lt;/p&gt;
@@ -200,7 +465,7 @@ These are natural generalizations of the properties for matrices.&lt;/p&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="hypermatrix"></category></entry><entry><title>Tesseracts and Pentatopes</title><link href="http://meirizarrygelpi.github.io/posts/2015/Apr/tesseracts-and-pentatopes/" rel="alternate"></link><updated>2015-04-17T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-04-17:posts/2015/Apr/tesseracts-and-pentatopes/</id><summary type="html">&lt;p&gt;Recall the factorial function &lt;span class="math"&gt;\(n!\)&lt;/span&gt;
+&lt;/script&gt;</summary><category term="3-array"></category></entry><entry><title>Tesseracts and Pentatopes</title><link href="http://meirizarrygelpi.github.io/posts/2015/Apr/tesseracts-and-pentatopes/" rel="alternate"></link><updated>2015-04-17T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-04-17:posts/2015/Apr/tesseracts-and-pentatopes/</id><summary type="html">&lt;p&gt;Recall the factorial function &lt;span class="math"&gt;\(n!\)&lt;/span&gt;
 &lt;/p&gt;
 &lt;div class="math"&gt;$$n! = \prod_{k = 1}^{n}k$$&lt;/div&gt;
 &lt;p&gt;
