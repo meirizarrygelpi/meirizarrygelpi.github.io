@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 10 Dec 2015 00:00:00 -0500</lastBuildDate><item><title>Four-Body Sudakov Decompositions</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/four-body-decompositions/</link><description>&lt;p&gt;In previous posts I discussed &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/"&gt;two-body&lt;/a&gt; and three-body Sudakov decompositions (&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-point-sudakov/"&gt;here&lt;/a&gt;, &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/"&gt;here&lt;/a&gt;, and &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/recursive-three-body-sudakov/"&gt;here&lt;/a&gt;). By Sudakov decomposition, I mean the process of assigning a null vector to each massive vector. In the two-body problem this decomposition is unique, but for the three-body problem there are least four distinct ones (one contiguous and three recursive). Here in this post, I will consider four-body problems and the many kinds of Sudakov decompostions that can be done.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 12 Dec 2015 00:00:00 -0500</lastBuildDate><item><title>arXiv picks for 2015, week 50</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/2015-week-50/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.01548"&gt;Tensor Networks from Kinematic Space&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.02094"&gt;Unification of Force and Substance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.02408"&gt;The signed permutation group on Feynman graphs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.02477"&gt;String theory to the rescue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.02569"&gt;Amplitudes for left-handed strings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.02860"&gt;The &lt;span class="math"&gt;\(\mathcal{Q}\)&lt;/span&gt;-cut Representation of One-loop Integrands and Unitarity Cut Method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.02926"&gt;All three-loop four-point correlators of half-BPS operators in planar &lt;span class="math"&gt;\(N=4\)&lt;/span&gt; SYM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.03015"&gt;Asymptotic Fermionic Symmetry From Soft Gravitino Theorem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.03052"&gt;Conformal Blocks Beyond the Semi-Classical Limit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.03192"&gt;Perturbative quantum gravity in double field theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.03316"&gt;The story of the two dilatons&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 12 Dec 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-12-12:posts/2015/Dec/2015-week-50/</guid><category>research</category></item><item><title>Four-Body Sudakov Decompositions</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/four-body-decompositions/</link><description>&lt;p&gt;In previous posts I discussed &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/"&gt;two-body&lt;/a&gt; and three-body Sudakov decompositions (&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-point-sudakov/"&gt;here&lt;/a&gt;, &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/"&gt;here&lt;/a&gt;, and &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/recursive-three-body-sudakov/"&gt;here&lt;/a&gt;). By Sudakov decomposition, I mean the process of assigning a null vector to each massive vector. In the two-body problem this decomposition is unique, but for the three-body problem there are least four distinct ones (one contiguous and three recursive). Here in this post, I will consider four-body problems and the many kinds of Sudakov decompostions that can be done.&lt;/p&gt;
 &lt;p&gt;There are plenty of kinematic variables in a four-body problem. You have four &lt;strong&gt;on-shell&lt;/strong&gt; constraints:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \left\Vert p_{i} \right\Vert^{2} = m_{i}^{2}; $$&lt;/div&gt;
