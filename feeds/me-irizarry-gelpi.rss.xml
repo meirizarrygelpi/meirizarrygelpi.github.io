@@ -1,5 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 14 Dec 2015 00:00:00 -0500</lastBuildDate><item><title>Brackets for Cubic 3-Arrays</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/three-brackets/</link><description>&lt;p&gt;Given two square 2-arrays &lt;span class="math"&gt;\(\mathbf{A}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathbf{B}\)&lt;/span&gt; with the same size, the anticommutator &lt;span class="math"&gt;\(\left\lbrace \mathbf{A}, \mathbf{B} \right\rbrace\)&lt;/span&gt; is defined as
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 15 Dec 2015 00:00:00 -0500</lastBuildDate><item><title>Outgoing Two-Body Sudakov Decomposition</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/outgoing-two-body/</link><description>&lt;p&gt;The main purpose of a Sudakov decomposition is to identify particular null vectors (the Sudakov vectors) and decompose any other given vectors into components along the Sudakov subspace and components orthogonal to the Sudakov subspace. An important example of this is a two-body decomposition in a four-point process of the form
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}) + D(p_{4}). $$&lt;/div&gt;
+&lt;p&gt;
+Each massive momentum vector is subject to an &lt;strong&gt;on-shell&lt;/strong&gt; constraint:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left\Vert p_{i} \right\Vert^{2} = m_{i}^{2}; $$&lt;/div&gt;
+&lt;p&gt;
+and the four momenta satisfy a &lt;strong&gt;conservation&lt;/strong&gt; constraint:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} + p_{2} = p_{3} + p_{4}. $$&lt;/div&gt;
+&lt;p&gt;
+You have three &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s \equiv \left\Vert p_{1} + p_{2} \right\Vert^{2} = \left\Vert p_{3} + p_{4} \right\Vert^{2}; \qquad t \equiv \left\Vert p_{1} - p_{3} \right\Vert^{2} = \left\Vert p_{4} - p_{2} \right\Vert^{2}; \qquad u \equiv \left\Vert p_{1} - p_{4} \right\Vert^{2} = \left\Vert p_{3} - p_{2} \right\Vert^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+Due to the conservation constraint, these invariants satisfy the relation
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s + t + u = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+The &lt;strong&gt;outgoing two-body Sudakov decomposition&lt;/strong&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}. $$&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(n_{3}\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{4}\)&lt;/span&gt; are (null) Sudakov vectors, and &lt;span class="math"&gt;\(S_{34}\)&lt;/span&gt; is a &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{34} \equiv \left\Vert n_{3} + n_{4} \right\Vert^{2} = 2 \left( n_{3} \cdot n_{4}\right). $$&lt;/div&gt;
+&lt;p&gt;
+As usual, from the identity
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \frac{p_{3} \cdot p_{4}}{m_{3} m_{4}} = \frac{s - m_{3}^{2} - m_{4}^{2}}{2 m_{3} m_{4}}, $$&lt;/div&gt;
+&lt;p&gt;
+it follows that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{34} = \frac{1}{2} \left( s - m_{3}^{2} - m_{4}^{2} + \sqrt{ \left( s - m_{3}^{2} - m_{4}^{2} \right)^{2} - 4 m_{3}^{2} m_{4}^{2}} \right). $$&lt;/div&gt;
+&lt;p&gt;
+Thus, from the point of view of orthogonal decompositions, &lt;span class="math"&gt;\(p_{3}\)&lt;/span&gt; and &lt;span class="math"&gt;\(p_{4}\)&lt;/span&gt; live entirely in the Sudakov subspace spanned by &lt;span class="math"&gt;\(n_{3}\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{4}\)&lt;/span&gt;. However, the same cannot be said about the incoming momenta. In general, you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = P_{1} + \nu_{13} n_{3} + \nu_{14} n_{4}, \qquad p_{2} = P_{2} + \nu_{23} n_{3} + \nu_{24} n_{4}; $$&lt;/div&gt;
+&lt;p&gt;
+with
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{1} \cdot n_{3} = P_{1} \cdot n_{4} = 0, \qquad P_{2} \cdot n_{3} = P_{2} \cdot n_{4} = 0. $$&lt;/div&gt;
+&lt;p&gt;
+That is, &lt;span class="math"&gt;\(P_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(P_{2}\)&lt;/span&gt; are orthogonal to the Sudakov subspace. My goal is to find the values of &lt;span class="math"&gt;\(\left\Vert P_{1} \right\Vert^{2}\)&lt;/span&gt;, &lt;span class="math"&gt;\(\left\Vert P_{2} \right\Vert^{2}\)&lt;/span&gt;, and the four &lt;span class="math"&gt;\(\nu_{ij}\)&lt;/span&gt; coefficients (which I will call &lt;strong&gt;Sudakov moduli&lt;/strong&gt;).&lt;/p&gt;
+&lt;p&gt;Using the identities
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ m_{1}^{2} + m_{3}^{2} - t = 2 \left( p_{1} \cdot p_{3} \right), \qquad m_{1}^{2} + m_{4}^{2} - u = 2 \left( p_{1} \cdot p_{4} \right), \qquad m_{2}^{2} + m_{3}^{2} - u = 2 \left( p_{2} \cdot p_{3} \right), \qquad m_{2}^{2} + m_{4}^{2} - t = 2 \left( p_{2} \cdot p_{4} \right); $$&lt;/div&gt;
+&lt;p&gt;
+you find the relations
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ m_{1}^{2} + m_{3}^{2} - t = \nu_{13} m_{3}^{2} + \nu_{14} S_{34}, \qquad m_{1}^{2} + m_{4}^{2} - u = \nu_{13} S_{34} + \nu_{14} m_{4}^{2}, \qquad m_{2}^{2} + m_{3}^{2} - u = \nu_{23} m_{3}^{2} + \nu_{24} S_{34}, \qquad m_{2}^{2} + m_{4}^{2} - t = \nu_{23} S_{34} + \nu_{24} m_{4}^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+Solving these leads to
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \nu_{13} = \frac{S_{34} \left( m_{1}^{2} + m_{4}^{2} - u \right) - m_{4}^{2} \left( m_{1}^{2} + m_{3}^{2} - t \right)}{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}, \qquad \nu_{14} = \frac{S_{34} \left( m_{1}^{2} + m_{3}^{2} - t \right) - m_{3}^{2} \left( m_{1}^{2} + m_{4}^{2} - u \right)}{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{23} = \frac{S_{34} \left( m_{2}^{2} + m_{4}^{2} - t \right) - m_{4}^{2} \left( m_{2}^{2} + m_{3}^{2} - u \right)}{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}, \qquad \nu_{24} = \frac{S_{34} \left( m_{2}^{2} + m_{3}^{2} - u \right) - m_{3}^{2} \left( m_{2}^{2} + m_{4}^{2} - t \right)}{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}. $$&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \nu_{13} + \nu_{23} = \frac{S_{34} \left(s - m_{3}^{2} + m_{4}^{2} \right) - m_{4}^{2} \left( s + m_{3}^{2} - m_{4}^{2} \right) }{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}, \qquad \nu_{14} + \nu_{24} = \frac{S_{34} \left(s + m_{3}^{2} - m_{4}^{2} \right) - m_{3}^{2} \left( s - m_{3}^{2} + m_{4}^{2} \right) }{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}. $$&lt;/div&gt;
+&lt;p&gt;
+Recall that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s - m_{3}^{2} + m_{4}^{2} = S_{34} + 2m_{4}^{2} + \frac{m_{3}^{2} m_{4}^{2}}{S_{34}}, \qquad s + m_{3}^{2} - m_{4}^{2} = S_{34} + 2m_{3}^{2} + \frac{m_{3}^{2} m_{4}^{2}}{S_{34}}. $$&lt;/div&gt;
+&lt;p&gt;
+From &lt;span class="math"&gt;\(m_{1}^{2} = \left\Vert p_{1} \right\Vert^{2}\)&lt;/span&gt; and &lt;span class="math"&gt;\(m_{2}^{2} = \left\Vert p_{2} \right\Vert^{2}\)&lt;/span&gt; you find
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ m_{1}^{2} = \left\Vert P_{1} \right\Vert^{2} + \nu_{13} \nu_{14} S_{34}, \qquad m_{2}^{2} = \left\Vert P_{2} \right\Vert^{2} + \nu_{23} \nu_{24} S_{34}. $$&lt;/div&gt;
+&lt;p&gt;
+Solving these leads to
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = m_{1}^{2} - \nu_{13} \nu_{14} S_{34}, \qquad \left\Vert P_{2} \right\Vert^{2} = m_{2}^{2} - \nu_{23} \nu_{24} S_{34}. $$&lt;/div&gt;
+&lt;p&gt;
+You also have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} - p_{3} = P_{1} + \left( \nu_{13} - 1 \right) n_{3} + \left( \nu_{14} - \frac{m_{3}^{2}}{S_{34}} \right) n_{4} \quad \Longrightarrow \quad \left\Vert P_{1} \right\Vert^{2} = t - \left( \nu_{13} - 1 \right) \left( \nu_{14} - \frac{m_{3}^{2}}{S_{34}} \right) S_{34}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} - p_{4} = P_{1} + \left( \nu_{13} - \frac{m_{4}^{2}}{S_{34}} \right) n_{3} + \left( \nu_{14} - 1 \right) n_{4} \quad \Longrightarrow \quad \left\Vert P_{1} \right\Vert^{2} = u - \left( \nu_{13} - \frac{m_{4}^{2}}{S_{34}} \right) \left( \nu_{14} - 1 \right) S_{34}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} - p_{2} = -P_{2} + \left( 1 - \nu_{23} \right) n_{3} + \left( \frac{m_{3}^{2}}{S_{34}} - \nu_{24} \right) n_{4} \quad \Longrightarrow \quad \left\Vert P_{2} \right\Vert^{2} = u - \left( 1 - \nu_{23} \right) \left( \frac{m_{3}^{2}}{S_{34}} - \nu_{24} \right) S_{34}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} - p_{2} = -P_{2} + \left( \frac{m_{4}^{2}}{S_{34}} - \nu_{23} \right) n_{3} + \left( 1 - \nu_{24} \right) n_{4} \quad \Longrightarrow \quad \left\Vert P_{2} \right\Vert^{2} = t - \left( \frac{m_{4}^{2}}{S_{34}} - \nu_{23} \right) \left( 1 - \nu_{24} \right) S_{34}. $$&lt;/div&gt;
+&lt;p&gt;
+From the conservation constraint you find the relations
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{1} + P_{2} = 0, \qquad \nu_{13} + \nu_{23} = 1 + \frac{m_{4}^{2}}{S_{34}}, \qquad \nu_{14} + \nu_{24} = 1 + \frac{m_{3}^{2}}{S_{34}}. $$&lt;/div&gt;
+&lt;p&gt;
+You can check that the above results satisfy these relations.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Tue, 15 Dec 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-12-15:posts/2015/Dec/outgoing-two-body/</guid><category>sudakov</category><category>two-body</category><category>four-point</category></item><item><title>Brackets for Cubic 3-Arrays</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/three-brackets/</link><description>&lt;p&gt;Given two square 2-arrays &lt;span class="math"&gt;\(\mathbf{A}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathbf{B}\)&lt;/span&gt; with the same size, the anticommutator &lt;span class="math"&gt;\(\left\lbrace \mathbf{A}, \mathbf{B} \right\rbrace\)&lt;/span&gt; is defined as
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \left\lbrace \mathbf{A}, \mathbf{B} \right\rbrace \equiv \operatorname{mul}_{2}{\left( \mathbf{A}, \mathbf{B} \right)} + \operatorname{mul}_{2}{\left( \mathbf{B}, \mathbf{A} \right)}; $$&lt;/div&gt;
 &lt;p&gt;
