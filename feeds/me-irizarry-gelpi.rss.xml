@@ -43,7 +43,7 @@ with
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ P_{1} \cdot n_{3} = P_{1} \cdot n_{4} = 0, \qquad P_{2} \cdot n_{3} = P_{2} \cdot n_{4} = 0. $$&lt;/div&gt;
 &lt;p&gt;
-That is, &lt;span class="math"&gt;\(P_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(P_{2}\)&lt;/span&gt; are orthogonal to the Sudakov subspace. My goal is to find the values of &lt;span class="math"&gt;\(\left\Vert P_{1} \right\Vert^{2}\)&lt;/span&gt;, &lt;span class="math"&gt;\(\left\Vert P_{2} \right\Vert^{2}\)&lt;/span&gt;, and the four &lt;span class="math"&gt;\(\nu_{ij}\)&lt;/span&gt; coefficients (which I will call &lt;strong&gt;Sudakov moduli&lt;/strong&gt;).&lt;/p&gt;
+That is, &lt;span class="math"&gt;\(P_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(P_{2}\)&lt;/span&gt; are orthogonal to the Sudakov subspace. My goal is to find the values of &lt;span class="math"&gt;\(\left\Vert P_{1} \right\Vert^{2}\)&lt;/span&gt;, &lt;span class="math"&gt;\(\left\Vert P_{2} \right\Vert^{2}\)&lt;/span&gt;, and the four &lt;span class="math"&gt;\(\nu_{ij}\)&lt;/span&gt; coefficients (which I will call &lt;strong&gt;Sudakov moduli&lt;/strong&gt;) in terms of the masses and the 2-Mandelstam invariants.&lt;/p&gt;
 &lt;p&gt;Using the identities
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ m_{1}^{2} + m_{3}^{2} - t = 2 \left( p_{1} \cdot p_{3} \right), \qquad m_{1}^{2} + m_{4}^{2} - u = 2 \left( p_{1} \cdot p_{4} \right), \qquad m_{2}^{2} + m_{3}^{2} - u = 2 \left( p_{2} \cdot p_{3} \right), \qquad m_{2}^{2} + m_{4}^{2} - t = 2 \left( p_{2} \cdot p_{4} \right); $$&lt;/div&gt;
@@ -65,13 +65,11 @@ Recall that
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ s - m_{3}^{2} + m_{4}^{2} = S_{34} + 2m_{4}^{2} + \frac{m_{3}^{2} m_{4}^{2}}{S_{34}}, \qquad s + m_{3}^{2} - m_{4}^{2} = S_{34} + 2m_{3}^{2} + \frac{m_{3}^{2} m_{4}^{2}}{S_{34}}. $$&lt;/div&gt;
 &lt;p&gt;
-From &lt;span class="math"&gt;\(m_{1}^{2} = \left\Vert p_{1} \right\Vert^{2}\)&lt;/span&gt; and &lt;span class="math"&gt;\(m_{2}^{2} = \left\Vert p_{2} \right\Vert^{2}\)&lt;/span&gt; you find
+With the incoming momenta, you have
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ m_{1}^{2} = \left\Vert P_{1} \right\Vert^{2} + \nu_{13} \nu_{14} S_{34}, \qquad m_{2}^{2} = \left\Vert P_{2} \right\Vert^{2} + \nu_{23} \nu_{24} S_{34}. $$&lt;/div&gt;
-&lt;p&gt;
-Solving these leads to
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = m_{1}^{2} - \nu_{13} \nu_{14} S_{34}, \qquad \left\Vert P_{2} \right\Vert^{2} = m_{2}^{2} - \nu_{23} \nu_{24} S_{34}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{1}^{2} = \left\Vert p_{1} \right\Vert^{2} \quad \Longrightarrow \quad \left\Vert P_{1} \right\Vert^{2} = m_{1}^{2} - \nu_{13} \nu_{14} S_{34}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{2}^{2} = \left\Vert p_{2} \right\Vert^{2} \quad \Longrightarrow \quad \left\Vert P_{2} \right\Vert^{2} = m_{2}^{2} - \nu_{23} \nu_{24} S_{34}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2 \left( p_{1} \cdot p_{2} \right) = s - m_{1}^{2} - m_{2}^{2} \quad \Longrightarrow \quad 2 \left( P_{1} \cdot P_{2} \right) = s - m_{1}^{2} - m_{2}^{2} - \left( \nu_{13} \nu_{24} + \nu_{14} \nu_{23} \right) S_{34}. $$&lt;/div&gt;
 &lt;p&gt;
 You also have
 &lt;/p&gt;
