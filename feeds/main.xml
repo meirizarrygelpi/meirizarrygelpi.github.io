@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-15T00:00:00-05:00</updated><entry><title>Outgoing Two-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/outgoing-two-body/" rel="alternate"></link><updated>2015-12-15T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-15:posts/2015/Dec/outgoing-two-body/</id><summary type="html">&lt;p&gt;The main purpose of a Sudakov decomposition is to identify particular null vectors (the Sudakov vectors) and decompose any other given vectors into components along the Sudakov subspace and components orthogonal to the Sudakov subspace. An important example of this is a two-body decomposition in a four-point process of the form
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}) + D(p_{4}). $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ a(p_{1}) + b(p_{2}) \longrightarrow c(p_{3}) + d(p_{4}). $$&lt;/div&gt;
 &lt;p&gt;
 Each massive momentum vector is subject to an &lt;strong&gt;on-shell&lt;/strong&gt; constraint:
 &lt;/p&gt;
