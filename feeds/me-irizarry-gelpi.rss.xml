@@ -13,7 +13,9 @@ and the four momenta satisfy a &lt;strong&gt;conservation&lt;/strong&gt; constra
 &lt;p&gt;
 You have three &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ s \equiv \left\Vert p_{1} + p_{2} \right\Vert^{2} = \left\Vert p_{3} + p_{4} \right\Vert^{2}; \qquad t \equiv \left\Vert p_{1} - p_{3} \right\Vert^{2} = \left\Vert p_{4} - p_{2} \right\Vert^{2}; \qquad u \equiv \left\Vert p_{1} - p_{4} \right\Vert^{2} = \left\Vert p_{3} - p_{2} \right\Vert^{2}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ s \equiv \left\Vert p_{1} + p_{2} \right\Vert^{2} = \left\Vert p_{3} + p_{4} \right\Vert^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ t \equiv \left\Vert p_{1} - p_{3} \right\Vert^{2} = \left\Vert p_{4} - p_{2} \right\Vert^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ u \equiv \left\Vert p_{1} - p_{4} \right\Vert^{2} = \left\Vert p_{3} - p_{2} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;
 Due to the conservation constraint, these invariants satisfy the relation
 &lt;/p&gt;
@@ -21,7 +23,8 @@ Due to the conservation constraint, these invariants satisfy the relation
 &lt;p&gt;
 The &lt;strong&gt;outgoing two-body Sudakov decomposition&lt;/strong&gt; is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}. $$&lt;/div&gt;
 &lt;p&gt;
 Here &lt;span class="math"&gt;\(n_{3}\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{4}\)&lt;/span&gt; are (null) Sudakov vectors, and &lt;span class="math"&gt;\(S_{34}\)&lt;/span&gt; is a &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariant:
 &lt;/p&gt;
@@ -37,52 +40,73 @@ it follows that
 &lt;p&gt;
 Thus, from the point of view of orthogonal decompositions, &lt;span class="math"&gt;\(p_{3}\)&lt;/span&gt; and &lt;span class="math"&gt;\(p_{4}\)&lt;/span&gt; live entirely in the Sudakov subspace spanned by &lt;span class="math"&gt;\(n_{3}\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{4}\)&lt;/span&gt;. However, the same cannot be said about the incoming momenta. In general, you have
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} = P_{1} + \nu_{13} n_{3} + \nu_{14} n_{4}, \qquad p_{2} = P_{2} + \nu_{23} n_{3} + \nu_{24} n_{4}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} = P_{1} + \nu_{13} n_{3} + \nu_{14} n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} = P_{2} + \nu_{23} n_{3} + \nu_{24} n_{4}; $$&lt;/div&gt;
 &lt;p&gt;
 with
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ P_{1} \cdot n_{3} = P_{1} \cdot n_{4} = 0, \qquad P_{2} \cdot n_{3} = P_{2} \cdot n_{4} = 0. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ P_{1} \cdot n_{3} = P_{1} \cdot n_{4} = 0, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ P_{2} \cdot n_{3} = P_{2} \cdot n_{4} = 0. $$&lt;/div&gt;
 &lt;p&gt;
 That is, &lt;span class="math"&gt;\(P_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(P_{2}\)&lt;/span&gt; are orthogonal to the Sudakov subspace. My goal is to find the values of &lt;span class="math"&gt;\(\left\Vert P_{1} \right\Vert^{2}\)&lt;/span&gt;, &lt;span class="math"&gt;\(\left\Vert P_{2} \right\Vert^{2}\)&lt;/span&gt;, and the four &lt;span class="math"&gt;\(\nu_{ij}\)&lt;/span&gt; coefficients (which I will call &lt;strong&gt;Sudakov moduli&lt;/strong&gt;) in terms of the masses and the 2-Mandelstam invariants.&lt;/p&gt;
 &lt;p&gt;Using the identities
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ m_{1}^{2} + m_{3}^{2} - t = 2 \left( p_{1} \cdot p_{3} \right), \qquad m_{1}^{2} + m_{4}^{2} - u = 2 \left( p_{1} \cdot p_{4} \right), \qquad m_{2}^{2} + m_{3}^{2} - u = 2 \left( p_{2} \cdot p_{3} \right), \qquad m_{2}^{2} + m_{4}^{2} - t = 2 \left( p_{2} \cdot p_{4} \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{1}^{2} + m_{3}^{2} - t = 2 \left( p_{1} \cdot p_{3} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{1}^{2} + m_{4}^{2} - u = 2 \left( p_{1} \cdot p_{4} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{2}^{2} + m_{3}^{2} - u = 2 \left( p_{2} \cdot p_{3} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{2}^{2} + m_{4}^{2} - t = 2 \left( p_{2} \cdot p_{4} \right); $$&lt;/div&gt;
 &lt;p&gt;
 you find the relations
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ m_{1}^{2} + m_{3}^{2} - t = \nu_{13} m_{3}^{2} + \nu_{14} S_{34}, \qquad m_{1}^{2} + m_{4}^{2} - u = \nu_{13} S_{34} + \nu_{14} m_{4}^{2}, \qquad m_{2}^{2} + m_{3}^{2} - u = \nu_{23} m_{3}^{2} + \nu_{24} S_{34}, \qquad m_{2}^{2} + m_{4}^{2} - t = \nu_{23} S_{34} + \nu_{24} m_{4}^{2}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{1}^{2} + m_{3}^{2} - t = \nu_{13} m_{3}^{2} + \nu_{14} S_{34}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{1}^{2} + m_{4}^{2} - u = \nu_{13} S_{34} + \nu_{14} m_{4}^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{2}^{2} + m_{3}^{2} - u = \nu_{23} m_{3}^{2} + \nu_{24} S_{34}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{2}^{2} + m_{4}^{2} - t = \nu_{23} S_{34} + \nu_{24} m_{4}^{2}. $$&lt;/div&gt;
 &lt;p&gt;
 Solving these leads to
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \nu_{13} = \frac{S_{34} \left( m_{1}^{2} + m_{4}^{2} - u \right) - m_{4}^{2} \left( m_{1}^{2} + m_{3}^{2} - t \right)}{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}, \qquad \nu_{14} = \frac{S_{34} \left( m_{1}^{2} + m_{3}^{2} - t \right) - m_{3}^{2} \left( m_{1}^{2} + m_{4}^{2} - u \right)}{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}; $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \nu_{23} = \frac{S_{34} \left( m_{2}^{2} + m_{4}^{2} - t \right) - m_{4}^{2} \left( m_{2}^{2} + m_{3}^{2} - u \right)}{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}, \qquad \nu_{24} = \frac{S_{34} \left( m_{2}^{2} + m_{3}^{2} - u \right) - m_{3}^{2} \left( m_{2}^{2} + m_{4}^{2} - t \right)}{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{13} = \frac{S_{34} \left( m_{1}^{2} + m_{4}^{2} - u \right) - m_{4}^{2} \left( m_{1}^{2} + m_{3}^{2} - t \right)}{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{14} = \frac{S_{34} \left( m_{1}^{2} + m_{3}^{2} - t \right) - m_{3}^{2} \left( m_{1}^{2} + m_{4}^{2} - u \right)}{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{23} = \frac{S_{34} \left( m_{2}^{2} + m_{4}^{2} - t \right) - m_{4}^{2} \left( m_{2}^{2} + m_{3}^{2} - u \right)}{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{24} = \frac{S_{34} \left( m_{2}^{2} + m_{3}^{2} - u \right) - m_{3}^{2} \left( m_{2}^{2} + m_{4}^{2} - t \right)}{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}. $$&lt;/div&gt;
 &lt;p&gt;
 Note that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \nu_{13} + \nu_{23} = \frac{S_{34} \left(s - m_{3}^{2} + m_{4}^{2} \right) - m_{4}^{2} \left( s + m_{3}^{2} - m_{4}^{2} \right) }{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}, \qquad \nu_{14} + \nu_{24} = \frac{S_{34} \left(s + m_{3}^{2} - m_{4}^{2} \right) - m_{3}^{2} \left( s - m_{3}^{2} + m_{4}^{2} \right) }{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{13} + \nu_{23} = \frac{S_{34} \left(s - m_{3}^{2} + m_{4}^{2} \right) - m_{4}^{2} \left( s + m_{3}^{2} - m_{4}^{2} \right) }{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{14} + \nu_{24} = \frac{S_{34} \left(s + m_{3}^{2} - m_{4}^{2} \right) - m_{3}^{2} \left( s - m_{3}^{2} + m_{4}^{2} \right) }{\left( S_{34} - m_{3} m_{4} \right) \left( S_{34} + m_{3} m_{4} \right)}. $$&lt;/div&gt;
 &lt;p&gt;
-Recall that
+That is, these linear combinations of Sudakov moduli only depend on &lt;span class="math"&gt;\(s\)&lt;/span&gt; and the masses. Recall that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ s - m_{3}^{2} + m_{4}^{2} = S_{34} + 2m_{4}^{2} + \frac{m_{3}^{2} m_{4}^{2}}{S_{34}}, \qquad s + m_{3}^{2} - m_{4}^{2} = S_{34} + 2m_{3}^{2} + \frac{m_{3}^{2} m_{4}^{2}}{S_{34}}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ s - m_{3}^{2} + m_{4}^{2} = S_{34} + 2m_{4}^{2} + \frac{m_{3}^{2} m_{4}^{2}}{S_{34}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ s + m_{3}^{2} - m_{4}^{2} = S_{34} + 2m_{3}^{2} + \frac{m_{3}^{2} m_{4}^{2}}{S_{34}}. $$&lt;/div&gt;
 &lt;p&gt;
-With the incoming momenta, you have
+Thus, you find that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \nu_{13} + \nu_{23} = 1 + \frac{m_{4}^{2}}{S_{34}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{14} + \nu_{24} = 1 + \frac{m_{3}^{2}}{S_{34}}. $$&lt;/div&gt;
+&lt;p&gt;
+These relations follow directly from the conservation constraint, which also yields the relation &lt;span class="math"&gt;\(P_{1} + P_{2} = 0\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;With the incoming momenta, you have
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ m_{1}^{2} = \left\Vert p_{1} \right\Vert^{2} \quad \Longrightarrow \quad \left\Vert P_{1} \right\Vert^{2} = m_{1}^{2} - \nu_{13} \nu_{14} S_{34}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ m_{2}^{2} = \left\Vert p_{2} \right\Vert^{2} \quad \Longrightarrow \quad \left\Vert P_{2} \right\Vert^{2} = m_{2}^{2} - \nu_{23} \nu_{24} S_{34}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ 2 \left( p_{1} \cdot p_{2} \right) = s - m_{1}^{2} - m_{2}^{2} \quad \Longrightarrow \quad 2 \left( P_{1} \cdot P_{2} \right) = s - m_{1}^{2} - m_{2}^{2} - \left( \nu_{13} \nu_{24} + \nu_{14} \nu_{23} \right) S_{34}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{2}^{2} = \left\Vert p_{2} \right\Vert^{2} \quad \Longrightarrow \quad \left\Vert P_{1} \right\Vert^{2} = m_{2}^{2} - \nu_{23} \nu_{24} S_{34}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2 \left( p_{1} \cdot p_{2} \right) = s - m_{1}^{2} - m_{2}^{2} \quad \Longrightarrow \quad -2 \left\Vert P_{1} \right\Vert^{2} = s - m_{1}^{2} - m_{2}^{2} - \left( \nu_{13} \nu_{24} + \nu_{14} \nu_{23} \right) S_{34}. $$&lt;/div&gt;
 &lt;p&gt;
-You also have
+Combining these, you find
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} - p_{3} = P_{1} + \left( \nu_{13} - 1 \right) n_{3} + \left( \nu_{14} - \frac{m_{3}^{2}}{S_{34}} \right) n_{4} \quad \Longrightarrow \quad \left\Vert P_{1} \right\Vert^{2} = t - \left( \nu_{13} - 1 \right) \left( \nu_{14} - \frac{m_{3}^{2}}{S_{34}} \right) S_{34}; $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ p_{1} - p_{4} = P_{1} + \left( \nu_{13} - \frac{m_{4}^{2}}{S_{34}} \right) n_{3} + \left( \nu_{14} - 1 \right) n_{4} \quad \Longrightarrow \quad \left\Vert P_{1} \right\Vert^{2} = u - \left( \nu_{13} - \frac{m_{4}^{2}}{S_{34}} \right) \left( \nu_{14} - 1 \right) S_{34}; $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ p_{3} - p_{2} = -P_{2} + \left( 1 - \nu_{23} \right) n_{3} + \left( \frac{m_{3}^{2}}{S_{34}} - \nu_{24} \right) n_{4} \quad \Longrightarrow \quad \left\Vert P_{2} \right\Vert^{2} = u - \left( 1 - \nu_{23} \right) \left( \frac{m_{3}^{2}}{S_{34}} - \nu_{24} \right) S_{34}; $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ p_{4} - p_{2} = -P_{2} + \left( \frac{m_{4}^{2}}{S_{34}} - \nu_{23} \right) n_{3} + \left( 1 - \nu_{24} \right) n_{4} \quad \Longrightarrow \quad \left\Vert P_{2} \right\Vert^{2} = t - \left( \frac{m_{4}^{2}}{S_{34}} - \nu_{23} \right) \left( 1 - \nu_{24} \right) S_{34}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ s = \left( \nu_{13} + \nu_{23} \right) \left( \nu_{14} + \nu_{24} \right) S_{34}. $$&lt;/div&gt;
 &lt;p&gt;
-From the conservation constraint you find the relations
+You also have the vectors
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ P_{1} + P_{2} = 0, \qquad \nu_{13} + \nu_{23} = 1 + \frac{m_{4}^{2}}{S_{34}}, \qquad \nu_{14} + \nu_{24} = 1 + \frac{m_{3}^{2}}{S_{34}}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} - p_{3} = P_{1} + \left( \nu_{13} - 1 \right) n_{3} + \left( \nu_{14} - \frac{m_{3}^{2}}{S_{34}} \right) n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} - p_{4} = P_{1} + \left( \nu_{13} - \frac{m_{4}^{2}}{S_{34}} \right) n_{3} + \left( \nu_{14} - 1 \right) n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} - p_{2} = P_{1} + \left( 1 - \nu_{23} \right) n_{3} + \left( \frac{m_{3}^{2}}{S_{34}} - \nu_{24} \right) n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} - p_{2} = P_{1} + \left( \frac{m_{4}^{2}}{S_{34}} - \nu_{23} \right) n_{3} + \left( 1 - \nu_{24} \right) n_{4}; $$&lt;/div&gt;
 &lt;p&gt;
-You can check that the above results satisfy these relations.&lt;/p&gt;
+which lead to more relations:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = t - \left( \nu_{13} - 1 \right) \left( \nu_{14} - \frac{m_{3}^{2}}{S_{34}} \right) S_{34}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = u - \left( \nu_{13} - \frac{m_{4}^{2}}{S_{34}} \right) \left( \nu_{14} - 1 \right) S_{34}, $$&lt;/div&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -219,7 +243,7 @@ Thus, unlike the alternating 2-bracket, the alternating 3-bracket is cyclic.&lt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Mon, 14 Dec 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-12-14:posts/2015/Dec/three-brackets/</guid><category>three-array</category></item><item><title>NumPy Implementation of the Triangle Product</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/numpy-triangle-product/</link><description>&lt;p&gt;In this post I will discuss an implementation of the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/May/triangle-product-3-arrays/"&gt;triangle product for 3-arrays&lt;/a&gt; in NumPy. You start by importing and setting the seed of the random number generator:&lt;/p&gt;
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Mon, 14 Dec 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-12-14:posts/2015/Dec/three-brackets/</guid><category>three-array</category></item><item><title>The Triangle Product with NumPy</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/numpy-triangle-product/</link><description>&lt;p&gt;In this post I will discuss an implementation of the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/May/triangle-product-3-arrays/"&gt;triangle product for 3-arrays&lt;/a&gt; in NumPy. You start by importing and setting the seed of the random number generator:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;itertools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;product&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;
@@ -336,7 +360,8 @@ Thus, unlike the alternating 2-bracket, the alternating 3-bracket is cyclic.&lt;
 
 &lt;p&gt;You can compute six triangle products corresponding to the six possible permutations of the inputs:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \operatorname{mul}_{3}\left(\mathbf{X}, \mathbf{Y}, \mathbf{Z} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Y}, \mathbf{Z}, \mathbf{X} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Z}, \mathbf{X}, \mathbf{Y} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Z}, \mathbf{Y}, \mathbf{X} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Y}, \mathbf{X}, \mathbf{Z} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{X}, \mathbf{Z}, \mathbf{Y} \right). $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \operatorname{mul}_{3}\left(\mathbf{X}, \mathbf{Y}, \mathbf{Z} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Y}, \mathbf{Z}, \mathbf{X} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Z}, \mathbf{X}, \mathbf{Y} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \operatorname{mul}_{3}\left(\mathbf{Z}, \mathbf{Y}, \mathbf{X} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Y}, \mathbf{X}, \mathbf{Z} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{X}, \mathbf{Z}, \mathbf{Y} \right). $$&lt;/div&gt;
 &lt;p&gt;
 Each of these products yields a different 3-array. Explicitly, &lt;code&gt;mul_3(X, Y, Z)&lt;/code&gt; gives:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[[&lt;/span&gt; &lt;span class="mf"&gt;2917.&lt;/span&gt;  &lt;span class="mf"&gt;3313.&lt;/span&gt;  &lt;span class="mf"&gt;1870.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;

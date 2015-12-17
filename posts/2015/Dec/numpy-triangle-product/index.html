@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>NumPy Implementation of the Triangle Product - M.E. Irizarry-Gelpí</title>
+    <title>The Triangle Product with NumPy - M.E. Irizarry-Gelpí</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -82,8 +82,8 @@ M.E. Irizarry-Gelpí            </a>
                 <h1>
                     <a href="http://meirizarrygelpi.github.io/posts/2015/Dec/numpy-triangle-product/"
                        rel="bookmark"
-                       title="Permalink to NumPy Implementation of the Triangle Product">
-                        NumPy Implementation of the Triangle Product
+                       title="Permalink to The Triangle Product with NumPy">
+                        The Triangle Product with NumPy
                     </a>
                 </h1>
             </header>
@@ -224,7 +224,8 @@ M.E. Irizarry-Gelpí            </a>
 
 <p>You can compute six triangle products corresponding to the six possible permutations of the inputs:
 </p>
-<div class="math">$$ \operatorname{mul}_{3}\left(\mathbf{X}, \mathbf{Y}, \mathbf{Z} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Y}, \mathbf{Z}, \mathbf{X} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Z}, \mathbf{X}, \mathbf{Y} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Z}, \mathbf{Y}, \mathbf{X} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Y}, \mathbf{X}, \mathbf{Z} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{X}, \mathbf{Z}, \mathbf{Y} \right). $$</div>
+<div class="math">$$ \operatorname{mul}_{3}\left(\mathbf{X}, \mathbf{Y}, \mathbf{Z} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Y}, \mathbf{Z}, \mathbf{X} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Z}, \mathbf{X}, \mathbf{Y} \right), $$</div>
+<div class="math">$$ \operatorname{mul}_{3}\left(\mathbf{Z}, \mathbf{Y}, \mathbf{X} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Y}, \mathbf{X}, \mathbf{Z} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{X}, \mathbf{Z}, \mathbf{Y} \right). $$</div>
 <p>
 Each of these products yields a different 3-array. Explicitly, <code>mul_3(X, Y, Z)</code> gives:</p>
 <div class="highlight"><pre><span class="p">[[[</span> <span class="mf">2917.</span>  <span class="mf">3313.</span>  <span class="mf">1870.</span><span class="p">]</span>
