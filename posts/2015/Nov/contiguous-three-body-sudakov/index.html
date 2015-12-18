@@ -111,11 +111,13 @@ M.E. Irizarry-Gelpí            </a>
                 </div>
                 <p>In a previous post I discussed the <a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/">kinematics of three-body problems</a>. The <strong>contiguous three-body Sudakov decomposition</strong> is given by
 </p>
-<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{31}} n_{1}.$$</div>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{31}} n_{1}.$$</div>
 <p>
 Here <span class="math">\(n_{1}\)</span>, <span class="math">\(n_{2}\)</span>, and <span class="math">\(n_{3}\)</span> are null <strong>Sudakov</strong> vectors, and I have introduced three <strong>2-Sudakov</strong> invariants:
 </p>
-<div class="math">$$ S_{12} \equiv \left\Vert n_{1} + n_{2} \right\Vert^{2}, \qquad S_{23} \equiv \left\Vert n_{2} + n_{3} \right\Vert^{2}, \qquad S_{31} \equiv \left\Vert n_{3} + n_{1} \right\Vert^{2}.$$</div>
+<div class="math">$$ S_{ij} \equiv \left\Vert n_{i} + n_{j} \right\Vert^{2} = 2 \left( n_{i} \cdot n_{j} \right).$$</div>
 <p>
 The labeling of the Sudakov vectors is such that in a massless limit <span class="math">\(m_{i} \rightarrow 0\)</span> the momentum <span class="math">\(p_{i}\)</span> becomes the null vector <span class="math">\(n_{i}\)</span>. From the <a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/">two-body decomposition</a> you expect each Sudakov vector to carry the content of many individual quanta. The above decomposition can be written in matrix form:
 </p>
@@ -132,15 +134,17 @@ The inverse of this matrix is
 Thus, each Sudakov vector can be written as a linear combination of the three momenta. In other words, each massive body contributes to each null vector.</p>
 <p>My goal is to write the 2-Sudakov invariants in terms of the Mandelstam invariants and the masses. In order to do this, it is helpful to also introduce <strong>Regge-Sudakov</strong> invariants:
 </p>
-<div class="math">$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}, \qquad R_{23} \equiv \frac{S_{23}}{m_{2} m_{3}}, \qquad R_{31} \equiv \frac{S_{31}}{m_{3} m_{1}}.$$</div>
+<div class="math">$$ R_{ij} \equiv \frac{S_{ij}}{m_{i} m_{j}}. $$</div>
 <p>
 Using the identities
 </p>
-<div class="math">$$ r_{12} = \frac{p_{1} \cdot p_{2}}{m_{1} m_{2}}, \qquad r_{23} = \frac{p_{2} \cdot p_{3}}{m_{2} m_{3}}, \qquad r_{31} = \frac{p_{3} \cdot p_{1}}{m_{3} m_{1}},$$</div>
+<div class="math">$$ r_{ij} = \frac{p_{i} \cdot p_{j}}{m_{i} m_{j}}, $$</div>
 <p>
 you find the relations
 </p>
-<div class="math">$$ 2r_{12} = R_{12} + \frac{R_{31}}{R_{23}} + \frac{1}{R_{12}}, \qquad 2r_{23} = R_{23} + \frac{R_{12}}{R_{31}} + \frac{1}{R_{23}}, \qquad 2r_{31} = R_{31} + \frac{R_{23}}{R_{12}} + \frac{1}{R_{31}}.$$</div>
+<div class="math">$$ 2r_{12} = R_{12} + \frac{R_{31}}{R_{23}} + \frac{1}{R_{12}}, $$</div>
+<div class="math">$$ 2r_{23} = R_{23} + \frac{R_{12}}{R_{31}} + \frac{1}{R_{23}}, $$</div>
+<div class="math">$$ 2r_{31} = R_{31} + \frac{R_{23}}{R_{12}} + \frac{1}{R_{31}}.$$</div>
 <p>
 Note that you can obtain the second and third equations from the first one by cyclically shifting the integer labels. The solution should also exhibit this property. Solving this system of equations gives
 </p>
@@ -155,13 +159,25 @@ Thus,
 <div class="math">$$ S_{31} = \frac{1}{4} \left[ \frac{ 2 \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{3}^{2} m_{1}^{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) }{G_{123} + m_{1}^{2} G_{23}} \right]. $$</div>
 <p>
 I have implicitly assumed that all Regge-Mandelstam invariants, as well as all Regge-Gram invariants, are positive.</p>
-<p>Note the massless limits:
+<p>The massless limits are useful. For <span class="math">\(S_{12}\)</span> you have:
 </p>
-<div class="math">$$ \lim_{m_{1} \rightarrow 0} S_{12} = \lim_{m_{1} \rightarrow 0} \frac{G_{123} \left( s_{12} - m_{2}^{2} \right)}{G_{123} + m_{2}^{2} G_{31}} , \qquad \lim_{m_{2} \rightarrow 0} S_{12} = s_{12} - m_{1}^{2}, \qquad \lim_{m_{3} \rightarrow 0} S_{12} = \lim_{m_{3} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{12} - m_{1}^{2} - m_{2}^{2} \right) G_{123} + m_{1}^{2} m_{2}^{2} \left( s_{23} - m_{2}^{2} \right) \left( s_{31} - m_{1}^{2} \right) }{G_{123} + m_{2}^{2} G_{31}} \right]; $$</div>
-<div class="math">$$ \lim_{m_{2} \rightarrow 0} S_{23} = \lim_{m_{2} \rightarrow 0} \frac{G_{123} \left( s_{23} - m_{3}^{2} \right)}{G_{123} + m_{3}^{2} G_{12}} , \qquad \lim_{m_{3} \rightarrow 0} S_{23} = s_{23} - m_{2}^{2}, \qquad \lim_{m_{1} \rightarrow 0} S_{23} = \lim_{m_{1} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{23} - m_{2}^{2} - m_{3}^{2} \right) G_{123} + m_{2}^{2} m_{3}^{2} \left( s_{31} - m_{3}^{2} \right) \left( s_{12} - m_{2}^{2} \right) }{G_{123} + m_{3}^{2} G_{12}} \right]; $$</div>
-<div class="math">$$ \lim_{m_{3} \rightarrow 0} S_{31} = \lim_{m_{3} \rightarrow 0} \frac{G_{123} \left( s_{31} - m_{1}^{2} \right)}{G_{123} + m_{1}^{2} G_{23}} , \qquad \lim_{m_{1} \rightarrow 0} S_{31} = s_{31} - m_{3}^{2}, \qquad \lim_{m_{2} \rightarrow 0} S_{31} = \lim_{m_{2} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{31} - m_{3}^{2} - m_{1}^{2} \right) G_{123} + m_{3}^{2} m_{1}^{2} \left( s_{12} - m_{1}^{2} \right) \left( s_{23} - m_{3}^{2} \right) }{G_{123} + m_{1}^{2} G_{12}} \right]. $$</div>
+<div class="math">$$ \lim_{m_{1} \rightarrow 0} S_{12} = \lim_{m_{1} \rightarrow 0} \frac{G_{123} \left( s_{12} - m_{2}^{2} \right)}{G_{123} + m_{2}^{2} G_{31}}, $$</div>
+<div class="math">$$ \lim_{m_{2} \rightarrow 0} S_{12} = s_{12} - m_{1}^{2}, $$</div>
+<div class="math">$$ \lim_{m_{3} \rightarrow 0} S_{12} = \lim_{m_{3} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{12} - m_{1}^{2} - m_{2}^{2} \right) G_{123} + m_{1}^{2} m_{2}^{2} \left( s_{23} - m_{2}^{2} \right) \left( s_{31} - m_{1}^{2} \right) }{G_{123} + m_{2}^{2} G_{31}} \right]; $$</div>
 <p>
-Thus, when all three masses vanish the Sudakov vectors become the momenta of the quanta, and the 2-Mandelstam invariants become the 2-Sudakov invariants. </p>
+For <span class="math">\(S_{23}\)</span> you have:
+</p>
+<div class="math">$$ \lim_{m_{2} \rightarrow 0} S_{23} = \lim_{m_{2} \rightarrow 0} \frac{G_{123} \left( s_{23} - m_{3}^{2} \right)}{G_{123} + m_{3}^{2} G_{12}}, $$</div>
+<div class="math">$$ \lim_{m_{3} \rightarrow 0} S_{23} = s_{23} - m_{2}^{2}, $$</div>
+<div class="math">$$ \lim_{m_{1} \rightarrow 0} S_{23} = \lim_{m_{1} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{23} - m_{2}^{2} - m_{3}^{2} \right) G_{123} + m_{2}^{2} m_{3}^{2} \left( s_{31} - m_{3}^{2} \right) \left( s_{12} - m_{2}^{2} \right) }{G_{123} + m_{3}^{2} G_{12}} \right]; $$</div>
+<p>
+For <span class="math">\(S_{31}\)</span> you have:
+</p>
+<div class="math">$$ \lim_{m_{3} \rightarrow 0} S_{31} = \lim_{m_{3} \rightarrow 0} \frac{G_{123} \left( s_{31} - m_{1}^{2} \right)}{G_{123} + m_{1}^{2} G_{23}}, $$</div>
+<div class="math">$$ \lim_{m_{1} \rightarrow 0} S_{31} = s_{31} - m_{3}^{2}, $$</div>
+<div class="math">$$ \lim_{m_{2} \rightarrow 0} S_{31} = \lim_{m_{2} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{31} - m_{3}^{2} - m_{1}^{2} \right) G_{123} + m_{3}^{2} m_{1}^{2} \left( s_{12} - m_{1}^{2} \right) \left( s_{23} - m_{3}^{2} \right) }{G_{123} + m_{1}^{2} G_{12}} \right]. $$</div>
+<p>
+Thus, when all three masses vanish the Sudakov vectors become the momenta of the quanta, and the 2-Mandelstam invariants become the 2-Sudakov invariants.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
