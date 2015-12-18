@@ -144,13 +144,18 @@ and one <strong>4-Gram</strong> invariant:
 <p>
 You also have <strong>Regge-Gram</strong> invariants:
 </p>
-<div class="math">$$ g_{ij} \equiv \frac{G_{ij}}{m_{i}^{2} m_{j}^{2}}, \qquad g_{ijk} \equiv \frac{G_{ijk}}{m_{i}^{2} m_{j}^{2} m_{k}^{2}}, \qquad g_{1234} \equiv \frac{G_{1234}}{m_{1}^{2} m_{2}^{2} m_{3}^{2} m_{4}^{2}}. $$</div>
+<div class="math">$$ g_{ij} \equiv \frac{G_{ij}}{m_{i}^{2} m_{j}^{2}}, $$</div>
+<div class="math">$$ g_{ijk} \equiv \frac{G_{ijk}}{m_{i}^{2} m_{j}^{2} m_{k}^{2}}, $$</div>
+<div class="math">$$ g_{1234} \equiv \frac{G_{1234}}{m_{1}^{2} m_{2}^{2} m_{3}^{2} m_{4}^{2}}. $$</div>
 <p>
 All of these invariants should be enough to describe any four-body problem.</p>
 <h2>Contiguous</h2>
 <p>The four-body generalization of the contiguous three-body Sudakov decomposition is
 </p>
-<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}. $$</div>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}. $$</div>
 <p>
 Here the <span class="math">\(n_{i}\)</span> vectors are null, and I have introduced <strong>2-Sudakov</strong> invariants:
 </p>
@@ -166,42 +171,63 @@ Using the six identities of the form
 <p>
 you find the relations:
 </p>
-<div class="math">$$ 2r_{12} = R_{12} + \frac{R_{13}}{R_{23}} + \frac{1}{R_{12}}, \qquad 2r_{23} = R_{23} + \frac{R_{24}}{R_{34}} + \frac{1}{R_{23}}, \qquad 2r_{34} = R_{34} + \frac{R_{13}}{R_{41}} + \frac{1}{R_{34}}, \qquad 2r_{41} = R_{41} + \frac{R_{24}}{R_{12}} + \frac{1}{R_{41}}; $$</div>
-<div class="math">$$ 2r_{13} = R_{13} + \frac{R_{41}}{R_{34}} + \frac{R_{23}}{R_{12}} + \frac{R_{24}}{R_{12} R_{34}}, \qquad 2r_{24} = R_{24} + \frac{R_{12}}{R_{41}} + \frac{R_{34}}{R_{23}} + \frac{R_{13}}{R_{23} R_{41}}. $$</div>
+<div class="math">$$ 2r_{12} = R_{12} + \frac{R_{13}}{R_{23}} + \frac{1}{R_{12}}, $$</div>
+<div class="math">$$ 2r_{23} = R_{23} + \frac{R_{24}}{R_{34}} + \frac{1}{R_{23}}, $$</div>
+<div class="math">$$ 2r_{34} = R_{34} + \frac{R_{13}}{R_{41}} + \frac{1}{R_{34}}, $$</div>
+<div class="math">$$ 2r_{41} = R_{41} + \frac{R_{24}}{R_{12}} + \frac{1}{R_{41}}; $$</div>
+<div class="math">$$ 2r_{13} = R_{13} + \frac{R_{41}}{R_{34}} + \frac{R_{23}}{R_{12}} + \frac{R_{24}}{R_{12} R_{34}}, $$</div>
+<div class="math">$$ 2r_{24} = R_{24} + \frac{R_{12}}{R_{41}} + \frac{R_{34}}{R_{23}} + \frac{R_{13}}{R_{23} R_{41}}. $$</div>
 <p>
 This set of equations is harder to solve than the analogous set for the three-body case.</p>
 <p>Actually, there are two other non-equivalent contiguous four-body Sudakov decompositions:
 </p>
-<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{41}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{24}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}; $$</div>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{41}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{24}} n_{2}, $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}; $$</div>
 <p>
 and
 </p>
-<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{24}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}. $$</div>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{24}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}, $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}. $$</div>
 <h2>Non-Contiguous</h2>
 <p>With four bodies you can also perform a non-contiguous Sudakov decomposition where you combine two two-body decompositions. For example,
 </p>
-<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}. $$</div>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}; $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}. $$</div>
 <p>
 Then
 </p>
-<div class="math">$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}, \qquad 2 r_{34} = R_{34} + \frac{1}{R_{34}}; $$</div>
+<div class="math">$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}, $$</div>
+<div class="math">$$ 2 r_{34} = R_{34} + \frac{1}{R_{34}}; $$</div>
 <p>
-and you have a linear system for the remaining Regge-Sudakov invariants. I discussed a particular case of this decomposition for a <a href="http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/">four-point process</a>.</p>
+and you have a linear system for the remaining Regge-Sudakov invariants. In a previous post I discussed a particular case of this decomposition for a <a href="http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/">four-point process</a>.</p>
 <p>Just like contiguous decompositions, there are two other non-equivalent non-contiguous four-body Sudakov decompositions:
 </p>
-<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{13}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}; \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{24}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{24}} n_{2}; $$</div>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{13}} n_{3}, $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}; $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{24}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{24}} n_{2}; $$</div>
 <p>
 and
 </p>
-<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{41}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}; \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{23}} n_{2}. $$</div>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{41}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}; $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{23}} n_{2}. $$</div>
 <h2>Recursive</h2>
 <p>There are two kinds of recursive decompositions. Both kinds begin with a two-body step involving a 3-composite vector and a simple vector. For example, with
 </p>
 <div class="math">$$p_{123} \equiv p_{1} + p_{2} + p_{3}; \qquad s_{1234} = \left\Vert p_{123} + p_{4} \right\Vert^{2}. $$</div>
 <p>
-The two-body decompsition is
+The two-body decomposition is
 </p>
-<div class="math">$$ p_{123} = n_{123} + \frac{s_{123}}{S_{(123)4}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{(123)4}} n_{123}; $$</div>
+<div class="math">$$ p_{123} = n_{123} + \frac{s_{123}}{S_{(123)4}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{(123)4}} n_{123}; $$</div>
 <p>
 where <span class="math">\(n_{123}\)</span> is a null vector, and
 </p>

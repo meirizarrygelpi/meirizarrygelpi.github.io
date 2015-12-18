@@ -613,13 +613,18 @@ and one &lt;strong&gt;4-Gram&lt;/strong&gt; invariant:
 &lt;p&gt;
 You also have &lt;strong&gt;Regge-Gram&lt;/strong&gt; invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ g_{ij} \equiv \frac{G_{ij}}{m_{i}^{2} m_{j}^{2}}, \qquad g_{ijk} \equiv \frac{G_{ijk}}{m_{i}^{2} m_{j}^{2} m_{k}^{2}}, \qquad g_{1234} \equiv \frac{G_{1234}}{m_{1}^{2} m_{2}^{2} m_{3}^{2} m_{4}^{2}}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ g_{ij} \equiv \frac{G_{ij}}{m_{i}^{2} m_{j}^{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ g_{ijk} \equiv \frac{G_{ijk}}{m_{i}^{2} m_{j}^{2} m_{k}^{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ g_{1234} \equiv \frac{G_{1234}}{m_{1}^{2} m_{2}^{2} m_{3}^{2} m_{4}^{2}}. $$&lt;/div&gt;
 &lt;p&gt;
 All of these invariants should be enough to describe any four-body problem.&lt;/p&gt;
 &lt;h2&gt;Contiguous&lt;/h2&gt;
 &lt;p&gt;The four-body generalization of the contiguous three-body Sudakov decomposition is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}. $$&lt;/div&gt;
 &lt;p&gt;
 Here the &lt;span class="math"&gt;\(n_{i}\)&lt;/span&gt; vectors are null, and I have introduced &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariants:
 &lt;/p&gt;
@@ -635,42 +640,63 @@ Using the six identities of the form
 &lt;p&gt;
 you find the relations:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ 2r_{12} = R_{12} + \frac{R_{13}}{R_{23}} + \frac{1}{R_{12}}, \qquad 2r_{23} = R_{23} + \frac{R_{24}}{R_{34}} + \frac{1}{R_{23}}, \qquad 2r_{34} = R_{34} + \frac{R_{13}}{R_{41}} + \frac{1}{R_{34}}, \qquad 2r_{41} = R_{41} + \frac{R_{24}}{R_{12}} + \frac{1}{R_{41}}; $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ 2r_{13} = R_{13} + \frac{R_{41}}{R_{34}} + \frac{R_{23}}{R_{12}} + \frac{R_{24}}{R_{12} R_{34}}, \qquad 2r_{24} = R_{24} + \frac{R_{12}}{R_{41}} + \frac{R_{34}}{R_{23}} + \frac{R_{13}}{R_{23} R_{41}}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2r_{12} = R_{12} + \frac{R_{13}}{R_{23}} + \frac{1}{R_{12}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2r_{23} = R_{23} + \frac{R_{24}}{R_{34}} + \frac{1}{R_{23}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2r_{34} = R_{34} + \frac{R_{13}}{R_{41}} + \frac{1}{R_{34}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2r_{41} = R_{41} + \frac{R_{24}}{R_{12}} + \frac{1}{R_{41}}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2r_{13} = R_{13} + \frac{R_{41}}{R_{34}} + \frac{R_{23}}{R_{12}} + \frac{R_{24}}{R_{12} R_{34}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2r_{24} = R_{24} + \frac{R_{12}}{R_{41}} + \frac{R_{34}}{R_{23}} + \frac{R_{13}}{R_{23} R_{41}}. $$&lt;/div&gt;
 &lt;p&gt;
 This set of equations is harder to solve than the analogous set for the three-body case.&lt;/p&gt;
 &lt;p&gt;Actually, there are two other non-equivalent contiguous four-body Sudakov decompositions:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{41}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{24}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{41}} n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{24}} n_{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}; $$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{24}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{24}} n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}. $$&lt;/div&gt;
 &lt;h2&gt;Non-Contiguous&lt;/h2&gt;
 &lt;p&gt;With four bodies you can also perform a non-contiguous Sudakov decomposition where you combine two two-body decompositions. For example,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}. $$&lt;/div&gt;
 &lt;p&gt;
 Then
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}, \qquad 2 r_{34} = R_{34} + \frac{1}{R_{34}}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2 r_{34} = R_{34} + \frac{1}{R_{34}}; $$&lt;/div&gt;
 &lt;p&gt;
-and you have a linear system for the remaining Regge-Sudakov invariants. I discussed a particular case of this decomposition for a &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/"&gt;four-point process&lt;/a&gt;.&lt;/p&gt;
+and you have a linear system for the remaining Regge-Sudakov invariants. In a previous post I discussed a particular case of this decomposition for a &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/"&gt;four-point process&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Just like contiguous decompositions, there are two other non-equivalent non-contiguous four-body Sudakov decompositions:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{13}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}; \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{24}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{24}} n_{2}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{13}} n_{3}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{24}} n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{24}} n_{2}; $$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{41}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}; \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{23}} n_{2}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{41}} n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{23}} n_{2}. $$&lt;/div&gt;
 &lt;h2&gt;Recursive&lt;/h2&gt;
 &lt;p&gt;There are two kinds of recursive decompositions. Both kinds begin with a two-body step involving a 3-composite vector and a simple vector. For example, with
 &lt;/p&gt;
 &lt;div class="math"&gt;$$p_{123} \equiv p_{1} + p_{2} + p_{3}; \qquad s_{1234} = \left\Vert p_{123} + p_{4} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;
-The two-body decompsition is
+The two-body decomposition is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{123} = n_{123} + \frac{s_{123}}{S_{(123)4}} n_{4}, \qquad p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{(123)4}} n_{123}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{123} = n_{123} + \frac{s_{123}}{S_{(123)4}} n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{(123)4}} n_{123}; $$&lt;/div&gt;
 &lt;p&gt;
 where &lt;span class="math"&gt;\(n_{123}\)&lt;/span&gt; is a null vector, and
 &lt;/p&gt;
