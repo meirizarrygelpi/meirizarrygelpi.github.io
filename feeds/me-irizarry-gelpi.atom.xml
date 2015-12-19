@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-15T00:00:00-05:00</updated><entry><title>Outgoing Two-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/outgoing-two-body/" rel="alternate"></link><updated>2015-12-15T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-15:posts/2015/Dec/outgoing-two-body/</id><summary type="html">&lt;p&gt;The main purpose of a Sudakov decomposition is to identify particular null vectors (the Sudakov vectors) and decompose any other given vectors into components along the Sudakov subspace and components orthogonal to the Sudakov subspace. An important example of this is a two-body decomposition in a four-point process of the form
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-19T00:00:00-05:00</updated><entry><title>arXiv picks for 2015, week 51</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/2015-week-51/" rel="alternate"></link><updated>2015-12-19T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-19:posts/2015/Dec/2015-week-51/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.03524"&gt;On four dimensional &lt;span class="math"&gt;\(N=3\)&lt;/span&gt; superconformal theories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.04443"&gt;Six dimensional QCD at two loops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.04954"&gt;Towards the Amplituhedron Volume&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.04963"&gt;Six-point remainder function in multi-Regge-kinematics: an efficient approach in momentum space&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.05001"&gt;One-Loop Corrections from Higher Dimensional Tree Amplitudes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.05362"&gt;On level crossing in conformal field theories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.05387"&gt;The Role of Möbius Constants and Scattering Functions in CHY Scalar Amplitudes&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="research"></category></entry><entry><title>Outgoing Two-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/outgoing-two-body/" rel="alternate"></link><updated>2015-12-15T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-15:posts/2015/Dec/outgoing-two-body/</id><summary type="html">&lt;p&gt;The main purpose of a Sudakov decomposition is to identify particular null vectors (the Sudakov vectors) and decompose any other given vectors into components along the Sudakov subspace and components orthogonal to the Sudakov subspace. An important example of this is a two-body decomposition in a four-point process of the form
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ a(p_{1}) + b(p_{2}) \longrightarrow c(p_{3}) + d(p_{4}). $$&lt;/div&gt;
 &lt;p&gt;
