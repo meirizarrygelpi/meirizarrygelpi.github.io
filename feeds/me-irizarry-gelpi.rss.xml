@@ -2017,53 +2017,94 @@ That is, the three massive momenta can be written as very simple combinations of
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 17 Oct 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-10-17:posts/2015/Oct/2015-week-42/</guid><category>research</category></item><item><title>Sudakov Kinematics</title><link>http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/</link><description>&lt;p&gt;Recently I learned a cool trick. It allows you to write a set of slow momenta in terms of null momenta. By slow momentum I mean an energy-momentum vector that describes a quantum that moves slower than light. By null momentum I mean an energy-momentum vector that describes a quantum that moves at the same speed as light. For concreteness, consider a 2-to-2 scattering process:
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 17 Oct 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-10-17:posts/2015/Oct/2015-week-42/</guid><category>research</category></item><item><title>Sudakov Kinematics</title><link>http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/</link><description>&lt;p&gt;Recently I learned a cool trick. It allows you to write a set of massive momenta in terms of null vectors. By massive momentum I mean an energy-momentum vector that describes a quantum that moves slower than light. For concreteness, consider a 2-to-2 scattering process:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}) + D(p_{4}). $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{3}(p_{3}) + \Phi_{4}(p_{4}). $$&lt;/div&gt;
 &lt;p&gt;
-You have the conservation constraint,
+You have the &lt;strong&gt;conservation&lt;/strong&gt; constraint,
 &lt;/p&gt;
 &lt;div class="math"&gt;$$p_{1} + p_{2} = p_{3} + p_{4}, $$&lt;/div&gt;
 &lt;p&gt;
-and the on-shell constraints,
+and the four &lt;strong&gt;massive on-shell&lt;/strong&gt; constraints,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \left\Vert p_{1} \right\Vert^{2} + m_{1}^{2} = 0, \qquad \left\Vert p_{2} \right\Vert^{2} + m_{2}^{2} = 0, \qquad \left\Vert p_{3} \right\Vert^{2} + m_{3}^{2} = 0, \qquad \left\Vert p_{4} \right\Vert^{2} + m_{4}^{2} = 0. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;
-Traditionally, you use the Mandelstam invariants to describe the kinematics of this process:
+Traditionally, you use the &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants to describe the kinematics of this process:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ s = -\left\Vert p_{1} + p_{2} \right\Vert^{2} = -\left\Vert p_{3} + p_{4} \right\Vert^{2}, \qquad t = -\left\Vert p_{1} - p_{3} \right\Vert^{2} = -\left\Vert p_{4} - p_{2} \right\Vert^{2} , \qquad u = -\left\Vert p_{1} - p_{4} \right\Vert^{2} = -\left\Vert p_{3} - p_{2} \right\Vert^{2}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ s = -\left\Vert p_{1} + p_{2} \right\Vert^{2} = -\left\Vert p_{3} + p_{4} \right\Vert^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ t = -\left\Vert p_{1} - p_{3} \right\Vert^{2} = -\left\Vert p_{4} - p_{2} \right\Vert^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ u = -\left\Vert p_{1} - p_{4} \right\Vert^{2} = -\left\Vert p_{3} - p_{2} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;
-Due to the conservation constraint, the three Mandelstam invariants satisfy a linear constraint:
+Due to the conservation constraint, the three 2-Mandelstam invariants satisfy a linear constraint:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ s + t + u = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2}. $$&lt;/div&gt;
 &lt;p&gt;
-I will refer to the process of writing all physically-relevant quantities (e.g. energy, spatial momentum, speed, rapidity, scattering angles) in terms of the masses and the Mandelstam invariants as the Mandelstam kinematic analysis.&lt;/p&gt;
-&lt;p&gt;What I call the Sudakov kinematic analysis consist of decomposing the incoming/outgoing slow momenta into incoming/outgoing null momenta. That is, let &lt;span class="math"&gt;\(k_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(k_{2}\)&lt;/span&gt;, &lt;span class="math"&gt;\(k_{3}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(k_{4}\)&lt;/span&gt; be null momenta and consider
+I will refer to the process of writing all physically-relevant quantities (e.g. energy, spatial momentum, speed, rapidity, scattering angles) in terms of the masses and the 2-Mandelstam invariants as the &lt;strong&gt;Mandelstam kinematic analysis&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;What I call the &lt;strong&gt;Sudakov kinematic analysis&lt;/strong&gt; consist of decomposing the incoming/outgoing massive momenta into incoming/outgoing null vectors. That is, let &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(n_{2}\)&lt;/span&gt;, &lt;span class="math"&gt;\(n_{3}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(n_{4}\)&lt;/span&gt; be &lt;strong&gt;null vectors&lt;/strong&gt; and consider the following Sudakov decomposition:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} = k_{1} - \frac{m_{1}^{2}}{2 \left( k_{1} \cdot k_{2} \right)} k_{2}, \qquad p_{2} = k_{2} - \frac{m_{2}^{2}}{2 \left( k_{1} \cdot k_{2} \right)} k_{1}, \qquad p_{3} = k_{3} - \frac{m_{3}^{2}}{2 \left( k_{3} \cdot k_{4} \right)} k_{4}, \qquad p_{4} = k_{4} - \frac{m_{4}^{2}}{2 \left( k_{3} \cdot k_{4} \right)} k_{3}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} - \frac{m_{1}^{2}}{2 \left( n_{1} \cdot n_{2} \right)} n_{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} = n_{2} - \frac{m_{2}^{2}}{2 \left( n_{1} \cdot n_{2} \right)} n_{1}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} = n_{3} - \frac{m_{3}^{2}}{2 \left( n_{3} \cdot n_{4} \right)} n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} = n_{4} - \frac{m_{4}^{2}}{2 \left( n_{3} \cdot n_{4} \right)} n_{3}. $$&lt;/div&gt;
 &lt;p&gt;
-This is valid because, in general, a linear combination of two null vectors is not null. The conservation constraint becomes
+This is valid because, in general, a linear combination of two null vectors is not null. The null vectors &lt;span class="math"&gt;\(n_{i}\)&lt;/span&gt; are the &lt;strong&gt;Sudakov vectors&lt;/strong&gt;. Note that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \left[ 1 - \frac{m_{2}^{2}}{2 \left( k_{1} \cdot k_{2} \right)} \right] k_{1} + \left[ 1 - \frac{m_{1}^{2}}{2 \left( k_{1} \cdot k_{2} \right)} \right] k_{2} = \left[ 1 - \frac{m_{4}^{2}}{2 \left( k_{3} \cdot k_{4} \right)} \right] k_{3} + \left[ 1 - \frac{m_{3}^{2}}{2 \left( k_{3} \cdot k_{4} \right)} \right] k_{4}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} + p_{2} = \left[ 1 - \frac{m_{2}^{2}}{2 \left( n_{1} \cdot n_{2} \right)} \right] n_{1} + \left[ 1 - \frac{m_{1}^{2}}{2 \left( n_{1} \cdot n_{2} \right)} \right] n_{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} + p_{4} = \left[ 1 - \frac{m_{4}^{2}}{2 \left( n_{3} \cdot n_{4} \right)} \right] n_{3} + \left[ 1 - \frac{m_{3}^{2}}{2 \left( n_{3} \cdot n_{4} \right)} \right] n_{4}. $$&lt;/div&gt;
 &lt;p&gt;
-You can introduce six Sudakov invariants:
+You can introduce six &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{12} = - \left\Vert k_{1} + k_{2} \right\Vert^{2}, \qquad T_{13} = -\left\Vert k_{1} - k_{3} \right\Vert^{2}, \qquad U_{14} = -\left\Vert k_{1} - k_{4} \right\Vert^{2}, \qquad U_{23} = -\left\Vert k_{3} - k_{2} \right\Vert^{2}, \qquad T_{24} = -\left\Vert k_{4} - k_{2} \right\Vert^{2}, \qquad S_{34} = -\left\Vert k_{3} + k_{4} \right\Vert^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} \equiv -\left\Vert n_{1} + n_{2} \right\Vert^{2} = -2 \left( n_{1} \cdot n_{2} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ T_{13} \equiv -\left\Vert n_{1} - n_{3} \right\Vert^{2} = 2 \left( n_{1} \cdot n_{3} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ U_{14} \equiv -\left\Vert n_{1} - n_{4} \right\Vert^{2} = 2 \left( n_{1} \cdot n_{4} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ U_{23} \equiv -\left\Vert n_{3} - n_{2} \right\Vert^{2} = 2 \left( n_{2} \cdot n_{3} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ T_{24} \equiv -\left\Vert n_{4} - n_{2} \right\Vert^{2} = 2 \left( n_{2} \cdot n_{4} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{34} \equiv -\left\Vert n_{3} + n_{4} \right\Vert^{2} = -2 \left( n_{3} \cdot n_{4} \right). $$&lt;/div&gt;
 &lt;p&gt;
-In principle, you can write these invariants in terms of the masses and the Mandelstam invariants. The system of six equations to solve is
+You can write the 2-Sudakov invariants in terms of the masses and the 2-Mandelstam invariants. Introduce six &lt;strong&gt;Regge-Mandelstam&lt;/strong&gt; invariants
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ s = \left( 1 + \frac{m_{1}^{2}}{S_{12}} \right) \left( 1 + \frac{m_{2}^{2}}{S_{12}} \right) S_{12}, \qquad s = \left( 1 + \frac{m_{3}^{2}}{S_{34}} \right) \left( 1 + \frac{m_{4}^{2}}{S_{34}} \right) S_{34}; $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ t = m_{1}^{2} + m_{3}^{2} + T_{13} + \left( \frac{m_{3}^{2}}{S_{34}} \right) U_{14} + \left( \frac{m_{1}^{2}}{S_{12}} \right) U_{23} + \left( \frac{m_{1}^{2} m_{3}^{2}}{S_{12} S_{34}} \right) T_{24}, \qquad t = m_{2}^{2} + m_{4}^{2} + T_{24} + \left( \frac{m_{4}^{2}}{S_{34}} \right) U_{23} + \left( \frac{m_{2}^{2}}{S_{12}} \right) U_{14} + \left( \frac{m_{2}^{2} m_{4}^{2}}{S_{12} S_{34}} \right) T_{13};$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ u = m_{1}^{2} + m_{4}^{2} + U_{14} + \left( \frac{m_{4}^{2}}{S_{34}} \right) T_{13} + \left( \frac{m_{1}^{2}}{S_{12}} \right) T_{24} + \left( \frac{ m_{1}^{2} m_{4}^{2}}{S_{12} S_{34}} \right) U_{23}, \qquad u = m_{2}^{2} + m_{3}^{2} + U_{23} + \left( \frac{m_{3}^{2}}{S_{34}} \right) T_{24} + \left( \frac{m_{2}^{2}}{S_{12}} \right) T_{13} + \left( \frac{m_{2}^{2} m_{3}^{2}}{S_{12} S_{34}} \right) U_{14}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{12} \equiv \frac{s - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{13} \equiv \frac{m_{1}^{2} + m_{3}^{2} - t}{2 m_{1} m_{3}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{14} \equiv \frac{m_{1}^{2} + m_{4}^{2} - u}{2 m_{1} m_{4}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{23} \equiv \frac{m_{2}^{2} + m_{3}^{2} - u}{2 m_{2} m_{3}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{24} \equiv \frac{m_{2}^{2} + m_{4}^{2} - t}{2 m_{2} m_{4}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{34} \equiv \frac{s - m_{3}^{2} - m_{4}^{2}}{2 m_{3} m_{4}}; $$&lt;/div&gt;
+&lt;p&gt;
+and six &lt;strong&gt;Regge-Sudakov&lt;/strong&gt; invariants
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{13} \equiv -\frac{T_{13}}{m_{1} m_{3}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{14} \equiv -\frac{U_{14}}{m_{1} m_{4}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{23} \equiv -\frac{U_{23}}{m_{2} m_{3}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{24} \equiv -\frac{T_{24}}{m_{2} m_{4}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{34} \equiv \frac{S_{34}}{m_{3} m_{4}}. $$&lt;/div&gt;
+&lt;p&gt;
+Using the six relations
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r_{ij} = - \frac{p_{i} \cdot p_{j}}{m_{i} m_{j}}, $$&lt;/div&gt;
+&lt;p&gt;
+along with the Sudakov decomposition, you find the system of six equations to solve:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2 r_{13} = R_{13} + \frac{R_{14}}{R_{34}} + \frac{R_{23}}{R_{12}} + \frac{R_{24}}{R_{12} R_{34}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2 r_{14} = R_{14} + \frac{R_{13}}{R_{34}} + \frac{R_{24}}{R_{12}} + \frac{R_{23}}{R_{12} R_{34}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2 r_{23} = R_{23} + \frac{R_{24}}{R_{34}} + \frac{R_{13}}{R_{12}} + \frac{R_{14}}{R_{12} R_{34}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2 r_{24} = R_{24} + \frac{R_{23}}{R_{34}} + \frac{R_{14}}{R_{12}} + \frac{R_{13}}{R_{12} R_{34}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2 r_{34} = R_{34} + \frac{1}{R_{34}}. $$&lt;/div&gt;
 &lt;p&gt;
 The solution is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{12} = \frac{1}{2} \left( s - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left[ s - \left( m_{1} - m_{2} \right)^{2} \right] \left[ s - \left( m_{1} + m_{2} \right)^{2} \right] } \right);$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ S_{34} = \frac{1}{2} \left( s - m_{3}^{2} - m_{4}^{2} + \sqrt{ \left[ s - \left( m_{3} - m_{4} \right)^{2} \right] \left[ s - \left( m_{3} + m_{4} \right)^{2} \right] } \right);$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ T_{13} = \frac{S_{12}^{2} S_{34}^{2}}{\left(S_{12}^{2} - m_{1}^{2} m_{2}^{2} \right) \left(S_{34}^{2} - m_{3}^{2} m_{4}^{2} \right)} \left[\left( t - m_{1}^{2} - m_{3}^{2} \right) - \frac{m_{3}^{2}}{S_{34}} \left( u - m_{1}^{2} - m_{4}^{2} \right) - \frac{m_{1}^{2}}{S_{12}} \left( u - m_{2}^{2} - m_{3}^{2} \right) + \frac{m_{1}^{2} m_{3}^{2}}{S_{12} S_{34}} \left( t - m_{2}^{2} - m_{4}^{2} \right) \right] ;$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ T_{24} = \frac{S_{12}^{2} S_{34}^{2}}{\left(S_{12}^{2} - m_{1}^{2} m_{2}^{2} \right) \left(S_{34}^{2} - m_{3}^{2} m_{4}^{2} \right)} \left[ \left( t - m_{2}^{2} - m_{4}^{2} \right) - \frac{m_{4}^{2}}{S_{34}} \left( u - m_{2}^{2} - m_{3}^{2} \right) - \frac{m_{2}^{2}}{S_{12}} \left( u - m_{1}^{2} - m_{4}^{2} \right) + \frac{m_{2}^{2} m_{4}^{2}}{S_{12} S_{34}} \left( t - m_{1}^{2} - m_{3}^{2} \right) \right] ;$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ U_{14} = \frac{S_{12}^{2} S_{34}^{2}}{\left(S_{12}^{2} - m_{1}^{2} m_{2}^{2} \right) \left(S_{34}^{2} - m_{3}^{2} m_{4}^{2} \right)} \left[ \left( u - m_{1}^{2} - m_{4}^{2} \right) - \frac{m_{4}^{2}}{S_{34}} \left( t - m_{1}^{2} - m_{3}^{2} \right) - \frac{m_{1}^{2}}{S_{12}} \left( t - m_{2}^{2} - m_{4}^{2} \right) + \frac{m_{1}^{2} m_{4}^{2}}{S_{12} S_{34}} \left( u - m_{2}^{2} - m_{3}^{2} \right) \right] ;$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ U_{23} = \frac{S_{12}^{2} S_{34}^{2}}{\left(S_{12}^{2} - m_{1}^{2} m_{2}^{2} \right) \left(S_{34}^{2} - m_{3}^{2} m_{4}^{2} \right)} \left[ \left( u - m_{2}^{2} - m_{3}^{2} \right) - \frac{m_{3}^{2}}{S_{34}} \left( t - m_{2}^{2} - m_{4}^{2} \right) - \frac{m_{2}^{2}}{S_{12}} \left( t - m_{1}^{2} - m_{3}^{2} \right) + \frac{m_{2}^{2} m_{3}^{2}}{S_{12} S_{34}} \left( u - m_{1}^{2} - m_{4}^{2} \right) \right] .$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{12} = r_{12} + \sqrt{r_{12}^{2} - 1}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{13} = \frac{2 R_{12}^{2} R_{34}^{2}}{\left( R_{12}^{2} - 1 \right) \left( R_{34}^{2} - 1 \right)} \left[ r_{13} - \frac{r_{14}}{R_{34}} - \frac{r_{23}}{R_{12}} + \frac{r_{24}}{R_{12} R_{34}} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{14} = \frac{2 R_{12}^{2} R_{34}^{2}}{\left( R_{12}^{2} - 1 \right) \left( R_{34}^{2} - 1 \right)} \left[ r_{14} - \frac{r_{13}}{R_{34}} - \frac{r_{24}}{R_{12}} + \frac{r_{23}}{R_{12} R_{34}} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{23} = \frac{2 R_{12}^{2} R_{34}^{2}}{\left( R_{12}^{2} - 1 \right) \left( R_{34}^{2} - 1 \right)} \left[ r_{23} - \frac{r_{24}}{R_{34}} - \frac{r_{13}}{R_{12}} + \frac{r_{14}}{R_{12} R_{34}} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{24} = \frac{2 R_{12}^{2} R_{34}^{2}}{\left( R_{12}^{2} - 1 \right) \left( R_{34}^{2} - 1 \right)} \left[ r_{24} - \frac{r_{23}}{R_{34}} - \frac{r_{14}}{R_{12}} + \frac{r_{13}}{R_{12} R_{34}} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{34} = r_{34} + \sqrt{r_{34}^{2} - 1}. $$&lt;/div&gt;
+&lt;p&gt;
+In terms of the masses and the 2-Mandelstam invariants, you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{12} = \frac{1}{2} \left( s - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{34} = \frac{1}{2} \left( s - m_{3}^{2} - m_{4}^{2} + \sqrt{ \left( s - m_{3}^{2} - m_{4}^{2} \right)^{2} - 4 m_{3}^{2} m_{4}^{2} } \right). $$&lt;/div&gt;
 &lt;p&gt;
 Note that in four spacetime dimensions all Sudakov invariants can be written in terms of twistor products.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
