@@ -1535,17 +1535,17 @@ All of these invariants are present in any three-body problem.&lt;/p&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Thu, 26 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/three-body-kinematics/</guid><category>sudakov</category><category>three-body</category></item><item><title>Two-Body Sudakov Decomposition</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/</link><description>&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive quantum. That is, you do not have any conservation constraint relating these two momentum vectors. But you still have two &lt;strong&gt;on-shell constraints&lt;/strong&gt;:
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Thu, 26 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/three-body-kinematics/</guid><category>sudakov</category><category>three-body</category></item><item><title>Two-Body Sudakov Decomposition</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/</link><description>&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive body. That is, you do not have any conservation constraint relating these two massive momenta. But you still have two &lt;strong&gt;massive on-shell&lt;/strong&gt; constraints:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \left\Vert p_{1} \right\Vert^{2} = m_{1}^{2}, \qquad \left\Vert p_{2} \right\Vert^{2} = m_{2}^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;
 You can introduce a &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariant:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ s_{12} \equiv \left\Vert p_{1} + p_{2} \right\Vert^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ s_{12} \equiv -\left\Vert p_{1} + p_{2} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;
 You can also introduce the corresponding &lt;strong&gt;Regge-Mandelstam&lt;/strong&gt; invariant:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ r_{12} \equiv \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{12} \equiv \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}. $$&lt;/div&gt;
 &lt;p&gt;
 There is one &lt;strong&gt;2-Gram&lt;/strong&gt; invariant:
 &lt;/p&gt;
@@ -1554,13 +1554,14 @@ There is one &lt;strong&gt;2-Gram&lt;/strong&gt; invariant:
 All of these invariants are present in any two-body problem.&lt;/p&gt;
 &lt;p&gt;The &lt;strong&gt;two-body Sudakov decomposition&lt;/strong&gt; is given by
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}. $$&lt;/div&gt;
 &lt;p&gt;
-Here &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{2}\)&lt;/span&gt; are null vectors, and I have introduced a &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariant:
+Here &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{2}\)&lt;/span&gt; are (null) &lt;strong&gt;Sudakov vectors&lt;/strong&gt;, and I have introduced a &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariant:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{12} \equiv \left\Vert n_{1} + n_{2} \right\Vert^{2} = 2 \left( n_{1} \cdot n_{2} \right).$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} \equiv -\left\Vert n_{1} + n_{2} \right\Vert^{2} = -2 \left( n_{1} \cdot n_{2} \right).$$&lt;/div&gt;
 &lt;p&gt;
-This decomposition can be thought of as a way to explicitly solve the on-shell constraints. The labeling of the null vectors is such that in a massless limit &lt;span class="math"&gt;\(m_{i} \rightarrow 0\)&lt;/span&gt; the momentum &lt;span class="math"&gt;\(p_{i}\)&lt;/span&gt; becomes the null vector &lt;span class="math"&gt;\(n_{i}\)&lt;/span&gt;. At first glance, this might lead you to believe that &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt; is only associated with &lt;span class="math"&gt;\(p_{1}\)&lt;/span&gt;, but that is not the case. In matrix form, the above decomposition is
+This decomposition can be thought of as a way to explicitly solve the on-shell constraints. The labeling of the Sudakov vectors is such that in a massless limit &lt;span class="math"&gt;\(m_{i} \rightarrow 0\)&lt;/span&gt; the momentum &lt;span class="math"&gt;\(p_{i}\)&lt;/span&gt; becomes the Sudakov vector &lt;span class="math"&gt;\(n_{i}\)&lt;/span&gt;. At first glance, this might lead you to believe that &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt; is only associated with &lt;span class="math"&gt;\(p_{1}\)&lt;/span&gt;, but that is not the case. In matrix form, the above decomposition is
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \begin{pmatrix} p_{1} \\ p_{2} \end{pmatrix} = \mathcal{S}_{2} \cdot \begin{pmatrix} n_{1} \\ n_{2} \end{pmatrix}, \qquad \mathcal{S}_{2} \equiv \begin{pmatrix} 1 &amp;amp; \dfrac{m_{1}^{2}}{S_{12}} \\ \dfrac{m_{2}^{2}}{S_{12}} &amp;amp; 1 \end{pmatrix}. $$&lt;/div&gt;
 &lt;p&gt;
@@ -1572,14 +1573,14 @@ The inverse of &lt;span class="math"&gt;\(\mathcal{S}_{2}\)&lt;/span&gt; is
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \operatorname{inv}{\left( \mathcal{S}_{2} \right)} = \frac{1}{\det{ \left( \mathcal{S}_{2} \right) }} \begin{pmatrix} 1 &amp;amp; -\dfrac{m_{1}^{2}}{S_{12}} \\ -\dfrac{m_{2}^{2}}{S_{12}} &amp;amp; 1 \end{pmatrix}. $$&lt;/div&gt;
 &lt;p&gt;
-From here it is clear that both &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{2}\)&lt;/span&gt; can be written as linear combinations of &lt;span class="math"&gt;\(p_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(p_{2}\)&lt;/span&gt;. Thus, the "individual content" from each quantum is carried by both null vectors.&lt;/p&gt;
-&lt;p&gt;The goal now is to write &lt;span class="math"&gt;\(S_{12}\)&lt;/span&gt; in terms of &lt;span class="math"&gt;\(s_{12}\)&lt;/span&gt; and the masses. In order to do this, it is helpful to also introduce a &lt;strong&gt;Regge-Sudakov&lt;/strong&gt; invariant:
+From here it is clear that both &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{2}\)&lt;/span&gt; can be written as linear combinations of &lt;span class="math"&gt;\(p_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(p_{2}\)&lt;/span&gt;. Thus, the "individual content" from each quantum is carried by both Sudakov vectors.&lt;/p&gt;
+&lt;p&gt;My goal is to write &lt;span class="math"&gt;\(S_{12}\)&lt;/span&gt; in terms of &lt;span class="math"&gt;\(s_{12}\)&lt;/span&gt; and the masses. It is helpful to introduce a &lt;strong&gt;Regge-Sudakov&lt;/strong&gt; invariant:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}.$$&lt;/div&gt;
 &lt;p&gt;
 Using the identity
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ r_{12} = \frac{p_{1} \cdot p_{2}}{m_{1} m_{2}},$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{12} = -\frac{p_{1} \cdot p_{2}}{m_{1} m_{2}},$$&lt;/div&gt;
 &lt;p&gt;
 you find the relation
 &lt;/p&gt;
@@ -1604,13 +1605,17 @@ That is,
 This is equivalent to &lt;span class="math"&gt;\(G_{12} \geq 0\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The following relations are useful:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{12} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right), \qquad S_{12} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$&lt;/div&gt;
 &lt;div class="math"&gt;$$ \frac{\left(S_{12} + m_{1}^{2} \right) \left(S_{12} + m_{2}^{2} \right)}{S_{12}} = s_{12} ;$$&lt;/div&gt;
 &lt;div class="math"&gt;$$ S_{12} = \frac{2 m_{1}^{2} m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$&lt;/div&gt;
 &lt;div class="math"&gt;$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right), \qquad \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ S_{12} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} - m_{2}^{2}, \qquad S_{12} - \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} };$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ S_{12} + 2 m_{1}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} + m_{1}^{2} - m_{2}^{2}, \qquad S_{12} + 2 m_{2}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} + m_{2}^{2};$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} - m_{2}^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} - \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} };$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} + 2 m_{1}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} + m_{1}^{2} - m_{2}^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} + 2 m_{2}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} + m_{2}^{2};$$&lt;/div&gt;
 &lt;div class="math"&gt;$$ \frac{S_{12} \left( S_{12} + m_{1}^{2} \right)}{m_{1}^{2} \left( S_{12} + m_{2}^{2} \right)} = \frac{s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$&lt;/div&gt;
 &lt;div class="math"&gt;$$ \frac{S_{12} \left( S_{12} + m_{2}^{2} \right)}{m_{2}^{2} \left( S_{12} + m_{1}^{2} \right)} = \frac{s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$&lt;/div&gt;
 &lt;div class="math"&gt;$$ S_{12}^{2} = m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} = \frac{r_{12} + \sqrt{ r_{12}^{2} - 1 }}{r_{12} - \sqrt{ r_{12}^{2} - 1 }};$$&lt;/div&gt;
