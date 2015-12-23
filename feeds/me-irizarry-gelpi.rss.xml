@@ -1407,7 +1407,119 @@ These provide an argument for restricting only to the range &lt;span class="math
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.07455"&gt;Poisson equation for the Mercedes diagram in string theory at genus one&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.06955"&gt;Nambu at Work&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.08025"&gt;Conformal Collider Physics from the Lightcone Bootstrap&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 28 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-28:posts/2015/Nov/2015-week-48/</guid><category>research</category></item><item><title>Two-Body Sudakov Decomposition</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/</link><description>&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive body. That is, you do not have any conservation constraint relating these two massive momenta. But you still have two &lt;strong&gt;massive on-shell&lt;/strong&gt; constraints:
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 28 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-28:posts/2015/Nov/2015-week-48/</guid><category>research</category></item><item><title>Three-Body Kinematics</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/</link><description>&lt;p&gt;In this post I will consider the kinematics of problems with three independent momentum vectors, each of which describe a distinct massive body. That is, you do not have any conservation constraint relating these three momenta. But you still have three &lt;strong&gt;massive on-shell&lt;/strong&gt; constraints:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+You can introduce three &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s_{ij} \equiv -\left\Vert p_{i} + p_{j} \right\Vert^{2}; $$&lt;/div&gt;
+&lt;p&gt;
+and one &lt;strong&gt;3-Mandelstam&lt;/strong&gt; invariant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s_{123} \equiv -\left\Vert p_{1} + p_{2} + p_{3} \right\Vert^{2} = s_{12} + s_{23} + s_{31} - m_{1}^{2} - m_{2}^{2} - m_{3}^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+You can also introduce three &lt;strong&gt;Regge-Mandelstam&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r_{ij} \equiv \frac{s_{ij} - m_{i}^{2} - m_{j}^{2}}{2 m_{i} m_{j}}. $$&lt;/div&gt;
+&lt;p&gt;
+There are three &lt;strong&gt;2-Gram&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{ij} \equiv - \det{ \begin{pmatrix} \left\Vert p_{i} \right\Vert^{2} &amp;amp; p_{i} \cdot p_{j} \\ p_{j} \cdot p_{i} &amp;amp; \left\Vert p_{j} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{ij} - m_{i}^{2} - m_{j}^{2} \right)^{2} - 4 m_{i}^{2} m_{j}^{2} \right] = m_{i}^{2} m_{j}^{2} \left( r_{ij}^{2} - 1 \right); $$&lt;/div&gt;
+&lt;p&gt;
+and one &lt;strong&gt;3-Gram&lt;/strong&gt; invariant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$G_{123} = -\det{ \begin{pmatrix} \left\Vert p_{1} \right\Vert^{2} &amp;amp; p_{1} \cdot p_{2} &amp;amp; p_{1} \cdot p_{3} \\ p_{2} \cdot p_{1} &amp;amp; \left\Vert p_{2} \right\Vert^{2} &amp;amp; p_{2} \cdot p_{3} \\ p_{3} \cdot p_{1} &amp;amp; p_{3} \cdot p_{2} &amp;amp; \left\Vert p_{3} \right\Vert^{2} \end{pmatrix} }  = m_{1}^{2} m_{2}^{2} m_{3}^{2} \left( 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{23}^{2} - r_{31}^{2} + 1 \right).$$&lt;/div&gt;
+&lt;p&gt;
+More explicitly,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) - m_{1}^{2} \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right)^{2} - m_{2}^{2} \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right)^{2} - m_{3}^{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} + 4 m_{1}^{2} m_{2}^{2} m_{3}^{2} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+Note the &lt;strong&gt;massless limits&lt;/strong&gt; of the Gram invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{1} \rightarrow 0} G_{12} = \frac{1}{4} \left( s_{12} - m_{2}^{2} \right)^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{2} \rightarrow 0} G_{12} = \frac{1}{4} \left( s_{12} - m_{1}^{2} \right)^{2}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{2} \rightarrow 0} G_{23} = \frac{1}{4} \left( s_{23} - m_{3}^{2} \right)^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{3} \rightarrow 0} G_{23} = \frac{1}{4} \left( s_{23} - m_{2}^{2} \right)^{2}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{3} \rightarrow 0} G_{31} = \frac{1}{4} \left( s_{31} - m_{1}^{2} \right)^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{1} \rightarrow 0} G_{31} = \frac{1}{4} \left( s_{31} - m_{3}^{2} \right)^{2}; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{1} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} \right) - m_{2}^{2} \left( s_{31} - m_{3}^{2} \right)^{2} - m_{3}^{2} \left( s_{12} - m_{2}^{2} \right)^{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{2} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} \right) \left( s_{23} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) - m_{1}^{2} \left( s_{23} - m_{3}^{2} \right)^{2} - m_{3}^{2} \left( s_{12} - m_{1}^{2} \right)^{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{3} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} \right) \left( s_{31} - m_{1}^{2} \right) - m_{1}^{2} \left( s_{23} - m_{2}^{2} \right)^{2} - m_{2}^{2} \left( s_{31} - m_{1}^{2} \right)^{2} \right]; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{1} \rightarrow 0} \lim_{m_{2} \rightarrow 0} G_{123} = \frac{1}{4} \left[ s_{12} \left( s_{23} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} \right) - m_{3}^{2} s_{12}^{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{2} \rightarrow 0} \lim_{m_{3} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} \right) s_{23} \left( s_{31} - m_{1}^{2} \right) - m_{1}^{2} s_{23}^{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \lim_{m_{3} \rightarrow 0} \lim_{m_{1} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} \right) s_{31} - m_{2}^{2} s_{31}^{2} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+For convenience, I will also introduce &lt;strong&gt;Regge-Gram&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ g_{12} \equiv \frac{G_{12}}{m_{1}^{2} m_{2}^{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ g_{23} \equiv \frac{G_{23}}{m_{2}^{2} m_{3}^{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ g_{31} \equiv \frac{G_{31}}{m_{3}^{2} m_{1}^{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ g_{123} \equiv \frac{G_{123}}{m_{1}^{2} m_{2}^{2} m_{3}^{2}}. $$&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ g_{123} + g_{12} = 2 r_{12} r_{23} r_{31} - r_{23}^{2} - r_{31}^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ g_{123} + g_{23} = 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{31}^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ g_{123} + g_{31} = 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{23}^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+All of these invariants are present in any three-body problem.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Thu, 26 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/three-body-kinematics/</guid><category>sudakov</category><category>three-body</category></item><item><title>Two-Body Sudakov Decomposition</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/</link><description>&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive body. That is, you do not have any conservation constraint relating these two massive momenta. But you still have two &lt;strong&gt;massive on-shell&lt;/strong&gt; constraints:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;
