@@ -1,5 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-18T00:00:00-05:00</updated><entry><title>The Scalars Toy Model</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/" rel="alternate"></link><updated>2015-12-18T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-18:posts/2015/Dec/scalars-toy-model/</id><summary type="html">&lt;p&gt;In this post I would like to introduce the toy model I will use to study the &lt;em&gt;forward-JWKB approximation&lt;/em&gt;. This model only involves &lt;em&gt;scalar&lt;/em&gt; quanta. There are &lt;strong&gt;two massive matter fields&lt;/strong&gt;, &lt;span class="math"&gt;\(\Phi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\Phi_{2}\)&lt;/span&gt;, which are &lt;em&gt;complex&lt;/em&gt;. There are also &lt;strong&gt;two intermedium fields&lt;/strong&gt;, &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(Y\)&lt;/span&gt;, which are &lt;em&gt;real&lt;/em&gt;. One of the intermedium fields is &lt;strong&gt;massive&lt;/strong&gt; and the other is &lt;strong&gt;massless&lt;/strong&gt;. The (free) &lt;strong&gt;kinetic operator&lt;/strong&gt; for these fields are
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-23T08:00:00-05:00</updated><entry><title>One-Loop Contributions in Scalars Toy Model</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/one-loop-toy/" rel="alternate"></link><updated>2015-12-23T08:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-23:posts/2015/Dec/one-loop-toy/</id><summary type="html">&lt;p&gt;In this post I will enumerate some one-loop contributions to the &lt;em&gt;elastic&lt;/em&gt; process
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{1}(p_{3}) + \Phi_{2}(p_{4}). $$&lt;/div&gt;
+&lt;p&gt;
+This process has an associated four-point scattering amplitude in the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/"&gt;Scalars Toy Model&lt;/a&gt;. The one-loop contributions are either order &lt;span class="math"&gt;\(g^{4}\)&lt;/span&gt;, &lt;span class="math"&gt;\(h^{4}\)&lt;/span&gt;, or &lt;span class="math"&gt;\(g^{2} h^{2}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;Square&lt;/h2&gt;
+&lt;p&gt;There are four &lt;strong&gt;square&lt;/strong&gt; contributions:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mathcal{S}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} G_{A}(x_{1} \mid x_{2}) G_{2}(x_{2} \mid x_{4}) G_{A}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{S}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} G_{Y}(x_{1} \mid x_{2}) G_{2}(x_{2} \mid x_{4}) G_{Y}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{S}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} G_{A}(x_{1} \mid x_{2}) G_{2}(x_{2} \mid x_{4}) G_{Y}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{S}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} G_{Y}(x_{1} \mid x_{2}) G_{2}(x_{2} \mid x_{4}) G_{A}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}). $$&lt;/div&gt;
+&lt;h2&gt;Twisted Square&lt;/h2&gt;
+&lt;p&gt;There are four &lt;strong&gt;twisted square&lt;/strong&gt; contributions:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mathcal{T}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} G_{A}(x_{1} \mid x_{4}) G_{2}(x_{2} \mid x_{4}) G_{A}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{T}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} G_{Y}(x_{1} \mid x_{4}) G_{2}(x_{2} \mid x_{4}) G_{Y}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{T}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} G_{A}(x_{1} \mid x_{4}) G_{2}(x_{2} \mid x_{4}) G_{Y}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{T}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} G_{Y}(x_{1} \mid x_{4}) G_{2}(x_{2} \mid x_{4}) G_{A}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}). $$&lt;/div&gt;
+&lt;h2&gt;Vertex Correction&lt;/h2&gt;
+&lt;p&gt;There are two sets of four &lt;strong&gt;vertex correction&lt;/strong&gt; contributions:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mathcal{U}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} \delta( x_{2} - x_{4} ) G_{A}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{A}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{U}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} \delta( x_{2} - x_{4} ) G_{Y}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{Y}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{U}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{2} - x_{4} ) G_{A}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{Y}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{U}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{2} - x_{4} ) G_{Y}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{A}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right]; $$&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mathcal{V}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} \delta( x_{1} - x_{3} ) G_{A}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{A}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{V}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} \delta( x_{1} - x_{3} ) G_{Y}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{Y}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{V}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) G_{A}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{Y}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{V}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) G_{Y}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{A}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right]. $$&lt;/div&gt;
+&lt;h2&gt;Vaccum Polarization&lt;/h2&gt;
+&lt;p&gt;There are two sets of four &lt;strong&gt;vaccum polarization&lt;/strong&gt; contributions:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mathcal{X}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{X}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{X}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{X}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right]; $$&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mathcal{Y}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{Y}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{Y}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{Y}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right]. $$&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="dynamics"></category><category term="one-loop"></category><category term="scalars"></category></entry><entry><title>The Scalars Toy Model</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/" rel="alternate"></link><updated>2015-12-18T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-18:posts/2015/Dec/scalars-toy-model/</id><summary type="html">&lt;p&gt;In this post I would like to introduce the toy model I will use to study the &lt;em&gt;forward-JWKB approximation&lt;/em&gt;. This model only involves &lt;em&gt;scalar&lt;/em&gt; quanta. There are &lt;strong&gt;two massive matter fields&lt;/strong&gt;, &lt;span class="math"&gt;\(\Phi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\Phi_{2}\)&lt;/span&gt;, which are &lt;em&gt;complex&lt;/em&gt;. There are also &lt;strong&gt;two intermedium fields&lt;/strong&gt;, &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(Y\)&lt;/span&gt;, which are &lt;em&gt;real&lt;/em&gt;. One of the intermedium fields is &lt;strong&gt;massive&lt;/strong&gt; and the other is &lt;strong&gt;massless&lt;/strong&gt;. The (free) &lt;strong&gt;kinetic operator&lt;/strong&gt; for these fields are
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ K_{1}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \hbar^{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2}m_{1}^{2} \right], $$&lt;/div&gt;
 &lt;div class="math"&gt;$$ K_{2}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \hbar^{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2}m_{2}^{2} \right], $$&lt;/div&gt;
@@ -747,237 +849,7 @@ These provide an argument for restricting only to the range &lt;span class="math
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="sudakov"></category><category term="two-body"></category></entry><entry><title>Contiguous Three-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/" rel="alternate"></link><updated>2015-11-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/contiguous-three-body-sudakov/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/"&gt;kinematics of three-body problems&lt;/a&gt;. The &lt;strong&gt;contiguous three-body Sudakov decomposition&lt;/strong&gt; is given by
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{31}} n_{1}.$$&lt;/div&gt;
-&lt;p&gt;
-Here &lt;span class="math"&gt;\(n_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(n_{2}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(n_{3}\)&lt;/span&gt; are null &lt;strong&gt;Sudakov&lt;/strong&gt; vectors, and I have introduced three &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariants:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{ij} \equiv \left\Vert n_{i} + n_{j} \right\Vert^{2} = 2 \left( n_{i} \cdot n_{j} \right).$$&lt;/div&gt;
-&lt;p&gt;
-The labeling of the Sudakov vectors is such that in a massless limit &lt;span class="math"&gt;\(m_{i} \rightarrow 0\)&lt;/span&gt; the momentum &lt;span class="math"&gt;\(p_{i}\)&lt;/span&gt; becomes the null vector &lt;span class="math"&gt;\(n_{i}\)&lt;/span&gt;. From the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/"&gt;two-body decomposition&lt;/a&gt; you expect each Sudakov vector to carry the content of many individual quanta. The above decomposition can be written in matrix form:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \begin{pmatrix} p_{1} \\ p_{2} \\ p_{3} \end{pmatrix} = \mathcal{S}_{3} \cdot \begin{pmatrix} n_{1} \\ n_{2} \\ n_{3} \end{pmatrix}, \qquad \mathcal{S}_{3} \equiv \begin{pmatrix} 1 &amp;amp; \dfrac{m_{1}^{2}}{S_{12}} &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; \dfrac{m_{2}^{2}}{S_{23}} \\ \dfrac{m_{3}^{2}}{S_{31}} &amp;amp; 0 &amp;amp; 1 \end{pmatrix} . $$&lt;/div&gt;
-&lt;p&gt;
-The determinant of this matrix is
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \det{\left( \mathcal{S}_{3} \right)} = 1 + \frac{m_{1}^{2} m_{2}^{2} m_{3}^{2}}{S_{12} S_{23} S_{31}} = \frac{S_{12} S_{23} S_{31} + m_{1}^{2} m_{2}^{2} m_{3}^{2}}{S_{12} S_{23} S_{31}} . $$&lt;/div&gt;
-&lt;p&gt;
-The inverse of this matrix is
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \operatorname{inv}{\left( \mathcal{S}_{3} \right)} = \frac{1}{\det{\left( \mathcal{S}_{3} \right)}} \begin{pmatrix} 1 &amp;amp; - \dfrac{m_{1}^{2}}{S_{12}} &amp;amp; \dfrac{m_{1}^{2} m_{2}^{2}}{S_{12} S_{23}} \\ \dfrac{m_{2}^{2} m_{3}^{2}}{S_{23} S_{31}} &amp;amp; 1 &amp;amp; - \dfrac{m_{2}^{2}}{S_{23}} \\ - \dfrac{m_{3}^{2}}{S_{31}} &amp;amp; \dfrac{m_{3}^{2} m_{1}^{2}}{S_{31} S_{12}} &amp;amp; 1 \end{pmatrix}. $$&lt;/div&gt;
-&lt;p&gt;
-Thus, each Sudakov vector can be written as a linear combination of the three momenta. In other words, each massive body contributes to each null vector.&lt;/p&gt;
-&lt;p&gt;My goal is to write the 2-Sudakov invariants in terms of the Mandelstam invariants and the masses. In order to do this, it is helpful to also introduce &lt;strong&gt;Regge-Sudakov&lt;/strong&gt; invariants:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ R_{ij} \equiv \frac{S_{ij}}{m_{i} m_{j}}. $$&lt;/div&gt;
-&lt;p&gt;
-Using the identities
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ r_{ij} = \frac{p_{i} \cdot p_{j}}{m_{i} m_{j}}, $$&lt;/div&gt;
-&lt;p&gt;
-you find the relations
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ 2r_{12} = R_{12} + \frac{R_{31}}{R_{23}} + \frac{1}{R_{12}}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ 2r_{23} = R_{23} + \frac{R_{12}}{R_{31}} + \frac{1}{R_{23}}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ 2r_{31} = R_{31} + \frac{R_{23}}{R_{12}} + \frac{1}{R_{31}}.$$&lt;/div&gt;
-&lt;p&gt;
-Note that you can obtain the second and third equations from the first one by cyclically shifting the integer labels. The solution should also exhibit this property. Solving this system of equations gives
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ R_{12} = \frac{r_{12} \left[ g_{123} - 1 + \sqrt{ g_{123} \left( g_{123} - 1 \right)} \right] + r_{23} r_{31}}{g_{123} + g_{31}}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ R_{23} = \frac{r_{23} \left[ g_{123} - 1 + \sqrt{ g_{123} \left( g_{123} - 1 \right)} \right] + r_{31} r_{12}}{g_{123} + g_{12}}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ R_{31} = \frac{r_{31} \left[ g_{123} - 1 + \sqrt{ g_{123} \left( g_{123} - 1 \right)} \right] + r_{12} r_{23}}{g_{123} + g_{23}}. $$&lt;/div&gt;
-&lt;p&gt;
-Thus,
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{12} = \frac{1}{4} \left[ \frac{ 2 \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{1}^{2} m_{2}^{2} \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) }{G_{123} + m_{2}^{2} G_{31}} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ S_{23} = \frac{1}{4} \left[ \frac{ 2 \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{2}^{2} m_{3}^{2} \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) }{G_{123} + m_{3}^{2} G_{12}} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ S_{31} = \frac{1}{4} \left[ \frac{ 2 \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{3}^{2} m_{1}^{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) }{G_{123} + m_{1}^{2} G_{23}} \right]. $$&lt;/div&gt;
-&lt;p&gt;
-I have implicitly assumed that all Regge-Mandelstam invariants, as well as all Regge-Gram invariants, are positive.&lt;/p&gt;
-&lt;p&gt;The massless limits are useful. For &lt;span class="math"&gt;\(S_{12}\)&lt;/span&gt; you have:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{1} \rightarrow 0} S_{12} = \lim_{m_{1} \rightarrow 0} \frac{G_{123} \left( s_{12} - m_{2}^{2} \right)}{G_{123} + m_{2}^{2} G_{31}}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{2} \rightarrow 0} S_{12} = s_{12} - m_{1}^{2}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{3} \rightarrow 0} S_{12} = \lim_{m_{3} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{12} - m_{1}^{2} - m_{2}^{2} \right) G_{123} + m_{1}^{2} m_{2}^{2} \left( s_{23} - m_{2}^{2} \right) \left( s_{31} - m_{1}^{2} \right) }{G_{123} + m_{2}^{2} G_{31}} \right]; $$&lt;/div&gt;
-&lt;p&gt;
-For &lt;span class="math"&gt;\(S_{23}\)&lt;/span&gt; you have:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{2} \rightarrow 0} S_{23} = \lim_{m_{2} \rightarrow 0} \frac{G_{123} \left( s_{23} - m_{3}^{2} \right)}{G_{123} + m_{3}^{2} G_{12}}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{3} \rightarrow 0} S_{23} = s_{23} - m_{2}^{2}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{1} \rightarrow 0} S_{23} = \lim_{m_{1} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{23} - m_{2}^{2} - m_{3}^{2} \right) G_{123} + m_{2}^{2} m_{3}^{2} \left( s_{31} - m_{3}^{2} \right) \left( s_{12} - m_{2}^{2} \right) }{G_{123} + m_{3}^{2} G_{12}} \right]; $$&lt;/div&gt;
-&lt;p&gt;
-For &lt;span class="math"&gt;\(S_{31}\)&lt;/span&gt; you have:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{3} \rightarrow 0} S_{31} = \lim_{m_{3} \rightarrow 0} \frac{G_{123} \left( s_{31} - m_{1}^{2} \right)}{G_{123} + m_{1}^{2} G_{23}}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{1} \rightarrow 0} S_{31} = s_{31} - m_{3}^{2}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{2} \rightarrow 0} S_{31} = \lim_{m_{2} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{31} - m_{3}^{2} - m_{1}^{2} \right) G_{123} + m_{3}^{2} m_{1}^{2} \left( s_{12} - m_{1}^{2} \right) \left( s_{23} - m_{3}^{2} \right) }{G_{123} + m_{1}^{2} G_{12}} \right]. $$&lt;/div&gt;
-&lt;p&gt;
-Thus, when all three masses vanish the Sudakov vectors become the momenta of the quanta, and the 2-Mandelstam invariants become the 2-Sudakov invariants.&lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-    
-    var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript'; 
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</summary><category term="sudakov"></category><category term="three-body"></category></entry><entry><title>Three-Body Kinematics</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/" rel="alternate"></link><updated>2015-11-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/three-body-kinematics/</id><summary type="html">&lt;p&gt;In this post I will consider the kinematics of problems with three independent momentum vectors, each of which describe a distinct massive quantum. That is, you do not have any conservation constraint relating these three vectors. But you still have three on-shell constraints:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \left\Vert p_{1} \right\Vert^{2} = m_{1}^{2}, \qquad \left\Vert p_{2} \right\Vert^{2} = m_{2}^{2}, \qquad \left\Vert p_{3} \right\Vert^{2} = m_{3}^{2}.$$&lt;/div&gt;
-&lt;p&gt;
-You can introduce three &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ s_{12} \equiv \left\Vert p_{1} + p_{2} \right\Vert^{2}, \qquad s_{23} \equiv \left\Vert p_{2} + p_{3} \right\Vert^{2}, \qquad s_{31} \equiv \left\Vert p_{3} + p_{1} \right\Vert^{2};$$&lt;/div&gt;
-&lt;p&gt;
-and one &lt;strong&gt;3-Mandelstam&lt;/strong&gt; invariant:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ s_{123} \equiv \left\Vert p_{1} + p_{2} + p_{3} \right\Vert^{2} = s_{12} + s_{23} + s_{31} - m_{1}^{2} - m_{2}^{2} - m_{3}^{2}.$$&lt;/div&gt;
-&lt;p&gt;
-You can also introduce three &lt;strong&gt;Regge-Mandelstam&lt;/strong&gt; invariants:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ r_{12} \equiv \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}, \qquad r_{23} \equiv \frac{s_{23} - m_{2}^{2} - m_{3}^{2}}{2 m_{2} m_{3}}, \qquad r_{31} \equiv \frac{s_{31} - m_{3}^{2} - m_{1}^{2}}{2 m_{3} m_{1}}.$$&lt;/div&gt;
-&lt;p&gt;
-There are three &lt;strong&gt;2-Gram&lt;/strong&gt; invariants:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ G_{12} \equiv - \det{ \begin{pmatrix} \left\Vert p_{1} \right\Vert^{2} &amp;amp; p_{1} \cdot p_{2} \\ p_{2} \cdot p_{1} &amp;amp; \left\Vert p_{2} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right] = m_{1}^{2} m_{2}^{2} \left( r_{12}^{2} - 1 \right);$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ G_{23} \equiv - \det{ \begin{pmatrix} \left\Vert p_{2} \right\Vert^{2} &amp;amp; p_{2} \cdot p_{3} \\ p_{3} \cdot p_{2} &amp;amp; \left\Vert p_{3} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right)^{2} - 4 m_{2}^{2} m_{3}^{2} \right] = m_{2}^{2} m_{3}^{2} \left( r_{23}^{2} - 1 \right);$$&lt;/div&gt;
-&lt;div class="math"&gt;$$ G_{31} \equiv - \det{ \begin{pmatrix} \left\Vert p_{3} \right\Vert^{2} &amp;amp; p_{3} \cdot p_{1} \\ p_{1} \cdot p_{3} &amp;amp; \left\Vert p_{1} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right)^{2} - 4 m_{3}^{2} m_{1}^{2} \right] = m_{3}^{2} m_{1}^{2} \left( r_{31}^{2} - 1 \right);$$&lt;/div&gt;
-&lt;p&gt;
-and one &lt;strong&gt;3-Gram&lt;/strong&gt; invariant:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$G_{123} = \det{ \begin{pmatrix} \left\Vert p_{1} \right\Vert^{2} &amp;amp; p_{1} \cdot p_{2} &amp;amp; p_{1} \cdot p_{3} \\ p_{2} \cdot p_{1} &amp;amp; \left\Vert p_{2} \right\Vert^{2} &amp;amp; p_{2} \cdot p_{3} \\ p_{3} \cdot p_{1} &amp;amp; p_{3} \cdot p_{2} &amp;amp; \left\Vert p_{3} \right\Vert^{2} \end{pmatrix} }  = m_{1}^{2} m_{2}^{2} m_{3}^{2} \left( 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{23}^{2} - r_{31}^{2} + 1 \right).$$&lt;/div&gt;
-&lt;p&gt;
-More explicitly,
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) - m_{1}^{2} \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right)^{2} - m_{2}^{2} \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right)^{2} - m_{3}^{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} + 4 m_{1}^{2} m_{2}^{2} m_{3}^{2} \right]. $$&lt;/div&gt;
-&lt;p&gt;
-Note the &lt;strong&gt;massless limits&lt;/strong&gt; of the Gram invariants:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{1} \rightarrow 0} G_{12} = \frac{1}{4} \left( s_{12} - m_{2}^{2} \right)^{2}, \qquad \lim_{m_{2} \rightarrow 0} G_{12} = \frac{1}{4} \left( s_{12} - m_{1}^{2} \right)^{2}; $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{2} \rightarrow 0} G_{23} = \frac{1}{4} \left( s_{23} - m_{3}^{2} \right)^{2}, \qquad \lim_{m_{3} \rightarrow 0} G_{23} = \frac{1}{4} \left( s_{23} - m_{2}^{2} \right)^{2}; $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{3} \rightarrow 0} G_{12} = \frac{1}{4} \left( s_{31} - m_{1}^{2} \right)^{2}, \qquad \lim_{m_{1} \rightarrow 0} G_{31} = \frac{1}{4} \left( s_{31} - m_{3}^{2} \right)^{2}; $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{1} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} \right) - m_{2}^{2} \left( s_{31} - m_{3}^{2} \right)^{2} - m_{3}^{2} \left( s_{12} - m_{2}^{2} \right)^{2} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{2} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} \right) \left( s_{23} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) - m_{1}^{2} \left( s_{23} - m_{3}^{2} \right)^{2} - m_{3}^{2} \left( s_{12} - m_{1}^{2} \right)^{2} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{3} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} \right) \left( s_{31} - m_{1}^{2} \right) - m_{1}^{2} \left( s_{23} - m_{2}^{2} \right)^{2} - m_{2}^{2} \left( s_{31} - m_{1}^{2} \right)^{2} \right]; $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{1} \rightarrow 0} \lim_{m_{2} \rightarrow 0} G_{123} = \frac{1}{4} \left[ s_{12} \left( s_{23} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} \right) - m_{3}^{2} s_{12}^{2} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{2} \rightarrow 0} \lim_{m_{3} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} \right) s_{23} \left( s_{31} - m_{1}^{2} \right) - m_{1}^{2} s_{23}^{2} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \lim_{m_{3} \rightarrow 0} \lim_{m_{1} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} \right) s_{31} - m_{2}^{2} s_{31}^{2} \right]. $$&lt;/div&gt;
-&lt;p&gt;
-For convenience, I will also introduce &lt;strong&gt;Regge-Gram&lt;/strong&gt; invariants:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ g_{12} \equiv \frac{G_{12}}{m_{1}^{2} m_{2}^{2}}, \qquad g_{23} \equiv \frac{G_{23}}{m_{2}^{2} m_{3}^{2}}, \qquad g_{31} \equiv \frac{G_{31}}{m_{3}^{2} m_{1}^{2}}, \qquad g_{123} \equiv \frac{G_{123}}{m_{1}^{2} m_{2}^{2} m_{3}^{2}}.$$&lt;/div&gt;
-&lt;p&gt;
-Note that
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ g_{123} + g_{12} = 2 r_{12} r_{23} r_{31} - r_{23}^{2} - r_{31}^{2}, \qquad g_{123} + g_{23} = 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{31}^{2}, \qquad g_{123} + g_{31} = 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{23}^{2}. $$&lt;/div&gt;
-&lt;p&gt;
-All of these invariants are present in any three-body problem.&lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-    
-    var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript'; 
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</summary><category term="sudakov"></category><category term="three-body"></category></entry><entry><title>Two-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/" rel="alternate"></link><updated>2015-11-25T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-25:posts/2015/Nov/two-body-sudakov/</id><summary type="html">&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive body. That is, you do not have any conservation constraint relating these two massive momenta. But you still have two &lt;strong&gt;massive on-shell&lt;/strong&gt; constraints:
+&lt;/script&gt;</summary><category term="sudakov"></category><category term="two-body"></category></entry><entry><title>Two-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/" rel="alternate"></link><updated>2015-11-25T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-25:posts/2015/Nov/two-body-sudakov/</id><summary type="html">&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive body. That is, you do not have any conservation constraint relating these two massive momenta. But you still have two &lt;strong&gt;massive on-shell&lt;/strong&gt; constraints:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;

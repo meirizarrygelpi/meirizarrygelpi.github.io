@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Contiguous Three-Body Sudakov Decomposition - M.E. Irizarry-Gelpí</title>
+    <title>One-Loop Contributions in Scalars Toy Model - M.E. Irizarry-Gelpí</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,11 +11,11 @@
 
     <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
 
-<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/">
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/2015/Dec/one-loop-toy/">
 
         <meta name="author" content="M.E. Irizarry-Gelpí" />
-        <meta name="keywords" content="sudakov,three-body" />
-        <meta name="description" content="A three-body problem with contiguous Sudakov null momenta." />
+        <meta name="keywords" content="dynamics,one-loop,scalars" />
+        <meta name="description" content="One-loop contributions to elastic four-point amplitudes in Scalars Toy Model." />
 
 
 
@@ -80,10 +80,10 @@ M.E. Irizarry-Gelpí            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/"
+                    <a href="http://meirizarrygelpi.github.io/posts/2015/Dec/one-loop-toy/"
                        rel="bookmark"
-                       title="Permalink to Contiguous Three-Body Sudakov Decomposition">
-                        Contiguous Three-Body Sudakov Decomposition
+                       title="Permalink to One-Loop Contributions in Scalars Toy Model">
+                        One-Loop Contributions in Scalars Toy Model
                     </a>
                 </h1>
             </header>
@@ -93,7 +93,7 @@ M.E. Irizarry-Gelpí            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2015-11-26T00:00:00-05:00"> Thu 26 November 2015</time>
+        <i class="fa fa-calendar"></i><time datetime="2015-12-23T08:00:00-05:00"> Wed 23 December 2015</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://meirizarrygelpi.github.io/author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
@@ -103,81 +103,61 @@ M.E. Irizarry-Gelpí            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="http://meirizarrygelpi.github.io/tag/sudakov.html">sudakov</a>
+	<a href="http://meirizarrygelpi.github.io/tag/dynamics.html">dynamics</a>
         /
-	<a href="http://meirizarrygelpi.github.io/tag/three-body.html">three-body</a>
+	<a href="http://meirizarrygelpi.github.io/tag/one-loop.html">one-loop</a>
+        /
+	<a href="http://meirizarrygelpi.github.io/tag/scalars.html">scalars</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>In a previous post I discussed the <a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/">kinematics of three-body problems</a>. The <strong>contiguous three-body Sudakov decomposition</strong> is given by
+                <p>In this post I will enumerate some one-loop contributions to the <em>elastic</em> process
 </p>
-<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$</div>
-<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$</div>
-<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{31}} n_{1}.$$</div>
+<div class="math">$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{1}(p_{3}) + \Phi_{2}(p_{4}). $$</div>
 <p>
-Here <span class="math">\(n_{1}\)</span>, <span class="math">\(n_{2}\)</span>, and <span class="math">\(n_{3}\)</span> are null <strong>Sudakov</strong> vectors, and I have introduced three <strong>2-Sudakov</strong> invariants:
+This process has an associated four-point scattering amplitude in the <a href="http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/">Scalars Toy Model</a>. The one-loop contributions are either order <span class="math">\(g^{4}\)</span>, <span class="math">\(h^{4}\)</span>, or <span class="math">\(g^{2} h^{2}\)</span>.</p>
+<h2>Square</h2>
+<p>There are four <strong>square</strong> contributions:
 </p>
-<div class="math">$$ S_{ij} \equiv \left\Vert n_{i} + n_{j} \right\Vert^{2} = 2 \left( n_{i} \cdot n_{j} \right).$$</div>
-<p>
-The labeling of the Sudakov vectors is such that in a massless limit <span class="math">\(m_{i} \rightarrow 0\)</span> the momentum <span class="math">\(p_{i}\)</span> becomes the null vector <span class="math">\(n_{i}\)</span>. From the <a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/">two-body decomposition</a> you expect each Sudakov vector to carry the content of many individual quanta. The above decomposition can be written in matrix form:
+<div class="math">$$ \mathcal{S}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} G_{A}(x_{1} \mid x_{2}) G_{2}(x_{2} \mid x_{4}) G_{A}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$</div>
+<div class="math">$$ \mathcal{S}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} G_{Y}(x_{1} \mid x_{2}) G_{2}(x_{2} \mid x_{4}) G_{Y}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$</div>
+<div class="math">$$ \mathcal{S}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} G_{A}(x_{1} \mid x_{2}) G_{2}(x_{2} \mid x_{4}) G_{Y}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$</div>
+<div class="math">$$ \mathcal{S}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} G_{Y}(x_{1} \mid x_{2}) G_{2}(x_{2} \mid x_{4}) G_{A}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}). $$</div>
+<h2>Twisted Square</h2>
+<p>There are four <strong>twisted square</strong> contributions:
 </p>
-<div class="math">$$ \begin{pmatrix} p_{1} \\ p_{2} \\ p_{3} \end{pmatrix} = \mathcal{S}_{3} \cdot \begin{pmatrix} n_{1} \\ n_{2} \\ n_{3} \end{pmatrix}, \qquad \mathcal{S}_{3} \equiv \begin{pmatrix} 1 &amp; \dfrac{m_{1}^{2}}{S_{12}} &amp; 0 \\ 0 &amp; 1 &amp; \dfrac{m_{2}^{2}}{S_{23}} \\ \dfrac{m_{3}^{2}}{S_{31}} &amp; 0 &amp; 1 \end{pmatrix} . $$</div>
-<p>
-The determinant of this matrix is
+<div class="math">$$ \mathcal{T}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} G_{A}(x_{1} \mid x_{4}) G_{2}(x_{2} \mid x_{4}) G_{A}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$</div>
+<div class="math">$$ \mathcal{T}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} G_{Y}(x_{1} \mid x_{4}) G_{2}(x_{2} \mid x_{4}) G_{Y}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$</div>
+<div class="math">$$ \mathcal{T}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} G_{A}(x_{1} \mid x_{4}) G_{2}(x_{2} \mid x_{4}) G_{Y}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$</div>
+<div class="math">$$ \mathcal{T}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} G_{Y}(x_{1} \mid x_{4}) G_{2}(x_{2} \mid x_{4}) G_{A}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}). $$</div>
+<h2>Vertex Correction</h2>
+<p>There are two sets of four <strong>vertex correction</strong> contributions:
 </p>
-<div class="math">$$ \det{\left( \mathcal{S}_{3} \right)} = 1 + \frac{m_{1}^{2} m_{2}^{2} m_{3}^{2}}{S_{12} S_{23} S_{31}} = \frac{S_{12} S_{23} S_{31} + m_{1}^{2} m_{2}^{2} m_{3}^{2}}{S_{12} S_{23} S_{31}} . $$</div>
+<div class="math">$$ \mathcal{U}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} \delta( x_{2} - x_{4} ) G_{A}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{A}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$</div>
+<div class="math">$$ \mathcal{U}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} \delta( x_{2} - x_{4} ) G_{Y}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{Y}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$</div>
+<div class="math">$$ \mathcal{U}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{2} - x_{4} ) G_{A}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{Y}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$</div>
+<div class="math">$$ \mathcal{U}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{2} - x_{4} ) G_{Y}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{A}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right]; $$</div>
 <p>
-The inverse of this matrix is
+and
 </p>
-<div class="math">$$ \operatorname{inv}{\left( \mathcal{S}_{3} \right)} = \frac{1}{\det{\left( \mathcal{S}_{3} \right)}} \begin{pmatrix} 1 &amp; - \dfrac{m_{1}^{2}}{S_{12}} &amp; \dfrac{m_{1}^{2} m_{2}^{2}}{S_{12} S_{23}} \\ \dfrac{m_{2}^{2} m_{3}^{2}}{S_{23} S_{31}} &amp; 1 &amp; - \dfrac{m_{2}^{2}}{S_{23}} \\ - \dfrac{m_{3}^{2}}{S_{31}} &amp; \dfrac{m_{3}^{2} m_{1}^{2}}{S_{31} S_{12}} &amp; 1 \end{pmatrix}. $$</div>
-<p>
-Thus, each Sudakov vector can be written as a linear combination of the three momenta. In other words, each massive body contributes to each null vector.</p>
-<p>My goal is to write the 2-Sudakov invariants in terms of the Mandelstam invariants and the masses. In order to do this, it is helpful to also introduce <strong>Regge-Sudakov</strong> invariants:
+<div class="math">$$ \mathcal{V}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} \delta( x_{1} - x_{3} ) G_{A}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{A}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$</div>
+<div class="math">$$ \mathcal{V}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} \delta( x_{1} - x_{3} ) G_{Y}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{Y}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$</div>
+<div class="math">$$ \mathcal{V}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) G_{A}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{Y}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$</div>
+<div class="math">$$ \mathcal{V}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) G_{Y}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{A}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right]. $$</div>
+<h2>Vaccum Polarization</h2>
+<p>There are two sets of four <strong>vaccum polarization</strong> contributions:
 </p>
-<div class="math">$$ R_{ij} \equiv \frac{S_{ij}}{m_{i} m_{j}}. $$</div>
+<div class="math">$$ \mathcal{X}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right], $$</div>
+<div class="math">$$ \mathcal{X}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$</div>
+<div class="math">$$ \mathcal{X}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$</div>
+<div class="math">$$ \mathcal{X}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right]; $$</div>
 <p>
-Using the identities
+and
 </p>
-<div class="math">$$ r_{ij} = \frac{p_{i} \cdot p_{j}}{m_{i} m_{j}}, $$</div>
-<p>
-you find the relations
-</p>
-<div class="math">$$ 2r_{12} = R_{12} + \frac{R_{31}}{R_{23}} + \frac{1}{R_{12}}, $$</div>
-<div class="math">$$ 2r_{23} = R_{23} + \frac{R_{12}}{R_{31}} + \frac{1}{R_{23}}, $$</div>
-<div class="math">$$ 2r_{31} = R_{31} + \frac{R_{23}}{R_{12}} + \frac{1}{R_{31}}.$$</div>
-<p>
-Note that you can obtain the second and third equations from the first one by cyclically shifting the integer labels. The solution should also exhibit this property. Solving this system of equations gives
-</p>
-<div class="math">$$ R_{12} = \frac{r_{12} \left[ g_{123} - 1 + \sqrt{ g_{123} \left( g_{123} - 1 \right)} \right] + r_{23} r_{31}}{g_{123} + g_{31}}, $$</div>
-<div class="math">$$ R_{23} = \frac{r_{23} \left[ g_{123} - 1 + \sqrt{ g_{123} \left( g_{123} - 1 \right)} \right] + r_{31} r_{12}}{g_{123} + g_{12}}, $$</div>
-<div class="math">$$ R_{31} = \frac{r_{31} \left[ g_{123} - 1 + \sqrt{ g_{123} \left( g_{123} - 1 \right)} \right] + r_{12} r_{23}}{g_{123} + g_{23}}. $$</div>
-<p>
-Thus,
-</p>
-<div class="math">$$ S_{12} = \frac{1}{4} \left[ \frac{ 2 \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{1}^{2} m_{2}^{2} \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) }{G_{123} + m_{2}^{2} G_{31}} \right], $$</div>
-<div class="math">$$ S_{23} = \frac{1}{4} \left[ \frac{ 2 \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{2}^{2} m_{3}^{2} \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) }{G_{123} + m_{3}^{2} G_{12}} \right], $$</div>
-<div class="math">$$ S_{31} = \frac{1}{4} \left[ \frac{ 2 \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) \left[ G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} + \sqrt{ G_{123} \left( G_{123} - m_{1}^{2} m_{2}^{2} m_{3}^{2} \right) } \right] + m_{3}^{2} m_{1}^{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) }{G_{123} + m_{1}^{2} G_{23}} \right]. $$</div>
-<p>
-I have implicitly assumed that all Regge-Mandelstam invariants, as well as all Regge-Gram invariants, are positive.</p>
-<p>The massless limits are useful. For <span class="math">\(S_{12}\)</span> you have:
-</p>
-<div class="math">$$ \lim_{m_{1} \rightarrow 0} S_{12} = \lim_{m_{1} \rightarrow 0} \frac{G_{123} \left( s_{12} - m_{2}^{2} \right)}{G_{123} + m_{2}^{2} G_{31}}, $$</div>
-<div class="math">$$ \lim_{m_{2} \rightarrow 0} S_{12} = s_{12} - m_{1}^{2}, $$</div>
-<div class="math">$$ \lim_{m_{3} \rightarrow 0} S_{12} = \lim_{m_{3} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{12} - m_{1}^{2} - m_{2}^{2} \right) G_{123} + m_{1}^{2} m_{2}^{2} \left( s_{23} - m_{2}^{2} \right) \left( s_{31} - m_{1}^{2} \right) }{G_{123} + m_{2}^{2} G_{31}} \right]; $$</div>
-<p>
-For <span class="math">\(S_{23}\)</span> you have:
-</p>
-<div class="math">$$ \lim_{m_{2} \rightarrow 0} S_{23} = \lim_{m_{2} \rightarrow 0} \frac{G_{123} \left( s_{23} - m_{3}^{2} \right)}{G_{123} + m_{3}^{2} G_{12}}, $$</div>
-<div class="math">$$ \lim_{m_{3} \rightarrow 0} S_{23} = s_{23} - m_{2}^{2}, $$</div>
-<div class="math">$$ \lim_{m_{1} \rightarrow 0} S_{23} = \lim_{m_{1} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{23} - m_{2}^{2} - m_{3}^{2} \right) G_{123} + m_{2}^{2} m_{3}^{2} \left( s_{31} - m_{3}^{2} \right) \left( s_{12} - m_{2}^{2} \right) }{G_{123} + m_{3}^{2} G_{12}} \right]; $$</div>
-<p>
-For <span class="math">\(S_{31}\)</span> you have:
-</p>
-<div class="math">$$ \lim_{m_{3} \rightarrow 0} S_{31} = \lim_{m_{3} \rightarrow 0} \frac{G_{123} \left( s_{31} - m_{1}^{2} \right)}{G_{123} + m_{1}^{2} G_{23}}, $$</div>
-<div class="math">$$ \lim_{m_{1} \rightarrow 0} S_{31} = s_{31} - m_{3}^{2}, $$</div>
-<div class="math">$$ \lim_{m_{2} \rightarrow 0} S_{31} = \lim_{m_{2} \rightarrow 0} \frac{1}{4} \left[ \frac{ 4 \left(s_{31} - m_{3}^{2} - m_{1}^{2} \right) G_{123} + m_{3}^{2} m_{1}^{2} \left( s_{12} - m_{1}^{2} \right) \left( s_{23} - m_{3}^{2} \right) }{G_{123} + m_{1}^{2} G_{12}} \right]. $$</div>
-<p>
-Thus, when all three masses vanish the Sudakov vectors become the momenta of the quanta, and the 2-Mandelstam invariants become the 2-Sudakov invariants.</p>
+<div class="math">$$ \mathcal{Y}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right], $$</div>
+<div class="math">$$ \mathcal{Y}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$</div>
+<div class="math">$$ \mathcal{Y}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$</div>
+<div class="math">$$ \mathcal{Y}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right]. $$</div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -245,8 +225,8 @@ Thus, when all three masses vanish the Sudakov vectors become the momenta of the
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
 
-                    var disqus_identifier = 'contiguous-three-body-sudakov';
-                var disqus_url = 'http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/';
+                    var disqus_identifier = 'one-loop-toy';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/2015/Dec/one-loop-toy/';
 
             var disqus_config = function () {
                 this.language = "en";
