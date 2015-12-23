@@ -1758,61 +1758,81 @@ The logarithm of some of these expressions appear as rapidities in the center-of
 }
 &lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Sat, 14 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-14:posts/2015/Nov/2015-week-46/</guid><category>research</category></item><item><title>Three-Point Sudakov Kinematics</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/three-point-sudakov/</link><description>&lt;p&gt;Consider a three-point scattering process of the form
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ A(p_{1}) + B(p_{2}) \longrightarrow C(p_{3}). $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{3}(p_{3}). $$&lt;/div&gt;
 &lt;p&gt;
-You have a conservation constraint,
+You have a &lt;strong&gt;conservation&lt;/strong&gt; constraint,
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{1} + p_{2} = p_{3}; $$&lt;/div&gt;
 &lt;p&gt;
-and three on-shell constraints:
+and three &lt;strong&gt;massive on-shell&lt;/strong&gt; constraints:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \left\Vert p_{1} \right\Vert^{2} = m_{1}^{2}, \qquad \left\Vert p_{2} \right\Vert^{2} = m_{2}^{2}, \qquad \left\Vert p_{3} \right\Vert^{2} = m_{3}^{2}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;
 From the conservation constraint, you find three relations
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ m_{1}^{2} + p_{1} \cdot p_{2} = p_{3} \cdot p_{1}, \qquad p_{1} \cdot p_{2} + m_{2}^{2} = p_{2} \cdot p_{3}, \qquad p_{3} \cdot p_{1} + p_{2} \cdot p_{3} = m_{3}^{2}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} \cdot p_{2} - m_{1}^{2} = p_{3} \cdot p_{1}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} \cdot p_{2} - m_{2}^{2} = p_{2} \cdot p_{3}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} \cdot p_{1} + p_{2} \cdot p_{3} = -m_{3}^{2}. $$&lt;/div&gt;
 &lt;p&gt;
 Solving these yields
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} \cdot p_{2} = \frac{m_{3}^{2} - m_{1}^{2} - m_{2}^{2}}{2}, \qquad p_{2} \cdot p_{3} = \frac{m_{2}^{2} + m_{3}^{2} - m_{1}^{2}}{2}, \qquad p_{3} \cdot p_{1} = \frac{m_{3}^{2} + m_{1}^{2} - m_{2}^{2}}{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} \cdot p_{2} = \frac{m_{1}^{2} + m_{2}^{2} - m_{3}^{2}}{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} \cdot p_{3} = \frac{m_{1}^{2} - m_{2}^{2} - m_{3}^{2}}{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} \cdot p_{1} = \frac{m_{2}^{2} - m_{3}^{2} - m_{1}^{2}}{2}. $$&lt;/div&gt;
 &lt;p&gt;
-Next you introduce null Sudakov momenta:
+Next you introduce (null) &lt;strong&gt;Sudakov vectors&lt;/strong&gt;:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} - \frac{m_{2}^{2}}{T_{23}} n_{3}, \qquad p_{3} = n_{3} - \frac{m_{3}^{2}}{T_{31}} n_{1}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} = n_{2} - \frac{m_{2}^{2}}{T_{23}} n_{3}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} = n_{3} - \frac{m_{3}^{2}}{T_{31}} n_{1}. $$&lt;/div&gt;
 &lt;p&gt;
-Here I have also introduced three Sudakov invariants:
+Here I have also introduced three &lt;strong&gt;2-Sudakov&lt;/strong&gt; invariants:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{12} \equiv \left\Vert n_{1} + n_{2} \right\Vert^{2}, \qquad T_{23} \equiv \left\Vert n_{2} - n_{3} \right\Vert^{2}, \qquad T_{31} \equiv \left\Vert n_{3} - n_{1} \right\Vert^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} \equiv -\left\Vert n_{1} + n_{2} \right\Vert^{2} = - 2 \left( n_{1} \cdot n_{2} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ T_{23} \equiv -\left\Vert n_{2} - n_{3} \right\Vert^{2} = 2 \left( n_{2} \cdot n_{3} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ T_{31} \equiv -\left\Vert n_{3} - n_{1} \right\Vert^{2} = 2 \left( n_{3} \cdot n_{1} \right). $$&lt;/div&gt;
 &lt;p&gt;
-In terms of the Sudakov invariants, you have
+In terms of the 2-Sudakov invariants, you have
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ m_{3}^{2} - m_{1}^{2} - m_{2}^{2} = S_{12} + m_{2}^{2} \left( \frac{T_{31}}{T_{23}} \right) + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}}, \qquad m_{1}^{2} - m_{2}^{2} - m_{3}^{2} = T_{23} + m_{3}^{2} \left( \frac{S_{12}}{T_{31}} \right) + \frac{m_{3}^{2} m_{2}^{2}}{T_{23}}, \qquad m_{2}^{2} - m_{3}^{2} - m_{1}^{2} = T_{31} + m_{1}^{2} \left( \frac{T_{23}}{S_{12}} \right) + \frac{m_{3}^{2} m_{1}^{2}}{T_{31}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{3}^{2} - m_{1}^{2} - m_{2}^{2} = S_{12} + m_{2}^{2} \left( \frac{T_{31}}{T_{23}} \right) + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{1}^{2} - m_{2}^{2} - m_{3}^{2} = T_{23} + m_{3}^{2} \left( \frac{S_{12}}{T_{31}} \right) + \frac{m_{3}^{2} m_{2}^{2}}{T_{23}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{2}^{2} - m_{3}^{2} - m_{1}^{2} = T_{31} + m_{1}^{2} \left( \frac{T_{23}}{S_{12}} \right) + \frac{m_{3}^{2} m_{1}^{2}}{T_{31}}.$$&lt;/div&gt;
 &lt;p&gt;
-Now you introduce Regge-Mandelstam invariants,
+Now you introduce &lt;strong&gt;Regge-Mandelstam&lt;/strong&gt; invariants,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ r_{12} \equiv \frac{m_{3}^{2} - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}, \qquad r_{23} \equiv \frac{m_{1}^{2} - m_{2}^{2} - m_{3}^{2}}{2 m_{2} m_{3}}, \qquad r_{31} \equiv \frac{m_{2}^{2} - m_{3}^{2} - m_{1}^{2}}{2 m_{1} m_{3}};$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{12} \equiv \frac{m_{3}^{2} - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{23} \equiv \frac{m_{2}^{2} + m_{3}^{2} - m_{1}^{2}}{2 m_{2} m_{3}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{31} \equiv \frac{m_{3}^{2} + m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{3}}; $$&lt;/div&gt;
 &lt;p&gt;
-and Regge-Sudakov invariants,
+and &lt;strong&gt;Regge-Sudakov&lt;/strong&gt; invariants,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}, \qquad R_{23} \equiv \frac{T_{23}}{m_{2} m_{3}}, \qquad R_{31} \equiv \frac{T_{31}}{m_{1} m_{3}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{23} \equiv -\frac{T_{23}}{m_{2} m_{3}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{31} \equiv -\frac{T_{31}}{m_{1} m_{3}}. $$&lt;/div&gt;
 &lt;p&gt;
 The relations above become
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ 2 r_{12} = R_{12} + \frac{R_{31}}{R_{23}} + \frac{1}{R_{12}}, \qquad 2 r_{23} = R_{23} + \frac{R_{12}}{R_{31}} + \frac{1}{R_{23}}, \qquad 2 r_{31} = R_{31} + \frac{R_{23}}{R_{12}} + \frac{1}{R_{31}}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2 r_{12} = R_{12} + \frac{R_{31}}{R_{23}} + \frac{1}{R_{12}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2 r_{23} = R_{23} + \frac{R_{12}}{R_{31}} + \frac{1}{R_{23}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ 2 r_{31} = R_{31} + \frac{R_{23}}{R_{12}} + \frac{1}{R_{31}}. $$&lt;/div&gt;
 &lt;p&gt;
-The solution to these equations is very complicated. Furthermore, these equations appear in the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/"&gt;null decomposition of three independent massive quanta&lt;/a&gt;. Using the simpler version above, in terms of the Sudakov invariants, the solution is
+The solution to these equations is very complicated. Furthermore, these equations appear in the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/"&gt;null decomposition of three independent massive bodies&lt;/a&gt;. Using the simpler version above, in terms of the 2-Sudakov invariants, the solution is
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{12} = -m_{1}^{2}, \qquad T_{23} = -m_{2}^{2}, \qquad T_{31} = -m_{3}^{2}.$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{12} = -m_{1}^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ T_{23} = -m_{2}^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ T_{31} = -m_{3}^{2}. $$&lt;/div&gt;
 &lt;p&gt;
 Thus,
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ R_{12} = - \frac{m_{1}}{m_{2}}, \qquad R_{23} = - \frac{m_{2}}{m_{3}}, \qquad R_{31} = - \frac{m_{3}}{m_{1}} .$$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{12} = - \frac{m_{1}}{m_{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{23} = \frac{m_{2}}{m_{3}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{31} = \frac{m_{3}}{m_{1}} .$$&lt;/div&gt;
 &lt;p&gt;
 It follows that,
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{1} = n_{1} - n_{2}, \qquad p_{2} = n_{2} + n_{3}, \qquad p_{3} = n_{3} + n_{1}.$$&lt;/div&gt;
 &lt;p&gt;
-That is, the three massive momenta can be written as very simple combinations of null momenta.&lt;/p&gt;
+That is, the three massive momenta can be written as very simple combinations of Sudakov vectors.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
