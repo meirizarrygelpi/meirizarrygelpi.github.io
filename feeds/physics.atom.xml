@@ -568,7 +568,7 @@ You also have the vectors
 which lead to more relations:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = t - \left( \nu_{13} - 1 \right) \left( \nu_{14} - \frac{m_{3}^{2}}{S_{34}} \right) S_{34}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = u - \left( \nu_{13} - \frac{m_{4}^{2}}{S_{34}} \right) \left( \nu_{14} - 1 \right) S_{34}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = u - \left( \nu_{13} - \frac{m_{4}^{2}}{S_{34}} \right) \left( \nu_{14} - 1 \right) S_{34}. $$&lt;/div&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -1075,7 +1075,7 @@ These provide an argument for restricting only to the range &lt;span class="math
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="sudakov"></category><category term="two-body"></category></entry><entry><title>Contiguous Three-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/" rel="alternate"></link><updated>2015-11-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/contiguous-three-body-sudakov/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/"&gt;kinematics of three-body problems&lt;/a&gt;. The &lt;strong&gt;contiguous three-body Sudakov decomposition&lt;/strong&gt; is given by
+&lt;/script&gt;</summary><category term="sudakov"></category><category term="two-body"></category><category term="kinematics"></category></entry><entry><title>Contiguous Three-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/" rel="alternate"></link><updated>2015-11-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/contiguous-three-body-sudakov/</id><summary type="html">&lt;p&gt;In a previous post I discussed the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/"&gt;kinematics of three-body problems&lt;/a&gt;. The &lt;strong&gt;contiguous three-body Sudakov decomposition&lt;/strong&gt; is given by
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$&lt;/div&gt;
 &lt;div class="math"&gt;$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$&lt;/div&gt;
@@ -1311,7 +1311,7 @@ All of these invariants are present in any three-body problem.&lt;/p&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="sudakov"></category><category term="three-body"></category></entry><entry><title>Two-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/" rel="alternate"></link><updated>2015-11-25T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-25:posts/2015/Nov/two-body-sudakov/</id><summary type="html">&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive body. That is, you do not have any conservation constraint relating these two massive momenta. But you still have two &lt;strong&gt;massive on-shell&lt;/strong&gt; constraints:
+&lt;/script&gt;</summary><category term="kinematics"></category><category term="three-body"></category></entry><entry><title>Two-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/" rel="alternate"></link><updated>2015-11-25T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-11-25:posts/2015/Nov/two-body-sudakov/</id><summary type="html">&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive body. That is, you do not have any conservation constraint relating these two massive momenta. But you still have two &lt;strong&gt;massive on-shell&lt;/strong&gt; constraints:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;
@@ -1591,7 +1591,7 @@ That is, the three massive momenta can be written as very simple combinations of
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="kinematics"></category></entry><entry><title>Sudakov Kinematics</title><link href="http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/" rel="alternate"></link><updated>2015-10-14T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-10-14:posts/2015/Oct/sudakov-kinematics/</id><summary type="html">&lt;p&gt;Recently I learned a cool trick. It allows you to write a set of massive momenta in terms of null vectors. By massive momentum I mean an energy-momentum vector that describes a quantum that moves slower than light. For concreteness, consider a 2-to-2 scattering process:
+&lt;/script&gt;</summary><category term="kinematics"></category><category term="sudakov"></category><category term="three-point"></category></entry><entry><title>Sudakov Kinematics</title><link href="http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/" rel="alternate"></link><updated>2015-10-14T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-10-14:posts/2015/Oct/sudakov-kinematics/</id><summary type="html">&lt;p&gt;Recently I learned a cool trick. It allows you to write a set of massive momenta in terms of null vectors. By massive momentum I mean an energy-momentum vector that describes a quantum that moves slower than light. For concreteness, consider a 2-to-2 scattering process:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{3}(p_{3}) + \Phi_{4}(p_{4}). $$&lt;/div&gt;
 &lt;p&gt;
@@ -1736,7 +1736,7 @@ Note that in four spacetime dimensions all Sudakov invariants can be written in 
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="kinematics"></category></entry><entry><title>Semiclassical Dimensional Analysis</title><link href="http://meirizarrygelpi.github.io/posts/2015/Jun/semiclassical-dimensional-analysis/" rel="alternate"></link><updated>2015-06-04T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-06-04:posts/2015/Jun/semiclassical-dimensional-analysis/</id><summary type="html">&lt;p&gt;Before we begin, a note on units. I will work with a system of units where velocity and speed are dimensionless, and the speed of light sets the scale. Thus, &lt;span class="math"&gt;\(c = 1\)&lt;/span&gt;. This means that time and length have the same dimensions, as well as momentum, energy, and mass:
+&lt;/script&gt;</summary><category term="kinematics"></category><category term="four-point"></category><category term="sudakov"></category></entry><entry><title>Semiclassical Dimensional Analysis</title><link href="http://meirizarrygelpi.github.io/posts/2015/Jun/semiclassical-dimensional-analysis/" rel="alternate"></link><updated>2015-06-04T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-06-04:posts/2015/Jun/semiclassical-dimensional-analysis/</id><summary type="html">&lt;p&gt;Before we begin, a note on units. I will work with a system of units where velocity and speed are dimensionless, and the speed of light sets the scale. Thus, &lt;span class="math"&gt;\(c = 1\)&lt;/span&gt;. This means that time and length have the same dimensions, as well as momentum, energy, and mass:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ [\text{time}] = [\text{length}] \qquad [\text{momentum}] = [\text{energy}] = [\text{mass}].$$&lt;/div&gt;
 &lt;p&gt;

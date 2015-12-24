@@ -633,7 +633,7 @@ You also have the vectors
 which lead to more relations:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = t - \left( \nu_{13} - 1 \right) \left( \nu_{14} - \frac{m_{3}^{2}}{S_{34}} \right) S_{34}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = u - \left( \nu_{13} - \frac{m_{4}^{2}}{S_{34}} \right) \left( \nu_{14} - 1 \right) S_{34}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = u - \left( \nu_{13} - \frac{m_{4}^{2}}{S_{34}} \right) \left( \nu_{14} - 1 \right) S_{34}. $$&lt;/div&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -1625,7 +1625,7 @@ These provide an argument for restricting only to the range &lt;span class="math
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Tue, 01 Dec 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-12-01:posts/2015/Dec/two-body-rapidity/</guid><category>sudakov</category><category>two-body</category></item><item><title>arXiv picks for 2015, week 48</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-48/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Tue, 01 Dec 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-12-01:posts/2015/Dec/two-body-rapidity/</guid><category>sudakov</category><category>two-body</category><category>kinematics</category></item><item><title>arXiv picks for 2015, week 48</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-48/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.06652"&gt;Overcoming Obstacles to Colour-Kinematics Duality at Two Loops&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.06716"&gt;One-Loop Soft Theorems via Dual Superconformal Symmetry&lt;/a&gt;&lt;/li&gt;
@@ -1869,7 +1869,7 @@ All of these invariants are present in any three-body problem.&lt;/p&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Thu, 26 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/three-body-kinematics/</guid><category>sudakov</category><category>three-body</category></item><item><title>Two-Body Sudakov Decomposition</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/</link><description>&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive body. That is, you do not have any conservation constraint relating these two massive momenta. But you still have two &lt;strong&gt;massive on-shell&lt;/strong&gt; constraints:
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Thu, 26 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-26:posts/2015/Nov/three-body-kinematics/</guid><category>kinematics</category><category>three-body</category></item><item><title>Two-Body Sudakov Decomposition</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/</link><description>&lt;p&gt;In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive body. That is, you do not have any conservation constraint relating these two massive momenta. But you still have two &lt;strong&gt;massive on-shell&lt;/strong&gt; constraints:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}. $$&lt;/div&gt;
 &lt;p&gt;
@@ -2231,7 +2231,7 @@ That is, the three massive momenta can be written as very simple combinations of
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Fri, 13 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-13:posts/2015/Nov/three-point-sudakov/</guid><category>kinematics</category></item><item><title>arXiv picks for 2015, week 45</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-45/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Fri, 13 Nov 2015 00:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-11-13:posts/2015/Nov/three-point-sudakov/</guid><category>kinematics</category><category>sudakov</category><category>three-point</category></item><item><title>arXiv picks for 2015, week 45</title><link>http://meirizarrygelpi.github.io/posts/2015/Nov/2015-week-45/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1510.08870"&gt;Universal quantum constraints on the butterfly effect&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1511.00707"&gt;Entanglement Entropy in Warped Conformal Field Theories&lt;/a&gt;&lt;/li&gt;
@@ -2525,7 +2525,7 @@ Note that in four spacetime dimensions all Sudakov invariants can be written in 
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Wed, 14 Oct 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-10-14:posts/2015/Oct/sudakov-kinematics/</guid><category>kinematics</category></item><item><title>arXiv picks for 2015, week 41</title><link>http://meirizarrygelpi.github.io/posts/2015/Oct/2015-week-41/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Wed, 14 Oct 2015 00:00:00 -0400</pubDate><guid>tag:meirizarrygelpi.github.io,2015-10-14:posts/2015/Oct/sudakov-kinematics/</guid><category>kinematics</category><category>four-point</category><category>sudakov</category></item><item><title>arXiv picks for 2015, week 41</title><link>http://meirizarrygelpi.github.io/posts/2015/Oct/2015-week-41/</link><description>&lt;p&gt;In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1510.01324"&gt;4d &lt;span class="math"&gt;\(N=2\)&lt;/span&gt; SCFT and singularity theory Part I: Classification&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1510.01332"&gt;The Exact Bremsstrahlung Function in &lt;span class="math"&gt;\(N=2\)&lt;/span&gt; Superconformal Field Theories&lt;/a&gt;&lt;/li&gt;
