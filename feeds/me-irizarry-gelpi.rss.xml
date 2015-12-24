@@ -1,5 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 23 Dec 2015 20:00:00 -0500</lastBuildDate><item><title>Elastic Kinematics in Scalars Toy Model</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/kinematics-toy/</link><description>&lt;p&gt;In this post I will discuss the kinematics of the four-point &lt;strong&gt;elastic&lt;/strong&gt; process
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 24 Dec 2015 20:00:00 -0500</lastBuildDate><item><title>Elastic Two-Body Sudakov Decomposition</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/elastic-two-body-sudakov/</link><description>&lt;p&gt;In previous posts I introduced the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/"&gt;Scalars Toy Model&lt;/a&gt;, listed a set of &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/one-loop-toy/"&gt;one-loop contributions&lt;/a&gt; to an elastic four-point amplitude, and discussed &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/kinematics-toy/"&gt;kinematics&lt;/a&gt; for this elastic four-point amplitude. Here I would like to revisit the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/outgoing-two-body/"&gt;outgoing two-body Sudakov decomposition&lt;/a&gt; and adjust it to the elastic kinematics.&lt;/p&gt;
+&lt;p&gt;Recall that in the &lt;strong&gt;outgoing two-body Sudakov decomposition&lt;/strong&gt; you write the &lt;em&gt;outgoing&lt;/em&gt; momenta as
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{3} = n_{3} + \frac{m_{1}^{2}}{S_{34}} n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} = n_{4} + \frac{m_{2}^{2}}{S_{34}} n_{3}; $$&lt;/div&gt;
+&lt;p&gt;
+and the &lt;em&gt;incoming&lt;/em&gt; momenta as
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = P_{1} + \nu_{13} n_{3} + \nu_{14} n_{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} = P_{2} + \nu_{23} n_{3} + \nu_{24} n_{4}; $$&lt;/div&gt;
+&lt;p&gt;
+with
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{1} \cdot n_{3} = P_{1} \cdot n_{4} = 0, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ P_{2} \cdot n_{3} = P_{2} \cdot n_{4} = 0. $$&lt;/div&gt;
+&lt;p&gt;
+Due to the conservation constraint
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} + p_{2} = p_{3} + p_{4}, $$&lt;/div&gt;
+&lt;p&gt;
+you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{1} + P_{2} = 0, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{13} + \nu_{23} = 1 + \frac{m_{2}^{2}}{S_{34}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{14} + \nu_{24} = 1 + \frac{m_{1}^{2}}{S_{34}}. $$&lt;/div&gt;
+&lt;p&gt;
+Thus, it is sufficient to determine &lt;span class="math"&gt;\(\left\Vert P_{1} \right\Vert^{2}\)&lt;/span&gt;, &lt;span class="math"&gt;\(\nu_{13}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(\nu_{14}\)&lt;/span&gt;. After accounting for the elasticity of the problem, you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = \left( \nu_{13} - 1 \right) \left( \nu_{14} - \frac{m_{1}^{2}}{S_{34}} \right) S_{34} - t, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{13} = \frac{S_{34} \left( m_{1}^{2} + m_{2}^{2} - u \right) - m_{2}^{2} \left( 2m_{1}^{2} - t \right)}{\left( S_{34} - m_{1} m_{2} \right) \left( S_{34} + m_{1} m_{2} \right)}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{14} = \frac{S_{34} \left( 2m_{1}^{2} - t \right) - m_{1}^{2} \left( m_{1}^{2} + m_{2}^{2} - u \right)}{\left( S_{34} - m_{1} m_{2} \right) \left( S_{34} + m_{1} m_{2} \right)}. $$&lt;/div&gt;
+&lt;p&gt;
+Using
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ m_{1}^{2} + m_{2}^{2} - u = s + t - m_{1}^{2} - m_{2}^{2}, $$&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left( S_{34} - m_{1} m_{2} \right) \left( S_{34} + m_{1} m_{2} \right) = S_{34} \sqrt{ \Lambda_{12} }, $$&lt;/div&gt;
+&lt;p&gt;
+you find
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \nu_{13} = \frac{S_{34} \left( s - m_{1}^{2} - m_{2}^{2} \right) - 2 m_{1}^{2} m_{2}^{2} + t \left( S_{34} + m_{2}^{2} \right) }{S_{34} \sqrt{\Lambda_{12}}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{14} = \frac{m_{1}^{2}\left(2 S_{34} - s + m_{1}^{2} + m_{2}^{2} \right) - t \left( S_{34} + m_{1}^{2} \right) }{S_{34} \sqrt{\Lambda_{12}}}. $$&lt;/div&gt;
+&lt;p&gt;
+Then
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \nu_{13} - 1 = \frac{S_{34} \left( s - m_{1}^{2} - m_{2}^{2} - \sqrt{\Lambda_{12}} \right) - 2 m_{1}^{2} m_{2}^{2} + t \left( S_{34} + m_{2}^{2} \right) }{S_{34} \sqrt{\Lambda_{12}}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{14} - \frac{m_{1}^{2}}{S_{34}} = \frac{m_{1}^{2}\left(2 S_{34} - s + m_{1}^{2} + m_{2}^{2} - \sqrt{\Lambda_{12}} \right) - t \left( S_{34} + m_{1}^{2} \right) }{S_{34} \sqrt{\Lambda_{12}}}. $$&lt;/div&gt;
+&lt;p&gt;
+Using
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \frac{2 m_{1}^{2} m_{2}^{2}}{S_{34}} = s - m_{1}^{2} - m_{2}^{2} - \sqrt{\Lambda_{12}}, $$&lt;/div&gt;
+&lt;p&gt;
+you get
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \nu_{13} - 1 = \frac{t \left( S_{34} + m_{2}^{2} \right)}{S_{34} \sqrt{\Lambda_{12}}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{14} - \frac{m_{1}^{2}}{S_{34}} = - \frac{t \left( S_{34} + m_{1}^{2} \right)}{S_{34} \sqrt{\Lambda_{12}}}. $$&lt;/div&gt;
+&lt;p&gt;
+Thus
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = -t \left(1 + \frac{s t}{\Lambda_{12}} \right). $$&lt;/div&gt;
+&lt;p&gt;
+In terms of the cosine of the scattering angle in the center-of-momentum frame, you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} = -t \left( \frac{z_{13} + 1}{2} \right). $$&lt;/div&gt;
+&lt;p&gt;
+If &lt;span class="math"&gt;\(z_{13} = \cos{(\theta_{13})}\)&lt;/span&gt;, then
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\frac{z_{13} + 1}{2} = \cos^{2}{\left( \frac{\theta_{13}}{2} \right)}. $$&lt;/div&gt;
+&lt;h2&gt;Forward-JWKB Scattering&lt;/h2&gt;
+&lt;p&gt;The Regge-Sudakov invariant &lt;span class="math"&gt;\(R_{34}\)&lt;/span&gt; is a function of the Regge-Mandelstam invariant:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ R_{34} \equiv \frac{S_{34}}{m_{1} m_{2}} = r_{12} + \sqrt{r_{12}^{2} - 1}. $$&lt;/div&gt;
+&lt;p&gt;
+The Regge-Mandelstam invariant is a function of &lt;span class="math"&gt;\(\xi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\xi_{2}\)&lt;/span&gt;. Thus, in the forward-JWKB regime &lt;span class="math"&gt;\(R_{34}\)&lt;/span&gt; is kept fixed. The Sudakov moduli &lt;span class="math"&gt;\(\nu_{13}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\nu_{14}\)&lt;/span&gt; are functions of &lt;span class="math"&gt;\(\xi_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(\xi_{2}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(\xi_{3}\)&lt;/span&gt;. In the forward-JWKB approximation you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \nu_{13} \rightarrow 1, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{14} \rightarrow \frac{m_{1}^{2}}{S_{34}}; $$&lt;/div&gt;
+&lt;p&gt;
+and thus
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left\Vert P_{1} \right\Vert^{2} \rightarrow -t. $$&lt;/div&gt;
+&lt;p&gt;
+That is, the vector &lt;span class="math"&gt;\(p_{1} - p_{3}\)&lt;/span&gt; becomes &lt;em&gt;orthogonal&lt;/em&gt; to the Sudakov subspace:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} - p_{3} \rightarrow P_{1}. $$&lt;/div&gt;
+&lt;p&gt;
+Due to the conservation constraint, you also have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \nu_{23} \rightarrow \frac{m_{2}^{2}}{S_{34}} , $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{24} \rightarrow 1. $$&lt;/div&gt;
+&lt;p&gt;
+The vector &lt;span class="math"&gt;\(p_{1} - p_{4}\)&lt;/span&gt; maintains a nontrivial component along the Sudakov subspace:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} - p_{4} \rightarrow P_{1} + \left( 1 - \frac{m_{2}^{2}}{S_{34}} \right) n_{3} - \left( 1 - \frac{m_{1}^{2}}{S_{34}} \right) n_{4}. $$&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Thu, 24 Dec 2015 20:00:00 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-12-24:posts/2015/Dec/elastic-two-body-sudakov/</guid><category>sudakov</category><category>two-body</category><category>elastic</category><category>four-point</category></item><item><title>Elastic Kinematics in Scalars Toy Model</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/kinematics-toy/</link><description>&lt;p&gt;In this post I will discuss the kinematics of the four-point &lt;strong&gt;elastic&lt;/strong&gt; process
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{1}(p_{3}) + \Phi_{2}(p_{4}). $$&lt;/div&gt;
 &lt;p&gt;
@@ -167,7 +318,7 @@ That is, &lt;span class="math"&gt;\(t\)&lt;/span&gt; is much &lt;em&gt;larger&lt
 &lt;p&gt;
 Indeed, in this regime you have
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \frac{t}{s} \text{ fixed}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \frac{\xi_{3}}{\xi_{1}} = \frac{t}{s} \text{ fixed}. $$&lt;/div&gt;
 &lt;p&gt;
 In this regime the masses are much smaller than both &lt;span class="math"&gt;\(s\)&lt;/span&gt; and &lt;span class="math"&gt;\(t\)&lt;/span&gt;, but &lt;span class="math"&gt;\(\xi_{2}\)&lt;/span&gt; is finite.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
