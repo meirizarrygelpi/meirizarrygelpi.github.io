@@ -123,7 +123,11 @@ You can also introduce the corresponding <strong>Regge-Mandelstam</strong> invar
 <p>
 There is one <strong>2-Gram</strong> invariant:
 </p>
-<div class="math">$$ G_{12} \equiv - \det{ \begin{pmatrix} \left\Vert p_{1} \right\Vert^{2} &amp; p_{1} \cdot p_{2} \\ p_{2} \cdot p_{1} &amp; \left\Vert p_{2} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right] = m_{1}^{2} m_{2}^{2} \left( r_{12}^{2} - 1 \right).$$</div>
+<div class="math">$$ G_{12} \equiv - \det{ \begin{pmatrix} \left\Vert p_{1} \right\Vert^{2} &amp; p_{1} \cdot p_{2} \\ p_{2} \cdot p_{1} &amp; \left\Vert p_{2} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right] = m_{1}^{2} m_{2}^{2} \left( r_{12}^{2} - 1 \right). $$</div>
+<p>
+It is useful to introduce a <strong>Källén function</strong>:
+</p>
+<div class="math">$$ \Lambda_{12} \equiv \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2}. $$</div>
 <p>
 All of these invariants are present in any two-body problem.</p>
 <p>The <strong>two-body Sudakov decomposition</strong> is given by
@@ -150,52 +154,52 @@ The inverse of <span class="math">\(\mathcal{S}_{2}\)</span> is
 From here it is clear that both <span class="math">\(n_{1}\)</span> and <span class="math">\(n_{2}\)</span> can be written as linear combinations of <span class="math">\(p_{1}\)</span> and <span class="math">\(p_{2}\)</span>. Thus, the "individual content" from each quantum is carried by both Sudakov vectors.</p>
 <p>My goal is to write <span class="math">\(S_{12}\)</span> in terms of <span class="math">\(s_{12}\)</span> and the masses. It is helpful to introduce a <strong>Regge-Sudakov</strong> invariant:
 </p>
-<div class="math">$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}.$$</div>
+<div class="math">$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}. $$</div>
 <p>
 Using the identity
 </p>
-<div class="math">$$ r_{12} = -\frac{p_{1} \cdot p_{2}}{m_{1} m_{2}},$$</div>
+<div class="math">$$ r_{12} = -\frac{p_{1} \cdot p_{2}}{m_{1} m_{2}}, $$</div>
 <p>
 you find the relation
 </p>
-<div class="math">$$ 2r_{12} = R_{12} + \frac{1}{R_{12}}.$$</div>
+<div class="math">$$ 2r_{12} = R_{12} + \frac{1}{R_{12}}. $$</div>
 <p>
 Solving this gives
 </p>
-<div class="math">$$ R_{12} = r_{12} + \sqrt{r_{12}^{2} - 1}.$$</div>
+<div class="math">$$ R_{12} = r_{12} + \sqrt{r_{12}^{2} - 1}. $$</div>
 <p>
 Thus,
 </p>
-<div class="math">$$ S_{12} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right).$$</div>
+<div class="math">$$ S_{12} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \Lambda_{12} } \right). $$</div>
 <p>
-Note that in order for <span class="math">\(S_{12}\)</span> to be real, you need
+Note that in order for <span class="math">\(R_{12}\)</span> to be real, you need
 </p>
-<div class="math">$$ r_{12} \leq -1 \text{ or } r_{12} \geq 1.$$</div>
+<div class="math">$$ r_{12} \leq -1 \text{ or } r_{12} \geq 1. $$</div>
 <p>
 That is,
 </p>
-<div class="math">$$ s_{12} \leq \left( m_{1} - m_{2} \right)^{2} \text{ or } s_{12} \geq \left( m_{1} + m_{2} \right)^{2}.$$</div>
+<div class="math">$$ s_{12} \leq \left( m_{1} - m_{2} \right)^{2} \text{ or } s_{12} \geq \left( m_{1} + m_{2} \right)^{2}. $$</div>
 <p>
 This is equivalent to <span class="math">\(G_{12} \geq 0\)</span>.</p>
 <p>The following relations are useful:
 </p>
-<div class="math">$$ S_{12} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right), $$</div>
-<div class="math">$$ S_{12} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
+<div class="math">$$ S_{12} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \Lambda_{12} } \right), $$</div>
+<div class="math">$$ S_{12} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \Lambda_{12} } \right);$$</div>
 <div class="math">$$ \frac{\left(S_{12} + m_{1}^{2} \right) \left(S_{12} + m_{2}^{2} \right)}{S_{12}} = s_{12} ;$$</div>
-<div class="math">$$ S_{12} = \frac{2 m_{1}^{2} m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$</div>
-<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
-<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right), $$</div>
-<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right);$$</div>
+<div class="math">$$ S_{12} = \frac{2 m_{1}^{2} m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} }};$$</div>
+<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} } \right);$$</div>
+<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} } \right), $$</div>
+<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \Lambda_{12} } \right);$$</div>
 <div class="math">$$ S_{12} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} - m_{2}^{2}, $$</div>
-<div class="math">$$ S_{12} - \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} };$$</div>
+<div class="math">$$ S_{12} - \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \sqrt{ \Lambda_{12} }; $$</div>
 <div class="math">$$ S_{12} + 2 m_{1}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} + m_{1}^{2} - m_{2}^{2}, $$</div>
-<div class="math">$$ S_{12} + 2 m_{2}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} + m_{2}^{2};$$</div>
-<div class="math">$$ \frac{S_{12} \left( S_{12} + m_{1}^{2} \right)}{m_{1}^{2} \left( S_{12} + m_{2}^{2} \right)} = \frac{s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$</div>
-<div class="math">$$ \frac{S_{12} \left( S_{12} + m_{2}^{2} \right)}{m_{2}^{2} \left( S_{12} + m_{1}^{2} \right)} = \frac{s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }};$$</div>
-<div class="math">$$ S_{12}^{2} = m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} = \frac{r_{12} + \sqrt{ r_{12}^{2} - 1 }}{r_{12} - \sqrt{ r_{12}^{2} - 1 }};$$</div>
-<div class="math">$$ S_{12}^{2} + m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} + 1 = \frac{2 r_{12}}{r_{12} - \sqrt{ r_{12}^{2} - 1 }};$$</div>
-<div class="math">$$ S_{12}^{2} - m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{\sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }} \right) \quad \Longrightarrow \quad R_{12}^{2} - 1 = \frac{2 \sqrt{r_{12}^{2} - 1}}{r_{12} - \sqrt{ r_{12}^{2} - 1 }};$$</div>
-<div class="math">$$ \det{\left( \mathcal{S}_{2} \right)} = \frac{2 \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } }{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}. $$</div>
+<div class="math">$$ S_{12} + 2 m_{2}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} + m_{2}^{2}; $$</div>
+<div class="math">$$ \frac{S_{12} \left( S_{12} + m_{1}^{2} \right)}{m_{1}^{2} \left( S_{12} + m_{2}^{2} \right)} = \frac{s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \Lambda_{12} }}{s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} }}; $$</div>
+<div class="math">$$ \frac{S_{12} \left( S_{12} + m_{2}^{2} \right)}{m_{2}^{2} \left( S_{12} + m_{1}^{2} \right)} = \frac{s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \Lambda_{12} }}{s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \Lambda_{12} }}; $$</div>
+<div class="math">$$ S_{12}^{2} = m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \Lambda_{12} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} }} \right); $$</div>
+<div class="math">$$ S_{12}^{2} + m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} }} \right); $$</div>
+<div class="math">$$ S_{12}^{2} - m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{\sqrt{ \Lambda_{12} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} }} \right); $$</div>
+<div class="math">$$ \det{\left( \mathcal{S}_{2} \right)} = \frac{2 \sqrt{ \Lambda_{12} } }{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \Lambda_{12} }}. $$</div>
 <p>
 The logarithm of some of these expressions appear as rapidities in the center-of-momentum frame for either a 2-to-<span class="math">\(N\)</span> or an <span class="math">\(N\)</span>-to-2 scattering problem.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
