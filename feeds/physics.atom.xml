@@ -1,5 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-23T08:00:00-05:00</updated><entry><title>One-Loop Contributions in Scalars Toy Model</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/one-loop-toy/" rel="alternate"></link><updated>2015-12-23T08:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-23:posts/2015/Dec/one-loop-toy/</id><summary type="html">&lt;p&gt;In this post I will enumerate some one-loop contributions to the &lt;em&gt;elastic&lt;/em&gt; process
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-23T20:00:00-05:00</updated><entry><title>Elastic Kinematics in Scalars Toy Model</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/kinematics-toy/" rel="alternate"></link><updated>2015-12-23T20:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-23:posts/2015/Dec/kinematics-toy/</id><summary type="html">&lt;p&gt;In this post I will discuss the kinematics of the four-point &lt;strong&gt;elastic&lt;/strong&gt; process
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{1}(p_{3}) + \Phi_{2}(p_{4}). $$&lt;/div&gt;
+&lt;p&gt;
+There are four &lt;strong&gt;on-shell&lt;/strong&gt; constraints:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ m_{1}^{2} = -\left\Vert p_{1} \right\Vert^{2} = -\left\Vert p_{3} \right\Vert^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ m_{2}^{2} = -\left\Vert p_{2} \right\Vert^{2} = -\left\Vert p_{4} \right\Vert^{2}; $$&lt;/div&gt;
+&lt;p&gt;
+and a &lt;strong&gt;conservation&lt;/strong&gt; constraint:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} + p_{2} = p_{3} + p_{4}. $$&lt;/div&gt;
+&lt;h2&gt;Mandelstam Invariants&lt;/h2&gt;
+&lt;p&gt;There are three &lt;strong&gt;2-Mandelstam&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s \equiv - \left\Vert p_{1} + p_{2} \right\Vert^{2} = - \left\Vert p_{3} + p_{4} \right\Vert^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ t \equiv - \left\Vert p_{1} - p_{3} \right\Vert^{2} = - \left\Vert p_{4} - p_{2} \right\Vert^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ u \equiv - \left\Vert p_{1} - p_{4} \right\Vert^{2} = - \left\Vert p_{3} - p_{2} \right\Vert^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+Due to the conservation constraint, these invariants satisfy the relation
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s + t + u = 2 m_{1}^{2} + 2 m_{2}^{2}. $$&lt;/div&gt;
+&lt;h3&gt;Regge-Mandelstam Invariants&lt;/h3&gt;
+&lt;p&gt;There are four &lt;strong&gt;Regge-Mandelstam&lt;/strong&gt; invariants:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r_{12} = r_{34} = \frac{s - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{13} = \frac{2m_{1}^{2} - t}{2 m_{1}^{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{24} = \frac{2m_{2}^{2} - t}{2 m_{2}^{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{14} = r_{23} = \frac{m_{1}^{2} + m_{2}^{2} - u}{2 m_{1} m_{2}}. $$&lt;/div&gt;
+&lt;h2&gt;Gram Invariants&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;2-Gram&lt;/strong&gt; invariants are
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{12} = G_{34} = \frac{1}{4} \left[ \left(s - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{13} = \frac{1}{4} \left[ \left(2m_{1}^{2} - t \right)^{2} - 4 m_{1}^{4} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{24} = \frac{1}{4} \left[ \left(2m_{2}^{2} - t \right)^{2} - 4 m_{2}^{4} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{14} = G_{23} = \frac{1}{4} \left[ \left(m_{1}^{2} + m_{2}^{2} - u \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+It will be useful to introduce four &lt;strong&gt;Källén functions&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \Lambda_{12}(s) \equiv \left(s - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \Lambda_{13}(t) \equiv \left(2m_{1}^{2} - t \right)^{2} - 4 m_{1}^{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \Lambda_{24}(t) \equiv \left(2m_{2}^{2} - t \right)^{2} - 4 m_{2}^{4}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \Lambda_{14}(u) \equiv \left(m_{1}^{2} + m_{2}^{2} - u \right)^{2} - 4 m_{1}^{2} m_{2}^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+The &lt;strong&gt;3-Gram&lt;/strong&gt; invariants are
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{123} = G_{124} = G_{134} = G_{234} = \frac{1}{4} t \left[ s u - \left( m_{1}^{2} - m_{2}^{2} \right)^{2} \right]. $$&lt;/div&gt;
+&lt;h2&gt;Center-of-Momentum Frame&lt;/h2&gt;
+&lt;p&gt;In the &lt;strong&gt;center-of-momentum frame&lt;/strong&gt; you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{1} = \begin{pmatrix} E_{1} &amp;amp; \mathbf{p}_{1} \end{pmatrix}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{2} = \begin{pmatrix} E_{2} &amp;amp; -\mathbf{p}_{1} \end{pmatrix}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{3} = \begin{pmatrix} E_{3} &amp;amp; \mathbf{p}_{3} \end{pmatrix}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{4} = \begin{pmatrix} E_{4} &amp;amp; -\mathbf{p}_{3} \end{pmatrix}. $$&lt;/div&gt;
+&lt;p&gt;
+That is, the momentum is trivially conserved, but the four energies satisfy a conservation constraint:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ E_{1} + E_{2} = E_{3} + E_{4}. $$&lt;/div&gt;
+&lt;p&gt;
+All energies are &lt;em&gt;positive&lt;/em&gt; in this reference frame.&lt;/p&gt;
+&lt;h3&gt;Energy and Momentum&lt;/h3&gt;
+&lt;p&gt;The energies in the center-of-momentum frame are
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ E_{1} = E_{3} = \frac{s + m_{1}^{2} - m_{2}^{2}}{2 \sqrt{s}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ E_{2} = E_{4} = \frac{s - m_{1}^{2} + m_{2}^{2}}{2 \sqrt{s}}. $$&lt;/div&gt;
+&lt;p&gt;
+The magnitude of the momenta in the center-of-momentum frame are
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left\lvert \mathbf{p}_{1} \right\rvert = \left\lvert \mathbf{p}_{3} \right\rvert = \frac{\sqrt{ \Lambda_{12}(s) }}{2 \sqrt{s}}. $$&lt;/div&gt;
+&lt;h3&gt;Scattering Angle&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;scattering angle&lt;/strong&gt; in the center-of-momentum frame is the angle between &lt;span class="math"&gt;\(\mathbf{p}_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathbf{p}_{3}\)&lt;/span&gt;. The cosine of the scattering angle is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ z_{13} \equiv \frac{ \mathbf{p}_{1} \cdot \mathbf{p}_{3} }{\left\lvert \mathbf{p}_{1} \right\rvert \left\lvert \mathbf{p}_{3} \right\rvert} = \frac{ \left( m_{1}^{2} - m_{2}^{2} \right)^{2} - s \left(u - t\right) }{\left( m_{1}^{2} - m_{2}^{2} \right)^{2} - s \left(u + t\right)}. $$&lt;/div&gt;
+&lt;p&gt;
+In terms of &lt;span class="math"&gt;\(s\)&lt;/span&gt;, &lt;span class="math"&gt;\(t\)&lt;/span&gt;, and the masses, this can also be written as
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ z_{13} = 1 + \frac{2 s t}{\Lambda_{12}(s)}. $$&lt;/div&gt;
+&lt;h3&gt;Speed and Rapidity&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;speed&lt;/strong&gt; of each external quantum in the center-of-momentum frame is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left\lvert \mathbf{v}_{1} \right\rvert = \left\lvert \mathbf{v}_{3} \right\rvert = \frac{\sqrt{ \Lambda_{12}(s) }}{s + m_{1}^{2} - m_{2}^{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \left\lvert \mathbf{v}_{2} \right\rvert = \left\lvert \mathbf{v}_{4} \right\rvert = \frac{\sqrt{ \Lambda_{12}(s) }}{s - m_{1}^{2} + m_{2}^{2}}. $$&lt;/div&gt;
+&lt;p&gt;
+The &lt;strong&gt;rapidity&lt;/strong&gt; of each external quantum in the center-of-momentum frame is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \rho_{1} = \rho_{3} = \frac{1}{2} \log{ \left[ \frac{ s + m_{1}^{2} - m_{2}^{2} + \sqrt{\Lambda_{12}(s)} }{ s + m_{1}^{2} - m_{2}^{2} - \sqrt{\Lambda_{12}(s)}} \right] }, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \rho_{2} = \rho_{4} = \frac{1}{2} \log{ \left[ \frac{ s - m_{1}^{2} + m_{2}^{2} + \sqrt{\Lambda_{12}(s)} }{ s - m_{1}^{2} + m_{2}^{2} - \sqrt{\Lambda_{12}(s)}} \right] }. $$&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \rho_{1} + \rho_{2} = \rho_{3} + \rho_{4} = \frac{1}{2} \log{\left[ \frac{s - m_{1}^{2} - m_{2}^{2} + \sqrt{\Lambda_{12}(s)}}{s - m_{1}^{2} - m_{2}^{2} - \sqrt{\Lambda_{12}(s)}} \right]}. $$&lt;/div&gt;
+&lt;p&gt;
+This expression is similar to the logarithm of the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/two-body-rapidity/"&gt;two-body Regge-Sudakov invariant&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Physical Scattering Region&lt;/h3&gt;
+&lt;p&gt;The physical scattering region in the center-of-momentum frame is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s &amp;gt; \left( m_{1} + m_{2} \right)^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ t &amp;lt; 0, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ u &amp;lt; \left( m_{1} - m_{2} \right)^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+In terms of the Regge-Mandelstam invariants, this region is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r_{12} &amp;gt; 1, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{13} &amp;gt; 1, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{24} &amp;gt; 1, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ r_{14} &amp;gt; 1. $$&lt;/div&gt;
+&lt;p&gt;
+In this region all Gram invariants are positive.&lt;/p&gt;
+&lt;h2&gt;Scattering Regimes&lt;/h2&gt;
+&lt;p&gt;With two independent 2-Mandelstam invariants and two masses you can construct three independent dimensionless ratios:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \xi_{1} \equiv \frac{s}{m_{1} m_{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \xi_{2} \equiv \frac{m_{1}}{m_{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \xi_{3} \equiv \frac{t}{m_{1} m_{2}}. $$&lt;/div&gt;
+&lt;p&gt;
+The value of these ratios determines the scattering regime used in the problem.&lt;/p&gt;
+&lt;h3&gt;Rapidity Regimes&lt;/h3&gt;
+&lt;p&gt;The rapidity (and also the speed) of each external quantum in the center-of-momentum frame is a function of &lt;span class="math"&gt;\(\xi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\xi_{2}\)&lt;/span&gt;. There are three rapidity regimes. &lt;strong&gt;Small-rapidity&lt;/strong&gt; involves the limit
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s \rightarrow \left( m_{1} + m_{2} \right)^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+This is the smallest physical value that &lt;span class="math"&gt;\(s\)&lt;/span&gt; can take. In terms of dimensionless ratios, this means
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \xi_{1} \rightarrow \xi_{2} + 2 + \frac{1}{\xi_{2}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \xi_{2} \text{ fixed}. $$&lt;/div&gt;
+&lt;p&gt;
+Small-rapidity is the same as &lt;strong&gt;small-speed&lt;/strong&gt; (i.e. speeds approaching zero).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fixed-rapidity&lt;/strong&gt; is the regime where &lt;span class="math"&gt;\(s\)&lt;/span&gt;, &lt;span class="math"&gt;\(m_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(m_{2}\)&lt;/span&gt; take asymptotically large (or small) values, but the ratios are kept fixed:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \xi_{1} \text{ fixed}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \xi_{2} \text{ fixed}. $$&lt;/div&gt;
+&lt;p&gt;
+Fixed-rapidity is the same as &lt;strong&gt;fixed-speed&lt;/strong&gt;. Since &lt;span class="math"&gt;\(\xi_{1}\)&lt;/span&gt; is fixed, you may have large &lt;span class="math"&gt;\(s\)&lt;/span&gt; &lt;em&gt;and&lt;/em&gt; large masses, or small &lt;span class="math"&gt;\(s\)&lt;/span&gt; &lt;em&gt;and&lt;/em&gt; small masses.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Large-rapidity&lt;/strong&gt; involves the limit
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ s \rightarrow \infty. $$&lt;/div&gt;
+&lt;p&gt;
+In terms of dimensionless ratios, this means
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \xi_{1} \rightarrow \infty, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \xi_{2} \text{ fixed}. $$&lt;/div&gt;
+&lt;p&gt;
+That is, in this regime &lt;span class="math"&gt;\(s\)&lt;/span&gt; is much larger than the masses. This is a high-energy regime. Indeed, in this regime the &lt;em&gt;massive&lt;/em&gt; external quanta behaves as &lt;em&gt;null&lt;/em&gt;. &lt;/p&gt;
+&lt;h3&gt;Forward-JWKB Scattering&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Forward-JWKB scattering&lt;/strong&gt; is the regime of &lt;em&gt;fixed-rapidity&lt;/em&gt; and &lt;em&gt;small-cosine&lt;/em&gt;. Thus,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \xi_{1} \text{ fixed}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \xi_{2} \text{ fixed}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \xi_{3} \rightarrow 0. $$&lt;/div&gt;
+&lt;p&gt;
+That is, &lt;span class="math"&gt;\(t\)&lt;/span&gt; is much &lt;em&gt;smaller&lt;/em&gt; than &lt;span class="math"&gt;\(s\)&lt;/span&gt; or the masses. This is a high-energy regime, but also a heavy-matter (i.e. macroscopic) regime.&lt;/p&gt;
+&lt;h3&gt;Regge Scattering&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Regge scattering&lt;/strong&gt; is the regime of &lt;em&gt;fixed-rapidity&lt;/em&gt; and unphysical &lt;em&gt;large-cosine&lt;/em&gt;. Thus,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \xi_{1} \text{ fixed}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \xi_{2} \text{ fixed}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \xi_{3} \rightarrow \infty. $$&lt;/div&gt;
+&lt;p&gt;
+That is, &lt;span class="math"&gt;\(t\)&lt;/span&gt; is much &lt;em&gt;larger&lt;/em&gt; than &lt;span class="math"&gt;\(s\)&lt;/span&gt; or the masses. In contrast with forward-JWKB scattering, Regge scattering is a low-energy regime, but also a light-matter (i.e. microscopic) regime.&lt;/p&gt;
+&lt;h3&gt;Fixed-Angle Scattering&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Fixed-angle scattering&lt;/strong&gt; is the regime of &lt;em&gt;large-rapidity&lt;/em&gt; and &lt;em&gt;fixed-cosine&lt;/em&gt;. Thus,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \xi_{1} \rightarrow \infty, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \xi_{2} \text{ fixed}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \xi_{3} \rightarrow -\infty. $$&lt;/div&gt;
+&lt;p&gt;
+Indeed, in this regime you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \frac{t}{s} \text{ fixed}. $$&lt;/div&gt;
+&lt;p&gt;
+In this regime the masses are much smaller than both &lt;span class="math"&gt;\(s\)&lt;/span&gt; and &lt;span class="math"&gt;\(t\)&lt;/span&gt;, but &lt;span class="math"&gt;\(\xi_{2}\)&lt;/span&gt; is finite.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="kinematics"></category><category term="sudakov"></category><category term="four-point"></category><category term="scalars"></category></entry><entry><title>One-Loop Contributions in Scalars Toy Model</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/one-loop-toy/" rel="alternate"></link><updated>2015-12-23T08:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-23:posts/2015/Dec/one-loop-toy/</id><summary type="html">&lt;p&gt;In this post I will enumerate some one-loop contributions to the &lt;em&gt;elastic&lt;/em&gt; process
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{1}(p_{3}) + \Phi_{2}(p_{4}). $$&lt;/div&gt;
 &lt;p&gt;
