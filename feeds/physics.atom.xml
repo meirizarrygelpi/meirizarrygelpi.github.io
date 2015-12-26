@@ -69,12 +69,19 @@ In terms of the cosine of the scattering angle in the center-of-momentum frame, 
 If &lt;span class="math"&gt;\(z_{13} = \cos{(\theta_{13})}\)&lt;/span&gt;, then
 &lt;/p&gt;
 &lt;div class="math"&gt;$$\frac{z_{13} + 1}{2} = \cos^{2}{\left( \frac{\theta_{13}}{2} \right)}. $$&lt;/div&gt;
+&lt;p&gt;
+For future reference, here are the four &lt;strong&gt;Sudakov moduli&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \nu_{13} = 1 + \frac{t \left( S_{34} + m_{2}^{2} \right)}{S_{34} \sqrt{\Lambda_{12}}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{14} = \frac{m_{1}^{2}}{S_{34}} - \frac{t \left( S_{34} + m_{1}^{2} \right)}{S_{34} \sqrt{\Lambda_{12}}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{23} = \frac{m_{2}^{2}}{S_{34}} - \frac{t \left( S_{34} + m_{2}^{2} \right)}{S_{34} \sqrt{\Lambda_{12}}}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \nu_{24} = 1 + \frac{t \left( S_{34} + m_{1}^{2} \right)}{S_{34} \sqrt{\Lambda_{12}}}. $$&lt;/div&gt;
 &lt;h2&gt;Forward-JWKB Scattering&lt;/h2&gt;
 &lt;p&gt;The Regge-Sudakov invariant &lt;span class="math"&gt;\(R_{34}\)&lt;/span&gt; is a function of the Regge-Mandelstam invariant:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ R_{34} \equiv \frac{S_{34}}{m_{1} m_{2}} = r_{12} + \sqrt{r_{12}^{2} - 1}. $$&lt;/div&gt;
 &lt;p&gt;
-The Regge-Mandelstam invariant is a function of &lt;span class="math"&gt;\(\xi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\xi_{2}\)&lt;/span&gt;. Thus, in the forward-JWKB regime &lt;span class="math"&gt;\(R_{34}\)&lt;/span&gt; is kept fixed. The Sudakov moduli &lt;span class="math"&gt;\(\nu_{13}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\nu_{14}\)&lt;/span&gt; are functions of &lt;span class="math"&gt;\(\xi_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(\xi_{2}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(\xi_{3}\)&lt;/span&gt;. In the forward-JWKB approximation you have
+The Regge-Mandelstam invariant &lt;span class="math"&gt;\(r_{12}\)&lt;/span&gt; is a function of &lt;span class="math"&gt;\(\xi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\xi_{2}\)&lt;/span&gt;. Thus, in the &lt;em&gt;forward-JWKB&lt;/em&gt; regime &lt;span class="math"&gt;\(R_{34}\)&lt;/span&gt; is kept fixed. The Sudakov moduli &lt;span class="math"&gt;\(\nu_{13}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\nu_{14}\)&lt;/span&gt; are functions of &lt;span class="math"&gt;\(\xi_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(\xi_{2}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(\xi_{3}\)&lt;/span&gt;. In the forward-JWKB approximation you have
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \nu_{13} \rightarrow 1, $$&lt;/div&gt;
 &lt;div class="math"&gt;$$ \nu_{14} \rightarrow \frac{m_{1}^{2}}{S_{34}}; $$&lt;/div&gt;
@@ -95,6 +102,8 @@ Due to the conservation constraint, you also have
 The vector &lt;span class="math"&gt;\(p_{1} - p_{4}\)&lt;/span&gt; maintains a nontrivial component along the Sudakov subspace:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ p_{1} - p_{4} \rightarrow P_{1} + \left( 1 - \frac{m_{2}^{2}}{S_{34}} \right) n_{3} - \left( 1 - \frac{m_{1}^{2}}{S_{34}} \right) n_{4}. $$&lt;/div&gt;
+&lt;p&gt;
+These results will be important when evaluating one-loop contributions.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
