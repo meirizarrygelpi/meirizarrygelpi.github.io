@@ -389,49 +389,49 @@ In this regime the masses are much smaller than both &lt;span class="math"&gt;\(
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{1}(p_{3}) + \Phi_{2}(p_{4}). $$&lt;/div&gt;
 &lt;p&gt;
-This process has an associated four-point scattering amplitude in the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/"&gt;Scalars Toy Model&lt;/a&gt;. The one-loop contributions are either order &lt;span class="math"&gt;\(g^{4}\)&lt;/span&gt;, &lt;span class="math"&gt;\(h^{4}\)&lt;/span&gt;, or &lt;span class="math"&gt;\(g^{2} h^{2}\)&lt;/span&gt;.&lt;/p&gt;
+This process has an associated four-point scattering amplitude in the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/"&gt;Scalars Toy Model&lt;/a&gt;. The one-loop contributions are either order &lt;span class="math"&gt;\(g^{4}\)&lt;/span&gt;, &lt;span class="math"&gt;\(h^{4}\)&lt;/span&gt;, or &lt;span class="math"&gt;\(g^{2} h^{2}\)&lt;/span&gt; depending on the kind of intermedia that is being exchanged.&lt;/p&gt;
 &lt;h2&gt;Square&lt;/h2&gt;
 &lt;p&gt;There are four &lt;strong&gt;square&lt;/strong&gt; contributions:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \mathcal{S}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} G_{A}(x_{1} \mid x_{2}) G_{2}(x_{2} \mid x_{4}) G_{A}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{S}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} G_{Y}(x_{1} \mid x_{2}) G_{2}(x_{2} \mid x_{4}) G_{Y}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{S}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} G_{A}(x_{1} \mid x_{2}) G_{2}(x_{2} \mid x_{4}) G_{Y}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{S}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} G_{Y}(x_{1} \mid x_{2}) G_{2}(x_{2} \mid x_{4}) G_{A}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}). $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{S}_{gg}(x) \equiv g^{4} G_{A}(x_{1} \mid x_{2}) G_{2}(x_{4} \mid x_{2}) G_{A}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{S}_{hh}(x) \equiv h^{4} G_{Y}(x_{1} \mid x_{2}) G_{2}(x_{4} \mid x_{2}) G_{Y}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{S}_{gh}(x) \equiv g^{2} h^{2} G_{A}(x_{1} \mid x_{2}) G_{2}(x_{4} \mid x_{2}) G_{Y}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{S}_{hg}(x) \equiv g^{2} h^{2} G_{Y}(x_{1} \mid x_{2}) G_{2}(x_{4} \mid x_{2}) G_{A}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}). $$&lt;/div&gt;
 &lt;h2&gt;Twisted Square&lt;/h2&gt;
 &lt;p&gt;There are four &lt;strong&gt;twisted square&lt;/strong&gt; contributions:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \mathcal{T}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} G_{A}(x_{1} \mid x_{4}) G_{2}(x_{2} \mid x_{4}) G_{A}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{T}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} G_{Y}(x_{1} \mid x_{4}) G_{2}(x_{2} \mid x_{4}) G_{Y}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{T}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} G_{A}(x_{1} \mid x_{4}) G_{2}(x_{2} \mid x_{4}) G_{Y}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{T}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} G_{Y}(x_{1} \mid x_{4}) G_{2}(x_{2} \mid x_{4}) G_{A}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}). $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{T}_{gg}(x) \equiv g^{4} G_{A}(x_{1} \mid x_{4}) G_{2}(x_{4} \mid x_{2}) G_{A}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{T}_{hh}(x) \equiv h^{4} G_{Y}(x_{1} \mid x_{4}) G_{2}(x_{4} \mid x_{2}) G_{Y}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{T}_{gh}(x) \equiv g^{2} h^{2} G_{A}(x_{1} \mid x_{4}) G_{2}(x_{4} \mid x_{2}) G_{Y}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{T}_{hg}(x) \equiv g^{2} h^{2} G_{Y}(x_{1} \mid x_{4}) G_{2}(x_{4} \mid x_{2}) G_{A}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}). $$&lt;/div&gt;
 &lt;h2&gt;Vertex Correction&lt;/h2&gt;
 &lt;p&gt;There are two sets of four &lt;strong&gt;vertex correction&lt;/strong&gt; contributions:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \mathcal{U}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} \delta( x_{2} - x_{4} ) G_{A}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{A}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{U}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} \delta( x_{2} - x_{4} ) G_{Y}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{Y}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{U}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{2} - x_{4} ) G_{A}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{Y}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{U}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{2} - x_{4} ) G_{Y}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{A}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right]; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{U}_{gg}(x) \equiv g^{4} \delta( x_{4} - x_{2} ) G_{A}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{A}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{U}_{hh}(x) \equiv h^{4} \delta( x_{4} - x_{2} ) G_{Y}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{Y}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{U}_{gh}(x) \equiv g^{2} h^{2} \delta( x_{4} - x_{2} ) G_{A}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{Y}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{U}_{hg}(x) \equiv g^{2} h^{2} \delta( x_{4} - x_{2} ) G_{Y}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{A}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right]; $$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \mathcal{V}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} \delta( x_{1} - x_{3} ) G_{A}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{A}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{V}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} \delta( x_{1} - x_{3} ) G_{Y}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{Y}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{V}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) G_{A}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{Y}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{V}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) G_{Y}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{A}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right]. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{V}_{gg}(x) \equiv g^{4} \delta( x_{3} - x_{1} ) G_{A}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{A}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{V}_{hh}(x) \equiv h^{4} \delta( x_{3} - x_{1} ) G_{Y}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{Y}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{V}_{gh}(x) \equiv g^{2} h^{2} \delta( x_{3} - x_{1} ) G_{A}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{Y}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{V}_{hg}(x) \equiv g^{2} h^{2} \delta( x_{3} - x_{1} ) G_{Y}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{A}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right]. $$&lt;/div&gt;
 &lt;h2&gt;Vaccum Polarization&lt;/h2&gt;
 &lt;p&gt;There are two sets of four &lt;strong&gt;vaccum polarization&lt;/strong&gt; contributions:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \mathcal{X}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{X}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{X}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{X}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right]; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{X}_{gg}(x) \equiv g^{4} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{X}_{hh}(x) \equiv h^{4} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{X}_{gh}(x) \equiv g^{2} h^{2} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{X}_{hg}(x) \equiv g^{2} h^{2} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right]; $$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \mathcal{Y}_{gg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{4} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{Y}_{hh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv h^{4} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{Y}_{gh}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \mathcal{Y}_{hg}(x_{1}, x_{2}, x_{3}, x_{4}) \equiv g^{2} h^{2} \delta( x_{1} - x_{3} ) \delta( x_{2} - x_{4} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right]. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{Y}_{gg}(x) \equiv g^{4} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{Y}_{hh}(x) \equiv h^{4} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{Y}_{gh}(x) \equiv g^{2} h^{2} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \mathcal{Y}_{hg}(x) \equiv g^{2} h^{2} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right]. $$&lt;/div&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
