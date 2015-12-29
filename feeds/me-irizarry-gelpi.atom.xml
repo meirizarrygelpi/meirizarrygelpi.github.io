@@ -1,5 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-26T00:00:00-05:00</updated><entry><title>arXiv picks for 2015, week 52</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/2015-week-52/" rel="alternate"></link><updated>2015-12-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-26:posts/2015/Dec/2015-week-52/</id><summary type="html">&lt;p&gt;The last week of 2015! In no particular order:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-28T10:34:12-05:00</updated><entry><title>The Scalars Toy Model</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/" rel="alternate"></link><updated>2015-12-28T10:34:12-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-28:posts/2015/Dec/scalars-toy-model/</id><summary type="html">&lt;p&gt;In this post I would like to introduce the toy model I will use to study the &lt;em&gt;forward-JWKB approximation&lt;/em&gt;. This model only involves &lt;em&gt;scalar&lt;/em&gt; quanta. There are &lt;strong&gt;two massive matter fields&lt;/strong&gt;, &lt;span class="math"&gt;\(\Phi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\Phi_{2}\)&lt;/span&gt;, which are &lt;em&gt;complex&lt;/em&gt;. There are also &lt;strong&gt;two intermedium fields&lt;/strong&gt;, &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(Y\)&lt;/span&gt;, which are &lt;em&gt;real&lt;/em&gt;. One of the intermedium fields is &lt;strong&gt;massive&lt;/strong&gt; and the other is &lt;strong&gt;massless&lt;/strong&gt;. The (free) &lt;strong&gt;kinetic operator&lt;/strong&gt; for these fields are
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ K_{1}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \hbar^{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2}m_{1}^{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ K_{2}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \hbar^{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2}m_{2}^{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ K_{A}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \left\Vert \partial \right\Vert^{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ K_{Y}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2 \lambda^{2}} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+That is, both matter fields and both intermedium fields propagate. Note the explicit factors of &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt; in &lt;span class="math"&gt;\(K_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(K_{2}\)&lt;/span&gt;. These indicate that, unlike the intermedium fields, the matter fields describe quantum mechanical matter (i.e. &lt;em&gt;particles&lt;/em&gt;). The intermedium fields describe &lt;em&gt;waves&lt;/em&gt;. The (free) &lt;strong&gt;Green function&lt;/strong&gt; for these fields satisfy the relations
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \int \mathrm{d}z \left[K_{1}(x, z) G_{1}(z, y)\right] = \delta(x - y), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \int \mathrm{d}z \left[K_{2}(x, z) G_{2}(z, y)\right] = \delta(x - y), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \int \mathrm{d}z \left[K_{A}(x, z) G_{A}(z, y)\right] = \delta(x - y), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \int \mathrm{d}z \left[K_{Y}(x, z) G_{Y}(z, y)\right] = \delta(x - y). $$&lt;/div&gt;
+&lt;p&gt;
+These Green functions are given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G_{1}(x, y) = \left( \frac{1}{\hbar} \right)^{D} \int \mathrm{d}q \left( -\frac{2 i}{ \left\Vert q \right\Vert^{2} + m_{1}^{2} - i \epsilon_{1}} \exp{\left[ - \frac{i}{\hbar} q \cdot \left( x - y \right) \right]} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{2}(x, y) = \left( \frac{1}{\hbar} \right)^{D} \int \mathrm{d}q \left( -\frac{2 i}{ \left\Vert q \right\Vert^{2} + m_{2}^{2} - i \epsilon_{2}} \exp{\left[ - \frac{i}{\hbar} q \cdot \left( x - y \right) \right]} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{A}(x, y) = \int \mathrm{d}k \left( -\frac{2 i}{ \left\Vert k \right\Vert^{2} - i \epsilon_{A}} \exp{\left[ - i k \cdot \left( x - y \right) \right]} \right), $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ G_{Y}(x, y) = \int \mathrm{d}k \left( -\frac{2 i \lambda^{2} }{ \lambda^{2} \left\Vert k \right\Vert^{2} + 1 - i \lambda^{2} \epsilon_{Y}} \exp{\left[ - i k \cdot \left( x - y \right) \right]} \right). $$&lt;/div&gt;
+&lt;p&gt;
+Note the &lt;span class="math"&gt;\(i \epsilon\)&lt;/span&gt; prescription. The &lt;strong&gt;kinetic part of the action functional&lt;/strong&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{\text{kin}}\left[ \Phi_{1}, \Phi_{2}, A, Y \right] \equiv S_{0}\left[ \Phi_{1} \right] + S_{0}\left[ \Phi_{2} \right] + S_{0}\left[ A \right] + S_{0}\left[ Y \right], $$&lt;/div&gt;
+&lt;p&gt;
+with
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{0}\left[ \Phi_{1} \right] \equiv \int \mathrm{d}x \mathrm{d}y \left[ \Phi_{1}^{*}(x) K_{1}(x, y) \Phi_{1}(y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{0}\left[ \Phi_{2} \right] \equiv \int \mathrm{d}x \mathrm{d}y \left[ \Phi_{2}^{*}(x) K_{2}(x, y) \Phi_{2}(y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{0}\left[ A \right] \equiv \frac{1}{2 g^{2}} \int \mathrm{d}x \mathrm{d}y \left[ A(x) K_{A}(x, y) A(y) \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{0}\left[ Y \right] \equiv \frac{1}{2 h^{2}} \int \mathrm{d}x \mathrm{d}y \left[ Y(x) K_{Y}(x, y) Y(y) \right]. $$&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(g\)&lt;/span&gt; and &lt;span class="math"&gt;\(h\)&lt;/span&gt; are &lt;em&gt;dimensionful&lt;/em&gt; &lt;strong&gt;coupling strengths&lt;/strong&gt;. The &lt;strong&gt;interaction part of the action functional&lt;/strong&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{\text{int}}\left[ \Phi_{1}, \Phi_{2}, A, Y \right] \equiv S_{g}\left[ \Phi_{1}, \Phi_{2}, A \right] + S_{h}\left[ \Phi_{1}, \Phi_{2}, Y \right], $$&lt;/div&gt;
+&lt;p&gt;
+with
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{g}\left[ \Phi_{1}, \Phi_{2}, A \right] \equiv \int \mathrm{d}x \left[ g_{1} \Phi_{1}^{*} A \Phi_{1} + g_{2} \Phi_{2}^{*} A \Phi_{2} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ S_{h}\left[ \Phi_{1}, \Phi_{2}, Y \right] \equiv \int \mathrm{d}x \left[ h_{1} \Phi_{1}^{*} Y \Phi_{1} + h_{2} \Phi_{2}^{*} Y \Phi_{2} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(g_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(g_{2}\)&lt;/span&gt;, &lt;span class="math"&gt;\(h_{1}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(h_{2}\)&lt;/span&gt; are &lt;em&gt;dimensionless&lt;/em&gt; &lt;strong&gt;charges&lt;/strong&gt;. Both matter fields are coupled to each intermedium field in a &lt;em&gt;cubic&lt;/em&gt; way.&lt;/p&gt;
+&lt;h2&gt;Dimensional Analysis&lt;/h2&gt;
+&lt;p&gt;It is always good to be aware of the units of the different quantities that have been introduced so far. I will work with units such that &lt;span class="math"&gt;\(c = 1\)&lt;/span&gt; but &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt; is kept explicit and &lt;em&gt;dimensionful&lt;/em&gt;. Since &lt;span class="math"&gt;\(c = 1\)&lt;/span&gt;, you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left[ \text{time} \right] = \left[ \text{length} \right], $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \left[ \text{energy} \right] = \left[ \text{momentum} \right] = \left[ \text{mass} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+Since &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt; is dimensionful, you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left[ \text{length} \right] = \left[ \hbar \right] - \left[ \text{mass} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+Action functionals have units of &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;. From the kinetic term of &lt;span class="math"&gt;\(\Phi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\Phi_{2}\)&lt;/span&gt; you find the units of the matter fields:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left[ \Phi_{1} \right] = \left[ \Phi_{2} \right] = \left( \frac{1 - D}{2} \right) \left[ \hbar \right] + \left( \frac{D - 2}{2} \right) \left[ \text{mass} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(D\)&lt;/span&gt; is the number of dimensions of spacetime. From the interaction terms you find the units of the intermedium fields:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left[ A \right] = \left[ Y \right] = 2 \left[ \text{mass} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+Obviously, you must have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left[ \lambda \right] = \left[ \text{length} \right] = \left[ \hbar \right] - \left[ \text{mass} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+Finally, from the kinetic terms of &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(Y\)&lt;/span&gt; you find the units of the coupling strengths:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left[ g \right] = \left[ h \right] = \left( \frac{D - 3}{2} \right) \left[ \hbar \right] + \left( \frac{6 - D}{2} \right) \left[ \text{mass} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+Note that for both coupling strengths the mass-dimension vanishes in &lt;span class="math"&gt;\(D = 6\)&lt;/span&gt;, and the &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;-dimension vanishes in &lt;span class="math"&gt;\(D = 3\)&lt;/span&gt;. Also, the &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;-dimension is positive for &lt;span class="math"&gt;\(D &amp;gt; 3\)&lt;/span&gt;, and the mass-dimension is positive for &lt;span class="math"&gt;\(D &amp;lt; 6\)&lt;/span&gt;. You can construct &lt;em&gt;dimensionless coupling strengths&lt;/em&gt; via:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \alpha_{g} \equiv \hbar^{(3 - D)} \mu^{(D - 6)} g^{2}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \alpha_{h} \equiv \hbar^{(3 - D)} \mu^{(D - 6)} h^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; is a constant with units of mass. When &lt;span class="math"&gt;\(D &amp;gt; 3\)&lt;/span&gt;, the &lt;em&gt;JWKB approximation&lt;/em&gt; &lt;span class="math"&gt;\(\hbar \rightarrow 0\)&lt;/span&gt; corresponds to &lt;span class="math"&gt;\(\alpha_{g} \rightarrow \infty\)&lt;/span&gt; and &lt;span class="math"&gt;\(\alpha_{h} \rightarrow \infty\)&lt;/span&gt; (i.e. &lt;em&gt;strong-coupling&lt;/em&gt;). In this regime you also have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \frac{\hbar}{m_{1}} \rightarrow 0, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ \frac{\hbar}{m_{2}} \rightarrow 0; $$&lt;/div&gt;
+&lt;p&gt;
+which leads to &lt;em&gt;small Compton lenghts&lt;/em&gt;, or equivalently, to &lt;em&gt;large matter masses&lt;/em&gt;. More details about the semiclassical approximation and dimensional analysis &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Jun/semiclassical-dimensional-analysis/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="dynamics"></category><category term="scalars"></category></entry><entry><title>arXiv picks for 2015, week 52</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/2015-week-52/" rel="alternate"></link><updated>2015-12-26T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-26:posts/2015/Dec/2015-week-52/</id><summary type="html">&lt;p&gt;The last week of 2015! In no particular order:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.05791"&gt;Matter in transition&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.06072"&gt;On correlation functions of BPS operators in &lt;span class="math"&gt;\(3d\)&lt;/span&gt; &lt;span class="math"&gt;\(\mathcal{N}=6\)&lt;/span&gt; superconformal theories&lt;/a&gt;&lt;/li&gt;
@@ -457,7 +591,7 @@ In this regime the masses are much smaller than both &lt;span class="math"&gt;\(
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{1}(p_{3}) + \Phi_{2}(p_{4}). $$&lt;/div&gt;
 &lt;p&gt;
-This process has an associated four-point scattering amplitude in the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/"&gt;Scalars Toy Model&lt;/a&gt;. The one-loop contributions are either order &lt;span class="math"&gt;\(g^{4}\)&lt;/span&gt;, &lt;span class="math"&gt;\(h^{4}\)&lt;/span&gt;, or &lt;span class="math"&gt;\(g^{2} h^{2}\)&lt;/span&gt; depending on the kind of intermedia that is being exchanged.&lt;/p&gt;
+This process has an associated four-point scattering amplitude in the &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/"&gt;Scalars Toy Model&lt;/a&gt;. The one-loop contributions are either order &lt;span class="math"&gt;\(g^{4}\)&lt;/span&gt;, &lt;span class="math"&gt;\(h^{4}\)&lt;/span&gt;, or &lt;span class="math"&gt;\(g^{2} h^{2}\)&lt;/span&gt; depending on the kind of intermedia that are being exchanged.&lt;/p&gt;
 &lt;h2&gt;Square&lt;/h2&gt;
 &lt;p&gt;There are four &lt;strong&gt;square&lt;/strong&gt; contributions:
 &lt;/p&gt;
@@ -620,141 +754,7 @@ and
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="research"></category></entry><entry><title>The Scalars Toy Model</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/" rel="alternate"></link><updated>2015-12-18T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-18:posts/2015/Dec/scalars-toy-model/</id><summary type="html">&lt;p&gt;In this post I would like to introduce the toy model I will use to study the &lt;em&gt;forward-JWKB approximation&lt;/em&gt;. This model only involves &lt;em&gt;scalar&lt;/em&gt; quanta. There are &lt;strong&gt;two massive matter fields&lt;/strong&gt;, &lt;span class="math"&gt;\(\Phi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\Phi_{2}\)&lt;/span&gt;, which are &lt;em&gt;complex&lt;/em&gt;. There are also &lt;strong&gt;two intermedium fields&lt;/strong&gt;, &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(Y\)&lt;/span&gt;, which are &lt;em&gt;real&lt;/em&gt;. One of the intermedium fields is &lt;strong&gt;massive&lt;/strong&gt; and the other is &lt;strong&gt;massless&lt;/strong&gt;. The (free) &lt;strong&gt;kinetic operator&lt;/strong&gt; for these fields are
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ K_{1}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \hbar^{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2}m_{1}^{2} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ K_{2}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \hbar^{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2}m_{2}^{2} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ K_{A}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \left\Vert \partial \right\Vert^{2} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ K_{Y}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2 \lambda^{2}} \right]. $$&lt;/div&gt;
-&lt;p&gt;
-That is, both matter fields and both intermedium fields propagate. Note the explicit factors of &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt; in &lt;span class="math"&gt;\(K_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(K_{2}\)&lt;/span&gt;. These indicate that, unlike the intermedium fields, the matter fields describe quantum mechanical matter (i.e. &lt;em&gt;particles&lt;/em&gt;). The intermedium fields describe &lt;em&gt;waves&lt;/em&gt;. The (free) &lt;strong&gt;Green function&lt;/strong&gt; for these fields satisfy the relations
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \int \mathrm{d}z \left[K_{1}(x, z) G_{1}(z, y)\right] = \delta(x - y), $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \int \mathrm{d}z \left[K_{2}(x, z) G_{2}(z, y)\right] = \delta(x - y), $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \int \mathrm{d}z \left[K_{A}(x, z) G_{A}(z, y)\right] = \delta(x - y), $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \int \mathrm{d}z \left[K_{Y}(x, z) G_{Y}(z, y)\right] = \delta(x - y). $$&lt;/div&gt;
-&lt;p&gt;
-These Green functions are given by
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ G_{1}(x, y) = \int \mathrm{d}q \left( -\frac{2 i}{ \left\Vert q \right\Vert^{2} + m_{1}^{2} - i \epsilon_{1}} \exp{\left[ - \frac{i}{\hbar} q \cdot \left( x - y \right) \right]} \right), $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ G_{2}(x, y) = \int \mathrm{d}q \left( -\frac{2 i}{ \left\Vert q \right\Vert^{2} + m_{2}^{2} - i \epsilon_{2}} \exp{\left[ - \frac{i}{\hbar} q \cdot \left( x - y \right) \right]} \right), $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ G_{A}(x, y) = \int \mathrm{d}k \left( -\frac{2 i}{ \left\Vert k \right\Vert^{2} - i \epsilon_{A}} \exp{\left[ - i k \cdot \left( x - y \right) \right]} \right), $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ G_{Y}(x, y) = \int \mathrm{d}k \left( -\frac{2 i \lambda^{2} }{ \lambda^{2} \left\Vert k \right\Vert^{2} + 1 - i \lambda^{2} \epsilon_{Y}} \exp{\left[ - i k \cdot \left( x - y \right) \right]} \right). $$&lt;/div&gt;
-&lt;p&gt;
-Note the &lt;span class="math"&gt;\(i \epsilon\)&lt;/span&gt; prescription. The &lt;strong&gt;kinetic part of the action functional&lt;/strong&gt; is
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{\text{kin}}\left[ \Phi_{1}, \Phi_{2}, A, Y \right] \equiv S_{0}\left[ \Phi_{1} \right] + S_{0}\left[ \Phi_{2} \right] + S_{0}\left[ A \right] + S_{0}\left[ Y \right], $$&lt;/div&gt;
-&lt;p&gt;
-with
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{0}\left[ \Phi_{1} \right] \equiv \int \mathrm{d}x \mathrm{d}y \left[ \Phi_{1}^{*}(x) K_{1}(x, y) \Phi_{1}(y) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ S_{0}\left[ \Phi_{2} \right] \equiv \int \mathrm{d}x \mathrm{d}y \left[ \Phi_{2}^{*}(x) K_{2}(x, y) \Phi_{2}(y) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ S_{0}\left[ A \right] \equiv \frac{1}{2 g^{2}} \int \mathrm{d}x \mathrm{d}y \left[ A(x) K_{A}(x, y) A(y) \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ S_{0}\left[ Y \right] \equiv \frac{1}{2 h^{2}} \int \mathrm{d}x \mathrm{d}y \left[ Y(x) K_{Y}(x, y) Y(y) \right]. $$&lt;/div&gt;
-&lt;p&gt;
-Here &lt;span class="math"&gt;\(g\)&lt;/span&gt; and &lt;span class="math"&gt;\(h\)&lt;/span&gt; are &lt;em&gt;dimensionful&lt;/em&gt; &lt;strong&gt;coupling strengths&lt;/strong&gt;. The &lt;strong&gt;interaction part of the action functional&lt;/strong&gt; is
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{\text{int}}\left[ \Phi_{1}, \Phi_{2}, A, Y \right] \equiv S_{g}\left[ \Phi_{1}, \Phi_{2}, A \right] + S_{h}\left[ \Phi_{1}, \Phi_{2}, Y \right], $$&lt;/div&gt;
-&lt;p&gt;
-with
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ S_{g}\left[ \Phi_{1}, \Phi_{2}, A \right] \equiv \int \mathrm{d}x \left[ g_{1} \Phi_{1}^{*} A \Phi_{1} + g_{2} \Phi_{2}^{*} A \Phi_{2} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ S_{h}\left[ \Phi_{1}, \Phi_{2}, Y \right] \equiv \int \mathrm{d}x \left[ h_{1} \Phi_{1}^{*} Y \Phi_{1} + h_{2} \Phi_{2}^{*} Y \Phi_{2} \right]. $$&lt;/div&gt;
-&lt;p&gt;
-Here &lt;span class="math"&gt;\(g_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(g_{2}\)&lt;/span&gt;, &lt;span class="math"&gt;\(h_{1}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(h_{2}\)&lt;/span&gt; are &lt;em&gt;dimensionless&lt;/em&gt; &lt;strong&gt;charges&lt;/strong&gt;. Both matter fields are coupled to each intermedium field in a &lt;em&gt;cubic&lt;/em&gt; way.&lt;/p&gt;
-&lt;h2&gt;Dimensional Analysis&lt;/h2&gt;
-&lt;p&gt;It is always good to be aware of the units of the different quantities that have been introduced so far. I will work with units such that &lt;span class="math"&gt;\(c = 1\)&lt;/span&gt; but &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt; is kept explicit and &lt;em&gt;dimensionful&lt;/em&gt;. Since &lt;span class="math"&gt;\(c = 1\)&lt;/span&gt;, you have
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \left[ \text{time} \right] = \left[ \text{length} \right], $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \left[ \text{energy} \right] = \left[ \text{momentum} \right] = \left[ \text{mass} \right]. $$&lt;/div&gt;
-&lt;p&gt;
-Since &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt; is dimensionful, you have
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \left[ \text{length} \right] = \left[ \hbar \right] - \left[ \text{mass} \right]. $$&lt;/div&gt;
-&lt;p&gt;
-Action functionals have units of &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;. From the kinetic term of &lt;span class="math"&gt;\(\Phi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\Phi_{2}\)&lt;/span&gt; you find the units of the matter fields:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \left[ \Phi_{1} \right] = \left[ \Phi_{2} \right] = \left( \frac{1 - D}{2} \right) \left[ \hbar \right] + \left( \frac{D - 2}{2} \right) \left[ \text{mass} \right]. $$&lt;/div&gt;
-&lt;p&gt;
-Here &lt;span class="math"&gt;\(D\)&lt;/span&gt; is the number of dimensions of spacetime. From the interaction terms you find the units of the intermedium fields:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \left[ A \right] = \left[ Y \right] = 2 \left[ \text{mass} \right]. $$&lt;/div&gt;
-&lt;p&gt;
-Obviously, you must have
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \left[ \lambda \right] = \left[ \text{length} \right] = \left[ \hbar \right] - \left[ \text{mass} \right]. $$&lt;/div&gt;
-&lt;p&gt;
-Finally, from the kinetic terms of &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(Y\)&lt;/span&gt; you find the units of the coupling strengths:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \left[ g \right] = \left[ h \right] = \left( \frac{D - 3}{2} \right) \left[ \hbar \right] + \left( \frac{6 - D}{2} \right) \left[ \text{mass} \right]. $$&lt;/div&gt;
-&lt;p&gt;
-Note that for both coupling strengths the mass-dimension vanishes in &lt;span class="math"&gt;\(D = 6\)&lt;/span&gt;, and the &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;-dimension vanishes in &lt;span class="math"&gt;\(D = 3\)&lt;/span&gt;. Also, the &lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;-dimension is positive for &lt;span class="math"&gt;\(D &amp;gt; 3\)&lt;/span&gt;, and the mass-dimension is positive for &lt;span class="math"&gt;\(D &amp;lt; 6\)&lt;/span&gt;. You can construct &lt;em&gt;dimensionless coupling strengths&lt;/em&gt; via:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \alpha_{g} \equiv \hbar^{(3 - D)} \mu^{(D - 6)} g^{2}, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \alpha_{h} \equiv \hbar^{(3 - D)} \mu^{(D - 6)} h^{2}. $$&lt;/div&gt;
-&lt;p&gt;
-Here &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; is a constant with units of mass. When &lt;span class="math"&gt;\(D &amp;gt; 3\)&lt;/span&gt;, the &lt;em&gt;JWKB approximation&lt;/em&gt; &lt;span class="math"&gt;\(\hbar \rightarrow 0\)&lt;/span&gt; corresponds to &lt;span class="math"&gt;\(\alpha_{g} \rightarrow \infty\)&lt;/span&gt; and &lt;span class="math"&gt;\(\alpha_{h} \rightarrow \infty\)&lt;/span&gt; (i.e. &lt;em&gt;strong-coupling&lt;/em&gt;). In this regime you also have
-&lt;/p&gt;
-&lt;div class="math"&gt;$$ \frac{\hbar}{m_{1}} \rightarrow 0, $$&lt;/div&gt;
-&lt;div class="math"&gt;$$ \frac{\hbar}{m_{2}} \rightarrow 0; $$&lt;/div&gt;
-&lt;p&gt;
-which leads to &lt;em&gt;small Compton lenghts&lt;/em&gt;, or equivalently, to &lt;em&gt;large matter masses&lt;/em&gt;. More details about the semiclassical approximation and dimensional analysis &lt;a href="http://meirizarrygelpi.github.io/posts/2015/Jun/semiclassical-dimensional-analysis/"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-    
-    var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript'; 
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</summary><category term="dynamics"></category><category term="scalars"></category></entry><entry><title>Outgoing Two-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/outgoing-two-body/" rel="alternate"></link><updated>2015-12-15T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-15:posts/2015/Dec/outgoing-two-body/</id><summary type="html">&lt;p&gt;The main purpose of a Sudakov decomposition is to identify particular null vectors (the Sudakov vectors) and decompose any other given vectors into components along the Sudakov subspace and components orthogonal to the Sudakov subspace. An important example of this is a two-body decomposition in a four-point process of the form
+&lt;/script&gt;</summary><category term="research"></category></entry><entry><title>Outgoing Two-Body Sudakov Decomposition</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/outgoing-two-body/" rel="alternate"></link><updated>2015-12-15T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-15:posts/2015/Dec/outgoing-two-body/</id><summary type="html">&lt;p&gt;The main purpose of a Sudakov decomposition is to identify particular null vectors (the Sudakov vectors) and decompose any other given vectors into components along the Sudakov subspace and components orthogonal to the Sudakov subspace. An important example of this is a two-body decomposition in a four-point process of the form
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{3}(p_{3}) + \Phi_{4}(p_{4}). $$&lt;/div&gt;
 &lt;p&gt;
