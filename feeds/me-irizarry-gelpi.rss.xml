@@ -1,5 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 28 Dec 2015 10:34:12 -0500</lastBuildDate><item><title>The Scalars Toy Model</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/</link><description>&lt;p&gt;In this post I would like to introduce the toy model I will use to study the &lt;em&gt;forward-JWKB approximation&lt;/em&gt;. This model only involves &lt;em&gt;scalar&lt;/em&gt; quanta. There are &lt;strong&gt;two massive matter fields&lt;/strong&gt;, &lt;span class="math"&gt;\(\Phi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\Phi_{2}\)&lt;/span&gt;, which are &lt;em&gt;complex&lt;/em&gt;. There are also &lt;strong&gt;two intermedium fields&lt;/strong&gt;, &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(Y\)&lt;/span&gt;, which are &lt;em&gt;real&lt;/em&gt;. One of the intermedium fields is &lt;strong&gt;massive&lt;/strong&gt; and the other is &lt;strong&gt;massless&lt;/strong&gt;. The (free) &lt;strong&gt;kinetic operator&lt;/strong&gt; for these fields are
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M.E. Irizarry-Gelpí</title><link>http://meirizarrygelpi.github.io/</link><description></description><atom:link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 29 Dec 2015 08:41:36 -0500</lastBuildDate><item><title>Few-Body Sudakov Decompositions</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/few-body-sudakov/</link><description>&lt;p&gt;I will organize the posts on Sudakov decompositions into two large groups: few-body decompositions, and applications to many-point kinematics.&lt;/p&gt;
+&lt;h2&gt;Few-Body Decompositions&lt;/h2&gt;
+&lt;p&gt;As the number of bodies grows, the Sudakov decompositions become increasingly complicated and rich.&lt;/p&gt;
+&lt;h3&gt;Two-Body&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/two-body-sudakov/"&gt;Two-Body Sudakov Decomposition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/two-body-rapidity/"&gt;Two-Body Rapidity from Sudakov Decomposition&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Three-Body&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-body-kinematics/"&gt;Three-Body Kinematics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/three-body-composite-kinematics/"&gt;Three-Body Composite Kinematics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/contiguous-three-body-sudakov/"&gt;Contiguous Three-Body Sudakov Decomposition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/recursive-three-body-sudakov/"&gt;Recursive Three-Body Sudakov Decomposition&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Four-Body&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/four-body-decompositions/"&gt;Four-Body Sudakov Decompositions&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Many-Point Kinematics&lt;/h2&gt;
+&lt;p&gt;In a scattering process with &lt;span class="math"&gt;\(N\)&lt;/span&gt; incoming quanta and &lt;span class="math"&gt;\(M\)&lt;/span&gt; outgoing quanta you can perform Sudakov decompositions as large as &lt;span class="math"&gt;\((N+M)\)&lt;/span&gt;-body. This maximal decomposition is not very interesting. The second largest, the &lt;span class="math"&gt;\((N+M-1)\)&lt;/span&gt;-body decomposition, is also not very interesting. The third largest, the &lt;span class="math"&gt;\((N+M-2)\)&lt;/span&gt;-body decomposition is the first non-trivial case. This is similar to MHV amplitudes in four-dimensional quantum field theory.&lt;/p&gt;
+&lt;h3&gt;Three-Point&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Nov/three-point-sudakov/"&gt;Three-Point Sudakov Kinematics&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Four-Point&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Oct/sudakov-kinematics/"&gt;Sudakov Kinematics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/outgoing-two-body/"&gt;Outgoing Two-Body Sudakov Decomposition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://meirizarrygelpi.github.io/posts/2015/Dec/elastic-two-body-sudakov/"&gt;Elastic Two-Body Sudakov Decomposition&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Five-Point&lt;/h3&gt;
+&lt;p&gt;Coming soon!&lt;/p&gt;
+&lt;h3&gt;Six-Point&lt;/h3&gt;
+&lt;p&gt;Coming soon!&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.E. Irizarry-Gelpí</dc:creator><pubDate>Tue, 29 Dec 2015 08:41:36 -0500</pubDate><guid>tag:meirizarrygelpi.github.io,2015-12-29:posts/2015/Dec/few-body-sudakov/</guid><category>sudakov</category></item><item><title>The Scalars Toy Model</title><link>http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/</link><description>&lt;p&gt;In this post I would like to introduce the toy model I will use to study the &lt;em&gt;forward-JWKB approximation&lt;/em&gt;. This model only involves &lt;em&gt;scalar&lt;/em&gt; quanta. There are &lt;strong&gt;two massive matter fields&lt;/strong&gt;, &lt;span class="math"&gt;\(\Phi_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\Phi_{2}\)&lt;/span&gt;, which are &lt;em&gt;complex&lt;/em&gt;. There are also &lt;strong&gt;two intermedium fields&lt;/strong&gt;, &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(Y\)&lt;/span&gt;, which are &lt;em&gt;real&lt;/em&gt;. One of the intermedium fields is &lt;strong&gt;massive&lt;/strong&gt; and the other is &lt;strong&gt;massless&lt;/strong&gt;. The (free) &lt;strong&gt;kinetic operator&lt;/strong&gt; for these fields are
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ K_{1}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \hbar^{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2}m_{1}^{2} \right], $$&lt;/div&gt;
 &lt;div class="math"&gt;$$ K_{2}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \hbar^{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2}m_{2}^{2} \right], $$&lt;/div&gt;
