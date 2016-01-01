@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2015-12-29T08:41:36-05:00</updated><entry><title>Few-Body Sudakov Decompositions</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/few-body-sudakov/" rel="alternate"></link><updated>2015-12-29T08:41:36-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-29:posts/2015/Dec/few-body-sudakov/</id><summary type="html">&lt;p&gt;I will organize the posts on Sudakov decompositions into two large groups: few-body decompositions, and applications to many-point kinematics.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="http://meirizarrygelpi.github.io/" rel="alternate"></link><link href="http://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>http://meirizarrygelpi.github.io/</id><updated>2016-01-02T00:00:00-05:00</updated><entry><title>arXiv picks for 2016, week 1</title><link href="http://meirizarrygelpi.github.io/posts/2016/Jan/2016-week-1/" rel="alternate"></link><updated>2016-01-02T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2016-01-02:posts/2016/Jan/2016-week-1/</id><summary type="html">&lt;p&gt;In no particular order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.07912"&gt;Perturbation Theory at Eight Loops: Novel Structures and the Breakdown of Manifest Conformality&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.08113"&gt;Polylogarithm identities, cluster algebras and the &lt;span class="math"&gt;\(N=4\)&lt;/span&gt; supersymmetric theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.08247"&gt;Remembering a Great Teacher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.08389"&gt;Evaluating Multiple Polylogarithm Values at Sixth Roots of Unity up to Weight Six&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.08530"&gt;Study of the Renormalization-Group Evolution of &lt;span class="math"&gt;\(\mathcal{N}=1\)&lt;/span&gt; Supersymmetric Gauge Theories Using Padé Approximants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.08591"&gt;Evidence for a Nonplanar Amplituhedron&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.08694"&gt;Spinning Particles in Quantum Mechanics and Quantum Field Theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.08896"&gt;Scalar scattering via conformal higher spin exchange&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.08955"&gt;Deconstructing Deformed D-quivers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://arxiv.org/abs/1512.09130"&gt;Complete construction of magical, symmetric and homogeneous &lt;span class="math"&gt;\(N=2\)&lt;/span&gt; supergravities as double copies of gauge theories&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="research"></category></entry><entry><title>Few-Body Sudakov Decompositions</title><link href="http://meirizarrygelpi.github.io/posts/2015/Dec/few-body-sudakov/" rel="alternate"></link><updated>2015-12-29T08:41:36-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-12-29:posts/2015/Dec/few-body-sudakov/</id><summary type="html">&lt;p&gt;I will organize the posts on Sudakov decompositions into two large groups: few-body decompositions, and applications to many-point kinematics.&lt;/p&gt;
 &lt;h2&gt;Few-Body Decompositions&lt;/h2&gt;
 &lt;p&gt;As the number of bodies grows, the Sudakov decompositions become increasingly complicated and rich.&lt;/p&gt;
 &lt;h3&gt;Two-Body&lt;/h3&gt;
