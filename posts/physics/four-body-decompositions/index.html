@@ -114,7 +114,7 @@ M.E. Irizarry-Gelpí            </a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>In previous posts I discussed <a href="http://meirizarrygelpi.github.io/posts/physics/two-body-sudakov/">two-body</a> and three-body Sudakov decompositions (<a href="http://meirizarrygelpi.github.io/posts/physics/three-point-sudakov/">here</a>, <a href="http://meirizarrygelpi.github.io/posts/physics/contiguous-three-body-sudakov/">here</a>, and <a href="http://meirizarrygelpi.github.io/posts/physics/recursive-three-body-sudakov/">here</a>). By Sudakov decomposition, I mean the process of associating a null vector to each massive vector. In the two-body problem this decomposition is unique, but for the three-body problem there are least four distinct ones (one contiguous and three recursive). Here in this post, I will consider four-body problems and the many kinds of Sudakov decompositions that can be done.</p>
+                <p>In previous posts I discussed <a href="http://meirizarrygelpi.github.io/posts/physics/two-body-sudakov/">two-body</a> and three-body Sudakov decompositions (<a href="http://meirizarrygelpi.github.io/posts/physics/three-point-sudakov/">here</a>, <a href="http://meirizarrygelpi.github.io/posts/physics/contiguous-three-body-sudakov/">here</a>, and <a href="http://meirizarrygelpi.github.io/posts/physics/composite-three-body-sudakov/">here</a>). By Sudakov decomposition, I mean the process of associating a null vector to each massive vector. In the two-body problem this decomposition is unique, but for the three-body problem there are least four distinct ones (one contiguous and three composite). Here in this post, I will consider four-body problems and the many kinds of Sudakov decompositions that can be done.</p>
 <p>There are plenty of kinematic variables in a four-body problem. You have four <strong>on-shell</strong> constraints:
 </p>
 <div class="math">$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}; $$</div>
@@ -224,8 +224,8 @@ and
 <div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}; $$</div>
 <div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$</div>
 <div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{23}} n_{2}. $$</div>
-<h2>Recursive</h2>
-<p>There are two kinds of recursive decompositions. Both kinds begin with a two-body step involving a 3-composite vector and a simple vector. For example, with
+<h2>Composite</h2>
+<p>There are two kinds of composite decompositions. Both kinds begin with a two-body step involving a 3-composite vector and a simple vector. For example, with
 </p>
 <div class="math">$$p_{123} \equiv p_{1} + p_{2} + p_{3}; \qquad s_{1234} = -\left\Vert p_{123} + p_{4} \right\Vert^{2}. $$</div>
 <p>
@@ -246,7 +246,7 @@ it follows that
 </p>
 <div class="math">$$ S_{(123)4} = \frac{1}{2} \left( s_{1234} - s_{123} - m_{4}^{2} + \sqrt{ \left( s_{1234} - s_{123} - m_{4}^{2} \right)^{2} - 4 s_{123} m_{4}^{2}} \right). $$</div>
 <p>
-At this step you have a null vector for <span class="math">\(p_{4}\)</span>. What is left is to find null vectors for the rest of the massive momenta. Here is where the fork arises. You can either perform a contiguous three-body decomposition, or a recursive three-body decomposition. The outcome in both cases will be very different from the contiguous four-body decomposition above.</p>
+At this step you have a null vector for <span class="math">\(p_{4}\)</span>. What is left is to find null vectors for the rest of the massive momenta. Here is where the fork arises. You can either perform a contiguous three-body decomposition, or a composite three-body decomposition. The outcome in both cases will be very different from the contiguous four-body decomposition above.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -374,11 +374,6 @@ At this step you have a null vector for <span class="math">\(p_{4}\)</span>. Wha
                     <li class="list-group-item">
                         <a href="http://meirizarrygelpi.github.io/category/maths.html">
                             <i class="fa fa-folder-open fa-lg"></i> Maths
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://meirizarrygelpi.github.io/category/maths-python.html">
-                            <i class="fa fa-folder-open fa-lg"></i> Maths, Python
                         </a>
                     </li>
                     <li class="list-group-item">
