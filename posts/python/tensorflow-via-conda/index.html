@@ -132,12 +132,12 @@ M.E. Irizarry-Gelpí            </a>
 </pre></div>
 
 
-<p>Then run the command on the TensorFlow website:</p>
-<div class="highlight"><pre><span></span><span class="o">(</span>tensorflow<span class="o">)</span>$ pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.7.1-cp34-none-linux_x86_64.whl
+<p>I get an error if I run the command on the TensorFlow website. What worked for me is to first download the file from the direct <a href="https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.7.1-cp34-none-linux_x86_64.whl">link</a>, and then install it directly:</p>
+<div class="highlight"><pre><span></span><span class="o">(</span>tensorflow<span class="o">)</span>$ pip install tensorflow-0.7.1-cp34-none-linux_x86_64.whl
 </pre></div>
 
 
-<p>I did not need to use <code>sudo</code> or <code>pip3</code> since I have Anaconda3 on my laptop. Note that this command will install a version of TensorFlow (currently 0.7.1) that does not use GPUs. A minor modification enables GPU functionality.</p>
+<p>Note that this command will install a version of TensorFlow (currently 0.7.1) that does not use GPUs. This solution was inspired by this <a href="https://github.com/tensorflow/tensorflow/issues/135">discussion</a>.</p>
 <p>You can test your installation by running the following python script:</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
 <span class="n">hello</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="s1">&#39;Hello, TensorFlow!&#39;</span><span class="p">)</span>
