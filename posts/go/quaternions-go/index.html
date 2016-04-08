@@ -338,7 +338,7 @@ At first, I thought of implementing a quaternion in Go as an array of <code>floa
 </pre></div>
 
 
-<p>This is probably a classic example of spaghetti code, but it works! It could have been much worst, since there are <span class="math">\(3^{4} = 81\)</span> possible sign combinations. As an example, for the quaternion <span class="math">\(-1 - i - j - k\)</span> it returns <code>-1 - i - j - k</code>. Note the spacing between the binary subtraction operators, and the lack of space between the unary negation operator (look at me throwing jargon around).</p>
+<p>This is probably a classic example of spaghetti code, but it works! It could have been much worst, since there are <span class="math">\(3^{4} = 81\)</span> possible sign combinations. As an example, for the quaternion <span class="math">\(-1 - i - j - k\)</span> it returns <code>-1 - 1i - 1j - 1k</code>. Note the spacing between the binary subtraction operators, and the lack of space between the unary negation operator (look at me throwing jargon around).</p>
 <p>Another crazy thing I added was some concurrency by using goroutines and a wait group. Most operations on a quaternion are parallelizable. Here is my version of a factory method that creates new Quater values:</p>
 <div class="highlight"><pre><span></span><span class="c1">// NewQuater function returns a pointer to a Quater value made from four given</span>
 <span class="c1">// real numbers (i.e. float64s).</span>
