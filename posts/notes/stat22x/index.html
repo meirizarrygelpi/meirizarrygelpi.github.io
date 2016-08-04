@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Lecture Notes from Stat2.2x - M.E. Irizarry-Gelpí</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
+
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/notes/stat22x/">
+
+        <meta name="author" content="M.E. Irizarry-Gelpí" />
+        <meta name="keywords" content="statistics" />
+        <meta name="description" content="My lecture notes from Stat2.2x on edX." />
+
+        <meta property="og:site_name" content="M.E. Irizarry-Gelpí" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Lecture Notes from Stat2.2x"/>
+        <meta property="og:url" content="http://meirizarrygelpi.github.io/posts/notes/stat22x/"/>
+        <meta property="og:description" content="My lecture notes from Stat2.2x on edX."/>
+        <meta property="article:published_time" content="2016-03-25" />
+            <meta property="article:section" content="Notes" />
+            <meta property="article:tag" content="statistics" />
+            <meta property="article:author" content="M.E. Irizarry-Gelpí" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/bootstrap.yeti.min.css" type="text/css"/>
+    <link href="http://meirizarrygelpi.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://meirizarrygelpi.github.io/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí ATOM Feed"/>
+
+
+
+        <link href="http://meirizarrygelpi.github.io/feeds/notes.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí Notes ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://meirizarrygelpi.github.io/" class="navbar-brand">
+M.E. Irizarry-Gelpí            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://meirizarrygelpi.github.io/pages/cv.html">
+                             CV
+                          </a></li>
+                         <li><a href="http://meirizarrygelpi.github.io/pages/few-body-forward-jwkb-dynamics.html">
+                             Dynamics
+                          </a></li>
+                         <li><a href="http://meirizarrygelpi.github.io/pages/many-body-sudakov-decompositions.html">
+                             Sudakov
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://meirizarrygelpi.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://meirizarrygelpi.github.io/posts/notes/stat22x/"
+                       rel="bookmark"
+                       title="Permalink to Lecture Notes from Stat2.2x">
+                        Lecture Notes from Stat2.2x
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-03-25T00:00:00-04:00"> Fri 25 March 2016</time>
+    </span>
+
+
+            <span class="label label-default">By</span>
+            <a href="http://meirizarrygelpi.github.io/author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
+
+        <span class="label label-default">Category</span>
+        <a href="http://meirizarrygelpi.github.io/category/notes.html">Notes</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://meirizarrygelpi.github.io/tag/statistics.html">statistics</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>This post contains my lectures notes from Stat2.2x, a MOOC I took in 2013 to learn the basics of probability.</p>
+<h2>Two Fundamental Rules</h2>
+<p>In this section I introduce probability and two basic rules to aggregate probability.</p>
+<h3>Probability</h3>
+<p>The goal of probability theory is to understand and quantify randomness. There is no universally accepted answer to the question "what is probability?". If all outcomes in an event are <strong>equally likely</strong>, then the probability for a given event to occur is given by
+</p>
+<div class="math">$$ \text{probability of an event } = \frac{\text{number of outcomes in the event}}{\text{total number of outcomes}}. $$</div>
+<p>
+This definition already illustrates that probabilities are real numbers between 0 and 1 because they are fractions. Another approach to defining probability is via <strong>frequency theory</strong>. Consider an experiment that consists of performing a coin toss multiple times. In the long run you find that the outcome of the experiment is heads <strong>roughly</strong> half of the time. This provides a way of defining the probability of the outcome of the coin toss as the <strong>long run fraction of times</strong> that it occurs as the experiment is repeated indefinetely.</p>
+<p>However, many events cannot be repeated (e.g. sport events). For this type of events you can use <strong>subjective probabilities</strong> which are essentially <strong>opinions</strong>: a subjective probability is defined as the degree of belief that an event might happen. It is important to note that subjectivity propagates throught an analysis (i.e. the slightest subjective element will yield a completely subjective analysis).</p>
+<p>More abstractly, a probability <span class="math">\(P(A)\)</span> for an event <span class="math">\(A\)</span> to happen is a real number such that
+</p>
+<div class="math">$$ 0 \leq P(A) \leq 1. $$</div>
+<p>
+The case <span class="math">\(P(A) = 0\)</span> means that the event <span class="math">\(A\)</span> is <strong>impossible to happen</strong> while <span class="math">\(P(A) = 1\)</span> means that <span class="math">\(A\)</span> is <strong>certain to happen</strong>.</p>
+<h3>Standard Set of Cards</h3>
+<p>Let me introduce the <strong>standard set of cards</strong>. You have 52 <strong>cards</strong> which split into 4 <strong>suits</strong>:
+</p>
+<div class="math">$$ \clubsuit, \qquad {\color{red} \diamondsuit}, \qquad {\color{red} \heartsuit}, \qquad \spadesuit. $$</div>
+<p>
+Each suit has 13 <strong>ranks</strong>:
+</p>
+<div class="math">$$ A, \quad 2, \quad 3, \quad 4, \quad 5, \quad 6, \quad 7, \quad 8, \quad 9, \quad 10, \quad J, \quad Q, \quad K. $$</div>
+<p>
+There is only one card that is of rank <span class="math">\(A\)</span> <strong>and</strong> suit <span class="math">\({\color{red} \heartsuit}\)</span>. However, you get more cards if you look for cards of rank <span class="math">\(A\)</span> <strong>or</strong> suit <span class="math">\({\color{red} \heartsuit}\)</span>: all 13 ranks of the suit <span class="math">\({\color{red} \heartsuit}\)</span> plus the 3 other rank <span class="math">\(A\)</span> cards giving 16. This example illustrates how the conditional <strong>and</strong> is more restrictive than the conditional <strong>or</strong>.</p>
+<p>A <strong>well shuffled deck</strong> is one where all 52 cards are equally likely to appear. This means that initially each card has a probability of <span class="math">\(1/52\)</span> to be drawn.</p>
+<h3>Addition Rule</h3>
+<p>Consider asking what is the probability for drawing an <span class="math">\(A\)</span> or a <span class="math">\(K\)</span>. Since there are four <span class="math">\(A\)</span>'s and there are four <span class="math">\(K\)</span>'s you have eight possible cards in the deck that satisfy the condition. Thus the probability is <span class="math">\(8/52\)</span>. Note that you can write
+</p>
+<div class="math">$$ P(A \text{ or } K) = P(A) + P(K) = \frac{4}{52} + \frac{4}{52} = \frac{8}{52}. $$</div>
+<p>
+Thus you find that you can write the probability for a conditional <strong>or</strong> event as the <em>sum</em> of the probability for the possible outcomes. This result is correct but not general. Look at another example. Consider asking instead what is the probability for drawing an <span class="math">\(A\)</span> or a <span class="math">\({\color{red} \heartsuit}\)</span>. You know that the result is <span class="math">\(16/52\)</span>. However, if you naively add the probability to obtain an <span class="math">\(A\)</span> (<span class="math">\(4/52\)</span>) and the probability to obtain a <span class="math">\({\color{red} \heartsuit}\)</span> (<span class="math">\(13/52\)</span>) you find a wrong probability of <span class="math">\(17/52\)</span>. The error is that there is one card that is being counted twice: the <span class="math">\(A\)</span> of <span class="math">\({\color{red} \heartsuit}\)</span>. Thus you can fix the addition rule by writing
+</p>
+<div class="math">$$ P(A \text{ or } {\color{red} \heartsuit}) = P(A) + P({\color{red} \heartsuit}) - P(A \text{ and } {\color{red} \heartsuit}). $$</div>
+<p>
+This is an example of <strong>inclusion-exclusion</strong>.</p>
+<p>Both of these examples can be visualized in terms of <strong>Venn diagrams</strong>. In the first example you find that the set of <span class="math">\(A\)</span>'s and the set of <span class="math">\(K\)</span>'s are disjoint: the share nothing in common. You say that the two events are <strong>mutually exclusive</strong>. However, in the second example you find that the set of <span class="math">\(A\)</span>'s and the set of <span class="math">\(K\)</span>'s overlap. This overlap was counted twice in our problem so you substract it once.</p>
+<p>In summary you can write down some general rules. The <strong>addition rule</strong> allows you to write
+</p>
+<div class="math">$$ P(a \text{ or } b) = P(a) + P(b). $$</div>
+<p>
+if <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are <strong>mutually exclusive</strong>. More generally, you have the <strong>inclusion-exclusion</strong> formula:
+</p>
+<div class="math">$$ P(a \text{ or } b) = P(a) + P(b) - P(a \text{ and } b). $$</div>
+<p>
+That is, if <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are mutually exclusive, then
+</p>
+<div class="math">$$ P(a \text{ and } b) = 0. $$</div>
+<p>
+Another useful thing to introduce is the <strong>complement rule</strong>:
+</p>
+<div class="math">$$ P(\text{not } a) = 1 - P(a). $$</div>
+<p>
+This is useful when it is easier to count the ways for an event <span class="math">\(a\)</span> to <em>not</em> happen.</p>
+<h3>Multiplication Rules</h3>
+<p>The addition rule involves the probability <span class="math">\(P(a \text{ and } b)\)</span> for two events <span class="math">\(a\)</span> <strong>and</strong> <span class="math">\(b\)</span> to occur. In this subsection I will study some cases where this type of probability can be computed.</p>
+<p>Consider <span class="math">\(N_{T}\)</span> tickets inside a box. Each ticket has a color. You can draw a ticket <strong>with replacement</strong> (returning the ticket to the box) or <strong>without replacement</strong> (keeping the ticket outside the box). You perform two draws without replacement and would like to compute the probability that the first draw gives a green ticket and the second draw gives a red ticket. The probability to draw a green ticket first is
+</p>
+<div class="math">$$ P(\text{draw green first}) = \frac{N_{\text{green}}}{N_{T}}. $$</div>
+<p>
+Given that a green ticket was drawn, the number of red tickets remains the same but the total number of tickets is reduced by 1. The probability to draw a red ticket given that a green ticket was drawn is thus
+</p>
+<div class="math">$$ P(\text{draw red second}) = \frac{N_{\text{red}}}{N_{T} - 1}. $$</div>
+<p>
+This probability is subjected to the first event occuring and thus is <em>not</em> independent or isolated. It is called a <strong>conditional probability</strong>. The probability for the entire event is:
+</p>
+<div class="math">$$ P(\text{draw green first, red second}) = \left( \frac{N_{\text{green}}}{N_{T}} \right) \left( \frac{N_{\text{red}}}{N_{T} - 1} \right). $$</div>
+<p>
+This example illustrates the <strong>multiplication rule</strong>: the probability for event <span class="math">\(a\)</span> and <span class="math">\(b\)</span> to occur is given by the product of the probability for <span class="math">\(a\)</span> times the conditional probability for <span class="math">\(b\)</span> given that <span class="math">\(a\)</span> occured:
+</p>
+<div class="math">$$ P(a \text{ and } b) = P(a) \times P(b|a). $$</div>
+<h3>Conditional versus Unconditional</h3>
+<p>Consider the following situation. You have five tickets, one of them is red and the other four are green. You would like to know what is the probability to draw a red ticket during the second trial with replacement or with no replacement. Drawing with replacement is easy: the probability to draw a red ticket is <span class="math">\(1/5\)</span>. The problem appears to be more complicated when drawing without replacement. In order to obtain a red on the second ticket, you must draw a green on the first ticket. Thus, the probability to draw a red ticket on the second trial is
+</p>
+<div class="math">$$ \frac{4}{5} \times \frac{1}{4} = \frac{1}{5}. $$</div>
+<p>
+which is the same probability as drawing with replacement. This result is surprising, but follows as long as the outcome from the first drawing remains unknown. This is an example of <strong>symmetry in sampling without replacement</strong>: even if you are doing sampling without replacement, since no information is being given about the outcomes of the initial samplings, the probability for a given event during a later trial is the same as performing the trial with replacement and the chances are unconditional (even though the question "what is the probability of getting a red ticket on the second trial?" appears to be conditional).</p>
+<h3>Bayes' Rule</h3>
+<p>You can rewrite the multiplication rule as
+</p>
+<div class="math">$$ P(b|a) = \frac{P(a \text{ and } b)}{P(a)}. $$</div>
+<p>
+This result is known as <strong>Bayes' rule</strong> and it can be used to find the conditional probability of an event at an earlier stage, given the result of a later stage. The equation can be read as: the probability of <span class="math">\(b\)</span> given that <span class="math">\(a\)</span> has happened can be found by dividing the probability for <span class="math">\(a\)</span> and <span class="math">\(b\)</span> to happen by the probability for <span class="math">\(a\)</span> to happen.</p>
+<h2>Random Sampling</h2>
+<p>In this section, I introduce the notion of independence along with different probability distributions.</p>
+<h3>Independence</h3>
+<p>Many conditional probabilities can be found without using Bayes' rule. If you are asked to find the unconditional outcomes for a given event to happen, it does not matter if you have replacement or not. However, once you consider conditional outcomes you have to distinguish sampling with replacement and without replacement. Each sample taken with replacement is <strong>independent</strong>. Samples taken without replacement are <strong>dependent</strong>. Example of independent trials are: tossing a coin, rolling a die, drawing <strong>with</strong> replacement. Example of dependent trials are: dealing cards from a deck, drawing <strong>without</strong> replacement.</p>
+<p>A rough definition of independence: Two random quantities are <strong>independent</strong> if knowing how one of them turned out does not change chances for the other. More explicitly, two events <span class="math">\(A\)</span> and <span class="math">\(B\)</span> are independent if
+</p>
+<div class="math">$$ P(B|A) = P(B|\text{not } A) = P(B). $$</div>
+<p>
+The multiplication rule simplifies when the two events are independent:
+</p>
+<div class="math">$$ P(A \text{ and } B) = P(A) P(B). $$</div>
+<p>
+That is, for two independent events <span class="math">\(A\)</span> and <span class="math">\(B\)</span> the probability for both events to hapen is the product of the probability for each event to happen.</p>
+<h3>Sampling with Replacement: Binomial Distribution</h3>
+<p>In this subsection I will focus on trials that have <strong>two</strong> possible outcomes: <em>success</em> or <em>failure</em>. This type of trial is also known as a <strong>Bernoulli trial</strong>. As an example, consider rolling a die 3 times and counting the number of times you get a six. Success in the trial means you get a six (with probability <span class="math">\(1/6\)</span>) and failure in the trial means you do not get a six (with probability <span class="math">\(5/6\)</span>). The number of sixes <span class="math">\(n_{6}\)</span> is our <strong>random variable</strong>: depending on the outcomes you can either have
+</p>
+<div class="math">$$ n_{6} = 0, \qquad n_{6} = 1, \qquad n_{6} = 2, \qquad n_{6} = 3. $$</div>
+<p>
+You would like to know the probability to get each of the four possible values of <span class="math">\(n_{6}\)</span>. If <span class="math">\(n_{6} = 0\)</span>, you did not get any six. The probability for each independent failure is <span class="math">\(5/6\)</span> so the probability to get no sixes is
+</p>
+<div class="math">$$ P(n_{6} = 0) = \left( \frac{5}{6} \right)^{3}. $$</div>
+<p>
+How about the probability to get only one six? Well, you can get a six on either the first, the second or the third roll. Each of these events is indepenent and has probability <span class="math">\((1/6)(5/6)^{2}\)</span>, so the probabilty to get 1 six is
+</p>
+<div class="math">$$ P(n_{6} = 1) = 3 \left( \frac{1}{6} \right) \left( \frac{5}{6} \right)^{2}. $$</div>
+<p>
+Note the factor <span class="math">\(3\)</span>. This factor correspond to the 3-choose-1 ways of drawing 1 six. Similarly, you find
+</p>
+<div class="math">$$ P(n_{6} = 2) = 3 \left( \frac{1}{6} \right)^{2} \left( \frac{5}{6} \right). $$</div>
+<p>
+and
+</p>
+<div class="math">$$ P(n_{6} = 3) = \left( \frac{1}{6} \right)^{3}. $$</div>
+<p>It is impractical to make a list of all possible outcomes in every problem. The <strong>binomial formula</strong> nicely summarizes the probabilities you wish to compute. Consider <span class="math">\(n\)</span> <strong>independent</strong> Bernoulli trials, each trial with chance of success given by <span class="math">\(p\)</span>. The chance for <span class="math">\(k\)</span> successes in <span class="math">\(n\)</span> trials is given by
+</p>
+<div class="math">$$ P_{n}(k) = {n \choose k} p^{k} (1-p)^{n-k} = \frac{\Gamma(n+1)}{\Gamma(k+1) \Gamma(n - k + 1)} p^{k} (1-p)^{n-k}. $$</div>
+<p>
+This is simply the product of the probabilities for <span class="math">\(k\)</span> successes and <span class="math">\(n - k\)</span> failures times an overall combinatorial factor that counts the different order the successes can occur. You can use the binomial theorem to show that
+</p>
+<div class="math">$$ \sum_{k = 0}^{n} P_{n}(k) = (p + 1 - p)^{n} = 1. $$</div>
+<p>
+That is, the sum of the <span class="math">\(n + 1\)</span> probabilities <span class="math">\(P_{n}(k)\)</span> is correctly normalized.</p>
+<h3>Sampling without Replacement: Hypergeometric Distribution</h3>
+<p>Drawing at random <strong>without</strong> replacement is called <strong>simple random sampling</strong>. The binomial formula is useful when sampling with replacement. The analogous result for sampling without replacement is the <strong>hypergeometric formula</strong>. This is derived as follows. Consider a population of size <span class="math">\(N\)</span>. This population has two types of members: good and bad. Let <span class="math">\(G\)</span> be the number of good members in the population (thus, <span class="math">\(N - G\)</span> is the number of bad members). You make a simple random sample of size <span class="math">\(n\)</span> and would like to know what is the probability that this simple random sample has <span class="math">\(g\)</span> good members (and thus <span class="math">\(n - g\)</span> bad members). The number <span class="math">\(\mathcal{N}_{n}\)</span> of possible simple random samples of size <span class="math">\(n\)</span> out of a population of size <span class="math">\(N\)</span> is
+</p>
+<div class="math">$$ \mathcal{N}_{n} = {N \choose n} = \frac{\Gamma(N + 1)}{\Gamma(n + 1) \Gamma(N - n + 1)}. $$</div>
+<p>
+Similarly, out of <span class="math">\(G\)</span> good elements, the number <span class="math">\(\mathcal{N}_{g}\)</span> of ways of choosing <span class="math">\(g\)</span> is
+</p>
+<div class="math">$$ \mathcal{N}_{g} = {G \choose g} = \frac{\Gamma(G + 1)}{\Gamma(g + 1) \Gamma(G - g + 1)}. $$</div>
+<p>
+For each of these <span class="math">\(\mathcal{N}_{g}\)</span> ways of choosing <span class="math">\(g\)</span> good members, you have
+</p>
+<div class="math">$$ \mathcal{N}_{n - g} = {N - G \choose n - g} = \frac{\Gamma(N - G + 1)}{\Gamma(n - g + 1) \Gamma(N - G - n + g + 1)} $$</div>
+<p>
+ways of choosing <span class="math">\(n - g\)</span> bad members. Thus, the probability that the simple random sample has <span class="math">\(g\)</span> good elements is given by
+</p>
+<div class="math">$$ P_{N}(n, g, G) = \frac{\mathcal{N}_{g} \times \mathcal{N}_{n - g}}{\mathcal{N}_{n}}. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ \sum_{g = 0}^{G} P_{N}(n, g, G) = 1. $$</div>
+<p>
+That is, the sum of the <span class="math">\(G + 1\)</span> propabilities <span class="math">\(P_{N}(n, g, G)\)</span> is also correctly normalized.</p>
+<p>A special case of the hypergeometric formula tells you that the probability for a given memember of the population to be in the sample is simply the fraction of the population being sample. This follows from the case <span class="math">\(g = G = 1\)</span>:
+</p>
+<div class="math">$$ P_{N}(n, 1, 1) = \frac{\mathcal{N}_{1} \times \mathcal{N}_{n - 1}}{\mathcal{N}_{n}} = \frac{n}{N}. $$</div>
+<p>
+More generally, the case <span class="math">\(g = G = k\)</span> with <span class="math">\(k \geq 1\)</span> gives
+</p>
+<div class="math">$$ P_{N}(n, k, k) = \prod_{l = 0}^{k - 1} \left(\frac{n - l}{N - l} \right) = \frac{n (n - 1) \cdots (n - k + 1)}{N (N - 1) \cdots (N - k + 1)}, $$</div>
+<p>
+which correspond to the familiar result from drawing <span class="math">\(n\)</span> out of <span class="math">\(N\)</span> without replacement.</p>
+<h3>Geometric Distribution</h3>
+<p>Both the binomial and hypergeometric distributions are useful when you are counting the number of successes/failures in a <strong>fixed number of trials</strong>. You could study another situation: having a <strong>fixed number of successes/failures</strong> and counting the number of trials it takes to get that number of successes/failures. This other type of problems involve <strong>waiting time</strong> randon variables.</p>
+<p>Consider the case of <strong>independent trials</strong>. You have an event that occurs with success chance <span class="math">\(p\)</span> (and thus failure chance <span class="math">\(1-p\)</span>). The smallest number of successes that you can have is 1. The probability for one success after performing exactly <span class="math">\(k\)</span> trials is given by the product of <span class="math">\(k-1\)</span> failures and 1 success trial. Thus, the probability is given by
+</p>
+<div class="math">$$ P_{k}(p) = (1-p)^{k-1} p. $$</div>
+<p>
+This is called the <strong>geometric distribution</strong>. Note that since you have independent trials (with replacement), the number of failures before the first success can be any positive integer. This leads to
+</p>
+<div class="math">$$ \sum_{k = 1}^{\infty} P_{k}(p) = p \left( \frac{1}{1 - (1 - p)} \right) = 1; $$</div>
+<p>
+which shows that <span class="math">\(P_{k}(p)\)</span> has the correct normalization.</p>
+<p>Now consider a slightly different problem: finding the probability that more than <span class="math">\(n\)</span> trials are needed to get a single success. First recall the geometric sum,
+</p>
+<div class="math">$$ \sum_{k = 1}^{n} r^{k-1} = \frac{1 - r^{n}}{1 - r}. $$</div>
+<p>
+Thus
+</p>
+<div class="math">$$ Q_{n} \equiv \sum_{k = 1}^{n} P_{k}(p) = p \left( \frac{1 - (1-p)^{n}}{1 - (1-p)} \right) = 1 - (1-p)^{n}. $$</div>
+<p>
+This corresponds to the sum of the probabilities for the first success after at least <span class="math">\(n\)</span> trials. Hence the probability <span class="math">\(R_{n}\)</span> that more than <span class="math">\(n\)</span> trials are needed to get a \textbf{single success} is
+</p>
+<div class="math">$$ R_{n} = 1 - Q_{n} = (1 - p)^{n}. $$</div>
+<p>
+This answer corresponds to the probability to get <span class="math">\(n\)</span> failures in a row.</p>
+<h3>Negative Binomial Distribution</h3>
+<p>The geometric distribution is used when you wish to know the probability for a <strong>single success</strong> after a given number of trials. You can now generalize to the problem of finding the probability for <span class="math">\(r\)</span> successes after <span class="math">\(k\)</span> trials with the chance of success <span class="math">\(p\)</span>. This probability is the same as finding <span class="math">\(r - 1\)</span> successes after <span class="math">\(k - 1\)</span> trials <strong>and</strong> then a success on the last trial. You can use the product rule to find
+</p>
+<div class="math">$$ P_{k}(p, r) = { k - 1 \choose r - 1} p^{r} (1 - p)^{k - r}, \qquad r \geq 1, \qquad k \geq 1. $$</div>
+<p>
+This distribution is called the <strong>negative binomial distribution</strong>. Note that
+</p>
+<div class="math">$$ \sum_{k = r}^{\infty} P_{k}(p, r) = 1, $$</div>
+<p>
+which shows that the <span class="math">\(P_{k}(p, r)\)</span> are correctly normalized.</p>
+<h3>Waiting Times and Sampling Without Replacement</h3>
+<p>Now I turn to waiting time problems when sampling without replacement (e.g. dealing cards). First, consider the case of getting one success after <span class="math">\(k\)</span> trials. This is equivalent to getting <span class="math">\(k - 1\)</span> failures followed by success. The probability for this event is found by using the product rule:
+</p>
+<div class="math">$$ P_{k} = \left[ \prod_{j = 1}^{k-1} P(F|j - 1) \right] P(S| k - 1); $$</div>
+<p>
+where <span class="math">\(P(F|j)\)</span> stands for the probability for failure given <span class="math">\(j\)</span> previous failures and <span class="math">\(P(S|j)\)</span> stands for the probability for success given <span class="math">\(j\)</span> previous failures. Since you are sampling without replacement, the events are not independent and you need to handle conditional probabilities. Note that unlike the case of sampling with replacement, the variable <span class="math">\(k\)</span> is bounded by the population size (i.e. you can draw at most 51 cards before finding a given card).</p>
+<p>Next, consider the case of getting <span class="math">\(n\)</span> successes after <span class="math">\(k\)</span> trials. This is equivalent to getting <span class="math">\(n - 1\)</span> successes in the first <span class="math">\(k - 1\)</span> trials <strong>and</strong> then success in the last trial. Again, you use the product rule:
+</p>
+<div class="math">$$ P_{k}(n) = P(n - 1 \text{ successes in } k - 1) \times P(S| n - 1 \text{ successes in } k - 1). $$</div>
+<p>
+If you have cards, you can use the hypergeometric formula to obtain the first factor.</p>
+<h2>The Law of Averages and Expected Values</h2>
+<p>In this section I study the notion of expected value, and some results.</p>
+<h3>The Law of Averages</h3>
+<p>Up to this point, the size of the the population and sample you worked with was relatively small. You could compute probabilities exactly. In order to make use of statistics you need to work with large random samples. Because of the combinatorial nature of some probabilities, the numbers become intractable for large samples. You thus require a set of <strong>approximations</strong>.</p>
+<p>The simplest case of a large sample is a large sample of success/failure trials. As an example, consider a large number of coin tosses. You know the frequency theory interpretation of probability. This is also sometimes known as the <strong>law of averages</strong>. Applied to the coin toss, the law of averages says that as you keep tossing the coin, in the <strong>long run</strong> you get <strong>about</strong> half heads.</p>
+<p>Before going into more details about the law of averages, its time to discuss some <em>misconceptions</em>. Consider tossing a coin 99 times and obtaining 99 heads. What can you say about the hundreth toss? The law of averages <strong>does not</strong> say that you are due a tail in order to balance the previous heads: each coin toss in independent of the previous outcomes and the probability for a head is <span class="math">\(1/2\)</span>. There is no contradiction with the law of averages because although 100 is a large number it is still a finite number and it leads to a <strong>short run</strong>.</p>
+<p>Consider performing <span class="math">\(2N\)</span> coin tosses. You can compute the probability to obtain <span class="math">\(N\)</span> heads and <span class="math">\(N\)</span> tails by using the binomial formula:
+</p>
+<div class="math">$$ P_{2N}(N) = \frac{\Gamma(2N + 1)}{\Gamma(N + 1) \Gamma(N + 1)} \left( \frac{1}{2} \right)^{2N}. $$</div>
+<p>
+As <span class="math">\(2N\)</span> becomes large, the probability to obtain exactly <span class="math">\(N\)</span> heads becomes very small. This contradicts what you wrongly expect (that the probability tends to <span class="math">\(1/2\)</span> as <span class="math">\(N \rightarrow \infty\)</span>). The resolution is that the law of averages does not say that you will obtain exactly <span class="math">\(1/2\)</span>, but <strong>about</strong> <span class="math">\(1/2\)</span>. That is, there is room for <strong>error</strong>.</p>
+<p>Now, consider performing <span class="math">\(100\)</span> coin tosses and asking what is the chance of getting between <span class="math">\(50 - 5 = 45\)</span> and <span class="math">\(50 + 5 = 55\)</span> heads. The probability is given by adding different contributions from the binomial distribution:
+</p>
+<div class="math">$$ \sum_{k = 45}^{55} P_{100}(k) \approx 0.7287. $$</div>
+<p>
+Similarly, you can perform <span class="math">\(1000\)</span> coin tosses to find what is the chance of getting between <span class="math">\(500 - 5 = 495\)</span> and <span class="math">\(500 + 5 = 505\)</span> heads. You find:
+</p>
+<div class="math">$$ \sum_{k = 494}^{505} P_{1000}(k) \approx 0.2720. $$</div>
+<p>
+The probability is still <em>decreasing</em>. This example is meant to illustrate how the law of averages says nothing about the actual number of heads, but about the <strong>fraction</strong> of heads.</p>
+<p>Consider instead performing <span class="math">\(100\)</span> coin tosses and asking what is the chance of getting <span class="math">\(50\% \pm 5\%\)</span> heads. This will give the same probability as before,
+</p>
+<div class="math">$$ \sum_{k = 45}^{55} P_{100}(k) \approx 0.7287. $$</div>
+<p>
+Next, perform <span class="math">\(1000\)</span> coin tosses and again ask what is the chance of getting <span class="math">\(50\% \pm 5\%\)</span> heads. Five-percent of <span class="math">\(1000\)</span> is 50, so you need to add 100 contributions:
+</p>
+<div class="math">$$ \sum_{k = 450}^{550} P_{1000}(k) \approx 0.9986. $$</div>
+<p>
+Now you find the probability is <em>increasing</em> and is close to <span class="math">\(1\)</span>.</p>
+<p>Here is a more complete statement of the law of averages applied to coin tossing: As you keep tossing, in the long run, the chance that the <strong>fraction</strong> of heads is in the range
+</p>
+<div class="math">$$ \frac{1}{2} \pm \text{ fixed amount} $$</div>
+<p>
+converges to <span class="math">\(1\)</span>. The fixed amount in this statement can be arbitrarily small.</p>
+<p>The law of averages applies to more general settings than coin tosses. Consider independent, repeated, success/failure trials where the probability for success is <span class="math">\(p\)</span>. The <strong>law of average</strong> says that as the number of trials increases, the chance that the fraction of successes is in the range
+</p>
+<div class="math">$$ p \pm \epsilon $$</div>
+<p>
+converges to <span class="math">\(1\)</span> for arbitrary <span class="math">\(0 &lt; \epsilon &lt; 1\)</span> as long as <span class="math">\(\epsilon\)</span> is kept fixed.</p>
+<h3>Expected Value of Random Sum</h3>
+<p>A <strong>random variable</strong> is a variable that takes values which are subject to chance. I will denote random variables with uppercase letters from the end of the Latin alphabet. Every random variable has a probability distribution that contains the probability for the random variable to take any of its possible values.</p>
+<p>As an example, consider rolling a die. The random variable <span class="math">\(X\)</span> corresponds to the number of spots that is drawn after a roll. This random variable can take six possible values: <span class="math">\(1\)</span>, <span class="math">\(2\)</span>, <span class="math">\(3\)</span>, <span class="math">\(4\)</span>, <span class="math">\(5\)</span> and <span class="math">\(6\)</span>. If the die is fair, then each value of <span class="math">\(X\)</span> is equally likely with probability <span class="math">\(1/6\)</span>. The <strong>long run average value</strong> of <span class="math">\(X\)</span> is found by multiplying each value that <span class="math">\(X\)</span> can take by its probability and adding all possible outcomes:
+</p>
+<div class="math">$$ \begin{split}
+    E(X) &amp;= \sum_{X} X P(X) \\
+    &amp;= 1 \cdot \frac{1}{6} + 2 \cdot \frac{1}{6} + 3 \cdot \frac{1}{6} + 4 \cdot \frac{1}{6} + 5 \cdot \frac{1}{6} + 6 \cdot \frac{1}{6} = \frac{7}{2} = 3.5.   
+\end{split} $$</div>
+<p>
+This is known as the <strong>expected value</strong> of <span class="math">\(X\)</span> (also known as the <strong>expectation</strong> of <span class="math">\(X\)</span>). The quantity <span class="math">\(E(X)\)</span> has the same properties as the average:</p>
+<ul>
+<li>It has the same units as the variable.</li>
+<li>Its value may not correspond to a possible value that the random variable can take.</li>
+<li>It corresponds to the equilibrium point of the (probability) histogram.</li>
+</ul>
+<p>Consider now performing <span class="math">\(N\)</span> rolls. On the <span class="math">\(i\)</span>-th roll you obtain the number of spots <span class="math">\(X_{i}\)</span>. The total number of spots obtained is given by adding the <span class="math">\(N\)</span> random variables <span class="math">\(X_{i}\)</span>:
+</p>
+<div class="math">$$ S_{N} = \sum_{i = 1}^{N} X_{i}. $$</div>
+<p>
+Each random variable <span class="math">\(X_{i}\)</span> has expectation value <span class="math">\(E(X_{i}) = 3.5\)</span>, so the expected value of this sum is
+</p>
+<div class="math">$$ E(S_{N}) = \sum_{i = 1}^{N} E(X_{i}) = 3.5 \times N. $$</div>
+<p>
+The smallest value that <span class="math">\(S_{N}\)</span> can take is <span class="math">\(N\)</span> since this correspond to getting all 1's. This however has very small probability. Similarly, the largest value that <span class="math">\(S_{N}\)</span> can take is <span class="math">\(6N\)</span>, corresponding to getting all 6's. The expected value <span class="math">\(E(S_{N})\)</span> is exactly the midpoint between the two extreme cases (due to the symmetric properties of the distribution governing this process).</p>
+<p>More generally, given <span class="math">\(N\)</span> independent and identically distributed (i.i.d.) random variables <span class="math">\(X_{i}\)</span>, the expectation of the sum is given by
+</p>
+<div class="math">$$ E(S_{N}) = N E(X), $$</div>
+<p>
+since the expectation of each random variable is the same.</p>
+<h3>Expected Value of Random Average</h3>
+<p>After computing the sum of all the values that a random variable takes after <span class="math">\(N\)</span> trials, you can compute the sample average:
+</p>
+<div class="math">$$ A_{N} = \frac{1}{N} \sum_{i = 1}^{N} X_{i}. $$</div>
+<p>
+The expected value of <span class="math">\(A_{N}\)</span> is
+</p>
+<div class="math">$$ E(A_{N}) = \frac{1}{N} \sum_{i = 1}^{N} E(X_{i}) = E(X). $$</div>
+<p>
+That is, the expected value of the <strong>sample</strong> average is the same as the expected value of the <strong>population</strong>. Note that <span class="math">\(E(A_{N})\)</span> does not depend on the number of trials.</p>
+<h2>Central Limit Theorem</h2>
+<p>In this section I will introduce a measure of error and discuss an important theorem: the central limit theorem.</p>
+<h3>Standard Error</h3>
+<p>You know how to provide an estimate for the value of a random variable. Now you need to provide a measure of error in this estimate. This error measures how far off the random variable is from the expected value. So you arrive at the <strong>chance error</strong>:
+</p>
+<div class="math">$$ \text{chance error } \equiv \Delta X = X - E(X). $$</div>
+<p>
+Note that <span class="math">\(\Delta X\)</span> is also a random variable, but its expected value is zero:
+</p>
+<div class="math">$$ E(\Delta X) = E(X) - E(E(X)) = 0. $$</div>
+<p>
+This outcome is analogous with how the average of the deviations from average is zero. Back in <a href="http://meirizarrygelpi.github.io/posts/notes/stat21x/">Stat2.1x</a> I introduced the root-mean-square average of the deviations as a measure of spread. This lead to the standard deviation. Stretching this analogy farther, I will introduce the <strong>standard error</strong>:
+</p>
+<div class="math">$$ SE(X) \equiv \sqrt{E((\Delta X)^{2})}. $$</div>
+<p>
+That is, the standard error corresponds to the square root of the expected value of the square of the chance error. Note that <span class="math">\(SE(X)\)</span> corresponds to the standard deviation of the box sample.</p>
+<p>The standard error measures the rough size of the chance error in <span class="math">\(X\)</span>: roughly how far off is <span class="math">\(X\)</span> from the expected value <span class="math">\(E(X)\)</span>. Independent of the probability distribution of <span class="math">\(X\)</span>, with high probability the value of <span class="math">\(X\)</span> will be in the range <span class="math">\(E(X) \pm k SE(X)\)</span> for some small integer <span class="math">\(k\)</span>. This statement is analogous with averages and standard deviations. You can also apply <strong>Chebyshev's inequality</strong>: the probability <span class="math">\(P\)</span> for <span class="math">\(X\)</span> to be inside the interval <span class="math">\(E(X) \pm k SE(E)\)</span> is bounded:
+</p>
+<div class="math">$$ P \geq 1 - \frac{1}{k^{2}}. $$</div>
+<p>
+for some positive integer <span class="math">\(k\)</span>.</p>
+<h4>Random Sum</h4>
+<p>Consider the following situation: You make <span class="math">\(n\)</span> draws with replacement from a box. The average of the box is denoted by <span class="math">\(\mu\)</span> and the SD of the box is denoted by <span class="math">\(\sigma\)</span>. As you saw earlier, the <em>expected value</em> of the sum of the draws is
+</p>
+<div class="math">$$ (\text{number of draws}) \times (\text{average of the box}) = n \mu. $$</div>
+<p>
+The <em>standard error</em> of the sum of the draws is
+</p>
+<div class="math">$$ \sqrt{\text{number of draws}} \times (\text{SD of the box}) = \sqrt{n} \sigma. $$</div>
+<h3>Normal Approximation of Binomial Distribution</h3>
+<p>Sometimes, when the number of trials <span class="math">\(n\)</span> is held fixed, the histogram of the binomial distribution resembles the histogram of the normal distribution. Recall that the probability for <span class="math">\(k\)</span> successes in <span class="math">\(n\)</span> trials with probability of success <span class="math">\(p\)</span> is given by
+</p>
+<div class="math">$$ P_{n}(k) = \frac{\Gamma(n + 1)}{\Gamma(k + 1) \Gamma( n - k + 1)} p^{k} (1 - p)^{(n - k)}, \qquad 0 \leq k \leq n. $$</div>
+<p>
+You can promote <span class="math">\(k\)</span> to a random variable <span class="math">\(X\)</span>. The posible values that <span class="math">\(X\)</span> can take are the integers between <span class="math">\(0\)</span> and <span class="math">\(n\)</span> (including the boundary points). Thus, the expectation value <span class="math">\(E(X)\)</span> is
+</p>
+<div class="math">$$ E(X) = \sum_{X = 0}^{n} X P_{n}(X) = \sum_{X = 0}^{n} \frac{X \Gamma(n + 1)}{\Gamma(X + 1) \Gamma( n - X + 1)} p^{X} (1 - p)^{(n - X)} = n p. $$</div>
+<p>
+The chance error <span class="math">\(\Delta_{X}\)</span> is
+</p>
+<div class="math">$$ \Delta_{X} = X - E(X) = X - np, $$</div>
+<p>
+so the expected value of the square of the chance error is
+</p>
+<div class="math">$$ E(\Delta_{X}^{2}) = \sum_{X = 0}^{n} \Delta_{X}^{2} P_{n}(X) = \sum_{X = 0}^{n} \frac{\left( X - n p \right)^{2} \Gamma(n + 1)}{\Gamma(X + 1) \Gamma( n - X + 1)} p^{X} (1 - p)^{(n - X)} = n p (1 - p), $$</div>
+<p>
+and thus, the standard error of the binomial distribution is
+</p>
+<div class="math">$$ SE(X) = \sqrt{E(\Delta_{X}^{2})} = \sqrt{n p (1 - p)}. $$</div>
+<p>
+Comparing this with the standard error of a random sum you find that <span class="math">\(\sigma = \sqrt{p (1 - p)}\)</span> which is largest for <span class="math">\(p = 1/2\)</span> (giving <span class="math">\(\sigma = 1/2\)</span>). This is the case of the fair coin.</p>
+<p>For large values of <span class="math">\(n\)</span>, it becomes impractical to compute the exact values of the probabilities from <span class="math">\(P_{n}(k)\)</span>. However, since you have already noticed that the distribution resembles a normal distribution, you can approximate the binomial distribution with a <strong>normal distribution</strong>. To specify the normal distribution you need the average <span class="math">\(\mu\)</span> and the SD <span class="math">\(\sigma\)</span>. You can use
+</p>
+<div class="math">$$ \mu = n p, \qquad \sigma = \sqrt{n p (1 - p)}. $$</div>
+<p>
+The claim is that the normal distribution,
+</p>
+<div class="math">$$ P_{N}(X|n, p) = \frac{1}{\sqrt{2 \pi n p (1 - p)}} \exp{\left[- \frac{1}{2} \left( \frac{X - n p}{\sqrt{n p (1 - p)}} \right)^{2} \right]}; $$</div>
+<p>
+is an <strong>approximation</strong> of the exact binomial distribution
+</p>
+<div class="math">$$ P_{B}(X|n, p) = \frac{\Gamma(n + 1)}{\Gamma(X + 1) \Gamma( n - X + 1)} p^{X} (1 - p)^{(n - X)}. $$</div>
+<p>When plotting the binomial distribution, you draw bars that are centered at the values that <span class="math">\(X\)</span> can take. Since <span class="math">\(X\)</span> takes integer powers, the edges of the bars are located at <span class="math">\(X \pm 1/2\)</span>. When you use the approximate normal distribution you can draw a continuous curve, but you should apply the <strong>continuity correction</strong>: the ranges on the axis of the normal distribution range between the edges of the bars, not the centers of the bars. For example, consider a binomial distribution with <span class="math">\(n = 100\)</span> and <span class="math">\(p = 0.5\)</span>. You wish to obtain the probability that <span class="math">\(X\)</span> is between <span class="math">\(45\)</span> and <span class="math">\(55\)</span> (inclusive). It is easy to find that
+</p>
+<div class="math">$$ E(X) = 50, \qquad SE(X) = 5. $$</div>
+<p>
+Since the number of trials is large, you can use an approximate normal distribution. Thus, the problem reduces to finding the area between the bar centered at <span class="math">\(45\)</span> and the bar centered at <span class="math">\(55\)</span>. The left edge of the first bar is at <span class="math">\(44.5\)</span> and the right edge of the second bar is at <span class="math">\(55.5\)</span>. This accounts for the continuity correction. You convert these values to normal units and use the standard normal curve.</p>
+<p>The <strong>de Moivre-Laplace theorem</strong> formalizes the relation between the binomial and normal distributions. It roughly says that as the number of trials increases, the probability histogram for the binomial distribution looks like a normal curve with average <span class="math">\(\mu = n p\)</span> and SD <span class="math">\(\sigma = \sqrt{n p (1 - p)}\)</span>. This theorem is a special case of the central limit theorem.</p>
+<h3>Central Limit Theorem</h3>
+<p>In plain English, the <strong>central limit theorem</strong> says that the probability histogram for the sum of a large number of draws at random with replacement from a box is approximately normal, regardless of the content of the box.</p>
+<p>More specifically, let <span class="math">\(X_{j}\)</span> (with <span class="math">\(j\)</span> taking <span class="math">\(n\)</span> values) be independent and identically distributed, each with expected value <span class="math">\(\mu\)</span> and standard error <span class="math">\(\sigma\)</span>. Denote
+</p>
+<div class="math">$$ S_{n} = \sum_{j = 1}^{n} X_{j}. $$</div>
+<p>
+Then for large <span class="math">\(n\)</span>, the probability distribution of <span class="math">\(S_{n}\)</span> is approximately normal with mean <span class="math">\(n \mu\)</span> and SD <span class="math">\(\sqrt{n} \sigma\)</span>, no matter what the distribution of each <span class="math">\(X_{j}\)</span> is.</p>
+<h3>Scope of Normal Approximation</h3>
+<p>There is not a fixed number of trials where the central limit theorem becomes accurate. Given a value of <span class="math">\(n\)</span> and <span class="math">\(p\)</span> it could be the case that the resulting binomial distribution is skewed and the normal approximation does not hold. A good way to determine whether normality is appropriate is to compute the expected value <span class="math">\(\mu\)</span> and the standard error <span class="math">\(\sigma\)</span> and then check to see if one has valid values in the range <span class="math">\(\mu \pm 3 \sigma\)</span>.</p>
+<h2>Accuracy of Simple Random Sampling</h2>
+<p>In this section I will discuss the accuracy of some random sampling schemes.</p>
+<h3>Accuracy of Sample Average</h3>
+<p>Previously you looked at the <strong>sample sum</strong>: the sum of the outcome value a random variable takes after a trial. The <strong>sample average</strong> is simply the box average: the sample sum divided by the number of trials. The expected value of the sample average is the box average.</p>
+<p>A <strong>population</strong> is a list of numbers. Consider <span class="math">\(n\)</span> draws at random <em>with</em> replacement from a population that has average <span class="math">\(\mu\)</span> and SD <span class="math">\(\sigma\)</span>. The <strong>sample sum</strong> is denoted by <span class="math">\(S\)</span>. You have already seen that the expected value of <span class="math">\(S\)</span> is <span class="math">\(E(S) = n \mu\)</span> and the standard error is <span class="math">\(SE(S) = \sqrt{n} \sigma\)</span>. According to the central limit theorem, if <span class="math">\(n\)</span> is large, the distribution of <span class="math">\(S\)</span> is roughly normal. Now consider the <strong>sample mean</strong> defined as <span class="math">\(M \equiv S / n\)</span>. The expected value of <span class="math">\(M\)</span> is <span class="math">\(E(M) = \mu\)</span> and the standard error is <span class="math">\(SE(M) = \sigma / \sqrt{n}\)</span>. Note that <span class="math">\(E(M)\)</span> is independent of the number of trials, but <span class="math">\(SE(M)\)</span> becomes smaller as <span class="math">\(n\)</span> increases. That is, the estimate <span class="math">\(E(M)\)</span> becomes better for large number of trials. The estimate for the sample <em>mean</em> becomes sharp, but the estimate for the sample <em>sum</em> becomes more variable (the standar error <span class="math">\(SE(S)\)</span> grows for large <span class="math">\(n\)</span>).</p>
+<p>A special case is when the population consists of <strong>zeroes and ones</strong>. You make <span class="math">\(n\)</span> draws <em>with</em> replacement from a population where the fraction of ones is <span class="math">\(p\)</span> and the fraction of zeroes is <span class="math">\(1-p\)</span>. The population mean is <span class="math">\(p\)</span> and the population SD is given by <span class="math">\(\sqrt{p (1 - p)}\)</span>. Consider the <strong>sample sum</strong> random variable <span class="math">\(S\)</span>. The expected value is <span class="math">\(E(S) = n p\)</span> and the standard error is
+</p>
+<div class="math">$$ SE(S) = \sqrt{n p (1 - p)}. $$</div>
+<p>
+Now consider the <strong>sample mean</strong> random variable <span class="math">\(M\)</span>. The expected value is <span class="math">\(E(M) = p\)</span> and the standard error is
+</p>
+<div class="math">$$ SE(M) = \sqrt{\frac{p (1 - p)}{n}}. $$</div>
+<p>
+As before, <span class="math">\(E(M)\)</span> is independent of <span class="math">\(n\)</span> and <span class="math">\(SE(M)\)</span> becomes smaller as <span class="math">\(n\)</span> is increased.</p>
+<h3>Sampling Without Replacement</h3>
+<p>When you repeat the same task over and over (like throwing a die or tossing a coin) you use sampling <em>with</em> replacement. However, when you sample people it makes more sense to use sampling <em>without</em> replacement.</p>
+<p>Consider making <span class="math">\(n\)</span> draws without replacement from a population of size <span class="math">\(N\)</span> that follows the hypergeometric distribution. That is, there are two types of members in the population: good and bad. The number of good members in the population is <span class="math">\(G\)</span>. Your random variable <span class="math">\(X\)</span> is the number of good members out of the <span class="math">\(n\)</span> in the sample. You can either have <span class="math">\(n \geq G\)</span> or <span class="math">\(n &lt; G\)</span>. For now, assume that <span class="math">\(n \geq G\)</span>. Thus, the random variable <span class="math">\(X\)</span> can take <span class="math">\(G + 1\)</span> possible values. The expected value of <span class="math">\(X\)</span> is
+</p>
+<div class="math">$$ E(X) = \sum_{X = 0}^{G} X P_{N}(n, X, G) = n \left( \frac{G}{N} \right). $$</div>
+<p>
+This corresponds to <span class="math">\(n\)</span> times the fraction of good members, which is analogous to the result with the binomial distribution. The squared of the standard error is
+</p>
+<div class="math">$$ SE^{2}(X) = \sum_{X = 0}^{G} \left( X - \frac{n G}{N} \right)^{2} P_{N}(n, X, G) = n \left( \frac{G}{N} \right) \left(1 - \frac{G}{N} \right) \left( \frac{N - n}{N  - 1} \right). $$</div>
+<p>
+Thus, the standard error is
+</p>
+<div class="math">$$ SE(X) = \sqrt{n \left( \frac{G}{N} \right) \left(1 - \frac{G}{N} \right) \left( \frac{N - n}{N  - 1} \right)}. $$</div>
+<p>
+Comparing this result with the standard error of the sample sum for a binary population, you see the appearance of a new factor, the <strong>finite population correction</strong>:
+</p>
+<div class="math">$$ F(n, N) \equiv \sqrt{\frac{N - n}{N - 1}}. $$</div>
+<p>
+Note that <span class="math">\(F(n, N) \leq 1\)</span>. You can also look at the expected value of the sample mean <span class="math">\(Y \equiv X / n\)</span>:
+</p>
+<div class="math">$$ E(Y) = \frac{1}{n} \sum_{X = 0}^{G} X P_{N}(n, X, G) = \frac{G}{N}. $$</div>
+<p>
+Thus, the squared of the standard error is
+</p>
+<div class="math">$$ SE^{2}(Y) = \sum_{X = 0}^{G} \left( \frac{X}{n} - \frac{G}{N} \right)^{2} P_{N}(n, X, G) = \frac{1}{n} \left( \frac{G}{N} \right) \left(1 - \frac{G}{N} \right) \left( \frac{N - n}{N  - 1} \right). $$</div>
+<p>
+Hence the standard error is
+</p>
+<div class="math">$$ SE(Y) = \sqrt{\frac{1}{n} \left( \frac{G}{N} \right) \left(1 - \frac{G}{N} \right) \left( \frac{N - n}{N  - 1} \right)}. $$</div>
+<p>
+Again, the finite population correction appears in contrast with the standard error of the sample mean for a binary population.</p>
+<p>The typical situation in statistics involves a very large population of size <span class="math">\(N\)</span> and taking a relatively small simple random sample of size <span class="math">\(n\)</span>. Thus, <span class="math">\(N - n \sim N\)</span> and <span class="math">\(N - 1 \sim N\)</span> so the finite population correction gives <span class="math">\(F(n, N) \sim 1\)</span>.</p>
+<h3>Accuracy</h3>
+<p>For an estimate to be more accurate, the standard error must be smaller. Consider simple random sample averages. In general, the standard error for the sample average is
+</p>
+<div class="math">$$ S(A) = \frac{\sigma}{\sqrt{n}} \sqrt{\frac{N - n}{N - 1}}. $$</div>
+<p>
+As you increase the size of the sample <span class="math">\(n\)</span>, you have <span class="math">\(\sigma / \sqrt{n}\)</span> becoming smaller and the finite size correction also becoming smaller. Thus, as you increase the sample size, the sample average becomes more accurate.</p>
+<p>Suppose you wish to increase the accuracy by a factor of <span class="math">\(k\)</span>. This means that you want the standard error to decrease by a factor of <span class="math">\(k\)</span>. Suppose that <span class="math">\(F(n, N) \approx 1\)</span>. Then
+</p>
+<div class="math">$$ SE(A) \approx \frac{\sigma}{\sqrt{n}}. $$</div>
+<p>
+So you can accomplish an increase in accuracy by increasing the size of the sample from size <span class="math">\(n\)</span> to size <span class="math">\(k^{2} n\)</span>. Accuracy is expensive. A related observation is the <strong>square root law</strong>: If you multiply the sample size by a factor <span class="math">\(k\)</span>, the accuracy goes up by a factor <span class="math">\(\sqrt{k}\)</span>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'stat22x';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/notes/stat22x/';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://meirizarrygelpi.github.io/feeds/main.xml"><i class="fa fa-rss-square fa-lg"></i> RSS</a></li>
+                <li class="list-group-item"><a href="https://github.com/meirizarrygelpi"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/melvineloy"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+                <li class="list-group-item"><a href="https://www.linkedin.com/in/melvin-eloy-irizarry-gelpí-62b6234"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+              </ul>
+            </li>
+
+
+            <li class="list-group-item"><a href="http://meirizarrygelpi.github.io/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/arxiv.html">
+                            <i class="fa fa-folder-open fa-lg"></i> arXiv
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/bash.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Bash
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/go.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Go
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/maths.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Maths
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/notes.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Notes
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/physics.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Physics
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/python.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Python
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 M.E. Irizarry-Gelpí
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://meirizarrygelpi.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://meirizarrygelpi.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://meirizarrygelpi.github.io/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>
