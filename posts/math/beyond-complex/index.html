@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Beyond Complex Numbers - M.E. Irizarry-Gelpí</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
+
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/math/beyond-complex/">
+
+        <meta name="author" content="M.E. Irizarry-Gelpí" />
+        <meta name="keywords" content="algebra" />
+        <meta name="description" content="Exhaustive fun with the Cayley-Dickson construction." />
+
+        <meta property="og:site_name" content="M.E. Irizarry-Gelpí" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Beyond Complex Numbers"/>
+        <meta property="og:url" content="http://meirizarrygelpi.github.io/posts/math/beyond-complex/"/>
+        <meta property="og:description" content="Exhaustive fun with the Cayley-Dickson construction."/>
+        <meta property="article:published_time" content="2016-08-11" />
+            <meta property="article:section" content="Math" />
+            <meta property="article:tag" content="algebra" />
+            <meta property="article:author" content="M.E. Irizarry-Gelpí" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/bootstrap.yeti.min.css" type="text/css"/>
+    <link href="http://meirizarrygelpi.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://meirizarrygelpi.github.io/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí ATOM Feed"/>
+
+
+
+        <link href="http://meirizarrygelpi.github.io/feeds/math.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí Math ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://meirizarrygelpi.github.io/" class="navbar-brand">
+M.E. Irizarry-Gelpí            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://meirizarrygelpi.github.io/pages/cv.html">
+                             CV
+                          </a></li>
+                         <li><a href="http://meirizarrygelpi.github.io/pages/few-body-forward-jwkb-dynamics.html">
+                             Dynamics
+                          </a></li>
+                         <li><a href="http://meirizarrygelpi.github.io/pages/many-body-sudakov-decompositions.html">
+                             Sudakov
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://meirizarrygelpi.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://meirizarrygelpi.github.io/posts/math/beyond-complex/"
+                       rel="bookmark"
+                       title="Permalink to Beyond Complex Numbers">
+                        Beyond Complex Numbers
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-08-11T00:00:00-04:00"> Thu 11 August 2016</time>
+    </span>
+
+
+            <span class="label label-default">By</span>
+            <a href="http://meirizarrygelpi.github.io/author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
+
+        <span class="label label-default">Category</span>
+        <a href="http://meirizarrygelpi.github.io/category/math.html">Math</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://meirizarrygelpi.github.io/tag/algebra.html">algebra</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Complex numbers are very useful in pure mathematics and also in science. In particular, they are essential for quantum physics. For the last few months I have been learning a lot about many different ways to generalize the complex numbers. In this post I would like to gather some of this information for future reference.</p>
+<p>A <strong>complex</strong> number <span class="math">\(z\)</span> consist of a <strong>real</strong> part <span class="math">\(a\)</span> and an <strong>imaginary</strong> part <span class="math">\(b\)</span>. You write this as
+</p>
+<div class="math">$$ z = a + bi, $$</div>
+<p>
+where the <strong>imaginary unit</strong> <span class="math">\(i\)</span> satisfies the equation
+</p>
+<div class="math">$$ i^{2} = -1. $$</div>
+<p>
+In general, <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are real numbers. For a complex number you have a <strong>conjugation</strong> operation <span class="math">\(\operatorname{Conj}\)</span> that changes the sign of the imaginary part:
+</p>
+<div class="math">$$ \operatorname{Conj}{(a + bi)} = a - bi. $$</div>
+<p>
+Clearly, <span class="math">\(\operatorname{Conj}\)</span> is an <strong>involution</strong>. You also have the <strong>quadrance</strong> of a complex number:
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + bi)} = (a + bi) * \operatorname{Conj}{(a + bi)} = a^{2} + b^{2}. $$</div>
+<p>
+Unless <span class="math">\(a = b = 0\)</span>, the quadrance of a complex number is always <strong>positive</strong>.</p>
+<h2>Perplex Numbers</h2>
+<p>Instead of working with the imaginary unit <span class="math">\(i\)</span>, if you use a unit <span class="math">\(s\)</span> satisfying
+</p>
+<div class="math">$$ s^{2} = 1, $$</div>
+<p>
+then <span class="math">\(a + bs\)</span> describes a <strong>perplex</strong> number. Note that <span class="math">\(s \neq 1\)</span>. These numbers are also known as <a href="https://en.wikipedia.org/wiki/Split-complex_number">split-complex numbers</a>, and also as double numbers. I will use "perplex" due to its symmetry with "complex". Conjugation and the quadrance are defined in the same way, but now you have:
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + bs)} = (a + bs) * \operatorname{Conj}{(a + bs)} = a^{2} - b^{2}. $$</div>
+<p>
+Thus, if <span class="math">\(a^{2} &gt; b^{2}\)</span>, the quadrance is positive. But if <span class="math">\(a^{2} &lt; b^{2}\)</span> then the quadrance will be negative. Furthermore, if <span class="math">\(a^{2} = b^{2}\)</span>, then the quadrance is zero with <span class="math">\(a\)</span> and <span class="math">\(b\)</span> not necessarily being zero. This is very different from the complex numbers.</p>
+<h2>Nilplex Numbers</h2>
+<p>Another possibility is to have a unit <span class="math">\(\alpha\)</span> with
+</p>
+<div class="math">$$ \alpha^{2} = 0, $$</div>
+<p>
+but <span class="math">\(\alpha \neq 0\)</span>. Then <span class="math">\(a + b\alpha\)</span> is a <strong>nilplex</strong> number. These numbers are more commonly known as <a href="https://en.wikipedia.org/wiki/Dual_number">dual</a> numbers, but I will use "nilplex" due to its symmetry with "complex" and "perplex". Again, you can define conjugation and the quadrance in the same way as for complex and perplex numbers, but now you have:
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + b\alpha)} = (a + b\alpha) * \operatorname{Conj}{(a + b\alpha)} = a^{2}. $$</div>
+<p>
+The quadrance is always non-negative, but note that if <span class="math">\(a = 0\)</span>, then for any <span class="math">\(b\)</span> that nilplex number will have zero quadrance.</p>
+<h2>Cayley-Dickson Constructs</h2>
+<p>One convenient way to work with complex numbers is to represent them as a <strong>pair</strong> of real numbers:
+</p>
+<div class="math">$$ z = \begin{pmatrix} a &amp; b \end{pmatrix}. $$</div>
+<p>
+Here <span class="math">\(a\)</span> is said to be the <strong>left</strong> component of <span class="math">\(z\)</span>, and <span class="math">\(b\)</span> is said to be the <strong>right</strong> component of <span class="math">\(z\)</span>. Let
+</p>
+<div class="math">$$ z = \begin{pmatrix} a &amp; b \end{pmatrix}, \qquad w = \begin{pmatrix} c &amp; d \end{pmatrix}. $$</div>
+<p>
+Then the <strong>addition</strong> operation is
+</p>
+<div class="math">$$ \operatorname{Add}{(z, w)} = \begin{pmatrix} a + c &amp; b + d \end{pmatrix}.$$</div>
+<p>
+That is, component-wise. Similarly, you also have the <strong>subtraction</strong> operation:
+</p>
+<div class="math">$$ \operatorname{Sub}{(z, w)} = \begin{pmatrix} a - c &amp; b - d \end{pmatrix}.$$</div>
+<p>
+Another helpful operation is <strong>multiplication by a scalar</strong> <span class="math">\(k\)</span>:
+</p>
+<div class="math">$$ \operatorname{Scal}{(z, k)} = \begin{pmatrix} k a &amp; k b \end{pmatrix}. $$</div>
+<p>
+A special case of this operation is the <strong>negation</strong> operation:
+</p>
+<div class="math">$$ \operatorname{Neg}{(z)} = \begin{pmatrix} -a &amp; -b \end{pmatrix}. $$</div>
+<p>
+The <strong>conjugation</strong> operation is
+</p>
+<div class="math">$$ \operatorname{Conj}{(z)} = \begin{pmatrix} a &amp; -b \end{pmatrix}. $$</div>
+<p>
+Finally, you have the <strong>multiplication</strong> operation of two complex numbers:
+</p>
+<div class="math">$$ \operatorname{Mul}{(z, w)} = \begin{pmatrix} ac - db &amp; da + bc \end{pmatrix}. $$</div>
+<p>
+Note that this multiplication operation is <strong>commutative</strong>. That is,
+</p>
+<div class="math">$$ \operatorname{Mul}{(z, w)} = \operatorname{Mul}{(w, z)}. $$</div>
+<p>
+Indeed, the ordering above in the definition of <span class="math">\(\operatorname{Mul}\)</span> is a little weird since multiplication of real numbers is also commutative, but this will make sense later.</p>
+<p>So far we have learned two things. First, that besides the complex numbers, you can also have two other kinds of two-dimensional number systems: perplex and nilplex numbers. Second, that complex numbers and operations on them can be neatly represented in terms of pairs of real numbers. It should not be a surprise to learn that perplex and nilplex numbers can also be represented as pairs of real numbers. Most operations remain unchanged, except for the multiplication operation. The multiplication operation for perplex numbers is:
+</p>
+<div class="math">$$ \operatorname{Mul}{(z, w)} = \begin{pmatrix} ac + db &amp; da + bc \end{pmatrix}. $$</div>
+<p>
+I will refer to this operation as the <strong>hyperbolic product</strong>. Similarly, the multiplication operation for nilplex numbers is:
+</p>
+<div class="math">$$ \operatorname{Mul}{(z, w)} = \begin{pmatrix} ac &amp; da + bc \end{pmatrix}. $$</div>
+<p>
+I will refer to this operation as the <strong>parabolic product</strong>. For completeness, the multiplication operation for complex numbers is referred to as the <strong>elliptic product</strong>.</p>
+<p>There is a neat trick to construct other number systems from a given number system. It is called the <strong>Cayley-Dickson construction</strong>. The way it works is as follows. You start with a seed number system <span class="math">\(\mathcal{S}\)</span> along with a list of operations on the elements of <span class="math">\(\mathcal{S}\)</span>:</p>
+<ul>
+<li>The binary <strong>addition</strong> operation <span class="math">\(\operatorname{add}\)</span>,</li>
+<li>the binary <strong>subtraction</strong> operation <span class="math">\(\operatorname{sub}\)</span>,</li>
+<li>the unary <strong>dilation</strong> operation <span class="math">\(\operatorname{scal}\)</span>,</li>
+<li>the unary <strong>negation</strong> operation <span class="math">\(\operatorname{neg}\)</span>,</li>
+<li>the unary <strong>conjugation</strong> operation <span class="math">\(\operatorname{conj}\)</span>,</li>
+<li>the binary <strong>multiplication</strong> operation <span class="math">\(\operatorname{mul}\)</span>,</li>
+<li>the unary <strong>quadrance</strong> operation <span class="math">\(\operatorname{quad}\)</span>,</li>
+<li>the unary <strong>inversion</strong> operation <span class="math">\(\operatorname{inv}\)</span>, and</li>
+<li>the binary <strong>division</strong> operation <span class="math">\(\operatorname{quo}\)</span>.</li>
+</ul>
+<p>Consider a pair of elements <span class="math">\(a\)</span> and <span class="math">\(b\)</span> in <span class="math">\(\mathcal{S}\)</span>. With this pair, you can make an element <span class="math">\(z\)</span> in the Cayley-Dickson construct number system <span class="math">\(\mathcal{C}\)</span>:
+</p>
+<div class="math">$$ z = \begin{pmatrix} a &amp; b \end{pmatrix}. $$</div>
+<p>
+The operations on the elements in <span class="math">\(\mathcal{C}\)</span> are given in terms of the operations on the elements in <span class="math">\(\mathcal{S}\)</span>. Let <span class="math">\(z\)</span> and <span class="math">\(w\)</span> be elements in <span class="math">\(\mathcal{C}\)</span> with
+</p>
+<div class="math">$$ z = \begin{pmatrix} a &amp; b \end{pmatrix}, \qquad w = \begin{pmatrix} c &amp; d \end{pmatrix}. $$</div>
+<p>
+Then the binary <strong>addition</strong> operation is
+</p>
+<div class="math">$$ \operatorname{Add}{(z, w)} = \begin{pmatrix} \operatorname{add}{(a, c)} &amp; \operatorname{add}{(b, d)} \end{pmatrix}; $$</div>
+<p>
+the binary <strong>subtraction</strong> operation is
+</p>
+<div class="math">$$ \operatorname{Sub}{(z, w)} = \begin{pmatrix} \operatorname{sub}{(a, c)} &amp; \operatorname{sub}{(b, d)} \end{pmatrix}; $$</div>
+<p>
+the unary <strong>dilation</strong> operation is
+</p>
+<div class="math">$$ \operatorname{Scal}{(z, k)} = \begin{pmatrix} \operatorname{scal}{(a, k)} &amp; \operatorname{scal}{(b, k)} \end{pmatrix}; $$</div>
+<p>
+the unary <strong>negation</strong> operation is
+</p>
+<div class="math">$$ \operatorname{Neg}{(z)} = \begin{pmatrix} \operatorname{neg}{(a)} &amp; \operatorname{neg}{(b)} \end{pmatrix}; $$</div>
+<p>
+and the unary <strong>conjugation</strong> operation is
+</p>
+<div class="math">$$ \operatorname{Conj}{(z)} = \begin{pmatrix} \operatorname{conj}{(a)} &amp; \operatorname{neg}{(b)} \end{pmatrix}. $$</div>
+<p>The other operations depend on the which product you use. Since there are three kinds of multiplication operations, you can have three kinds of Cayley-Dickson constructs: elliptic, parabolic, or hyperbolic. For an <strong>elliptic Cayley-Dickson construct</strong>, the multiplication operation is
+</p>
+<div class="math">$$ \operatorname{Mul}{(z, w)} = \begin{pmatrix} \operatorname{sub}{( \operatorname{mul}(a, c), \operatorname{mul}(\operatorname{conj}{(d)}, b))} &amp; \operatorname{add}{( \operatorname{mul}(d, a), \operatorname{mul}(b, \operatorname{conj}{(c)}))} \end{pmatrix}, $$</div>
+<p>
+and the quadrance operation is
+</p>
+<div class="math">$$ \operatorname{Quad}{(z)} = \operatorname{quad}{(a)} + \operatorname{quad}{(b)} . $$</div>
+<p>
+Note that the quadrance is always real but not necessarily non-negative (it depends on the properties of <span class="math">\(\operatorname{quad}\)</span>). Similarly, for a <strong>parabolic Cayley-Dickson construct</strong>, the multiplication operation is</p>
+<div class="math">$$ \operatorname{Mul}{(z, w)} = \begin{pmatrix} \operatorname{mul}(a, c) &amp; \operatorname{add}{( \operatorname{mul}(d, a), \operatorname{mul}(b, \operatorname{conj}{(c)}))} \end{pmatrix}, $$</div>
+<p>
+and the quadrance operation is
+</p>
+<div class="math">$$ \operatorname{Quad}{(z)} = \operatorname{quad}{(a)}. $$</div>
+<p>
+Finally, for a <strong>hyperbolic Cayley-Dickson construct</strong> the multiplication operation is
+</p>
+<div class="math">$$ \operatorname{Mul}{(z, w)} = \begin{pmatrix} \operatorname{add}{( \operatorname{mul}(a, c), \operatorname{mul}(\operatorname{conj}{(d)}, b))} &amp; \operatorname{add}{( \operatorname{mul}(d, a), \operatorname{mul}(b, \operatorname{conj}{(c)}))} \end{pmatrix}, $$</div>
+<p>
+and the quadrance operation is
+</p>
+<div class="math">$$ \operatorname{Quad}{(z)} = \operatorname{quad}{(a)} - \operatorname{quad}{(b)} . $$</div>
+<p>
+The inversion operation can always be written in terms of the conjugation operation, the dilation operation, and the quadrance. With the inversion operation, and the multiplication operation, you can then define the division operation.</p>
+<p>In a way, the complex, nilplex, and perplex numbers are elliptic, parabolic, and hyperbolic Cayley-Dickson constructs with the real numbers as the seed number system. In all these cases you go from a one-dimensional number system (the real numbers) to a two-dimensional number system. Repeating the Cayley-Dickson construction with any of these two-dimensional constructs yields a four-dimensional construct. Note that the multiplication operation for each of the two-dimensional constructs is <em>commutative</em> and <em>associative</em>.</p>
+<h3>Four-Dimensional Constructs</h3>
+<p>There are <strong>five</strong> distinct four-dimensional Cayley-Dickson constructs. All of them have something in common: the resulting multiplication operation is <strong>noncommutative</strong> but still <em>associative</em>. It is convenient to introduce the <strong>commutator</strong> operation:
+</p>
+<div class="math">$$ \operatorname{Commutator}{(z, w)} = \operatorname{Sub}{(\operatorname{Mul}{(z, w)}, \operatorname{Mul}{(w, z)})}, $$</div>
+<p>
+and the <strong>anticommutator</strong> operation:
+</p>
+<div class="math">$$ \operatorname{AntiCommutator}{(z, w)} = \operatorname{Add}{(\operatorname{Mul}{(z, w)}, \operatorname{Mul}{(w, z)})}. $$</div>
+<p>
+You also have to distinguish between <em>two</em> division operations: <strong>left division</strong> (multiplication on the left by the inverse) and <strong>right division</strong> (multiplication on the right by the inverse).</p>
+<h4>Hamilton Quaternions</h4>
+<p>The most familiar four-dimensional construct is the Hamilton quaternion. This is nothing more than the traditional <a href="https://en.wikipedia.org/wiki/Quaternion">quaternion</a>. This number system corresponds to an elliptic Cayley-Dickson construct with complex numbers as seed. There are three elliptic units, denoted <span class="math">\(i\)</span>, <span class="math">\(j\)</span>, and <span class="math">\(k\)</span>. These units satisfy the relations
+</p>
+<div class="math">$$ \operatorname{Mul}{(i, i)} = -1, \qquad \operatorname{Mul}{(j, j)} = -1, \qquad \operatorname{Mul}{(k, k)} = -1; $$</div>
+<div class="math">$$ \operatorname{Commutator}{(i, j)} = 2k, \qquad \operatorname{Commutator}{(j, k)} = 2i, \qquad \operatorname{Commutator}{(k, i)} = 2j; $$</div>
+<div class="math">$$ \operatorname{AntiCommutator}{(i, j)} = 0, \qquad \operatorname{AntiCommutator}{(j, k)} = 0, \qquad \operatorname{AntiCommutator}{(k, i)} = 0. $$</div>
+<p>
+Hamilton quaternions are useful in four- and three-dimensional Euclidean space, since
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + bi + cj + dk)} = a^{2} + b^{2} + c^{2} + d^{2}. $$</div>
+<p>
+Note that the quadrance is always non-negative.</p>
+<h4>Cockle Quaternions</h4>
+<p>Performing a hyperbolic Cayley-Dickson construct with complex numbers as seed yields the Cockle quaternions. This number system is more commonly known as the <a href="https://en.wikipedia.org/wiki/Split-quaternion">split-quaternions</a>. There is one elliptic unit, denoted <span class="math">\(i\)</span>, and two hyperbolic units, denoted <span class="math">\(t\)</span> and <span class="math">\(u\)</span>. These units satisfy the relations
+</p>
+<div class="math">$$ \operatorname{Mul}{(i, i)} = -1, \qquad \operatorname{Mul}{(t, t)} = +1, \qquad \operatorname{Mul}{(u, u)} = +1; $$</div>
+<div class="math">$$ \operatorname{Commutator}{(i, t)} = 2u, \qquad \operatorname{Commutator}{(u, t)} = 2i, \qquad \operatorname{Commutator}{(u, i)} = 2t; $$</div>
+<div class="math">$$ \operatorname{AntiCommutator}{(i, t)} = 0, \qquad \operatorname{AntiCommutator}{(t, u)} = 0, \qquad \operatorname{AntiCommutator}{(u, i)} = 0. $$</div>
+<p>
+You can also obtain the Cockle quaternions from an elliptic Cayley-Dickson construct with perplex numbers as seed, or from a hyperbolic Cayley-Dickson construct with perplex numbers as seed.</p>
+<p>The quadrance of a general element is
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + bi + ct + du)} = a^{2} + b^{2} - c^{2} - d^{2}. $$</div>
+<p>
+This can be either positive, negative, or zero. Indeed, if the quadrance vanishes, then that element is a <strong>zero divisor</strong>.</p>
+<h4>Infra-Complex Numbers</h4>
+<p>Performing a parabolic Cayley-Dickson construct with complex numbers as seed yields the infra-complex numbers. There is one elliptic unit, denoted by <span class="math">\(i\)</span>, and two parabolic units, denoted <span class="math">\(\beta\)</span> and <span class="math">\(\gamma\)</span>. These units satisfy the relations
+</p>
+<div class="math">$$ \operatorname{Mul}{(i, i)} = -1, \qquad \operatorname{Mul}{(\beta, \beta)} = 0, \qquad \operatorname{Mul}{(\gamma, \gamma)} = 0; $$</div>
+<div class="math">$$ \operatorname{Commutator}{(i, \beta)} = 2\gamma, \qquad \operatorname{Commutator}{(\beta, \gamma)} = 0, \qquad \operatorname{Commutator}{(\gamma, i)} = 2\beta; $$</div>
+<div class="math">$$ \operatorname{AntiCommutator}{(i, \beta)} = 0, \qquad \operatorname{AntiCommutator}{(\beta, \gamma)} = 0, \qquad \operatorname{AntiCommutator}{(\gamma, i)} = 0. $$</div>
+<p>
+You can also obtain the infra-complex numbers from an elliptic Cayley-Dickson construct with nilplex numbers as seed.</p>
+<p>The quadrance of a general element is
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + bi + c\beta + d\gamma)} = a^{2} + b^{2}. $$</div>
+<p>
+This is always non-negative, but there is a set of non-trivial elements that have zero-quadrance, so this system also has zero divisors.</p>
+<h4>Infra-Perplex Numbers</h4>
+<p>Performing a parabolic Cayley-Dickson construct with perplex numbers as seed yields the infra-perplex numbers. There is one hyperbolic unit, denoted by <span class="math">\(s\)</span>, and two parabolic units, denoted <span class="math">\(\tau\)</span> and <span class="math">\(\upsilon\)</span>. These units satisfy the relations
+</p>
+<div class="math">$$ \operatorname{Mul}{(s, s)} = +1, \qquad \operatorname{Mul}{(\tau, \tau)} = 0, \qquad \operatorname{Mul}{(\upsilon, \upsilon)} = 0; $$</div>
+<div class="math">$$ \operatorname{Commutator}{(s, \tau)} = 2\upsilon, \qquad \operatorname{Commutator}{(\tau, \upsilon)} = 0, \qquad \operatorname{Commutator}{(s, \upsilon)} = 2\tau; $$</div>
+<div class="math">$$ \operatorname{AntiCommutator}{(s, \tau)} = 0, \qquad \operatorname{AntiCommutator}{(\tau, \upsilon)} = 0, \qquad \operatorname{AntiCommutator}{(\upsilon, s)} = 0. $$</div>
+<p>
+You can also obtain the infra-perplex numbers from a hyperbolic Cayley-Dickson construct with nilplex numbers as seed.</p>
+<p>The quadrance of a general element is
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + bs + c\tau + d\upsilon)} = a^{2} - b^{2}. $$</div>
+<p>
+This can be either positive, negative or zero, so this system also has zero divisors.</p>
+<h4>Supra-Real Numbers</h4>
+<p>Performing a parabolic Cayley-Dickson construct with nilplex numbers as seed yields the supra-real numbers. There are three parabolic units, denoted by <span class="math">\(\alpha\)</span>, <span class="math">\(\beta\)</span> and <span class="math">\(\gamma\)</span>. These units satisfy the relations
+</p>
+<div class="math">$$ \operatorname{Mul}{(\alpha, \alpha)} = 0, \qquad \operatorname{Mul}{(\beta, \beta)} = 0, \qquad \operatorname{Mul}{(\gamma, \gamma)} = 0; $$</div>
+<div class="math">$$ \operatorname{Commutator}{(\alpha, \beta)} = 2\gamma, \qquad \operatorname{Commutator}{(\beta, \gamma)} = 0, \qquad \operatorname{Commutator}{(\gamma, \alpha)} = 0; $$</div>
+<div class="math">$$ \operatorname{AntiCommutator}{(\alpha, \beta)} = 0, \qquad \operatorname{AntiCommutator}{(\beta, \gamma)} = 0, \qquad \operatorname{AntiCommutator}{(\gamma, \alpha)} = 0. $$</div>
+<p>
+The supra-real numbers are the parabolic analog of the Hamilton quaternions.</p>
+<p>The quadrance of a general element is
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + b\alpha + c\beta + d\gamma)} = a^{2}. $$</div>
+<p>
+This is always non-negative, but there is a set of non-trivial elements that have zero-quadrance, so this system also has zero divisors.</p>
+<h3>Eight-Dimensional Constructs</h3>
+<p>There are <strong>seven</strong> distinct eight-dimensional Cayley-Dickson constructs. All of them have something in common: the resulting multiplication operation is <strong>noncommutative</strong> and also <strong>nonassociative</strong>.</p>
+<h4>Cayley Octonions</h4>
+<p>The most familiar eight-dimensional construct is the Cayley octonion. This is nothing more than the traditional <a href="https://en.wikipedia.org/wiki/Octonion">octonion</a>. This number system corresponds to an elliptic Cayley-Dickson construct with Hamilton quaternions as seed. There are seven elliptic units, denoted <span class="math">\(i\)</span>, <span class="math">\(j\)</span>, <span class="math">\(k\)</span>, <span class="math">\(m\)</span>, <span class="math">\(n\)</span>, <span class="math">\(p\)</span>, and <span class="math">\(q\)</span>.</p>
+<p>The quadrance of a general element is
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + bi + cj + dk + em + fn + gp + hq)} = a^{2} + b^{2} + c^{2} + d^{2} + e^{2} + f^{2} + g^{2} + h^{2}. $$</div>
+<p>
+This is always non-negative.</p>
+<h4>Zorn Octonions</h4>
+<p>Performing a hyperbolic Cayley-Dickson construct with Hamilton quaternions as seed yields the Zorn octonions. This number system is more commonly known as the <a href="https://en.wikipedia.org/wiki/Split-octonion">split-octonions</a>. There are three elliptic units, denoted <span class="math">\(i\)</span>, <span class="math">\(j\)</span>, and <span class="math">\(k\)</span>; and four hyperbolic units, denoted <span class="math">\(r\)</span>, <span class="math">\(s\)</span>, <span class="math">\(t\)</span>, and <span class="math">\(u\)</span>.</p>
+<p>You can also obtain the Zorn octonions from an elliptic Cayley-Dickson construct with Cockle quaternions as seed, or from a hyperbolic Cayley-Dickson construct with Cockle quaternions as seed.</p>
+<p>The quadrance of a general element is
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + bi + cj + dk + er + fs + gt + hu)} = a^{2} + b^{2} + c^{2} + d^{2} - e^{2} - f^{2} - g^{2} - h^{2}. $$</div>
+<p>
+This can be either positive, negative, or zero, so there are zero divisors.</p>
+<h4>Infra-Hamilton Quaternions</h4>
+<p>Performing a parabolic Cayley-Dickson construct with Hamilton quaternions as seed yields the infra-Hamilton quaternions. There are three elliptic units, denoted <span class="math">\(i\)</span>, <span class="math">\(j\)</span>, and <span class="math">\(k\)</span>; and four parabolic units, denoted <span class="math">\(\alpha\)</span>, <span class="math">\(\beta\)</span>, <span class="math">\(\gamma\)</span>, and <span class="math">\(\delta\)</span>.</p>
+<p>You can also obtain the infra-Hamilton quaternions from an elliptic Cayley-Dickson construct with infra-complex numbers as seed.</p>
+<p>The quadrance of a general element is
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + bi + cj + dk + e\alpha + f\beta + g\gamma + h\delta)} = a^{2} + b^{2} + c^{2} + d^{2}. $$</div>
+<p>
+This is always non-negative, but there are non-trivial elements with zero quadrance, so there are zero divisors.</p>
+<h4>Infra-Cockle Quaternions</h4>
+<p>Performing a parabolic Cayley-Dickson construct with Cockle quaternions as seed yields the infra-Cockle quaternions. There is one elliptic unit, denoted by <span class="math">\(i\)</span>; two hyperbolic units, denoted by <span class="math">\(t\)</span> and <span class="math">\(u\)</span>; and four parabolic units, denoted by <span class="math">\(\rho\)</span>, <span class="math">\(\sigma\)</span>, <span class="math">\(\tau\)</span>, and <span class="math">\(\upsilon\)</span>.</p>
+<p>You can also obtain the infra-Cockle quaternions from a hyperbolic Cayley-Dickson construct with infra-complex numbers as seed, or an elliptic Cayley-Dickson construct with infra-perplex numbers as seed, or a hyperbolic Cayley-Dickson construct with infra-perplex numbers as seed.</p>
+<p>The quadrance of a general element is
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + bi + ct + du + e\rho + f\sigma + g\tau + h\upsilon)} = a^{2} + b^{2} - c^{2} - d^{2}. $$</div>
+<p>
+This can be either positive, negative, or zero, so there are zero divisors.</p>
+<h4>Supra-Complex Numbers</h4>
+<p>Performing a parabolic Cayley-Dickson construct with infra-complex numbers as seed yields the supra-complex numbers. There is one elliptic unit, denoted by <span class="math">\(i\)</span>, and six parabolic units, denoted <span class="math">\(\alpha\)</span>, <span class="math">\(\beta\)</span>, <span class="math">\(\gamma\)</span>, <span class="math">\(\delta\)</span>, <span class="math">\(\epsilon\)</span>, and <span class="math">\(\zeta\)</span>.</p>
+<p>You can also obtain the supra-complex numbers from an elliptic Cayley-Dickson construct with supra-real numbers as seed.</p>
+<p>The quadrance of a general element is
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + bi + c\alpha + d\beta + e\gamma + f\delta + g\epsilon + h\zeta)} = a^{2} + b^{2}. $$</div>
+<p>
+This is always non-negative, but there are non-trivial elements with zero quadrance, so there are zero divisors.</p>
+<h4>Supra-Perplex Numbers</h4>
+<p>Performing a parabolic Cayley-Dickson construct with infra-perplex numbers as seed yields the supra-perplex numbers. There is one hyperbolic unit, denoted by <span class="math">\(s\)</span>, and six parabolic units, denoted <span class="math">\(\rho\)</span>, <span class="math">\(\sigma\)</span>, <span class="math">\(\tau\)</span>, <span class="math">\(\upsilon\)</span>, <span class="math">\(\phi\)</span>, and <span class="math">\(\psi\)</span>.</p>
+<p>You can also obtain the supra-perplex numbers from an hyperbolic Cayley-Dickson construct with supra-real numbers as seed.</p>
+<p>The quadrance of a general element is
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + bs + c\rho + d\sigma + e\tau + f\upsilon + g\phi + h\psi)} = a^{2} - b^{2}. $$</div>
+<p>
+This can be either positive, negative, or zero, so there are zero divisors.</p>
+<h4>Ultra-Real Numbers</h4>
+<p>Performing a parabolic Cayley-Dickson construct with supra-real numbers as seed yields the ultra-real numbers. There seven parabolic units, denoted <span class="math">\(\alpha\)</span>, <span class="math">\(\beta\)</span>, <span class="math">\(\gamma\)</span>, <span class="math">\(\delta\)</span>, <span class="math">\(\epsilon\)</span>, <span class="math">\(\zeta\)</span>, and <span class="math">\(\eta\)</span>.</p>
+<p>The ultra-real numbers are the parabolic analog of the Cayley octonions.</p>
+<p>The quadrance of a general element is
+</p>
+<div class="math">$$ \operatorname{Quad}{(a + b\alpha + c\beta + d\gamma + e\delta + f\epsilon + g\zeta + h\eta)} = a^{2}. $$</div>
+<p>
+This is always non-negative, but there are non-trivial elements with zero quadrance, so there are zero divisors.</p>
+<h3>Sedenions and Beyond</h3>
+<p>This process can be continued ad-infinitum. Performing a Cayley-Dickson construct with any of the eight-dimensional constructs will yield one of nine distinct sixteen-dimensional constructs. The most familiar of these is the sedenion, which are infamous for containing zero divisors, even though they are the sixteen-dimensional analog of the eight-dimensional Cayley octonion and the four-dimensional Hamilton quaternion.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'beyond-complex';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/math/beyond-complex/';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://meirizarrygelpi.github.io/feeds/main.xml"><i class="fa fa-rss-square fa-lg"></i> RSS</a></li>
+                <li class="list-group-item"><a href="https://github.com/meirizarrygelpi"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/melvineloy"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+                <li class="list-group-item"><a href="https://www.linkedin.com/in/melvin-eloy-irizarry-gelpí-62b6234"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+              </ul>
+            </li>
+
+
+            <li class="list-group-item"><a href="http://meirizarrygelpi.github.io/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/arxiv.html">
+                            <i class="fa fa-folder-open fa-lg"></i> arXiv
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/bash.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Bash
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/go.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Go
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/math.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Math
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/maths.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Maths
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/notes.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Notes
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/physics.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Physics
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/python.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Python
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 M.E. Irizarry-Gelpí
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://meirizarrygelpi.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://meirizarrygelpi.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://meirizarrygelpi.github.io/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>
