@@ -401,6 +401,8 @@ This can be either positive, negative, or zero, so there are zero divisors.</p>
 This is always non-negative, but there are non-trivial elements with zero quadrance, so there are zero divisors.</p>
 <h3>Sedenions and Beyond</h3>
 <p>This process can be continued ad-infinitum. Performing a Cayley-Dickson construct with any of the eight-dimensional constructs will yield one of <strong>nine</strong> distinct sixteen-dimensional constructs. The most familiar of these is the (elliptic) sedenion, which are infamous for containing zero divisors, even though they are the sixteen-dimensional analog of the eight-dimensional Cayley octonion and the four-dimensional Hamilton quaternion.</p>
+<h2>Implementations</h2>
+<p>I have implemented all two-, four-, and eight-dimensional number systems mentioned in this post in a Go package called <a href="https://godoc.org/github.com/meirizarrygelpi/rational">rational</a>. Rational numbers were used instead of real numbers due to the fact that arithmetic with floating-point numbers is not exact. However, in the near future I hope to implement types for integers and floating-point numbers. I would also like to re-implement these number systems in Python, C++, and Rust. I feel that this project is a great opportunity to learn more about this languages.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
