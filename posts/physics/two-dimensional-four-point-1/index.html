@@ -269,6 +269,84 @@ When <span class="math">\(m_{2} = m_{1}\)</span>, this solution reduces to
 <p>
 This is the exchange solution.</p>
 <p>The article in Wikipedia on <a href="https://en.wikipedia.org/wiki/Elastic_collision">elastic collisions</a> was helpful and it was fun to verify its results.</p>
+<h2>Composite Rapidities</h2>
+<p>The slow rapidity <span class="math">\(\xi_{s}\)</span> associated to <span class="math">\(P_{s}\)</span> can be writen as
+</p>
+<div class="math">$$ \xi_{s} = \log{\left( \frac{m_{1} \exp{(\xi_{1})} + m_{2} \exp{(\xi_{2})}}{\sqrt{s}} \right)} = \log{\left( \frac{m_{1} \exp{(\xi_{3})} + m_{2} \exp{(\xi_{4})}}{\sqrt{s}} \right)}. $$</div>
+<p>
+Similarly, the fast rapidity <span class="math">\(\rho_{t}\)</span> associated to <span class="math">\(P_{t}\)</span> can be written as
+</p>
+<div class="math">$$ \rho_{t} = \log{\left( \frac{m_{1} \exp{(\xi_{1})} - m_{1} \exp{(\xi_{3})}}{\sqrt{-t}} \right)} = \log{\left( \frac{m_{2} \exp{(\xi_{4})} - m_{2} \exp{(\xi_{2})}}{\sqrt{-t}} \right)}. $$</div>
+<h2>Regimes</h2>
+<p>The condition on <span class="math">\(u\)</span> does not allow for a specific kind of rapidity for the vector <span class="math">\(P_{u} = P_{1} - P_{4} = P_{3} - P_{2}\)</span>. Depending on the values of <span class="math">\(s\)</span> and <span class="math">\(t\)</span>, you can have all three cases.</p>
+<h3>Slow <span class="math">\(u\)</span>-channel</h3>
+<p>In the region
+</p>
+<div class="math">$$ 0 &lt; u \leq (m_{1} - m_{2})^{2} $$</div>
+<p>
+the vector <span class="math">\(P_{u}\)</span> is slow and given by
+</p>
+<div class="math">$$ P_{u} = \begin{pmatrix} \sqrt{u} \cosh{(\xi_{u})} &amp; \sqrt{u} \sinh{(\xi_{u})} \end{pmatrix}. $$</div>
+<p>
+Then
+</p>
+<div class="math">$$ P_{s} \cdot P_{u} = - \sqrt{s} \sqrt{u} \cosh{(\xi_{s} - \xi_{u})}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ P_{t} \cdot P_{u} = - \sqrt{-t} \sqrt{u} \sinh{(\rho_{t} - \xi_{u})}. $$</div>
+<p>
+The composite slow rapidity <span class="math">\(\xi_{u}\)</span> is given by
+</p>
+<div class="math">$$ \xi_{u} = \log{\left( \frac{m_{1} \exp{(\xi_{1})} - m_{2} \exp{(\xi_{4})}}{\sqrt{u}} \right)} = \log{\left( \frac{m_{1} \exp{(\xi_{3})} - m_{2} \exp{(\xi_{2})}}{\sqrt{u}} \right)}. $$</div>
+<h3>Null <span class="math">\(u\)</span>-channel</h3>
+<p>If <span class="math">\(u = 0\)</span>, then the vector <span class="math">\(P_{u}\)</span> is null and can be written as
+</p>
+<div class="math">$$ P_{u} = \begin{pmatrix} k_{u} &amp; k_{u} \end{pmatrix}. $$</div>
+<p>
+Then
+</p>
+<div class="math">$$ P_{s} \cdot P_{u} = \sqrt{s} k_{u} \exp{(-\xi_{s})}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ P_{t} \cdot P_{u} = \sqrt{-t} k_{u} \exp{(\rho_{t})}. $$</div>
+<p>
+You also have
+</p>
+<div class="math">$$ k_{u} = m_{1} \cosh{(\xi_{1})} - m_{2} \cosh{(\xi_{4})} = m_{1} \sinh{(\xi_{1})} - m_{2} \sinh{(\xi_{4})}. $$</div>
+<p>
+From here it follows that
+</p>
+<div class="math">$$ \xi_{4} = \xi_{1} - \log{\left( \frac{m_{1}}{m_{2}} \right)}. $$</div>
+<p>
+Using the conservation law, you can also write
+</p>
+<div class="math">$$ k_{u} = m_{1} \cosh{(\xi_{3})} - m_{2} \cosh{(\xi_{2})} = m_{1} \sinh{(\xi_{3})} - m_{2} \sinh{(\xi_{2})}. $$</div>
+<p>
+From here it follows that
+</p>
+<div class="math">$$ \xi_{3} = \xi_{2} + \log{\left( \frac{m_{1}}{m_{2}} \right)}. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ \xi_{1} + \xi_{2} = \xi_{3} + \xi_{4}. $$</div>
+<h3>Fast <span class="math">\(u\)</span>-channel</h3>
+<p>If <span class="math">\(u &lt; 0\)</span>, then the vector <span class="math">\(P_{u}\)</span> is fast and given by
+</p>
+<div class="math">$$ P_{u} = \begin{pmatrix} \sqrt{-u} \sinh{(\rho_{u})} &amp; \sqrt{-u} \cosh{(\rho_{u})} \end{pmatrix}. $$</div>
+<p>
+Then
+</p>
+<div class="math">$$ P_{s} \cdot P_{u} = \sqrt{s} \sqrt{-u} \sinh{(\xi_{s} - \rho_{u})}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ P_{t} \cdot P_{u} = \sqrt{-t} \sqrt{-u} \cosh{(\rho_{t} - \rho_{u})}. $$</div>
+<p>
+The composite fast rapidity <span class="math">\(\rho_{u}\)</span> can be written as
+</p>
+<div class="math">$$ \rho_{u} = \log{\left( \frac{m_{1} \exp{(\xi_{1})} - m_{2} \exp{(\xi_{4})}}{\sqrt{-u}} \right)} = \log{\left( \frac{m_{1} \exp{(\xi_{3})} - m_{2} \exp{(\xi_{2})}}{\sqrt{-u}} \right)}. $$</div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
