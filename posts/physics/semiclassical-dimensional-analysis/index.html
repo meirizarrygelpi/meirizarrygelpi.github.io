@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Semiclassical Dimensional Analysis - M.E. Irizarry-Gelpí</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
+
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/physics/semiclassical-dimensional-analysis/">
+
+        <meta name="author" content="M.E. Irizarry-Gelpí" />
+        <meta name="keywords" content="dimensional analysis,semiclassical" />
+        <meta name="description" content="On dimensional analysis, particles versus waves, and the semiclassical approximation." />
+
+        <meta property="og:site_name" content="M.E. Irizarry-Gelpí" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Semiclassical Dimensional Analysis"/>
+        <meta property="og:url" content="http://meirizarrygelpi.github.io/posts/physics/semiclassical-dimensional-analysis/"/>
+        <meta property="og:description" content="On dimensional analysis, particles versus waves, and the semiclassical approximation."/>
+        <meta property="article:published_time" content="2015-06-04" />
+            <meta property="article:section" content="Physics" />
+            <meta property="article:tag" content="dimensional analysis" />
+            <meta property="article:tag" content="semiclassical" />
+            <meta property="article:author" content="M.E. Irizarry-Gelpí" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/bootstrap.yeti.min.css" type="text/css"/>
+    <link href="http://meirizarrygelpi.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://meirizarrygelpi.github.io/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí ATOM Feed"/>
+
+
+
+        <link href="http://meirizarrygelpi.github.io/feeds/physics.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí Physics ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://meirizarrygelpi.github.io/" class="navbar-brand">
+M.E. Irizarry-Gelpí            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://meirizarrygelpi.github.io/pages/cv.html">
+                             CV
+                          </a></li>
+                         <li><a href="http://meirizarrygelpi.github.io/pages/few-body-forward-jwkb-dynamics.html">
+                             Dynamics
+                          </a></li>
+                         <li><a href="http://meirizarrygelpi.github.io/pages/many-body-sudakov-decompositions.html">
+                             Sudakov
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://meirizarrygelpi.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://meirizarrygelpi.github.io/posts/physics/semiclassical-dimensional-analysis/"
+                       rel="bookmark"
+                       title="Permalink to Semiclassical Dimensional Analysis">
+                        Semiclassical Dimensional Analysis
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-06-04T00:00:00-04:00"> Thu 04 June 2015</time>
+    </span>
+
+
+            <span class="label label-default">By</span>
+            <a href="http://meirizarrygelpi.github.io/author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
+
+        <span class="label label-default">Category</span>
+        <a href="http://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://meirizarrygelpi.github.io/tag/dimensional-analysis.html">dimensional analysis</a>
+        /
+	<a href="http://meirizarrygelpi.github.io/tag/semiclassical.html">semiclassical</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Before we begin, a note on units. I will work with a system of units where velocity and speed are dimensionless, and the speed of light sets the scale. Thus, <span class="math">\(c = 1\)</span>. This means that time and length have the same dimensions, as well as momentum, energy, and mass:
+</p>
+<div class="math">$$ [\text{time}] = [\text{length}] \qquad [\text{momentum}] = [\text{energy}] = [\text{mass}].$$</div>
+<p>
+However, I will keep <span class="math">\(\hbar\)</span> dimensionful. Since <span class="math">\(\hbar\)</span> has the same units as action and also angular momentum, you have the relation
+</p>
+<div class="math">$$[\text{length}] + [\text{mass}] = [\hbar].$$</div>
+<p>
+I will prefer to work with mass and <span class="math">\(\hbar\)</span> as the independent units. Thus, the units of a quantity <span class="math">\(Q\)</span> can be decomposed as
+</p>
+<div class="math">$$[Q] = \Delta_{\hbar}(Q) [\hbar] + \Delta_{m}(Q) [\text{mass}].$$</div>
+<p>
+Here <span class="math">\(\Delta_{\hbar}(Q)\)</span> is the <span class="math">\(\hbar\)</span>-dimension of <span class="math">\(Q\)</span>, and <span class="math">\(\Delta_{m}(Q)\)</span> is the mass-dimension of <span class="math">\(Q\)</span>.</p>
+<h2>Particles and Waves</h2>
+<p>Two very important problems in classical physics are the study of interacting particles, and the study of interacting waves. Particles are discrete objects, so they are better described classically with mechanical variables likes position and momentum. On the other hand, waves are better described classically as excitations of continuous objects known as fields. Thus, when you do <strong>classical mechanics</strong>, you work with particles; when you do <strong>classical field theory</strong>, you work with waves.</p>
+<p>For example, the action functional for a free relativistic scalar particle is
+</p>
+<div class="math">$$S_{m} = \int \mathrm{d} \tau \left[ - \dot{x} \cdot p + \frac{1}{2} v (p^{2} + m^{2}) \right].$$</div>
+<p>
+Here <span class="math">\(m\)</span> is a constant with units of mass. Note that the action is given as an integral along the worldline. Since this is a classical theory, there are no explicit factors of <span class="math">\(\hbar\)</span>. However, the action functional has units of <span class="math">\(\hbar\)</span>. From the second term in <span class="math">\(S_{m}\)</span>, it follows that
+</p>
+<div class="math">$$[v \mathrm{d}\tau] = [\hbar] - 2 [\text{mass}].$$</div>
+<p>
+In contrast with the free relativistic scalar particle, the action functional for a free relativistic scalar wave is
+</p>
+<div class="math">$$S_{\kappa} = \frac{1}{2} \int \mathrm{d} x \left[ \phi \left(-\frac{1}{2}\partial^{2} + \frac{1}{2}\kappa^{2} \right) \phi \right].$$</div>
+<p>
+Here <span class="math">\(\kappa\)</span> is a constant with units of inverse distance. Now the action is an integral along the region where the field lives, usually the entirety of spacetime. Again, this is a classical theory so there are no explicit factors of <span class="math">\(\hbar\)</span>. Since the action has units of <span class="math">\(\hbar\)</span>, it follows that wave field <span class="math">\(\phi\)</span> has units
+</p>
+<div class="math">$$[\phi] = \left( \frac{3 - D}{2} \right) [\hbar] + \left( \frac{D - 2}{2} \right) [\text{mass}].$$</div>
+<p>
+Here <span class="math">\(D\)</span> is the number of spacetime dimensions.</p>
+<h2>Scalar Intermedium</h2>
+<p>One way to introduce interactions between many relativistic particles is to couple each to a dynamical intermedium. This intermedium takes the form of a spacetime field. The result is a model where classical relativistic particles interact by emiting and absorbing classical relativistic waves. For example, the action functional for a system of two relativistic massive particles coupled to a dynamical scalar intermedium field <span class="math">\(\Phi\)</span> is
+</p>
+<div class="math">$$S = S_{1}[x_{1}, \Phi] + S_{2}[x_{2}, \Phi] + S_{\text{kin}}[\Phi],$$</div>
+<p>
+where <span class="math">\(S_{1}\)</span> and <span class="math">\(S_{2}\)</span> contain the kinetic term and coupling to <span class="math">\(\Phi\)</span> for each particle,
+</p>
+<div class="math">$$S_{1}[x_{1}, \Phi] = \int \mathrm{d} \tau_{1} \left[ - \dot{x}_{1} \cdot p_{1} + \frac{1}{2} v_{1} (p^{2}_{1} + m^{2}_{1} + 2 q_{1} \Phi) \right], \quad S_{2}[x_{2}, \Phi] = \int \mathrm{d} \tau_{2} \left[ - \dot{x}_{2} \cdot p_{2} + \frac{1}{2} v_{2} (p^{2}_{2} + m^{2}_{2} + 2 q_{2} \Phi) \right];$$</div>
+<p>
+and <span class="math">\(S_{\text{kin}}\)</span> contains the kinetic term that makes <span class="math">\(\Phi\)</span> dynamical,
+</p>
+<div class="math">$$S_{\text{kin}} = \frac{1}{2g^{2}_{1}} \int \mathrm{d}x \left[ \Phi \left(- \frac{1}{2} \partial^{2} \right) \Phi \right].$$</div>
+<p>
+Here <span class="math">\(q_{1}\)</span> and <span class="math">\(q_{2}\)</span> are (dimensionless) charges that allow a decoupling in the limits <span class="math">\(q_{1} \rightarrow 0\)</span> and <span class="math">\(q_{2} \rightarrow 0\)</span>, and <span class="math">\(g_{1}\)</span> is a coupling strength. From <span class="math">\(S_{1}\)</span> and <span class="math">\(S_{2}\)</span> it follows that <span class="math">\(\Phi\)</span> has dimensions
+</p>
+<div class="math">$$[\Phi] = 2 [\text{mass}].$$</div>
+<p>
+This is true in any number of spacetime dimensions. Thus, from <span class="math">\(S_{\text{kin}}\)</span> it follows that <span class="math">\(g_{1}\)</span> has dimensions
+</p>
+<div class="math">$$[g_{1}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{6 - D}{2} \right) [\text{mass}].$$</div>
+<p>
+This result can be compared with a similar system: two relativistic waves coupled to a dynamical intermedium:
+</p>
+<div class="math">$$S = S_{1}[\phi_{1}, \varphi] + S_{2}[\phi_{2}, \varphi] + S_{\text{kin}}[\varphi],$$</div>
+<p>
+where <span class="math">\(S_{1}\)</span> and <span class="math">\(S_{2}\)</span> contain the kinetic term and coupling to <span class="math">\(\varphi\)</span> for each scalar wave,
+</p>
+<div class="math">$$S_{1}[\phi_{1}, \varphi] = \frac{1}{2} \int \mathrm{d} x \left[ \phi_{1} \left(-\frac{1}{2}\partial^{2} + \frac{1}{2}\kappa^{2}_{1} + q_{1} \varphi \right) \phi_{1} \right], \qquad S_{2}[\phi_{2}, \varphi] = \frac{1}{2} \int \mathrm{d} x \left[ \phi_{2} \left(-\frac{1}{2}\partial^{2} + \frac{1}{2}\kappa^{2}_{2} + q_{2} \varphi \right) \phi_{2} \right],$$</div>
+<p>
+and <span class="math">\(S_{\text{kin}}\)</span> contains the kinetic term that makes <span class="math">\(\varphi\)</span> dynamical,
+</p>
+<div class="math">$$S_{\text{kin}} = \frac{1}{2 f_{1}^{2}} \int \mathrm{d}x \left[ \varphi \left( - \frac{1}{2} \partial^{2} \right) \varphi \right].$$</div>
+<p>
+Here, as before, <span class="math">\(q_{1}\)</span> and <span class="math">\(q_{2}\)</span> are (dimensionless) charges, and <span class="math">\(f_{1}\)</span> is a coupling strength. From <span class="math">\(S_{1}\)</span> and <span class="math">\(S_{2}\)</span> it follows that <span class="math">\(\varphi\)</span> has dimensions
+</p>
+<div class="math">$$[\varphi] = -2 [\hbar] + 2 [\text{mass}],$$</div>
+<p>
+and thus <span class="math">\(\phi_{1}\)</span> and <span class="math">\(\phi_{2}\)</span> have the familiar dimensions:
+</p>
+<div class="math">$$[\phi_{1}] = [\phi_{2}] = \left( \frac{3 - D}{2} \right) [\hbar] + \left( \frac{D - 2}{2} \right) [\text{mass}].$$</div>
+<p>
+Note that already we have found a big difference: the dimensions of <span class="math">\(\varphi\)</span> and <span class="math">\(\Phi\)</span> are not the same. Furthermore, from <span class="math">\(S_{\text{kin}}\)</span> it follows that <span class="math">\(f_{1}\)</span> has dimensions
+</p>
+<div class="math">$$[f_{1}] = \left( \frac{D - 7}{2} \right) [\hbar] + \left( \frac{6 - D}{2} \right) [\text{mass}].$$</div>
+<p>
+Although <span class="math">\(g_{1}\)</span> and <span class="math">\(f_{1}\)</span> have the same mass-dimension, their <span class="math">\(\hbar\)</span>-dimension is very different. Indeed, when <span class="math">\(3 &lt; D &lt; 7\)</span>, you have <span class="math">\(\Delta_{\hbar}(g_{1}) &gt; 0\)</span> but <span class="math">\(\Delta_{\hbar}(f_{1}) &lt; 0\)</span>.</p>
+<h2>Higher Degree Scalar Intermedium</h2>
+<p>In the above discussion the interaction has degree-3 because the interaction term is cubic in fields. You can consider more general interactions with degree-<span class="math">\((n + 2)\)</span> with <span class="math">\(n\)</span> a natural number. In the particle system, you have
+</p>
+<div class="math">$$\int \mathrm{d}\tau_{1} v_{1} q_{1} \Phi \quad \longrightarrow \int \mathrm{d}\tau_{1} v_{1} q_{1} \Phi^{n},$$</div>
+<p>
+and
+</p>
+<div class="math">$$\frac{1}{2g^{2}_{1}} \int \mathrm{d}x \left[ \Phi \left(- \frac{1}{2} \partial^{2} \right) \Phi \right] \quad \longrightarrow \quad \frac{1}{2(g_{n}^{2})^{1/n}} \int \mathrm{d}x \left[ \Phi \left(- \frac{1}{2} \partial^{2} \right) \Phi \right].$$</div>
+<p>
+Thus, <span class="math">\(\Phi\)</span> has dimensions
+</p>
+<div class="math">$$[\Phi] = \frac{2}{n} [\text{mass}],$$</div>
+<p>
+and the coupling strength <span class="math">\(g_{n}\)</span> has dimensions
+</p>
+<div class="math">$$[g_{n}] = \left( \frac{nD - 3n}{2} \right) [\hbar] + \left( \frac{4 + 2n - nD}{2} \right) [\text{mass}].$$</div>
+<p>
+On the other hand, in the wave system you have
+</p>
+<div class="math">$$\int \mathrm{d}x \left[ q_{1} \phi_{1} \varphi \phi_{1} \right] \quad \longrightarrow \quad \int \mathrm{d}x \left[ q_{1} \phi_{1} \varphi^{n} \phi_{1} \right],$$</div>
+<p>
+and
+</p>
+<div class="math">$$\frac{1}{2 f_{1}^{2}} \int \mathrm{d}x \left[ \varphi \left( - \frac{1}{2} \partial^{2} \right) \varphi \right] \quad \longrightarrow \quad \frac{1}{2 (f_{n}^{2})^{1/n}} \int \mathrm{d}x \left[ \varphi \left( - \frac{1}{2} \partial^{2} \right) \varphi \right].$$</div>
+<p>
+Thus, <span class="math">\(\varphi\)</span> has dimensions
+</p>
+<div class="math">$$[\varphi] = -\frac{2}{n}[\hbar] + \frac{2}{n}[\text{mass}],$$</div>
+<p>
+and the coupling strength <span class="math">\(f_{n}\)</span> has dimensions
+</p>
+<div class="math">$$[f_{n}] = \left( \frac{nD - 3n - 4}{2} \right) [\hbar] + \left( \frac{4 + 2n - nD}{2} \right) [\text{mass}].$$</div>
+<p>
+Some important cases are <span class="math">\(n = 2\)</span> (i.e. degree-4):
+</p>
+<div class="math">$$[g_{2}] = \left( D - 3 \right) [\hbar] + \left( 4 - D \right) [\text{mass}], \qquad [f_{2}] = \left( D - 5 \right) [\hbar] + \left( 4 - D \right) [\text{mass}];$$</div>
+<p>
+and <span class="math">\(n = 4\)</span> (i.e. degree-6):
+</p>
+<div class="math">$$[g_{4}] = 2\left( D - 3 \right) [\hbar] + 2\left( 3 - D \right) [\text{mass}], \qquad [f_{4}] = 2\left( D - 4 \right) [\hbar] + 2\left( 3 - D \right) [\text{mass}].$$</div>
+<p>
+In general, for <span class="math">\(D &gt; 3\)</span> it follows that <span class="math">\(\Delta_{\hbar}(g_{n}) &gt; 0\)</span>. Something is special about <span class="math">\(D = 3\)</span>, because <span class="math">\(\Delta_{\hbar}(g_{n}) = 0\)</span> for any <span class="math">\(n\)</span>. Indeed, <span class="math">\(g_{4}\)</span> is dimensionless in <span class="math">\(D = 3\)</span>.</p>
+<h2>Vector Intermedium</h2>
+<p>Coupling matter to a vector intermedium leads to gauge theory. A particle is coupled to a vector intermedium <span class="math">\(V\)</span> via the replacement
+</p>
+<div class="math">$$p \longrightarrow p - q A,$$</div>
+<p>
+where <span class="math">\(q\)</span> is a dimensionless charge. Thus, the field <span class="math">\(A\)</span> has dimensions
+</p>
+<div class="math">$$[A] = [\text{mass}].$$</div>
+<p>
+Similarly, a wave is coupled to a vector intermedium <span class="math">\(V\)</span> via the replacement
+</p>
+<div class="math">$$\partial \longrightarrow \partial + qV,$$</div>
+<p>
+where <span class="math">\(q\)</span> is a dimensionless charge. Thus, the field <span class="math">\(V\)</span> has dimensions
+</p>
+<div class="math">$$[V] = -[\hbar] + [\text{mass}].$$</div>
+<p>
+I will consider three kinds of dynamics for the vector intermedium.</p>
+<h3>Maxwell Intermedium</h3>
+<p>The kinetic term for the Maxwell vector intermedium <span class="math">\(A\)</span> coupling charged particles is
+</p>
+<div class="math">$$\frac{1}{2 e^{2}} \int \mathrm{d}x \, F^{2}, \qquad F_{ab} = \partial_{a} A_{b} - \partial_{b} A_{a}.$$</div>
+<p>
+Thus, the coupling strength <span class="math">\(e\)</span> has units
+</p>
+<div class="math">$$[e] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{4 - D}{2} \right) [\text{mass}].$$</div>
+<p>
+Similarly, the kinetic term for the Maxwell vector intermedium <span class="math">\(V\)</span> coupling charged waves is
+</p>
+<div class="math">$$\frac{1}{2 h^{2}} \int \mathrm{d}x \, W^{2}, \qquad W_{ab} = \partial_{a} V_{b} - \partial_{b} V_{a}.$$</div>
+<p>
+Thus, the coupling strength <span class="math">\(h\)</span> has units
+</p>
+<div class="math">$$[h] = \left( \frac{D - 5}{2} \right) [\hbar] + \left( \frac{4 - D}{2} \right) [\text{mass}].$$</div>
+<p>
+You find a similar result as above: for <span class="math">\(3 &lt; D &lt; 5\)</span> (i.e. <span class="math">\(D = 4\)</span>) you have <span class="math">\(\Delta_{\hbar}(e) &gt; 0\)</span> but <span class="math">\(\Delta_{\hbar}(h) &lt; 0\)</span>.</p>
+<h3>Yang-Mills Intermedium</h3>
+<p>The kinetic term for the Yang-Mills intermedium <span class="math">\(V\)</span> coupling charged waves is found by modifying the field strength:
+</p>
+<div class="math">$$W_{ab} = \partial_{a} V_{b} - \partial_{b} V_{a} \longrightarrow Y_{ab} = \partial_{a} V_{b} - \partial_{b} V_{a} + [V_{a}, V_{b}].$$</div>
+<p>
+This does not lead to any changes in the dimensions of the coupling strength <span class="math">\(h\)</span>. Furthermore, since <span class="math">\(Y\)</span> does not contain any explicit factors of <span class="math">\(\hbar\)</span>, the corresponding kinetic term describes a classical field theory. This is worth mentioning because the kinetic term for the Yang-Mills intermedium <span class="math">\(A\)</span> coupling charged particles does contain explicit factors of <span class="math">\(\hbar\)</span>:
+</p>
+<div class="math">$$F_{ab} = \partial_{a} A_{b} - \partial_{b} A_{a} \longrightarrow G_{ab} = \partial_{a} A_{b} - \partial_{b} A_{a} + \frac{1}{\hbar} [A_{a}, A_{b}].$$</div>
+<p>
+This implies that the naive formulation of particles that carries nonabelian charge is not classical. Perhaps the commutator in <span class="math">\(G\)</span> should be demoted into a Poisson bracket, but then <span class="math">\(A\)</span> needs to be a function in phase space.</p>
+<h3>Chern-Simons Intermedium</h3>
+<p>In odd number of spacetime dimensions you can have a vector Chern-Simons intermedium. The kinetic term is proportional to the integral of the corresponding Chern-Simons form:
+</p>
+<div class="math">$$k \int \mathrm{d}x \, \Omega.$$</div>
+<p>
+For a Chern-Simons intermedium coupling charged waves, you use <span class="math">\(V\)</span> to construct <span class="math">\(\Omega\)</span>. This means that <span class="math">\(\Omega\)</span> has dimensions of inverse volume, and thus the Chern-Simons coupling strength <span class="math">\(k\)</span> has dimensions
+</p>
+<div class="math">$$[k] = [\hbar].$$</div>
+<p>
+This result holds in any odd number of spacetime dimensions.</p>
+<p>On the other hand, for a Chern-Simons intermedium coupling charged particles, you use <span class="math">\(A\)</span> to construct <span class="math">\(\Omega\)</span>. In <span class="math">\(D = 2n + 1\)</span>, the Chern-Simons form is
+</p>
+<div class="math">$$\Omega = F^{n} \wedge A + \ldots $$</div>
+<p>
+Since <span class="math">\(F\)</span> has units
+</p>
+<div class="math">$$[F] = -[\hbar] + 2[\text{mass}],$$</div>
+<p>
+the Chern-Simons form has units
+</p>
+<div class="math">$$[\Omega] = -n [\hbar] + (2n + 1) [\text{mass}],$$</div>
+<p>
+and thus, the Chern-Simons coupling strength <span class="math">\(k\)</span> has dimensions
+</p>
+<div class="math">$$[k] = \left( \frac{1 - D}{2} \right) [\hbar].$$</div>
+<p>
+So you find that <span class="math">\(\Delta_{\hbar}(k) &gt; 0\)</span> for waves, but <span class="math">\(\Delta_{\hbar}(k) &lt; 0\)</span> for particles. In both cases the Chern-Simons coupling has vanishing mass-dimension.</p>
+<h2>Higher Spin Intermedium</h2>
+<p>Besides the vector intermedium, there are higher spin intermedia. A spin-<span class="math">\(N\)</span> intermedium coupling particles is included via a term in the action of the form
+</p>
+<div class="math">$$\int \mathrm{d} \tau v \left[ \left( \frac{1}{v} \right)^{N} \dot{x}^{a_{1}} \cdots \dot{x}^{a_{N}} H_{a_{1} \cdots a_{N}} \right].$$</div>
+<p>
+Thus, the spin-<span class="math">\(N\)</span> field <span class="math">\(H\)</span> has dimensions
+</p>
+<div class="math">$$[H] = (2 - N) [\text{mass}].$$</div>
+<p>
+From the standard kinetic term,
+</p>
+<div class="math">$$\frac{1}{2 e_{N}^{2}} \int \mathrm{d} x [H \partial^{2} H],$$</div>
+<p>
+it follows that the coupling strength <span class="math">\(e_{N}\)</span> has dimensions
+</p>
+<div class="math">$$[e_{N}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{6 - 2N - D}{2} \right) [\text{mass}].$$</div>
+<p>
+Similarly, a spin-<span class="math">\(N\)</span> intermedium coupling waves is included via a term in the action of the form
+</p>
+<div class="math">$$\int \mathrm{d}x \left[ \phi \left( J^{a_{1} \cdots a_{N}} \partial_{a_{1}} \cdots \partial_{a_{N}} \right) \phi \right].$$</div>
+<p>
+This leads to the spin-<span class="math">\(N\)</span> field <span class="math">\(J\)</span> having dimensions
+</p>
+<div class="math">$$[J] = (N - 2) [\hbar] + (2 - N) [\text{mass}].$$</div>
+<p>
+From the standard kinetic term,
+</p>
+<div class="math">$$\frac{1}{2 h_{N}^{2}} \int \mathrm{d} x [J \partial^{2} J],$$</div>
+<p>
+it follows that the coupling strength <span class="math">\(h_{N}\)</span> has dimensions
+</p>
+<div class="math">$$[h_{N}] = \left( \frac{D - 7 + 2N}{2} \right) [\hbar] + \left( \frac{6 - 2N - D}{2} \right) [\text{mass}].$$</div>
+<p>
+An important example is the gravitational coupling, which corresponds to <span class="math">\(N = 2\)</span>:
+</p>
+<div class="math">$$[e_{2}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{2 - D}{2} \right) [\text{mass}], \qquad [h_{2}] = \left( \frac{D - 3}{2} \right) [\hbar] + \left( \frac{2 - D}{2} \right) [\text{mass}].$$</div>
+<p>
+Curiously, these two couplings have the same dimensions. Indeed, for <span class="math">\(D &gt; 3\)</span> you have <span class="math">\(\Delta_{\hbar}(e_{2}) &gt; 0\)</span>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'semiclassical-dimensional-analysis';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/physics/semiclassical-dimensional-analysis/';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://meirizarrygelpi.github.io/feeds/main.xml"><i class="fa fa-rss-square fa-lg"></i> RSS</a></li>
+                <li class="list-group-item"><a href="https://github.com/meirizarrygelpi"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/melvineloy"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+                <li class="list-group-item"><a href="https://www.linkedin.com/in/melvin-eloy-irizarry-gelpí-62b6234"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+              </ul>
+            </li>
+
+
+            <li class="list-group-item"><a href="http://meirizarrygelpi.github.io/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/arxiv.html">
+                            <i class="fa fa-folder-open fa-lg"></i> arXiv
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/bash.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Bash
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/go.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Go
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/maths.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Maths
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/notes.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Notes
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/physics.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Physics
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/python.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Python
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 M.E. Irizarry-Gelpí
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://meirizarrygelpi.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://meirizarrygelpi.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://meirizarrygelpi.github.io/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>
