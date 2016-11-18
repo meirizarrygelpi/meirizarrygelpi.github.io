@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Two-Dimensional Four-Point Kinematics (3) - M.E. Irizarry-Gelpí</title>
+    <title>Two-Dimensional Three-Point Slow Kinematics - M.E. Irizarry-Gelpí</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,21 +10,22 @@
 
     <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
 
-<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-four-point-3/">
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-three-point-slow/">
 
         <meta name="author" content="M.E. Irizarry-Gelpí" />
-        <meta name="keywords" content="kinematics,two-dimensional" />
-        <meta name="description" content="A look at the 2-to-2 relativistic kinematics with slow and null quanta in two-dimensional spacetime." />
+        <meta name="keywords" content="kinematics,two-dimensional,three-point" />
+        <meta name="description" content="A look at the 1-to-2 relativistic kinematics in two-dimensional spacetime with slow quanta." />
 
         <meta property="og:site_name" content="M.E. Irizarry-Gelpí" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Two-Dimensional Four-Point Kinematics (3)"/>
-        <meta property="og:url" content="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-four-point-3/"/>
-        <meta property="og:description" content="A look at the 2-to-2 relativistic kinematics with slow and null quanta in two-dimensional spacetime."/>
-        <meta property="article:published_time" content="2016-11-11" />
+        <meta property="og:title" content="Two-Dimensional Three-Point Slow Kinematics"/>
+        <meta property="og:url" content="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-three-point-slow/"/>
+        <meta property="og:description" content="A look at the 1-to-2 relativistic kinematics in two-dimensional spacetime with slow quanta."/>
+        <meta property="article:published_time" content="2016-11-18" />
             <meta property="article:section" content="Physics" />
             <meta property="article:tag" content="kinematics" />
             <meta property="article:tag" content="two-dimensional" />
+            <meta property="article:tag" content="three-point" />
             <meta property="article:author" content="M.E. Irizarry-Gelpí" />
 
 
@@ -86,10 +87,10 @@ M.E. Irizarry-Gelpí            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-four-point-3/"
+                    <a href="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-three-point-slow/"
                        rel="bookmark"
-                       title="Permalink to Two-Dimensional Four-Point Kinematics (3)">
-                        Two-Dimensional Four-Point Kinematics (3)
+                       title="Permalink to Two-Dimensional Three-Point Slow Kinematics">
+                        Two-Dimensional Three-Point Slow Kinematics
                     </a>
                 </h1>
             </header>
@@ -99,7 +100,7 @@ M.E. Irizarry-Gelpí            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-11-11T00:00:00-05:00"> Fri 11 November 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-11-18T00:00:00-05:00"> Fri 18 November 2016</time>
     </span>
 
 
@@ -114,113 +115,94 @@ M.E. Irizarry-Gelpí            </a>
 	<a href="http://meirizarrygelpi.github.io/tag/kinematics.html">kinematics</a>
         /
 	<a href="http://meirizarrygelpi.github.io/tag/two-dimensional.html">two-dimensional</a>
+        /
+	<a href="http://meirizarrygelpi.github.io/tag/three-point.html">three-point</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>You have two <strong>slow</strong> momenta (<span class="math">\(P_{2}\)</span> and <span class="math">\(P_{4}\)</span>) and two <strong>null</strong> momenta (<span class="math">\(P_{1}\)</span> and <span class="math">\(P_{3}\)</span>).</p>
+                <p>You have one incoming slow momentum (<span class="math">\(P_{1}\)</span>) and two outgoing slow momenta (<span class="math">\(P_{2}\)</span> and <span class="math">\(P_{3}\)</span>).</p>
 <h2>Energy-Momentum Vectors</h2>
-<p>The four external momenta can be written as
+<p>The six external slow momenta can be written as
 </p>
-<div class="math">$$ P_{1} = \begin{pmatrix} k_{1} &amp; k_{1} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{1} = \begin{pmatrix} m_{1} \cosh{(\xi_{1})} &amp; m_{1} \sinh{(\xi_{1})} \end{pmatrix}; $$</div>
 <div class="math">$$ P_{2} = \begin{pmatrix} m_{2} \cosh{(\xi_{2})} &amp; m_{2} \sinh{(\xi_{2})} \end{pmatrix}; $$</div>
-<div class="math">$$ P_{3} = \begin{pmatrix} k_{3} &amp; k_{3} \end{pmatrix}; $$</div>
-<div class="math">$$ P_{4} = \begin{pmatrix} m_{4} \cosh{(\xi_{4})} &amp; m_{4} \sinh{(\xi_{4})} \end{pmatrix}. $$</div>
-<p>
-Here <span class="math">\(k_{1} &gt; 0\)</span>, <span class="math">\(m_{2} &gt; 0\)</span>, <span class="math">\(k_{3} &gt; 0\)</span>, and <span class="math">\(m_{4} &gt; 0\)</span>.</p>
+<div class="math">$$ P_{3} = \begin{pmatrix} m_{3} \cosh{(\xi_{3})} &amp; m_{3} \sinh{(\xi_{3})} \end{pmatrix}. $$</div>
 <h2>Conservation</h2>
-<p>The conservation of energy leads to
+<p>The <strong>conservation of energy</strong> leads to
 </p>
-<div class="math">$$ k_{1} + m_{2} \cosh{(\xi_{2})} = k_{3} + m_{4} \cosh{(\xi_{4})}. $$</div>
+<div class="math">$$ m_{1} \cosh{(\xi_{1})} = m_{2} \cosh{(\xi_{2})} + m_{3} \cosh{(\xi_{3})}. $$</div>
 <p>
-Similarly, the conservation of momentum leads to
+Similarly, the <strong>conservation of momentum</strong> leads to
 </p>
-<div class="math">$$ k_{1} + m_{2} \sinh{(\xi_{2})} = k_{3} + m_{4} \sinh{(\xi_{4})}. $$</div>
+<div class="math">$$ m_{1} \sinh{(\xi_{1})} = m_{2} \sinh{(\xi_{2})} + m_{3} \sinh{(\xi_{3})}. $$</div>
 <p>
 These two expressions can be combined to yield two equivalent expressions:
 </p>
-<div class="math">$$ 2k_{1} + m_{2} \exp{(\xi_{2})} = 2k_{3} + m_{4} \exp{(\xi_{4})}; $$</div>
-<div class="math">$$ \frac{m_{2}}{\exp{(\xi_{2})}} = \frac{m_{4}}{\exp{(\xi_{4})}}. $$</div>
-<p>
-The second expression leads to
-</p>
-<div class="math">$$ \xi_{4} = \xi_{2} + \log{\left( \frac{m_{4}}{m_{2}} \right)}. $$</div>
-<p>
-Solving for <span class="math">\(k_{3}\)</span> gives
-</p>
-<div class="math">$$ k_{3} = k_{1} + \frac{m_{2}}{2} \exp{(\xi_{2})} - \frac{m_{4}}{2} \exp{(\xi_{4})} = k_{1} + \left( \frac{m_{2}^{2} - m_{4}^{2}}{2 m_{2}} \right) \exp{(\xi_{2})}. $$</div>
-<h2>2-Mandelstam Invariants</h2>
-<p>You can introduce three <strong>2-Mandelstam</strong> invariants:
-</p>
-<div class="math">$$ s = -(P_{1} + P_{2})^{2} = -(P_{3} + P_{4})^{2}; $$</div>
-<div class="math">$$ t = -(P_{1} - P_{3})^{2} = -(P_{2} - P_{4})^{2}; $$</div>
-<div class="math">$$ u = -(P_{1} - P_{4})^{2} = -(P_{2} - P_{3})^{2}. $$</div>
-<p>
-Due to the conservation laws, you have
-</p>
-<div class="math">$$ s + t + u = m_{2}^{2} + m_{4}^{2}. $$</div>
+<div class="math">$$ m_{1} \exp{(\xi_{1})} = m_{2} \exp{(\xi_{2})} + m_{3} \exp{(\xi_{3})}; $$</div>
+<div class="math">$$ \frac{m_{1}}{\exp{(\xi_{1})}} = \frac{m_{2}}{\exp{(\xi_{2})}} + \frac{m_{3}}{\exp{(\xi_{3})}}. $$</div>
 <h2>Regge-Mandelstam Invariants</h2>
-<p>You can introduce six <strong>Regge-Mandelstam</strong> invariants:
+<p>You can introduce three <strong>Regge-Mandelstam</strong> invariants:
 </p>
-<div class="math">$$ r_{12} \equiv -\frac{P_{1} \cdot P_{2}}{k_{1} m_{2}} = \frac{s - m_{2}^{2}}{2 k_{1} m_{2}} = \exp{(-\xi_{2})}; $$</div>
-<div class="math">$$ r_{34} \equiv -\frac{P_{3} \cdot P_{4}}{k_{3} m_{4}} = \frac{s - m_{4}^{2}}{2 k_{3} m_{4}} = \exp{(-\xi_{4})}; $$</div>
-<div class="math">$$ r_{13} \equiv -\frac{P_{1} \cdot P_{3}}{k_{1} k_{3}} = 0; $$</div>
-<div class="math">$$ r_{24} \equiv -\frac{P_{2} \cdot P_{4}}{m_{2} m_{4}} = \frac{m_{2}^{2} + m_{4}^{2}}{2 m_{2} m_{4}} = \cosh{(\xi_{2} - \xi_{4})}; $$</div>
-<div class="math">$$ r_{14} \equiv -\frac{P_{1} \cdot P_{4}}{k_{1} m_{4}} = \frac{m_{4}^{2} - u}{2 k_{1} m_{4}} = \exp{(-\xi_{4})}; $$</div>
-<div class="math">$$ r_{23} \equiv -\frac{P_{2} \cdot P_{3}}{m_{2} k_{3}} = \frac{m_{2}^{2} - u}{2 m_{2} k_{3}} = \exp{(-\xi_{2})}. $$</div>
+<div class="math">$$ r_{12} \equiv -\frac{P_{1} \cdot P_{2}}{m_{1} m_{2}} = \frac{m_{1}^{2} + m_{2}^{2} - m_{3}^{2}}{2 m_{1} m_{2}} = \cosh{(\xi_{1} - \xi_{2})}; $$</div>
+<div class="math">$$ r_{13} \equiv -\frac{P_{1} \cdot P_{3}}{m_{1} m_{3}} = \frac{m_{1}^{2} - m_{2}^{2} + m_{3}^{2}}{2 m_{1} m_{3}} = \cosh{(\xi_{1} - \xi_{3})}; $$</div>
+<div class="math">$$ r_{23} \equiv -\frac{P_{2} \cdot P_{3}}{m_{2} m_{3}} = \frac{m_{1}^{2} - m_{2}^{2} - m_{3}^{2}}{2 m_{2} m_{3}} = \cosh{(\xi_{2} - \xi_{3})}; $$</div>
 <p>
 Since the hyperbolic cosine satisfies
 </p>
 <div class="math">$$ \cosh{(x)} \geq 1; $$</div>
 <p>
-you have the condition:
+you have the conditions:
 </p>
-<div class="math">$$ m_{2}^{2} + m_{4}^{2} \geq 2 m_{2} m_{4}. $$</div>
+<div class="math">$$ m_{3}^{2} \leq (m_{1} - m_{2})^{2}, \qquad m_{2}^{2} \leq (m_{1} - m_{3})^{2}, \qquad m_{1}^{2} \geq (m_{2} + m_{3})^{2}. $$</div>
 <p>
-Indeed, <span class="math">\(r_{13} = 0\)</span> implies that <span class="math">\(t = 0\)</span> and that the vector <span class="math">\(P_{t} = P_{1} - P_{3} = P_{4} - P_{2}\)</span> is null. Since <span class="math">\(t = 0\)</span>, you also have
+All of these are equivalent to
 </p>
-<div class="math">$$ s + u = m_{2}^{2} + m_{4}^{2}. $$</div>
+<div class="math">$$ m_{1} \geq m_{2} + m_{3}. $$</div>
 <p>
-Since the exponential function is always positive, you also have
+That is, the incoming mass must be larger than the sum of the two outgoing masses.</p>
+<h2>Solving for the Outgoing Data</h2>
+<p>If you introduce variables <span class="math">\(x_{2}\)</span> and <span class="math">\(x_{3}\)</span> via
 </p>
-<div class="math">$$ r_{12} = r_{23} \geq 0, \qquad r_{14} = r_{34} \geq 0. $$</div>
+<div class="math">$$ x_{2} = \exp{(\xi_{2})}, \qquad x_{3} = \exp{(\xi_{3})}; $$</div>
 <p>
-The equality constraint implies that
+then the conservation laws can be rewritten as
 </p>
-<div class="math">$$ \frac{s - m_{2}^{2}}{m_{2}^{2} - u} = \frac{k_{1}}{k_{3}} = \frac{m_{4}^{2} - u}{s - m_{4}^{2}}. $$</div>
+<div class="math">$$ A = m_{2} x_{2} + m_{3} x_{3}, \qquad B = \frac{m_{2}}{x_{2}} + \frac{m_{3}}{x_{3}}. $$</div>
 <p>
-In terms of <span class="math">\(s\)</span> only, you find that
+Here
 </p>
-<div class="math">$$ \frac{k_{1}}{k_{3}} = \frac{s - m_{2}^{2}}{s - m_{4}^{2}}. $$</div>
+<div class="math">$$ A = m_{1} \exp{(\xi_{1})}; $$</div>
 <p>
-You can use this to solve for <span class="math">\(k_{3}\)</span>:
+and
 </p>
-<div class="math">$$ k_{3} = \left( \frac{s - m_{4}^{2}}{s - m_{2}^{2}} \right) k_{1}. $$</div>
-<p>
-Combining this with the previous result gives <span class="math">\(k_{1}\)</span> in terms of <span class="math">\(\xi_{2}\)</span>:
-</p>
-<div class="math">$$ k_{1} = \left( \frac{s - m_{2}^{2}}{2 m_{2}} \right) \exp{(\xi_{2})}; $$</div>
-<p>
-and thus
-</p>
-<div class="math">$$ k_{3} = \left( \frac{s - m_{4}^{2}}{2 m_{2}} \right) \exp{(\xi_{2})} = \left( \frac{s - m_{4}^{2}}{2 m_{4}} \right) \exp{(\xi_{4})}. $$</div>
-<p>
-The positivity constraint gives
-</p>
-<div class="math">$$ \frac{s - m_{2}^{2}}{2 k_{1} m_{2}} \geq 0 \quad \Longrightarrow \quad s \geq m_{2}^{2}. $$</div>
-<p>
-Similarly, you also need <span class="math">\(s \geq m_{4}^{2}\)</span>. Both of these conditions mean that the vector <span class="math">\(P_{s} = P_{1} + P_{2} = P_{3} + P_{4}\)</span> is slow and can be written as
-</p>
-<div class="math">$$ P_{s} = \begin{pmatrix} \sqrt{s} \cosh{(\xi_{s})} &amp; \sqrt{s}\sinh{(\xi_{s})}  \end{pmatrix}. $$</div>
-<p>
-The composite slow rapidity <span class="math">\(\xi_{s}\)</span> is given by
-</p>
-<div class="math">$$ \xi_{s} = \xi_{2} +  \log{\left( \frac{\sqrt{s}}{m_{2}} \right)}. $$</div>
+<div class="math">$$ B = \frac{m_{1}}{\exp{(\xi_{1})}}. $$</div>
 <p>
 Note that
 </p>
-<div class="math">$$ s - m_{2}^{2} = m_{4}^{2} - u \geq 0, \qquad s - m_{4}^{2} = m_{2}^{2} - u \geq 0. $$</div>
+<div class="math">$$ A B = - \Vert P_{1} \Vert^{2} = m_{1}^{2}. $$</div>
 <p>
-This means that the vector <span class="math">\(P_{u} = P_{1} - P_{4} = P_{3} - P_{2}\)</span> does not have a fixed rapidity and there are three regimes.</p>
+Solving for <span class="math">\(x_{2}\)</span> and <span class="math">\(x_{3}\)</span> gives
+</p>
+<div class="math">$$ x_{2} = \frac{AB + m_{2}^{2} - m_{3}^{2} + \sqrt{\left[ AB - (m_{2} + m_{3})^{2} \right] \left[ AB - (m_{2} - m_{3})^{2} \right]}}{2 m_{2} B}; $$</div>
+<div class="math">$$ x_{3} = \frac{AB - m_{2}^{2} + m_{3}^{2} - \sqrt{\left[ AB - (m_{2} + m_{3})^{2} \right] \left[ AB - (m_{2} - m_{3})^{2} \right]}}{2 m_{3} B}. $$</div>
+<p>
+In terms of <span class="math">\(m_{1}\)</span> and the variable <span class="math">\(x_{1}\)</span> defined via
+</p>
+<div class="math">$$ x_{1} = \exp{(\xi_{1})}; $$</div>
+<p>
+you have
+</p>
+<div class="math">$$ x_{2} = \left(\frac{m_{1}^{2} + m_{2}^{2} - m_{3}^{2} + \sqrt{\left[ m_{1}^{2} - (m_{2} + m_{3})^{2} \right] \left[ m_{1}^{2} - (m_{2} - m_{3})^{2} \right]}}{2 m_{1} m_{2}}\right) x_{1}; $$</div>
+<div class="math">$$ x_{3} = \left(\frac{m_{1}^{2} - m_{2}^{2} + m_{3}^{2} - \sqrt{\left[ m_{1}^{2} - (m_{2} + m_{3})^{2} \right] \left[ m_{1}^{2} - (m_{2} - m_{3})^{2} \right]}}{2 m_{1} m_{3}}\right) x_{1}. $$</div>
+<p>
+Solving for the rapidities gives
+</p>
+<div class="math">$$ \xi_{2} = \xi_{1} + \log{\left(\frac{m_{1}^{2} + m_{2}^{2} - m_{3}^{2} + \sqrt{\left[ m_{1}^{2} - (m_{2} + m_{3})^{2} \right] \left[ m_{1}^{2} - (m_{2} - m_{3})^{2} \right]}}{2 m_{1} m_{2}}\right)}; $$</div>
+<div class="math">$$ \xi_{3} = \xi_{1} + \log{\left(\frac{m_{1}^{2} - m_{2}^{2} + m_{3}^{2} - \sqrt{\left[ m_{1}^{2} - (m_{2} + m_{3})^{2} \right] \left[ m_{1}^{2} - (m_{2} - m_{3})^{2} \right]}}{2 m_{1} m_{3}}\right)}. $$</div>
+<p>
+A simpler relation between <span class="math">\(\xi_{2}\)</span> and <span class="math">\(\xi_{3}\)</span> follows from <span class="math">\(r_{23}\)</span>:
+</p>
+<div class="math">$$ \exp{(\xi_{2} - \xi_{3})} = \frac{m_{1}^{2} - m_{2}^{2} - m_{3}^{2} + \sqrt{\left[ m_{1}^{2} - (m_{2} + m_{3})^{2} \right] \left[ m_{1}^{2} - (m_{2} - m_{3})^{2} \right]}}{2 m_{2} m_{3}}. $$</div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -288,8 +270,8 @@ This means that the vector <span class="math">\(P_{u} = P_{1} - P_{4} = P_{3} - 
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
 
-                    var disqus_identifier = 'two-dimensional-four-point-3';
-                var disqus_url = 'http://meirizarrygelpi.github.io/posts/physics/two-dimensional-four-point-3/';
+                    var disqus_identifier = 'two-dimensional-three-point-slow';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/physics/two-dimensional-three-point-slow/';
 
             var disqus_config = function () {
                 this.language = "en";
