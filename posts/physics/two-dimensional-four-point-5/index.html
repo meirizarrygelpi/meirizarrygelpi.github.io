@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Two-Dimensional Six-Point Slow Kinematics - M.E. Irizarry-Gelpí</title>
+    <title>Two-Dimensional Four-Point Kinematics (5) - M.E. Irizarry-Gelpí</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,17 +10,17 @@
 
     <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
 
-<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-six-point-slow/">
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-four-point-5/">
 
         <meta name="author" content="M.E. Irizarry-Gelpí" />
         <meta name="keywords" content="kinematics,two-dimensional" />
-        <meta name="description" content="A look at the 4-to-2 relativistic kinematics in two-dimensional spacetime." />
+        <meta name="description" content="A look at the 2-to-2 relativistic kinematics in two-dimensional spacetime with null quanta." />
 
         <meta property="og:site_name" content="M.E. Irizarry-Gelpí" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Two-Dimensional Six-Point Slow Kinematics"/>
-        <meta property="og:url" content="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-six-point-slow/"/>
-        <meta property="og:description" content="A look at the 4-to-2 relativistic kinematics in two-dimensional spacetime."/>
+        <meta property="og:title" content="Two-Dimensional Four-Point Kinematics (5)"/>
+        <meta property="og:url" content="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-four-point-5/"/>
+        <meta property="og:description" content="A look at the 2-to-2 relativistic kinematics in two-dimensional spacetime with null quanta."/>
         <meta property="article:published_time" content="2016-11-17" />
             <meta property="article:section" content="Physics" />
             <meta property="article:tag" content="kinematics" />
@@ -86,10 +86,10 @@ M.E. Irizarry-Gelpí            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-six-point-slow/"
+                    <a href="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-four-point-5/"
                        rel="bookmark"
-                       title="Permalink to Two-Dimensional Six-Point Slow Kinematics">
-                        Two-Dimensional Six-Point Slow Kinematics
+                       title="Permalink to Two-Dimensional Four-Point Kinematics (5)">
+                        Two-Dimensional Four-Point Kinematics (5)
                     </a>
                 </h1>
             </header>
@@ -117,111 +117,75 @@ M.E. Irizarry-Gelpí            </a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>You have four incoming slow momenta (<span class="math">\(P_{1}\)</span>, <span class="math">\(P_{2}\)</span>, <span class="math">\(P_{3}\)</span>, and <span class="math">\(P_{4}\)</span>) and two outgoing slow momenta (<span class="math">\(P_{5}\)</span> and <span class="math">\(P_{6}\)</span>).</p>
+                <p>You have two incoming <strong>null</strong> momenta (<span class="math">\(P_{1}\)</span> and <span class="math">\(P_{2}\)</span>) and two outgoing <strong>null</strong> momenta (<span class="math">\(P_{3}\)</span> and <span class="math">\(P_{4}\)</span>). This problem does not have a non-relativistic limit.</p>
 <h2>Energy-Momentum Vectors</h2>
-<p>Each of the six external slow momenta can be written as
+<p>In a more traditional approach, I would have chosen the four external null momenta as
 </p>
-<div class="math">$$ P_{i} = \begin{pmatrix} m_{i} \cosh{(\xi_{i})} &amp; m_{i} \sinh{(\xi_{i})} \end{pmatrix}. $$</div>
+<div class="math">$$ P_{i} = \begin{pmatrix} k_{i} &amp; k_{i} \end{pmatrix}. $$</div>
 <p>
-Here <span class="math">\(m_{i} &gt; 0\)</span> and <span class="math">\(-\infty &lt; \xi_{i} &lt; \infty\)</span>.</p>
+But then any sum or difference of momenta will be null too. This leads to all invariants being zero.</p>
+<p>The four external null momenta are
+</p>
+<div class="math">$$ P_{1} = \begin{pmatrix} k_{1} &amp; k_{1} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{2} = \begin{pmatrix} k_{2} &amp; -k_{2} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{3} = \begin{pmatrix} k_{3} &amp; k_{3} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{4} = \begin{pmatrix} k_{4} &amp; -k_{4} \end{pmatrix}. $$</div>
+<p>
+Here <span class="math">\(k_{1} &gt; 0\)</span>, <span class="math">\(k_{2} &gt; 0\)</span>, <span class="math">\(k_{3} &gt; 0\)</span>, and <span class="math">\(k_{4} &gt; 0\)</span>.</p>
 <h2>Conservation</h2>
-<p>The <strong>conservation of energy</strong> leads to
+<p>The conservation of energy leads to
 </p>
-<div class="math">$$ \sum_{i = 1}^{4} m_{i} \cosh{(\xi_{i})} = \sum_{j = 5}^{6} m_{j} \cosh{(\xi_{j})}. $$</div>
+<div class="math">$$ k_{1} + k_{2} = k_{3} + k_{4}. $$</div>
 <p>
-Similarly, the <strong>conservation of momentum</strong> leads to
+Similarly, the conservation of momentum leads to
 </p>
-<div class="math">$$ \sum_{i = 1}^{4} m_{i} \sinh{(\xi_{i})} = \sum_{j = 5}^{6} m_{j} \sinh{(\xi_{j})}. $$</div>
+<div class="math">$$ k_{1} - k_{2} = k_{3} - k_{4}. $$</div>
 <p>
 These two expressions can be combined to yield two equivalent expressions:
 </p>
-<div class="math">$$ \sum_{i = 1}^{4} m_{i} \exp{(\xi_{i})} = \sum_{j = 5}^{6} m_{j} \exp{(\xi_{j})}; $$</div>
-<div class="math">$$ \sum_{i = 1}^{4} \frac{m_{i}}{\exp{(\xi_{i})}} = \sum_{j = 5}^{6} \frac{m_{j}}{\exp{(\xi_{j})}}. $$</div>
+<div class="math">$$ k_{1} = k_{3}; \qquad k_{2} = k_{4}. $$</div>
+<p>
+That is, this particular set of external momenta corresponds to the identity permutation.</p>
 <h2>2-Mandelstam Invariants</h2>
-<p>You can introduce fifteen <strong>2-Mandelstam</strong> invariants, but only four are relevant:
+<p>You can introduce three <strong>2-Mandelstam</strong> invariants:
 </p>
-<div class="math">$$ s_{12} = -\Vert P_{1} + P_{2}\Vert^{2}, \qquad s_{13} = -\Vert P_{1} + P_{3}\Vert^{2}, \qquad s_{14} = -\Vert P_{1} + P_{4}\Vert^{2}; $$</div>
-<div class="math">$$ s_{56} = -\Vert P_{5} + P_{6} \Vert^{2}. $$</div>
-<h2>3-Mandelstam Invariants</h2>
-<p>You can introduce ten <strong>3-Mandelstam</strong> invariants, but only one is relevant:
+<div class="math">$$ s = -(P_{1} + P_{2})^{2} = -(P_{3} + P_{4})^{2}; $$</div>
+<div class="math">$$ t = -(P_{1} - P_{3})^{2} = -(P_{2} - P_{4})^{2}; $$</div>
+<div class="math">$$ u = -(P_{1} - P_{4})^{2} = -(P_{2} - P_{3})^{2}. $$</div>
+<p>
+Due to the conservation laws, you have
 </p>
-<div class="math">$$ s_{123} = -\Vert P_{1} + P_{2} + P_{3} \Vert^{2} = -\Vert P_{4} - P_{5} - P_{6} \Vert^{2}. $$</div>
+<div class="math">$$ s + t + u = 0. $$</div>
 <h2>Regge-Mandelstam Invariants</h2>
-<p>You can introduce fifteen <strong>Regge-Mandelstam</strong> invariants, but only four are relevant:
+<p>You can introduce six <strong>Regge-Mandelstam</strong> invariants:
 </p>
-<div class="math">$$ r_{12} \equiv -\frac{P_{1} \cdot P_{2}}{m_{1} m_{2}} = \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}} = \cosh{(\xi_{1} - \xi_{2})}; $$</div>
-<div class="math">$$ r_{13} \equiv -\frac{P_{1} \cdot P_{3}}{m_{1} m_{3}} = \frac{s_{13} - m_{1}^{2} - m_{3}^{2}}{2 m_{1} m_{3}} = \cosh{(\xi_{1} - \xi_{3})}; $$</div>
-<div class="math">$$ r_{14} \equiv -\frac{P_{1} \cdot P_{4}}{m_{1} m_{4}} = \frac{s_{14} - m_{1}^{2} - m_{4}^{2}}{2 m_{1} m_{4}} = \cosh{(\xi_{1} - \xi_{4})}; $$</div>
-<div class="math">$$ r_{56} \equiv -\frac{P_{5} \cdot P_{6}}{m_{5} m_{6}} = \frac{s_{56} - m_{5}^{2} - m_{6}^{2}}{2 m_{5} m_{6}} = \cosh{(\xi_{5} - \xi_{6})}. $$</div>
+<div class="math">$$ r_{12} \equiv -\frac{P_{1} \cdot P_{2}}{k_{1} k_{2}} = \frac{s}{2 k_{1} k_{2}} = 2; $$</div>
+<div class="math">$$ r_{34} \equiv -\frac{P_{3} \cdot P_{4}}{k_{3} k_{4}} = \frac{s}{2 k_{1} k_{2}} = 2; $$</div>
+<div class="math">$$ r_{13} \equiv -\frac{P_{1} \cdot P_{3}}{k_{1} k_{3}} = -\frac{t}{2 k_{1}^{2}} = 0; $$</div>
+<div class="math">$$ r_{24} \equiv -\frac{P_{2} \cdot P_{4}}{k_{2} k_{4}} = -\frac{t}{2 k_{2}^{2}} = 0; $$</div>
+<div class="math">$$ r_{14} \equiv -\frac{P_{1} \cdot P_{4}}{k_{1} k_{4}} = -\frac{u}{2 k_{1} k_{2}} = 2; $$</div>
+<div class="math">$$ r_{23} \equiv -\frac{P_{2} \cdot P_{3}}{k_{2} k_{3}} = -\frac{u}{2 k_{1} k_{2}} = 2. $$</div>
 <p>
-Since the hyperbolic cosine satisfies
+It follows that
 </p>
-<div class="math">$$ \cosh{(x)} \geq 1; $$</div>
+<div class="math">$$ s \geq 0, \qquad t = 0, \qquad  u \leq 0. $$</div>
 <p>
-you have the conditions:
+These conditions define the range of values allowed for the 2-Mandelstam invariants. The first one says that <span class="math">\(s\)</span> only takes positive values. Thus, the vector <span class="math">\(P_{s} = P_{1} + P_{2} = P_{3} + P_{4}\)</span> is slow and you can write
 </p>
-<div class="math">$$ s_{ij} \geq (m_{i} + m_{j})^{2}. $$</div>
+<div class="math">$$ P_{s} = \begin{pmatrix} \sqrt{s} \cosh{(\xi_{s})} &amp; \sqrt{s} \sinh{(\xi_{s})} \end{pmatrix}. $$</div>
 <p>
-These conditions define the range of values allowed for the 2-Mandelstam invariants. Since the 3-Mandelstam invariants can be written in terms of the 2-Mandelstam invariants, you also find conditions on the 3-Mandelstam invariants:
+The second condition says that <span class="math">\(t\)</span> is zero. But since <span class="math">\(k_{3} = k_{1}\)</span>, it follows that <span class="math">\(P_{3} = P_{1}\)</span> and thus the vector <span class="math">\(P_{t} = P_{1} - P_{3}\)</span> is identically zero. The third condition says that <span class="math">\(u\)</span> is negative. This means that the vector <span class="math">\(P_{u} = P_{1} - P_{4} = P_{3} - P_{2}\)</span> is fast and you can write
 </p>
-<div class="math">$$ s_{123} \geq (m_{1} + m_{2})^{2} + (m_{2} + m_{3})^{2} + (m_{3} + m_{1})^{2} - m_{1}^{2} - m_{2}^{2} - m_{3}^{2}. $$</div>
+<div class="math">$$ P_{u} = \begin{pmatrix} \sqrt{-u} \sinh{(\rho_{u})} &amp; \sqrt{-u} \cosh{(\rho_{u})} \end{pmatrix}. $$</div>
 <p>
-Hence
+However, since <span class="math">\(P_{s} \cdot P_{u} = 0\)</span>, you have <span class="math">\(\rho_{u} = \xi_{s}\)</span>.</p>
+<p>You can write <span class="math">\(k_{2}\)</span>, <span class="math">\(k_{3}\)</span>, and <span class="math">\(k_{4}\)</span> in terms of <span class="math">\(k_{1}\)</span> and <span class="math">\(s\)</span>:
 </p>
-<div class="math">$$ s_{123} \geq (m_{1} + m_{2} + m_{3})^{2}. $$</div>
-<h2>Regge-Sudakov Invariants</h2>
-<p>You can introduce four Regge-Sudakov invariants via
+<div class="math">$$ k_{2} = \frac{s}{4 k_{1}}, \qquad k_{3} = k_{1}, \qquad k_{4} = \frac{s}{4 k_{1}}. $$</div>
+<h2>Composite Rapidities</h2>
+<p>The slow rapidity <span class="math">\(\xi_{s}\)</span> associated to <span class="math">\(P_{s}\)</span> can be writen as
 </p>
-<div class="math">$$ 2 r_{ij} = R_{ij} + \frac{1}{R_{ij}}. $$</div>
-<p>
-Since the Regge-Mandelstam invariants are hyperbolic cosines, the Regge-Sudakov invariants are exponentials:
-</p>
-<div class="math">$$ r_{ij} = \cosh{(\xi_{i} - \xi_{j})} \quad \Longrightarrow \quad R_{ij} = \exp{(\xi_{i} - \xi_{j})}. $$</div>
-<p>
-In terms of the masses and the 2-Mandelstam invariants you have
-</p>
-<div class="math">$$ R_{ij} = \frac{s_{ij} - m_{i}^{2} - m_{j}^{2} + \sqrt{ \left( s_{ij} - m_{i}^{2} - m_{j}^{2} \right)^{2} - 4 m_{i}^{2} m_{j}^{2}}}{2 m_{i} m_{j}}. $$</div>
-<h2>Solving for the Outgoing Data</h2>
-<p>If you introduce variables <span class="math">\(f_{i}\)</span> via
-</p>
-<div class="math">$$ f_{i} = \exp{(\xi_{i})}; $$</div>
-<p>
-then the conservation laws can be rewritten as
-</p>
-<div class="math">$$ A = m_{5} f_{5} + m_{6} f_{6}, \qquad B = \frac{m_{5}}{f_{5}} + \frac{m_{6}}{f_{6}}. $$</div>
-<p>
-Here
-</p>
-<div class="math">$$ A = \sum_{i = 1}^{4} m_{i} f_{i}; $$</div>
-<p>
-and
-</p>
-<div class="math">$$ B = \sum_{i = 1}^{4} \frac{m_{i}}{f_{i}}. $$</div>
-<p>
-Note that
-</p>
-<div class="math">$$ A B = - \Vert P_{1} + P_{2} + P_{3} + P_{4} \Vert^{2} = s_{56}. $$</div>
-<p>
-Let
-</p>
-<div class="math">$$ A = \sqrt{s_{56}} C, \qquad B = \frac{\sqrt{s_{56}}}{C}. $$</div>
-<p>
-Then
-</p>
-<div class="math">$$ C = \sqrt{\frac{A}{B}}. $$</div>
-<p>
-In terms of the <span class="math">\(m_{i}\)</span> and the <span class="math">\(f_{i}\)</span> you have
-</p>
-<div class="math">$$ C = \sqrt{f_{1} f_{2} f_{3} f_{4}} \sqrt{ \frac{m_{1} f_{1} + m_{2} f_{2} + m_{3} f_{3} + m_{4} f_{4}}{m_{1} f_{2} f_{3} f_{4} + m_{2} f_{3} f_{4} f_{1} + m_{3} f_{4} f_{1} f_{2} + m_{4} f_{1} f_{2} f_{3}} }. $$</div>
-<p>
-In this form, <span class="math">\(C\)</span> is symmetric in all variables. Another way to write <span class="math">\(C\)</span> is
-</p>
-<div class="math">$$ C = f_{1} \sqrt{ \frac{m_{1} + \dfrac{m_{2}}{R_{12}} + \dfrac{m_{3}}{R_{13}} + \dfrac{m_{4}}{R_{14}}}{m_{1} + m_{2} R_{12} + m_{3} R_{13} + m_{4} R_{14}} }. $$</div>
-<p>
-Solving for <span class="math">\(f_{5}\)</span> and <span class="math">\(f_{6}\)</span> gives
-</p>
-<div class="math">$$ f_{5} = \frac{AB + m_{5}^{2} - m_{6}^{2} + \sqrt{\left[ AB - (m_{5} + m_{6})^{2} \right] \left[ AB - (m_{5} - m_{6})^{2} \right]}}{2 m_{5} B}; $$</div>
-<div class="math">$$ f_{6} = \frac{AB - m_{5}^{2} + m_{6}^{2} - \sqrt{\left[ AB - (m_{5} + m_{6})^{2} \right] \left[ AB - (m_{5} - m_{6})^{2} \right]}}{2 m_{6} B}. $$</div>
+<div class="math">$$ \xi_{s} = \log{\left( \frac{2 k_{1}}{\sqrt{s}} \right)}. $$</div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -289,8 +253,8 @@ Solving for <span class="math">\(f_{5}\)</span> and <span class="math">\(f_{6}\)
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
 
-                    var disqus_identifier = 'two-dimensional-six-point-slow';
-                var disqus_url = 'http://meirizarrygelpi.github.io/posts/physics/two-dimensional-six-point-slow/';
+                    var disqus_identifier = 'two-dimensional-four-point-5';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/physics/two-dimensional-four-point-5/';
 
             var disqus_config = function () {
                 this.language = "en";
