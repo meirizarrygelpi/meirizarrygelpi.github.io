@@ -126,8 +126,8 @@ M.E. Irizarry-Gelpí            </a>
 <p>
 That is,
 </p>
-<div class="math">$$ P_{1} = \begin{pmatrix} m_{1} \cosh{(\xi_{1})} &amp; m_{1} \sinh{(\xi_{1})} \end{pmatrix}; $$</div>
-<div class="math">$$ P_{2} = \begin{pmatrix} m_{2} \cosh{(\xi_{2})} &amp; m_{2} \sinh{(\xi_{2})} \end{pmatrix}. $$</div>
+<div class="math">$$ P_{1} = \begin{bmatrix} m_{1} \cosh{(\xi_{1})} &amp; m_{1} \sinh{(\xi_{1})} \end{bmatrix}; $$</div>
+<div class="math">$$ P_{2} = \begin{bmatrix} m_{2} \cosh{(\xi_{2})} &amp; m_{2} \sinh{(\xi_{2})} \end{bmatrix}. $$</div>
 <p>
 You can introduce a <strong>2-Mandelstam</strong> invariant:
 </p>
@@ -135,7 +135,7 @@ You can introduce a <strong>2-Mandelstam</strong> invariant:
 <p>
 Now consider two <strong>null</strong> vectors <span class="math">\(N_{1}\)</span> and <span class="math">\(N_{2}\)</span>:
 </p>
-<div class="math">$$ N_{1} = \begin{pmatrix} k_{1} &amp; k_{1} \end{pmatrix}, \qquad N_{2} = \begin{pmatrix} k_{2} &amp; -k_{2} \end{pmatrix}. $$</div>
+<div class="math">$$ N_{1} = \begin{bmatrix} k_{1} &amp; k_{1} \end{bmatrix}, \qquad N_{2} = \begin{bmatrix} k_{2} &amp; -k_{2} \end{bmatrix}. $$</div>
 <p>
 Note that
 </p>
@@ -179,6 +179,24 @@ There is also a relationship between <span class="math">\(r_{12}\)</span> and <s
 <div class="math">$$ r_{12} = \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}. $$</div>
 <p>
 Combining these you can find an expression for <span class="math">\(R_{12}\)</span> in terms of <span class="math">\(s_{12}\)</span> and the masses.</p>
+<p>The two Sudakov vectors introduced above form a linear basis for the whole set of energy-momentum vectors. That is, there is no transversal component to the Sudakov subspace. Any vector <span class="math">\(P\)</span> can be written as
+</p>
+<div class="math">$$ P = \nu_{1} N_{1} + \nu_{2} N_{2}; $$</div>
+<p>
+with
+</p>
+<div class="math">$$ \nu_{1} = \frac{N_{2} \cdot P}{N_{1} \cdot N_{2}}, \qquad  \nu_{2} = \frac{N_{1} \cdot P}{N_{1} \cdot N_{2}}. $$</div>
+<p>
+An important case is when <span class="math">\(P\)</span> is slow and given by
+</p>
+<div class="math">$$ P = \begin{bmatrix} m \cosh{(\xi)} &amp; m \sinh{(\xi)} \end{bmatrix}. $$</div>
+<p>
+Then it follows that
+</p>
+<div class="math">$$ \nu_{1} = \frac{m \exp{(\xi)} }{2 k_{1}} = \left(\frac{m}{m_{1}} \right) \exp{(\xi - \xi_{1})} ; $$</div>
+<div class="math">$$ \nu_{2} = \frac{m}{2 k_{2} \exp{(\xi)} } = \left(\frac{m}{m_{2}} \right) \exp{(\xi_{2} - \xi)} . $$</div>
+<p>
+These are the Sudakov components of <span class="math">\(P\)</span>. If you work with 2-to-<span class="math">\(N\)</span> scattering, then all <span class="math">\(N\)</span> outgoing energy-momentum vectors can be decomposed in the same way in terms of the two incoming energy-momentum vectors.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
