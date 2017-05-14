@@ -145,7 +145,7 @@ However, only 3 of these differences are linearly independent. For example,
 <p>
 You can introduce the following quantities:
 </p>
-<div class="math">$$ p \equiv \frac{\Vert X_{14} \Vert}{\Vert X_{12} \Vert}, \qquad x \equiv \frac{X_{12} \cdot X_{14}}{\Vert X_{12} \Vert \Vert X_{14} \Vert}, \qquad z \equiv \frac{X_{14} \cdot X_{32}}{\Vert X_{14} \Vert \Vert X_{32} \Vert}, \qquad y \equiv \frac{X_{12} \cdot X_{32}}{\Vert X_{12} \Vert \Vert X_{32} \Vert}, \qquad q \equiv \frac{\Vert X_{32} \Vert}{\Vert X_{12} \Vert}.$$</div>
+<div class="math">$$ p \equiv \frac{\Vert X_{14} \Vert}{\Vert X_{12} \Vert}, \qquad x \equiv \frac{X_{12} \cdot X_{14}}{\Vert X_{12} \Vert \Vert X_{14} \Vert}, \qquad a \equiv \frac{X_{14} \cdot X_{32}}{\Vert X_{14} \Vert \Vert X_{32} \Vert}, \qquad y \equiv \frac{X_{12} \cdot X_{32}}{\Vert X_{12} \Vert \Vert X_{32} \Vert}, \qquad q \equiv \frac{\Vert X_{32} \Vert}{\Vert X_{12} \Vert}.$$</div>
 <p>
 The quadrance of <span class="math">\(X_{34}\)</span> can be written as
 </p>
@@ -153,7 +153,7 @@ The quadrance of <span class="math">\(X_{34}\)</span> can be written as
 <p>
 Thus,
 </p>
-<div class="math">$$ \frac{\Vert X_{34} \Vert^{2}}{\Vert X_{12} \Vert^{2}} = 1 - 2xp -2yq + p^{2} + 2zpq + q^{2}. $$</div>
+<div class="math">$$ \frac{\Vert X_{34} \Vert^{2}}{\Vert X_{12} \Vert^{2}} = 1 - 2xp -2yq + p^{2} + 2apq + q^{2}. $$</div>
 <p>
 In a similar fashion, you also have
 </p>
@@ -169,7 +169,7 @@ With 4 position vectors, you can construct two distinct conformal ratios:
 <p>
 In terms of the polynomials from above, you have
 </p>
-<div class="math">$$ u = \frac{1}{p^{2} q^{2}}(1 - 2xp -2yq + p^{2} + 2zpq + q^{2}), $$</div>
+<div class="math">$$ u = \frac{1}{p^{2} q^{2}}(1 - 2xp -2yq + p^{2} + 2apq + q^{2}), $$</div>
 <p>
 and
 </p>
@@ -181,9 +181,9 @@ Note that for <span class="math">\(\lambda \neq 0, -1, -2, ...\)</span> you have
 <p>
 Here <span class="math">\(C_{n}{}^{\lambda}(x)\)</span> is a univariate Gegenbauer polynomial. On the other hand, for <span class="math">\(u\)</span> you can write
 </p>
-<div class="math">$$ \left( \frac{1}{u} \right)^{\lambda} = p^{2\lambda} q^{2\lambda} \sum_{m = 0}^{\infty} \sum_{n = 0}^{\infty} p^{m} q^{n} C_{mn}{}^{\lambda}(x,y \vert z). $$</div>
+<div class="math">$$ \left( \frac{1}{u} \right)^{\lambda} = p^{2\lambda} q^{2\lambda} \sum_{m = 0}^{\infty} \sum_{n = 0}^{\infty} p^{m} q^{n} C_{mn}{}^{\lambda}(x,y \vert a). $$</div>
 <p>
-Here <span class="math">\(C_{mn}{}^{\lambda}(x, y \vert z)\)</span> is a bivariate Gegenbauer polynomial.</p>
+Here <span class="math">\(C_{mn}{}^{\lambda}(x, y \vert a)\)</span> is a bivariate Gegenbauer polynomial.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
