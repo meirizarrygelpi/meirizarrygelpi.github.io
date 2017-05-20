@@ -138,10 +138,6 @@ Recall the definition of the exponential function as a limit:
 </p>
 <div class="math">$$ \exp{(x)} = \lim_{\lambda \rightarrow \infty} \left(1 + \frac{x}{\lambda} \right)^{\lambda}. $$</div>
 <p>
-It follows that
-</p>
-<div class="math">$$ \exp{(-x)} = \lim_{\lambda \rightarrow -\infty} \left(1 + \frac{x}{\lambda} \right)^{-\lambda}. $$</div>
-<p>
 You can use this relation to find an expression for Hermite uni-variate polynomials as a limit of Gegenbauer uni-variate polynomials.</p>
 <p>First you perform a scale transformation:
 </p>
@@ -151,13 +147,13 @@ Then you get
 </p>
 <div class="math">$$ \left(1 + \frac{r^{2} - 2xr}{\lambda} \right)^{-\lambda} = \sum_{n = 0}^{\infty} r^{n} \left( \frac{1}{\sqrt{\lambda}} \right)^{n} C_{n}{}^{\lambda}\left( \frac{x}{\sqrt{\lambda}} \right). $$</div>
 <p>
-Taking the limit <span class="math">\(\lambda \rightarrow -\infty\)</span> gives
+Taking the limit <span class="math">\(\lambda \rightarrow \infty\)</span> gives
 </p>
-<div class="math">$$ \exp{\left(2xr - r^{2} \right)} = \sum_{n = 0}^{\infty} \frac{r^{n}}{\Gamma(n+1)} \left[ \lim_{\lambda \rightarrow -\infty} \Gamma(n+1) \left( \frac{1}{\sqrt{\lambda}} \right)^{n} C_{n}{}^{\lambda}\left( \frac{x}{\sqrt{\lambda}} \right) \right]. $$</div>
+<div class="math">$$ \exp{\left(2xr - r^{2} \right)} = \sum_{n = 0}^{\infty} \frac{r^{n}}{\Gamma(n+1)} \left[ \lim_{\lambda \rightarrow \infty} \Gamma(n+1) \left( \frac{1}{\sqrt{\lambda}} \right)^{n} C_{n}{}^{\lambda}\left( \frac{x}{\sqrt{\lambda}} \right) \right]. $$</div>
 <p>
 Thus,
 </p>
-<div class="math">$$ H_{n}(x) = \lim_{\lambda \rightarrow -\infty} \Gamma(n+1) \left( \frac{1}{\sqrt{\lambda}} \right)^{n} C_{n}{}^{\lambda}\left( \frac{x}{\sqrt{\lambda}} \right). $$</div>
+<div class="math">$$ H_{n}(x) = \lim_{\lambda \rightarrow \infty} \Gamma(n+1) \left( \frac{1}{\sqrt{\lambda}} \right)^{n} C_{n}{}^{\lambda}\left( \frac{x}{\sqrt{\lambda}} \right). $$</div>
 <p>
 A similar trick holds for the multi-variate polynomials.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
