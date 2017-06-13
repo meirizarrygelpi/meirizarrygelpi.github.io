@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Low-Dimensional Exterior Algebras - M.E. Irizarry-Gelpí</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
+
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/maths/low-dimensional-exterior-algebras/">
+
+        <meta name="author" content="M.E. Irizarry-Gelpí" />
+        <meta name="keywords" content="exterior-algebra,parabolic" />
+        <meta name="description" content="On low-dimensional exterior algebras and parabolic Cayley-Dickson constructs." />
+
+        <meta property="og:site_name" content="M.E. Irizarry-Gelpí" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Low-Dimensional Exterior Algebras"/>
+        <meta property="og:url" content="http://meirizarrygelpi.github.io/posts/maths/low-dimensional-exterior-algebras/"/>
+        <meta property="og:description" content="On low-dimensional exterior algebras and parabolic Cayley-Dickson constructs."/>
+        <meta property="article:published_time" content="2017-06-12" />
+            <meta property="article:section" content="Maths" />
+            <meta property="article:tag" content="exterior-algebra" />
+            <meta property="article:tag" content="parabolic" />
+            <meta property="article:author" content="M.E. Irizarry-Gelpí" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/bootstrap.yeti.min.css" type="text/css"/>
+    <link href="http://meirizarrygelpi.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://meirizarrygelpi.github.io/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://meirizarrygelpi.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="http://meirizarrygelpi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí ATOM Feed"/>
+
+
+
+        <link href="http://meirizarrygelpi.github.io/feeds/maths.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí Maths ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://meirizarrygelpi.github.io/" class="navbar-brand">
+M.E. Irizarry-Gelpí            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://meirizarrygelpi.github.io/pages/cv.html">
+                             CV
+                          </a></li>
+                         <li><a href="http://meirizarrygelpi.github.io/pages/few-body-forward-jwkb-dynamics.html">
+                             Dynamics
+                          </a></li>
+                         <li><a href="http://meirizarrygelpi.github.io/pages/few-body-forward-jwkb-polytopes.html">
+                             Polytopes
+                          </a></li>
+                         <li><a href="http://meirizarrygelpi.github.io/pages/many-body-sudakov-decompositions.html">
+                             Sudakov
+                          </a></li>
+                         <li><a href="http://meirizarrygelpi.github.io/pages/two-dimensional-relativistic-kinematics.html">
+                             Two-Dimensional
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://meirizarrygelpi.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://meirizarrygelpi.github.io/posts/maths/low-dimensional-exterior-algebras/"
+                       rel="bookmark"
+                       title="Permalink to Low-Dimensional Exterior Algebras">
+                        Low-Dimensional Exterior Algebras
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-06-12T00:00:00-04:00"> Mon 12 June 2017</time>
+    </span>
+
+
+            <span class="label label-default">By</span>
+            <a href="http://meirizarrygelpi.github.io/author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
+
+        <span class="label label-default">Category</span>
+        <a href="http://meirizarrygelpi.github.io/category/maths.html">Maths</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://meirizarrygelpi.github.io/tag/exterior-algebra.html">exterior-algebra</a>
+        /
+	<a href="http://meirizarrygelpi.github.io/tag/parabolic.html">parabolic</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>The Cayley-Dickson construction can be generalized to yield other kinds of algebras other than quaternions and octonions. The parabolic constructs involve adjoining elements that square to zero. At first I thought that these constructs were the dual numbers (two-dimensional) and the hyper numbers (four-dimensional). It turns out that the parabolic Cayley-Dickson constructs are closer to <a href="https://en.wikipedia.org/wiki/Exterior_algebra">exterior algebras</a>.</p>
+<p>Recall that an exterior algebra <span class="math">\(\Lambda(V)\)</span> over an <span class="math">\(n\)</span>-dimensional vector space <span class="math">\(V\)</span> is a direct sum of spaces:
+</p>
+<div class="math">$$ \Lambda(V) = \Lambda_{0}(V) \oplus \Lambda_{1}(V) \oplus \Lambda_{2}(V) \oplus \ldots \oplus \Lambda_{n}(V). $$</div>
+<p>
+Here, <span class="math">\(\Lambda_{0}\)</span> is the space of 0-forms, which in our case, are scalar real numbers; <span class="math">\(\Lambda_{1}\)</span> is the space of 1-forms; <span class="math">\(\Lambda_{2}\)</span> is the space of 2-forms, and in general, <span class="math">\(\Lambda_{k}\)</span> is the space of <span class="math">\(k\)</span>-forms (with <span class="math">\(0 \leq k \leq n\)</span>). The 1-forms are like vectors. The 2-forms are obtained by multiplying two 1-forms with the <strong>wedge product</strong>. Given two 1-forms <span class="math">\(X\)</span> and <span class="math">\(Y\)</span>, the wedge product
+</p>
+<div class="math">$$ X \wedge Y $$</div>
+<p>
+is a 2-form. The wedge product of two 1-forms is <strong>anti-symmetric</strong>:
+</p>
+<div class="math">$$ Y \wedge X = - X \wedge Y. $$</div>
+<p>
+In general, the dimension of <span class="math">\(\Lambda_{k}\)</span> is the binomial coefficient:
+</p>
+<div class="math">$$ \dim{(\Lambda_{k})} = {n \choose k}. $$</div>
+<p>
+Thus,
+</p>
+<div class="math">$$ \dim{(\Lambda)} = \sum_{k = 0}^{n} {n \choose k} = 2^{n}. $$</div>
+<p>
+We are going to explore the cases <span class="math">\(n = 1\)</span>, <span class="math">\(n = 2\)</span>, <span class="math">\(n = 3\)</span>, and <span class="math">\(n = 4\)</span>.</p>
+<h2>One-Dimensional</h2>
+<p>In the one-dimensional case, the dimension of the exterior algebra is 2. This exterior algebra coincides with the dual numbers:
+</p>
+<div class="math">$$ \Lambda(\mathbb{R}) = \left\lbrace a + b W \mid (a, b) \in \mathbb{R}^2 \right\rbrace. $$</div>
+<p>
+If <span class="math">\(x\)</span> and <span class="math">\(y\)</span> are elements of <span class="math">\(\Lambda\)</span>, then their wedge product is given by
+</p>
+<div class="math">$$ x \wedge y = (a_{1} + b_{1}W) \wedge (a_{2} + b_{2}W) = a_{1}a_{2} + (a_{1}b_{2} + b_{1}a_{2})W + b_{1}b_{2} (W \wedge W). $$</div>
+<p>
+The third term is zero because of the anti-symmetry of the wedge product. However, note that in this one-dimensional case the multiplication is commutative:
+</p>
+<div class="math">$$ y \wedge x = (a_{2} + b_{2}W) \wedge (a_{1} + b_{1}W) = a_{2}a_{1} + (a_{2}b_{1} + b_{2} a_{1})W. $$</div>
+<p>
+This is the only case when the multiplication is commutative.</p>
+<h3>Hodge Star</h3>
+<p>The Hodge star operation relates a <span class="math">\(k\)</span>-form to an <span class="math">\((n - k)\)</span>-form. In this case, it provides a relation between 0-forms and 1-forms. If
+</p>
+<div class="math">$$x = a + bW, $$</div>
+<p>
+then the <strong>Hodge star operation</strong> on <span class="math">\(x\)</span> is
+</p>
+<div class="math">$${}\star x = b + aW. $$</div>
+<p>
+That is, the Hodge star operation swaps the real and unreal parts of <span class="math">\(x\)</span>. Note that
+</p>
+<div class="math">$${}\star ({}\star x) = x.$$</div>
+<p>
+That is, in this case the Hodge star operation is an involution.</p>
+<p>Note that
+</p>
+<div class="math">$$x \wedge ({} \star x) = ab + (a^{2} + b^{2})W.$$</div>
+<h2>Two-Dimensional</h2>
+<p>In the two-dimensional case, the dimension of the exterior algebra is 4. This algebra can be obtained by performing a parabolic Cayley-Dickson construct with the dual numbers. At first I thought that this lead to the hyper numbers. However, the nilpotent units in the hyper numbers commute. Because of the anti-symmetry of the wedge product, the nilpotent units in the exterior algebra anti-commute. The full algebra is:
+</p>
+<div class="math">$$ \Lambda(\mathbb{R}^{2}) = \left\lbrace a + b W + c X + d (W \wedge X) \mid (a, b,c,d) \in \mathbb{R}^4 \right\rbrace. $$</div>
+<p>
+You can make the Cayley-Dickson construct obvious by writing <span class="math">\(\Lambda(\mathbb{R}^{2})\)</span> like
+</p>
+<div class="math">$$ \Lambda(\mathbb{R}^{2}) = \left\lbrace A + B \wedge X \mid (A, B) \in \Lambda(\mathbb{R}) \times \Lambda(\mathbb{R}) \right\rbrace. $$</div>
+<p>
+If <span class="math">\(x\)</span> and <span class="math">\(y\)</span> are elements of <span class="math">\(\Lambda\)</span>, then their wedge product is given by
+</p>
+<div class="math">$$ x \wedge y = \left[a_{1} + b_{1}W + c_{1}X + d_{1}(W \wedge X)\right] \wedge \left[a_{2} + b_{2}W + c_{2}X + d_{2}(W \wedge X)\right]. $$</div>
+<p>
+More explicitly:
+</p>
+<div class="math">$$ x \wedge y = a_{1}a_{2} + (a_{1}b_{2} + b_{1}a_{2})W + (a_{1}c_{2} + c_{1}a_{2})X + (a_{1}d_{2} + d_{1}a_{2} + b_{1}c_{2} - c_{1}b_{2})(W \wedge X). $$</div>
+<p>
+Because of the anti-symmetry of <span class="math">\(W \wedge X\)</span>, the product of two elements of <span class="math">\(\Lambda(\mathbb{R}^{2})\)</span> is <strong>non-commutative</strong>. However, it is <strong>associative</strong>.</p>
+<h3>Hodge Star</h3>
+<p>The Hodge star operation relates a <span class="math">\(k\)</span>-form to an <span class="math">\((n - k)\)</span>-form. In this two-dimensional case, it provides a relation between 0-forms and 2-forms; and a relation between 1-forms:
+</p>
+<div class="math">$${}\star 1 = W \wedge X, \qquad {}\star W = X, \qquad {}\star X = - W, \qquad {}\star (W \wedge X) = 1.$$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ {}\star ({}\star 1) = 1, \qquad {}\star ({}\star (W \wedge X)) = W \wedge X; $$</div>
+<p>
+but
+</p>
+<div class="math">$$ {}\star ({}\star W) = -W, \qquad {}\star ({}\star X) = -X. $$</div>
+<p>
+To be specific, if
+</p>
+<div class="math">$$x = a + b W + c X + d (W \wedge X); $$</div>
+<p>
+then the Hodge star operation on <span class="math">\(x\)</span> is
+</p>
+<div class="math">$$ {}\star x = d - c W + b X + a (W \wedge X). $$</div>
+<p>
+Thinking of <span class="math">\(x\)</span> (an element of <span class="math">\(\Lambda(\mathbb{R}^{2})\)</span>) as a construct with <span class="math">\(A\)</span> and <span class="math">\(B\)</span> (elements of <span class="math">\(\Lambda(\mathbb{R})\)</span>) gives
+</p>
+<div class="math">$$x = A + B \wedge X, \qquad {}\star x = {}\star (\operatorname{Conj}(B)) + ({}\star A) \wedge X.$$</div>
+<p>
+This is a way to express the two-dimensional Hodge star operation in terms of the one-dimensional Hodge star operation and the one-dimensional conjugation operation.</p>
+<p>Acting a second time with the Hodge star gives
+</p>
+<div class="math">$${}\star ({}\star x) = a - b W - c X + d (W \wedge X). $$</div>
+<p>
+Acting a third time gives
+</p>
+<div class="math">$${}\star ({}\star ({}\star x)) = d + c W - bY + a(W\wedge X). $$</div>
+<p>
+Finally, acting a fourth time gives the identity operation
+</p>
+<div class="math">$${}\star ({}\star ({}\star ({}\star x))) = x. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ x \wedge ({} \star x) = ad - (ac - bd)W + (ab + cd)X + (a^{2} + b^{2} + c^{2} + d^{2})(W \wedge X). $$</div>
+<h2>Three-Dimensional</h2>
+<p>In the three-dimensional case, the dimension of the exterior algebra is 8. This algebra can be obtained by performing a parabolic Cayley-Dickson construct with <span class="math">\(\Lambda(\mathbb{R}^{2})\)</span>. The full algebra is
+</p>
+<div class="math">$$ \Lambda(\mathbb{R}^{3}) = \lbrace a + bW + cY + d (W \wedge Y) + eZ + f (W \wedge Z) + g (Y \wedge Z) + h ((W \wedge Y) \wedge Z) \mid (a,b,c,d,e,f,g,h) \in \mathbb{R}^{8} \rbrace. $$</div>
+<p>
+Note that the wedge product of two elements of <span class="math">\(\Lambda(\mathbb{R}^{3})\)</span> is non-commutative and non-associative.</p>
+<h3>Hodge Star</h3>
+<p>If you write the three-dimensional Hodge star operation in terms of the two-dimensional Hodge star operation and the two-dimensional conjugation operation, for
+</p>
+<div class="math">$$x = a + bW + cX + d (W \wedge X) + eY + f (W \wedge Y) + g (X \wedge Y) + h ((W \wedge X) \wedge Y);$$</div>
+<p>
+you get
+</p>
+<div class="math">$${}* x = h + gW - fX - e (W \wedge X) + dY - c (W \wedge Y) + b (X \wedge Y) + a ((W \wedge X) \wedge Y).$$</div>
+<p>
+However, this is <strong>not</strong> the Hodge star operation. Instead, it should be
+</p>
+<div class="math">$${}\star x = h + gW - fX + e (W \wedge X) + dY - c (W \wedge Y) + b (X \wedge Y) + a ((W \wedge X) \wedge Y).$$</div>
+<p>
+That is:
+</p>
+<div class="math">$$ {}\star 1 = (W \wedge X) \wedge Y, \qquad {}\star ((W \wedge X) \wedge Y) = 1; $$</div>
+<div class="math">$$ {}\star W = X \wedge Y, \qquad {}\star X = -W \wedge Y, \qquad {}\star Y = W \wedge X; $$</div>
+<div class="math">$$ {}\star (W \wedge X) = Y, \qquad {}\star (W \wedge Y) = -X, \qquad {}\star (X \wedge Y) = W. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ {}\star({}\star 1) = 1, \qquad {}\star ({}\star ((W \wedge X) \wedge Y)) = (W \wedge X) \wedge Y; $$</div>
+<div class="math">$$ {}\star({}\star W) = W, \qquad {}\star ({}\star X) = X, \qquad {}\star ({}\star Y) = Y; $$</div>
+<div class="math">$$ {}\star ({}\star (W \wedge X)) = W \wedge X, \qquad {}\star ({}\star (W \wedge Y)) = W \wedge Y, \qquad {}\star ({}\star (X \wedge Y)) = X \wedge Y. $$</div>
+<p>
+That is, the three-dimensional Hodge star operation is an involution.</p>
+<h2>Four-Dimensional</h2>
+<p>In the four-dimensional case, the dimension of the exterior algebra is 16. This algebra can be obtained by performing a parabolic Cayley-Dickson construct with <span class="math">\(\Lambda(\mathbb{R}^{3})\)</span>. An element has the form
+</p>
+<div class="math">$$ x = x_{0} + x_{1} + x_{2} + x_{3} + x_{4}; $$</div>
+<p>
+where
+</p>
+<div class="math">$$ x_{0} = a_{0}; $$</div>
+<div class="math">$$ x_{1} = a_{W} W + a_{X} X + a_{Y} Y + a_{Z} Z; $$</div>
+<div class="math">$$ x_{2} = a_{WX} (W \wedge X) + a_{WY} (W \wedge Y) + a_{WZ} (W \wedge Z) + a_{XY} (X \wedge Y) + a_{XZ} (X \wedge Z) + a_{YZ} (Y \wedge Z); $$</div>
+<div class="math">$$ x_{3} = a_{WXY} ((W \wedge X) \wedge Y) + a_{WXZ} ((W \wedge X) \wedge Z) + a_{WYZ} ((W \wedge Y) \wedge Z) + a_{XYZ} ((X \wedge Y) \wedge Z); $$</div>
+<div class="math">$$ x_{4} = a_{WXYZ} (((W \wedge X) \wedge Y) \wedge Z). $$</div>
+<h3>Hodge Star</h3>
+<p>In the four-dimensional case, the Hodge star operation provides a relation between 0-forms and 4-forms, a relation between 1-forms and 3-forms, and a relation between 2-forms. Explicitly, you have
+</p>
+<div class="math">$$ {}\star 1 = ((W \wedge X) \wedge Y) \wedge Z; $$</div>
+<div class="math">$$ {}\star W = (X \wedge Y) \wedge Z, \qquad {}\star X = -(W \wedge Y) \wedge Z; $$</div>
+<div class="math">$$ {}\star Y = (W \wedge X) \wedge Z, \qquad {}\star Z = -(W \wedge X) \wedge Y; $$</div>
+<div class="math">$$ {}\star (W \wedge X) = Y \wedge Z, \qquad {}\star (W \wedge Y) = -X \wedge Z, \qquad {}\star (W \wedge Z) = X \wedge Y; $$</div>
+<div class="math">$$ {}\star (X \wedge Y) = W \wedge Z, \qquad {}\star (X \wedge Z) = -W \wedge Y, \qquad {}\star (Y \wedge Z) = W \wedge X; $$</div>
+<div class="math">$$ {}\star ((W \wedge X) \wedge Y) = Z, \qquad {}\star ((W \wedge X) \wedge Z) = -Y; $$</div>
+<div class="math">$$ {}\star ((W \wedge Y) \wedge Z) = X, \qquad {}\star ((X \wedge Y) \wedge Z) = -W; $$</div>
+<div class="math">$$ {}\star (((W \wedge X) \wedge Y) \wedge Z) = 1. $$</div>
+<p>
+Again, the Hodge star operation is an involution.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'low-dimensional-exterior-algebras';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/maths/low-dimensional-exterior-algebras/';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://meirizarrygelpi.github.io/feeds/main.xml"><i class="fa fa-rss-square fa-lg"></i> RSS</a></li>
+                <li class="list-group-item"><a href="https://github.com/meirizarrygelpi"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/melvineloy"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+                <li class="list-group-item"><a href="https://www.linkedin.com/in/melvin-eloy-irizarry-gelpí-62b6234"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+              </ul>
+            </li>
+
+
+            <li class="list-group-item"><a href="http://meirizarrygelpi.github.io/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/arxiv.html">
+                            <i class="fa fa-folder-open fa-lg"></i> arXiv
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/bash.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Bash
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/go.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Go
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/maths.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Maths
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/notes.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Notes
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/physics.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Physics
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://meirizarrygelpi.github.io/category/python.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Python
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2017 M.E. Irizarry-Gelpí
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://meirizarrygelpi.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://meirizarrygelpi.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://meirizarrygelpi.github.io/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>
