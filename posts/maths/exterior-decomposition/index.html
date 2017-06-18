@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Low-Dimensional Exterior Algebras - M.E. Irizarry-Gelpí</title>
+    <title>Decompositions in Low-Dimensional Exterior Algebras - M.E. Irizarry-Gelpí</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,21 +10,21 @@
 
     <link href="http://meirizarrygelpi.github.io/images/world.png" rel="icon">
 
-<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/maths/low-dimensional-exterior-algebras/">
+<link rel="canonical" href="http://meirizarrygelpi.github.io/posts/maths/exterior-decomposition/">
 
         <meta name="author" content="M.E. Irizarry-Gelpí" />
-        <meta name="keywords" content="exterior-algebra,parabolic" />
-        <meta name="description" content="On low-dimensional exterior algebras and parabolic Cayley-Dickson constructs." />
+        <meta name="keywords" content="parabolic,exterior-algebra" />
+        <meta name="description" content="Star and dagger decompositions for low-dimensional exterior algebras." />
 
         <meta property="og:site_name" content="M.E. Irizarry-Gelpí" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Low-Dimensional Exterior Algebras"/>
-        <meta property="og:url" content="http://meirizarrygelpi.github.io/posts/maths/low-dimensional-exterior-algebras/"/>
-        <meta property="og:description" content="On low-dimensional exterior algebras and parabolic Cayley-Dickson constructs."/>
-        <meta property="article:published_time" content="2017-06-12" />
+        <meta property="og:title" content="Decompositions in Low-Dimensional Exterior Algebras"/>
+        <meta property="og:url" content="http://meirizarrygelpi.github.io/posts/maths/exterior-decomposition/"/>
+        <meta property="og:description" content="Star and dagger decompositions for low-dimensional exterior algebras."/>
+        <meta property="article:published_time" content="2017-06-18" />
             <meta property="article:section" content="Maths" />
-            <meta property="article:tag" content="exterior-algebra" />
             <meta property="article:tag" content="parabolic" />
+            <meta property="article:tag" content="exterior-algebra" />
             <meta property="article:author" content="M.E. Irizarry-Gelpí" />
 
 
@@ -92,10 +92,10 @@ M.E. Irizarry-Gelpí            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://meirizarrygelpi.github.io/posts/maths/low-dimensional-exterior-algebras/"
+                    <a href="http://meirizarrygelpi.github.io/posts/maths/exterior-decomposition/"
                        rel="bookmark"
-                       title="Permalink to Low-Dimensional Exterior Algebras">
-                        Low-Dimensional Exterior Algebras
+                       title="Permalink to Decompositions in Low-Dimensional Exterior Algebras">
+                        Decompositions in Low-Dimensional Exterior Algebras
                     </a>
                 </h1>
             </header>
@@ -105,7 +105,7 @@ M.E. Irizarry-Gelpí            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-06-12T00:00:00-04:00"> Mon 12 June 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2017-06-18T00:00:00-04:00"> Sun 18 June 2017</time>
     </span>
 
 
@@ -117,193 +117,227 @@ M.E. Irizarry-Gelpí            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="http://meirizarrygelpi.github.io/tag/exterior-algebra.html">exterior-algebra</a>
-        /
 	<a href="http://meirizarrygelpi.github.io/tag/parabolic.html">parabolic</a>
+        /
+	<a href="http://meirizarrygelpi.github.io/tag/exterior-algebra.html">exterior-algebra</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>The Cayley-Dickson construction can be generalized to yield other kinds of algebras other than quaternions and octonions. The parabolic constructs involve adjoining elements that square to zero. At first I thought that these constructs were the dual numbers (2-dimensional) and the hyper numbers (4-dimensional). It turns out that the parabolic Cayley-Dickson constructs are closer to <a href="https://en.wikipedia.org/wiki/Exterior_algebra">exterior algebras</a>.</p>
-<p>Recall that an exterior algebra <span class="math">\(\Lambda(V)\)</span> over an <span class="math">\(n\)</span>-dimensional vector space <span class="math">\(V\)</span> is a direct sum of spaces:
+                <p>A Grassmann number is a member of an exterior algebra. There are two important operations on Grassmann numbers: the Hodge star conjugate and the dagger conjugate (parity). If these operations are involutions, then one can decompose a Grassmann number in terms of a self-conjugate and an anti-self-conjugate part.</p>
+<h2>1-Grassmann Numbers</h2>
+<p>A 1-Grassmann number has the form
 </p>
-<div class="math">$$ \Lambda(V) = \Lambda_{0}(V) \oplus \Lambda_{1}(V) \oplus \Lambda_{2}(V) \oplus \ldots \oplus \Lambda_{n}(V). $$</div>
+<div class="math">$$A = a_{0} + a_{1} W.$$</div>
 <p>
-Here, <span class="math">\(\Lambda_{0}\)</span> is the space spanned by the 0-blade, which in our case, are scalar real numbers; <span class="math">\(\Lambda_{1}\)</span> is the space spanned by the 1-blades; <span class="math">\(\Lambda_{2}\)</span> is the space spanend by the 2-blades, and in general, <span class="math">\(\Lambda_{k}\)</span> is the space spanned by the <span class="math">\(k\)</span>-blades (with <span class="math">\(0 \leq k \leq n\)</span>). A member of <span class="math">\(\Lambda_{1}\)</span> is a vector. A 2-blade is obtained by multiplying two 1-blades with the <strong>wedge product</strong>. Given two 1-blades <span class="math">\(X\)</span> and <span class="math">\(Y\)</span>, the wedge product
+This variable has two pieces of information.</p>
+<h3>Star Conjugate and Star Decomposition</h3>
+<p>The <strong>Hodge star conjugate</strong> is
 </p>
-<div class="math">$$ XY \equiv X \wedge Y. $$</div>
+<div class="math">$$ A^{\star} = a_{1} + a_{0}W. $$</div>
 <p>
-The wedge product of two 1-blades is <strong>anti-symmetric</strong>:
+Note that the star conjugate is an <strong>involution</strong>:
 </p>
-<div class="math">$$ YX = - XY. $$</div>
+<div class="math">$$ (A^{\star})^{\star} = A. $$</div>
 <p>
-In general, the dimension of <span class="math">\(\Lambda_{k}\)</span> is the binomial coefficient:
+The <strong>star decomposition</strong> of <span class="math">\(A\)</span> is
 </p>
-<div class="math">$$ \dim{(\Lambda_{k})} = {n \choose k}. $$</div>
+<div class="math">$$ A = \frac{1}{2} \left( A + A^{\star} \right) + \frac{1}{2} \left( A - A^{\star} \right). $$</div>
 <p>
-Thus,
+The first term is the <strong>self-star-conjugate</strong> part:
 </p>
-<div class="math">$$ \dim{(\Lambda)} = \sum_{k = 0}^{n} {n \choose k} = 2^{n}. $$</div>
+<div class="math">$$ \frac{1}{2} \left( A + A^{\star} \right) = \frac{1}{2} \left( a_{0} + a_{1} \right) \left( 1 + W \right). $$</div>
 <p>
-We are going to explore the cases <span class="math">\(n = 1\)</span>, <span class="math">\(n = 2\)</span>, <span class="math">\(n = 3\)</span>, and <span class="math">\(n = 4\)</span>.</p>
-<h2>One-Dimensional</h2>
-<p>In the 1-dimensional case, the dimension of the exterior algebra is 2. This exterior algebra coincides with the <strong>dual numbers</strong>:
+The second term is the <strong>anti-self-star-conjugate</strong> part:
 </p>
-<div class="math">$$ \Lambda(\mathbb{R}) = \left\lbrace a + b W \mid (a, b) \in \mathbb{R}^2 \right\rbrace. $$</div>
+<div class="math">$$ \frac{1}{2} \left( A - A^{\star} \right) = \frac{1}{2} \left( a_{0} - a_{1} \right) \left( 1 - W \right). $$</div>
 <p>
-If <span class="math">\(x\)</span> and <span class="math">\(y\)</span> are elements of <span class="math">\(\Lambda(\mathbb{R})\)</span>, then their wedge product is given by
+Each of these parts has one piece of information about <span class="math">\(A\)</span>.</p>
+<h3>Dagger Conjugate and Dagger Decomposition</h3>
+<p>The <strong>dagger conjugate</strong> is
 </p>
-<div class="math">$$ xy = (a_{1} + b_{1}W)(a_{2} + b_{2}W) = a_{1}a_{2} + (a_{1}b_{2} + b_{1}a_{2})W + b_{1}b_{2} (WW). $$</div>
+<div class="math">$$ A^{\dagger} = a_{0} - a_{1}W. $$</div>
 <p>
-The third term is zero because of the anti-symmetry of the wedge product of two 1-blades. However, note that in this 1-dimensional case the multiplication is <strong>commutative</strong>:
+Note that the dagger conjugate is also an <strong>involution</strong>:
 </p>
-<div class="math">$$ yx = (a_{2} + b_{2}W)(a_{1} + b_{1}W) = a_{2}a_{1} + (a_{2}b_{1} + b_{2} a_{1})W. $$</div>
+<div class="math">$$ (A^{\dagger})^{\dagger} = A. $$</div>
 <p>
-This is the only case when the multiplication is commutative.</p>
-<h3>Hodge Star Conjugate</h3>
-<p>The Hodge star conjugate relates a <span class="math">\(k\)</span>-blade to an <span class="math">\((n - k)\)</span>-blade. In this case, it provides a relation between 0-blades and 1-blades. If
+The <strong>dagger decomposition</strong> of <span class="math">\(A\)</span> is
 </p>
-<div class="math">$$x = a + bW, $$</div>
+<div class="math">$$ A = \frac{1}{2} \left( A + A^{\dagger} \right) + \frac{1}{2} \left( A - A^{\dagger} \right). $$</div>
 <p>
-then the <strong>Hodge star conjugate</strong> on <span class="math">\(x\)</span> is
+The first term is the <strong>self-dagger-conjugate</strong> part:
 </p>
-<div class="math">$$ x^{\star} = b + aW. $$</div>
+<div class="math">$$ \frac{1}{2} \left( A + A^{\dagger} \right) = a_{0}. $$</div>
 <p>
-That is, the star conjugate swaps the real and unreal parts of <span class="math">\(x\)</span>. Note that
+The second term is the <strong>anti-self-dagger-conjugate</strong> part:
 </p>
-<div class="math">$$ (x^{\star})^{\star} = x.$$</div>
+<div class="math">$$ \frac{1}{2} \left( A - A^{\dagger} \right) = a_{1}W. $$</div>
 <p>
-That is, the 1-dimensional star conjugate is an <strong>involution</strong>.</p>
-<p>Note that
+Each of these parts has one piece of information about <span class="math">\(A\)</span>.</p>
+<p>Note that the star and dagger conjugates do not commute:
 </p>
-<div class="math">$$x (x^{\star}) = ab + (a^{2} + b^{2})W.$$</div>
-<h2>Two-Dimensional</h2>
-<p>In the 2-dimensional case, the dimension of the exterior algebra is 4. This algebra can be obtained by performing a parabolic Cayley-Dickson construct with the dual numbers. At first I thought that this lead to the hyper numbers. However, the nilpotent units in the hyper numbers commute. Because of the anti-symmetry of the wedge product, the nilpotent units in the exterior algebra anti-commute. The full algebra is:
+<div class="math">$$ (A^{\star})^{\dagger} = a_{1} - a_{0} W, \qquad (A^{\dagger})^{\star} = -a_{1} + a_{0} W = - (A^{\star})^{\dagger}. $$</div>
+<h2>2-Grassmann Numbers</h2>
+<p>A 2-Grassmann number has the form
 </p>
-<div class="math">$$ \Lambda(\mathbb{R}^{2}) = \left\lbrace a + b W + c X + d WX \mid (a, b,c,d) \in \mathbb{R}^4 \right\rbrace. $$</div>
+<div class="math">$$ A = a_{1} + a_{W}W + a_{X}X + a_{WX}WX. $$</div>
 <p>
-You can make the Cayley-Dickson construct obvious by writing <span class="math">\(\Lambda(\mathbb{R}^{2})\)</span> like
+Note that a 2-Grassmann number has four pieces of information.</p>
+<h3>Star and Dagger</h3>
+<p>The star conjugate is
 </p>
-<div class="math">$$ \Lambda(\mathbb{R}^{2}) = \left\lbrace A + BX \mid (A, B) \in \Lambda(\mathbb{R}) \times \Lambda(\mathbb{R}) \right\rbrace. $$</div>
+<div class="math">$$ A^{\star} = a_{WX} - a_{X}W + a_{W}X + a_{1}WX. $$</div>
 <p>
-If <span class="math">\(x\)</span> and <span class="math">\(y\)</span> are elements of <span class="math">\(\Lambda\)</span>, then their wedge product is given by
+Note that the star conjugate is <strong>not</strong> an involution:
 </p>
-<div class="math">$$ xy = \left[a_{1} + b_{1}W + c_{1}X + d_{1}WX\right]\left[a_{2} + b_{2}W + c_{2}X + d_{2}WX\right]. $$</div>
+<div class="math">$$ (A^{\star})^{\star} = a_{1} - a_{W}W - a_{X}X + a_{WX}WX. $$</div>
 <p>
-More explicitly:
+Indeed, the <strong>double star conjugate</strong> is equivalent to the dagger conjugate:
 </p>
-<div class="math">$$ xy = a_{1}a_{2} + (a_{1}b_{2} + b_{1}a_{2})W + (a_{1}c_{2} + c_{1}a_{2})X + (a_{1}d_{2} + d_{1}a_{2} + b_{1}c_{2} - c_{1}b_{2})WX. $$</div>
+<div class="math">$$ A^{\dagger} = a_{1} - a_{W}W - a_{X}X + a_{WX}WX. $$</div>
 <p>
-Because of the anti-symmetry of <span class="math">\(WX\)</span>, the product of two elements of <span class="math">\(\Lambda(\mathbb{R}^{2})\)</span> is <strong>non-commutative</strong>. However, it is <strong>associative</strong>.</p>
-<h3>Hodge Star</h3>
-<p>The Hodge star operation relates a <span class="math">\(k\)</span>-blade to an <span class="math">\((n - k)\)</span>-blade. In the 2-dimensional case, it provides a relation between 0-blades and 2-blades; and a relation between 1-blades:
+The dagger conjugate <em>is</em> an involution:
 </p>
-<div class="math">$$ 1^{\star} = WX, \qquad W^{\star} = X, \qquad X^{\star} = - W, \qquad (WX)^{\star} = 1.$$</div>
+<div class="math">$$ (A^{\dagger}) = A. $$</div>
 <p>
-Note that
+The <strong>dagger decomposition</strong> of <span class="math">\(A\)</span> is
 </p>
-<div class="math">$$ (1^{\star})^{\star} = 1, \qquad ((WX)^{\star})^{\star} = WX; $$</div>
+<div class="math">$$ A = \frac{1}{2} \left( A + A^{\dagger} \right) + \frac{1}{2} \left( A - A^{\dagger} \right). $$</div>
 <p>
-but
+The first term is the <strong>self-dagger-conjugate</strong> part:
 </p>
-<div class="math">$$ (W^{\star})^{\star} = -W, \qquad (X^{\star})^{\star} = -X. $$</div>
+<div class="math">$$ \frac{1}{2} \left( A + A^{\dagger} \right) = a_{1} + a_{WX}WX. $$</div>
 <p>
-To be specific, if
+The second term is the <strong>anti-self-dagger-conjugate</strong> part:
 </p>
-<div class="math">$$x = a + b W + c X + d WX; $$</div>
+<div class="math">$$ \frac{1}{2} \left( A - A^{\dagger} \right) = a_{W}W + a_{X}X. $$</div>
 <p>
-then the Hodge star operation on <span class="math">\(x\)</span> is
+Each part has two pieces of information about <span class="math">\(A\)</span>.</p>
+<p>Note that the star conjugate is an involution on the self-dagger-conjugate part:
 </p>
-<div class="math">$$ x^{\star} = d - c W + b X + a WX. $$</div>
+<div class="math">$$((a_{1} + a_{WX}WX)^{\star})^{\star} = (a_{WX} + a_{1}WX)^{\star} = a_{1} + a_{WX}WX. $$</div>
 <p>
-Thinking of <span class="math">\(x\)</span> (an element of <span class="math">\(\Lambda(\mathbb{R}^{2})\)</span>) as a pair construct with <span class="math">\(A\)</span> and <span class="math">\(B\)</span> (elements of <span class="math">\(\Lambda(\mathbb{R})\)</span>) gives
+Thus, the self-dagger-conjugate part can be decomposed into self-star-conjugate and anti-self-star-conjugate parts:
 </p>
-<div class="math">$$x = A + BX, \qquad x^{\star} = (\operatorname{Conj}(B))^{\star} + A^{\star}X.$$</div>
+<div class="math">$$ a_{1} + a_{WX}WX = \frac{1}{2} \left( a_{1} + a_{WX} \right) \left( 1 + WX \right) + \frac{1}{2} \left( a_{1} - a_{WX} \right) \left( 1 - WX \right). $$</div>
 <p>
-This is a way to express the 2-dimensional Hodge star operation in terms of the one-dimensional Hodge star operation and the one-dimensional conjugation operation.</p>
-<p>Acting a second time with the Hodge star gives
+On the other hand, the star conjugate is an anti-involution on the anti-self-dagger-conjugate part:
 </p>
-<div class="math">$$ (x^{\star})^{\star} = a - b W - c X + d WX. $$</div>
+<div class="math">$$ ((a_{W}W + a_{X}X)^{\star})^{\star} = (-a_{X}W + a_{W}X)^{\star} = -(a_{W}W + a_{X}X). $$</div>
 <p>
-Acting a third time gives
+Indeed, the eigenvalues of the 2-dimensional star conjugate operation are <span class="math">\(\lambda = \pm 1\)</span> and <span class="math">\(\lambda \pm i\)</span>. All four satisfy <span class="math">\(\lambda^{4} = 1\)</span>.</p>
+<h2>3-Grassmann Numbers</h2>
+<p>A 3-Grassmann number has the form
 </p>
-<div class="math">$$((x^{\star})^{\star})^{\star} = d + c W - bY + aWX. $$</div>
+<div class="math">$$ A = a_{1} + a_{W}W + a_{X}X + a_{WX}WX + a_{Y}Y + a_{WY}WY + a_{XY}XY + a_{WXY}(WX)Y. $$</div>
 <p>
-Finally, acting a fourth time gives the identity operation
+Note that a 3-Grassmann number has eight pieces of information.</p>
+<h3>Star Conjugate and Star Decomposition</h3>
+<p>The star conjugate is
 </p>
-<div class="math">$$(((x^{\star})^{\star})^{\star})^{\star} = x. $$</div>
+<div class="math">$$ A^{\star} = a_{WXY} + a_{XY}W - a_{WY}X + a_{Y}WX + a_{WX}Y - a_{X}WY + a_{W}XY + a_{1}(WX)Y. $$</div>
 <p>
-Note that
+Note that this is an involution. Thus, <span class="math">\(A\)</span> can be <strong>star-decomposed</strong>:
 </p>
-<div class="math">$$ x(x^{\star}) = ad - (ac - bd)W + (ab + cd)X + (a^{2} + b^{2} + c^{2} + d^{2})(WX). $$</div>
-<h2>Three-Dimensional</h2>
-<p>In the 3-dimensional case, the dimension of the exterior algebra is 8. This algebra can be obtained by performing a parabolic Cayley-Dickson construct with <span class="math">\(\Lambda(\mathbb{R}^{2})\)</span>. The full algebra is
-</p>
-<div class="math">$$ \Lambda(\mathbb{R}^{3}) = \lbrace a + bW + cX + d WX + eY + f WY + g XY + h (WX)Z \mid (a,b,c,d,e,f,g,h) \in \mathbb{R}^{8} \rbrace. $$</div>
+<div class="math">$$ A = \frac{1}{2} \left( A + A^{\star} \right) + \frac{1}{2} \left( A - A^{\star} \right). $$</div>
 <p>
-Note that the wedge product of two elements of <span class="math">\(\Lambda(\mathbb{R}^{3})\)</span> is non-commutative and non-associative.</p>
-<h3>Hodge Star</h3>
-<p>If you write the 3-dimensional Hodge star operation in terms of the 2-dimensional Hodge star operation and the 2-dimensional conjugation operation as before,
+The <strong>self-star-conjugate</strong> part of <span class="math">\(A\)</span> is
 </p>
-<div class="math">$$ x^{*} = (\operatorname{Conj}{(B)})^{\star} + A^{\star}Y; $$</div>
+<div class="math">$$ A + A^{\star} = (a_{1} + a_{WXY}) (1 + (WX)Y) + (a_{W} + a_{XY})(W + XY) + (a_{X} - a_{WY})(X - WY) + (a_{Y} + a_{WX})(Y + WX). $$</div>
 <p>
-for
+The <strong>anti-self-star-conjugate</strong> part of <span class="math">\(A\)</span> is
 </p>
-<div class="math">$$x = a + bW + cX + d WX + eY + f WY + g XY + h (WX)Y;$$</div>
+<div class="math">$$ A - A^{\star} = (a_{1} - a_{WXY}) (1 - (WX)Y) + (a_{W} - a_{XY})(W - XY) + (a_{X} + a_{WY})(X + WY) + (a_{Y} - a_{WX})(Y - WX). $$</div>
 <p>
-you get
+Each part has four pieces of information.</p>
+<h3>Dagger Conjugate and Dagger Decomposition</h3>
+<p>The dagger conjugate is
 </p>
-<div class="math">$$ x^{*} = h + gW - fX - e WX + dY - c WY + b XY + a (WX)Y.$$</div>
+<div class="math">$$ A^{\dagger} = a_{1} - a_{W}W - a_{X}X + a_{WX}WX - a_{Y}Y + a_{WY}WY + a_{XY}XY - a_{WXY}(WX)Y. $$</div>
 <p>
-However, this is <strong>not</strong> the Hodge star operation. Instead, it should be
+Note that this is an involution. Thus, <span class="math">\(A\)</span> can be <strong>dagger-decomposed</strong>:
 </p>
-<div class="math">$$ x^{\star} = (B^{\dagger})^{\star} + A^{\star} Y; $$</div>
+<div class="math">$$ A = \frac{1}{2} \left( A + A^{\dagger} \right) + \frac{1}{2} \left( A - A^{\dagger} \right). $$</div>
 <p>
-where
+The <strong>self-dagger-conjugate</strong> part of <span class="math">\(A\)</span> is
 </p>
-<div class="math">$$ (a + bW + cX + d WX)^{\dagger} = a - bW - cX + d WX. $$</div>
+<div class="math">$$ \frac{1}{2} (A + A^{\dagger}) = a_{1} + a_{WX}WX + a_{WY}WY + a_{XY}XY. $$</div>
 <p>
-This gives the star conjugate:
+The <strong>anti-self-dagger-conjugate</strong> part of <span class="math">\(A\)</span> is
 </p>
-<div class="math">$$ x^{\star} = h + gW - fX + e WX + dY - c WY + b XY + a (WX)Y.$$</div>
+<div class="math">$$ \frac{1}{2} (A - A^{\dagger}) = a_{W}W + a_{X}X + a_{Y}Y + a_{WXY}(WX)Y. $$</div>
 <p>
-That is:
+Note that the dagger conjugate of the self-star-conjugate part is anti-self-star-conjugate:
 </p>
-<div class="math">$$ 1^{\star} = (WX)Y, \qquad ((WX)Y)^{\star} = 1; $$</div>
-<div class="math">$$ W^{\star} = XY, \qquad X^{\star} = -WY, \qquad Y^{\star} = WX; $$</div>
-<div class="math">$$ (WX)^{\star} = Y, \qquad (WY)^{\star} = -X, \qquad (XY)^{\star} = W. $$</div>
+<div class="math">$$ (A + A^{\star})^{\dagger} = (a_{1} + a_{WXY}) (1 - (WX)Y) - (a_{W} + a_{XY})(W - XY) - (a_{X} - a_{WY})(X + WY) - (a_{Y} + a_{WX})(Y - WX); $$</div>
 <p>
-Note that
+and similarly, the dagger conjugate of the anti-self-star-conjugate part is self-star-conjugate:
 </p>
-<div class="math">$$ (1^{\star})^{\star} = 1, \qquad (((WX)Y)^{\star})^{\star} = (WX)Y; $$</div>
-<div class="math">$$ (W^{\star})^{\star} = W, \qquad (X^{\star})^{\star} = X, \qquad (Y^{\star})^{\star} = Y; $$</div>
-<div class="math">$$ ((WX)^{\star})^{\star} = WX, \qquad ((WY)^{\star})^{\star} = WY, \qquad ((XY)^{\star})^{\star} = XY. $$</div>
+<div class="math">$$ (A - A^{\star})^{\dagger} = (a_{1} - a_{WXY}) (1 + (WX)Y) - (a_{W} - a_{XY})(W + XY) - (a_{X} + a_{WY})(X - WY) - (a_{Y} - a_{WX})(Y + WX). $$</div>
 <p>
-That is, the 3-dimensional Hodge star operation is an <strong>involution</strong>.</p>
-<h2>Four-Dimensional</h2>
-<p>In the 4-dimensional case, the dimension of the exterior algebra is 16. This algebra can be obtained by performing a parabolic Cayley-Dickson construct with <span class="math">\(\Lambda(\mathbb{R}^{3})\)</span>. An element has the form
+Each part has four pieces of information.</p>
+<h2>4-Grassmann Numbers</h2>
+<p>A member of the 4-Grassmann algebra has the form
 </p>
-<div class="math">$$ x = x_{0} + x_{1} + x_{2} + x_{3} + x_{4}; $$</div>
+<div class="math">$$ A = A_{0} + A_{1} + A_{2} + A_{3} + A_{4}; $$</div>
 <p>
 where
 </p>
-<div class="math">$$ x_{0} = a_{0}; $$</div>
-<div class="math">$$ x_{1} = a_{W} W + a_{X} X + a_{Y} Y + a_{Z} Z; $$</div>
-<div class="math">$$ x_{2} = a_{WX} WX + a_{WY} WY + a_{WZ} WZ + a_{XY} XY + a_{XZ} XZ + a_{YZ} YZ; $$</div>
-<div class="math">$$ x_{3} = a_{WXY} (WX)Y + a_{WXZ} (WX)Z + a_{WYZ} (WY)Z + a_{XYZ} (XY)Z; $$</div>
-<div class="math">$$ x_{4} = a_{WXYZ} ((WX)Y)Z. $$</div>
-<h3>Hodge Star</h3>
-<p>In the 4-dimensional case, the Hodge star operation provides a relation between 0-blades and 4-blades, a relation between 1-blades and 3-blades, and a relation between 2-blades. Explicitly, you have
-</p>
-<div class="math">$$ 1^{\star} = ((WX)Y)Z; $$</div>
-<div class="math">$$ W^{\star} = (XY)Z, \qquad X^{\star} = -(WY)Z; $$</div>
-<div class="math">$$ Y^{\star} = (WX)Z, \qquad Z^{\star} = -(WX)Y; $$</div>
-<div class="math">$$ (WX)^{\star} = YZ, \qquad (WY)^{\star} = -XZ, \qquad (WZ)^{\star} = XY; $$</div>
-<div class="math">$$ (XY)^{\star} = WZ, \qquad (XZ)^{\star} = -WY, \qquad (YZ)^{\star} = WX; $$</div>
-<div class="math">$$ ((WX)Y)^{\star} = Z, \qquad ((WX)Z)^{\star} = -Y; $$</div>
-<div class="math">$$ ((WY)Z)^{\star} = X, \qquad ((XY)Z)^{\star} = -W; $$</div>
-<div class="math">$$ (((WX)Y)Z)^{\star} = 1. $$</div>
+<div class="math">$$ A_{0} = a_{1}; $$</div>
+<div class="math">$$ A_{1} = a_{W}W + a_{X}X + a_{Y}Y + a_{Z}Z; $$</div>
+<div class="math">$$ A_{2} = a_{WX}WX + a_{WY}WY + a_{WZ}WZ + a_{XY}XY + a_{XZ}XZ + a_{YZ}YZ; $$</div>
+<div class="math">$$ A_{3} = a_{WXY}(WX)Y + a_{WXZ}(WX)Z + a_{WYZ}(WY)Z + a_{XYZ}(XY)Z; $$</div>
+<div class="math">$$ A_{4} = a_{WXYZ} ((WX)Y)Z. $$</div>
 <p>
-Note that, like in 2-dimensions, in 4-dimensions the Hodge star operation is not an involution.</p>
+Note that a 4-Grassmann number has sixteen pieces of information.</p>
+<h3>Star and Dagger</h3>
+<p>The star conjugate is
+</p>
+<div class="math">$$ A^{\star} = (A_{0})^{\star} + (A_{1})^{\star} + (A_{2})^{\star} + (A_{3})^{\star} + (A_{4})^{\star}; $$</div>
+<p>
+where
+</p>
+<div class="math">$$ (A_{0})^{\star} = a_{1}((WX)Y)Z; $$</div>
+<div class="math">$$ (A_{1})^{\star} = a_{W}(XY)Z - a_{X}(WY)Z + a_{Y}(WX)Z - a_{Z}(WX)Y; $$</div>
+<div class="math">$$ (A_{2})^{\star} = a_{WX}YZ - a_{WY}XZ + a_{WZ}XY + a_{XY}WZ - a_{XZ}WY + a_{YZ}WX; $$</div>
+<div class="math">$$ (A_{3})^{\star} = a_{WXY}Z - a_{WXZ}Y + a_{WYZ}X - a_{XYZ}W; $$</div>
+<div class="math">$$ (A_{4})^{\star} = a_{WXYZ}. $$</div>
+<p>
+Note that this operation is <strong>not</strong> an involution. Just as for 2-Grassmann numbers, you find that
+</p>
+<div class="math">$$ ((A_{0})^{\star})^{\star} = A_{0}, \qquad ((A_{2})^{\star})^{\star} = A_{2}, \qquad ((A_{4})^{\star})^{\star} = A_{4}. $$</div>
+<p>
+However, you also have
+</p>
+<div class="math">$$ ((A_{1})^{\star})^{\star} = -A_{1}, \qquad ((A_{3})^{\star})^{\star} = -A_{3}. $$</div>
+<p>
+Again, the double star conjugate is equivalent to the dagger conjugate:
+</p>
+<div class="math">$$ A^{\dagger} = (A^{\star})^{\star}. $$</div>
+<p>
+The dagger conjugate <em>is</em> an involution. The dagger conjugate is
+</p>
+<div class="math">$$ A^{\dagger} = (A_{0})^{\dagger} + (A_{1})^{\dagger} + (A_{2})^{\dagger} + (A_{3})^{\dagger} + (A_{4})^{\dagger}; $$</div>
+<p>
+where
+</p>
+<div class="math">$$ (A_{0})^{\dagger} = +A_{0}; $$</div>
+<div class="math">$$ (A_{1})^{\dagger} = -A_{1}; $$</div>
+<div class="math">$$ (A_{2})^{\dagger} = +A_{2}; $$</div>
+<div class="math">$$ (A_{3})^{\dagger} = -A_{3}; $$</div>
+<div class="math">$$ (A_{4})^{\dagger} = +A_{4}. $$</div>
+<p>
+This means that on <span class="math">\(A_{0}\)</span>, <span class="math">\(A_{2}\)</span>, and <span class="math">\(A_{4}\)</span> the star conjugate <em>is</em> an involution. Thus you can perform a star decomposition:
+</p>
+<div class="math">$$ A_{0} + A_{2} + A_{4} = \frac{1}{2} \left( A_{0} + A_{2} + A_{4} + (A_{0})^{\star} + (A_{2})^{\star} + (A_{4})^{\star} \right) + \frac{1}{2} \left( A_{0} + A_{2} + A_{4} - (A_{0})^{\star} - (A_{2})^{\star} - (A_{4})^{\star} \right). $$</div>
+<p>
+The self-star-conjugate part is
+</p>
+<div class="math">$$ \left(a_{1} + a_{WXYZ} \right) \left(1 + ((WX)Y)Z \right) + \left(a_{WX} + a_{YZ}\right)\left(WX + YZ \right) + \left(a_{WY} - a_{XZ}\right)\left(WY - XZ \right) + \left(a_{WZ} + a_{XY}\right)\left(WZ + XY \right). $$</div>
+<p>
+The anti-self-star-conjugate part is
+</p>
+<div class="math">$$ \left(a_{1} - a_{WXYZ} \right) \left(1 - ((WX)Y)Z \right) + \left(a_{WX} - a_{YZ}\right)\left(WX - YZ \right) + \left(a_{WY} + a_{XZ}\right)\left(WY + XZ \right) + \left(a_{WZ} - a_{XY}\right)\left(WZ - XY \right). $$</div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -371,8 +405,8 @@ Note that, like in 2-dimensions, in 4-dimensions the Hodge star operation is not
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
 
-                    var disqus_identifier = 'low-dimensional-exterior-algebras';
-                var disqus_url = 'http://meirizarrygelpi.github.io/posts/maths/low-dimensional-exterior-algebras/';
+                    var disqus_identifier = 'exterior-decomposition';
+                var disqus_url = 'http://meirizarrygelpi.github.io/posts/maths/exterior-decomposition/';
 
             var disqus_config = function () {
                 this.language = "en";
