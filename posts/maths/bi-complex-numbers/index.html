@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Bi-Complex Numbers - M.E. Irizarry-Gelpí</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://meirizarrygelpi.github.io/images/world.png" rel="icon">
+
+<link rel="canonical" href="https://meirizarrygelpi.github.io/posts/maths/bi-complex-numbers/">
+
+        <meta name="author" content="M.E. Irizarry-Gelpí" />
+        <meta name="keywords" content="bi-complex" />
+        <meta name="description" content="On bi-complex numbers." />
+
+        <meta property="og:site_name" content="M.E. Irizarry-Gelpí" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Bi-Complex Numbers"/>
+        <meta property="og:url" content="https://meirizarrygelpi.github.io/posts/maths/bi-complex-numbers/"/>
+        <meta property="og:description" content="On bi-complex numbers."/>
+        <meta property="article:published_time" content="2017-08-03" />
+            <meta property="article:section" content="Maths" />
+            <meta property="article:tag" content="bi-complex" />
+            <meta property="article:author" content="M.E. Irizarry-Gelpí" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.yeti.min.css" type="text/css"/>
+    <link href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://meirizarrygelpi.github.io/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="https://meirizarrygelpi.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí ATOM Feed"/>
+
+
+
+        <link href="https://meirizarrygelpi.github.io/feeds/maths.atom.xml" type="application/atom+xml" rel="alternate"
+              title="M.E. Irizarry-Gelpí Maths ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://meirizarrygelpi.github.io/" class="navbar-brand">
+M.E. Irizarry-Gelpí            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="https://meirizarrygelpi.github.io/pages/cv.html">
+                             CV
+                          </a></li>
+                         <li><a href="https://meirizarrygelpi.github.io/pages/few-body-forward-jwkb-dynamics.html">
+                             Dynamics
+                          </a></li>
+                         <li><a href="https://meirizarrygelpi.github.io/pages/few-body-forward-jwkb-polytopes.html">
+                             Polytopes
+                          </a></li>
+                         <li><a href="https://meirizarrygelpi.github.io/pages/many-body-sudakov-decompositions.html">
+                             Sudakov
+                          </a></li>
+                         <li><a href="https://meirizarrygelpi.github.io/pages/two-dimensional-relativistic-kinematics.html">
+                             Two-Dimensional
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://meirizarrygelpi.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://meirizarrygelpi.github.io/posts/maths/bi-complex-numbers/"
+                       rel="bookmark"
+                       title="Permalink to Bi-Complex Numbers">
+                        Bi-Complex Numbers
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-08-03T00:00:00-04:00"> Thu 03 August 2017</time>
+    </span>
+
+
+            <span class="label label-default">By</span>
+            <a href="https://meirizarrygelpi.github.io/author/me-irizarry-gelpi.html"><i class="fa fa-user"></i> M.E. Irizarry-Gelpí</a>
+
+        <span class="label label-default">Category</span>
+        <a href="https://meirizarrygelpi.github.io/category/maths.html">Maths</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://meirizarrygelpi.github.io/tag/bi-complex.html">bi-complex</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Complex numbers are a staple of mathematics and physics. A complex number <span class="math">\(z\)</span> can be written as the sum of two terms:
+</p>
+<div class="math">$$z = a + bi.$$</div>
+<p>
+Here <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are real numbers, and <span class="math">\(i^{2} = -1\)</span>. For a long time, I thought of <span class="math">\(i\)</span> as the one and only imaginary unit, the only "number" that squares to -1. But you also have quaternions, which can be written as a sum of four terms:
+</p>
+<div class="math">$$ a + bi + cj + dk. $$</div>
+<p>
+Here <span class="math">\(a\)</span>, <span class="math">\(b\)</span>, <span class="math">\(c\)</span>, and <span class="math">\(d\)</span> are real numbers. The quaternion units <span class="math">\(i\)</span>, <span class="math">\(j\)</span>, and <span class="math">\(k\)</span> all square to -1:
+</p>
+<div class="math">$$ i^{2} = -1; \qquad j^{2} = -1; \qquad k^{2} = -1. $$</div>
+<p>
+However, multiplication is more complicated:
+</p>
+<div class="math">$$ ij + ji = 0; \qquad jk + kj = 0; \qquad ki + ik = 0; $$</div>
+<div class="math">$$ ij - ji = 2k; \qquad jk - kj = 2i; \qquad ki - ik = 2j. $$</div>
+<p>
+Obviously, there are many ways to restrict a quaternion to a complex number:
+</p>
+<div class="math">$$ a +bi; \qquad a + cj; \qquad a + dk. $$</div>
+<p>
+Each of these is a complex number, but with a different unit!</p>
+<p>There is another sum of four terms:
+</p>
+<div class="math">$$ a + bJ + CK + dS. $$</div>
+<p>
+Here, again, <span class="math">\(a\)</span>, <span class="math">\(b\)</span>, <span class="math">\(c\)</span>, and <span class="math">\(d\)</span> are real numbers. However, the units <span class="math">\(J\)</span>, <span class="math">\(K\)</span>, and <span class="math">\(S\)</span> do not all square to -1:
+</p>
+<div class="math">$$ J^{2} = -1; \qquad K^{2} = -1; \qquad S^{2} = +1. $$</div>
+<p>
+The multiplication of these units is different from the quaternion units:
+</p>
+<div class="math">$$ JK + KJ = 2S; \qquad KS + SK = -2J; \qquad SJ + JS = -2K; $$</div>
+<div class="math">$$ JK - KJ = 0; \qquad KS - SK = 0; \qquad SJ - JS = 0. $$</div>
+<p>
+That is, this multiplication operation is commutative. Numbers of this form are called <strong>bi-complex numbers</strong>.</p>
+<p>For quaternions, there is only one <strong>conjugation</strong> operation:
+</p>
+<div class="math">$$ (a+bi+cj+dk)^{*} = a-bi-cj-dk. $$</div>
+<p>
+This conjugation operation is an involution. With this conjugation operation you can define one <strong>quadrance</strong> operation:
+</p>
+<div class="math">$$ (a+bi+cj+dk)^{*} (a+bi+cj+dk) = a^{2} + b^{2} + c^{2} + d^{2}. $$</div>
+<p>
+For bi-complex numbers it is more useful to define three conjugation operations:
+</p>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{J}} = a-bJ+cK-dS; $$</div>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{K}} = a+bJ-cK-dS; $$</div>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{S}} = a-bJ-cK+dS. $$</div>
+<p>
+Each of these conjugation operations is an involution. You can define three quadrance operations:
+</p>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{J}} (a+bJ+cK+dS) = a^{2} + b^{2} - c^{2} - d^{2} + 2(ac + bd)K; $$</div>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{K}} (a+bJ+cK+dS) = a^{2} - b^{2} + c^{2} - d^{2} + 2(ab + cd)J; $$</div>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{S}} (a+bJ+cK+dS) = a^{2} + b^{2} + c^{2} + d^{2} + 2(ad - bc)S. $$</div>
+<p>
+None of these three quadrance operations are real. However, the quadrance of each quadrance gives a real number. This is the <strong>bi-quadrance</strong>:
+</p>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{S}} (a+bJ+cK+dS)^{*_{K}} (a+bJ+cK+dS)^{*_{J}} (a+bJ+cK+dS). $$</div>
+<p>
+The bi-quadrance is real and can be written in many equivalent forms:
+</p>
+<div class="math">$$ (a^{2} + b^{2} - c^{2} - d^{2})^{2} + 4 (ac + bd)^{2}; $$</div>
+<div class="math">$$ (a^{2} - b^{2} + c^{2} - d^{2})^{2} + 4 (ab + cd)^{2}; $$</div>
+<div class="math">$$ (a^{2} + b^{2} + c^{2} + d^{2})^{2} - 4 (ad - bc)^{2}. $$</div>
+<p>
+The last form can be factorized:
+</p>
+<div class="math">$$ ((a+d)^{2} + (b-c)^{2}) ((a-d)^{2} + (b+c)^{2}). $$</div>
+<p>
+Two things are clear from this expression. First, the bi-quadrance is always <strong>non-negative</strong>. Second, the bi-quadrance can be zero for non-trivial bi-complex numbers. A bi-complex number with zero bi-quadrance is a <strong>zero divisor</strong>. There are two kinds of zero divisors:
+</p>
+<div class="math">$$ a+bJ+bK-aS; \qquad a+bJ-bK+aS. $$</div>
+<p>
+These two kinds of zero divisors are interesting because they are linear combinations of terms that are idempotents or square roots of minus idempotents. For example,
+</p>
+<div class="math">$$ \left( \frac{1 + S}{2} \right)^{2} = \frac{1 + 1 + 2S}{4} = \frac{1 + S}{2}; $$</div>
+<div class="math">$$ \left( \frac{1 - S}{2} \right)^{2} = \frac{1 + 1 - 2S}{4} = \frac{1 - S}{2}; $$</div>
+<div class="math">$$ -\left( \frac{J + K}{2} \right)^{2} = \frac{1 + 1 - 2S}{4} = \frac{1 - S}{2}; $$</div>
+<div class="math">$$ -\left( \frac{J - K}{2} \right)^{2} = \frac{1 + 1 - 2S}{4} = \frac{1 + S}{2}. $$</div>
+<p>
+Note that you also have
+</p>
+<div class="math">$$ \left( \frac{1 + S}{2} \right) \left( \frac{J - K}{2} \right) = \frac{J - K - K + J}{4} = \frac{J - K}{2}; $$</div>
+<div class="math">$$ \left( \frac{1 - S}{2} \right) \left( \frac{J + K}{2} \right) = \frac{J + K + K + J}{4} = \frac{J + K}{2}. $$</div>
+<p>
+One kind of zero divisor can be written as
+</p>
+<div class="math">$$ a \left( \frac{1 - S}{2} \right) + b \left( \frac{J + K}{2} \right). $$</div>
+<p>
+It is funny that this follows the pattern of complex numbers in the sense that a complex number is written as
+</p>
+<div class="math">$$ a(1) + b(i), $$</div>
+<p>
+where <span class="math">\(1^{2} = 1\)</span> (1 is the idempotent), <span class="math">\(-i^{2} = 1\)</span> (<span class="math">\(i\)</span> is the square root of minus the idempotent), and <span class="math">\(1 i = i\)</span> (multiplying <span class="math">\(i\)</span> by the idempotent is the identity operation). The same holds for the other kind of zero divisor:
+</p>
+<div class="math">$$ a \left( \frac{1 + S}{2} \right) + b \left( \frac{J - K}{2} \right). $$</div>
+<p>
+Note that <span class="math">\(*_{S}\)</span> does not change the kind of a zero divisor, but <span class="math">\(*_{J}\)</span> and <span class="math">\(*_{K}\)</span> do.</p>
+<h2>Zero Bi-Quadrance Decomposition</h2>
+<p>Any bi-complex number can be written in terms of these combinations:
+</p>
+<div class="math">$$ a+bJ+cK+dS = (a + d) \left( \frac{1 + S}{2} \right) + (b - c) \left( \frac{J - K}{2} \right) + (b + c) \left( \frac{J + K}{2} \right) + (a - d) \left( \frac{1 - S}{2} \right). $$</div>
+<p>
+The bi-quadrance of each individual term is zero.</p>
+<h2>Segre Star Operation</h2>
+<p>In analogy with the Hodge star operation, you can define a <strong>Segre star</strong> operation as follows:
+</p>
+<div class="math">$$ (1)^{\star} = S, \qquad (J)^{\star} = -K, \qquad (K)^{\star} = -J, \qquad (S)^{\star} = 1. $$</div>
+<p>
+This is an involution. This means that you can star-decompose any bi-complex number <span class="math">\(z\)</span> into a <strong>self-star</strong> and an <strong>anti-self-star</strong> component:
+</p>
+<div class="math">$$ z = \left( \frac{z + z^{\star}}{2} \right) + \left( \frac{z - z^{\star}}{2} \right). $$</div>
+<p>
+If <span class="math">\(z = a+bJ+cK+dS\)</span>, then the Segre star is:
+</p>
+<div class="math">$$ z^{\star} = d - cJ - bK + aS. $$</div>
+<p>
+The self-star part of <span class="math">\(z\)</span> is:
+</p>
+<div class="math">$$ \frac{z + z^{\star}}{2} = (a + d)\left( \frac{1 + S}{2} \right) + (b - c)\left( \frac{J - K}{2} \right); $$</div>
+<p>
+and the anti-self-star part of <span class="math">\(z\)</span> is:
+</p>
+<div class="math">$$ \frac{z - z^{\star}}{2} = (a - d)\left( \frac{1 - S}{2} \right) + (b + c)\left( \frac{J + K}{2} \right). $$</div>
+<p>
+Each component of the Segre star decomposition is a zero divisor. The Segre star decomposition is equivalent to the zero bi-quadrance decomposition.</p>
+<p>The product of the self-star and anti-self-star components is zero, because
+</p>
+<div class="math">$$ \left( \frac{1 + S}{2} \right) \left( \frac{1 - S}{2} \right) = \frac{1 - 1}{4} = 0; $$</div>
+<div class="math">$$ \left( \frac{1 + S}{2} \right) \left( \frac{J + K}{2} \right) = \frac{J + K - K - J}{4} = 0; $$</div>
+<div class="math">$$ \left( \frac{1 - S}{2} \right) \left( \frac{J - K}{2} \right) = \frac{J - K + K - J}{4} = 0; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ \left( \frac{J + K}{2} \right) \left( \frac{J - K}{2} \right) = \frac{-1 + 1}{4} = 0; $$</div>
+<p>
+This is a form of orthogonality.</p>
+<p>The Segre star operation is equivalent to multiplying by <span class="math">\(S\)</span>.</p>
+<h2>Exponential Function</h2>
+<p>The exponential of a complex number involves exponential and trigonometric functions of real numbers:
+</p>
+<div class="math">$$ \exp{(a + bi)} = \exp{(a)} \left[ \cos{(b)} + i \sin{(b)} \right]. $$</div>
+<p>
+The exponential of a bi-complex number involves exponential, trigonometric, and hyperbolic functions of real numbers. Since the multiplication is commutative, there is factorization:
+</p>
+<div class="math">$$ \exp{(a + bJ + cK + dS)} = \exp{(a)} \exp{(bJ)} \exp{(cK)} \exp{(dS)}. $$</div>
+<p>
+Using
+</p>
+<div class="math">$$ \exp{(bJ)} = \cos{(b)} + J \sin{(b)} ; $$</div>
+<div class="math">$$ \exp{(cK)} = \cos{(c)} + K \sin{(c)}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ \exp{(dS)} = \cosh{(d)} + S \sinh{(d)}; $$</div>
+<p>
+you can find that
+</p>
+<div class="math">$$ \exp{(a + bJ + cK + dS)} = A + BJ + CK + DS; $$</div>
+<p>
+where
+</p>
+<div class="math">$$ A = \exp{(a)} \left[ \cos{(b)} \cos{(c)} \cosh{(d)} + \sin{(b)} \sin{(c)} \sinh{(d)} \right]; $$</div>
+<div class="math">$$ B = \exp{(a)} \left[ \sin{(b)} \cos{(c)} \cosh{(d)} - \cos{(b)} \sin{(c)} \sinh{(d)} \right]; $$</div>
+<div class="math">$$ C = \exp{(a)} \left[ \cos{(b)} \sin{(c)} \cosh{(d)} - \sin{(b)} \cos{(c)} \sinh{(d)} \right]; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ D = \exp{(a)} \left[ \sin{(b)} \sin{(c)} \cosh{(d)} + \cos{(b)} \cos{(c)} \sinh{(d)} \right]. $$</div>
+<h2>Lozenge Invariant</h2>
+<p>With two complex numbers <span class="math">\(x\)</span> and <span class="math">\(y\)</span> you can construct the expression
+</p>
+<div class="math">$$ x^{*}y. $$</div>
+<p>
+This is invariant under the following transformation:
+</p>
+<div class="math">$$ x \rightarrow \exp(ib) x, \qquad y \rightarrow \exp(ib) y. $$</div>
+<p>
+With four bi-complex numbers <span class="math">\(w\)</span>, <span class="math">\(x\)</span>, <span class="math">\(y\)</span>, and <span class="math">\(z\)</span> you can construct the <strong>lozenge</strong> expression
+</p>
+<div class="math">$$ w x^{*_{J}} y^{*_{K}} z^{*_{S}}. $$</div>
+<p>
+The lozenge is invariant under the following transformation:
+</p>
+<div class="math">$$ w \rightarrow \exp{(bJ+cK+dS)} w, \qquad x \rightarrow \exp{(bJ+cK+dS)} x, \qquad y \rightarrow \exp{(bJ+cK+dS)} y, \qquad z \rightarrow \exp{(bJ+cK+dS)} z.$$</div>
+<p>
+You can permute the variables in the lozenge to obtain an invariant that is symmetric and an invariant that is anti-symmetric.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript'; 
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'bi-complex-numbers';
+                var disqus_url = 'https://meirizarrygelpi.github.io/posts/maths/bi-complex-numbers/';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://meirizarrygelpi.github.io/feeds/main.xml"><i class="fa fa-rss-square fa-lg"></i> RSS</a></li>
+                <li class="list-group-item"><a href="https://github.com/meirizarrygelpi"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/melvineloy"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+                <li class="list-group-item"><a href="https://www.linkedin.com/in/melvin-eloy-irizarry-gelpí-62b6234"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+              </ul>
+            </li>
+
+
+            <li class="list-group-item"><a href="https://meirizarrygelpi.github.io/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="https://meirizarrygelpi.github.io/category/arxiv.html">
+                            <i class="fa fa-folder-open fa-lg"></i> arXiv
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://meirizarrygelpi.github.io/category/bash.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Bash
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://meirizarrygelpi.github.io/category/go.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Go
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://meirizarrygelpi.github.io/category/maths.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Maths
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://meirizarrygelpi.github.io/category/notes.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Notes
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://meirizarrygelpi.github.io/category/physics.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Physics
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://meirizarrygelpi.github.io/category/python.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Python
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2017 M.E. Irizarry-Gelpí
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://meirizarrygelpi.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://meirizarrygelpi.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://meirizarrygelpi.github.io/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'meirizarrygelpi'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>
