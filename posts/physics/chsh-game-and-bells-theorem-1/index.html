@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  CHSH Game and Bell's Theorem 1 | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/chsh-game-and-bells-theorem-1/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="A game for Bell's theorem, with some Python code.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  CHSH Game and Bell's Theorem 1
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-02-02T15:56:39.182399-05:00">
+          <i class="fa fa-clock-o"></i>
+          Fri 02 February 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83701x.html">#8.370.1x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>I am taking a MOOC on quantum information from MIT (8.370.1x). The discussion on Bell's theorem involves a classical game with two players, Alice and Bob. I wrote a little bit of Python code to understand the results better.</p>
+<p>The game consist of a referee that produces two randomly chosen classical bits <span class="math">\(a\)</span> and <span class="math">\(b\)</span> and hands Alice and Bob one each. Alice and Bob are separated. Alice produces another bit, <span class="math">\(x\)</span>, and Bob produces another bit <span class="math">\(y\)</span>. The game is won if the following condition is met:
+</p>
+<div class="math">$$ \operatorname{XOR}(x, y) = \operatorname{AND}(a, b). $$</div>
+<p>
+The claim is that if Alice and Bob follow a deterministic strategy when they each produce their bit, the game can only be won at most 75% of the time. If Alice and Bob use a stochastic strategy to produce their bit, they can also only win at most 75% of the time. Here is some code to check this. First, you import Numpy and set the seed of the random number generator.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Then you introduce a couple of constants:</p>
+<div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">16000</span>
+<span class="n">BOOLEANS</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]</span>
+<span class="n">referee</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">BOOLEANS</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Here, <code>referee</code> is an array <code>N</code> games that the referee has prepared.</p>
+<p>Python does not have a built-in exclusive-or function or operator, so here is my version of the exclusive-or function:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">xor</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">a</span><span class="p">:</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="n">b</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">b</span>
+</pre></div>
+
+
+<p>Looking online, I found the following shorter and equivalent definition:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">xor</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">!=</span> <span class="n">b</span>
+</pre></div>
+
+
+<p>The following function determines whether the game is won:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_game_won</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">xor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+
+<p>There are four deterministic strategies to produce a single bit from a given bit:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">strategy_0</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">False</span>
+
+<span class="k">def</span> <span class="nf">strategy_1</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">True</span>
+
+<span class="k">def</span> <span class="nf">strategy_2</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">strategy_3</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">x</span>
+</pre></div>
+
+
+<p>Here <code>strategy_0</code> and <code>strategy_1</code> are the constant boolean functions, <code>strategy_2</code> is the identity function, and <code>strategy_3</code> is the not function. There is also the stochastic strategy, which we are going to assume is unbiased and thus uses a uniform distribution:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">strategy_4</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">BOOLEANS</span><span class="p">)</span>
+</pre></div>
+
+
+<p>To calculate the fraction of games won, you can use the following function:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fraction_of_wins</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">N</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">referee</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">is_game_won</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">g</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">z</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">w</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">/</span> <span class="n">N</span>
+</pre></div>
+
+
+<p>This function takes two functions <code>f</code> and <code>g</code> that correspond to the strategies employed by Alice or Bob in producing their own bits. Finally, you check all possible combinations of strategies:</p>
+<div class="highlight"><pre><span></span><span class="n">strategies</span> <span class="o">=</span> <span class="p">[</span><span class="n">strategy_0</span><span class="p">,</span> <span class="n">strategy_1</span><span class="p">,</span> <span class="n">strategy_2</span><span class="p">,</span> <span class="n">strategy_3</span><span class="p">,</span> <span class="n">strategy_4</span><span class="p">]</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+        <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">fraction_of_wins</span><span class="p">(</span><span class="n">strategies</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">strategies</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+
+
+<p>The output is:</p>
+<div class="highlight"><pre><span></span><span class="p">[[</span> <span class="mf">0.7513125</span>  <span class="mf">0.2486875</span>  <span class="mf">0.747125</span>   <span class="mf">0.252875</span>   <span class="mf">0.4950625</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.2486875</span>  <span class="mf">0.7513125</span>  <span class="mf">0.252875</span>   <span class="mf">0.747125</span>   <span class="mf">0.4945625</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.7488125</span>  <span class="mf">0.2511875</span>  <span class="mf">0.24725</span>    <span class="mf">0.75275</span>    <span class="mf">0.499375</span> <span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.2511875</span>  <span class="mf">0.7488125</span>  <span class="mf">0.75275</span>    <span class="mf">0.24725</span>    <span class="mf">0.4963125</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.5028125</span>  <span class="mf">0.5043125</span>  <span class="mf">0.501125</span>   <span class="mf">0.4975625</span>  <span class="mf">0.4975625</span><span class="p">]]</span>
+</pre></div>
+
+
+<p>The largest fractions are close to 75%. When either Alice or Bob use the stochastic strategy, the fraction of wins is close to 49%.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'https://meirizarrygelpi.github.io/posts/physics/chsh-game-and-bells-theorem-1/index.html';
+      this.page.identifier = 'chsh-game-and-bells-theorem-1';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//meirizarrygelpi.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
