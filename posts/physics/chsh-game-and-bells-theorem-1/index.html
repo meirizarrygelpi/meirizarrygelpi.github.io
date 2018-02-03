@@ -59,9 +59,9 @@
   <article class="article">
     <header>
       <ul class="list-inline">
-        <li class="list-inline-item text-muted" title="2018-02-02T15:56:39.182399-05:00">
+        <li class="list-inline-item text-muted" title="2018-02-03T06:46:34.050277-05:00">
           <i class="fa fa-clock-o"></i>
-          Fri 02 February 2018
+          Sat 03 February 2018
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -85,66 +85,51 @@ The claim is that if Alice and Bob follow a deterministic strategy when they eac
 
 
 <p>Then you introduce a couple of constants:</p>
-<div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">16000</span>
+<div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">64000</span>
 <span class="n">BOOLEANS</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]</span>
-<span class="n">referee</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">BOOLEANS</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 
 
-<p>Here, <code>referee</code> is an array <code>N</code> games that the referee has prepared.</p>
 <p>Python does not have a built-in exclusive-or function or operator, so here is my version of the exclusive-or function:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">xor</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">a</span><span class="p">:</span>
-        <span class="k">return</span> <span class="ow">not</span> <span class="n">b</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">b</span>
-</pre></div>
-
-
-<p>Looking online, I found the following shorter and equivalent definition:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">xor</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">!=</span> <span class="n">b</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">xor</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">not_equal</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 
 
 <p>The following function determines whether the game is won:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_game_won</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">xor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_game_won</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">xor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">bitwise_and</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
 </pre></div>
 
 
 <p>There are four deterministic strategies to produce a single bit from a given bit:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">strategy_0</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="k">return</span> <span class="bp">False</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">strategy_0</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">,),</span> <span class="bp">False</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">strategy_1</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="k">return</span> <span class="bp">True</span>
+<span class="k">def</span> <span class="nf">strategy_1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">,),</span> <span class="bp">True</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">strategy_2</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">strategy_2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span>
 
-<span class="k">def</span> <span class="nf">strategy_3</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="k">return</span> <span class="ow">not</span> <span class="n">x</span>
+<span class="k">def</span> <span class="nf">strategy_3</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">bitwise_not</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
 
 <p>Here <code>strategy_0</code> and <code>strategy_1</code> are the constant boolean functions, <code>strategy_2</code> is the identity function, and <code>strategy_3</code> is the not function. There is also the stochastic strategy, which we are going to assume is unbiased and thus uses a uniform distribution:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">strategy_4</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">BOOLEANS</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">strategy_4</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">BOOLEANS</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">,))</span>
 </pre></div>
 
 
 <p>To calculate the fraction of games won, you can use the following function:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fraction_of_wins</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">N</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">referee</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">is_game_won</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">g</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">z</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">w</span><span class="p">:</span>
-            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">n</span> <span class="o">/</span> <span class="n">N</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fraction_of_wins</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">N</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">BOOLEANS</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,))</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">BOOLEANS</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,))</span>
+    <span class="n">games</span> <span class="o">=</span> <span class="n">is_game_won</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">g</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+    <span class="n">wins</span> <span class="o">=</span> <span class="n">games</span><span class="p">[</span><span class="n">games</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">wins</span><span class="o">.</span><span class="n">size</span> <span class="o">/</span> <span class="n">N</span>
 </pre></div>
 
 
@@ -162,15 +147,15 @@ The claim is that if Alice and Bob follow a deterministic strategy when they eac
 
 
 <p>The output is:</p>
-<div class="highlight"><pre><span></span><span class="p">[[</span> <span class="mf">0.7513125</span>  <span class="mf">0.2486875</span>  <span class="mf">0.747125</span>   <span class="mf">0.252875</span>   <span class="mf">0.4950625</span><span class="p">]</span>
- <span class="p">[</span> <span class="mf">0.2486875</span>  <span class="mf">0.7513125</span>  <span class="mf">0.252875</span>   <span class="mf">0.747125</span>   <span class="mf">0.4945625</span><span class="p">]</span>
- <span class="p">[</span> <span class="mf">0.7488125</span>  <span class="mf">0.2511875</span>  <span class="mf">0.24725</span>    <span class="mf">0.75275</span>    <span class="mf">0.499375</span> <span class="p">]</span>
- <span class="p">[</span> <span class="mf">0.2511875</span>  <span class="mf">0.7488125</span>  <span class="mf">0.75275</span>    <span class="mf">0.24725</span>    <span class="mf">0.4963125</span><span class="p">]</span>
- <span class="p">[</span> <span class="mf">0.5028125</span>  <span class="mf">0.5043125</span>  <span class="mf">0.501125</span>   <span class="mf">0.4975625</span>  <span class="mf">0.4975625</span><span class="p">]]</span>
+<div class="highlight"><pre><span></span><span class="p">[[</span> <span class="mf">0.75101562</span>  <span class="mf">0.25125</span>     <span class="mf">0.75078125</span>  <span class="mf">0.250375</span>    <span class="mf">0.49703125</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.245375</span>    <span class="mf">0.75110937</span>  <span class="mf">0.25189062</span>  <span class="mf">0.74864062</span>  <span class="mf">0.50015625</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.7499375</span>   <span class="mf">0.25082813</span>  <span class="mf">0.24928125</span>  <span class="mf">0.74746875</span>  <span class="mf">0.49771875</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.24970312</span>  <span class="mf">0.75384375</span>  <span class="mf">0.75096875</span>  <span class="mf">0.2478125</span>   <span class="mf">0.49728125</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.50148437</span>  <span class="mf">0.500125</span>    <span class="mf">0.5033125</span>   <span class="mf">0.50159375</span>  <span class="mf">0.50101562</span><span class="p">]]</span>
 </pre></div>
 
 
-<p>The largest fractions are close to 75%. When either Alice or Bob use the stochastic strategy, the fraction of wins is close to 49%.</p>
+<p>The largest fractions are close to 75%. When either Alice or Bob use the stochastic strategy, the fraction of wins is close to 50%.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
