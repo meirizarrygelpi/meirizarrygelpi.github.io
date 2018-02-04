@@ -1,5 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-03T06:46:34-05:00</updated><entry><title>CHSH Game and Bell's Theorem 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/chsh-game-and-bells-theorem-1/" rel="alternate"></link><published>2018-02-03T06:46:34-05:00</published><updated>2018-02-03T06:46:34-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-03:/posts/physics/chsh-game-and-bells-theorem-1/</id><summary type="html">&lt;p&gt;A game for Bell's theorem, with some Python code.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am taking a MOOC on quantum information from MIT (8.370.1x). The discussion on Bell's theorem involves a classical game with two players, Alice and Bob. I wrote a little bit of Python code to understand the results better.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-04T11:12:08-05:00</updated><entry><title>CHSH Game and Bell's Theorem 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/chsh-game-and-bells-theorem-2/" rel="alternate"></link><published>2018-02-04T11:12:08-05:00</published><updated>2018-02-04T11:12:08-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-04:/posts/physics/chsh-game-and-bells-theorem-2/</id><summary type="html">&lt;p&gt;The quantum improvement to the classical result.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Alice and Bob share a 2-qubit state. That is, a ket &lt;span class="math"&gt;\(| \psi \rangle\)&lt;/span&gt; of the form
+&lt;/p&gt;
+&lt;div class="math"&gt;$$| \psi \rangle = a_{00} | 00 \rangle + a_{01} | 01 \rangle + a_{10} | 10 \rangle + a_{11} | 11 \rangle. $$&lt;/div&gt;
+&lt;p&gt;
+Just like before, Alice and Bob each get a random bit. Alice gets &lt;span class="math"&gt;\(a\)&lt;/span&gt; and Bob gets &lt;span class="math"&gt;\(b\)&lt;/span&gt;. They each use their bit to make a choice of a basis to make a measurement. The basis is orthonormal, so for Alice it should have the form
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |A_{0}(\alpha) \rangle = \cos{(\alpha)} | 0 \rangle + \sin{(\alpha)} | 1 \rangle, \qquad |A_{1}(\alpha) \rangle = \sin{(\alpha)} | 0 \rangle - \cos{(\alpha)} | 1 \rangle; $$&lt;/div&gt;
+&lt;p&gt;
+and similarly for Bob:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |B_{0}(\beta) \rangle = \cos{(\beta)} | 0 \rangle + \sin{(\beta)} | 1 \rangle, \qquad |B_{1}(\beta) \rangle = \sin{(\beta)} | 0 \rangle - \cos{(\beta)} | 1 \rangle. $$&lt;/div&gt;
+&lt;p&gt;
+If &lt;span class="math"&gt;\(a = 0\)&lt;/span&gt;, then &lt;span class="math"&gt;\(\alpha = \alpha_{0}\)&lt;/span&gt;; otherwise &lt;span class="math"&gt;\(\alpha = \alpha_{1}\)&lt;/span&gt;. Similarly, &lt;span class="math"&gt;\(b = 0\)&lt;/span&gt;, then &lt;span class="math"&gt;\(\beta = \beta_{0}\)&lt;/span&gt;; otherwise &lt;span class="math"&gt;\(\beta = \beta_{1}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;For future reference, here I record the tensor products:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |A_{0}(\alpha) B_{0}(\beta) \rangle = \cos{(\alpha)} \cos{(\beta)} |00 \rangle + \cos{(\alpha)} \sin{(\beta)} |01 \rangle + \sin{(\alpha)} \cos{(\beta)} |10 \rangle + \sin{(\alpha)} \sin{(\beta)} |11 \rangle $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |A_{0}(\alpha) B_{1}(\beta) \rangle = \cos{(\alpha)} \sin{(\beta)} |00 \rangle - \cos{(\alpha)} \cos{(\beta)} |01 \rangle + \sin{(\alpha)} \sin{(\beta)} |10 \rangle - \sin{(\alpha)} \cos{(\beta)} |11 \rangle $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |A_{1}(\alpha) B_{0}(\beta) \rangle = \sin{(\alpha)} \cos{(\beta)} |00 \rangle + \sin{(\alpha)} \sin{(\beta)} |01 \rangle - \cos{(\alpha)} \cos{(\beta)} |10 \rangle - \cos{(\alpha)} \sin{(\beta)} |11 \rangle $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |A_{1}(\alpha) B_{1}(\beta) \rangle = \sin{(\alpha)} \sin{(\beta)} |00 \rangle - \sin{(\alpha)} \cos{(\beta)} |01 \rangle - \cos{(\alpha)} \sin{(\beta)} |10 \rangle + \cos{(\alpha)} \cos{(\beta)} |11 \rangle $$&lt;/div&gt;
+&lt;p&gt;There are four possible outcomes for the bits &lt;span class="math"&gt;\((a, b)\)&lt;/span&gt; that the referee produces:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ (0, 0), \qquad (0, 1), \qquad (1, 0), \qquad (1, 1). $$&lt;/div&gt;
+&lt;p&gt;
+Recall that the game is won if the following condition is met:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \operatorname{AND}(a, b) = \operatorname{XOR}(x, y). $$&lt;/div&gt;
+&lt;p&gt;
+Let me check each of the possible referee outcomes.&lt;/p&gt;
+&lt;p&gt;If &lt;span class="math"&gt;\((a, b) = (0, 0)\)&lt;/span&gt;, then &lt;span class="math"&gt;\(\operatorname{AND}(a, b) = 0\)&lt;/span&gt;. In order for &lt;span class="math"&gt;\(\operatorname{XOR}(x, y) = 0\)&lt;/span&gt; you need either &lt;span class="math"&gt;\(x = y = 0\)&lt;/span&gt;, or &lt;span class="math"&gt;\(x = y = 1\)&lt;/span&gt;. Thus, the probability of winning in this case has two contributions:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(0, 0) = \left| \langle A_{0}(\alpha_{0})B_{0}(\beta_{0}) | \psi \rangle \right|^{2} + \left| \langle A_{1}(\alpha_{0})B_{1}(\beta_{0}) | \psi \rangle \right|^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+That is, Alice projects along &lt;span class="math"&gt;\(|A_{0}(\alpha_{0})\rangle\)&lt;/span&gt; if &lt;span class="math"&gt;\(x=0\)&lt;/span&gt; or along &lt;span class="math"&gt;\(|A_{1}(\alpha_{0})\rangle\)&lt;/span&gt; if &lt;span class="math"&gt;\(x=1\)&lt;/span&gt;. Similarly, Bob projects along &lt;span class="math"&gt;\(|B_{0}(\beta_{0})\rangle\)&lt;/span&gt; if &lt;span class="math"&gt;\(y=0\)&lt;/span&gt; or along &lt;span class="math"&gt;\(|B_{1}(\beta_{0})\rangle\)&lt;/span&gt; if &lt;span class="math"&gt;\(y=1\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;If &lt;span class="math"&gt;\((a, b) = (0, 1)\)&lt;/span&gt;, then &lt;span class="math"&gt;\(\operatorname{AND}(a, b) = 0\)&lt;/span&gt;. In order for &lt;span class="math"&gt;\(\operatorname{XOR}(x, y) = 0\)&lt;/span&gt; you need either &lt;span class="math"&gt;\(x = y = 0\)&lt;/span&gt;, or &lt;span class="math"&gt;\(x = y = 1\)&lt;/span&gt;. Thus, the probability of winning in this case has two contributions:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(0, 1) = \left| \langle A_{0}(\alpha_{0})B_{0}(\beta_{1}) | \psi \rangle \right|^{2} + \left| \langle A_{1}(\alpha_{0})B_{1}(\beta_{1}) | \psi \rangle \right|^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+If &lt;span class="math"&gt;\((a, b) = (1, 0)\)&lt;/span&gt;, then &lt;span class="math"&gt;\(\operatorname{AND}(a, b) = 0\)&lt;/span&gt;. In order for &lt;span class="math"&gt;\(\operatorname{XOR}(x, y) = 0\)&lt;/span&gt; you need either &lt;span class="math"&gt;\(x = y = 0\)&lt;/span&gt;, or &lt;span class="math"&gt;\(x = y = 1\)&lt;/span&gt;. Thus, the probability of winning in this case has two contributions:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(1, 0) = \left| \langle A_{0}(\alpha_{1})B_{0}(\beta_{0}) | \psi \rangle \right|^{2} + \left| \langle A_{1}(\alpha_{1})B_{1}(\beta_{0}) | \psi \rangle \right|^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+If &lt;span class="math"&gt;\((a, b) = (1, 1)\)&lt;/span&gt;, then &lt;span class="math"&gt;\(\operatorname{AND}(a, b) = 1\)&lt;/span&gt;. In order for &lt;span class="math"&gt;\(\operatorname{XOR}(x, y) = 1\)&lt;/span&gt; you need either &lt;span class="math"&gt;\(x = 0\)&lt;/span&gt; and &lt;span class="math"&gt;\(y = 1\)&lt;/span&gt;, or &lt;span class="math"&gt;\(x = 1\)&lt;/span&gt; and &lt;span class="math"&gt;\(y = 1\)&lt;/span&gt;. Thus, the probability of winning in this case has two contributions:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(1, 1) = \left| \langle A_{0}(\alpha_{1})B_{1}(\beta_{1}) | \psi \rangle \right|^{2} + \left| \langle A_{1}(\alpha_{1})B_{0}(\beta_{1}) | \psi \rangle \right|^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+The total probability to win is given by adding each of the above terms with an appropriate weight:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(\psi) = \frac{1}{4} \left[ p_{\text{win}}(0, 0) + p_{\text{win}}(0, 1) + p_{\text{win}}(1, 0) + p_{\text{win}}(1, 1) \right]. $$&lt;/div&gt;
+&lt;h2&gt;Bell States&lt;/h2&gt;
+&lt;p&gt;If the quantum state &lt;span class="math"&gt;\(| \psi \rangle\)&lt;/span&gt; is one of the four Bell states
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ | \Phi^{+} \rangle = \frac{1}{\sqrt{2}} \left( |00\rangle + |11\rangle \right), \quad | \Phi^{-} \rangle = \frac{1}{\sqrt{2}} \left( |00\rangle - |11\rangle \right), \quad | \Psi^{+} \rangle = \frac{1}{\sqrt{2}} \left( |01\rangle + |10\rangle \right), \quad | \Psi^{-} \rangle = \frac{1}{\sqrt{2}} \left( |01\rangle - |10\rangle \right); $$&lt;/div&gt;
+&lt;p&gt;
+then the probabilities above greatly simplify.&lt;/p&gt;
+&lt;p&gt;First, consider &lt;span class="math"&gt;\(| \psi \rangle = | \Phi^{+} \rangle\)&lt;/span&gt;. Then
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(0, 0) = \cos^{2}{(\alpha_{0} - \beta_{0})}, \qquad p_{\text{win}}(0, 1) = \cos^{2}{(\alpha_{0} - \beta_{1})}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(1, 0) = \cos^{2}{(\alpha_{1} - \beta_{0})}, \qquad p_{\text{win}}(1, 1) = \sin^{2}{(\alpha_{1} - \beta_{1})}; $$&lt;/div&gt;
+&lt;p&gt;
+and thus the probability of winning the game is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(\Phi^{+}) = \frac{1}{4} \left[ \cos^{2}{(\alpha_{0} - \beta_{0})} + \cos^{2}{(\alpha_{0} - \beta_{1})} + \cos^{2}{(\alpha_{1} - \beta_{0})} + \sin^{2}{(\alpha_{1} - \beta_{1})} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+For the particular values
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \begin{pmatrix} \alpha_{0} &amp;amp; \alpha_{1} &amp;amp; \beta_{0} &amp;amp; \beta_{1} \end{pmatrix} = \begin{pmatrix} 0 &amp;amp; \dfrac{\pi}{4} &amp;amp; \dfrac{\pi}{8} &amp;amp; -\dfrac{\pi}{8} \end{pmatrix}; $$&lt;/div&gt;
+&lt;p&gt;
+then
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(\Phi^{+}) = \frac{1}{2} + \frac{1}{\sqrt{8}} \approx 0.853553390593274. $$&lt;/div&gt;
+&lt;p&gt;
+Apparently, this is the largest possible value for the probability of winning. Currently, I am unable to prove this.&lt;/p&gt;
+&lt;p&gt;Next, consider the case &lt;span class="math"&gt;\(| \psi \rangle = | \Phi^{-} \rangle\)&lt;/span&gt;. Then
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(0, 0) = \cos^{2}{(\alpha_{0} + \beta_{0})}, \qquad p_{\text{win}}(0, 1) = \cos^{2}{(\alpha_{0} + \beta_{1})}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(1, 0) = \cos^{2}{(\alpha_{1} + \beta_{0})}, \qquad p_{\text{win}}(1, 1) = \sin^{2}{(\alpha_{1} + \beta_{1})}; $$&lt;/div&gt;
+&lt;p&gt;
+and thus the probability of winning the game is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(\Phi^{-}) = \frac{1}{4} \left[ \cos^{2}{(\alpha_{0} + \beta_{0})} + \cos^{2}{(\alpha_{0} + \beta_{1})} + \cos^{2}{(\alpha_{1} + \beta_{0})} + \sin^{2}{(\alpha_{1} + \beta_{1})} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+You can see that if you take the probability of winning for &lt;span class="math"&gt;\(| \psi \rangle = | \Phi^{+} \rangle\)&lt;/span&gt; and replace
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \beta_{0} \rightarrow -\beta_{0}, \qquad \beta_{1} \rightarrow -\beta_{1}; $$&lt;/div&gt;
+&lt;p&gt;
+then you get the same expression for the probability of winning for &lt;span class="math"&gt;\(| \psi \rangle = | \Phi^{-} \rangle\)&lt;/span&gt;. That is, for the particular values
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \begin{pmatrix} \alpha_{0} &amp;amp; \alpha_{1} &amp;amp; \beta_{0} &amp;amp; \beta_{1} \end{pmatrix} = \begin{pmatrix} 0 &amp;amp; \dfrac{\pi}{4} &amp;amp; -\dfrac{\pi}{8} &amp;amp; \dfrac{\pi}{8} \end{pmatrix}; $$&lt;/div&gt;
+&lt;p&gt;
+the probability of winning for &lt;span class="math"&gt;\(| \psi \rangle = | \Phi^{-} \rangle\)&lt;/span&gt; is maximized.&lt;/p&gt;
+&lt;p&gt;Next, consider the case &lt;span class="math"&gt;\(| \psi \rangle = | \Psi^{+} \rangle\)&lt;/span&gt;. Then
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(0, 0) = \sin^{2}{(\alpha_{0} + \beta_{0})}, \qquad p_{\text{win}}(0, 1) = \sin^{2}{(\alpha_{0} + \beta_{1})}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(1, 0) = \sin^{2}{(\alpha_{1} + \beta_{0})}, \qquad p_{\text{win}}(1, 1) = \cos^{2}{(\alpha_{1} + \beta_{1})}; $$&lt;/div&gt;
+&lt;p&gt;
+and thus the probability of winning the game is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(\Psi^{+}) = \frac{1}{4} \left[ \sin^{2}{(\alpha_{0} + \beta_{0})} + \sin^{2}{(\alpha_{0} + \beta_{1})} + \sin^{2}{(\alpha_{1} + \beta_{0})} + \cos^{2}{(\alpha_{1} + \beta_{1})} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+You can see that if you take the probability of winning for &lt;span class="math"&gt;\(| \psi \rangle = | \Phi^{-} \rangle\)&lt;/span&gt; and replace
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \alpha_{0} \rightarrow \alpha_{0} + \frac{\pi}{2}, \qquad \alpha_{1} \rightarrow \alpha_{1} + \frac{\pi}{2}; $$&lt;/div&gt;
+&lt;p&gt;
+then you get the same expression for the probability of winning for &lt;span class="math"&gt;\(| \psi \rangle = | \Psi^{+} \rangle\)&lt;/span&gt;. That is, for the particular values
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \begin{pmatrix} \alpha_{0} &amp;amp; \alpha_{1} &amp;amp; \beta_{0} &amp;amp; \beta_{1} \end{pmatrix} = \begin{pmatrix} \dfrac{\pi}{2} &amp;amp; \dfrac{3\pi}{4} &amp;amp; -\dfrac{\pi}{8} &amp;amp; \dfrac{\pi}{8} \end{pmatrix}; $$&lt;/div&gt;
+&lt;p&gt;
+the probability of winning for &lt;span class="math"&gt;\(| \psi \rangle = | \Psi^{+} \rangle\)&lt;/span&gt; is maximized.&lt;/p&gt;
+&lt;p&gt;Next, consider the case &lt;span class="math"&gt;\(| \psi \rangle = | \Psi^{-} \rangle\)&lt;/span&gt;. Then
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(0, 0) = \sin^{2}{(\alpha_{0} - \beta_{0})}, \qquad p_{\text{win}}(0, 1) = \sin^{2}{(\alpha_{0} - \beta_{1})}, $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(1, 0) = \sin^{2}{(\alpha_{1} - \beta_{0})}, \qquad p_{\text{win}}(1, 1) = \cos^{2}{(\alpha_{1} - \beta_{1})}; $$&lt;/div&gt;
+&lt;p&gt;
+and thus the probability of winning the game is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(\Psi^{-}) = \frac{1}{4} \left[ \sin^{2}{(\alpha_{0} - \beta_{0})} + \sin^{2}{(\alpha_{0} - \beta_{1})} + \sin^{2}{(\alpha_{1} - \beta_{0})} + \cos^{2}{(\alpha_{1} - \beta_{1})} \right]. $$&lt;/div&gt;
+&lt;p&gt;
+You can see that if you take the probability of winning for &lt;span class="math"&gt;\(| \psi \rangle = | \Phi^{+} \rangle\)&lt;/span&gt; and replace
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \alpha_{0} \rightarrow \alpha_{0} + \frac{\pi}{2}, \qquad \alpha_{1} \rightarrow \alpha_{1} + \frac{\pi}{2}; $$&lt;/div&gt;
+&lt;p&gt;
+then you get the same expression for the probability of winning for &lt;span class="math"&gt;\(| \psi \rangle = | \Psi^{-} \rangle\)&lt;/span&gt;. That is, for the particular values
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \begin{pmatrix} \alpha_{0} &amp;amp; \alpha_{1} &amp;amp; \beta_{0} &amp;amp; \beta_{1} \end{pmatrix} = \begin{pmatrix} \dfrac{\pi}{2} &amp;amp; \dfrac{3\pi}{4} &amp;amp; \dfrac{\pi}{8} &amp;amp; -\dfrac{\pi}{8} \end{pmatrix}; $$&lt;/div&gt;
+&lt;p&gt;
+the probability of winning for &lt;span class="math"&gt;\(| \psi \rangle = | \Psi^{-} \rangle\)&lt;/span&gt; is maximized.&lt;/p&gt;
+&lt;p&gt;Thus, there is a strategy to win the game with a probability larger than the classical 75%.&lt;/p&gt;
+&lt;h2&gt;Reference&lt;/h2&gt;
+&lt;p&gt;This &lt;a href="https://sergworks.wordpress.com/2016/10/26/chsh-game-in-detail/"&gt;blog post&lt;/a&gt; helped me understand how to relate the bits given by the referee to the choices made by Alice and Bob.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.1x"></category></entry><entry><title>CHSH Game and Bell's Theorem 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/chsh-game-and-bells-theorem-1/" rel="alternate"></link><published>2018-02-03T06:46:34-05:00</published><updated>2018-02-03T06:46:34-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-03:/posts/physics/chsh-game-and-bells-theorem-1/</id><summary type="html">&lt;p&gt;A game for Bell's theorem, with some Python code.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am taking a MOOC on quantum information from MIT (8.370.1x). The discussion on Bell's theorem involves a classical game with two players, Alice and Bob. I wrote a little bit of Python code to understand the results better.&lt;/p&gt;
 &lt;p&gt;The game consist of a referee that produces two randomly chosen classical bits &lt;span class="math"&gt;\(a\)&lt;/span&gt; and &lt;span class="math"&gt;\(b\)&lt;/span&gt; and hands Alice and Bob one each. Alice and Bob are separated. Alice produces another bit, &lt;span class="math"&gt;\(x\)&lt;/span&gt;, and Bob produces another bit &lt;span class="math"&gt;\(y\)&lt;/span&gt;. The game is won if the following condition is met:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \operatorname{XOR}(x, y) = \operatorname{AND}(a, b). $$&lt;/div&gt;
