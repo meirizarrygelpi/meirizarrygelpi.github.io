@@ -1,5 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-04T13:46:55-05:00</updated><entry><title>CHSH Game and Bell's Theorem 3</title><link href="https://meirizarrygelpi.github.io/posts/physics/chsh-game-and-bells-theorem-3/" rel="alternate"></link><published>2018-02-04T13:46:55-05:00</published><updated>2018-02-04T13:46:55-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-04:/posts/physics/chsh-game-and-bells-theorem-3/</id><summary type="html">&lt;p&gt;Some Python code for the quantum game.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here is the Python code that I used to show that there is a strategy with a 2-qubit state share by Alice and Bob to win the CHSH game with a probability that is larger than if they had classical bits instead.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-06T05:38:48-05:00</updated><entry><title>Exponential of a Pauli Matrix</title><link href="https://meirizarrygelpi.github.io/posts/physics/exponential-of-a-pauli-matrix/" rel="alternate"></link><published>2018-02-06T05:38:48-05:00</published><updated>2018-02-06T05:38:48-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-06:/posts/physics/exponential-of-a-pauli-matrix/</id><summary type="html">&lt;p&gt;The exponential function acting on a Pauli matrix.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The three Pauli matrices are
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ X = \begin{pmatrix} 0 &amp;amp; 1 \\ 1 &amp;amp; 0 \end{pmatrix}, \qquad Y = \begin{pmatrix} 0 &amp;amp; -i \\ i &amp;amp; 0 \end{pmatrix}, \qquad Z = \begin{pmatrix} 1 &amp;amp; 0 \\ 0 &amp;amp; -1 \end{pmatrix}. $$&lt;/div&gt;
+&lt;p&gt;
+Each is Hermitian and square to the identity:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ X^{2} = Y^{2} = Z^{2} = I. $$&lt;/div&gt;
+&lt;p&gt;
+Consider the following function:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ U_{M}(\theta) \equiv \exp{\left( \frac{i}{2} \theta M \right)}, \qquad M^{2} = I. $$&lt;/div&gt;
+&lt;p&gt;
+The exponential of a matrix is defined in terms of the infinite series
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ U_{M}(\theta) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n+1)} \left( \frac{i}{2} \theta M \right)^{n}. $$&lt;/div&gt;
+&lt;p&gt;
+First, you split the sum into even and odd powers:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ U_{M}(\theta) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(2n+1)} \left( \frac{i}{2} \theta M \right)^{2n} + \sum_{n = 0}^{\infty} \frac{1}{\Gamma(2n+2)} \left( \frac{i}{2} \theta M \right)^{2n + 1}. $$&lt;/div&gt;
+&lt;p&gt;
+Then you use the fact that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ i^{2n} = (-1)^{n}, \qquad M^{2n} = I; $$&lt;/div&gt;
+&lt;p&gt;
+to find
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ U_{M}(\theta) = I \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(2n+1)} \left( \frac{1}{2} \theta \right)^{2n} + i M \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(2n+2)} \left( \frac{1}{2} \theta \right)^{2n + 1}. $$&lt;/div&gt;
+&lt;p&gt;
+Finally, you recognize the sine and cosine infinite series:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ U_{M}(\theta) = I \cos{\left( \frac{\theta}{2} \right)} + i M \sin{\left( \frac{\theta}{2} \right)}. $$&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(M\)&lt;/span&gt; can be any of the three Pauli matrices.&lt;/p&gt;
+&lt;p&gt;Recall also that the three Pauli matrices anti-commute:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ XY + YX = YZ + ZY = ZX + XZ = 0. $$&lt;/div&gt;
+&lt;p&gt;
+Now consider the following matrix
+&lt;/p&gt;
+&lt;div class="math"&gt;$$r \cdot R \equiv x X + y Y + z Z, \qquad x^{2} + y^{2} + z^{2} = 1. $$&lt;/div&gt;
+&lt;p&gt;
+Then it follows that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ (r \cdot R)^{2} = I. $$&lt;/div&gt;
+&lt;p&gt;
+Thus, in general
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \exp{\left[ \frac{i}{2} \theta (r \cdot R) \right]} = I \cos{\left( \frac{\theta}{2} \right)} + i (r \cdot R) \sin{\left( \frac{\theta}{2} \right)}. $$&lt;/div&gt;
+&lt;p&gt;
+If you relax the unit 2-sphere condition, then
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ (r \cdot R)^{2} = \left(\sqrt{x^{2} + y^{2} + z^{2}}\right)^{2} I; $$&lt;/div&gt;
+&lt;p&gt;
+and thus
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \exp{\left[ \frac{i}{2} \theta (r \cdot R) \right]} = I \cos{\left( \frac{\theta \sqrt{x^{2} + y^{2} + z^{2}}}{2} \right)} + i (r \cdot R) \sin{\left( \frac{\theta \sqrt{x^{2} + y^{2} + z^{2}}}{2} \right)}. $$&lt;/div&gt;
+&lt;p&gt;
+In any case, the length of the &lt;span class="math"&gt;\(r\)&lt;/span&gt; vector can always be absorbed into the angle &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.1x"></category></entry><entry><title>CHSH Game and Bell's Theorem 3</title><link href="https://meirizarrygelpi.github.io/posts/physics/chsh-game-and-bells-theorem-3/" rel="alternate"></link><published>2018-02-04T13:46:55-05:00</published><updated>2018-02-04T13:46:55-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-04:/posts/physics/chsh-game-and-bells-theorem-3/</id><summary type="html">&lt;p&gt;Some Python code for the quantum game.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here is the Python code that I used to show that there is a strategy with a 2-qubit state share by Alice and Bob to win the CHSH game with a probability that is larger than if they had classical bits instead.&lt;/p&gt;
 &lt;p&gt;I used &lt;a href="https://www.sympy.org"&gt;SymPy&lt;/a&gt; to do the symbolic calculations. In the future, I would love to do a numerical simulation. First you import SymPy and enable pretty printing:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sym&lt;/span&gt;
 &lt;span class="n"&gt;sym&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init_printing&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;

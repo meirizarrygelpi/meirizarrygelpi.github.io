@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Exponential of a Pauli Matrix | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/exponential-of-a-pauli-matrix/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="The exponential function acting on a Pauli matrix.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Exponential of a Pauli Matrix
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-02-06T05:38:48.779222-05:00">
+          <i class="fa fa-clock-o"></i>
+          Tue 06 February 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83701x.html">#8.370.1x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>The three Pauli matrices are
+</p>
+<div class="math">$$ X = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}, \qquad Y = \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix}, \qquad Z = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}. $$</div>
+<p>
+Each is Hermitian and square to the identity:
+</p>
+<div class="math">$$ X^{2} = Y^{2} = Z^{2} = I. $$</div>
+<p>
+Consider the following function:
+</p>
+<div class="math">$$ U_{M}(\theta) \equiv \exp{\left( \frac{i}{2} \theta M \right)}, \qquad M^{2} = I. $$</div>
+<p>
+The exponential of a matrix is defined in terms of the infinite series
+</p>
+<div class="math">$$ U_{M}(\theta) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n+1)} \left( \frac{i}{2} \theta M \right)^{n}. $$</div>
+<p>
+First, you split the sum into even and odd powers:
+</p>
+<div class="math">$$ U_{M}(\theta) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(2n+1)} \left( \frac{i}{2} \theta M \right)^{2n} + \sum_{n = 0}^{\infty} \frac{1}{\Gamma(2n+2)} \left( \frac{i}{2} \theta M \right)^{2n + 1}. $$</div>
+<p>
+Then you use the fact that
+</p>
+<div class="math">$$ i^{2n} = (-1)^{n}, \qquad M^{2n} = I; $$</div>
+<p>
+to find
+</p>
+<div class="math">$$ U_{M}(\theta) = I \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(2n+1)} \left( \frac{1}{2} \theta \right)^{2n} + i M \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(2n+2)} \left( \frac{1}{2} \theta \right)^{2n + 1}. $$</div>
+<p>
+Finally, you recognize the sine and cosine infinite series:
+</p>
+<div class="math">$$ U_{M}(\theta) = I \cos{\left( \frac{\theta}{2} \right)} + i M \sin{\left( \frac{\theta}{2} \right)}. $$</div>
+<p>
+Here <span class="math">\(M\)</span> can be any of the three Pauli matrices.</p>
+<p>Recall also that the three Pauli matrices anti-commute:
+</p>
+<div class="math">$$ XY + YX = YZ + ZY = ZX + XZ = 0. $$</div>
+<p>
+Now consider the following matrix
+</p>
+<div class="math">$$r \cdot R \equiv x X + y Y + z Z, \qquad x^{2} + y^{2} + z^{2} = 1. $$</div>
+<p>
+Then it follows that
+</p>
+<div class="math">$$ (r \cdot R)^{2} = I. $$</div>
+<p>
+Thus, in general
+</p>
+<div class="math">$$ \exp{\left[ \frac{i}{2} \theta (r \cdot R) \right]} = I \cos{\left( \frac{\theta}{2} \right)} + i (r \cdot R) \sin{\left( \frac{\theta}{2} \right)}. $$</div>
+<p>
+If you relax the unit 2-sphere condition, then
+</p>
+<div class="math">$$ (r \cdot R)^{2} = \left(\sqrt{x^{2} + y^{2} + z^{2}}\right)^{2} I; $$</div>
+<p>
+and thus
+</p>
+<div class="math">$$ \exp{\left[ \frac{i}{2} \theta (r \cdot R) \right]} = I \cos{\left( \frac{\theta \sqrt{x^{2} + y^{2} + z^{2}}}{2} \right)} + i (r \cdot R) \sin{\left( \frac{\theta \sqrt{x^{2} + y^{2} + z^{2}}}{2} \right)}. $$</div>
+<p>
+In any case, the length of the <span class="math">\(r\)</span> vector can always be absorbed into the angle <span class="math">\(\theta\)</span>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'https://meirizarrygelpi.github.io/posts/physics/exponential-of-a-pauli-matrix/index.html';
+      this.page.identifier = 'exponential-of-a-pauli-matrix';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//meirizarrygelpi.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
