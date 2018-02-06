@@ -59,9 +59,9 @@
   <article class="article">
     <header>
       <ul class="list-inline">
-        <li class="list-inline-item text-muted" title="2018-02-03T06:46:34.050277-05:00">
+        <li class="list-inline-item text-muted" title="2018-02-06T07:40:37.929465-05:00">
           <i class="fa fa-clock-o"></i>
-          Sat 03 February 2018
+          Tue 06 February 2018
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -155,7 +155,15 @@ The claim is that if Alice and Bob follow a deterministic strategy when they eac
 </pre></div>
 
 
-<p>The largest fractions are close to 75%. When either Alice or Bob use the stochastic strategy, the fraction of wins is close to 50%.</p>
+<p>The largest fractions are close to 75%. When either Alice or Bob (or both) use the stochastic strategy, the fraction of wins is close to 50%. In more detail, Alice and Bob have the largest chance of winning if they follow one of the following strategies:</p>
+<ul>
+<li>Both always return 0</li>
+<li>Both always return 1</li>
+<li>Alice (Bob) always returns 0 and Bob (Alice) returns the same as given</li>
+<li>Alice (Bob) always returns 1 and Bob (Alice) returns the negation of what was given</li>
+<li>Alice (Bob) returns the same as given and Bob (Alice) returns the negation of what was given</li>
+</ul>
+<p>The other strategies result in a smaller winning probability.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
