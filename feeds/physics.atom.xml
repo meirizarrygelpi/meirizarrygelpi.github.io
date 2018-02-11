@@ -1,5 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-10T19:17:33-05:00</updated><entry><title>GHZ Game 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/ghz-game-1/" rel="alternate"></link><published>2018-02-10T19:17:33-05:00</published><updated>2018-02-10T19:17:33-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-10:/posts/physics/ghz-game-1/</id><summary type="html">&lt;p&gt;The classical GHZ game.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The GHZ game involves three players (Alice, Barbara, and Candida), and one referee (Rosa). Rosa randomly chooses one of four possible binary strings:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-11T07:03:25-05:00</updated><entry><title>GHZ Game 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/ghz-game-2/" rel="alternate"></link><published>2018-02-11T07:03:25-05:00</published><updated>2018-02-11T07:03:25-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-11:/posts/physics/ghz-game-2/</id><summary type="html">&lt;p&gt;The quantum GHZ game.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Now Alice, Barbara, and Candida share a (properly normalized) 3-qubit state vector of the form
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ | \psi \rangle = a_{000} | 000 \rangle + a_{001} | 001 \rangle + \ldots + a_{110} | 110 \rangle + a_{111} | 111 \rangle. $$&lt;/div&gt;
+&lt;p&gt;
+The players decide what to do before measuring depending on what the referee Rosa passes them.&lt;/p&gt;
+&lt;p&gt;If Alice gets &lt;span class="math"&gt;\(a = 0\)&lt;/span&gt;, then she just measures with the bit basis. Otherwise, she applies &lt;span class="math"&gt;\(H\)&lt;/span&gt;, the Hadamard gate:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 &amp;amp; 1 \\ 1 &amp;amp; -1 \end{pmatrix}. $$&lt;/div&gt;
+&lt;p&gt;
+Similarly for Barbara and Candida. Thus, before the players make their measurements, the state vector is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left( H^{a} \otimes H^{b} \otimes H^{c} \right) | \psi \rangle. $$&lt;/div&gt;
+&lt;p&gt;
+Here, &lt;span class="math"&gt;\(H^{0} = I\)&lt;/span&gt; and &lt;span class="math"&gt;\(H^{1} = H\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;There are four possible scenarios for the referee:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 000, \qquad 011, \qquad 101, \qquad 110. $$&lt;/div&gt;
+&lt;p&gt;
+Thus, the probability of winning the game is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}} = \frac{1}{4} \left[ p_{\text{win}}(000) + p_{\text{win}}(011) + p_{\text{win}}(101) + p_{\text{win}}(110) \right]. $$&lt;/div&gt;
+&lt;p&gt;
+There are four possible ways of winning when Rosa chooses &lt;span class="math"&gt;\(000\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(000) = \left| \langle 000 | \psi \rangle \right|^{2} + \left| \langle 011 | \psi \rangle \right|^{2} + \left| \langle 101 | \psi \rangle \right|^{2} + \left| \langle 110 | \psi \rangle \right|^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+Note that for this referee choice you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ H^{a} \otimes H^{b} \otimes H^{c} = I \otimes I \otimes I. $$&lt;/div&gt;
+&lt;p&gt;
+There are four possible ways of winning when Rosa chooses &lt;span class="math"&gt;\(011\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(011) = \left| \langle 001 | I \otimes H \otimes H | \psi \rangle \right|^{2} + \left| \langle 010 | I \otimes H \otimes H | \psi \rangle \right|^{2} + \left| \langle 100 | I \otimes H \otimes H | \psi \rangle \right|^{2} + \left| \langle 111 | I \otimes H \otimes H | \psi \rangle \right|^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+There are four possible ways of winning when Rosa chooses &lt;span class="math"&gt;\(101\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(101) = \left| \langle 001 | H \otimes I \otimes H | \psi \rangle \right|^{2} + \left| \langle 010 | H \otimes I \otimes H | \psi \rangle \right|^{2} + \left| \langle 100 | H \otimes I \otimes H | \psi \rangle \right|^{2} + \left| \langle 111 | H \otimes I \otimes H | \psi \rangle \right|^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+There are four possible ways of winning when Rosa chooses &lt;span class="math"&gt;\(110\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(110) = \left| \langle 001 | H \otimes H \otimes I | \psi \rangle \right|^{2} + \left| \langle 010 | H \otimes H \otimes I | \psi \rangle \right|^{2} + \left| \langle 100 | H \otimes H \otimes I | \psi \rangle \right|^{2} + \left| \langle 111 | H \otimes H \otimes I | \psi \rangle \right|^{2}. $$&lt;/div&gt;
+&lt;p&gt;There are ways where the players can always win the game! Consider the 3-qubit state vector
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ | \psi \rangle = \frac{1}{2} \left( |000 \rangle - |011\rangle - |101\rangle - |110\rangle \right). $$&lt;/div&gt;
+&lt;p&gt;
+Note that this state vector is entangled. It follows that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ (I \otimes H \otimes H) | \psi \rangle = \frac{1}{2} \left( |001\rangle + |010\rangle - |100\rangle + |111\rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ (H \otimes I \otimes H) | \psi \rangle = \frac{1}{2} \left( |001\rangle - |010\rangle + |100\rangle + |111\rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ (H \otimes H \otimes I) | \psi \rangle = -\frac{1}{2} \left( |001\rangle - |010\rangle - |100\rangle - |111\rangle \right). $$&lt;/div&gt;
+&lt;p&gt;
+For this particular state and measurement strategy, the probability of winning for each of the referee outcomes is 100%. It feels like cheating: the strategy guarantees that every winning outcome is equally probable. Basically, before measurement, the state vector is contained entirely in the "winning" subspace.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.1x"></category></entry><entry><title>GHZ Game 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/ghz-game-1/" rel="alternate"></link><published>2018-02-10T19:17:33-05:00</published><updated>2018-02-10T19:17:33-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-10:/posts/physics/ghz-game-1/</id><summary type="html">&lt;p&gt;The classical GHZ game.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The GHZ game involves three players (Alice, Barbara, and Candida), and one referee (Rosa). Rosa randomly chooses one of four possible binary strings:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ 000, \qquad 011, \qquad 101, \qquad 110. $$&lt;/div&gt;
 &lt;p&gt;

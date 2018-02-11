@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  GHZ Game 2 | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/ghz-game-2/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="The quantum GHZ game.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  GHZ Game 2
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-02-11T07:03:25.795503-05:00">
+          <i class="fa fa-clock-o"></i>
+          Sun 11 February 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83701x.html">#8.370.1x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Now Alice, Barbara, and Candida share a (properly normalized) 3-qubit state vector of the form
+</p>
+<div class="math">$$ | \psi \rangle = a_{000} | 000 \rangle + a_{001} | 001 \rangle + \ldots + a_{110} | 110 \rangle + a_{111} | 111 \rangle. $$</div>
+<p>
+The players decide what to do before measuring depending on what the referee Rosa passes them.</p>
+<p>If Alice gets <span class="math">\(a = 0\)</span>, then she just measures with the bit basis. Otherwise, she applies <span class="math">\(H\)</span>, the Hadamard gate:
+</p>
+<div class="math">$$ H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -1 \end{pmatrix}. $$</div>
+<p>
+Similarly for Barbara and Candida. Thus, before the players make their measurements, the state vector is given by
+</p>
+<div class="math">$$ \left( H^{a} \otimes H^{b} \otimes H^{c} \right) | \psi \rangle. $$</div>
+<p>
+Here, <span class="math">\(H^{0} = I\)</span> and <span class="math">\(H^{1} = H\)</span>.</p>
+<p>There are four possible scenarios for the referee:
+</p>
+<div class="math">$$ 000, \qquad 011, \qquad 101, \qquad 110. $$</div>
+<p>
+Thus, the probability of winning the game is given by
+</p>
+<div class="math">$$ p_{\text{win}} = \frac{1}{4} \left[ p_{\text{win}}(000) + p_{\text{win}}(011) + p_{\text{win}}(101) + p_{\text{win}}(110) \right]. $$</div>
+<p>
+There are four possible ways of winning when Rosa chooses <span class="math">\(000\)</span>:
+</p>
+<div class="math">$$ p_{\text{win}}(000) = \left| \langle 000 | \psi \rangle \right|^{2} + \left| \langle 011 | \psi \rangle \right|^{2} + \left| \langle 101 | \psi \rangle \right|^{2} + \left| \langle 110 | \psi \rangle \right|^{2}. $$</div>
+<p>
+Note that for this referee choice you have
+</p>
+<div class="math">$$ H^{a} \otimes H^{b} \otimes H^{c} = I \otimes I \otimes I. $$</div>
+<p>
+There are four possible ways of winning when Rosa chooses <span class="math">\(011\)</span>:
+</p>
+<div class="math">$$ p_{\text{win}}(011) = \left| \langle 001 | I \otimes H \otimes H | \psi \rangle \right|^{2} + \left| \langle 010 | I \otimes H \otimes H | \psi \rangle \right|^{2} + \left| \langle 100 | I \otimes H \otimes H | \psi \rangle \right|^{2} + \left| \langle 111 | I \otimes H \otimes H | \psi \rangle \right|^{2}. $$</div>
+<p>
+There are four possible ways of winning when Rosa chooses <span class="math">\(101\)</span>:
+</p>
+<div class="math">$$ p_{\text{win}}(101) = \left| \langle 001 | H \otimes I \otimes H | \psi \rangle \right|^{2} + \left| \langle 010 | H \otimes I \otimes H | \psi \rangle \right|^{2} + \left| \langle 100 | H \otimes I \otimes H | \psi \rangle \right|^{2} + \left| \langle 111 | H \otimes I \otimes H | \psi \rangle \right|^{2}. $$</div>
+<p>
+There are four possible ways of winning when Rosa chooses <span class="math">\(110\)</span>:
+</p>
+<div class="math">$$ p_{\text{win}}(110) = \left| \langle 001 | H \otimes H \otimes I | \psi \rangle \right|^{2} + \left| \langle 010 | H \otimes H \otimes I | \psi \rangle \right|^{2} + \left| \langle 100 | H \otimes H \otimes I | \psi \rangle \right|^{2} + \left| \langle 111 | H \otimes H \otimes I | \psi \rangle \right|^{2}. $$</div>
+<p>There are ways where the players can always win the game! Consider the 3-qubit state vector
+</p>
+<div class="math">$$ | \psi \rangle = \frac{1}{2} \left( |000 \rangle - |011\rangle - |101\rangle - |110\rangle \right). $$</div>
+<p>
+Note that this state vector is entangled. It follows that
+</p>
+<div class="math">$$ (I \otimes H \otimes H) | \psi \rangle = \frac{1}{2} \left( |001\rangle + |010\rangle - |100\rangle + |111\rangle \right); $$</div>
+<div class="math">$$ (H \otimes I \otimes H) | \psi \rangle = \frac{1}{2} \left( |001\rangle - |010\rangle + |100\rangle + |111\rangle \right); $$</div>
+<div class="math">$$ (H \otimes H \otimes I) | \psi \rangle = -\frac{1}{2} \left( |001\rangle - |010\rangle - |100\rangle - |111\rangle \right). $$</div>
+<p>
+For this particular state and measurement strategy, the probability of winning for each of the referee outcomes is 100%. It feels like cheating: the strategy guarantees that every winning outcome is equally probable. Basically, before measurement, the state vector is contained entirely in the "winning" subspace.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'https://meirizarrygelpi.github.io/posts/physics/ghz-game-2/index.html';
+      this.page.identifier = 'ghz-game-2';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//meirizarrygelpi.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
