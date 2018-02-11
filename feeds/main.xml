@@ -1,5 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-10T10:07:24-05:00</updated><entry><title>Real Hilbert Space 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/real-hilbert-space-1/" rel="alternate"></link><published>2018-02-10T10:07:24-05:00</published><updated>2018-02-10T10:07:24-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-10:/posts/physics/real-hilbert-space-1/</id><summary type="html">&lt;p&gt;Can you do anything useful with a real Hilbert space?&lt;/p&gt;</summary><content type="html">&lt;p&gt;The qubit is the workhorse in quantum computation. Since it is based on an actual physical system, it uses the full technology of quantum mechanics: complex numbers and a 2-dimensional &lt;strong&gt;complex Hilbert space&lt;/strong&gt;. A 1-qubit quantum state is given by
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-10T19:17:33-05:00</updated><entry><title>GHZ Game 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/ghz-game-1/" rel="alternate"></link><published>2018-02-10T19:17:33-05:00</published><updated>2018-02-10T19:17:33-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-10:/posts/physics/ghz-game-1/</id><summary type="html">&lt;p&gt;The classical GHZ game.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The GHZ game involves three players (Alice, Barbara, and Candida), and one referee (Rosa). Rosa randomly chooses one of four possible binary strings:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 000, \qquad 011, \qquad 101, \qquad 110. $$&lt;/div&gt;
+&lt;p&gt;
+From her choice, she sends the first bit &lt;span class="math"&gt;\(a\)&lt;/span&gt; to Alice, the second bit &lt;span class="math"&gt;\(b\)&lt;/span&gt; to Barbara, and the third bit &lt;span class="math"&gt;\(c\)&lt;/span&gt; to Candida. Each of the players uses a deterministic function to produce three bits &lt;span class="math"&gt;\(x\)&lt;/span&gt;, &lt;span class="math"&gt;\(y\)&lt;/span&gt;, and &lt;span class="math"&gt;\(z\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ x = f(a), \qquad y = g(b), \qquad z = h(c). $$&lt;/div&gt;
+&lt;p&gt;
+The players then send their outputs back to Rosa. The game is won if the following condition is met:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ a \lor b \lor c = x \oplus y \oplus z. $$&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(\lor\)&lt;/span&gt; is the OR logic operator and &lt;span class="math"&gt;\(\oplus\)&lt;/span&gt; is the XOR logic operator.&lt;/p&gt;
+&lt;p&gt;Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 0 \lor 0 \lor 0 = 0, \qquad 0 \lor 1 \lor 1 = 1. $$&lt;/div&gt;
+&lt;p&gt;
+Thus, if Rosa picks &lt;span class="math"&gt;\(000\)&lt;/span&gt;, then you need
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ x \oplus y \oplus z = 0. $$&lt;/div&gt;
+&lt;p&gt;
+This is achieved if either one variable is 0, or the three variables are 0. Thus, there are four scenarios:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ (0,0,0), \qquad (0,1,1), \qquad (1,0,1), \qquad (1,1,0). $$&lt;/div&gt;
+&lt;p&gt;
+Otherwise, you need
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ x \oplus y \oplus z = 1. $$&lt;/div&gt;
+&lt;p&gt;
+This is achieved if either two variables are 0, or none of the variables are 0. Thus, again, there are four scenarios:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ (1,1,1), \qquad (1,0,0), \qquad (0,1,0), \qquad (0,0,1). $$&lt;/div&gt;
+&lt;p&gt;
+But, it is more likely for Rosa to choose this outcome.&lt;/p&gt;
+&lt;p&gt;Each player has four possible deterministic ways to produce their corresponding bits. There are two constant functions: either always return 0, or always return 1. Then you can either return whatever you are given, or the negation of what you are given.&lt;/p&gt;
+&lt;p&gt;Here is some code to simulate this classical game. First, you import NumPy:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then you set the number of trials:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;64000&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In order to build the referee array, I found it convenient to use the &lt;code&gt;random&lt;/code&gt; package (i.e. not &lt;code&gt;np.random&lt;/code&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
+&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here are the four possible deterministic strategies:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;strategy_0&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;full_like&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;strategy_1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;full_like&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;strategy_2&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;strategy_3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bitwise_not&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here is a function that determines if the game is won:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;is_game_won&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;equal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bitwise_or&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bitwise_or&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bitwise_xor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bitwise_xor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here is a function that computes the fraction of wins, with a given set of strategies and an integer number:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fraction_of_wins&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;referee_options&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;]&lt;/span&gt;
+
+    &lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;choice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;referee_options&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)])&lt;/span&gt;
+
+    &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+    &lt;span class="n"&gt;games&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;is_game_won&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;wins&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;games&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;games&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;wins&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Finally, here is some code to print an array with the fraction of wins for all of the different combinations of strategies:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;strategies&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;strategy_0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;strategy_1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;strategy_2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;strategy_3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+
+&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;empty&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fraction_of_wins&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;strategies&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;strategies&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;strategies&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The output is a &lt;span class="math"&gt;\(4 \times 4 \times 4\)&lt;/span&gt; array:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;[[[&lt;/span&gt; &lt;span class="mf"&gt;0.24982813&lt;/span&gt;  &lt;span class="mf"&gt;0.74996875&lt;/span&gt;  &lt;span class="mf"&gt;0.74767187&lt;/span&gt;  &lt;span class="mf"&gt;0.24903125&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.7528125&lt;/span&gt;   &lt;span class="mf"&gt;0.25220312&lt;/span&gt;  &lt;span class="mf"&gt;0.2504375&lt;/span&gt;   &lt;span class="mf"&gt;0.74779688&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.74996875&lt;/span&gt;  &lt;span class="mf"&gt;0.25146875&lt;/span&gt;  &lt;span class="mf"&gt;0.74917188&lt;/span&gt;  &lt;span class="mf"&gt;0.25059375&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.25079687&lt;/span&gt;  &lt;span class="mf"&gt;0.75070313&lt;/span&gt;  &lt;span class="mf"&gt;0.25082813&lt;/span&gt;  &lt;span class="mf"&gt;0.74998438&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;0.74984375&lt;/span&gt;  &lt;span class="mf"&gt;0.2526875&lt;/span&gt;   &lt;span class="mf"&gt;0.24607813&lt;/span&gt;  &lt;span class="mf"&gt;0.74742188&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.25104688&lt;/span&gt;  &lt;span class="mf"&gt;0.74867187&lt;/span&gt;  &lt;span class="mf"&gt;0.74821875&lt;/span&gt;  &lt;span class="mf"&gt;0.2499375&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.2505625&lt;/span&gt;   &lt;span class="mf"&gt;0.75026563&lt;/span&gt;  &lt;span class="mf"&gt;0.24959375&lt;/span&gt;  &lt;span class="mf"&gt;0.7505625&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.74865625&lt;/span&gt;  &lt;span class="mf"&gt;0.24796875&lt;/span&gt;  &lt;span class="mf"&gt;0.7485625&lt;/span&gt;   &lt;span class="mf"&gt;0.24942187&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;0.75139062&lt;/span&gt;  &lt;span class="mf"&gt;0.24925&lt;/span&gt;     &lt;span class="mf"&gt;0.75084375&lt;/span&gt;  &lt;span class="mf"&gt;0.24929688&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.24995312&lt;/span&gt;  &lt;span class="mf"&gt;0.74979688&lt;/span&gt;  &lt;span class="mf"&gt;0.25132813&lt;/span&gt;  &lt;span class="mf"&gt;0.74829687&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.75098438&lt;/span&gt;  &lt;span class="mf"&gt;0.24979688&lt;/span&gt;  &lt;span class="mf"&gt;0.25035937&lt;/span&gt;  &lt;span class="mf"&gt;0.7518125&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.2485&lt;/span&gt;      &lt;span class="mf"&gt;0.748&lt;/span&gt;       &lt;span class="mf"&gt;0.75271875&lt;/span&gt;  &lt;span class="mf"&gt;0.2495&lt;/span&gt;    &lt;span class="p"&gt;]]&lt;/span&gt;
+
+ &lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;0.25203125&lt;/span&gt;  &lt;span class="mf"&gt;0.75109375&lt;/span&gt;  &lt;span class="mf"&gt;0.24975&lt;/span&gt;     &lt;span class="mf"&gt;0.74596875&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.750125&lt;/span&gt;    &lt;span class="mf"&gt;0.25&lt;/span&gt;        &lt;span class="mf"&gt;0.74971875&lt;/span&gt;  &lt;span class="mf"&gt;0.25103125&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.24951562&lt;/span&gt;  &lt;span class="mf"&gt;0.75021875&lt;/span&gt;  &lt;span class="mf"&gt;0.7505&lt;/span&gt;      &lt;span class="mf"&gt;0.24754687&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.7494375&lt;/span&gt;   &lt;span class="mf"&gt;0.25046875&lt;/span&gt;  &lt;span class="mf"&gt;0.24673438&lt;/span&gt;  &lt;span class="mf"&gt;0.75067187&lt;/span&gt;&lt;span class="p"&gt;]]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;That is, there are two kinds of strategies: one allows you to win 75% of the time. The other allows you to win only 25% of the time.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.1x"></category></entry><entry><title>Real Hilbert Space 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/real-hilbert-space-1/" rel="alternate"></link><published>2018-02-10T10:13:21-05:00</published><updated>2018-02-10T10:13:21-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-10:/posts/physics/real-hilbert-space-1/</id><summary type="html">&lt;p&gt;Can you do anything useful with a real Hilbert space?&lt;/p&gt;</summary><content type="html">&lt;p&gt;The qubit is the workhorse in quantum computation. Since it is based on an actual physical system, it uses the full technology of quantum mechanics: complex numbers and a 2-dimensional &lt;strong&gt;complex Hilbert space&lt;/strong&gt;. A 1-qubit quantum state is given by
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ | \psi \rangle = a | 0 \rangle + b | 1 \rangle. $$&lt;/div&gt;
 &lt;p&gt;
@@ -18,7 +208,7 @@ The 2-by-2 orthogonal matrices come in two kinds:
 &lt;p&gt;
 Members of &lt;span class="math"&gt;\(O_{+}(2)\)&lt;/span&gt; have determinant &lt;span class="math"&gt;\(+1\)&lt;/span&gt;, and have the form:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ R_{+}(\alpha) = \begin{pmatrix} \cos{(\alpha)} &amp;amp; \sin{(\alpha)} \\ -\sin{(\alpha)} &amp;amp; \cos{(\alpha)} \end{pmatrix} = \cos{(\alpha)} I + \sin{(\alpha)} Q, \qquad I \equiv \begin{pmatrix} 1 &amp;amp; 0 \\ 0 &amp;amp; 1 \end{pmatrix}, \qquad Q \equiv \begin{pmatrix} 0 &amp;amp; -1 \\ 1 &amp;amp; 0 \end{pmatrix}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{+}(\alpha) = \begin{pmatrix} \cos{(\alpha)} &amp;amp; -\sin{(\alpha)} \\ \sin{(\alpha)} &amp;amp; \cos{(\alpha)} \end{pmatrix} = \cos{(\alpha)} I + \sin{(\alpha)} Q, \qquad I \equiv \begin{pmatrix} 1 &amp;amp; 0 \\ 0 &amp;amp; 1 \end{pmatrix}, \qquad Q \equiv \begin{pmatrix} 0 &amp;amp; -1 \\ 1 &amp;amp; 0 \end{pmatrix}. $$&lt;/div&gt;
 &lt;p&gt;
 Similarly, members of &lt;span class="math"&gt;\(O_{-}(2)\)&lt;/span&gt; have determinant &lt;span class="math"&gt;\(-1\)&lt;/span&gt;, and have the form:
 &lt;/p&gt;
@@ -38,7 +228,7 @@ However,
 &lt;p&gt;
 You can write a member of &lt;span class="math"&gt;\(O_{+}(2)\)&lt;/span&gt; in exponential form
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ R_{+}(\alpha) = \exp{\left( \alpha K \right)}. $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ R_{+}(\alpha) = \exp{\left( \alpha Q \right)}. $$&lt;/div&gt;
 &lt;p&gt;
 In this form, it is clear that
 &lt;/p&gt;
