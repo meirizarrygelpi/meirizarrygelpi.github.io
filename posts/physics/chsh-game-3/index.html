@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>  CHSH Game and Bell's Theorem 3 | M.E. Irizarry-Gelpí
+  <title>  CHSH Game 3 | M.E. Irizarry-Gelpí
 </title>
-  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/chsh-game-and-bells-theorem-3/index.html">
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/chsh-game-3/index.html">
 
 
   <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
@@ -53,15 +53,15 @@
 
   <div class="main">
     <div class="container">
-      <h1>  CHSH Game and Bell's Theorem 3
+      <h1>  CHSH Game 3
 </h1>
       <hr>
   <article class="article">
     <header>
       <ul class="list-inline">
-        <li class="list-inline-item text-muted" title="2018-02-04T13:46:55.470960-05:00">
+        <li class="list-inline-item text-muted" title="2018-02-05T00:00:00-05:00">
           <i class="fa fa-clock-o"></i>
-          Sun 04 February 2018
+          Mon 05 February 2018
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -74,13 +74,13 @@
     </header>
     <div class="content">
       <p>Here is the Python code that I used to show that there is a strategy with a 2-qubit state share by Alice and Bob to win the CHSH game with a probability that is larger than if they had classical bits instead.</p>
-<p>I used <a href="https://www.sympy.org">SymPy</a> to do the symbolic calculations. In the future, I would love to do a numerical simulation. First you import SymPy and enable pretty printing:</p>
+<p>I used <a href="https://www.sympy.org">SymPy</a> to do the symbolic calculations. In the future, I would love to do a numerical simulation of the quantum game. First you import SymPy and enable pretty printing:</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="kn">as</span> <span class="nn">sym</span>
 <span class="n">sym</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span>
 </pre></div>
 
 
-<p>You create some symbols for use in expressions.</p>
+<p>You create some symbols for using in expressions.</p>
 <div class="highlight"><pre><span></span><span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;alpha beta&#39;</span><span class="p">)</span>
 <span class="n">alpha0</span><span class="p">,</span> <span class="n">alpha1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;alpha0 alpha1&#39;</span><span class="p">)</span>
 <span class="n">beta0</span><span class="p">,</span> <span class="n">beta1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;beta0 beta1&#39;</span><span class="p">)</span>
@@ -241,8 +241,8 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function() {
-      this.page.url = 'https://meirizarrygelpi.github.io/posts/physics/chsh-game-and-bells-theorem-3/index.html';
-      this.page.identifier = 'chsh-game-and-bells-theorem-3';
+      this.page.url = 'https://meirizarrygelpi.github.io/posts/physics/chsh-game-3/index.html';
+      this.page.identifier = 'chsh-game-3';
     };
     (function() {
       var d = document;

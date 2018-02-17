@@ -59,7 +59,7 @@
   <article class="article">
     <header>
       <ul class="list-inline">
-        <li class="list-inline-item text-muted" title="2018-02-10T19:17:33.626829-05:00">
+        <li class="list-inline-item text-muted" title="2018-02-10T00:00:00-05:00">
           <i class="fa fa-clock-o"></i>
           Sat 10 February 2018
         </li>
@@ -108,103 +108,96 @@ This is achieved if either two variables are 0, or none of the variables are 0. 
 <p>
 But, it is more likely for Rosa to choose this outcome.</p>
 <p>Each player has four possible deterministic ways to produce their corresponding bits. There are two constant functions: either always return 0, or always return 1. Then you can either return whatever you are given, or the negation of what you are given.</p>
-<p>Here is some code to simulate this classical game. First, you import NumPy:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<p>Here is some code to simulate this classical game. First, you do some imports:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
 
-<p>Then you set the number of trials:</p>
-<div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">64000</span>
+<p>Then you introduce some variables:</p>
+<div class="highlight"><pre><span></span><span class="n">booleans</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">])</span>
+
+<span class="n">rosa_option</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">alice_option</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">barbara_option</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">candida_option</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">64000</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">rosa_option</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">alice_option</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">barbara_option</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">candida_option</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
 </pre></div>
 
 
-<p>In order to build the referee array, I found it convenient to use the <code>random</code> package (i.e. not <code>np.random</code>):</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
+<p>The you define some functions for playing the game:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">deterministic</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strategy</span><span class="p">,</span> <span class="n">option</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">option</span><span class="p">[</span><span class="n">strategy</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
 
+<span class="k">def</span> <span class="nf">fraction_of_wins</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span>
+    <span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span>
+    <span class="n">option_a</span><span class="p">,</span> <span class="n">option_b</span><span class="p">,</span> <span class="n">option_c</span><span class="p">,</span>
+    <span class="n">n</span><span class="p">):</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">deterministic</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">option_a</span><span class="p">)</span>
+    <span class="n">Y</span> <span class="o">=</span> <span class="n">deterministic</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">option_b</span><span class="p">)</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">deterministic</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">option_c</span><span class="p">)</span>
 
-<p>Here are the four possible deterministic strategies:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">strategy_0</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">booleans</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+    <span class="n">B</span> <span class="o">=</span> <span class="n">booleans</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="n">booleans</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">strategy_1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">strategy_2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span>
-
-<span class="k">def</span> <span class="nf">strategy_3</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">bitwise_not</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-
-
-<p>Here is a function that determines if the game is won:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_game_won</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">bitwise_or</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bitwise_or</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">c</span><span class="p">),</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">bitwise_xor</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bitwise_xor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">z</span><span class="p">),</span>
+    <span class="n">wins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">bitwise_or</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bitwise_or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">C</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">bitwise_xor</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bitwise_xor</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">),</span> <span class="n">Z</span><span class="p">),</span>
     <span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">wins</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
 </pre></div>
 
 
-<p>Here is a function that computes the fraction of wins, with a given set of strategies and an integer number:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fraction_of_wins</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
-    <span class="n">referee_options</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">],</span>
-    <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">],</span>
-    <span class="p">[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">],</span>
-    <span class="p">[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">],</span>
-    <span class="p">]</span>
-
-    <span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">referee_options</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)])</span>
-
-    <span class="n">a</span> <span class="o">=</span> <span class="n">R</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">R</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="n">R</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
-
-    <span class="n">games</span> <span class="o">=</span> <span class="n">is_game_won</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">g</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="n">h</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
-    <span class="n">wins</span> <span class="o">=</span> <span class="n">games</span><span class="p">[</span><span class="n">games</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">wins</span><span class="o">.</span><span class="n">size</span> <span class="o">/</span> <span class="n">N</span>
-</pre></div>
-
-
-<p>Finally, here is some code to print an array with the fraction of wins for all of the different combinations of strategies:</p>
-<div class="highlight"><pre><span></span><span class="n">strategies</span> <span class="o">=</span> <span class="p">[</span><span class="n">strategy_0</span><span class="p">,</span> <span class="n">strategy_1</span><span class="p">,</span> <span class="n">strategy_2</span><span class="p">,</span> <span class="n">strategy_3</span><span class="p">]</span>
+<p>Here is some code for printing the probability of winning when using different combination of strategies:</p>
+<div class="highlight"><pre><span></span><span class="n">strategy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">product</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">2</span><span class="p">)])</span>
 
 <span class="n">M</span> <span class="o">=</span> <span class="mi">4</span>
 
-<span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">M</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">M</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">M</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">M</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
-            <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">fraction_of_wins</span><span class="p">(</span><span class="n">strategies</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">strategies</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">strategies</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">N</span><span class="p">)</span>
+            <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">fraction_of_wins</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span>
+            <span class="n">strategy</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">strategy</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">strategy</span><span class="p">[</span><span class="n">k</span><span class="p">],</span>
+            <span class="n">alice_option</span><span class="p">,</span> <span class="n">barbara_option</span><span class="p">,</span> <span class="n">candida_option</span><span class="p">,</span>
+            <span class="n">N</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </pre></div>
 
 
-<p>The output is a <span class="math">\(4 \times 4 \times 4\)</span> array:</p>
-<div class="highlight"><pre><span></span><span class="p">[[[</span> <span class="mf">0.24982813</span>  <span class="mf">0.74996875</span>  <span class="mf">0.74767187</span>  <span class="mf">0.24903125</span><span class="p">]</span>
-  <span class="p">[</span> <span class="mf">0.7528125</span>   <span class="mf">0.25220312</span>  <span class="mf">0.2504375</span>   <span class="mf">0.74779688</span><span class="p">]</span>
-  <span class="p">[</span> <span class="mf">0.74996875</span>  <span class="mf">0.25146875</span>  <span class="mf">0.74917188</span>  <span class="mf">0.25059375</span><span class="p">]</span>
-  <span class="p">[</span> <span class="mf">0.25079687</span>  <span class="mf">0.75070313</span>  <span class="mf">0.25082813</span>  <span class="mf">0.74998438</span><span class="p">]]</span>
+<p>As before, each deterministic strategy correspond to one of the four possible binary 2-tuples. The output is a <span class="math">\(4 \times 4 \times 4\)</span> array:</p>
+<div class="highlight"><pre><span></span><span class="p">[[[</span> <span class="mf">0.25003125</span>  <span class="mf">0.75132813</span>  <span class="mf">0.24867187</span>  <span class="mf">0.74996875</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74964062</span>  <span class="mf">0.7490625</span>   <span class="mf">0.2509375</span>   <span class="mf">0.25035937</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.25035937</span>  <span class="mf">0.2509375</span>   <span class="mf">0.7490625</span>   <span class="mf">0.74964062</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74996875</span>  <span class="mf">0.24867187</span>  <span class="mf">0.75132813</span>  <span class="mf">0.25003125</span><span class="p">]]</span>
 
- <span class="p">[[</span> <span class="mf">0.74984375</span>  <span class="mf">0.2526875</span>   <span class="mf">0.24607813</span>  <span class="mf">0.74742188</span><span class="p">]</span>
-  <span class="p">[</span> <span class="mf">0.25104688</span>  <span class="mf">0.74867187</span>  <span class="mf">0.74821875</span>  <span class="mf">0.2499375</span> <span class="p">]</span>
-  <span class="p">[</span> <span class="mf">0.2505625</span>   <span class="mf">0.75026563</span>  <span class="mf">0.24959375</span>  <span class="mf">0.7505625</span> <span class="p">]</span>
-  <span class="p">[</span> <span class="mf">0.74865625</span>  <span class="mf">0.24796875</span>  <span class="mf">0.7485625</span>   <span class="mf">0.24942187</span><span class="p">]]</span>
+ <span class="p">[[</span> <span class="mf">0.25003125</span>  <span class="mf">0.75132813</span>  <span class="mf">0.24867187</span>  <span class="mf">0.74996875</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74964062</span>  <span class="mf">0.7490625</span>   <span class="mf">0.2509375</span>   <span class="mf">0.25035937</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.25035937</span>  <span class="mf">0.2509375</span>   <span class="mf">0.7490625</span>   <span class="mf">0.74964062</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74996875</span>  <span class="mf">0.24867187</span>  <span class="mf">0.75132813</span>  <span class="mf">0.25003125</span><span class="p">]]</span>
 
- <span class="p">[[</span> <span class="mf">0.75139062</span>  <span class="mf">0.24925</span>     <span class="mf">0.75084375</span>  <span class="mf">0.24929688</span><span class="p">]</span>
-  <span class="p">[</span> <span class="mf">0.24995312</span>  <span class="mf">0.74979688</span>  <span class="mf">0.25132813</span>  <span class="mf">0.74829687</span><span class="p">]</span>
-  <span class="p">[</span> <span class="mf">0.75098438</span>  <span class="mf">0.24979688</span>  <span class="mf">0.25035937</span>  <span class="mf">0.7518125</span> <span class="p">]</span>
-  <span class="p">[</span> <span class="mf">0.2485</span>      <span class="mf">0.748</span>       <span class="mf">0.75271875</span>  <span class="mf">0.2495</span>    <span class="p">]]</span>
+ <span class="p">[[</span> <span class="mf">0.25003125</span>  <span class="mf">0.75132813</span>  <span class="mf">0.24867187</span>  <span class="mf">0.74996875</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74964062</span>  <span class="mf">0.7490625</span>   <span class="mf">0.2509375</span>   <span class="mf">0.25035937</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.25035937</span>  <span class="mf">0.2509375</span>   <span class="mf">0.7490625</span>   <span class="mf">0.74964062</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74996875</span>  <span class="mf">0.24867187</span>  <span class="mf">0.75132813</span>  <span class="mf">0.25003125</span><span class="p">]]</span>
 
- <span class="p">[[</span> <span class="mf">0.25203125</span>  <span class="mf">0.75109375</span>  <span class="mf">0.24975</span>     <span class="mf">0.74596875</span><span class="p">]</span>
-  <span class="p">[</span> <span class="mf">0.750125</span>    <span class="mf">0.25</span>        <span class="mf">0.74971875</span>  <span class="mf">0.25103125</span><span class="p">]</span>
-  <span class="p">[</span> <span class="mf">0.24951562</span>  <span class="mf">0.75021875</span>  <span class="mf">0.7505</span>      <span class="mf">0.24754687</span><span class="p">]</span>
-  <span class="p">[</span> <span class="mf">0.7494375</span>   <span class="mf">0.25046875</span>  <span class="mf">0.24673438</span>  <span class="mf">0.75067187</span><span class="p">]]]</span>
+ <span class="p">[[</span> <span class="mf">0.25003125</span>  <span class="mf">0.75132813</span>  <span class="mf">0.24867187</span>  <span class="mf">0.74996875</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74964062</span>  <span class="mf">0.7490625</span>   <span class="mf">0.2509375</span>   <span class="mf">0.25035937</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.25035937</span>  <span class="mf">0.2509375</span>   <span class="mf">0.7490625</span>   <span class="mf">0.74964062</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74996875</span>  <span class="mf">0.24867187</span>  <span class="mf">0.75132813</span>  <span class="mf">0.25003125</span><span class="p">]]]</span>
 </pre></div>
 
 
