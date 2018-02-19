@@ -1,5 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-12T00:00:00-05:00</updated><entry><title>Mermin Magic Square Game 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/mermin-magic-square-game-1/" rel="alternate"></link><published>2018-02-12T00:00:00-05:00</published><updated>2018-02-12T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-12:/posts/physics/mermin-magic-square-game-1/</id><summary type="html">&lt;p&gt;The classical Mermin magic square game.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Suppose you have a &lt;span class="math"&gt;\(3 \times 3\)&lt;/span&gt; grid of squares. Each square can be green or red. The game is won if&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-16T00:00:00-05:00</updated><entry><title>1-Qubit Pauli Results</title><link href="https://meirizarrygelpi.github.io/posts/physics/1-qubit-pauli-results/" rel="alternate"></link><published>2018-02-16T00:00:00-05:00</published><updated>2018-02-16T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-16:/posts/physics/1-qubit-pauli-results/</id><summary type="html">&lt;p&gt;Results involving 1-qubit vectors.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A &lt;strong&gt;1-qubit&lt;/strong&gt; state is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |\psi \rangle = a_{0} | 0 \rangle + a_{1} | 1 \rangle. $$&lt;/div&gt;
+&lt;p&gt;
+In order for the state to be physical, you must have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |a_{0}|^{2} + |a_{1}|^{2} = 1. $$&lt;/div&gt;
+&lt;p&gt;
+You can represent the &lt;strong&gt;basis kets&lt;/strong&gt; as column vectors:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |0 \rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \qquad |1 \rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}. $$&lt;/div&gt;
+&lt;p&gt;
+The three &lt;strong&gt;Pauli operators&lt;/strong&gt; (&lt;span class="math"&gt;\(X\)&lt;/span&gt;, &lt;span class="math"&gt;\(Y\)&lt;/span&gt;, and &lt;span class="math"&gt;\(Z\)&lt;/span&gt;) can be represented as matrices:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ X = \begin{pmatrix} 0 &amp;amp; 1 \\ 1 &amp;amp; 0 \end{pmatrix}, \qquad Y = \begin{pmatrix} 0 &amp;amp; -i \\ i &amp;amp; 0 \end{pmatrix}, \qquad Z = \begin{pmatrix} 1 &amp;amp; 0 \\ 0 &amp;amp; -1 \end{pmatrix}. $$&lt;/div&gt;
+&lt;p&gt;
+It follows that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ X |0 \rangle = |1 \rangle, \qquad X |1 \rangle = |0 \rangle; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ Y |0 \rangle = i|1 \rangle, \qquad Y |1 \rangle = -i|0 \rangle; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ Z |0 \rangle = |0 \rangle, \qquad Z |1 \rangle = -|1 \rangle. $$&lt;/div&gt;
+&lt;p&gt;
+Since each of the Pauli matrices squares to the identity, the eigenvalues must be &lt;span class="math"&gt;\(\pm 1\)&lt;/span&gt;. The so-called "information/computational basis" (&lt;span class="math"&gt;\(|0 \rangle\)&lt;/span&gt; and &lt;span class="math"&gt;\(|1 \rangle\)&lt;/span&gt;) coincides with the &lt;strong&gt;eigen-basis&lt;/strong&gt; of the &lt;span class="math"&gt;\(Z\)&lt;/span&gt; operator:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |Z+ \rangle = |0 \rangle, \qquad |Z- \rangle = |1 \rangle. $$&lt;/div&gt;
+&lt;p&gt;
+Thus, &lt;span class="math"&gt;\(Z\)&lt;/span&gt; can be re-written as
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ Z = |Z+ \rangle \langle Z+ | - |Z- \rangle \langle Z- | = |0 \rangle \langle 0 | - |1 \rangle \langle 1 |. $$&lt;/div&gt;
+&lt;p&gt;
+For &lt;span class="math"&gt;\(X\)&lt;/span&gt;, the normalized eigen-basis is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |X+ \rangle = \frac{1}{\sqrt{2}} \left( |0 \rangle + |1 \rangle \right), \qquad |X- \rangle = \frac{1}{\sqrt{2}} \left( |0 \rangle - |1 \rangle \right). $$&lt;/div&gt;
+&lt;p&gt;
+The operator that takes a &lt;span class="math"&gt;\(Z\)&lt;/span&gt; eigen-ket and returns an &lt;span class="math"&gt;\(X\)&lt;/span&gt; eigen-ket is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ H = |X+ \rangle \langle 0 | + |X- \rangle \langle 1 |. $$&lt;/div&gt;
+&lt;p&gt;
+This is known as the &lt;strong&gt;Hadamard operator&lt;/strong&gt;. Note that &lt;span class="math"&gt;\(H\)&lt;/span&gt; is &lt;strong&gt;Hermitian&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;For &lt;span class="math"&gt;\(Y\)&lt;/span&gt;, the normalized eigen-basis is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |Y+ \rangle = \frac{1}{\sqrt{2}} \left( |0 \rangle + i|1 \rangle \right), \qquad |Y- \rangle = \frac{1}{\sqrt{2}} \left( |0 \rangle - i|1 \rangle \right). $$&lt;/div&gt;
+&lt;p&gt;
+The operator that takes a &lt;span class="math"&gt;\(Z\)&lt;/span&gt; eigen-ket and returns a &lt;span class="math"&gt;\(Y\)&lt;/span&gt; eigen-ket is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G = |Y+ \rangle \langle 0 | + |Y- \rangle \langle 1 |. $$&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(G\)&lt;/span&gt; is &lt;strong&gt;not Hermitian&lt;/strong&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="1-qubit"></category></entry><entry><title>Mermin-Peres Magic Square Game 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/mermin-peres-magic-square-game-1/" rel="alternate"></link><published>2018-02-12T00:00:00-05:00</published><updated>2018-02-12T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-12:/posts/physics/mermin-peres-magic-square-game-1/</id><summary type="html">&lt;p&gt;The classical Mermin-Peres magic square game.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Suppose you have a &lt;span class="math"&gt;\(3 \times 3\)&lt;/span&gt; grid of squares. Each square can be green or red. The game is won if&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Each column has an odd number of red squares.&lt;/li&gt;
 &lt;li&gt;Each row has an even number of red squares.&lt;/li&gt;
