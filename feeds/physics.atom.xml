@@ -1,5 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-16T00:00:00-05:00</updated><entry><title>1-Qubit Pauli Results</title><link href="https://meirizarrygelpi.github.io/posts/physics/1-qubit-pauli-results/" rel="alternate"></link><published>2018-02-16T00:00:00-05:00</published><updated>2018-02-16T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-16:/posts/physics/1-qubit-pauli-results/</id><summary type="html">&lt;p&gt;Results involving 1-qubit vectors.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A &lt;strong&gt;1-qubit&lt;/strong&gt; state is given by
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-20T00:00:00-05:00</updated><entry><title>Mermin-Peres Magic Square Game 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/mermin-peres-magic-square-game-2/" rel="alternate"></link><published>2018-02-20T00:00:00-05:00</published><updated>2018-02-20T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-20:/posts/physics/mermin-peres-magic-square-game-2/</id><summary type="html">&lt;p&gt;The quantum Mermin-Peres magic square game.&lt;/p&gt;</summary><content type="html">&lt;p&gt;When players in the Mermin-Peres magic square game use a deterministic strategy, the largest probability of winning is 8/9. If the players share a quantum state, then there is a strategy for winning 100% of the time. The idea is to introduce commuting observables.&lt;/p&gt;
+&lt;p&gt;Alice produces a row of 3 squares with an even number of red squares. There are four such options: GGG, GRR, RGR, RRG. Similarly, Barbara produces a column of 3 squares with an odd number of red squares. There are also four such options: RRR, RGG, GRG, GGR. Thus, Alice and Barbara each need a 2-qubit state and the system is described by a 4-qubit state.&lt;/p&gt;
+&lt;p&gt;First, Alice and Barbara share a particular &lt;strong&gt;4-qubit&lt;/strong&gt; quantum state:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ | \psi \rangle = \frac{1}{2} \left( |00 \rangle_{AB} + |11 \rangle_{AB} \right) \otimes \left( |00 \rangle_{AB} + |11 \rangle_{AB} \right). $$&lt;/div&gt;
+&lt;p&gt;
+This state vector can be re-written as:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ | \psi \rangle = \frac{1}{2} \left( |00 \rangle_{A} |00 \rangle_{B} + |01 \rangle_{A} |01 \rangle_{B} + |10 \rangle_{A} |10 \rangle_{B} + |11 \rangle_{A} |11 \rangle_{B} \right). $$&lt;/div&gt;
+&lt;p&gt;
+Note that this state vector is entangled because it cannot be factorized into Alice and Barbara pieces.&lt;/p&gt;
+&lt;p&gt;Next, consider the following array of &lt;strong&gt;2-qubit&lt;/strong&gt; operators:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G = \begin{pmatrix} X \otimes I_{2} &amp;amp; I_{2} \otimes X &amp;amp; X \otimes X \\ I_{2} \otimes Z &amp;amp; Z \otimes I_{2} &amp;amp; Z \otimes Z \\ -X \otimes Z &amp;amp; -Z \otimes X &amp;amp; Y \otimes Y \end{pmatrix}. $$&lt;/div&gt;
+&lt;p&gt;
+Using the properties of the Pauli matrices,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ XY + YX = 0, \qquad YZ + ZY = 0, \qquad ZX + XZ = 0; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ X^{2} = Y^{2} = Z^{2} = I_{2}; $$&lt;/div&gt;
+&lt;p&gt;
+you can check that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Any two operators in the same column commute.&lt;/li&gt;
+&lt;li&gt;Any two operators in the same row commute.&lt;/li&gt;
+&lt;li&gt;The product of the operators in a row is &lt;span class="math"&gt;\(I_{4}\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;The product of the operators in a column is &lt;span class="math"&gt;\(-I_{4}\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Since the three operators in each row or column commute with each other, you can have simultaneous eigen-kets. For the &lt;strong&gt;first row&lt;/strong&gt;, the simultaneous eigen-kets are
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |{+}{+}{+} \rangle = |X+ \rangle \otimes |X+ \rangle = \frac{1}{2} \left( |00 \rangle + |01 \rangle + |10 \rangle + |11 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{+}{-}{-} \rangle = |X+ \rangle \otimes |X- \rangle = \frac{1}{2} \left( |00 \rangle - |01 \rangle + |10 \rangle - |11 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{-}{+}{-} \rangle = |X- \rangle \otimes |X+ \rangle = \frac{1}{2} \left( |00 \rangle + |01 \rangle - |10 \rangle - |11 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{-}{-}{+} \rangle = |X- \rangle \otimes |X- \rangle = \frac{1}{2} \left( |00 \rangle - |01 \rangle - |10 \rangle + |11 \rangle \right). $$&lt;/div&gt;
+&lt;p&gt;
+For the &lt;strong&gt;first column&lt;/strong&gt;, the simultaneous eigen-kets are
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |{+}{+}{-} \rangle = |X+ \rangle \otimes |Z+ \rangle = \frac{1}{\sqrt{2}} \left( |00 \rangle + |10 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{+}{-}{+} \rangle = |X+ \rangle \otimes |Z- \rangle = \frac{1}{\sqrt{2}} \left( |01 \rangle + |11 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{-}{+}{+} \rangle = |X- \rangle \otimes |Z+ \rangle = \frac{1}{\sqrt{2}} \left( |00 \rangle - |10 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{-}{-}{-} \rangle = |X- \rangle \otimes |Z- \rangle = \frac{1}{\sqrt{2}} \left( |01 \rangle - |11 \rangle \right). $$&lt;/div&gt;
+&lt;p&gt;
+For the &lt;strong&gt;second row&lt;/strong&gt;, the simultaneous eigen-kets are
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |{+}{+}{+} \rangle = |Z+ \rangle \otimes |Z+ \rangle = |00 \rangle; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{-}{+}{-} \rangle = |Z+ \rangle \otimes |Z- \rangle = |01 \rangle; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{+}{-}{-} \rangle = |Z- \rangle \otimes |Z+ \rangle = |10 \rangle; $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{-}{-}{+} \rangle = |Z- \rangle \otimes |Z- \rangle = |11 \rangle. $$&lt;/div&gt;
+&lt;p&gt;
+For the &lt;strong&gt;second column&lt;/strong&gt;, the simultaneous eigen-kets are
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |{+}{+}{-} \rangle = |Z+ \rangle \otimes |X+ \rangle = \frac{1}{\sqrt{2}} \left( |00 \rangle + |01 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{-}{+}{+} \rangle = |Z+ \rangle \otimes |X- \rangle = \frac{1}{\sqrt{2}} \left( |00 \rangle - |01 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{+}{-}{+} \rangle = |Z- \rangle \otimes |X+ \rangle = \frac{1}{\sqrt{2}} \left( |10 \rangle + |11 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{-}{-}{-} \rangle = |Z- \rangle \otimes |X- \rangle = \frac{1}{\sqrt{2}} \left( |10 \rangle - |11 \rangle \right). $$&lt;/div&gt;
+&lt;p&gt;
+The third row and the third column are non-trivial because they involve degree-2 Pauli operators. For the &lt;strong&gt;third row&lt;/strong&gt;, the simultaneous eigen-kets are
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |{+}{+}{+} \rangle = \frac{1}{2} \left( |00 \rangle - |01 \rangle - |10 \rangle - |11 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{-}{+}{-} \rangle = \frac{1}{2} \left( |00 \rangle - |01 \rangle + |10 \rangle + |11 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{+}{-}{-} \rangle = \frac{1}{2} \left( |00 \rangle + |01 \rangle - |10 \rangle + |11 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{-}{-}{+} \rangle = \frac{1}{2} \left( |00 \rangle + |01 \rangle + |10 \rangle - |11 \rangle \right). $$&lt;/div&gt;
+&lt;p&gt;
+Finally, the simultaneous eigen-kets for the &lt;strong&gt;third column&lt;/strong&gt; are
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |{+}{+}{-} \rangle = \frac{1}{\sqrt{2}} \left( |00 \rangle + |11 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{+}{-}{+} \rangle = \frac{1}{\sqrt{2}} \left( |01 \rangle + |10 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{-}{+}{+} \rangle = \frac{1}{\sqrt{2}} \left( |00 \rangle - |11 \rangle \right); $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ |{-}{-}{-} \rangle = \frac{1}{\sqrt{2}} \left( |01 \rangle - |10 \rangle \right). $$&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(| \psi \rangle\)&lt;/span&gt; is a vector in a 16-dimensional space. Alice gets a row number &lt;span class="math"&gt;\(m\)&lt;/span&gt; and Barbara gets a column number &lt;span class="math"&gt;\(n\)&lt;/span&gt;. There are 9 possible referee outcomes. The probability of winning the game is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p_{\text{win}}(\psi) = \frac{1}{9} \sum_{m = 1}^{3} \sum_{n = 1}^{3} p_{\text{win}}(m, n | \psi). $$&lt;/div&gt;
+&lt;p&gt;
+The probability of winning for the &lt;span class="math"&gt;\(m\)&lt;/span&gt;-th row and the &lt;span class="math"&gt;\(n\)&lt;/span&gt;-th column involves the different ways that Alice and Barbara agree.&lt;/p&gt;
+&lt;p&gt;For definiteness, consider the case &lt;span class="math"&gt;\((m, n) = (1, 1)\)&lt;/span&gt;. There are eight possible scenarios where Alice and Barbara agree:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Alice measures &lt;span class="math"&gt;\({+}{+}{+}\)&lt;/span&gt; and Barbara measures &lt;span class="math"&gt;\({+}{+}{-}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Alice measures &lt;span class="math"&gt;\({+}{+}{+}\)&lt;/span&gt; and Barbara measures &lt;span class="math"&gt;\({+}{-}{+}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Alice measures &lt;span class="math"&gt;\({+}{-}{-}\)&lt;/span&gt; and Barbara measures &lt;span class="math"&gt;\({+}{+}{-}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Alice measures &lt;span class="math"&gt;\({+}{-}{-}\)&lt;/span&gt; and Barbara measures &lt;span class="math"&gt;\({+}{-}{+}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Alice measures &lt;span class="math"&gt;\({-}{+}{-}\)&lt;/span&gt; and Barbara measures &lt;span class="math"&gt;\({-}{+}{+}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Alice measures &lt;span class="math"&gt;\({-}{+}{-}\)&lt;/span&gt; and Barbara measures &lt;span class="math"&gt;\({-}{-}{-}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Alice measures &lt;span class="math"&gt;\({-}{-}{+}\)&lt;/span&gt; and Barbara measures &lt;span class="math"&gt;\({-}{+}{+}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Alice measures &lt;span class="math"&gt;\({-}{-}{+}\)&lt;/span&gt; and Barbara measures &lt;span class="math"&gt;\({-}{-}{-}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For &lt;strong&gt;scenario 1&lt;/strong&gt;, the bra that Alice and Barbara use to measure is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{multline*} {}_{A}\langle {+}{+}{+} | \otimes {}_{B}\langle {+}{+}{-} | = \frac{1}{\sqrt{8}} \left( {}_{A}\langle 00 | {}_{B}\langle 00 | + {}_{A}\langle 00 | {}_{B}\langle 10 | + {}_{A}\langle 01 | {}_{B}\langle 00 | + {}_{A}\langle 01 | {}_{B}\langle 10 | \right. \\ \left. {} + {}_{A}\langle 10 | {}_{B}\langle 00 | + {}_{A}\langle 10 | {}_{B}\langle 10 | + {}_{A}\langle 11 | {}_{B}\langle 00 | + {}_{A}\langle 11 | {}_{B}\langle 10 | \right). \end{multline*}&lt;/div&gt;
+&lt;p&gt;
+The probability of winning &lt;strong&gt;scenario 1&lt;/strong&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ |({}_{A}\langle {+}{+}{+}| \otimes {}_{B}\langle {+}{+}{-}|)|\psi \rangle|^{2} = \left| \frac{1}{2 \sqrt{8}} + \frac{1}{2 \sqrt{8}} \right|^{2} = \frac{1}{8}. $$&lt;/div&gt;
+&lt;p&gt;
+The probability of winning the other seven scenarios is the same. Thus, the probability of winning this site in the grid is 100%. A similar argument shows that the probability of winning any site in the grid is 100%. Hence, Alice and Bob can &lt;strong&gt;always win the game&lt;/strong&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.1x"></category></entry><entry><title>1-Qubit Pauli Results</title><link href="https://meirizarrygelpi.github.io/posts/physics/1-qubit-pauli-results/" rel="alternate"></link><published>2018-02-16T00:00:00-05:00</published><updated>2018-02-16T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-16:/posts/physics/1-qubit-pauli-results/</id><summary type="html">&lt;p&gt;Results involving 1-qubit vectors.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A &lt;strong&gt;1-qubit&lt;/strong&gt; state is given by
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ |\psi \rangle = a_{0} | 0 \rangle + a_{1} | 1 \rangle. $$&lt;/div&gt;
 &lt;p&gt;
