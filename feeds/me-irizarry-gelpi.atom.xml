@@ -1,5 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-20T00:00:00-05:00</updated><entry><title>Mermin-Peres Magic Square Game 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/mermin-peres-magic-square-game-2/" rel="alternate"></link><published>2018-02-20T00:00:00-05:00</published><updated>2018-02-20T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-20:/posts/physics/mermin-peres-magic-square-game-2/</id><summary type="html">&lt;p&gt;The quantum Mermin-Peres magic square game.&lt;/p&gt;</summary><content type="html">&lt;p&gt;When players in the Mermin-Peres magic square game use a deterministic strategy, the largest probability of winning is 8/9. If the players share a quantum state, then there is a strategy for winning 100% of the time. The idea is to introduce commuting observables.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-21T07:33:14-05:00</updated><entry><title>CNOT Gates and Bell States</title><link href="https://meirizarrygelpi.github.io/posts/physics/cnot-gates-and-bell-states/" rel="alternate"></link><published>2018-02-21T07:33:14-05:00</published><updated>2018-02-21T07:33:14-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-21:/posts/physics/cnot-gates-and-bell-states/</id><summary type="html">&lt;p&gt;A CNOT gates gotcha and Bell states.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The CNOT gate is a 2-qubit gate. This means that it acts on a 2-qubit vector, which is 4-dimensional. Thus, this gate can be represented as a 4-by-4 matrix. The gotcha is that on a pair of qubits, there can be two CNOT gates. The difference is which qubit is used as control.&lt;/p&gt;
+&lt;p&gt;By definition, the control-NOT gate leaves the state unchanged if the control qubit is not set, otherwise it applies a NOT gate to the target qubit. The familiar case is the first qubit as control:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \operatorname{CNOT}_{12} |00 \rangle = |00 \rangle, \qquad \operatorname{CNOT}_{12} |01 \rangle = |01 \rangle, \qquad \operatorname{CNOT}_{12} |10 \rangle = |11 \rangle, \qquad \operatorname{CNOT}_{12} |11 \rangle = |10 \rangle. $$&lt;/div&gt;
+&lt;p&gt;
+This leads to the following matrix representation:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \operatorname{CNOT}_{12} = \begin{pmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \end{pmatrix}. $$&lt;/div&gt;
+&lt;p&gt;
+What is the matrix representation of the other CNOT gate, where the second qubit is control? Well, I was quick and wrote:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \begin{pmatrix} 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\ 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{pmatrix} $$&lt;/div&gt;
+&lt;p&gt;
+but this is wrong! If you explicitly write down how it acts on basis vectors, you can see why:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \operatorname{CNOT}_{21} |00 \rangle = |00 \rangle, \qquad \operatorname{CNOT}_{21} |01 \rangle = |11 \rangle, \qquad \operatorname{CNOT}_{21} |10 \rangle = |10 \rangle, \qquad \operatorname{CNOT}_{21} |11 \rangle = |01 \rangle. $$&lt;/div&gt;
+&lt;p&gt;
+In this case, the matrix representation is:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \operatorname{CNOT}_{21} = \begin{pmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \end{pmatrix}. $$&lt;/div&gt;
+&lt;p&gt;
+Lesson: do not be so quick!&lt;/p&gt;
+&lt;p&gt;The two CNOT gates are related:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \operatorname{CNOT}_{21} = (H \otimes H)(\operatorname{CNOT}_{12})(H \otimes H). $$&lt;/div&gt;
+&lt;p&gt;
+Here, &lt;span class="math"&gt;\(H\)&lt;/span&gt; is the Hadamard gate:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 &amp;amp; 1 \\ 1 &amp;amp; -1 \end{pmatrix}. $$&lt;/div&gt;
+&lt;p&gt;
+You can check this with Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+
+&lt;span class="n"&gt;CNOT12&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;matrix&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;CNOT21&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;matrix&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;matrix&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;HH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;kron&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;H&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;allclose&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CNOT21&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;HH&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;CNOT12&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;HH&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The &lt;span class="math"&gt;\(\operatorname{CNOT}_{21}\)&lt;/span&gt; gate makes an appearance in the following situation: consider constructing a 2-qubit gate &lt;span class="math"&gt;\(G\)&lt;/span&gt; that when acting on the four Bell states, returns one of the information basis vectors as follows:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G|\Phi^{+} \rangle = |00 \rangle, \qquad G|\Psi^{+} \rangle = |01 \rangle, \qquad G|\Phi^{-} \rangle = |10 \rangle, \qquad G|\Psi^{-} \rangle = |11 \rangle. $$&lt;/div&gt;
+&lt;p&gt;
+Since &lt;span class="math"&gt;\(G\)&lt;/span&gt; is taking an ortho-normal basis to another ortho-normal basis, you can write &lt;span class="math"&gt;\(G\)&lt;/span&gt; as:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G = |00 \rangle \langle \Phi^{+} | + |01 \rangle \langle \Psi^{+} | + |10 \rangle \langle \Phi^{-} | + |11 \rangle \langle \Psi^{-} |. $$&lt;/div&gt;
+&lt;p&gt;
+The matrix representation of &lt;span class="math"&gt;\(G\)&lt;/span&gt; is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \\ 0 &amp;amp; 1 &amp;amp; 1 &amp;amp; 0 \\ 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; -1 \\ 0 &amp;amp; 1 &amp;amp; -1 &amp;amp; 0 \end{pmatrix}. $$&lt;/div&gt;
+&lt;p&gt;
+This matrix can also be written as
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ G = (H \otimes I) \operatorname{CNOT}_{12}. $$&lt;/div&gt;
+&lt;p&gt;
+I leave it as a homework problem to write it in terms of &lt;span class="math"&gt;\(\operatorname{CNOT}_{21}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Mermin-Peres Magic Square Game 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/mermin-peres-magic-square-game-2/" rel="alternate"></link><published>2018-02-20T00:00:00-05:00</published><updated>2018-02-20T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-20:/posts/physics/mermin-peres-magic-square-game-2/</id><summary type="html">&lt;p&gt;The quantum Mermin-Peres magic square game.&lt;/p&gt;</summary><content type="html">&lt;p&gt;When players in the Mermin-Peres magic square game use a deterministic strategy, the largest probability of winning is 8/9. If the players share a quantum state, then there is a strategy for winning 100% of the time. The idea is to introduce commuting observables.&lt;/p&gt;
 &lt;p&gt;Alice produces a row of 3 squares with an even number of red squares. There are four such options: GGG, GRR, RGR, RRG. Similarly, Barbara produces a column of 3 squares with an odd number of red squares. There are also four such options: RRR, RGG, GRG, GGR. Thus, Alice and Barbara each need a 2-qubit state and the system is described by a 4-qubit state.&lt;/p&gt;
 &lt;p&gt;First, Alice and Barbara share a particular &lt;strong&gt;4-qubit&lt;/strong&gt; quantum state:
 &lt;/p&gt;
