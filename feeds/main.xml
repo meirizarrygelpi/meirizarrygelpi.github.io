@@ -1,5 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-21T07:33:14-05:00</updated><entry><title>CNOT Gates and Bell States</title><link href="https://meirizarrygelpi.github.io/posts/physics/cnot-gates-and-bell-states/" rel="alternate"></link><published>2018-02-21T07:33:14-05:00</published><updated>2018-02-21T07:33:14-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-21:/posts/physics/cnot-gates-and-bell-states/</id><summary type="html">&lt;p&gt;A CNOT gates gotcha and Bell states.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The CNOT gate is a 2-qubit gate. This means that it acts on a 2-qubit vector, which is 4-dimensional. Thus, this gate can be represented as a 4-by-4 matrix. The gotcha is that on a pair of qubits, there can be two CNOT gates. The difference is which qubit is used as control.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-27T19:58:07-05:00</updated><entry><title>Bell States and Tensor Products</title><link href="https://meirizarrygelpi.github.io/posts/physics/bell-states-and-tensor-products/" rel="alternate"></link><published>2018-02-27T19:58:07-05:00</published><updated>2018-02-27T19:58:07-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-27:/posts/physics/bell-states-and-tensor-products/</id><summary type="html">&lt;p&gt;On 2-qubit Bell states versus tensor products of 1-qubit states.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The 1-qubit Bell states are given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |{+}\rangle &amp;amp;= \frac{1}{\sqrt{2}} \left(|{0}\rangle + |{1}\rangle \right) &amp;amp; |{-}\rangle = \frac{1}{\sqrt{2}} \left(|{0}\rangle - |{1}\rangle \right)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+These are ortho-normal eigen-states of &lt;span class="math"&gt;\(X\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    X |{+} \rangle &amp;amp;= +1 |{+} \rangle &amp;amp; X |{-} \rangle &amp;amp;= -1 |{-} \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Taking tensor products gives a 2-qubit ortho-normal basis:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |{+}{+} \rangle &amp;amp;\equiv |{+} \rangle \otimes |{+} \rangle = \frac{1}{2} \left(|{0}{0} \rangle + |{0}{1} \rangle + |{1}{0} \rangle + |{1}{1} \rangle \right) \\
+    |{+}{-} \rangle &amp;amp;\equiv |{+} \rangle \otimes |{-} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - |{0}{1} \rangle + |{1}{0} \rangle - |{1}{1} \rangle \right) \\
+    |{-}{+} \rangle &amp;amp;\equiv |{-} \rangle \otimes |{+} \rangle = \frac{1}{2} \left(|{0}{0} \rangle + |{0}{1} \rangle - |{1}{0} \rangle - |{1}{1} \rangle \right) \\
+    |{-}{-} \rangle &amp;amp;\equiv |{-} \rangle \otimes |{-} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - |{0}{1} \rangle - |{1}{0} \rangle + |{1}{1} \rangle \right)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Not that, by construction, the four vectors in this 2-qubit basis do not describe 2-body entanglement since they are all tensor products. Linear combinations do, giving the 2-qubit Bell states:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |\Phi^{+} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left(|{0}{0}\rangle + |{1}{1}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{+}{+}\rangle + |{-}{-}\rangle \right) \\
+    |\Phi^{-} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left(|{0}{0}\rangle - |{1}{1}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{-}{+}\rangle + |{+}{-}\rangle \right) \\
+    |\Psi^{+} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left(|{0}{1}\rangle + |{1}{0}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{+}{+}\rangle - |{-}{-}\rangle \right) \\
+    |\Psi^{-} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left(|{0}{1}\rangle - |{1}{0}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{-}{+}\rangle - |{+}{-}\rangle \right)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+These states cannot be factorized as tensor products.&lt;/p&gt;
+&lt;p&gt;Another 1-qubit basis is the two eigen-states of &lt;span class="math"&gt;\(Y\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |{\circ}\rangle &amp;amp;= \frac{1}{\sqrt{2}} \left(|{0}\rangle + i|{1}\rangle\right) &amp;amp; |{\star}\rangle &amp;amp;= \frac{1}{\sqrt{2}} \left(|{0}\rangle - i|{1}\rangle\right)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Taking tensor products gives another 2-qubit ortho-normal basis:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |{\circ}{\circ} \rangle &amp;amp; \equiv |{\circ} \rangle \otimes |{\circ} \rangle = \frac{1}{2} \left(|{0}{0} \rangle + i|{0}{1} \rangle + i|{1}{0} \rangle - |{1}{1} \rangle \right) \\
+    |{\circ}{\star} \rangle &amp;amp; \equiv |{\circ} \rangle \otimes |{\star} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - i|{0}{1} \rangle + i|{1}{0} \rangle + |{1}{1} \rangle \right) \\
+    |{\star}{\circ} \rangle &amp;amp; \equiv |{\star} \rangle \otimes |{\circ} \rangle = \frac{1}{2} \left(|{0}{0} \rangle + i|{0}{1} \rangle - i|{1}{0} \rangle + |{1}{1} \rangle \right) \\
+    |{\star}{\star} \rangle &amp;amp; \equiv |{\star} \rangle \otimes |{\star} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - i|{0}{1} \rangle - i|{1}{0} \rangle - |{1}{1} \rangle \right)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+I kind of like this notation: the star suggests complex conjugation.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>CNOT Gates and Bell States</title><link href="https://meirizarrygelpi.github.io/posts/physics/cnot-gates-and-bell-states/" rel="alternate"></link><published>2018-02-21T07:33:14-05:00</published><updated>2018-02-21T07:33:14-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-21:/posts/physics/cnot-gates-and-bell-states/</id><summary type="html">&lt;p&gt;A CNOT gates gotcha and Bell states.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The CNOT gate is a 2-qubit gate. This means that it acts on a 2-qubit vector, which is 4-dimensional. Thus, this gate can be represented as a 4-by-4 matrix. The gotcha is that on a pair of qubits, there can be two CNOT gates. The difference is which qubit is used as control.&lt;/p&gt;
 &lt;p&gt;By definition, the control-NOT gate leaves the state unchanged if the control qubit is not set, otherwise it applies a NOT gate to the target qubit. The familiar case is the first qubit as control:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \operatorname{CNOT}_{12} |00 \rangle = |00 \rangle, \qquad \operatorname{CNOT}_{12} |01 \rangle = |01 \rangle, \qquad \operatorname{CNOT}_{12} |10 \rangle = |11 \rangle, \qquad \operatorname{CNOT}_{12} |11 \rangle = |10 \rangle. $$&lt;/div&gt;
