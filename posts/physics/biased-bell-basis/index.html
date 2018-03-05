@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>  Bell States and Tensor Products | M.E. Irizarry-Gelpí
+  <title>  Biased Bell Basis | M.E. Irizarry-Gelpí
 </title>
-  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/bell-states-and-tensor-products/index.html">
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/biased-bell-basis/index.html">
 
 
   <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
@@ -21,7 +21,7 @@
   <link rel="alternate" type="application/atom+xml" title="Atom Feed"
         href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
         href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
-  <meta name="description" content="On 2-qubit Bell states versus tensor products of 1-qubit states.">
+  <meta name="description" content="A deformation of the familiar 1-qubit Bell basis.">
 
 
 </head>
@@ -53,15 +53,15 @@
 
   <div class="main">
     <div class="container">
-      <h1>  Bell States and Tensor Products
+      <h1>  Biased Bell Basis
 </h1>
       <hr>
   <article class="article">
     <header>
       <ul class="list-inline">
-        <li class="list-inline-item text-muted" title="2018-02-27T00:00:00-05:00">
+        <li class="list-inline-item text-muted" title="2018-03-05T10:57:35.683527-05:00">
           <i class="fa fa-clock-o"></i>
-          Tue 27 February 2018
+          Mon 05 March 2018
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -73,53 +73,69 @@
       </ul>
     </header>
     <div class="content">
-      <p>The 1-qubit Bell states are given by
+      <p>The information basis is given by the vectors <span class="math">\(|0 \rangle\)</span> and <span class="math">\(|1 \rangle\)</span>. If a qubit is in one of the two information basis vectors, then the measurement outcomes have all-or-nothing probability:
 </p>
 <div class="math">\begin{align*}
-    |{+}\rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}\rangle + |{1}\rangle \right) &amp; |{-}\rangle = \frac{1}{\sqrt{2}} \left(|{0}\rangle - |{1}\rangle \right)
+    \langle 0 | 0 \rangle &amp;= 1, &amp; \langle 1 | 0 \rangle &amp;= 0, &amp; \langle 0 | 1 \rangle &amp;= 0, &amp; \langle 1 | 1 \rangle &amp;= 1
 \end{align*}</div>
 <p>
-These are ortho-normal eigen-states of <span class="math">\(X\)</span>:
+The two basis vectors in the (fair) Bell basis are given by
 </p>
 <div class="math">\begin{align*}
-    X |{+} \rangle &amp;= +1 |{+} \rangle &amp; X |{-} \rangle &amp;= -1 |{-} \rangle
+    |{+}\rangle &amp;= \frac{1}{\sqrt{2}} \left( |0 \rangle + |1 \rangle \right) &amp; |{-}\rangle &amp;= \frac{1}{\sqrt{2}} \left( |0 \rangle - |1 \rangle \right)
 \end{align*}</div>
 <p>
-Taking tensor products gives a 2-qubit ortho-normal basis:
+If a qubit is in one of the two (fair) Bell basis vectors, measurement outcomes are equally likely:
 </p>
 <div class="math">\begin{align*}
-    |{+}{+} \rangle &amp;\equiv |{+} \rangle \otimes |{+} \rangle = \frac{1}{2} \left(|{0}{0} \rangle + |{0}{1} \rangle + |{1}{0} \rangle + |{1}{1} \rangle \right) \\
-    |{+}{-} \rangle &amp;\equiv |{+} \rangle \otimes |{-} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - |{0}{1} \rangle + |{1}{0} \rangle - |{1}{1} \rangle \right) \\
-    |{-}{+} \rangle &amp;\equiv |{-} \rangle \otimes |{+} \rangle = \frac{1}{2} \left(|{0}{0} \rangle + |{0}{1} \rangle - |{1}{0} \rangle - |{1}{1} \rangle \right) \\
-    |{-}{-} \rangle &amp;\equiv |{-} \rangle \otimes |{-} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - |{0}{1} \rangle - |{1}{0} \rangle + |{1}{1} \rangle \right)
+    \langle 0 | {+} \rangle &amp;= \frac{1}{\sqrt{2}}, &amp; \langle 1 | {+} \rangle &amp;= \frac{1}{\sqrt{2}}, &amp; \langle 0 | {-} \rangle &amp;= \frac{1}{\sqrt{2}}, &amp; \langle 1 | {-} \rangle &amp;= -\frac{1}{\sqrt{2}}
 \end{align*}</div>
 <p>
-Note that, by construction, the four vectors in this 2-qubit basis do not describe 2-body entanglement since they are all tensor products. Linear combinations do, giving the 2-qubit Bell states:
+The Hadamard matrix,
+</p>
+<div class="math">\begin{equation*}
+    H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -1 \end{pmatrix}
+\end{equation*}</div>
+<p>
+takes one information basis vector and turns it into a Bell basis vector:
 </p>
 <div class="math">\begin{align*}
-    |\Phi^{+} \rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}{0}\rangle + |{1}{1}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{+}{+}\rangle + |{-}{-}\rangle \right) \\
-    |\Phi^{-} \rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}{0}\rangle - |{1}{1}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{-}{+}\rangle + |{+}{-}\rangle \right) \\
-    |\Psi^{+} \rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}{1}\rangle + |{1}{0}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{+}{+}\rangle - |{-}{-}\rangle \right) \\
-    |\Psi^{-} \rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}{1}\rangle - |{1}{0}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{-}{+}\rangle - |{+}{-}\rangle \right)
+    H |0 \rangle &amp;= |{+} \rangle &amp; H |1 \rangle &amp;= |{-} \rangle
 \end{align*}</div>
 <p>
-These states cannot be factorized as tensor products.</p>
-<p>Another 1-qubit basis is the two eigen-states of <span class="math">\(Y\)</span>:
+Since each information basis measurement of a Bell basis vector is equally likely, you can think of this basis as a fair coin.</p>
+<p>So far, this Hadamard matrix has appear greatly in the quantum information MOOC. You can also have unfair coins, corresponding to a biased Bell basis. Here is one such biased basis:
 </p>
 <div class="math">\begin{align*}
-    |{\circ}\rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}\rangle + i|{1}\rangle\right) &amp; |{\star}\rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}\rangle - i|{1}\rangle\right)
+    |{+}_{\epsilon} \rangle &amp;= \sqrt{\frac{1 - \epsilon}{2}} |0\rangle + \sqrt{\frac{1 + \epsilon}{2}} |1\rangle &amp; |{-}_{\epsilon} \rangle &amp;= \sqrt{\frac{1 + \epsilon}{2}} |0\rangle - \sqrt{\frac{1 - \epsilon}{2}} |1\rangle
 \end{align*}</div>
 <p>
-Taking tensor products gives another 2-qubit ortho-normal basis:
+Here we must require
+</p>
+<div class="math">\begin{equation*}
+    {-1} \leq \epsilon \leq 1
+\end{equation*}</div>
+<p>
+in order for the probability to be real and normalized. Note that the biased basis is ortho-normal:
 </p>
 <div class="math">\begin{align*}
-    |{\circ}{\circ} \rangle &amp; \equiv |{\circ} \rangle \otimes |{\circ} \rangle = \frac{1}{2} \left(|{0}{0} \rangle + i|{0}{1} \rangle + i|{1}{0} \rangle - |{1}{1} \rangle \right) \\
-    |{\circ}{\star} \rangle &amp; \equiv |{\circ} \rangle \otimes |{\star} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - i|{0}{1} \rangle + i|{1}{0} \rangle + |{1}{1} \rangle \right) \\
-    |{\star}{\circ} \rangle &amp; \equiv |{\star} \rangle \otimes |{\circ} \rangle = \frac{1}{2} \left(|{0}{0} \rangle + i|{0}{1} \rangle - i|{1}{0} \rangle + |{1}{1} \rangle \right) \\
-    |{\star}{\star} \rangle &amp; \equiv |{\star} \rangle \otimes |{\star} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - i|{0}{1} \rangle - i|{1}{0} \rangle - |{1}{1} \rangle \right)
+    \langle {+}_{\epsilon} | {+}_{\epsilon} \rangle &amp;= 1, &amp; \langle {-}_{\epsilon} | {+}_{\epsilon} \rangle &amp;= 0, &amp; \langle {+}_{\epsilon} | {-}_{\epsilon} \rangle &amp;= 0, &amp; \langle {-}_{\epsilon} | {-}_{\epsilon} \rangle &amp;= 1
 \end{align*}</div>
 <p>
-I kind of like this notation: the star suggests complex conjugation.</p>
+However, information basis measurements are now not equally likely:
+</p>
+<div class="math">\begin{align*}
+    \langle 0 | {+}_{\epsilon} \rangle &amp;= \sqrt{\frac{1 - \epsilon}{2}}, &amp; \langle 1 | {+}_{\epsilon} \rangle &amp;= \sqrt{\frac{1 + \epsilon}{2}}, &amp; \langle 0 | {-}_{\epsilon} \rangle &amp;= \sqrt{\frac{1 + \epsilon}{2}}, &amp; \langle 1 | {-}_{\epsilon} \rangle &amp;= -\sqrt{\frac{1 - \epsilon}{2}}
+\end{align*}</div>
+<p>
+Note that <span class="math">\(\epsilon = 0\)</span> reduces to the fair Bell basis.</p>
+<p>The matrix that produces the biased Bell basis is
+</p>
+<div class="math">\begin{equation*}
+    H_{\epsilon} = \frac{1}{\sqrt{2}} \begin{pmatrix} \sqrt{1 - \epsilon} &amp; \sqrt{1 + \epsilon} \\ \sqrt{1 + \epsilon} &amp; -\sqrt{1 - \epsilon} \end{pmatrix}
+\end{equation*}</div>
+<p>
+I suppose that the fairness of the usual Bell basis is important for the algorithms where this gate is used. But can you do anything useful with a biased Bell basis?</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

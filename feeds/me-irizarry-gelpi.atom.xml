@@ -1,5 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-02-27T19:58:07-05:00</updated><entry><title>Bell States and Tensor Products</title><link href="https://meirizarrygelpi.github.io/posts/physics/bell-states-and-tensor-products/" rel="alternate"></link><published>2018-02-27T19:58:07-05:00</published><updated>2018-02-27T19:58:07-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-27:/posts/physics/bell-states-and-tensor-products/</id><summary type="html">&lt;p&gt;On 2-qubit Bell states versus tensor products of 1-qubit states.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The 1-qubit Bell states are given by
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-05T10:57:35-05:00</updated><entry><title>Biased Bell Basis</title><link href="https://meirizarrygelpi.github.io/posts/physics/biased-bell-basis/" rel="alternate"></link><published>2018-03-05T10:57:35-05:00</published><updated>2018-03-05T10:57:35-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-05:/posts/physics/biased-bell-basis/</id><summary type="html">&lt;p&gt;A deformation of the familiar 1-qubit Bell basis.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The information basis is given by the vectors &lt;span class="math"&gt;\(|0 \rangle\)&lt;/span&gt; and &lt;span class="math"&gt;\(|1 \rangle\)&lt;/span&gt;. If a qubit is in one of the two information basis vectors, then the measurement outcomes have all-or-nothing probability:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \langle 0 | 0 \rangle &amp;amp;= 1, &amp;amp; \langle 1 | 0 \rangle &amp;amp;= 0, &amp;amp; \langle 0 | 1 \rangle &amp;amp;= 0, &amp;amp; \langle 1 | 1 \rangle &amp;amp;= 1
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The two basis vectors in the (fair) Bell basis are given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |{+}\rangle &amp;amp;= \frac{1}{\sqrt{2}} \left( |0 \rangle + |1 \rangle \right) &amp;amp; |{-}\rangle &amp;amp;= \frac{1}{\sqrt{2}} \left( |0 \rangle - |1 \rangle \right)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+If a qubit is in one of the two (fair) Bell basis vectors, measurement outcomes are equally likely:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \langle 0 | {+} \rangle &amp;amp;= \frac{1}{\sqrt{2}}, &amp;amp; \langle 1 | {+} \rangle &amp;amp;= \frac{1}{\sqrt{2}}, &amp;amp; \langle 0 | {-} \rangle &amp;amp;= \frac{1}{\sqrt{2}}, &amp;amp; \langle 1 | {-} \rangle &amp;amp;= -\frac{1}{\sqrt{2}}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The Hadamard matrix,
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 &amp;amp; 1 \\ 1 &amp;amp; -1 \end{pmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+takes one information basis vector and turns it into a Bell basis vector:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    H |0 \rangle &amp;amp;= |{+} \rangle &amp;amp; H |1 \rangle &amp;amp;= |{-} \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Since each information basis measurement of a Bell basis vector is equally likely, you can think of this basis as a fair coin.&lt;/p&gt;
+&lt;p&gt;So far, this Hadamard matrix has appear greatly in the quantum information MOOC. You can also have unfair coins, corresponding to a biased Bell basis. Here is one such biased basis:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |{+}_{\epsilon} \rangle &amp;amp;= \sqrt{\frac{1 - \epsilon}{2}} |0\rangle + \sqrt{\frac{1 + \epsilon}{2}} |1\rangle &amp;amp; |{-}_{\epsilon} \rangle &amp;amp;= \sqrt{\frac{1 + \epsilon}{2}} |0\rangle - \sqrt{\frac{1 - \epsilon}{2}} |1\rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Here we must require
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    {-1} \leq \epsilon \leq 1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+in order for the probability to be real and normalized. Note that the biased basis is ortho-normal:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \langle {+}_{\epsilon} | {+}_{\epsilon} \rangle &amp;amp;= 1, &amp;amp; \langle {-}_{\epsilon} | {+}_{\epsilon} \rangle &amp;amp;= 0, &amp;amp; \langle {+}_{\epsilon} | {-}_{\epsilon} \rangle &amp;amp;= 0, &amp;amp; \langle {-}_{\epsilon} | {-}_{\epsilon} \rangle &amp;amp;= 1
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+However, information basis measurements are now not equally likely:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \langle 0 | {+}_{\epsilon} \rangle &amp;amp;= \sqrt{\frac{1 - \epsilon}{2}}, &amp;amp; \langle 1 | {+}_{\epsilon} \rangle &amp;amp;= \sqrt{\frac{1 + \epsilon}{2}}, &amp;amp; \langle 0 | {-}_{\epsilon} \rangle &amp;amp;= \sqrt{\frac{1 + \epsilon}{2}}, &amp;amp; \langle 1 | {-}_{\epsilon} \rangle &amp;amp;= -\sqrt{\frac{1 - \epsilon}{2}}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(\epsilon = 0\)&lt;/span&gt; reduces to the fair Bell basis.&lt;/p&gt;
+&lt;p&gt;The matrix that produces the biased Bell basis is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    H_{\epsilon} = \frac{1}{\sqrt{2}} \begin{pmatrix} \sqrt{1 - \epsilon} &amp;amp; \sqrt{1 + \epsilon} \\ \sqrt{1 + \epsilon} &amp;amp; -\sqrt{1 - \epsilon} \end{pmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+I suppose that the fairness of the usual Bell basis is important for the algorithms where this gate is used. But can you do anything useful with a biased Bell basis?&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Bell States and Tensor Products</title><link href="https://meirizarrygelpi.github.io/posts/physics/bell-states-and-tensor-products/" rel="alternate"></link><published>2018-02-27T00:00:00-05:00</published><updated>2018-02-27T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-27:/posts/physics/bell-states-and-tensor-products/</id><summary type="html">&lt;p&gt;On 2-qubit Bell states versus tensor products of 1-qubit states.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The 1-qubit Bell states are given by
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     |{+}\rangle &amp;amp;= \frac{1}{\sqrt{2}} \left(|{0}\rangle + |{1}\rangle \right) &amp;amp; |{-}\rangle = \frac{1}{\sqrt{2}} \left(|{0}\rangle - |{1}\rangle \right)
@@ -20,7 +137,7 @@ Taking tensor products gives a 2-qubit ortho-normal basis:
     |{-}{-} \rangle &amp;amp;\equiv |{-} \rangle \otimes |{-} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - |{0}{1} \rangle - |{1}{0} \rangle + |{1}{1} \rangle \right)
 \end{align*}&lt;/div&gt;
 &lt;p&gt;
-Not that, by construction, the four vectors in this 2-qubit basis do not describe 2-body entanglement since they are all tensor products. Linear combinations do, giving the 2-qubit Bell states:
+Note that, by construction, the four vectors in this 2-qubit basis do not describe 2-body entanglement since they are all tensor products. Linear combinations do, giving the 2-qubit Bell states:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     |\Phi^{+} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left(|{0}{0}\rangle + |{1}{1}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{+}{+}\rangle + |{-}{-}\rangle \right) \\
