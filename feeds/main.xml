@@ -1,5 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-05T10:57:35-05:00</updated><entry><title>Biased Bell Basis</title><link href="https://meirizarrygelpi.github.io/posts/physics/biased-bell-basis/" rel="alternate"></link><published>2018-03-05T10:57:35-05:00</published><updated>2018-03-05T10:57:35-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-05:/posts/physics/biased-bell-basis/</id><summary type="html">&lt;p&gt;A deformation of the familiar 1-qubit Bell basis.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The information basis is given by the vectors &lt;span class="math"&gt;\(|0 \rangle\)&lt;/span&gt; and &lt;span class="math"&gt;\(|1 \rangle\)&lt;/span&gt;. If a qubit is in one of the two information basis vectors, then the measurement outcomes have all-or-nothing probability:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-07T12:27:10-05:00</updated><entry><title>1-Qubit Gate Identities</title><link href="https://meirizarrygelpi.github.io/posts/physics/1-qubit-gate-identities/" rel="alternate"></link><published>2018-03-07T12:27:10-05:00</published><updated>2018-03-07T12:27:10-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-07:/posts/physics/1-qubit-gate-identities/</id><summary type="html">&lt;p&gt;Some identities involving 1-qubit gates.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here are some important 1-qubit gates. You have the three Pauli matrices:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    X &amp;amp;= \begin{pmatrix} 0 &amp;amp; 1 \\ 1 &amp;amp; 0 \end{pmatrix}, &amp;amp; Y &amp;amp;= \begin{pmatrix} 0 &amp;amp; -i \\ i &amp;amp; 0 \end{pmatrix}, &amp;amp; Z &amp;amp;= \begin{pmatrix} 1 &amp;amp; 0 \\ 0 &amp;amp; -1 \end{pmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You also have the Hadamard gate
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 &amp;amp; 1 \\ 1 &amp;amp; -1 \end{pmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+It is true that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    H = \frac{1}{\sqrt{2}} (X + Z)
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+but I am not sure how the sum of two gates can be implemented. Indeed, if you interpret as the sum of two gates as applying them in parallel, then you cannot do that with a single qubit because that would involve cloning. Besides, the factor &lt;span class="math"&gt;\(1/\sqrt{2}\)&lt;/span&gt; is not unitary.&lt;/p&gt;
+&lt;p&gt;Two more gates are &lt;span class="math"&gt;\(S\)&lt;/span&gt; and &lt;span class="math"&gt;\(T\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    S &amp;amp;= \begin{pmatrix} 1 &amp;amp; 0 \\ 0 &amp;amp; i \end{pmatrix}, &amp;amp; T &amp;amp; = \begin{pmatrix} 1 &amp;amp; 0 \\ 0 &amp;amp; \exp{(i \pi / 4)} \end{pmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The &lt;span class="math"&gt;\(T\)&lt;/span&gt; gate is the square root of the &lt;span class="math"&gt;\(S\)&lt;/span&gt; gate:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    S = T T
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The &lt;span class="math"&gt;\(S\)&lt;/span&gt; gate in turn is the square root of the &lt;span class="math"&gt;\(Z\)&lt;/span&gt; gate:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    Z = S S = T T T T
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(S\)&lt;/span&gt; and &lt;span class="math"&gt;\(T\)&lt;/span&gt; are not hermitian but they are unitary.&lt;/p&gt;
+&lt;p&gt;You can write an element of a subspace of matrices spanned by all powers of &lt;span class="math"&gt;\(T\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    a I + b T + c S + d ST + e Z + f ZT + g ZS + h ZST
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+This is closed under addition and multiplication. Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    T^{\dagger} &amp;amp;= Z S T, &amp;amp; S^{\dagger} &amp;amp;= Z S, &amp;amp; Z^{\dagger} &amp;amp;= Z, &amp;amp; (S T)^{\dagger} &amp;amp;= Z T
+\end{align*}&lt;/div&gt;
+&lt;p&gt;The eigen-decomposition of &lt;span class="math"&gt;\(X\)&lt;/span&gt; and &lt;span class="math"&gt;\(Y\)&lt;/span&gt; involve &lt;span class="math"&gt;\(H\)&lt;/span&gt;, &lt;span class="math"&gt;\(Z\)&lt;/span&gt;, and &lt;span class="math"&gt;\(S\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    X &amp;amp;= H Z H = H T T T T H, &amp;amp; Y &amp;amp;= S H Z H S^{\dagger} = T T H T T T T H T^{\dagger} T^{\dagger}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+This means that in principle you only need &lt;span class="math"&gt;\(H\)&lt;/span&gt; and &lt;span class="math"&gt;\(T\)&lt;/span&gt; (and &lt;span class="math"&gt;\(T^{\dagger}\)&lt;/span&gt;) to generate the Pauli matrices.&lt;/p&gt;
+&lt;p&gt;What about the eigen-decomposition of &lt;span class="math"&gt;\(H\)&lt;/span&gt;? Well, you get
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    H &amp;amp; = G Z G^{\dagger}, &amp;amp; G &amp;amp;= \begin{pmatrix} \cos{(\pi/8)} &amp;amp; -\sin{(\pi/8)} \\ \sin{(\pi/8)} &amp;amp; \cos{(\pi/8)} \end{pmatrix}, &amp;amp; \cos{(\pi/8)} &amp;amp;= \frac{\sqrt{2 + \sqrt{2}}}{2}, &amp;amp; \sin{(\pi/8)} &amp;amp;= \frac{\sqrt{2 - \sqrt{2}}}{2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Can you write &lt;span class="math"&gt;\(G\)&lt;/span&gt; in terms of &lt;span class="math"&gt;\(T\)&lt;/span&gt;? Note that both &lt;span class="math"&gt;\(S\)&lt;/span&gt; and &lt;span class="math"&gt;\(T\)&lt;/span&gt; can be re-written in a similar way:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    S &amp;amp;= \exp{(i \pi / 4)} \begin{pmatrix} \exp{(-i \pi /4)} &amp;amp; 0 \\ 0 &amp;amp; \exp{(i \pi / 4)} \end{pmatrix}, &amp;amp; T &amp;amp;= \exp{(i \pi / 8)} \begin{pmatrix} \exp{(-i \pi /8)} &amp;amp; 0 \\ 0 &amp;amp; \exp{(i \pi / 8)} \end{pmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Indeed, &lt;span class="math"&gt;\(Z\)&lt;/span&gt; can also be re-written in this way:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    Z = \exp{(i \pi / 2)} \begin{pmatrix} \exp{(-i \pi /2)} &amp;amp; 0 \\ 0 &amp;amp; \exp{(i \pi / 2)} \end{pmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+When written in this way, it seems plausible that &lt;span class="math"&gt;\(G\)&lt;/span&gt; can be written in terms of &lt;span class="math"&gt;\(T\)&lt;/span&gt;. Introduce two new unitary matrices:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    P(\theta) &amp;amp;= \exp{(i\theta)} \begin{pmatrix}
+        1 &amp;amp; 0 \\
+        0 &amp;amp; 1
+    \end{pmatrix}, &amp;amp; Q(\theta) &amp;amp;= \begin{pmatrix}
+        \exp{(-i\theta)} &amp;amp; 0 \\
+        0 &amp;amp; \exp{(i\theta)}
+    \end{pmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Then
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    T &amp;amp;= P(\pi/8) Q(\pi/8), &amp;amp; S &amp;amp;= P(\pi/4) Q(\pi/4), &amp;amp; Z &amp;amp;= P(\pi/2) Q(\pi/2)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    P(\theta) + \left[ P(\theta) \right]^{\dagger} = Q(\theta) + \left[ Q(\theta) \right]^{\dagger} = 2 \cos{(\theta)} \begin{pmatrix}
+        1 &amp;amp; 0 \\
+        0 &amp;amp; 1
+    \end{pmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+However, addition of unitary quantum gates requires parallel wires.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Biased Bell Basis</title><link href="https://meirizarrygelpi.github.io/posts/physics/biased-bell-basis/" rel="alternate"></link><published>2018-03-05T10:57:35-05:00</published><updated>2018-03-05T10:57:35-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-05:/posts/physics/biased-bell-basis/</id><summary type="html">&lt;p&gt;A deformation of the familiar 1-qubit Bell basis.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The information basis is given by the vectors &lt;span class="math"&gt;\(|0 \rangle\)&lt;/span&gt; and &lt;span class="math"&gt;\(|1 \rangle\)&lt;/span&gt;. If a qubit is in one of the two information basis vectors, then the measurement outcomes have all-or-nothing probability:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     \langle 0 | 0 \rangle &amp;amp;= 1, &amp;amp; \langle 1 | 0 \rangle &amp;amp;= 0, &amp;amp; \langle 0 | 1 \rangle &amp;amp;= 0, &amp;amp; \langle 1 | 1 \rangle &amp;amp;= 1
