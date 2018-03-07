@@ -155,7 +155,114 @@ However, addition of unitary quantum gates requires parallel wires.&lt;/p&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Biased Bell Basis</title><link href="https://meirizarrygelpi.github.io/posts/physics/biased-bell-basis/" rel="alternate"></link><published>2018-03-05T10:57:35-05:00</published><updated>2018-03-05T10:57:35-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-05:/posts/physics/biased-bell-basis/</id><summary type="html">&lt;p&gt;A deformation of the familiar 1-qubit Bell basis.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The information basis is given by the vectors &lt;span class="math"&gt;\(|0 \rangle\)&lt;/span&gt; and &lt;span class="math"&gt;\(|1 \rangle\)&lt;/span&gt;. If a qubit is in one of the two information basis vectors, then the measurement outcomes have all-or-nothing probability:
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Discrete and Continuous Hilbert Spaces</title><link href="https://meirizarrygelpi.github.io/posts/physics/discrete-and-continuous-hilbert-spaces/" rel="alternate"></link><published>2018-03-06T00:00:00-05:00</published><updated>2018-03-06T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-06:/posts/physics/discrete-and-continuous-hilbert-spaces/</id><summary type="html">&lt;p&gt;On discrete and continuous Hilbert spaces.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The state of a qubit is a member of a discrete Hilbert space of finite dimension. Namely, two-dimensional:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |\psi \rangle &amp;amp;= \psi_{0} |0 \rangle + \psi_{1} |1 \rangle, &amp;amp; |\psi_{0}|^{2} + |\psi_{1}|^{2} &amp;amp;= 1
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+In a similar way, you can describe the state of a quantum trit as a member of a three-dimensional discrete Hilbert space:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |\psi \rangle &amp;amp;= \psi_{0} |0 \rangle + \psi_{1} |1 \rangle + \psi_{2} |2 \rangle, &amp;amp; |\psi_{0}|^{2} + |\psi_{1}|^{2} + |\psi_{2}|^{2} &amp;amp; = 1
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The qubit is the quantum version of a member of &lt;span class="math"&gt;\(\mathbb{Z}_{2}\)&lt;/span&gt;, the integers modulo 2. Similarly, the qutrit is the quantum version of a member of &lt;span class="math"&gt;\(\mathbb{Z}_{3}\)&lt;/span&gt;, the integers modulo 3. In a similar way, you can describe the quantum version of a member of &lt;span class="math"&gt;\(\mathbb{Z}_{N}\)&lt;/span&gt; as a vector in an &lt;span class="math"&gt;\(N\)&lt;/span&gt;-dimensional discrete Hilbert space:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |\psi \rangle &amp;amp;= \sum_{n = 0}^{N-1} \psi_{n} | n \rangle, &amp;amp; \sum_{n = 0}^{N-1} |\psi_{n}|^{2} &amp;amp;= 1, &amp;amp; \langle m | n \rangle &amp;amp;= \delta_{mn}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You can also have discrete but infinite-dimensional Hilbert spaces. For example, the quantum version of an integer:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |\psi \rangle &amp;amp;= \sum_{n = -\infty}^{\infty} \psi_{n} |n \rangle, &amp;amp; \sum_{n = -\infty}^{\infty} |\psi_{n}|^{2} &amp;amp;= 1, &amp;amp; \langle m | n \rangle &amp;amp;= \delta_{mn}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+In a similar way you can describe a quantum rational number!&lt;/p&gt;
+&lt;p&gt;Besides discrete Hilbert spaces, you can also have continuous Hilbert spaces. The (discrete) finite sum is replaced by the integral, and the Kronecker delta is replaced by the Dirac delta. With these you could describe a quantum real number in the circle:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |\psi \rangle &amp;amp;= \int\limits_{0}^{2\pi} \mathrm{d}\theta \psi(\theta) | \theta \rangle, &amp;amp; \int\limits_{0}^{2\pi} \mathrm{d}\theta |\psi(\theta)|^{2} &amp;amp;= 1, &amp;amp; \langle \theta | \phi \rangle &amp;amp;= \delta(\theta - \phi)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+That is, an element of a continuous but compact one-dimensional space. Maybe you have to impose the requirement of periodicity in &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    |\theta \pm 2\pi \rangle = |\theta \rangle
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+This would lead to the periodicity of the coefficient.&lt;/p&gt;
+&lt;p&gt;And finally, you can have a quantum real number along the real line:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |\psi \rangle &amp;amp;= \int\limits_{-\infty}^{\infty} \mathrm{d}x \psi(x) | x \rangle, &amp;amp; \int\limits_{-\infty}^{\infty} \mathrm{d}x |\psi(x)|^{2} &amp;amp;= 1, &amp;amp; \langle x | y \rangle &amp;amp;= \delta(x - y)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+In contrast with the circle, the real line is non-compact.&lt;/p&gt;
+&lt;p&gt;The position basis in quantum mechanics is an example of such a continuous basis. Adding more physics brings in the momentum basis, which is the Heisenberg conjugate to position. Both position and momentum are observables. However, it is rare to have bare kets &lt;span class="math"&gt;\(|x \rangle\)&lt;/span&gt; as the state of a system. In scattering is more common to have momentum basis states &lt;span class="math"&gt;\(|p \rangle\)&lt;/span&gt; as the in and out states of a scattering process. I guess I never thought of a vector like
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    |p_{1} \rangle + |p_{2} \rangle
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+as being a quantum superposition of two real numbers.&lt;/p&gt;
+&lt;p&gt;I am not sure where I am going with this post. It was meant to point out a way to think about other bases in quantum physics in the same way that the finite 2-dimensional logic basis is thought of in quantum information.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="quantum"></category></entry><entry><title>Biased Bell Basis</title><link href="https://meirizarrygelpi.github.io/posts/physics/biased-bell-basis/" rel="alternate"></link><published>2018-03-05T10:57:35-05:00</published><updated>2018-03-05T10:57:35-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-05:/posts/physics/biased-bell-basis/</id><summary type="html">&lt;p&gt;A deformation of the familiar 1-qubit Bell basis.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The information basis is given by the vectors &lt;span class="math"&gt;\(|0 \rangle\)&lt;/span&gt; and &lt;span class="math"&gt;\(|1 \rangle\)&lt;/span&gt;. If a qubit is in one of the two information basis vectors, then the measurement outcomes have all-or-nothing probability:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     \langle 0 | 0 \rangle &amp;amp;= 1, &amp;amp; \langle 1 | 0 \rangle &amp;amp;= 0, &amp;amp; \langle 0 | 1 \rangle &amp;amp;= 0, &amp;amp; \langle 1 | 1 \rangle &amp;amp;= 1
