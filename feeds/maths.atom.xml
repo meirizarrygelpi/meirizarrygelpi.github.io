@@ -1,5 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Maths</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/maths.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2017-08-03T00:00:00-04:00</updated><entry><title>Bi-Complex Numbers</title><link href="https://meirizarrygelpi.github.io/posts/maths/bi-complex-numbers/" rel="alternate"></link><published>2017-08-03T00:00:00-04:00</published><updated>2017-08-03T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2017-08-03:/posts/maths/bi-complex-numbers/</id><summary type="html">&lt;p&gt;On bi-complex numbers.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Complex numbers are a staple of mathematics and physics. A complex number &lt;span class="math"&gt;\(z\)&lt;/span&gt; can be written as the sum of two terms:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Maths</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/maths.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-16T14:17:23-04:00</updated><entry><title>Discrete Hartley Transforms 1</title><link href="https://meirizarrygelpi.github.io/posts/maths/discrete-hartley-transforms-1/" rel="alternate"></link><published>2018-03-16T14:17:23-04:00</published><updated>2018-03-16T14:17:23-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-16:/posts/maths/discrete-hartley-transforms-1/</id><summary type="html">&lt;p&gt;On the classical discrete Hartley transform.&lt;/p&gt;</summary><content type="html">&lt;p&gt;While reading about the &lt;a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform"&gt;discrete Fourier transform&lt;/a&gt;, I learned about a related topic called the &lt;a href="https://en.wikipedia.org/wiki/Discrete_Hartley_transform"&gt;discrete Hartley transform&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Recall the &lt;strong&gt;discrete Fourier transform&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    y_{n} = \frac{1}{\sqrt{N}} \sum_{m = 0}^{N-1} x_{m} \exp{\left( -\frac{2 \pi m n i}{N} \right)}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+This transforms takes a set of &lt;span class="math"&gt;\(N\)&lt;/span&gt; complex numbers &lt;span class="math"&gt;\(x_{n}\)&lt;/span&gt; and returns another set of &lt;span class="math"&gt;\(N\)&lt;/span&gt; complex numbers &lt;span class="math"&gt;\(y_{n}\)&lt;/span&gt;. If the &lt;span class="math"&gt;\(x_{n}\)&lt;/span&gt; are real, it is likely that the &lt;span class="math"&gt;\(y_{n}\)&lt;/span&gt; will be complex.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;discrete Hartley transform&lt;/strong&gt; can take &lt;span class="math"&gt;\(N\)&lt;/span&gt; real numbers &lt;span class="math"&gt;\(x_{n}\)&lt;/span&gt; and return &lt;span class="math"&gt;\(N\)&lt;/span&gt; real numbers &lt;span class="math"&gt;\(y_{n}\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    y_{n} = \frac{1}{\sqrt{N}} \sum_{m = 0}^{N-1} x_{m} \operatorname{cas}{\left( \frac{2 \pi m n}{N} \right)}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Here, &lt;span class="math"&gt;\(\operatorname{cas}\)&lt;/span&gt; is the &lt;strong&gt;cosine-and-sine&lt;/strong&gt; function:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \operatorname{cas}{(x)} \equiv \cos{(x)} + \sin{(x)}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Recall the identities
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \cos{(x \pm y)} &amp;amp;= \cos{(x)} \cos{(y)} \mp \sin{(x)} \sin{(y)} \\
+    \sin{(x \pm y)} &amp;amp;= \sin{(x)} \cos{(y)} \pm \cos{(x)} \sin{(y)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Thus,
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \cos{\left(x \pm \frac{\pi}{4} \right)} = \sin{\left(\frac{\pi}{4} \mp x \right)} = \frac{1}{\sqrt{2}}\left(\cos{(x)} \mp \sin{(x)} \right)
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Indeed, I would like to introduce the following notation instead:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{cps}{(x)} &amp;amp;\equiv \cos{(x)} + \sin{(x)}, &amp;amp; \operatorname{cqs}{(x)} &amp;amp;\equiv \cos{(x)} - \sin{(x)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+and the following transforms, given a set of &lt;span class="math"&gt;\(N\)&lt;/span&gt; complex numbers &lt;span class="math"&gt;\(x_{n}\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{n} &amp;amp;= \frac{1}{\sqrt{N}} \sum_{m = 0}^{N - 1} x_{m} \operatorname{cps}{\left( \frac{2 \pi m n}{N} \right)}, &amp;amp; q_{n} &amp;amp;= \frac{1}{\sqrt{N}} \sum_{m = 0}^{N - 1} x_{m} \operatorname{cqs}{\left( \frac{2 \pi m n}{N} \right)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Let us check the first few cases.&lt;/p&gt;
+&lt;p&gt;First, the &lt;span class="math"&gt;\(N = 1\)&lt;/span&gt; case. You have
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \operatorname{cps}{(0)} = \operatorname{cqs}{(0)} = 1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Thus, both transforms are trivial:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p_{1} = q_{1} = x_{1}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+This is just like the &lt;span class="math"&gt;\(N = 1\)&lt;/span&gt; discrete Fourier transform.&lt;/p&gt;
+&lt;p&gt;Next, the &lt;span class="math"&gt;\(N = 2\)&lt;/span&gt; case. You need
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \operatorname{cps}{(\pi)} = \operatorname{cqs}{(\pi)} = -1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Thus, both transforms are equivalent (up to a rename):
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0} &amp;amp;= q_{0} = \frac{1}{\sqrt{2}} \left( x_{0} + x_{1} \right), &amp;amp; p_{1} &amp;amp;= q_{1} = \frac{1}{\sqrt{2}} \left( x_{0} - x_{1} \right)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+This transformation is also equivalent to the &lt;span class="math"&gt;\(N = 2\)&lt;/span&gt; discrete Fourier transform and the Hadamard transform.&lt;/p&gt;
+&lt;p&gt;Next, the &lt;span class="math"&gt;\(N = 3\)&lt;/span&gt; case. You need
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{cps}{\left( \frac{2 \pi}{3} \right)} &amp;amp;= \operatorname{cqs}{\left( \frac{4 \pi}{3} \right)} = \operatorname{cps}{\left( \frac{8 \pi}{3} \right)} = -\frac{1}{2} + \frac{\sqrt{3}}{2}, \\
+    \operatorname{cqs}{\left( \frac{2 \pi}{3} \right)} &amp;amp;= \operatorname{cps}{\left( \frac{4 \pi}{3} \right)} = \operatorname{cqs}{\left( \frac{8 \pi}{3} \right)} = -\frac{1}{2} - \frac{\sqrt{3}}{2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Again, both transforms are equivalent (up to a rename):
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0} &amp;amp;= q_{0} = \frac{1}{\sqrt{3}} \left( x_{0} + x_{1} + x_{2} \right) \\
+    p_{1} &amp;amp;= q_{2} = \frac{1}{\sqrt{3}} \left( x_{0} + x_{1}\operatorname{cps}{\left( \frac{2 \pi}{3} \right)} + x_{2} \operatorname{cps}{\left( \frac{4 \pi}{3} \right)} \right) \\
+    p_{2} &amp;amp;= q_{1} = \frac{1}{\sqrt{3}} \left( x_{0} + x_{1} \operatorname{cps}{\left( \frac{4 \pi}{3} \right)} + x_{2} \operatorname{cps}{\left( \frac{8 \pi}{3} \right)} \right)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;Next, the &lt;span class="math"&gt;\(N = 4\)&lt;/span&gt; case. You get
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \begin{pmatrix}
+        p_{0} \\
+        p_{1} \\
+        p_{2} \\
+        p_{3}
+    \end{pmatrix} = \begin{pmatrix}
+        q_{0} \\
+        q_{3} \\
+        q_{2} \\
+        q_{1}
+    \end{pmatrix} = \frac{1}{\sqrt{4}} \begin{pmatrix}
+        1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 \\
+        1 &amp;amp; 1 &amp;amp; -1 &amp;amp; -1 \\
+        1 &amp;amp; -1 &amp;amp; 1 &amp;amp; -1 \\
+        1 &amp;amp; -1 &amp;amp; -1 &amp;amp; 1
+    \end{pmatrix} \begin{pmatrix}
+        x_{0} \\
+        x_{1} \\
+        x_{2} \\
+        x_{3}
+    \end{pmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Again, both transformations are equivalent (up to a rename). However, the &lt;span class="math"&gt;\(N = 4\)&lt;/span&gt; discrete Hartley transform is very different from the &lt;span class="math"&gt;\(N = 4\)&lt;/span&gt; discrete Fourier transform. Indeed, the &lt;span class="math"&gt;\(N = 4\)&lt;/span&gt; discrete Hartley transform is equivalent to the tensor product of two &lt;span class="math"&gt;\(N = 2\)&lt;/span&gt; discrete Hartley transforms.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Bi-Complex Numbers</title><link href="https://meirizarrygelpi.github.io/posts/maths/bi-complex-numbers/" rel="alternate"></link><published>2017-08-03T00:00:00-04:00</published><updated>2017-08-03T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2017-08-03:/posts/maths/bi-complex-numbers/</id><summary type="html">&lt;p&gt;On bi-complex numbers.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Complex numbers are a staple of mathematics and physics. A complex number &lt;span class="math"&gt;\(z\)&lt;/span&gt; can be written as the sum of two terms:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$z = a + bi.$$&lt;/div&gt;
 &lt;p&gt;
