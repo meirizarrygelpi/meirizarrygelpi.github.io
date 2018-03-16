@@ -1,5 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Maths</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/maths.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-16T14:17:23-04:00</updated><entry><title>Discrete Hartley Transforms 1</title><link href="https://meirizarrygelpi.github.io/posts/maths/discrete-hartley-transforms-1/" rel="alternate"></link><published>2018-03-16T14:17:23-04:00</published><updated>2018-03-16T14:17:23-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-16:/posts/maths/discrete-hartley-transforms-1/</id><summary type="html">&lt;p&gt;On the classical discrete Hartley transform.&lt;/p&gt;</summary><content type="html">&lt;p&gt;While reading about the &lt;a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform"&gt;discrete Fourier transform&lt;/a&gt;, I learned about a related topic called the &lt;a href="https://en.wikipedia.org/wiki/Discrete_Hartley_transform"&gt;discrete Hartley transform&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Maths</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/maths.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-16T15:18:12-04:00</updated><entry><title>Hartley Functions</title><link href="https://meirizarrygelpi.github.io/posts/maths/hartley-functions/" rel="alternate"></link><published>2018-03-16T15:18:12-04:00</published><updated>2018-03-16T15:18:12-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-16:/posts/maths/hartley-functions/</id><summary type="html">&lt;p&gt;Identities involving the functions appearing in the Hartley transform.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In a previous post I defined two functions that appear in the discrete Hartley transforms. Here, I will re-define them with a different normalization:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{cps}{(x)} &amp;amp;\equiv \frac{\cos{(x)} + \sin{(x)}}{\sqrt{2}}, &amp;amp; \operatorname{cqs}{(x)} &amp;amp;\equiv \frac{\cos{(x)} - \sin{(x)}}{\sqrt{2}}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Let us look at a few identities.&lt;/p&gt;
+&lt;p&gt;You have the parity/reflection identities:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{cps}{(-x)} &amp;amp;= \operatorname{cqs}{(x)}, &amp;amp; \operatorname{cqs}{(-x)} &amp;amp;= \operatorname{cps}{(x)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You have argument addition:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \sqrt{2}\operatorname{cps}{(x + y)} &amp;amp;= \operatorname{cps}{(x)} \operatorname{cps}{(y)} + \operatorname{cps}{(x)} \operatorname{cqs}{(y)} + \operatorname{cqs}{(x)} \operatorname{cps}{(y)} - \operatorname{cqs}{(x)} \operatorname{cqs}{(y)} \\
+    \sqrt{2}\operatorname{cqs}{(x + y)} &amp;amp;= \operatorname{cqs}{(x)} \operatorname{cqs}{(y)} + \operatorname{cqs}{(x)} \operatorname{cps}{(y)} + \operatorname{cps}{(x)} \operatorname{cqs}{(y)} - \operatorname{cps}{(x)} \operatorname{cps}{(y)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You have argument subtraction:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \sqrt{2}\operatorname{cps}{(x - y)} &amp;amp;= \operatorname{cps}{(x)} \operatorname{cps}{(y)} + \operatorname{cps}{(x)} \operatorname{cqs}{(y)} - \operatorname{cqs}{(x)} \operatorname{cps}{(y)} + \operatorname{cqs}{(x)} \operatorname{cqs}{(y)} \\
+    \sqrt{2}\operatorname{cqs}{(x - y)} &amp;amp;= \operatorname{cqs}{(x)} \operatorname{cqs}{(y)} + \operatorname{cqs}{(x)} \operatorname{cps}{(y)} - \operatorname{cps}{(x)} \operatorname{cqs}{(y)} + \operatorname{cps}{(x)} \operatorname{cps}{(y)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The product of the two functions has a simple form:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    2\operatorname{cps}{(x)}\operatorname{cqs}{(x)} = \cos{(2x)}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Taking squares gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{cps}^{2}{(x)} &amp;amp;= \frac{1 + \sin{(2x)}}{2} &amp;amp; \operatorname{cqs}^{2}{(x)} &amp;amp;= \frac{1 - \sin{(2x)}}{2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Thus,
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{cps}^{2}{(x)} + \operatorname{cqs}^{2}{(x)} &amp;amp;= 1, &amp;amp; \operatorname{cps}^{2}{(x)} - \operatorname{cqs}^{2}{(x)} &amp;amp;= \sin{(2x)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The ratio of the two functions also has a simple form, in terms of the tangent function:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \frac{\operatorname{cps}{(x)}}{\operatorname{cqs}{(x)}} = \frac{1 + \tan{(x)}}{1 - \tan{(x)}}
+\end{equation*}&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Discrete Hartley Transforms 1</title><link href="https://meirizarrygelpi.github.io/posts/maths/discrete-hartley-transforms-1/" rel="alternate"></link><published>2018-03-16T14:17:23-04:00</published><updated>2018-03-16T14:17:23-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-16:/posts/maths/discrete-hartley-transforms-1/</id><summary type="html">&lt;p&gt;On the classical discrete Hartley transform.&lt;/p&gt;</summary><content type="html">&lt;p&gt;While reading about the &lt;a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform"&gt;discrete Fourier transform&lt;/a&gt;, I learned about a related topic called the &lt;a href="https://en.wikipedia.org/wiki/Discrete_Hartley_transform"&gt;discrete Hartley transform&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Recall the &lt;strong&gt;discrete Fourier transform&lt;/strong&gt;:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}
