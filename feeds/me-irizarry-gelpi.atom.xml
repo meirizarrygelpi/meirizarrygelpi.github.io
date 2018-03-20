@@ -1,5 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-17T13:53:21-04:00</updated><entry><title>Discrete Hartley Transforms 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/discrete-hartley-transforms-2/" rel="alternate"></link><published>2018-03-17T13:53:21-04:00</published><updated>2018-03-17T13:53:21-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-17:/posts/physics/discrete-hartley-transforms-2/</id><summary type="html">&lt;p&gt;Matrices for the discrete Hartley transform.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here is a quick recap of four distinct transforms that can be adapted to quantum Hilbert spaces. First, the most important one: the &lt;strong&gt;discrete Fourier transforms&lt;/strong&gt;:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-20T11:16:46-04:00</updated><entry><title>Pi Divided by a Power of Two</title><link href="https://meirizarrygelpi.github.io/posts/maths/pi-divided-by-a-power-of-two/" rel="alternate"></link><published>2018-03-20T11:16:46-04:00</published><updated>2018-03-20T11:16:46-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-20:/posts/maths/pi-divided-by-a-power-of-two/</id><summary type="html">&lt;p&gt;A late post for pi day.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently, I learned that &lt;span class="math"&gt;\(\cos{(\pi/7)}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\sin{(\pi/7)}\)&lt;/span&gt; cannot be written in terms of algebraic numbers. This is &lt;a href="http://mathworld.wolfram.com/TrigonometryAnglesPi7.html"&gt;pretty shocking&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The half-angle formulas
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \cos^{2}{\left( \frac{x}{2} \right)} &amp;amp;= \frac{1 + \cos{(x)}}{2}, &amp;amp; \sin^{2}{\left( \frac{x}{2} \right)} &amp;amp;= \frac{1 - \cos{(x)}}{2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+can be used to find expressions for fractions of &lt;span class="math"&gt;\(\pi\)&lt;/span&gt; with powers of two as denominators.&lt;/p&gt;
+&lt;p&gt;You begin with
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \cos{(\pi)} &amp;amp;= -1, &amp;amp; \sin{(\pi)} &amp;amp;= 0
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Using the half-angle formulas gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \cos{\left( \frac{\pi}{2} \right)} &amp;amp;= 0, &amp;amp; \sin{\left( \frac{\pi}{2} \right)} &amp;amp;= 1
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The idea is to repeat this procedure to get other fractions.&lt;/p&gt;
+&lt;p&gt;Using the half-angle formulas gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \cos{\left( \frac{\pi}{4} \right)} &amp;amp;= \frac{\sqrt{2}}{2}, &amp;amp; \sin{\left( \frac{\pi}{4} \right)} &amp;amp;= \frac{\sqrt{2}}{2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Using the half-angle formulas gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \cos{\left( \frac{\pi}{8} \right)} &amp;amp;= \frac{\sqrt{2 + \sqrt{2}}}{2}, &amp;amp; \sin{\left( \frac{\pi}{8} \right)} &amp;amp;= \frac{\sqrt{2 - \sqrt{2}}}{2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Using the half-angle formulas gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \cos{\left( \frac{\pi}{16} \right)} &amp;amp;= \frac{\sqrt{2 + \sqrt{2 + \sqrt{2}}}}{2}, &amp;amp; \sin{\left( \frac{\pi}{16} \right)} &amp;amp;= \frac{\sqrt{2 - \sqrt{2 + \sqrt{2}}}}{2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Using the half-angle formulas gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \cos{\left( \frac{\pi}{32} \right)} &amp;amp;= \frac{\sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2}}}}}{2}, &amp;amp; \sin{\left( \frac{\pi}{32} \right)} &amp;amp;= \frac{\sqrt{2 - \sqrt{2 + \sqrt{2 + \sqrt{2}}}}}{2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You can already see the pattern. As the denominator grows, the cosine tends to 1, and the sine tends to 0.&lt;/p&gt;
+&lt;p&gt;Let &lt;span class="math"&gt;\(R_{k}\)&lt;/span&gt; be the following unitary matrix
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    R_{k} = \begin{bmatrix}
+        1 &amp;amp; 0 \\
+        0 &amp;amp; \exp{\left( -\dfrac{2 \pi i}{2^{k}} \right)}
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    R_{19} = \begin{bmatrix}
+        1 &amp;amp; 0 \\
+        0 &amp;amp; 0.9999999999 - 0.00001198422491i
+    \end{bmatrix} \approx \begin{bmatrix}
+        1 &amp;amp; 0 \\
+        0 &amp;amp; 1
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+So after &lt;span class="math"&gt;\(k = 19\)&lt;/span&gt;, the matrix &lt;span class="math"&gt;\(R_{k}\)&lt;/span&gt; can be approximated by the identity.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="pi"></category></entry><entry><title>Discrete Hartley Transforms 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/discrete-hartley-transforms-2/" rel="alternate"></link><published>2018-03-17T13:53:21-04:00</published><updated>2018-03-17T13:53:21-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-17:/posts/physics/discrete-hartley-transforms-2/</id><summary type="html">&lt;p&gt;Matrices for the discrete Hartley transform.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here is a quick recap of four distinct transforms that can be adapted to quantum Hilbert spaces. First, the most important one: the &lt;strong&gt;discrete Fourier transforms&lt;/strong&gt;:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     (F_{N})_{mn} &amp;amp;= \frac{1}{\sqrt{N}} \left[ \exp{\left(- \frac{2 \pi i}{N} \right)} \right]^{mn}, &amp;amp; (G_{N})_{mn} &amp;amp;= \frac{1}{\sqrt{N}} \left[ \exp{\left( \frac{2 \pi i}{N} \right)} \right]^{mn}
