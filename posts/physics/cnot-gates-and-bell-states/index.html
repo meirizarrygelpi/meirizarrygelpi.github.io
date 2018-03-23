@@ -59,7 +59,7 @@
   <article class="article">
     <header>
       <ul class="list-inline">
-        <li class="list-inline-item text-muted" title="2018-02-21T07:33:14.800266-05:00">
+        <li class="list-inline-item text-muted" title="2018-02-21T00:00:00-05:00">
           <i class="fa fa-clock-o"></i>
           Wed 21 February 2018
         </li>
@@ -74,7 +74,7 @@
     </header>
     <div class="content">
       <p>The CNOT gate is a 2-qubit gate. This means that it acts on a 2-qubit vector, which is 4-dimensional. Thus, this gate can be represented as a 4-by-4 matrix. The gotcha is that on a pair of qubits, there can be two CNOT gates. The difference is which qubit is used as control.</p>
-<p>By definition, the control-NOT gate leaves the state unchanged if the control qubit is not set, otherwise it applies a NOT gate to the target qubit. The familiar case is the first qubit as control:
+<p>By definition, the controlled-NOT gate leaves the state unchanged if the control qubit is not set, otherwise it applies a NOT gate to the target qubit. The familiar case is the first qubit as control:
 </p>
 <div class="math">$$ \operatorname{CNOT}_{12} |00 \rangle = |00 \rangle, \qquad \operatorname{CNOT}_{12} |01 \rangle = |01 \rangle, \qquad \operatorname{CNOT}_{12} |10 \rangle = |11 \rangle, \qquad \operatorname{CNOT}_{12} |11 \rangle = |10 \rangle. $$</div>
 <p>
