@@ -1,5 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-21T00:00:00-04:00</updated><entry><title>SWAP and CNOT Gates</title><link href="https://meirizarrygelpi.github.io/posts/physics/swap-and-cnot-gates/" rel="alternate"></link><published>2018-03-21T00:00:00-04:00</published><updated>2018-03-21T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-21:/posts/physics/swap-and-cnot-gates/</id><summary type="html">&lt;p&gt;On SWAP, CNOT, and permutation gates.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I would like to record a relation between SWAP and controlled-NOT gates. Make sure you import NumPy first:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-25T09:18:40-04:00</updated><entry><title>More on CNOT gates</title><link href="https://meirizarrygelpi.github.io/posts/physics/more-on-cnot-gates/" rel="alternate"></link><published>2018-03-25T09:18:40-04:00</published><updated>2018-03-25T09:18:40-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-25:/posts/physics/more-on-cnot-gates/</id><summary type="html">&lt;p&gt;More on the many possibilities for a controlled gate.&lt;/p&gt;</summary><content type="html">&lt;p&gt;For 2-qubit state vectors, there are two traditional CNOT gates:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{CNOT}_{4}(1, 2) &amp;amp;= \begin{bmatrix}
+        1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \\
+        0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0
+    \end{bmatrix}, &amp;amp; \operatorname{CNOT}_{4}(2, 1) &amp;amp;= \begin{bmatrix}
+        1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \\
+        0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\
+        0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Here, &lt;span class="math"&gt;\(\operatorname{CNOT}_{4}(1, 2)\)&lt;/span&gt; uses qubit 1 as the &lt;strong&gt;control qubit&lt;/strong&gt;, and qubit 2 as the &lt;strong&gt;target qubit&lt;/strong&gt;. The other CNOT gate swaps the role of qubits 1 and 2. These two gate are related:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{CNOT}_{4}(2, 1) &amp;amp;= H_{4} \operatorname{CNOT}_{4}(1, 2) H_{4}, &amp;amp; H_{4} &amp;amp;= H_{2} \otimes H_{2}, &amp;amp; H_{2} &amp;amp;= \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 &amp;amp; 1 \\
+        1 &amp;amp; -1
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+I mentioned this relation earlier. In my opinion, this relation is not obvious. The more obvious relation would involve SWAP gates:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{CNOT}_{4}(2, 1) &amp;amp;= \operatorname{SWAP}_{4}(1, 2) \operatorname{CNOT}_{4}(1, 2) \operatorname{SWAP}_{4}(1, 2), &amp;amp; \operatorname{SWAP}_{4}(1, 2) &amp;amp;= \begin{bmatrix}
+        1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\
+        0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Indeed, the SWAP gate can be implemented in terms of CNOT gates:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \operatorname{SWAP}_{4}(1, 2) = \operatorname{CNOT}_{4}(1, 2) \operatorname{CNOT}_{4}(2, 1) \operatorname{CNOT}_{4}(1, 2)
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+These controlled-NOT gates apply the NOT gate if the control qubit is set to 1:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{CNOT}_{4}(1, 2) |00 \rangle &amp;amp;= |00 \rangle, &amp;amp; \operatorname{CNOT}_{4}(1, 2) |01 \rangle &amp;amp;= |01 \rangle, \\
+    \operatorname{CNOT}_{4}(1, 2) |10 \rangle &amp;amp;= |11 \rangle, &amp;amp; \operatorname{CNOT}_{4}(1, 2) |11 \rangle &amp;amp;= |10 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You can denote this explicitly with the following notation:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{CNOT}_{4}(1, 2 | 1) &amp;amp;= \begin{bmatrix}
+        1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \\
+        0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0
+    \end{bmatrix}, &amp;amp; \operatorname{CNOT}_{4}(2, 1 | 1) &amp;amp;= \begin{bmatrix}
+        1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \\
+        0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\
+        0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You can distinguish these gates from the case when applying the NOT if the control qubit is set to 0:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{CNOT}_{4}(1, 2 | 0) |00 \rangle &amp;amp;= |01 \rangle, &amp;amp; \operatorname{CNOT}_{4}(1, 2 | 0) |01 \rangle &amp;amp;= |00 \rangle, \\
+    \operatorname{CNOT}_{4}(1, 2 | 0) |10 \rangle &amp;amp;= |10 \rangle, &amp;amp; \operatorname{CNOT}_{4}(1, 2 | 0) |11 \rangle &amp;amp;= |11 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+That is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{CNOT}_{4}(1, 2 | 0) &amp;amp;= \begin{bmatrix}
+        0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\
+        1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
+    \end{bmatrix}, &amp;amp; \operatorname{CNOT}_{4}(2, 1 | 0) &amp;amp;= \begin{bmatrix}
+        0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\
+        0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\
+        1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that these two sets of controlled gates are related via
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{CNOT}_{4}(1, 2 | 0) &amp;amp;= \operatorname{NOT}_{4}(1) \operatorname{CNOT}_{4}(1, 2 | 1) \operatorname{NOT}_{4}(1), \\
+    \operatorname{CNOT}_{4}(2, 1 | 0) &amp;amp;= \operatorname{NOT}_{4}(2) \operatorname{CNOT}_{4}(2, 1 | 1) \operatorname{NOT}_{4}(2)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Here the 4-dimensional NOT gates are given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \operatorname{NOT}_{4}(1) &amp;amp;= \operatorname{NOT}_{2} \otimes I_{2}, &amp;amp; \operatorname{NOT}_{4}(2) &amp;amp;= I_{2} \otimes \operatorname{NOT}_{2}, &amp;amp; \operatorname{NOT}_{2} &amp;amp;= \begin{bmatrix}
+        0 &amp;amp; 1 \\ 1 &amp;amp; 0
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+In circuit diagrams, the controlled gates when the control qubit is set to 1 are denoted with a solid black circle, and the controlled gates when the control qubit is set to 0 are denoted with a solid white circle.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>SWAP and CNOT Gates</title><link href="https://meirizarrygelpi.github.io/posts/physics/swap-and-cnot-gates/" rel="alternate"></link><published>2018-03-21T00:00:00-04:00</published><updated>2018-03-21T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-21:/posts/physics/swap-and-cnot-gates/</id><summary type="html">&lt;p&gt;On SWAP, CNOT, and permutation gates.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I would like to record a relation between SWAP and controlled-NOT gates. Make sure you import NumPy first:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
