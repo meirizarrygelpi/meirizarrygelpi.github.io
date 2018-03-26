@@ -2904,60 +2904,100 @@ In particular, the last one means that &lt;span class="math"&gt;\(Q | \theta \ra
 }
 &lt;/script&gt;</content><category term="quantum"></category></entry><entry><title>Exponential of a Pauli Matrix</title><link href="https://meirizarrygelpi.github.io/posts/physics/exponential-of-a-pauli-matrix/" rel="alternate"></link><published>2018-02-06T00:00:00-05:00</published><updated>2018-02-06T00:00:00-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-02-06:/posts/physics/exponential-of-a-pauli-matrix/</id><summary type="html">&lt;p&gt;The exponential function acting on a Pauli matrix.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The three Pauli matrices are
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ X = \begin{pmatrix} 0 &amp;amp; 1 \\ 1 &amp;amp; 0 \end{pmatrix}, \qquad Y = \begin{pmatrix} 0 &amp;amp; -i \\ i &amp;amp; 0 \end{pmatrix}, \qquad Z = \begin{pmatrix} 1 &amp;amp; 0 \\ 0 &amp;amp; -1 \end{pmatrix}. $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{align*}
+    X &amp;amp;= \begin{bmatrix} 0 &amp;amp; 1 \\ 1 &amp;amp; 0 \end{bmatrix}, &amp;amp; Y &amp;amp;= \begin{bmatrix} 0 &amp;amp; -i \\ i &amp;amp; 0 \end{bmatrix}, &amp;amp; Z &amp;amp;= \begin{bmatrix} 1 &amp;amp; 0 \\ 0 &amp;amp; -1 \end{bmatrix}
+\end{align*}&lt;/div&gt;
 &lt;p&gt;
-Each is Hermitian and square to the identity:
+Each is hermitian and square to the identity:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ X^{2} = Y^{2} = Z^{2} = I. $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    X^{2} = Y^{2} = Z^{2} = I_{2}
+\end{equation*}&lt;/div&gt;
 &lt;p&gt;
 Consider the following function:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ U_{M}(\theta) \equiv \exp{\left( \frac{i}{2} \theta M \right)}, \qquad M^{2} = I. $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{align*}
+    U_{M}(\theta) &amp;amp;\equiv \exp{\left( \frac{i}{2} \theta M \right)}, &amp;amp; M^{2} &amp;amp;= I_{2}
+\end{align*}&lt;/div&gt;
 &lt;p&gt;
 The exponential of a matrix is defined in terms of the infinite series
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ U_{M}(\theta) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n+1)} \left( \frac{i}{2} \theta M \right)^{n}. $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U_{M}(\theta) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n+1)} \left( \frac{i}{2} \theta M \right)^{n}
+\end{equation*}&lt;/div&gt;
 &lt;p&gt;
 First, you split the sum into even and odd powers:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ U_{M}(\theta) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(2n+1)} \left( \frac{i}{2} \theta M \right)^{2n} + \sum_{n = 0}^{\infty} \frac{1}{\Gamma(2n+2)} \left( \frac{i}{2} \theta M \right)^{2n + 1}. $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U_{M}(\theta) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(2n+1)} \left( \frac{i}{2} \theta M \right)^{2n} + \sum_{n = 0}^{\infty} \frac{1}{\Gamma(2n+2)} \left( \frac{i}{2} \theta M \right)^{2n + 1}
+\end{equation*}&lt;/div&gt;
 &lt;p&gt;
 Then you use the fact that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ i^{2n} = (-1)^{n}, \qquad M^{2n} = I; $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{align*}
+    i^{2n} &amp;amp;= (-1)^{n}, &amp;amp; M^{2n} &amp;amp;= I_{2}
+\end{align*}&lt;/div&gt;
 &lt;p&gt;
 to find
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ U_{M}(\theta) = I \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(2n+1)} \left( \frac{1}{2} \theta \right)^{2n} + i M \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(2n+2)} \left( \frac{1}{2} \theta \right)^{2n + 1}. $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U_{M}(\theta) = I_{2} \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(2n+1)} \left( \frac{1}{2} \theta \right)^{2n} + i M \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(2n+2)} \left( \frac{1}{2} \theta \right)^{2n + 1}
+\end{equation*}&lt;/div&gt;
 &lt;p&gt;
 Finally, you recognize the sine and cosine infinite series:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ U_{M}(\theta) = I \cos{\left( \frac{\theta}{2} \right)} + i M \sin{\left( \frac{\theta}{2} \right)}. $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U_{M}(\theta) = I_{2} \cos{\left( \frac{\theta}{2} \right)} + i M \sin{\left( \frac{\theta}{2} \right)}
+\end{equation*}&lt;/div&gt;
 &lt;p&gt;
 Here &lt;span class="math"&gt;\(M\)&lt;/span&gt; can be any of the three Pauli matrices.&lt;/p&gt;
 &lt;p&gt;Recall also that the three Pauli matrices anti-commute:
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ XY + YX = YZ + ZY = ZX + XZ = 0. $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    XY + YX = YZ + ZY = ZX + XZ = 0
+\end{equation*}&lt;/div&gt;
 &lt;p&gt;
 Now consider the following matrix
 &lt;/p&gt;
-&lt;div class="math"&gt;$$r \cdot R \equiv x X + y Y + z Z, \qquad x^{2} + y^{2} + z^{2} = 1. $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \hat{r} \cdot R &amp;amp;\equiv x X + y Y + z Z, &amp;amp; x^{2} + y^{2} + z^{2} &amp;amp;= 1
+\end{align*}&lt;/div&gt;
 &lt;p&gt;
 Then it follows that
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ (r \cdot R)^{2} = I. $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    (\hat{r} \cdot R)^{2} = I_{2}
+\end{equation*}&lt;/div&gt;
 &lt;p&gt;
 Thus, in general
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \exp{\left[ \frac{i}{2} \theta (r \cdot R) \right]} = I \cos{\left( \frac{\theta}{2} \right)} + i (r \cdot R) \sin{\left( \frac{\theta}{2} \right)}. $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \exp{\left[ \frac{i}{2} \theta (\hat{r} \cdot R) \right]} = I_{2} \cos{\left( \frac{\theta}{2} \right)} + i (\hat{r} \cdot R) \sin{\left( \frac{\theta}{2} \right)}
+\end{equation*}&lt;/div&gt;
 &lt;p&gt;
 If you relax the unit 2-sphere condition, then
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ (r \cdot R)^{2} = \left(\sqrt{x^{2} + y^{2} + z^{2}}\right)^{2} I; $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{align*}
+    r \cdot R &amp;amp;= x X + y Y + z Z, &amp;amp; x^{2} + y^{2} + z^{2} &amp;amp;\neq 1
+\end{align*}&lt;/div&gt;
 &lt;p&gt;
 and thus
 &lt;/p&gt;
-&lt;div class="math"&gt;$$ \exp{\left[ \frac{i}{2} \theta (r \cdot R) \right]} = I \cos{\left( \frac{\theta \sqrt{x^{2} + y^{2} + z^{2}}}{2} \right)} + i (r \cdot R) \sin{\left( \frac{\theta \sqrt{x^{2} + y^{2} + z^{2}}}{2} \right)}. $$&lt;/div&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    (r \cdot R)^{2} = \left(\sqrt{x^{2} + y^{2} + z^{2}}\right)^{2} I_{2}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The net effect is to scale the angle parameter:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \exp{\left[ \frac{i}{2} \theta (r \cdot R) \right]} &amp;amp;= \exp{\left[ \frac{i}{2} \tilde{\theta} (\hat{r} \cdot R) \right]}, &amp;amp; \tilde{\theta} &amp;amp;= \theta \sqrt{x^{2} + y^{2} + z^{2}}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Thus:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \exp{\left[ \frac{i}{2} \theta (r \cdot R) \right]} = I_{2} \cos{\left( \frac{\theta \sqrt{x^{2} + y^{2} + z^{2}}}{2} \right)} + i \left( \frac{r \cdot R}{\sqrt{x^{2} + y^{2} + z^{2}}} \right) \sin{\left( \frac{\theta \sqrt{x^{2} + y^{2} + z^{2}}}{2} \right)}
+\end{equation*}&lt;/div&gt;
 &lt;p&gt;
 In any case, the length of the &lt;span class="math"&gt;\(r\)&lt;/span&gt; vector can always be absorbed into the angle &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
