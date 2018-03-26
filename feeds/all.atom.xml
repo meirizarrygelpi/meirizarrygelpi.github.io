@@ -1,5 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-25T09:18:40-04:00</updated><entry><title>More on CNOT gates</title><link href="https://meirizarrygelpi.github.io/posts/physics/more-on-cnot-gates/" rel="alternate"></link><published>2018-03-25T09:18:40-04:00</published><updated>2018-03-25T09:18:40-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-25:/posts/physics/more-on-cnot-gates/</id><summary type="html">&lt;p&gt;More on the many possibilities for a controlled gate.&lt;/p&gt;</summary><content type="html">&lt;p&gt;For 2-qubit state vectors, there are two traditional CNOT gates:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-26T16:29:10-04:00</updated><entry><title>Hamiltonian for Hadamard Transforms</title><link href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-hadamard-transforms/" rel="alternate"></link><published>2018-03-26T16:29:10-04:00</published><updated>2018-03-26T16:29:10-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-26:/posts/physics/hamiltonian-for-hadamard-transforms/</id><summary type="html">&lt;p&gt;Hermitian Hamiltonians for two- and four-dimensional Hadamard transforms.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A &lt;strong&gt;unitary&lt;/strong&gt; matrix &lt;span class="math"&gt;\(U\)&lt;/span&gt; satisfies the following relation
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U^{\dagger} = U^{-1}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+A &lt;strong&gt;hermitian&lt;/strong&gt; matrix &lt;span class="math"&gt;\(V\)&lt;/span&gt; satisfies the following relation
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    V^{\dagger} = V
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The simplest case involves 2×2 matrices. The most general 2×2 hermitian matrix is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    V = \frac{1}{2} \begin{bmatrix}
+        w + z &amp;amp; x - yi \\
+        x + yi &amp;amp; w - z
+    \end{bmatrix} = \frac{w}{2} I_{2} + \frac{x}{2} X + \frac{y}{2} Y + \frac{z}{2} Z
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Recall that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    [X, I_{2}] = [Y, I_{2}] = [Z, I_{2}] = 0
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+A unitary matrix can be written in &lt;strong&gt;exponential&lt;/strong&gt; form:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U = \exp{(iV)} = \exp{\left( \frac{iw}{2} \right)} \exp{\left( \frac{i}{2} \left[x X + y Y + z Z \right] \right)}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Using the familiar result for exponentiation of Pauli matrices gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U = \exp{\left( \frac{iw}{2} \right)} \left[ I_{2} \cos{\left( \frac{\sqrt{x^{2} + y^{2} + z^{2}}}{2} \right)} + i \left( \frac{x X + y Y + z Z}{\sqrt{x^{2} + y^{2} + z^{2}}} \right) \sin{\left( \frac{\sqrt{x^{2} + y^{2} + z^{2}}}{2} \right)} \right]
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+As an example, consider the &lt;strong&gt;2-dimensional Hadamard transform&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    H_{2} = \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 &amp;amp; 1 \\ 1 &amp;amp; -1
+    \end{bmatrix} = \frac{1}{\sqrt{2}}\left( X + Z \right)
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Thus, we need
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    w &amp;amp;= -\pi, &amp;amp; y &amp;amp;= 0, &amp;amp; \sqrt{x^{2} + z^{2}} &amp;amp;= \pi
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Then
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U = \frac{xX + zZ}{\pi}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Finally, choose
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    x = z = \frac{\pi}{\sqrt{2}}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Thus,
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    H_{2} &amp;amp;= \exp{\left(i V \right)}, &amp;amp; V &amp;amp;= -\frac{\pi}{2} I_{2} + \frac{\pi}{2} H_{2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Recall that &lt;span class="math"&gt;\(H_{2}\)&lt;/span&gt; is equivalent to the &lt;strong&gt;2-dimensional Fourier transform&lt;/strong&gt;, so the above result gives you the &lt;strong&gt;Hamiltonian&lt;/strong&gt; of the 2-dimensional Fourier transform. In general, the &lt;span class="math"&gt;\(N\)&lt;/span&gt;-dimensional discrete Fourier transform &lt;span class="math"&gt;\(F_{N}\)&lt;/span&gt; satisfies the following relations:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    (F_{N})^{2} &amp;amp;= S_{N}, &amp;amp; (S_{N})^{2} &amp;amp;= (F_{N})^{4} = I_{N}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Let
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    F_{N} = \exp{(i G_{N})}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Then
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    (F_{N})^{2} = \exp{(2i G_{N})} = S_{N}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+and also
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    (F_{N})^{4} = \exp{(4i G_{N})} = I_{N}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Note that this does not necessarily implies that &lt;span class="math"&gt;\(G_{N} = 0\)&lt;/span&gt;. Indeed, looking back at our result for 2×2 matrices, setting
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    w &amp;amp;= 4 \pi m, &amp;amp; \sqrt{x^{2} + y^{2} + z^{2}} &amp;amp;= 4 \pi n, &amp;amp; m, n &amp;amp;\in \mathbb{Z}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+you get
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \exp{(i V(m, n))} &amp;amp;= I_{2}, &amp;amp; V(m, n) &amp;amp;= 2 \pi m I_{2} + 2 \pi n \left(xX + yY + zZ \right), &amp;amp; x^{2} + y^{2} + z^{2} &amp;amp;= 1
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Thus, the exponential of a 2×2 hermitian matrix of the above form will be the 2×2 identity matrix.&lt;/p&gt;
+&lt;p&gt;For two qubits you can have the &lt;strong&gt;4-dimensional Fourier transform&lt;/strong&gt;. The Hamiltonian for this matrix would presumably require understanding 4×4 hermitian matrices in more detail. However, since the &lt;strong&gt;4-dimensional Hadamard transform&lt;/strong&gt; is given by a &lt;strong&gt;Kronecker product&lt;/strong&gt;,
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    H_{4} = H_{2} \otimes H_{2}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+you can find the Hamiltonian for this transform with what we have seen so far. There is an important identity that I will not prove:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \exp{(A)} \otimes \exp{(B)} = \exp{(A \oplus B)}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(\oplus\)&lt;/span&gt; is the &lt;strong&gt;Kronecker sum&lt;/strong&gt;. If &lt;span class="math"&gt;\(A\)&lt;/span&gt; is &lt;span class="math"&gt;\(M \times M\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt; is &lt;span class="math"&gt;\(N \times N\)&lt;/span&gt;, then the Kronecker sum is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    A \oplus B = (A \otimes I_{N}) + (I_{M} \otimes B)
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Thus
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    H_{4} = \exp{(iG_{2})} \otimes \exp{(iG_{2})} = \exp{(i G_{2} \oplus iG_{2})} = \exp{(i G_{4})}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+That is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    G_{4} &amp;amp;= G_{2} \oplus G_{2}, &amp;amp; G_{2} = -\frac{\pi}{2} I_{2} + \frac{\pi}{2} H_{2} = \frac{\pi}{2\sqrt{2}} \begin{bmatrix}
+        1 - \sqrt{2} &amp;amp; 1 \\
+        1 &amp;amp; -1 - \sqrt{2}
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+More explicitly,
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    G_{4} = \frac{\pi}{2 \sqrt{2}} \begin{bmatrix}
+        2 - \sqrt{8} &amp;amp; 1 &amp;amp; 1 &amp;amp; 0 \\
+        1 &amp;amp; -\sqrt{8} &amp;amp; 0 &amp;amp; 1 \\
+        1 &amp;amp; 0 &amp;amp; -\sqrt{8} &amp;amp; 1 \\
+        0 &amp;amp; 1 &amp;amp; 1 &amp;amp; -2 - \sqrt{8}
+    \end{bmatrix} = -\pi I_{4} + \frac{\pi}{2} \left( H_{2} \oplus H_{2} \right)
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+This is the &lt;strong&gt;Hamiltonian&lt;/strong&gt; for the &lt;strong&gt;4-dimensional Hadamard transform&lt;/strong&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>More on CNOT gates</title><link href="https://meirizarrygelpi.github.io/posts/physics/more-on-cnot-gates/" rel="alternate"></link><published>2018-03-25T09:18:40-04:00</published><updated>2018-03-25T09:18:40-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-25:/posts/physics/more-on-cnot-gates/</id><summary type="html">&lt;p&gt;More on the many possibilities for a controlled gate.&lt;/p&gt;</summary><content type="html">&lt;p&gt;For 2-qubit state vectors, there are two traditional CNOT gates:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     \operatorname{CNOT}_{4}(1, 2) &amp;amp;= \begin{bmatrix}
