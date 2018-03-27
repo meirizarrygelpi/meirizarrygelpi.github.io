@@ -1,5 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-26T16:29:10-04:00</updated><entry><title>Hamiltonian for Hadamard Transforms</title><link href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-hadamard-transforms/" rel="alternate"></link><published>2018-03-26T16:29:10-04:00</published><updated>2018-03-26T16:29:10-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-26:/posts/physics/hamiltonian-for-hadamard-transforms/</id><summary type="html">&lt;p&gt;Hermitian Hamiltonians for two- and four-dimensional Hadamard transforms.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A &lt;strong&gt;unitary&lt;/strong&gt; matrix &lt;span class="math"&gt;\(U\)&lt;/span&gt; satisfies the following relation
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-27T11:14:42-04:00</updated><entry><title>Hamiltonian for Quantum Fourier Transform 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-quantum-fourier-transform-1/" rel="alternate"></link><published>2018-03-27T11:14:42-04:00</published><updated>2018-03-27T11:14:42-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-27:/posts/physics/hamiltonian-for-quantum-fourier-transform-1/</id><summary type="html">&lt;p&gt;Hermitian Hamiltonians for quantum Fourier transforms.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider an &lt;span class="math"&gt;\(N \times N\)&lt;/span&gt; matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt; that squares to the identity:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    A^{2} = I_{N}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Now consider the exponential of such a matrix:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \exp{\left( \frac{i}{2} \theta A \right)} = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n+1)} \left( \frac{i}{2} \theta A \right)^{n}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Using the familiar trick of splitting the infinite sum into even and odd powers gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \exp{\left( \frac{i}{2} \theta A \right)} = I_{N} \cos{\left( \frac{\theta}{2} \right)} + i A \sin{\left( \frac{\theta}{2} \right)}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Setting &lt;span class="math"&gt;\(\theta = \pi (4n + 1)\)&lt;/span&gt; with &lt;span class="math"&gt;\(n \in \mathbb{Z}\)&lt;/span&gt; gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \exp{\left( \frac{i}{2} \pi (4 n + 1) A \right)} = i A
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Writing
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    -i I_{N} &amp;amp;= \exp{\left( \frac{i}{2} \pi (4 m - 1) I_{N} \right)}, &amp;amp; m &amp;amp;\in \mathbb{Z}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+lets you write &lt;span class="math"&gt;\(A\)&lt;/span&gt; as an exponential:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    A &amp;amp;= \exp{\left[ i B(m, n) \right]}, &amp;amp; B(m, n) &amp;amp;= \frac{\pi}{2} (4 m - 1) I_{N} + \frac{\pi}{2} (4 n + 1) A
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+This procedure works for any matrix that squares to the identity, not just Pauli matrices!&lt;/p&gt;
+&lt;p&gt;Recall that the quantum Fourier transform matrix &lt;span class="math"&gt;\(F_{N}\)&lt;/span&gt; satisfies the following properties
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    (F_{N})^{2} &amp;amp;= S_{N}, &amp;amp; (S_{N})^{2} &amp;amp;= (F_{N})^{4} = I_{N}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(S_{N}\)&lt;/span&gt; is a certain permutation matrix
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    S_{N} = \begin{bmatrix}
+        1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 &amp;amp; 1 \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 1 &amp;amp; 0 \\
+        \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots &amp;amp; \vdots \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; \cdots &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 &amp;amp; 0 \\
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+If you write the Fourier transform matrix in an exponential form,
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    F_{N} = \exp{(i E_{N})}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+then it follows that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    S_{N} &amp;amp;= \exp{(2 i E_{N})}, &amp;amp; I_{N} &amp;amp;= \exp{(4 i E_{N})}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Since the permutation matrix &lt;span class="math"&gt;\(S_{N}\)&lt;/span&gt; squares to the identity, it follows that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    S_{N} &amp;amp;= \exp{[i R_{N}(m, n)]}, &amp;amp; R_{N}(m, n) &amp;amp;= \frac{\pi}{2}(4 m - 1) I_{N} + \frac{\pi}{2}(4 n + 1) S_{N}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Thus, the "Hamiltonian" for the quantum Fourier transform is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    E_{N}(m, n) = \frac{\pi}{4}(4 m - 1) I_{N} + \frac{\pi}{4}(4 n + 1) S_{N}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Let us check this for the first few cases.&lt;/p&gt;
+&lt;p&gt;For &lt;span class="math"&gt;\(N = 3\)&lt;/span&gt;, you get:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    E_{3}(m, n) = \frac{\pi}{4}(4 m - 1) \begin{bmatrix}
+        1 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 1 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 1
+    \end{bmatrix} + \frac{\pi}{4}(4 n + 1) \begin{bmatrix}
+        1 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 1 \\
+        0 &amp;amp; 1 &amp;amp; 0
+    \end{bmatrix} = \frac{\pi}{4} \begin{bmatrix}
+        4(m+n) &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 4m-1 &amp;amp; 4n+1 \\
+        0 &amp;amp; 4n+1 &amp;amp; 4m-1
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+In particular,
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    E_{3}(0, 0) = \frac{\pi}{4} \begin{bmatrix}
+        0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; -1 &amp;amp; 1 \\
+        0 &amp;amp; 1 &amp;amp; -1
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Well, checking with Wolfram Alpha or NumPy/SciPy, this Hamiltonian &lt;strong&gt;does not produce the 3-dimensional Fourier transform&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \exp{(i E_{3})} = \frac{1}{2} \begin{bmatrix}
+        2 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 1-i &amp;amp; 1+i \\
+        0 &amp;amp; 1+i &amp;amp; 1-i
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Indeed, this is just a square root of &lt;span class="math"&gt;\(S_{3}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Let us see if this also does not work for even values of &lt;span class="math"&gt;\(N\)&lt;/span&gt;. For &lt;span class="math"&gt;\(N = 4\)&lt;/span&gt;, you get:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    E_{4}(m, n) = \frac{\pi}{4}(4 m - 1) \begin{bmatrix}
+        1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
+    \end{bmatrix} + \frac{\pi}{4}(4 n + 1) \begin{bmatrix}
+        1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \\
+        0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\
+        0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+That is,
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    E_{4}(m, n) = \frac{\pi}{4} \begin{bmatrix}
+        4(m+n) &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 4m-1 &amp;amp; 0 &amp;amp; 4n+1 \\
+        0 &amp;amp; 0 &amp;amp; 4(m+n) &amp;amp; 0 \\
+        0 &amp;amp; 4n+1 &amp;amp; 0 &amp;amp; 4m-1
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+In particular,
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    E_{4}(0, 0) = \frac{\pi}{4} \begin{bmatrix}
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; -1 &amp;amp; 0 &amp;amp; 1 \\
+        0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 1 &amp;amp; 0 &amp;amp; -1
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Again, checking with Wolfram Alpha or NumPy/SciPy, this Hamiltonian &lt;strong&gt;does not produce the 4-dimensional Fourier transform&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \exp{(i E_{4})} = \frac{1}{2} \begin{bmatrix}
+        2 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+        0 &amp;amp; 1-i &amp;amp; 0 &amp;amp; 1+i \\
+        0 &amp;amp; 0 &amp;amp; 2 &amp;amp; 0 \\
+        0 &amp;amp; 1+i &amp;amp; 0 &amp;amp; 1-i
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Indeed, this is just a square root of &lt;span class="math"&gt;\(S_{4}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;I guess you are not going to get the Hamiltonian for the quantum Fourier transform this way.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Hamiltonian for Hadamard Transforms</title><link href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-hadamard-transforms/" rel="alternate"></link><published>2018-03-26T16:29:10-04:00</published><updated>2018-03-26T16:29:10-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-26:/posts/physics/hamiltonian-for-hadamard-transforms/</id><summary type="html">&lt;p&gt;Hermitian Hamiltonians for two- and four-dimensional Hadamard transforms.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A &lt;strong&gt;unitary&lt;/strong&gt; matrix &lt;span class="math"&gt;\(U\)&lt;/span&gt; satisfies the following relation
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}
     U^{\dagger} = U^{-1}
