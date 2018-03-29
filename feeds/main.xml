@@ -1,5 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-29T12:19:59-04:00</updated><entry><title>Quartic Functions: Roots of +1</title><link href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-roots-of-1/" rel="alternate"></link><published>2018-03-29T12:19:59-04:00</published><updated>2018-03-29T12:19:59-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-29:/posts/physics/quartic-functions-roots-of-1/</id><summary type="html">&lt;p&gt;On what I call quartic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-29T15:44:05-04:00</updated><entry><title>Quartic Functions: Roots of -1</title><link href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-roots-of-1/" rel="alternate"></link><published>2018-03-29T15:44:05-04:00</published><updated>2018-03-29T15:44:05-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-29:/posts/physics/quartic-functions-roots-of-1/</id><summary type="html">&lt;p&gt;The other quartic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \kappa^{4} = -1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The four solutions are
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \kappa_{0} &amp;amp;= \frac{1 + i}{\sqrt{2}} \equiv \kappa, &amp;amp; \kappa_{1} &amp;amp;= -\frac{1 - i}{\sqrt{2}} = -\lambda, &amp;amp; \kappa_{2} &amp;amp;= -\frac{1 + i}{\sqrt{2}} = -\kappa, &amp;amp; \kappa_{3} &amp;amp;= \frac{1 - i}{\sqrt{2}} \equiv \lambda
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \kappa + \lambda &amp;amp;= \sqrt{2}, &amp;amp; \kappa - \lambda &amp;amp;= \sqrt{2}i, &amp;amp; \kappa \lambda &amp;amp;= 1, &amp;amp; \kappa^{2} &amp;amp;= i, &amp;amp; \lambda^{2} &amp;amp;= -i
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \kappa^{3} &amp;amp;= i \kappa = - \lambda, &amp;amp; \lambda^{3} &amp;amp;= -i \lambda = -\kappa
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Now consider the following four functions:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    g_{0}(z) &amp;amp;\equiv \exp{(\kappa_{0} z)} = \exp{( \kappa z)} \\
+    g_{1}(z) &amp;amp;\equiv \exp{(\kappa_{1} z)} = \exp{( - \lambda z)} \\
+    g_{2}(z) &amp;amp;\equiv \exp{(\kappa_{2} z)} = \exp{( - \kappa z)} \\
+    g_{3}(z) &amp;amp;\equiv \exp{(\kappa_{3} z)} = \exp{( \lambda z)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+More explicitly:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    g_{0}(z) &amp;amp;= \exp{\left( \frac{z}{\sqrt{2}} \right)} \left[ \cos{\left( \frac{z}{\sqrt{2}} \right)} + i \sin{\left( \frac{z}{\sqrt{2}} \right)} \right] \\
+    g_{1}(z) &amp;amp;= \exp{\left( -\frac{z}{\sqrt{2}} \right)} \left[ \cos{\left( \frac{z}{\sqrt{2}} \right)} + i \sin{\left( \frac{z}{\sqrt{2}} \right)} \right] \\
+    g_{2}(z) &amp;amp;= \exp{\left( -\frac{z}{\sqrt{2}} \right)} \left[ \cos{\left( \frac{z}{\sqrt{2}} \right)} - i \sin{\left( \frac{z}{\sqrt{2}} \right)} \right] \\
+    g_{3}(z) &amp;amp;= \exp{\left( \frac{z}{\sqrt{2}} \right)} \left[ \cos{\left( \frac{z}{\sqrt{2}} \right)} - i \sin{\left( \frac{z}{\sqrt{2}} \right)} \right]
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+First, you write &lt;span class="math"&gt;\(g_{0}\)&lt;/span&gt; as an infinite series, split into four sums:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    g_{0}(z) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n + 1)} \kappa^{n} z^{n} = q_{0}(z) + \kappa q_{1}(z) + i q_{2}(z) - \lambda q_{3}(z)
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Here, the &lt;span class="math"&gt;\(q\)&lt;/span&gt;-functions are given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    q_{0}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(4n + 1)} z^{4n} \\
+    q_{1}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(4n + 2)} z^{4n+1} \\
+    q_{2}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(4n + 3)} z^{4n+2} \\
+    q_{3}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(4n + 4)} z^{4n+3}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You can also write the other &lt;span class="math"&gt;\(g\)&lt;/span&gt;-functions in terms of the &lt;span class="math"&gt;\(q\)&lt;/span&gt;-functions:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    g_{1}(z) &amp;amp;= q_{0}(z) - \lambda q_{1}(z) - i q_{2}(z) + \kappa q_{3}(z) \\
+    g_{2}(z) &amp;amp;= q_{0}(z) - \kappa q_{1}(z) + i q_{2}(z) + \lambda q_{3}(z) \\
+    g_{3}(z) &amp;amp;= q_{0}(z) + \lambda q_{1}(z) - i q_{2}(z) - \kappa q_{3}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that this definition of the &lt;span class="math"&gt;\(q\)&lt;/span&gt;-functions can be stated as a matrix equation:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \begin{bmatrix}
+        g_{0}(z) \\
+        g_{1}(z) \\
+        g_{2}(z) \\
+        g_{3}(z)
+    \end{bmatrix} = \begin{bmatrix}
+        1 &amp;amp; \kappa &amp;amp; i &amp;amp; -\lambda \\
+        1 &amp;amp; -\lambda &amp;amp; -i &amp;amp; \kappa \\
+        1 &amp;amp; -\kappa &amp;amp; i &amp;amp; \lambda \\
+        1 &amp;amp; \lambda &amp;amp; -i &amp;amp; -\kappa
+    \end{bmatrix} \begin{bmatrix}
+        q_{0}(z) \\
+        q_{1}(z) \\
+        q_{2}(z) \\
+        q_{3}(z)
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Inverting this matrix gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \begin{bmatrix}
+        q_{0}(z) \\
+        q_{1}(z) \\
+        q_{2}(z) \\
+        q_{3}(z)
+    \end{bmatrix} = \frac{1}{4} \begin{bmatrix}
+        1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 \\
+        \lambda &amp;amp; -\kappa &amp;amp; -\lambda &amp;amp; \kappa \\
+        -i &amp;amp; i &amp;amp; -i &amp;amp; i \\
+        -\kappa &amp;amp; \lambda &amp;amp; \kappa &amp;amp; -\lambda
+    \end{bmatrix} \begin{bmatrix}
+        g_{0}(z) \\
+        g_{1}(z) \\
+        g_{2}(z) \\
+        g_{3}(z)
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+More explicitly:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    q_{0}(z) &amp;amp;= \frac{g_{0}(z) + g_{1}(z) + g_{2}(z) + g_{3}(z)}{4} \\
+    q_{1}(z) &amp;amp;= \frac{\lambda g_{0}(z) - \kappa g_{1}(z) - \lambda g_{2}(z) + \kappa g_{3}(z)}{4} \\
+    q_{2}(z) &amp;amp;= \frac{-ig_{0}(z) +i g_{1}(z) -i g_{2}(z) +i g_{3}(z)}{4} \\
+    q_{3}(z) &amp;amp;= \frac{- \kappa g_{0}(z) + \lambda g_{1}(z) + \kappa g_{2}(z) - \lambda g_{3}(z)}{4}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Even more explicitly:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    q_{0}(z) &amp;amp;= \cos{\left( \frac{z}{\sqrt{2}} \right)} \cosh{\left( \frac{z}{\sqrt{2}} \right)} \\
+    q_{1}(z) &amp;amp;= \frac{1}{\sqrt{2}} \sin{\left( \frac{z}{\sqrt{2}} \right)} \cosh{\left( \frac{z}{\sqrt{2}} \right)} + \frac{1}{\sqrt{2}} \cos{\left( \frac{z}{\sqrt{2}} \right)} \sinh{\left( \frac{z}{\sqrt{2}} \right)} \\
+    q_{2}(z) &amp;amp;= \sin{\left( \frac{z}{\sqrt{2}} \right)} \sinh{\left( \frac{z}{\sqrt{2}} \right)} \\
+    q_{3}(z) &amp;amp;= \frac{1}{\sqrt{2}} \sin{\left( \frac{z}{\sqrt{2}} \right)} \cosh{\left( \frac{z}{\sqrt{2}} \right)} - \frac{1}{\sqrt{2}} \cos{\left( \frac{z}{\sqrt{2}} \right)} \sinh{\left( \frac{z}{\sqrt{2}} \right)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The parity properties are as follow:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    q_{0}(-z) &amp;amp;= q_{0}(z), &amp;amp; q_{1}(-z) &amp;amp;= -q_{1}(z), &amp;amp; q_{2}(-z) &amp;amp;= q_{2}(z), &amp;amp; q_{3}(-z) &amp;amp;= -q_{3}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    g_{0}(z) g_{1}(z) g_{2}(z) g_{3}(z) = 1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+This equation is equivalent to the following quartic equation:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    q_{0}^{4} + q_{1}^{4} + q_{2}^{4} + q_{3}^{4} + 2 q_{0}^{2} q_{2}^{2} + 2 q_{1}^{2} q_{3}^{2} + 4 q_{0}^{2} q_{1} q_{3} - 4 q_{0} q_{1}^{2} q_{2} - 4 q_{1} q_{2}^{2} q_{3} + 4 q_{0} q_{2} q_{3}^{2} = 1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+This quartic equation is equivalent to the determinant of the following circulant matrix:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \det{(Q_{4}(z))} &amp;amp;= 1, &amp;amp; Q_{4}(z) &amp;amp;= \begin{bmatrix}
+        q_{0}(z) &amp;amp; \kappa q_{1}(z) &amp;amp; i q_{2}(z) &amp;amp; - \lambda q_{3}(z) \\
+        - \lambda q_{3}(z) &amp;amp; q_{0}(z) &amp;amp; \kappa q_{1}(z) &amp;amp; i q_{2}(z) \\
+        i q_{2}(z) &amp;amp; - \lambda q_{3}(z) &amp;amp; q_{0}(z) &amp;amp; \kappa q_{1}(z) \\
+        \kappa q_{1}(z) &amp;amp; i q_{2}(z) &amp;amp; - \lambda q_{3}(z) &amp;amp; q_{0}(z)
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Thus, you can interpret the four &lt;span class="math"&gt;\(q\)&lt;/span&gt;-functions as coordinates in a 4-dimensional space describing a certain quartic curve.&lt;/p&gt;
+&lt;p&gt;What about differentiation? Using the infinite series definition gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \frac{d}{dz} q_{3}(z) &amp;amp;= q_{2}(z), &amp;amp; \frac{d}{dz} q_{2}(z) &amp;amp;= q_{1}(z), &amp;amp; \frac{d}{dz} q_{1}(z) &amp;amp;= q_{0}(z), &amp;amp; \frac{d}{dz} q_{0}(z) &amp;amp;= -q_{3}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+This is similar to what we found for the cubic functions.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Quartic Functions: Roots of +1</title><link href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-roots-of-1/" rel="alternate"></link><published>2018-03-29T12:52:25-04:00</published><updated>2018-03-29T12:52:25-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-29:/posts/physics/quartic-functions-roots-of-1/</id><summary type="html">&lt;p&gt;On what I call quartic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}
     \mu^{4} = 1
@@ -108,10 +324,9 @@ Note that
 &lt;p&gt;
 This equation is equivalent to the following quartic equation:
 &lt;/p&gt;
-&lt;div class="math"&gt;\begin{multline*}
-    p_{0}^{4} - p_{1}^{4} + p_{2}^{4} - p_{3}^{4} - 2 p_{0}^{2} p_{2}^{2} + 2 p_{1}^{2} p_{3}^{2} \\
-    - 4 p_{0}^{2} p_{1} p_{3} + 4 p_{0} p_{1}^{2} p_{2} - 4 p_{1} p_{2}^{2} p_{3} + 4 p_{0} p_{2} p_{3}^{2} = 1
-\end{multline*}&lt;/div&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p_{0}^{4} - p_{1}^{4} + p_{2}^{4} - p_{3}^{4} - 2 p_{0}^{2} p_{2}^{2} + 2 p_{1}^{2} p_{3}^{2} - 4 p_{0}^{2} p_{1} p_{3} + 4 p_{0} p_{1}^{2} p_{2} - 4 p_{1} p_{2}^{2} p_{3} + 4 p_{0} p_{2} p_{3}^{2} = 1
+\end{equation*}&lt;/div&gt;
 &lt;p&gt;
 This quartic equation is equivalent to the determinant of the following circulant matrix:
 &lt;/p&gt;

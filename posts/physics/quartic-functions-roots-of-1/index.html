@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>  Quartic Functions: Roots of +1 | M.E. Irizarry-Gelpí
+  <title>  Quartic Functions: Roots of -1 | M.E. Irizarry-Gelpí
 </title>
   <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-roots-of-1/index.html">
 
@@ -21,7 +21,7 @@
   <link rel="alternate" type="application/atom+xml" title="Atom Feed"
         href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
         href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
-  <meta name="description" content="On what I call quartic functions.">
+  <meta name="description" content="The other quartic functions.">
 
 
 </head>
@@ -53,13 +53,13 @@
 
   <div class="main">
     <div class="container">
-      <h1>  Quartic Functions: Roots of +1
+      <h1>  Quartic Functions: Roots of -1
 </h1>
       <hr>
   <article class="article">
     <header>
       <ul class="list-inline">
-        <li class="list-inline-item text-muted" title="2018-03-29T12:19:59.875181-04:00">
+        <li class="list-inline-item text-muted" title="2018-03-29T15:44:05.180232-04:00">
           <i class="fa fa-clock-o"></i>
           Thu 29 March 2018
         </li>
@@ -76,133 +76,162 @@
       <p>Consider the following equation:
 </p>
 <div class="math">\begin{equation*}
-    \mu^{4} = 1
+    \kappa^{4} = -1
 \end{equation*}</div>
 <p>
 The four solutions are
 </p>
 <div class="math">\begin{align*}
-    \mu_{0} &amp;= 1, &amp; \mu_{1} &amp;= i, &amp; \mu_{2} &amp;= -1, &amp; \mu_{3} &amp;= -i
+    \kappa_{0} &amp;= \frac{1 + i}{\sqrt{2}} \equiv \kappa, &amp; \kappa_{1} &amp;= -\frac{1 - i}{\sqrt{2}} = -\lambda, &amp; \kappa_{2} &amp;= -\frac{1 + i}{\sqrt{2}} = -\kappa, &amp; \kappa_{3} &amp;= \frac{1 - i}{\sqrt{2}} \equiv \lambda
+\end{align*}</div>
+<p>
+Note that
+</p>
+<div class="math">\begin{align*}
+    \kappa + \lambda &amp;= \sqrt{2}, &amp; \kappa - \lambda &amp;= \sqrt{2}i, &amp; \kappa \lambda &amp;= 1, &amp; \kappa^{2} &amp;= i, &amp; \lambda^{2} &amp;= -i
+\end{align*}</div>
+<p>
+and
+</p>
+<div class="math">\begin{align*}
+    \kappa^{3} &amp;= i \kappa = - \lambda, &amp; \lambda^{3} &amp;= -i \lambda = -\kappa
 \end{align*}</div>
 <p>
 Now consider the following four functions:
 </p>
 <div class="math">\begin{align*}
-    f_{0}(z) &amp;\equiv \exp{(\mu_{0} z)} = \exp{( z)} \\
-    f_{1}(z) &amp;\equiv \exp{(\mu_{1} z)} = \exp{( iz)} \\
-    f_{2}(z) &amp;\equiv \exp{(\mu_{2} z)} = \exp{( -z)} \\
-    f_{3}(z) &amp;\equiv \exp{(\mu_{3} z)} = \exp{( -iz)}
+    g_{0}(z) &amp;\equiv \exp{(\kappa_{0} z)} = \exp{( \kappa z)} \\
+    g_{1}(z) &amp;\equiv \exp{(\kappa_{1} z)} = \exp{( - \lambda z)} \\
+    g_{2}(z) &amp;\equiv \exp{(\kappa_{2} z)} = \exp{( - \kappa z)} \\
+    g_{3}(z) &amp;\equiv \exp{(\kappa_{3} z)} = \exp{( \lambda z)}
 \end{align*}</div>
 <p>
-First, you write <span class="math">\(f_{0}\)</span> as an infinite series, split into four sums:
+More explicitly:
+</p>
+<div class="math">\begin{align*}
+    g_{0}(z) &amp;= \exp{\left( \frac{z}{\sqrt{2}} \right)} \left[ \cos{\left( \frac{z}{\sqrt{2}} \right)} + i \sin{\left( \frac{z}{\sqrt{2}} \right)} \right] \\
+    g_{1}(z) &amp;= \exp{\left( -\frac{z}{\sqrt{2}} \right)} \left[ \cos{\left( \frac{z}{\sqrt{2}} \right)} + i \sin{\left( \frac{z}{\sqrt{2}} \right)} \right] \\
+    g_{2}(z) &amp;= \exp{\left( -\frac{z}{\sqrt{2}} \right)} \left[ \cos{\left( \frac{z}{\sqrt{2}} \right)} - i \sin{\left( \frac{z}{\sqrt{2}} \right)} \right] \\
+    g_{3}(z) &amp;= \exp{\left( \frac{z}{\sqrt{2}} \right)} \left[ \cos{\left( \frac{z}{\sqrt{2}} \right)} - i \sin{\left( \frac{z}{\sqrt{2}} \right)} \right]
+\end{align*}</div>
+<p>
+First, you write <span class="math">\(g_{0}\)</span> as an infinite series, split into four sums:
 </p>
 <div class="math">\begin{equation*}
-    f_{0}(z) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n + 1)} z^{n} = p_{0}(z) + p_{1}(z) + p_{2}(z) + p_{3}(z)
+    g_{0}(z) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n + 1)} \kappa^{n} z^{n} = q_{0}(z) + \kappa q_{1}(z) + i q_{2}(z) - \lambda q_{3}(z)
 \end{equation*}</div>
 <p>
-Here, the <span class="math">\(p\)</span>-functions are given by
+Here, the <span class="math">\(q\)</span>-functions are given by
 </p>
 <div class="math">\begin{align*}
-    p_{0}(z) &amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(4n + 1)} z^{4n} \\
-    p_{1}(z) &amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(4n + 2)} z^{4n+1} \\
-    p_{2}(z) &amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(4n + 3)} z^{4n+2} \\
-    p_{3}(z) &amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(4n + 4)} z^{4n+3}
+    q_{0}(z) &amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(4n + 1)} z^{4n} \\
+    q_{1}(z) &amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(4n + 2)} z^{4n+1} \\
+    q_{2}(z) &amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(4n + 3)} z^{4n+2} \\
+    q_{3}(z) &amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(4n + 4)} z^{4n+3}
 \end{align*}</div>
 <p>
-You can also write the other <span class="math">\(f\)</span>-functions in terms of the <span class="math">\(p\)</span>-functions:
+You can also write the other <span class="math">\(g\)</span>-functions in terms of the <span class="math">\(q\)</span>-functions:
 </p>
 <div class="math">\begin{align*}
-    f_{1}(z) &amp;= p_{0}(z) + i p_{1}(z) - p_{2}(z) - i p_{3}(z) \\
-    f_{2}(z) &amp;= p_{0}(z) - p_{1}(z) + p_{2}(z) - p_{3}(z) \\
-    f_{3}(z) &amp;= p_{0}(z) - i p_{1}(z) - p_{2}(z) + i p_{3}(z)
+    g_{1}(z) &amp;= q_{0}(z) - \lambda q_{1}(z) - i q_{2}(z) + \kappa q_{3}(z) \\
+    g_{2}(z) &amp;= q_{0}(z) - \kappa q_{1}(z) + i q_{2}(z) + \lambda q_{3}(z) \\
+    g_{3}(z) &amp;= q_{0}(z) + \lambda q_{1}(z) - i q_{2}(z) - \kappa q_{3}(z)
 \end{align*}</div>
 <p>
-Note that this definition of the <span class="math">\(p\)</span>-functions can be stated as a matrix equation:
+Note that this definition of the <span class="math">\(q\)</span>-functions can be stated as a matrix equation:
 </p>
 <div class="math">\begin{equation*}
     \begin{bmatrix}
-        f_{0}(z) \\
-        f_{1}(z) \\
-        f_{2}(z) \\
-        f_{3}(z)
+        g_{0}(z) \\
+        g_{1}(z) \\
+        g_{2}(z) \\
+        g_{3}(z)
     \end{bmatrix} = \begin{bmatrix}
-        1 &amp; 1 &amp; 1 &amp; 1 \\
-        1 &amp; i &amp; -1 &amp; -i \\
-        1 &amp; -1 &amp; 1 &amp; -1 \\
-        1 &amp; -i &amp; -1 &amp; i
+        1 &amp; \kappa &amp; i &amp; -\lambda \\
+        1 &amp; -\lambda &amp; -i &amp; \kappa \\
+        1 &amp; -\kappa &amp; i &amp; \lambda \\
+        1 &amp; \lambda &amp; -i &amp; -\kappa
     \end{bmatrix} \begin{bmatrix}
-        p_{0}(z) \\
-        p_{1}(z) \\
-        p_{2}(z) \\
-        p_{3}(z)
+        q_{0}(z) \\
+        q_{1}(z) \\
+        q_{2}(z) \\
+        q_{3}(z)
     \end{bmatrix}
 \end{equation*}</div>
 <p>
-The matrix that appears here corresponds to the non-unitary 4-dimensional discrete Fourier transform. Inverting this matrix gives
+Inverting this matrix gives
 </p>
 <div class="math">\begin{equation*}
     \begin{bmatrix}
-        p_{0}(z) \\
-        p_{1}(z) \\
-        p_{2}(z) \\
-        p_{3}(z)
+        q_{0}(z) \\
+        q_{1}(z) \\
+        q_{2}(z) \\
+        q_{3}(z)
     \end{bmatrix} = \frac{1}{4} \begin{bmatrix}
         1 &amp; 1 &amp; 1 &amp; 1 \\
-        1 &amp; -i &amp; -1 &amp; i \\
-        1 &amp; -1 &amp; 1 &amp; -1 \\
-        1 &amp; i &amp; -1 &amp; -i
+        \lambda &amp; -\kappa &amp; -\lambda &amp; \kappa \\
+        -i &amp; i &amp; -i &amp; i \\
+        -\kappa &amp; \lambda &amp; \kappa &amp; -\lambda
     \end{bmatrix} \begin{bmatrix}
-        f_{0}(z) \\
-        f_{1}(z) \\
-        f_{2}(z) \\
-        f_{3}(z)
+        g_{0}(z) \\
+        g_{1}(z) \\
+        g_{2}(z) \\
+        g_{3}(z)
     \end{bmatrix}
 \end{equation*}</div>
 <p>
 More explicitly:
 </p>
 <div class="math">\begin{align*}
-    p_{0}(z) &amp;= \frac{f_{0}(z) + f_{1}(z) + f_{2}(z) + f_{3}(z)}{4} = \frac{\cosh{(z)} + \cos{(z)}}{2} \\
-    p_{1}(z) &amp;= \frac{f_{0}(z) - if_{1}(z) - f_{2}(z) + if_{3}(z)}{4} = \frac{\sinh{(z)} + \sin{(z)}}{2} \\
-    p_{2}(z) &amp;= \frac{f_{0}(z) - f_{1}(z) + f_{2}(z) - f_{3}(z)}{4} = \frac{\cosh{(z)} - \cos{(z)}}{2} \\
-    p_{3}(z) &amp;= \frac{f_{0}(z) + if_{1}(z) - f_{2}(z) - if_{3}(z)}{4} = \frac{\sinh{(z)} - \sin{(z)}}{2}
+    q_{0}(z) &amp;= \frac{g_{0}(z) + g_{1}(z) + g_{2}(z) + g_{3}(z)}{4} \\
+    q_{1}(z) &amp;= \frac{\lambda g_{0}(z) - \kappa g_{1}(z) - \lambda g_{2}(z) + \kappa g_{3}(z)}{4} \\
+    q_{2}(z) &amp;= \frac{-ig_{0}(z) +i g_{1}(z) -i g_{2}(z) +i g_{3}(z)}{4} \\
+    q_{3}(z) &amp;= \frac{- \kappa g_{0}(z) + \lambda g_{1}(z) + \kappa g_{2}(z) - \lambda g_{3}(z)}{4}
+\end{align*}</div>
+<p>
+Even more explicitly:
+</p>
+<div class="math">\begin{align*}
+    q_{0}(z) &amp;= \cos{\left( \frac{z}{\sqrt{2}} \right)} \cosh{\left( \frac{z}{\sqrt{2}} \right)} \\
+    q_{1}(z) &amp;= \frac{1}{\sqrt{2}} \sin{\left( \frac{z}{\sqrt{2}} \right)} \cosh{\left( \frac{z}{\sqrt{2}} \right)} + \frac{1}{\sqrt{2}} \cos{\left( \frac{z}{\sqrt{2}} \right)} \sinh{\left( \frac{z}{\sqrt{2}} \right)} \\
+    q_{2}(z) &amp;= \sin{\left( \frac{z}{\sqrt{2}} \right)} \sinh{\left( \frac{z}{\sqrt{2}} \right)} \\
+    q_{3}(z) &amp;= \frac{1}{\sqrt{2}} \sin{\left( \frac{z}{\sqrt{2}} \right)} \cosh{\left( \frac{z}{\sqrt{2}} \right)} - \frac{1}{\sqrt{2}} \cos{\left( \frac{z}{\sqrt{2}} \right)} \sinh{\left( \frac{z}{\sqrt{2}} \right)}
 \end{align*}</div>
 <p>
 The parity properties are as follow:
 </p>
 <div class="math">\begin{align*}
-    p_{0}(-z) &amp;= p_{0}(z), &amp; p_{1}(-z) &amp;= -p_{1}(z), &amp; p_{2}(-z) &amp;= p_{2}(z), &amp; p_{3}(-z) &amp;= -p_{3}(z)
+    q_{0}(-z) &amp;= q_{0}(z), &amp; q_{1}(-z) &amp;= -q_{1}(z), &amp; q_{2}(-z) &amp;= q_{2}(z), &amp; q_{3}(-z) &amp;= -q_{3}(z)
 \end{align*}</div>
 <p>
 Note that
 </p>
 <div class="math">\begin{equation*}
-    f_{0}(z) f_{1}(z) f_{2}(z) f_{3}(z) = 1
+    g_{0}(z) g_{1}(z) g_{2}(z) g_{3}(z) = 1
 \end{equation*}</div>
 <p>
 This equation is equivalent to the following quartic equation:
 </p>
-<div class="math">\begin{multline*}
-    p_{0}^{4} - p_{1}^{4} + p_{2}^{4} - p_{3}^{4} - 2 p_{0}^{2} p_{2}^{2} + 2 p_{1}^{2} p_{3}^{2} \\
-    - 4 p_{0}^{2} p_{1} p_{3} + 4 p_{0} p_{1}^{2} p_{2} - 4 p_{1} p_{2}^{2} p_{3} + 4 p_{0} p_{2} p_{3}^{2} = 1
-\end{multline*}</div>
+<div class="math">\begin{equation*}
+    q_{0}^{4} + q_{1}^{4} + q_{2}^{4} + q_{3}^{4} + 2 q_{0}^{2} q_{2}^{2} + 2 q_{1}^{2} q_{3}^{2} + 4 q_{0}^{2} q_{1} q_{3} - 4 q_{0} q_{1}^{2} q_{2} - 4 q_{1} q_{2}^{2} q_{3} + 4 q_{0} q_{2} q_{3}^{2} = 1
+\end{equation*}</div>
 <p>
 This quartic equation is equivalent to the determinant of the following circulant matrix:
 </p>
 <div class="math">\begin{align*}
-    \det{(P_{4}(z))} &amp;= 1, &amp; P_{4}(z) &amp;= \begin{bmatrix}
-        p_{0}(z) &amp; p_{1}(z) &amp; p_{2}(z) &amp; p_{3}(z) \\
-        p_{3}(z) &amp; p_{0}(z) &amp; p_{1}(z) &amp; p_{2}(z) \\
-        p_{2}(z) &amp; p_{3}(z) &amp; p_{0}(z) &amp; p_{1}(z) \\
-        p_{1}(z) &amp; p_{2}(z) &amp; p_{3}(z) &amp; p_{0}(z)
+    \det{(Q_{4}(z))} &amp;= 1, &amp; Q_{4}(z) &amp;= \begin{bmatrix}
+        q_{0}(z) &amp; \kappa q_{1}(z) &amp; i q_{2}(z) &amp; - \lambda q_{3}(z) \\
+        - \lambda q_{3}(z) &amp; q_{0}(z) &amp; \kappa q_{1}(z) &amp; i q_{2}(z) \\
+        i q_{2}(z) &amp; - \lambda q_{3}(z) &amp; q_{0}(z) &amp; \kappa q_{1}(z) \\
+        \kappa q_{1}(z) &amp; i q_{2}(z) &amp; - \lambda q_{3}(z) &amp; q_{0}(z)
     \end{bmatrix}
 \end{align*}</div>
 <p>
-Thus, you can interpret the four <span class="math">\(p\)</span>-functions as coordinates in a 4-dimensional space describing a certain quartic curve.</p>
+Thus, you can interpret the four <span class="math">\(q\)</span>-functions as coordinates in a 4-dimensional space describing a certain quartic curve.</p>
 <p>What about differentiation? Using the infinite series definition gives
 </p>
 <div class="math">\begin{align*}
-    \frac{d}{dz} p_{3}(z) &amp;= p_{2}(z), &amp; \frac{d}{dz} p_{2}(z) &amp;= p_{1}(z), &amp; \frac{d}{dz} p_{1}(z) &amp;= p_{0}(z), &amp; \frac{d}{dz} p_{0}(z) &amp;= p_{3}(z)
+    \frac{d}{dz} q_{3}(z) &amp;= q_{2}(z), &amp; \frac{d}{dz} q_{2}(z) &amp;= q_{1}(z), &amp; \frac{d}{dz} q_{1}(z) &amp;= q_{0}(z), &amp; \frac{d}{dz} q_{0}(z) &amp;= -q_{3}(z)
 \end{align*}</div>
 <p>
 This is similar to what we found for the cubic functions.</p>
