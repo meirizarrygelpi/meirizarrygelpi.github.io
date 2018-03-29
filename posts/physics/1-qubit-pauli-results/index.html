@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  1-Qubit Pauli Results | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/1-qubit-pauli-results/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Results involving 1-qubit vectors.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  1-Qubit Pauli Results
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-02-16T00:00:00-05:00">
+          <i class="fa fa-clock-o"></i>
+          Fri 16 February 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/1-qubit.html">#1-qubit</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>A <strong>1-qubit</strong> state is given by
+</p>
+<div class="math">$$ |\psi \rangle = a_{0} | 0 \rangle + a_{1} | 1 \rangle. $$</div>
+<p>
+In order for the state to be physical, you must have
+</p>
+<div class="math">$$ |a_{0}|^{2} + |a_{1}|^{2} = 1. $$</div>
+<p>
+You can represent the <strong>basis kets</strong> as column vectors:
+</p>
+<div class="math">$$ |0 \rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \qquad |1 \rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}. $$</div>
+<p>
+The three <strong>Pauli operators</strong> (<span class="math">\(X\)</span>, <span class="math">\(Y\)</span>, and <span class="math">\(Z\)</span>) can be represented as matrices:
+</p>
+<div class="math">$$ X = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}, \qquad Y = \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix}, \qquad Z = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}. $$</div>
+<p>
+It follows that
+</p>
+<div class="math">$$ X |0 \rangle = |1 \rangle, \qquad X |1 \rangle = |0 \rangle; $$</div>
+<div class="math">$$ Y |0 \rangle = i|1 \rangle, \qquad Y |1 \rangle = -i|0 \rangle; $$</div>
+<div class="math">$$ Z |0 \rangle = |0 \rangle, \qquad Z |1 \rangle = -|1 \rangle. $$</div>
+<p>
+Since each of the Pauli matrices squares to the identity, the eigenvalues must be <span class="math">\(\pm 1\)</span>. The so-called "information/computational basis" (<span class="math">\(|0 \rangle\)</span> and <span class="math">\(|1 \rangle\)</span>) coincides with the <strong>eigen-basis</strong> of the <span class="math">\(Z\)</span> operator:
+</p>
+<div class="math">$$ |Z+ \rangle = |0 \rangle, \qquad |Z- \rangle = |1 \rangle. $$</div>
+<p>
+Thus, <span class="math">\(Z\)</span> can be re-written as
+</p>
+<div class="math">$$ Z = |Z+ \rangle \langle Z+ | - |Z- \rangle \langle Z- | = |0 \rangle \langle 0 | - |1 \rangle \langle 1 |. $$</div>
+<p>
+For <span class="math">\(X\)</span>, the normalized eigen-basis is
+</p>
+<div class="math">$$ |X+ \rangle = \frac{1}{\sqrt{2}} \left( |0 \rangle + |1 \rangle \right), \qquad |X- \rangle = \frac{1}{\sqrt{2}} \left( |0 \rangle - |1 \rangle \right). $$</div>
+<p>
+The operator that takes a <span class="math">\(Z\)</span> eigen-ket and returns an <span class="math">\(X\)</span> eigen-ket is
+</p>
+<div class="math">$$ H = |X+ \rangle \langle 0 | + |X- \rangle \langle 1 |. $$</div>
+<p>
+This is known as the <strong>Hadamard operator</strong>. Note that <span class="math">\(H\)</span> is <strong>Hermitian</strong>.</p>
+<p>For <span class="math">\(Y\)</span>, the normalized eigen-basis is
+</p>
+<div class="math">$$ |Y+ \rangle = \frac{1}{\sqrt{2}} \left( |0 \rangle + i|1 \rangle \right), \qquad |Y- \rangle = \frac{1}{\sqrt{2}} \left( |0 \rangle - i|1 \rangle \right). $$</div>
+<p>
+The operator that takes a <span class="math">\(Z\)</span> eigen-ket and returns a <span class="math">\(Y\)</span> eigen-ket is
+</p>
+<div class="math">$$ G = |Y+ \rangle \langle 0 | + |Y- \rangle \langle 1 |. $$</div>
+<p>
+Note that <span class="math">\(G\)</span> is <strong>not Hermitian</strong>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
