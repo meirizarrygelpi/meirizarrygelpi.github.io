@@ -1,5 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-28T14:22:38-04:00</updated><entry><title>Cubic Functions</title><link href="https://meirizarrygelpi.github.io/posts/physics/cubic-functions/" rel="alternate"></link><published>2018-03-28T14:22:38-04:00</published><updated>2018-03-28T14:22:38-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-28:/posts/physics/cubic-functions/</id><summary type="html">&lt;p&gt;On some functions that, in some ways, generalize the trigonometric and hyperbolic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-29T06:09:02-04:00</updated><entry><title>Exponential of Idempotent Matrix</title><link href="https://meirizarrygelpi.github.io/posts/physics/exponential-of-idempotent-matrix/" rel="alternate"></link><published>2018-03-29T06:09:02-04:00</published><updated>2018-03-29T06:09:02-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-29:/posts/physics/exponential-of-idempotent-matrix/</id><summary type="html">&lt;p&gt;A quick result for the exponential of an idempotent matrix.&lt;/p&gt;</summary><content type="html">&lt;p&gt;An idempotent matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt; satisfies
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    A^{n} &amp;amp;= A, &amp;amp; n &amp;amp;&amp;gt; 0
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(n\)&lt;/span&gt; only takes integer values. Consider the following exponential function:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U(A, \theta) = \exp{(\theta A)}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+You can write this as an infinite series:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U(A, \theta) = I + \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n + 1)} \theta^{n} A^{n} = I + \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n + 1)} \theta^{n} A
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Finally, the second term can be written as an exponential too:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U(A, \theta) = I + \left[\exp{(\theta)} - 1 \right] A
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+An example of an idempotent matrix is an operator of the form &lt;span class="math"&gt;\(|x \rangle \langle x |\)&lt;/span&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Cubic Functions</title><link href="https://meirizarrygelpi.github.io/posts/physics/cubic-functions/" rel="alternate"></link><published>2018-03-28T14:22:38-04:00</published><updated>2018-03-28T14:22:38-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-28:/posts/physics/cubic-functions/</id><summary type="html">&lt;p&gt;On some functions that, in some ways, generalize the trigonometric and hyperbolic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}
     \mu^{3} = 1
