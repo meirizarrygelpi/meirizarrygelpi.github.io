@@ -59,7 +59,7 @@
   <article class="article">
     <header>
       <ul class="list-inline">
-        <li class="list-inline-item text-muted" title="2018-03-29T15:49:16.628753-04:00">
+        <li class="list-inline-item text-muted" title="2018-03-29T22:32:04.387979-04:00">
           <i class="fa fa-clock-o"></i>
           Thu 29 March 2018
         </li>
@@ -171,33 +171,24 @@ More explicitly:
 The parity properties are as follow:
 </p>
 <div class="math">\begin{align*}
-    p_{0}(-z) &amp;= p_{0}(z), &amp; p_{1}(-z) &amp;= -p_{1}(z), &amp; p_{2}(-z) &amp;= p_{2}(z), &amp; p_{3}(-z) &amp;= -p_{3}(z)
+    p_{0}(-z) &amp;= p_{0}(z), &amp; p_{1}(-z) &amp;= -p_{1}(z), &amp; p_{2}(-z) &amp;= p_{2}(z), &amp; p_{3}(-z) &amp;= -p_{3}(z) \\
+    p_{0}(iz) &amp;= p_{0}(z), &amp; p_{1}(iz) &amp;= ip_{1}(z), &amp; p_{2}(iz) &amp;= -p_{2}(z), &amp; p_{3}(iz) &amp;= -ip_{3}(z) \\
+    p_{0}(-iz) &amp;= p_{0}(z), &amp; p_{1}(-iz) &amp;= -ip_{1}(z), &amp; p_{2}(-iz) &amp;= -p_{2}(z), &amp; p_{3}(-iz) &amp;= ip_{3}(z)
 \end{align*}</div>
 <p>
 Note that
 </p>
 <div class="math">\begin{equation*}
-    f_{0}(z) f_{1}(z) f_{2}(z) f_{3}(z) = 1
+    f_{0}(z) f_{2}(z) = 1
 \end{equation*}</div>
 <p>
-This equation is equivalent to the following quartic equation:
-</p>
-<div class="math">\begin{equation*}
-    p_{0}^{4} - p_{1}^{4} + p_{2}^{4} - p_{3}^{4} - 2 p_{0}^{2} p_{2}^{2} + 2 p_{1}^{2} p_{3}^{2} - 4 p_{0}^{2} p_{1} p_{3} + 4 p_{0} p_{1}^{2} p_{2} - 4 p_{1} p_{2}^{2} p_{3} + 4 p_{0} p_{2} p_{3}^{2} = 1
-\end{equation*}</div>
-<p>
-This quartic equation is equivalent to the determinant of the following circulant matrix:
+This equation is equivalent to the following two quadratic equations:
 </p>
 <div class="math">\begin{align*}
-    \det{(P_{4}(z))} &amp;= 1, &amp; P_{4}(z) &amp;= \begin{bmatrix}
-        p_{0}(z) &amp; p_{1}(z) &amp; p_{2}(z) &amp; p_{3}(z) \\
-        p_{3}(z) &amp; p_{0}(z) &amp; p_{1}(z) &amp; p_{2}(z) \\
-        p_{2}(z) &amp; p_{3}(z) &amp; p_{0}(z) &amp; p_{1}(z) \\
-        p_{1}(z) &amp; p_{2}(z) &amp; p_{3}(z) &amp; p_{0}(z)
-    \end{bmatrix}
+    p_{0}^{2} + p_{2}^{2} - 2p_{1} p_{3} &amp;= 1, &amp; p_{1}^{2} + p_{3}^{2} - 2p_{0} p_{2} &amp;= 0
 \end{align*}</div>
 <p>
-Thus, you can interpret the four <span class="math">\(p\)</span>-functions as coordinates in a 4-dimensional space describing a certain quartic curve.</p>
+Thus, you can interpret the four <span class="math">\(p\)</span>-functions as coordinates in a 4-dimensional space describing a certain quadratic curves.</p>
 <p>What about differentiation? Using the infinite series definition gives
 </p>
 <div class="math">\begin{align*}
@@ -205,6 +196,56 @@ Thus, you can interpret the four <span class="math">\(p\)</span>-functions as co
 \end{align*}</div>
 <p>
 This is similar to what we found for the cubic functions.</p>
+<p>Here are some addition identities:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(x + y) &amp;= p_{0}(x) p_{0}(y) + p_{1}(x) p_{3}(y) + p_{2}(x) p_{2}(y) + p_{3}(x) p_{1}(y) \\
+    p_{1}(x + y) &amp;= p_{0}(x) p_{1}(y) + p_{1}(x) p_{0}(y) + p_{2}(x) p_{3}(y) + p_{3}(x) p_{2}(y) \\
+    p_{2}(x + y) &amp;= p_{0}(x) p_{2}(y) + p_{1}(x) p_{1}(y) + p_{2}(x) p_{0}(y) + p_{3}(x) p_{3}(y) \\
+    p_{3}(x + y) &amp;= p_{0}(x) p_{3}(y) + p_{1}(x) p_{2}(y) + p_{2}(x) p_{1}(y) + p_{3}(x) p_{0}(y)
+\end{align*}</div>
+<p>
+Here are some doubling identities:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(2z) &amp;= p_{0}^{2}(z) + 2p_{1}(z) p_{3}(z) + p_{2}^{2}(z) \\
+    p_{1}(2z) &amp;= 2p_{0}(z) p_{1}(z) + 2p_{2}(z) p_{3}(z) \\
+    p_{2}(2z) &amp;= 2p_{0}(z) p_{2}(z) + p_{1}^{2}(z) + p_{3}^{2}(z) \\
+    p_{3}(2z) &amp;= 2p_{0}(z) p_{3}(z) + 2p_{1}(z) p_{2}(z)
+\end{align*}</div>
+<p>
+Here are some subtraction identities:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(x - y) &amp;= p_{0}(x) p_{0}(y) - p_{1}(x) p_{3}(y) + p_{2}(x) p_{2}(y) - p_{3}(x) p_{1}(y) \\
+    p_{1}(x - y) &amp;= -p_{0}(x) p_{1}(y) + p_{1}(x) p_{0}(y) - p_{2}(x) p_{3}(y) + p_{3}(x) p_{2}(y) \\
+    p_{2}(x - y) &amp;= p_{0}(x) p_{2}(y) - p_{1}(x) p_{1}(y) + p_{2}(x) p_{0}(y) - p_{3}(x) p_{3}(y) \\
+    p_{3}(x - y) &amp;= -p_{0}(x) p_{3}(y) + p_{1}(x) p_{2}(y) - p_{2}(x) p_{1}(y) + p_{3}(x) p_{0}(y)
+\end{align*}</div>
+<p>
+Here are some imaginary addition identities:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(x + iy) &amp;= p_{0}(x) p_{0}(y) -i p_{1}(x) p_{3}(y) + p_{2}(x) p_{2}(y) +i p_{3}(x) p_{1}(y) \\
+    p_{1}(x + iy) &amp;= i p_{0}(x) p_{1}(y) + p_{1}(x) p_{0}(y) -i p_{2}(x) p_{3}(y) - p_{3}(x) p_{2}(y) \\
+    p_{2}(x + iy) &amp;= -p_{0}(x) p_{2}(y) +i p_{1}(x) p_{1}(y) + p_{2}(x) p_{0}(y) -i p_{3}(x) p_{3}(y) \\
+    p_{3}(x + iy) &amp;= -ip_{0}(x) p_{3}(y) - p_{1}(x) p_{2}(y) + ip_{2}(x) p_{1}(y) + p_{3}(x) p_{0}(y)
+\end{align*}</div>
+<p>
+Finally, here are some important identities:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(x + y) + p_{0}(x - y) &amp;= 2 p_{0}(x) p_{0}(y) + 2 p_{2}(x) p_{2}(y) \\
+    p_{1}(x + y) + p_{1}(x - y) &amp;= 2 p_{1}(x) p_{0}(y) + 2 p_{3}(x) p_{2}(y) \\
+    p_{2}(x + y) + p_{2}(x - y) &amp;= 2 p_{0}(x) p_{2}(y) + 2 p_{2}(x) p_{0}(y) \\
+    p_{3}(x + y) + p_{3}(x - y) &amp;= 2 p_{1}(x) p_{2}(y) + 2 p_{3}(x) p_{0}(y) \\
+    p_{0}(x + y) - p_{0}(x - y) &amp;= 2 p_{1}(x) p_{3}(y) + 2 p_{3}(x) p_{1}(y) \\
+    p_{1}(x + y) - p_{1}(x - y) &amp;= 2 p_{0}(x) p_{1}(y) + 2 p_{2}(x) p_{3}(y) \\
+    p_{2}(x + y) - p_{2}(x - y) &amp;= 2 p_{1}(x) p_{1}(y) + 2 p_{3}(x) p_{3}(y) \\
+    p_{3}(x + y) - p_{3}(x - y) &amp;= 2 p_{0}(x) p_{3}(y) + 2 p_{2}(x) p_{1}(y)
+\end{align*}</div>
+<p>
+These will make sense later.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

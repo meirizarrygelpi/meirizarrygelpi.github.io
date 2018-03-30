@@ -1,5 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-29T15:49:23-04:00</updated><entry><title>Quartic Functions 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-2/" rel="alternate"></link><published>2018-03-29T15:49:23-04:00</published><updated>2018-03-29T15:49:23-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-29:/posts/physics/quartic-functions-2/</id><summary type="html">&lt;p&gt;The other quartic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-29T22:32:04-04:00</updated><entry><title>Quartic Functions 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-1/" rel="alternate"></link><published>2018-03-29T22:32:04-04:00</published><updated>2018-03-29T22:32:04-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-29:/posts/physics/quartic-functions-1/</id><summary type="html">&lt;p&gt;On what I call quartic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \mu^{4} = 1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The four solutions are
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \mu_{0} &amp;amp;= 1, &amp;amp; \mu_{1} &amp;amp;= i, &amp;amp; \mu_{2} &amp;amp;= -1, &amp;amp; \mu_{3} &amp;amp;= -i
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Now consider the following four functions:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    f_{0}(z) &amp;amp;\equiv \exp{(\mu_{0} z)} = \exp{( z)} \\
+    f_{1}(z) &amp;amp;\equiv \exp{(\mu_{1} z)} = \exp{( iz)} \\
+    f_{2}(z) &amp;amp;\equiv \exp{(\mu_{2} z)} = \exp{( -z)} \\
+    f_{3}(z) &amp;amp;\equiv \exp{(\mu_{3} z)} = \exp{( -iz)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+First, you write &lt;span class="math"&gt;\(f_{0}\)&lt;/span&gt; as an infinite series, split into four sums:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    f_{0}(z) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n + 1)} z^{n} = p_{0}(z) + p_{1}(z) + p_{2}(z) + p_{3}(z)
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Here, the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions are given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(4n + 1)} z^{4n} \\
+    p_{1}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(4n + 2)} z^{4n+1} \\
+    p_{2}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(4n + 3)} z^{4n+2} \\
+    p_{3}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(4n + 4)} z^{4n+3}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You can also write the other &lt;span class="math"&gt;\(f\)&lt;/span&gt;-functions in terms of the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    f_{1}(z) &amp;amp;= p_{0}(z) + i p_{1}(z) - p_{2}(z) - i p_{3}(z) \\
+    f_{2}(z) &amp;amp;= p_{0}(z) - p_{1}(z) + p_{2}(z) - p_{3}(z) \\
+    f_{3}(z) &amp;amp;= p_{0}(z) - i p_{1}(z) - p_{2}(z) + i p_{3}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that this definition of the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions can be stated as a matrix equation:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \begin{bmatrix}
+        f_{0}(z) \\
+        f_{1}(z) \\
+        f_{2}(z) \\
+        f_{3}(z)
+    \end{bmatrix} = \begin{bmatrix}
+        1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 \\
+        1 &amp;amp; i &amp;amp; -1 &amp;amp; -i \\
+        1 &amp;amp; -1 &amp;amp; 1 &amp;amp; -1 \\
+        1 &amp;amp; -i &amp;amp; -1 &amp;amp; i
+    \end{bmatrix} \begin{bmatrix}
+        p_{0}(z) \\
+        p_{1}(z) \\
+        p_{2}(z) \\
+        p_{3}(z)
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The matrix that appears here corresponds to the non-unitary 4-dimensional discrete Fourier transform. Inverting this matrix gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \begin{bmatrix}
+        p_{0}(z) \\
+        p_{1}(z) \\
+        p_{2}(z) \\
+        p_{3}(z)
+    \end{bmatrix} = \frac{1}{4} \begin{bmatrix}
+        1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 \\
+        1 &amp;amp; -i &amp;amp; -1 &amp;amp; i \\
+        1 &amp;amp; -1 &amp;amp; 1 &amp;amp; -1 \\
+        1 &amp;amp; i &amp;amp; -1 &amp;amp; -i
+    \end{bmatrix} \begin{bmatrix}
+        f_{0}(z) \\
+        f_{1}(z) \\
+        f_{2}(z) \\
+        f_{3}(z)
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+More explicitly:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(z) &amp;amp;= \frac{f_{0}(z) + f_{1}(z) + f_{2}(z) + f_{3}(z)}{4} = \frac{\cosh{(z)} + \cos{(z)}}{2} \\
+    p_{1}(z) &amp;amp;= \frac{f_{0}(z) - if_{1}(z) - f_{2}(z) + if_{3}(z)}{4} = \frac{\sinh{(z)} + \sin{(z)}}{2} \\
+    p_{2}(z) &amp;amp;= \frac{f_{0}(z) - f_{1}(z) + f_{2}(z) - f_{3}(z)}{4} = \frac{\cosh{(z)} - \cos{(z)}}{2} \\
+    p_{3}(z) &amp;amp;= \frac{f_{0}(z) + if_{1}(z) - f_{2}(z) - if_{3}(z)}{4} = \frac{\sinh{(z)} - \sin{(z)}}{2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The parity properties are as follow:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(-z) &amp;amp;= p_{0}(z), &amp;amp; p_{1}(-z) &amp;amp;= -p_{1}(z), &amp;amp; p_{2}(-z) &amp;amp;= p_{2}(z), &amp;amp; p_{3}(-z) &amp;amp;= -p_{3}(z) \\
+    p_{0}(iz) &amp;amp;= p_{0}(z), &amp;amp; p_{1}(iz) &amp;amp;= ip_{1}(z), &amp;amp; p_{2}(iz) &amp;amp;= -p_{2}(z), &amp;amp; p_{3}(iz) &amp;amp;= -ip_{3}(z) \\
+    p_{0}(-iz) &amp;amp;= p_{0}(z), &amp;amp; p_{1}(-iz) &amp;amp;= -ip_{1}(z), &amp;amp; p_{2}(-iz) &amp;amp;= -p_{2}(z), &amp;amp; p_{3}(-iz) &amp;amp;= ip_{3}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    f_{0}(z) f_{2}(z) = 1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+This equation is equivalent to the following two quadratic equations:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}^{2} + p_{2}^{2} - 2p_{1} p_{3} &amp;amp;= 1, &amp;amp; p_{1}^{2} + p_{3}^{2} - 2p_{0} p_{2} &amp;amp;= 0
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Thus, you can interpret the four &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions as coordinates in a 4-dimensional space describing a certain quadratic curves.&lt;/p&gt;
+&lt;p&gt;What about differentiation? Using the infinite series definition gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \frac{d}{dz} p_{3}(z) &amp;amp;= p_{2}(z), &amp;amp; \frac{d}{dz} p_{2}(z) &amp;amp;= p_{1}(z), &amp;amp; \frac{d}{dz} p_{1}(z) &amp;amp;= p_{0}(z), &amp;amp; \frac{d}{dz} p_{0}(z) &amp;amp;= p_{3}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+This is similar to what we found for the cubic functions.&lt;/p&gt;
+&lt;p&gt;Here are some addition identities:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(x + y) &amp;amp;= p_{0}(x) p_{0}(y) + p_{1}(x) p_{3}(y) + p_{2}(x) p_{2}(y) + p_{3}(x) p_{1}(y) \\
+    p_{1}(x + y) &amp;amp;= p_{0}(x) p_{1}(y) + p_{1}(x) p_{0}(y) + p_{2}(x) p_{3}(y) + p_{3}(x) p_{2}(y) \\
+    p_{2}(x + y) &amp;amp;= p_{0}(x) p_{2}(y) + p_{1}(x) p_{1}(y) + p_{2}(x) p_{0}(y) + p_{3}(x) p_{3}(y) \\
+    p_{3}(x + y) &amp;amp;= p_{0}(x) p_{3}(y) + p_{1}(x) p_{2}(y) + p_{2}(x) p_{1}(y) + p_{3}(x) p_{0}(y)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Here are some doubling identities:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(2z) &amp;amp;= p_{0}^{2}(z) + 2p_{1}(z) p_{3}(z) + p_{2}^{2}(z) \\
+    p_{1}(2z) &amp;amp;= 2p_{0}(z) p_{1}(z) + 2p_{2}(z) p_{3}(z) \\
+    p_{2}(2z) &amp;amp;= 2p_{0}(z) p_{2}(z) + p_{1}^{2}(z) + p_{3}^{2}(z) \\
+    p_{3}(2z) &amp;amp;= 2p_{0}(z) p_{3}(z) + 2p_{1}(z) p_{2}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Here are some subtraction identities:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(x - y) &amp;amp;= p_{0}(x) p_{0}(y) - p_{1}(x) p_{3}(y) + p_{2}(x) p_{2}(y) - p_{3}(x) p_{1}(y) \\
+    p_{1}(x - y) &amp;amp;= -p_{0}(x) p_{1}(y) + p_{1}(x) p_{0}(y) - p_{2}(x) p_{3}(y) + p_{3}(x) p_{2}(y) \\
+    p_{2}(x - y) &amp;amp;= p_{0}(x) p_{2}(y) - p_{1}(x) p_{1}(y) + p_{2}(x) p_{0}(y) - p_{3}(x) p_{3}(y) \\
+    p_{3}(x - y) &amp;amp;= -p_{0}(x) p_{3}(y) + p_{1}(x) p_{2}(y) - p_{2}(x) p_{1}(y) + p_{3}(x) p_{0}(y)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Here are some imaginary addition identities:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(x + iy) &amp;amp;= p_{0}(x) p_{0}(y) -i p_{1}(x) p_{3}(y) + p_{2}(x) p_{2}(y) +i p_{3}(x) p_{1}(y) \\
+    p_{1}(x + iy) &amp;amp;= i p_{0}(x) p_{1}(y) + p_{1}(x) p_{0}(y) -i p_{2}(x) p_{3}(y) - p_{3}(x) p_{2}(y) \\
+    p_{2}(x + iy) &amp;amp;= -p_{0}(x) p_{2}(y) +i p_{1}(x) p_{1}(y) + p_{2}(x) p_{0}(y) -i p_{3}(x) p_{3}(y) \\
+    p_{3}(x + iy) &amp;amp;= -ip_{0}(x) p_{3}(y) - p_{1}(x) p_{2}(y) + ip_{2}(x) p_{1}(y) + p_{3}(x) p_{0}(y)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Finally, here are some important identities:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(x + y) + p_{0}(x - y) &amp;amp;= 2 p_{0}(x) p_{0}(y) + 2 p_{2}(x) p_{2}(y) \\
+    p_{1}(x + y) + p_{1}(x - y) &amp;amp;= 2 p_{1}(x) p_{0}(y) + 2 p_{3}(x) p_{2}(y) \\
+    p_{2}(x + y) + p_{2}(x - y) &amp;amp;= 2 p_{0}(x) p_{2}(y) + 2 p_{2}(x) p_{0}(y) \\
+    p_{3}(x + y) + p_{3}(x - y) &amp;amp;= 2 p_{1}(x) p_{2}(y) + 2 p_{3}(x) p_{0}(y) \\
+    p_{0}(x + y) - p_{0}(x - y) &amp;amp;= 2 p_{1}(x) p_{3}(y) + 2 p_{3}(x) p_{1}(y) \\
+    p_{1}(x + y) - p_{1}(x - y) &amp;amp;= 2 p_{0}(x) p_{1}(y) + 2 p_{2}(x) p_{3}(y) \\
+    p_{2}(x + y) - p_{2}(x - y) &amp;amp;= 2 p_{1}(x) p_{1}(y) + 2 p_{3}(x) p_{3}(y) \\
+    p_{3}(x + y) - p_{3}(x - y) &amp;amp;= 2 p_{0}(x) p_{3}(y) + 2 p_{2}(x) p_{1}(y)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+These will make sense later.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Quartic Functions 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-2/" rel="alternate"></link><published>2018-03-29T15:49:23-04:00</published><updated>2018-03-29T15:49:23-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-29:/posts/physics/quartic-functions-2/</id><summary type="html">&lt;p&gt;The other quartic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}
     \kappa^{4} = -1
@@ -158,192 +385,6 @@ Thus, you can interpret the four &lt;span class="math"&gt;\(q\)&lt;/span&gt;-fun
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     \frac{d}{dz} q_{3}(z) &amp;amp;= q_{2}(z), &amp;amp; \frac{d}{dz} q_{2}(z) &amp;amp;= q_{1}(z), &amp;amp; \frac{d}{dz} q_{1}(z) &amp;amp;= q_{0}(z), &amp;amp; \frac{d}{dz} q_{0}(z) &amp;amp;= -q_{3}(z)
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-This is similar to what we found for the cubic functions.&lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Quartic Functions 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-1/" rel="alternate"></link><published>2018-03-29T15:49:16-04:00</published><updated>2018-03-29T15:49:16-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-29:/posts/physics/quartic-functions-1/</id><summary type="html">&lt;p&gt;On what I call quartic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{equation*}
-    \mu^{4} = 1
-\end{equation*}&lt;/div&gt;
-&lt;p&gt;
-The four solutions are
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    \mu_{0} &amp;amp;= 1, &amp;amp; \mu_{1} &amp;amp;= i, &amp;amp; \mu_{2} &amp;amp;= -1, &amp;amp; \mu_{3} &amp;amp;= -i
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-Now consider the following four functions:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    f_{0}(z) &amp;amp;\equiv \exp{(\mu_{0} z)} = \exp{( z)} \\
-    f_{1}(z) &amp;amp;\equiv \exp{(\mu_{1} z)} = \exp{( iz)} \\
-    f_{2}(z) &amp;amp;\equiv \exp{(\mu_{2} z)} = \exp{( -z)} \\
-    f_{3}(z) &amp;amp;\equiv \exp{(\mu_{3} z)} = \exp{( -iz)}
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-First, you write &lt;span class="math"&gt;\(f_{0}\)&lt;/span&gt; as an infinite series, split into four sums:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{equation*}
-    f_{0}(z) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n + 1)} z^{n} = p_{0}(z) + p_{1}(z) + p_{2}(z) + p_{3}(z)
-\end{equation*}&lt;/div&gt;
-&lt;p&gt;
-Here, the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions are given by
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    p_{0}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(4n + 1)} z^{4n} \\
-    p_{1}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(4n + 2)} z^{4n+1} \\
-    p_{2}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(4n + 3)} z^{4n+2} \\
-    p_{3}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(4n + 4)} z^{4n+3}
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-You can also write the other &lt;span class="math"&gt;\(f\)&lt;/span&gt;-functions in terms of the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    f_{1}(z) &amp;amp;= p_{0}(z) + i p_{1}(z) - p_{2}(z) - i p_{3}(z) \\
-    f_{2}(z) &amp;amp;= p_{0}(z) - p_{1}(z) + p_{2}(z) - p_{3}(z) \\
-    f_{3}(z) &amp;amp;= p_{0}(z) - i p_{1}(z) - p_{2}(z) + i p_{3}(z)
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-Note that this definition of the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions can be stated as a matrix equation:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{equation*}
-    \begin{bmatrix}
-        f_{0}(z) \\
-        f_{1}(z) \\
-        f_{2}(z) \\
-        f_{3}(z)
-    \end{bmatrix} = \begin{bmatrix}
-        1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 \\
-        1 &amp;amp; i &amp;amp; -1 &amp;amp; -i \\
-        1 &amp;amp; -1 &amp;amp; 1 &amp;amp; -1 \\
-        1 &amp;amp; -i &amp;amp; -1 &amp;amp; i
-    \end{bmatrix} \begin{bmatrix}
-        p_{0}(z) \\
-        p_{1}(z) \\
-        p_{2}(z) \\
-        p_{3}(z)
-    \end{bmatrix}
-\end{equation*}&lt;/div&gt;
-&lt;p&gt;
-The matrix that appears here corresponds to the non-unitary 4-dimensional discrete Fourier transform. Inverting this matrix gives
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{equation*}
-    \begin{bmatrix}
-        p_{0}(z) \\
-        p_{1}(z) \\
-        p_{2}(z) \\
-        p_{3}(z)
-    \end{bmatrix} = \frac{1}{4} \begin{bmatrix}
-        1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 \\
-        1 &amp;amp; -i &amp;amp; -1 &amp;amp; i \\
-        1 &amp;amp; -1 &amp;amp; 1 &amp;amp; -1 \\
-        1 &amp;amp; i &amp;amp; -1 &amp;amp; -i
-    \end{bmatrix} \begin{bmatrix}
-        f_{0}(z) \\
-        f_{1}(z) \\
-        f_{2}(z) \\
-        f_{3}(z)
-    \end{bmatrix}
-\end{equation*}&lt;/div&gt;
-&lt;p&gt;
-More explicitly:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    p_{0}(z) &amp;amp;= \frac{f_{0}(z) + f_{1}(z) + f_{2}(z) + f_{3}(z)}{4} = \frac{\cosh{(z)} + \cos{(z)}}{2} \\
-    p_{1}(z) &amp;amp;= \frac{f_{0}(z) - if_{1}(z) - f_{2}(z) + if_{3}(z)}{4} = \frac{\sinh{(z)} + \sin{(z)}}{2} \\
-    p_{2}(z) &amp;amp;= \frac{f_{0}(z) - f_{1}(z) + f_{2}(z) - f_{3}(z)}{4} = \frac{\cosh{(z)} - \cos{(z)}}{2} \\
-    p_{3}(z) &amp;amp;= \frac{f_{0}(z) + if_{1}(z) - f_{2}(z) - if_{3}(z)}{4} = \frac{\sinh{(z)} - \sin{(z)}}{2}
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-The parity properties are as follow:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    p_{0}(-z) &amp;amp;= p_{0}(z), &amp;amp; p_{1}(-z) &amp;amp;= -p_{1}(z), &amp;amp; p_{2}(-z) &amp;amp;= p_{2}(z), &amp;amp; p_{3}(-z) &amp;amp;= -p_{3}(z)
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-Note that
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{equation*}
-    f_{0}(z) f_{1}(z) f_{2}(z) f_{3}(z) = 1
-\end{equation*}&lt;/div&gt;
-&lt;p&gt;
-This equation is equivalent to the following quartic equation:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{equation*}
-    p_{0}^{4} - p_{1}^{4} + p_{2}^{4} - p_{3}^{4} - 2 p_{0}^{2} p_{2}^{2} + 2 p_{1}^{2} p_{3}^{2} - 4 p_{0}^{2} p_{1} p_{3} + 4 p_{0} p_{1}^{2} p_{2} - 4 p_{1} p_{2}^{2} p_{3} + 4 p_{0} p_{2} p_{3}^{2} = 1
-\end{equation*}&lt;/div&gt;
-&lt;p&gt;
-This quartic equation is equivalent to the determinant of the following circulant matrix:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    \det{(P_{4}(z))} &amp;amp;= 1, &amp;amp; P_{4}(z) &amp;amp;= \begin{bmatrix}
-        p_{0}(z) &amp;amp; p_{1}(z) &amp;amp; p_{2}(z) &amp;amp; p_{3}(z) \\
-        p_{3}(z) &amp;amp; p_{0}(z) &amp;amp; p_{1}(z) &amp;amp; p_{2}(z) \\
-        p_{2}(z) &amp;amp; p_{3}(z) &amp;amp; p_{0}(z) &amp;amp; p_{1}(z) \\
-        p_{1}(z) &amp;amp; p_{2}(z) &amp;amp; p_{3}(z) &amp;amp; p_{0}(z)
-    \end{bmatrix}
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-Thus, you can interpret the four &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions as coordinates in a 4-dimensional space describing a certain quartic curve.&lt;/p&gt;
-&lt;p&gt;What about differentiation? Using the infinite series definition gives
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    \frac{d}{dz} p_{3}(z) &amp;amp;= p_{2}(z), &amp;amp; \frac{d}{dz} p_{2}(z) &amp;amp;= p_{1}(z), &amp;amp; \frac{d}{dz} p_{1}(z) &amp;amp;= p_{0}(z), &amp;amp; \frac{d}{dz} p_{0}(z) &amp;amp;= p_{3}(z)
 \end{align*}&lt;/div&gt;
 &lt;p&gt;
 This is similar to what we found for the cubic functions.&lt;/p&gt;
