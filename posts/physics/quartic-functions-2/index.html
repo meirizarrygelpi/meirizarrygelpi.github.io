@@ -59,9 +59,9 @@
   <article class="article">
     <header>
       <ul class="list-inline">
-        <li class="list-inline-item text-muted" title="2018-03-29T15:49:23.956863-04:00">
+        <li class="list-inline-item text-muted" title="2018-03-30T00:00:00-04:00">
           <i class="fa fa-clock-o"></i>
-          Thu 29 March 2018
+          Fri 30 March 2018
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -201,33 +201,24 @@ Even more explicitly:
 The parity properties are as follow:
 </p>
 <div class="math">\begin{align*}
-    q_{0}(-z) &amp;= q_{0}(z), &amp; q_{1}(-z) &amp;= -q_{1}(z), &amp; q_{2}(-z) &amp;= q_{2}(z), &amp; q_{3}(-z) &amp;= -q_{3}(z)
+    q_{0}(-z) &amp;= q_{0}(z), &amp; q_{1}(-z) &amp;= -q_{1}(z), &amp; q_{2}(-z) &amp;= q_{2}(z), &amp; q_{3}(-z) &amp;= -q_{3}(z) \\
+    q_{0}(iz) &amp;= q_{0}(z), &amp; q_{1}(iz) &amp;= iq_{1}(z), &amp; q_{2}(iz) &amp;= -q_{2}(z), &amp; q_{3}(iz) &amp;= -iq_{3}(z) \\
+    q_{0}(-iz) &amp;= q_{0}(z), &amp; q_{1}(-iz) &amp;= -iq_{1}(z), &amp; q_{2}(-iz) &amp;= -q_{2}(z), &amp; q_{3}(-iz) &amp;= iq_{3}(z)
 \end{align*}</div>
 <p>
 Note that
 </p>
-<div class="math">\begin{equation*}
-    g_{0}(z) g_{1}(z) g_{2}(z) g_{3}(z) = 1
-\end{equation*}</div>
-<p>
-This equation is equivalent to the following quartic equation:
-</p>
-<div class="math">\begin{equation*}
-    q_{0}^{4} + q_{1}^{4} + q_{2}^{4} + q_{3}^{4} + 2 q_{0}^{2} q_{2}^{2} + 2 q_{1}^{2} q_{3}^{2} + 4 q_{0}^{2} q_{1} q_{3} - 4 q_{0} q_{1}^{2} q_{2} - 4 q_{1} q_{2}^{2} q_{3} + 4 q_{0} q_{2} q_{3}^{2} = 1
-\end{equation*}</div>
-<p>
-This quartic equation is equivalent to the determinant of the following circulant matrix:
-</p>
 <div class="math">\begin{align*}
-    \det{(Q_{4}(z))} &amp;= 1, &amp; Q_{4}(z) &amp;= \begin{bmatrix}
-        q_{0}(z) &amp; \kappa q_{1}(z) &amp; i q_{2}(z) &amp; - \lambda q_{3}(z) \\
-        - \lambda q_{3}(z) &amp; q_{0}(z) &amp; \kappa q_{1}(z) &amp; i q_{2}(z) \\
-        i q_{2}(z) &amp; - \lambda q_{3}(z) &amp; q_{0}(z) &amp; \kappa q_{1}(z) \\
-        \kappa q_{1}(z) &amp; i q_{2}(z) &amp; - \lambda q_{3}(z) &amp; q_{0}(z)
-    \end{bmatrix}
+    g_{0}(z) g_{2}(z) &amp;= 1 &amp; g_{1}(z) g_{3}(z) &amp;= 1
 \end{align*}</div>
 <p>
-Thus, you can interpret the four <span class="math">\(q\)</span>-functions as coordinates in a 4-dimensional space describing a certain quartic curve.</p>
+These equations are equivalent to the following two quadratic equations:
+</p>
+<div class="math">\begin{align*}
+    q_{0}^{2} - q_{2}^{2} + 2q_{1} q_{3} &amp;= 1, &amp; q_{1}^{2} - q_{3}^{2} - 2q_{0} q_{2} &amp;= 0
+\end{align*}</div>
+<p>
+Thus, you can interpret the four <span class="math">\(q\)</span>-functions as coordinates in a 4-dimensional space describing certain quadratic curves.</p>
 <p>What about differentiation? Using the infinite series definition gives
 </p>
 <div class="math">\begin{align*}
