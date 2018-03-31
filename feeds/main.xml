@@ -1,5 +1,265 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-30T00:00:00-04:00</updated><entry><title>Quartic Functions 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-2/" rel="alternate"></link><published>2018-03-30T00:00:00-04:00</published><updated>2018-03-30T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-30:/posts/physics/quartic-functions-2/</id><summary type="html">&lt;p&gt;The other quartic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/main.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-31T17:17:09-04:00</updated><entry><title>Hamiltonian for Quantum Fourier Transform 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-quantum-fourier-transform-2/" rel="alternate"></link><published>2018-03-31T17:17:09-04:00</published><updated>2018-03-31T17:17:09-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-31:/posts/physics/hamiltonian-for-quantum-fourier-transform-2/</id><summary type="html">&lt;p&gt;Success! Read all about it!&lt;/p&gt;</summary><content type="html">&lt;p&gt;The quantum Fourier transform is a &lt;strong&gt;unitary matrix&lt;/strong&gt; &lt;span class="math"&gt;\(F\)&lt;/span&gt; that satisfies the following properties:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    F^{2} &amp;amp;= S, &amp;amp; F^{3} &amp;amp;= F^{\dagger} = F S, &amp;amp; F^{4} &amp;amp;= S^{2} = I
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(S\)&lt;/span&gt; is a particular (&lt;strong&gt;hermitian&lt;/strong&gt;) permutation matrix. Let
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    F &amp;amp;= \exp{(i G)}, &amp;amp; G^{\dagger} = G
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(G\)&lt;/span&gt; would be the &lt;strong&gt;hermitian Hamiltonian&lt;/strong&gt; for the quantum Fourier transform. We are going to assume that &lt;span class="math"&gt;\(G\)&lt;/span&gt; has a particular form:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    G = w I + x (F + F^{\dagger}) + iy (F - F^{\dagger}) + z S
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(w\)&lt;/span&gt;, &lt;span class="math"&gt;\(x\)&lt;/span&gt;, &lt;span class="math"&gt;\(y\)&lt;/span&gt;, and &lt;span class="math"&gt;\(z\)&lt;/span&gt; are real numbers. You can re-write &lt;span class="math"&gt;\(G\)&lt;/span&gt; as
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    G &amp;amp;= w I + u F + v F^{\dagger} + z S, &amp;amp; u &amp;amp;\equiv x + i y, &amp;amp; v &amp;amp;\equiv x - i y
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    [F, S] &amp;amp;= 0, &amp;amp; [F^{\dagger}, S] &amp;amp;= 0, &amp;amp; [F, F^{\dagger}] &amp;amp;= 0
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Thus,
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \exp{(iG)} = \exp{(iw)} \exp{(iuF)} \exp{(ivF^{\dagger})} \exp{(izS)}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Each of these factors can be expanded using &lt;strong&gt;trigonometric&lt;/strong&gt; and &lt;strong&gt;quartic&lt;/strong&gt; functions:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \exp{(i u F)} &amp;amp;= I p_{0}(u) + i F p_{1}(u) - S p_{2}(u) - i F^{\dagger} p_{3}(u) \\
+    \exp{(i v F^{\dagger})} &amp;amp;= I p_{0}(v) + i F^{\dagger} p_{1}(v) - S p_{2}(v) - i F p_{3}(v) \\
+    \exp{(i z S)} &amp;amp;= I \cos{(z)} + i S \sin{(z)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Let
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \exp{(iuF)} \exp{(ivF^{\dagger})} \exp{(izS)} = I a + F b + F^{\dagger}c + S d
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+In order for &lt;span class="math"&gt;\(G\)&lt;/span&gt; to be the hermitian Hamiltonian, we must have
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    a &amp;amp;= 0 &amp;amp; b &amp;amp;\neq 0 &amp;amp; c &amp;amp;= 0 &amp;amp; d &amp;amp;= 0
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The &lt;span class="math"&gt;\(I\)&lt;/span&gt; coefficient will be
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{multline*}
+    a = \cos{(z)} \left[p_{0}(u) p_{0}(v) - p_{1}(u) p_{1}(v) + p_{2}(u) p_{2}(v) - p_{3}(u) p_{3}(v) \right] \\
+    - i \sin{(z)} \left[p_{0}(u) p_{2}(v) - p_{1}(u) p_{3}(v) + p_{2}(u) p_{0}(v) - p_{3}(u) p_{1}(v) \right]
+\end{multline*}&lt;/div&gt;
+&lt;p&gt;
+This coefficient &lt;strong&gt;must vanish&lt;/strong&gt;. The &lt;span class="math"&gt;\(F\)&lt;/span&gt; coefficient will be
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{multline*}
+    b = -i\cos{(z)} \left[p_{0}(u) p_{3}(v) - p_{1}(u) p_{0}(v) + p_{2}(u) p_{1}(v) - p_{3}(u) p_{2}(v) \right] \\
+    - \sin{(z)} \left[p_{0}(u) p_{1}(v) - p_{1}(u) p_{2}(v) + p_{2}(u) p_{3}(v) - p_{3}(u) p_{0}(v) \right]
+\end{multline*}&lt;/div&gt;
+&lt;p&gt;
+This coefficient &lt;strong&gt;cannot vanish&lt;/strong&gt;. The &lt;span class="math"&gt;\(F^{\dagger}\)&lt;/span&gt; coefficient will be
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{multline*}
+    c = i \cos{(z)} \left[p_{0}(u) p_{1}(v) - p_{1}(u) p_{2}(v) + p_{2}(u) p_{3}(v) - p_{3}(u) p_{4}(v) \right] \\
+    + \sin{(z)} \left[p_{0}(u) p_{3}(v) - p_{1}(u) p_{0}(v) + p_{2}(u) p_{1}(v) - p_{3}(u) p_{2}(v) \right]
+\end{multline*}&lt;/div&gt;
+&lt;p&gt;
+This coefficient &lt;strong&gt;must vanish&lt;/strong&gt;. The &lt;span class="math"&gt;\(S\)&lt;/span&gt; coefficient will be
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{multline*}
+    d = -\cos{(z)} \left[p_{0}(u) p_{2}(v) - p_{1}(u) p_{3}(v) + p_{2}(u) p_{0}(v) - p_{3}(u) p_{1}(v) \right] \\
+    + i \sin{(z)} \left[p_{0}(u) p_{0}(v) - p_{1}(u) p_{1}(v) + p_{2}(u) p_{2}(v) - p_{3}(u) p_{3}(v) \right]
+\end{multline*}&lt;/div&gt;
+&lt;p&gt;
+This coefficient &lt;strong&gt;must vanish&lt;/strong&gt;. These coefficients can be written in a simpler form:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    a &amp;amp;= \alpha(u, v) \cos{(z)} - i \beta(u, v) \sin{(z)} &amp;amp; b &amp;amp;= -i\gamma(u, v) \cos{(z)} - \delta(u, v) \sin{(z)} \\
+    c &amp;amp;= i \delta(u, v) \cos{(z)} + \gamma(u, v) \sin{(z)} &amp;amp; d &amp;amp;= -\beta(u, v) \cos{(z)} + i \alpha(u, v) \sin{(z)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+with
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \alpha(u, v) &amp;amp;\equiv p_{0}(u) p_{0}(v) - p_{1}(u) p_{1}(v) + p_{2}(u) p_{2}(v) - p_{3}(u) p_{3}(v) \\
+    \beta(u, v) &amp;amp;\equiv p_{0}(u) p_{2}(v) - p_{1}(u) p_{3}(v) + p_{2}(u) p_{0}(v) - p_{3}(u) p_{1}(v) \\
+    \gamma(u, v) &amp;amp;\equiv p_{0}(u) p_{3}(v) - p_{1}(u) p_{0}(v) + p_{2}(u) p_{1}(v) - p_{3}(u) p_{2}(v) \\
+    \delta(u, v) &amp;amp;\equiv p_{0}(u) p_{1}(v) - p_{1}(u) p_{2}(v) + p_{2}(u) p_{3}(v) - p_{3}(u) p_{0}(v)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Actually, these are much simpler:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    2\alpha(u, v) &amp;amp;= p_{0}(u - v) + p_{2}(u - v) + p_{0}(u + v) - p_{2}(u + v) \\
+    2\beta(u, v) &amp;amp;= p_{0}(u - v) + p_{2}(u - v) - p_{0}(u + v) + p_{2}(u + v) \\
+    2\gamma(u, v) &amp;amp;= -p_{3}(u - v) - p_{1}(u - v) + p_{3}(u + v) - p_{1}(u + v) \\
+    2\delta(u, v) &amp;amp;= -p_{3}(u - v) - p_{1}(u - v) - p_{3}(u + v) + p_{1}(u + v)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Indeed, using the definitions of the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    2\alpha(u, v) &amp;amp;= \cosh{(u-v)} + \cos{(u+v)} = \cos{(2y)} + \cos{(2x)} \\
+    2\beta(u, v) &amp;amp;= \cosh{(u-v)} - \cos{(u+v)} = \cos{(2y)} - \cos{(2x)} \\
+    2\gamma(u, v) &amp;amp;= -\sinh{(u - v)} - \sin{(u + v)} = -i\sin{(2y)} - \sin{(2x)} \\
+    2\delta(u, v) &amp;amp;= -\sinh{(u - v)} + \sin{(u + v)} = -i\sin{(2y)} + \sin{(2x)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Thus, &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; are real and &lt;span class="math"&gt;\(\gamma\)&lt;/span&gt; and &lt;span class="math"&gt;\(\delta\)&lt;/span&gt; are complex. Since &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; are real, and &lt;span class="math"&gt;\(a\)&lt;/span&gt; and &lt;span class="math"&gt;\(d\)&lt;/span&gt; must vanish, we must have
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \alpha = \beta = 0
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+This can be achieved when
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    x_{m} &amp;amp;= \frac{(2m + 1) \pi}{4} &amp;amp; y_{n} &amp;amp;= \frac{(2n + 1) \pi}{4}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \sin{(2x_{m})} &amp;amp;= (-1)^{m} &amp;amp; \sin{(2y_{n})} &amp;amp;= (-1)^{n}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+and thus
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \gamma_{mn} &amp;amp;= -\frac{(-1)^{m} + i (-1)^{n}}{2} &amp;amp; \delta_{mn} &amp;amp;= \frac{(-1)^{m} - i (-1)^{n}}{2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Hence
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    b_{mn} &amp;amp;= \frac{1}{2} \cos{(z)} \left[i(-1)^{m} - (-1)^{n} \right] + \frac{1}{2} \sin{(z)} \left[i(-1)^{n} - (-1)^{m} \right] \\
+    c_{mn} &amp;amp;= \frac{1}{2} \cos{(z)} \left[i(-1)^{m} + (-1)^{n} \right] - \frac{1}{2} \sin{(z)} \left[i(-1)^{n} + (-1)^{m} \right]
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+There are four distinct possibilities:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    b_{00} &amp;amp;= (i - 1) \left[ \frac{\cos{(z)} + \sin{(z)}}{2} \right] &amp;amp; c_{00} &amp;amp;= (i + 1) \left[ \frac{\cos{(z)} - \sin{(z)}}{2} \right] \\
+    b_{01} &amp;amp;= (i + 1) \left[ \frac{\cos{(z)} - \sin{(z)}}{2} \right] &amp;amp; c_{01} &amp;amp;= (i - 1) \left[ \frac{\cos{(z)} + \sin{(z)}}{2} \right] \\
+    b_{10} &amp;amp;= (1 + i) \left[ \frac{\sin{(z)} - \cos{(z)}}{2} \right] &amp;amp; c_{10} &amp;amp;= (1 - i) \left[ \frac{\cos{(z)} + \sin{(z)}}{2} \right] \\
+    b_{11} &amp;amp;= (1 - i) \left[ \frac{\cos{(z)} + \sin{(z)}}{2} \right] &amp;amp; c_{11} &amp;amp;= (1 + i) \left[ \frac{\sin{(z)} - \cos{(z)}}{2} \right]
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(c_{00} = 0\)&lt;/span&gt; or &lt;span class="math"&gt;\(c_{11} = 0\)&lt;/span&gt; whenever
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    z_{k} = \frac{(4k + 1) \pi}{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Then
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    b_{00k} &amp;amp;= (-1)^{k} \left( \frac{-1 + i}{\sqrt{2}} \right) = \exp{\left(\frac{3 \pi i}{4} + k \pi i \right)} \\
+    b_{11k} &amp;amp;= (-1)^{k} \left( \frac{1 - i}{\sqrt{2}} \right) = \exp{\left(\frac{7 \pi i}{4} + k \pi i \right)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    b_{000} &amp;amp;= b_{111} = \exp{\left(\frac{3 \pi i}{4} \right)} &amp;amp; b_{001} &amp;amp;= b_{110} = \exp{\left(\frac{7 \pi i}{4} \right)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+In a similar way, &lt;span class="math"&gt;\(c_{01} = 0\)&lt;/span&gt; or &lt;span class="math"&gt;\(c_{10} = 0\)&lt;/span&gt; whenever
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    z_{l} = \frac{(4l + 3) \pi}{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Then
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    b_{01l} &amp;amp;= (-1)^{l} \left( \frac{-1 - i}{\sqrt{2}} \right) = \exp{\left(\frac{5 \pi i}{4} + l \pi i \right)} \\
+    b_{10l} &amp;amp;= (-1)^{l} \left( \frac{1 + i}{\sqrt{2}} \right) = \exp{\left(\frac{\pi i}{4} + l \pi i \right)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    b_{010} &amp;amp;= b_{101} = \exp{\left(\frac{5 \pi i}{4} \right)} &amp;amp; b_{011} &amp;amp;= b_{100} = \exp{\left(\frac{\pi i}{4} \right)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Thus, there are four possible outcomes for the hermitian Hamiltonian:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    G_{000} &amp;amp;= -\frac{3 \pi}{4}I + \frac{\pi}{4}(1 + i) F + \frac{\pi}{4}(1 - i) F^{\dagger} + \frac{\pi}{4} S \\
+    G_{001} &amp;amp;= -\frac{7 \pi}{4}I + \frac{\pi}{4}(1 + i) F + \frac{\pi}{4}(1 - i) F^{\dagger} + \frac{5 \pi}{4} S \\
+    G_{010} &amp;amp;= -\frac{5 \pi}{4}I + \frac{\pi}{4}(1 + 3i) F + \frac{\pi}{4}(1 - 3i) F^{\dagger} + \frac{3 \pi}{4} S \\
+    G_{011} &amp;amp;= -\frac{\pi}{4}I + \frac{\pi}{4}(1 + 3i) F + \frac{\pi}{4}(1 - 3i) F^{\dagger} + \frac{7 \pi}{4} S
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+I have checked that these four hermitian Hamiltonians work for the 3-dimensional and 4-dimensional discrete Fourier transform. Indeed, my result works for any unitary matrix whose quartic power is the identity.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Quartic Functions 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-2/" rel="alternate"></link><published>2018-03-30T00:00:00-04:00</published><updated>2018-03-30T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-30:/posts/physics/quartic-functions-2/</id><summary type="html">&lt;p&gt;The other quartic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}
     \kappa^{4} = -1
@@ -152,196 +412,6 @@ Thus, you can interpret the four &lt;span class="math"&gt;\(q\)&lt;/span&gt;-fun
 \end{align*}&lt;/div&gt;
 &lt;p&gt;
 This is similar to what we found for the cubic functions.&lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Cubic Functions</title><link href="https://meirizarrygelpi.github.io/posts/physics/cubic-functions/" rel="alternate"></link><published>2018-03-29T12:02:41-04:00</published><updated>2018-03-29T12:02:41-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-29:/posts/physics/cubic-functions/</id><summary type="html">&lt;p&gt;On some functions that, in some ways, generalize the trigonometric and hyperbolic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{equation*}
-    \mu^{3} = 1
-\end{equation*}&lt;/div&gt;
-&lt;p&gt;
-The three solutions are
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    \mu_{0} &amp;amp;= 1, &amp;amp; \mu_{1} &amp;amp;= -\frac{1}{2}(1 - \sqrt{3} i) \equiv \mu, &amp;amp; \mu_{2} &amp;amp;= -\frac{1}{2}(1 + \sqrt{3} i) \equiv \nu
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-Note that
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    \mu + \nu &amp;amp;= -1, &amp;amp; \mu \nu &amp;amp;= 1
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-and
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    \mu^{2} &amp;amp;= \nu &amp;amp; \nu^{2} &amp;amp;= \mu
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-Now consider the following three functions:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    f_{0}(z) &amp;amp;= \exp{(\mu_{0}z)} = \exp{(z)}, \\
-    f_{1}(z) &amp;amp;= \exp{(\mu_{1}z)} = \exp{(\mu z)} = \exp{\left( -\frac{z}{2} \right)} \left[ \cos{\left( \frac{\sqrt{3}z}{2} \right)} + i \sin{\left( \frac{\sqrt{3}z}{2} \right)} \right], \\
-    f_{2}(z) &amp;amp;= \exp{(\mu_{2}z)} = \exp{(\nu z)} = \exp{\left( -\frac{z}{2} \right)} \left[ \cos{\left( \frac{\sqrt{3}z}{2} \right)} - i \sin{\left( \frac{\sqrt{3}z}{2} \right)} \right]
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-First, you write &lt;span class="math"&gt;\(f_{0}\)&lt;/span&gt; as an infinite series:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{equation*}
-    f_{0}(z) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n + 1)} z^{n} = p_{0}(z) + p_{1}(z) + p_{2}(z)
-\end{equation*}&lt;/div&gt;
-&lt;p&gt;
-Here the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions are given by
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    p_{0}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(3n + 1)} z^{3n}, &amp;amp; p_{1}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(3n + 2)} z^{3n+1}, &amp;amp; p_{2}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(3n + 3)} z^{3n+2}
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-You can also write &lt;span class="math"&gt;\(f_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(f_{2}\)&lt;/span&gt; as an infinite series:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    f_{1}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{\mu^{n}}{\Gamma(n + 1)} z^{n} = p_{0}(z) + \mu p_{1}(z) + \nu p_{2}(z) \\
-    f_{2}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{\nu^{n}}{\Gamma(n + 1)} z^{n} = p_{0}(z) + \nu p_{1}(z) + \mu p_{2}(z)
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-The &lt;span class="math"&gt;\(f\)&lt;/span&gt;-functions are complex exponential functions. You can write the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions in terms of the &lt;span class="math"&gt;\(f\)&lt;/span&gt;-functions:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    p_{0}(z) &amp;amp;= \frac{f_{0}(z) + f_{1}(z) + f_{2}(z)}{3} \\
-    p_{1}(z) &amp;amp;= \frac{2f_{0}(z) - f_{1}(z) - f_{2}(z) - i \sqrt{3} \left[ f_{1}(z) - f_{2}(z) \right]}{6} \\
-    p_{2}(z) &amp;amp;= \frac{2f_{0}(z) - f_{1}(z) - f_{2}(z) + i \sqrt{3} \left[ f_{1}(z) - f_{2}(z) \right]}{6}
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-More explicitly:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    p_{0}(z) &amp;amp;= \frac{1}{3} \exp{(z)} + \frac{2}{3} \exp{\left( -\frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} \\
-    p_{1}(z) &amp;amp;= \frac{1}{3} \exp{(z)} - \frac{1}{3} \exp{\left( -\frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} + \frac{1}{\sqrt{3}} \exp{\left( -\frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}z}{2} \right)} \\
-    p_{2}(z) &amp;amp;= \frac{1}{3} \exp{(z)} - \frac{1}{3} \exp{\left( -\frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} - \frac{1}{\sqrt{3}} \exp{\left( -\frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}z}{2} \right)}
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-Note that all coefficients are real.&lt;/p&gt;
-&lt;p&gt;Similar to the exponential functions, the parity properties give rise to linearly-independent functions:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    p_{0}(-z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(3n + 1)} z^{3n} \equiv q_{0}(z) \\
-    p_{1}(-z) &amp;amp;= -\sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(3n + 2)} z^{3n+1} \equiv -q_{1}(z) \\
-    p_{2}(-z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(3n + 3)} z^{3n+2} \equiv q_{2}(z)
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-More explicitly:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    q_{0}(z) &amp;amp;= \frac{1}{3} \exp{(-z)} + \frac{2}{3} \exp{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} \\
-    q_{1}(z) &amp;amp;= -\frac{1}{3} \exp{(-z)} + \frac{1}{3} \exp{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} + \frac{1}{\sqrt{3}} \exp{\left( \frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}z}{2} \right)} \\
-    q_{2}(z) &amp;amp;= \frac{1}{3} \exp{(-z)} - \frac{1}{3} \exp{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} + \frac{1}{\sqrt{3}} \exp{\left( \frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}z}{2} \right)}
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-When written out explicitly in terms of exponential and trigonometric functions, the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions and the &lt;span class="math"&gt;\(q\)&lt;/span&gt;-functions do not look so impressive. But, I am still captivated by the fact that the three &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions satisfy a cubic identity. Note that
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{equation*}
-    f_{0}(z) f_{1}(z) f_{2}(z) = 1
-\end{equation*}&lt;/div&gt;
-&lt;p&gt;
-In terms of the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions, you get:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{equation*}
-    [p_{0}(z)]^{3} + [p_{1}(z)]^{3} + [p_{2}(z)]^{3} - 3 p_{0}(z) p_{1}(z) p_{2}(z) = 1
-\end{equation*}&lt;/div&gt;
-&lt;p&gt;
-Replacing &lt;span class="math"&gt;\(z\)&lt;/span&gt; with &lt;span class="math"&gt;\(-z\)&lt;/span&gt; gives
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{equation*}
-    [q_{0}(z)]^{3} - [q_{1}(z)]^{3} + [q_{2}(z)]^{3} + 3 q_{0}(z) q_{1}(z) q_{2}(z) = 1
-\end{equation*}&lt;/div&gt;
-&lt;p&gt;
-Both of this cubic identities describe curves in 3-dimensional space.&lt;/p&gt;
-&lt;p&gt;What about differentiation? Using the infinite series definition gives
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    \frac{d}{dz} p_{2}(z) &amp;amp;= p_{1}(z), &amp;amp; \frac{d}{dz} p_{1}(z) &amp;amp;= p_{0}(z), &amp;amp; \frac{d}{dz} p_{0}(z) &amp;amp;= p_{2}(z)
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-and also
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    \frac{d}{dz} q_{2}(z) &amp;amp;= q_{1}(z), &amp;amp; \frac{d}{dz} q_{1}(z) &amp;amp;= q_{0}(z), &amp;amp; \frac{d}{dz} q_{0}(z) &amp;amp;= -q_{2}(z)
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-Here are some argument-addition identities too:
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    p_{0}(w + z) &amp;amp;= p_{0}(w) p_{0}(z) + p_{1}(w) p_{2}(z) + p_{2}(w) p_{1}(z) \\
-    p_{1}(w + z) &amp;amp;= p_{0}(w) p_{1}(z) + p_{1}(w) p_{0}(z) + p_{2}(w) p_{2}(z) \\
-    p_{2}(w + z) &amp;amp;= p_{0}(w) p_{2}(z) + p_{1}(w) p_{1}(z) + p_{2}(w) p_{0}(z)
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-These are analogous to the trigonometric/hyperbolic identities. The simplest way to derive these is to work with the matrix-valued function
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{align*}
-    \exp{(z A)} &amp;amp;= I p_{0}(z) + A p_{1}(z) + A^{2} p_{2}(z), &amp;amp; A^{3} &amp;amp;= I
-\end{align*}&lt;/div&gt;
-&lt;p&gt;
-and use the property
-&lt;/p&gt;
-&lt;div class="math"&gt;\begin{equation*}
-    \exp{(w A)} \exp{(z A)} = \exp{(w A + z A)}
-\end{equation*}&lt;/div&gt;
-&lt;p&gt;
-Unlike the trigonometric functions, the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions are not periodic.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -648,6 +718,196 @@ Finally, here are some important identities:
 \end{align*}&lt;/div&gt;
 &lt;p&gt;
 These will make sense later.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Cubic Functions</title><link href="https://meirizarrygelpi.github.io/posts/physics/cubic-functions/" rel="alternate"></link><published>2018-03-28T00:00:00-04:00</published><updated>2018-03-28T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-28:/posts/physics/cubic-functions/</id><summary type="html">&lt;p&gt;On some functions that, in some ways, generalize the trigonometric and hyperbolic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following equation:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \mu^{3} = 1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The three solutions are
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \mu_{0} &amp;amp;= 1, &amp;amp; \mu_{1} &amp;amp;= -\frac{1}{2}(1 - \sqrt{3} i) \equiv \mu, &amp;amp; \mu_{2} &amp;amp;= -\frac{1}{2}(1 + \sqrt{3} i) \equiv \nu
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \mu + \nu &amp;amp;= -1, &amp;amp; \mu \nu &amp;amp;= 1
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \mu^{2} &amp;amp;= \nu &amp;amp; \nu^{2} &amp;amp;= \mu
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Now consider the following three functions:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    f_{0}(z) &amp;amp;= \exp{(\mu_{0}z)} = \exp{(z)}, \\
+    f_{1}(z) &amp;amp;= \exp{(\mu_{1}z)} = \exp{(\mu z)} = \exp{\left( -\frac{z}{2} \right)} \left[ \cos{\left( \frac{\sqrt{3}z}{2} \right)} + i \sin{\left( \frac{\sqrt{3}z}{2} \right)} \right], \\
+    f_{2}(z) &amp;amp;= \exp{(\mu_{2}z)} = \exp{(\nu z)} = \exp{\left( -\frac{z}{2} \right)} \left[ \cos{\left( \frac{\sqrt{3}z}{2} \right)} - i \sin{\left( \frac{\sqrt{3}z}{2} \right)} \right]
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+First, you write &lt;span class="math"&gt;\(f_{0}\)&lt;/span&gt; as an infinite series:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    f_{0}(z) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n + 1)} z^{n} = p_{0}(z) + p_{1}(z) + p_{2}(z)
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Here the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions are given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(3n + 1)} z^{3n}, &amp;amp; p_{1}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(3n + 2)} z^{3n+1}, &amp;amp; p_{2}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(3n + 3)} z^{3n+2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You can also write &lt;span class="math"&gt;\(f_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(f_{2}\)&lt;/span&gt; as an infinite series:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    f_{1}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{\mu^{n}}{\Gamma(n + 1)} z^{n} = p_{0}(z) + \mu p_{1}(z) + \nu p_{2}(z) \\
+    f_{2}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{\nu^{n}}{\Gamma(n + 1)} z^{n} = p_{0}(z) + \nu p_{1}(z) + \mu p_{2}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The &lt;span class="math"&gt;\(f\)&lt;/span&gt;-functions are complex exponential functions. You can write the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions in terms of the &lt;span class="math"&gt;\(f\)&lt;/span&gt;-functions:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(z) &amp;amp;= \frac{f_{0}(z) + f_{1}(z) + f_{2}(z)}{3} \\
+    p_{1}(z) &amp;amp;= \frac{2f_{0}(z) - f_{1}(z) - f_{2}(z) - i \sqrt{3} \left[ f_{1}(z) - f_{2}(z) \right]}{6} \\
+    p_{2}(z) &amp;amp;= \frac{2f_{0}(z) - f_{1}(z) - f_{2}(z) + i \sqrt{3} \left[ f_{1}(z) - f_{2}(z) \right]}{6}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+More explicitly:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(z) &amp;amp;= \frac{1}{3} \exp{(z)} + \frac{2}{3} \exp{\left( -\frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} \\
+    p_{1}(z) &amp;amp;= \frac{1}{3} \exp{(z)} - \frac{1}{3} \exp{\left( -\frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} + \frac{1}{\sqrt{3}} \exp{\left( -\frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}z}{2} \right)} \\
+    p_{2}(z) &amp;amp;= \frac{1}{3} \exp{(z)} - \frac{1}{3} \exp{\left( -\frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} - \frac{1}{\sqrt{3}} \exp{\left( -\frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}z}{2} \right)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that all coefficients are real.&lt;/p&gt;
+&lt;p&gt;Similar to the exponential functions, the parity properties give rise to linearly-independent functions:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(-z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(3n + 1)} z^{3n} \equiv q_{0}(z) \\
+    p_{1}(-z) &amp;amp;= -\sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(3n + 2)} z^{3n+1} \equiv -q_{1}(z) \\
+    p_{2}(-z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(3n + 3)} z^{3n+2} \equiv q_{2}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+More explicitly:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    q_{0}(z) &amp;amp;= \frac{1}{3} \exp{(-z)} + \frac{2}{3} \exp{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} \\
+    q_{1}(z) &amp;amp;= -\frac{1}{3} \exp{(-z)} + \frac{1}{3} \exp{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} + \frac{1}{\sqrt{3}} \exp{\left( \frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}z}{2} \right)} \\
+    q_{2}(z) &amp;amp;= \frac{1}{3} \exp{(-z)} - \frac{1}{3} \exp{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} + \frac{1}{\sqrt{3}} \exp{\left( \frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}z}{2} \right)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+When written out explicitly in terms of exponential and trigonometric functions, the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions and the &lt;span class="math"&gt;\(q\)&lt;/span&gt;-functions do not look so impressive. But, I am still captivated by the fact that the three &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions satisfy a cubic identity. Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    f_{0}(z) f_{1}(z) f_{2}(z) = 1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+In terms of the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions, you get:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    [p_{0}(z)]^{3} + [p_{1}(z)]^{3} + [p_{2}(z)]^{3} - 3 p_{0}(z) p_{1}(z) p_{2}(z) = 1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Replacing &lt;span class="math"&gt;\(z\)&lt;/span&gt; with &lt;span class="math"&gt;\(-z\)&lt;/span&gt; gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    [q_{0}(z)]^{3} - [q_{1}(z)]^{3} + [q_{2}(z)]^{3} + 3 q_{0}(z) q_{1}(z) q_{2}(z) = 1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Both of this cubic identities describe curves in 3-dimensional space.&lt;/p&gt;
+&lt;p&gt;What about differentiation? Using the infinite series definition gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \frac{d}{dz} p_{2}(z) &amp;amp;= p_{1}(z), &amp;amp; \frac{d}{dz} p_{1}(z) &amp;amp;= p_{0}(z), &amp;amp; \frac{d}{dz} p_{0}(z) &amp;amp;= p_{2}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+and also
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \frac{d}{dz} q_{2}(z) &amp;amp;= q_{1}(z), &amp;amp; \frac{d}{dz} q_{1}(z) &amp;amp;= q_{0}(z), &amp;amp; \frac{d}{dz} q_{0}(z) &amp;amp;= -q_{2}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Here are some argument-addition identities too:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(w + z) &amp;amp;= p_{0}(w) p_{0}(z) + p_{1}(w) p_{2}(z) + p_{2}(w) p_{1}(z) \\
+    p_{1}(w + z) &amp;amp;= p_{0}(w) p_{1}(z) + p_{1}(w) p_{0}(z) + p_{2}(w) p_{2}(z) \\
+    p_{2}(w + z) &amp;amp;= p_{0}(w) p_{2}(z) + p_{1}(w) p_{1}(z) + p_{2}(w) p_{0}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+These are analogous to the trigonometric/hyperbolic identities. The simplest way to derive these is to work with the matrix-valued function
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \exp{(z A)} &amp;amp;= I p_{0}(z) + A p_{1}(z) + A^{2} p_{2}(z), &amp;amp; A^{3} &amp;amp;= I
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+and use the property
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \exp{(w A)} \exp{(z A)} = \exp{(w A + z A)}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Unlike the trigonometric functions, the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions are not periodic.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
