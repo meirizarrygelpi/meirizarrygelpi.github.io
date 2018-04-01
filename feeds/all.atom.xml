@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-31T17:17:09-04:00</updated><entry><title>Hamiltonian for Quantum Fourier Transform 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-quantum-fourier-transform-2/" rel="alternate"></link><published>2018-03-31T17:17:09-04:00</published><updated>2018-03-31T17:17:09-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-31:/posts/physics/hamiltonian-for-quantum-fourier-transform-2/</id><summary type="html">&lt;p&gt;Success! Read all about it!&lt;/p&gt;</summary><content type="html">&lt;p&gt;The quantum Fourier transform is a &lt;strong&gt;unitary matrix&lt;/strong&gt; &lt;span class="math"&gt;\(F\)&lt;/span&gt; that satisfies the following properties:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-31T20:09:42-04:00</updated><entry><title>Hamiltonian for Quantum Fourier Transform 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-quantum-fourier-transform-2/" rel="alternate"></link><published>2018-03-31T20:09:42-04:00</published><updated>2018-03-31T20:09:42-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-31:/posts/physics/hamiltonian-for-quantum-fourier-transform-2/</id><summary type="html">&lt;p&gt;Success! Read all about it!&lt;/p&gt;</summary><content type="html">&lt;p&gt;The quantum Fourier transform is a &lt;strong&gt;unitary matrix&lt;/strong&gt; &lt;span class="math"&gt;\(F\)&lt;/span&gt; that satisfies the following properties:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     F^{2} &amp;amp;= S, &amp;amp; F^{3} &amp;amp;= F^{\dagger} = F S, &amp;amp; F^{4} &amp;amp;= S^{2} = I
@@ -167,13 +167,13 @@ Then
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     b_{00k} &amp;amp;= (-1)^{k} \left( \frac{-1 + i}{\sqrt{2}} \right) = \exp{\left(\frac{3 \pi i}{4} + k \pi i \right)} \\
-    b_{11k} &amp;amp;= (-1)^{k} \left( \frac{1 - i}{\sqrt{2}} \right) = \exp{\left(\frac{7 \pi i}{4} + k \pi i \right)}
+    b_{11k} &amp;amp;= (-1)^{k} \left( \frac{1 - i}{\sqrt{2}} \right) = \exp{\left(-\frac{\pi i}{4} + k \pi i \right)}
 \end{align*}&lt;/div&gt;
 &lt;p&gt;
 Note that
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
-    b_{000} &amp;amp;= b_{111} = \exp{\left(\frac{3 \pi i}{4} \right)} &amp;amp; b_{001} &amp;amp;= b_{110} = \exp{\left(\frac{7 \pi i}{4} \right)}
+    b_{000} &amp;amp;= b_{111} = \exp{\left(\frac{3 \pi i}{4} \right)} &amp;amp; b_{001} &amp;amp;= b_{110} = \exp{\left(-\frac{\pi i}{4} \right)}
 \end{align*}&lt;/div&gt;
 &lt;p&gt;
 In a similar way, &lt;span class="math"&gt;\(c_{01} = 0\)&lt;/span&gt; or &lt;span class="math"&gt;\(c_{10} = 0\)&lt;/span&gt; whenever
@@ -185,7 +185,7 @@ In a similar way, &lt;span class="math"&gt;\(c_{01} = 0\)&lt;/span&gt; or &lt;sp
 Then
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
-    b_{01l} &amp;amp;= (-1)^{l} \left( \frac{-1 - i}{\sqrt{2}} \right) = \exp{\left(\frac{5 \pi i}{4} + l \pi i \right)} \\
+    b_{01l} &amp;amp;= (-1)^{l} \left( \frac{-1 - i}{\sqrt{2}} \right) = \exp{\left(-\frac{3 \pi i}{4} + l \pi i \right)} \\
     b_{10l} &amp;amp;= (-1)^{l} \left( \frac{1 + i}{\sqrt{2}} \right) = \exp{\left(\frac{\pi i}{4} + l \pi i \right)}
 \end{align*}&lt;/div&gt;
 &lt;p&gt;
@@ -199,9 +199,9 @@ Thus, there are four possible outcomes for the hermitian Hamiltonian:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     G_{000} &amp;amp;= -\frac{3 \pi}{4}I + \frac{\pi}{4}(1 + i) F + \frac{\pi}{4}(1 - i) F^{\dagger} + \frac{\pi}{4} S \\
-    G_{001} &amp;amp;= -\frac{7 \pi}{4}I + \frac{\pi}{4}(1 + i) F + \frac{\pi}{4}(1 - i) F^{\dagger} + \frac{5 \pi}{4} S \\
-    G_{010} &amp;amp;= -\frac{5 \pi}{4}I + \frac{\pi}{4}(1 + 3i) F + \frac{\pi}{4}(1 - 3i) F^{\dagger} + \frac{3 \pi}{4} S \\
-    G_{011} &amp;amp;= -\frac{\pi}{4}I + \frac{\pi}{4}(1 + 3i) F + \frac{\pi}{4}(1 - 3i) F^{\dagger} + \frac{7 \pi}{4} S
+    G_{001} &amp;amp;= \frac{\pi}{4}I + \frac{\pi}{4}(1 + i) F + \frac{\pi}{4}(1 - i) F^{\dagger} - \frac{3 \pi}{4} S \\
+    G_{010} &amp;amp;= \frac{3 \pi}{4}I + \frac{\pi}{4}(1 - i) F + \frac{\pi}{4}(1 + i) F^{\dagger} + \frac{3 \pi}{4} S \\
+    G_{011} &amp;amp;= -\frac{\pi}{4}I + \frac{\pi}{4}(1 - i) F + \frac{\pi}{4}(1 + i) F^{\dagger} - \frac{\pi}{4} S
 \end{align*}&lt;/div&gt;
 &lt;p&gt;
 I have checked that these four hermitian Hamiltonians work for the 3-dimensional and 4-dimensional discrete Fourier transform. Indeed, my result works for any unitary matrix whose quartic power is the identity.&lt;/p&gt;

@@ -59,7 +59,7 @@
   <article class="article">
     <header>
       <ul class="list-inline">
-        <li class="list-inline-item text-muted" title="2018-03-31T17:17:09.849355-04:00">
+        <li class="list-inline-item text-muted" title="2018-03-31T20:09:42.555080-04:00">
           <i class="fa fa-clock-o"></i>
           Sat 31 March 2018
         </li>
@@ -241,13 +241,13 @@ Then
 </p>
 <div class="math">\begin{align*}
     b_{00k} &amp;= (-1)^{k} \left( \frac{-1 + i}{\sqrt{2}} \right) = \exp{\left(\frac{3 \pi i}{4} + k \pi i \right)} \\
-    b_{11k} &amp;= (-1)^{k} \left( \frac{1 - i}{\sqrt{2}} \right) = \exp{\left(\frac{7 \pi i}{4} + k \pi i \right)}
+    b_{11k} &amp;= (-1)^{k} \left( \frac{1 - i}{\sqrt{2}} \right) = \exp{\left(-\frac{\pi i}{4} + k \pi i \right)}
 \end{align*}</div>
 <p>
 Note that
 </p>
 <div class="math">\begin{align*}
-    b_{000} &amp;= b_{111} = \exp{\left(\frac{3 \pi i}{4} \right)} &amp; b_{001} &amp;= b_{110} = \exp{\left(\frac{7 \pi i}{4} \right)}
+    b_{000} &amp;= b_{111} = \exp{\left(\frac{3 \pi i}{4} \right)} &amp; b_{001} &amp;= b_{110} = \exp{\left(-\frac{\pi i}{4} \right)}
 \end{align*}</div>
 <p>
 In a similar way, <span class="math">\(c_{01} = 0\)</span> or <span class="math">\(c_{10} = 0\)</span> whenever
@@ -259,7 +259,7 @@ In a similar way, <span class="math">\(c_{01} = 0\)</span> or <span class="math"
 Then
 </p>
 <div class="math">\begin{align*}
-    b_{01l} &amp;= (-1)^{l} \left( \frac{-1 - i}{\sqrt{2}} \right) = \exp{\left(\frac{5 \pi i}{4} + l \pi i \right)} \\
+    b_{01l} &amp;= (-1)^{l} \left( \frac{-1 - i}{\sqrt{2}} \right) = \exp{\left(-\frac{3 \pi i}{4} + l \pi i \right)} \\
     b_{10l} &amp;= (-1)^{l} \left( \frac{1 + i}{\sqrt{2}} \right) = \exp{\left(\frac{\pi i}{4} + l \pi i \right)}
 \end{align*}</div>
 <p>
@@ -273,9 +273,9 @@ Thus, there are four possible outcomes for the hermitian Hamiltonian:
 </p>
 <div class="math">\begin{align*}
     G_{000} &amp;= -\frac{3 \pi}{4}I + \frac{\pi}{4}(1 + i) F + \frac{\pi}{4}(1 - i) F^{\dagger} + \frac{\pi}{4} S \\
-    G_{001} &amp;= -\frac{7 \pi}{4}I + \frac{\pi}{4}(1 + i) F + \frac{\pi}{4}(1 - i) F^{\dagger} + \frac{5 \pi}{4} S \\
-    G_{010} &amp;= -\frac{5 \pi}{4}I + \frac{\pi}{4}(1 + 3i) F + \frac{\pi}{4}(1 - 3i) F^{\dagger} + \frac{3 \pi}{4} S \\
-    G_{011} &amp;= -\frac{\pi}{4}I + \frac{\pi}{4}(1 + 3i) F + \frac{\pi}{4}(1 - 3i) F^{\dagger} + \frac{7 \pi}{4} S
+    G_{001} &amp;= \frac{\pi}{4}I + \frac{\pi}{4}(1 + i) F + \frac{\pi}{4}(1 - i) F^{\dagger} - \frac{3 \pi}{4} S \\
+    G_{010} &amp;= \frac{3 \pi}{4}I + \frac{\pi}{4}(1 - i) F + \frac{\pi}{4}(1 + i) F^{\dagger} + \frac{3 \pi}{4} S \\
+    G_{011} &amp;= -\frac{\pi}{4}I + \frac{\pi}{4}(1 - i) F + \frac{\pi}{4}(1 + i) F^{\dagger} - \frac{\pi}{4} S
 \end{align*}</div>
 <p>
 I have checked that these four hermitian Hamiltonians work for the 3-dimensional and 4-dimensional discrete Fourier transform. Indeed, my result works for any unitary matrix whose quartic power is the identity.</p>
