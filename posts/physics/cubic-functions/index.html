@@ -175,7 +175,27 @@ Replacing <span class="math">\(z\)</span> with <span class="math">\(-z\)</span> 
     [q_{0}(z)]^{3} - [q_{1}(z)]^{3} + [q_{2}(z)]^{3} + 3 q_{0}(z) q_{1}(z) q_{2}(z) = 1
 \end{equation*}</div>
 <p>
-Both of this cubic identities describe curves in 3-dimensional space.</p>
+Both of these cubic identities describe curves in 3-dimensional space. It turns out that these cubic identities follow from three bilinear relations involving both the <span class="math">\(p\)</span>-functions and the <span class="math">\(q\)</span>-functions:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(z) q_{0}(z) + p_{1}(z) q_{2}(z) - p_{2}(z)q_{1}(z) &amp;= 1 \\
+    p_{0}(z) q_{1}(z) - p_{1}(z) q_{0}(z) - p_{2}(z)q_{2}(z) &amp;= 0 \\
+    p_{0}(z) q_{2}(z) - p_{1}(z) q_{1}(z) - p_{2}(z)q_{0}(z) &amp;= 0
+\end{align*}</div>
+<p>
+These bilinear relations can be solved to write the <span class="math">\(q\)</span>-functions in terms of the <span class="math">\(p\)</span>-functions:
+</p>
+<div class="math">\begin{align*}
+    q_{0}(z) &amp;= [p_{0}(z)]^{2} - p_{1}(z) p_{2}(z) &amp; q_{1}(z) &amp;= -[p_{2}(z)]^{2} + p_{0}(z) p_{1}(z) &amp; q_{2}(z) &amp;= [p_{1}(z)]^{2} - p_{0}(z) p_{2}(z)
+\end{align*}</div>
+<p>
+These are Wronskians. Alternatively, you can solve the for <span class="math">\(p\)</span>-functions in terms of the <span class="math">\(q\)</span>-functions:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(z) &amp;= [q_{0}(z)]^{2} + q_{1}(z) q_{2}(z) &amp; p_{1}(z) &amp;= [q_{2}(z)]^{2} + q_{0}(z) q_{1}(z) &amp; p_{2}(z) &amp;= [q_{1}(z)]^{2} - q_{0}(z) q_{2}(z)
+\end{align*}</div>
+<p>
+Again, these are Wronskians.</p>
 <p>What about differentiation? Using the infinite series definition gives
 </p>
 <div class="math">\begin{align*}

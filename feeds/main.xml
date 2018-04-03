@@ -874,7 +874,27 @@ Replacing &lt;span class="math"&gt;\(z\)&lt;/span&gt; with &lt;span class="math"
     [q_{0}(z)]^{3} - [q_{1}(z)]^{3} + [q_{2}(z)]^{3} + 3 q_{0}(z) q_{1}(z) q_{2}(z) = 1
 \end{equation*}&lt;/div&gt;
 &lt;p&gt;
-Both of this cubic identities describe curves in 3-dimensional space.&lt;/p&gt;
+Both of these cubic identities describe curves in 3-dimensional space. It turns out that these cubic identities follow from three bilinear relations involving both the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions and the &lt;span class="math"&gt;\(q\)&lt;/span&gt;-functions:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(z) q_{0}(z) + p_{1}(z) q_{2}(z) - p_{2}(z)q_{1}(z) &amp;amp;= 1 \\
+    p_{0}(z) q_{1}(z) - p_{1}(z) q_{0}(z) - p_{2}(z)q_{2}(z) &amp;amp;= 0 \\
+    p_{0}(z) q_{2}(z) - p_{1}(z) q_{1}(z) - p_{2}(z)q_{0}(z) &amp;amp;= 0
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+These bilinear relations can be solved to write the &lt;span class="math"&gt;\(q\)&lt;/span&gt;-functions in terms of the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    q_{0}(z) &amp;amp;= [p_{0}(z)]^{2} - p_{1}(z) p_{2}(z) &amp;amp; q_{1}(z) &amp;amp;= -[p_{2}(z)]^{2} + p_{0}(z) p_{1}(z) &amp;amp; q_{2}(z) &amp;amp;= [p_{1}(z)]^{2} - p_{0}(z) p_{2}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+These are Wronskians. Alternatively, you can solve the for &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions in terms of the &lt;span class="math"&gt;\(q\)&lt;/span&gt;-functions:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    p_{0}(z) &amp;amp;= [q_{0}(z)]^{2} + q_{1}(z) q_{2}(z) &amp;amp; p_{1}(z) &amp;amp;= [q_{2}(z)]^{2} + q_{0}(z) q_{1}(z) &amp;amp; p_{2}(z) &amp;amp;= [q_{1}(z)]^{2} - q_{0}(z) q_{2}(z)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Again, these are Wronskians.&lt;/p&gt;
 &lt;p&gt;What about differentiation? Using the infinite series definition gives
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
