@@ -1,5 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-03-31T20:09:42-04:00</updated><entry><title>Hamiltonian for Quantum Fourier Transform 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-quantum-fourier-transform-2/" rel="alternate"></link><published>2018-03-31T20:09:42-04:00</published><updated>2018-03-31T20:09:42-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-31:/posts/physics/hamiltonian-for-quantum-fourier-transform-2/</id><summary type="html">&lt;p&gt;Success! Read all about it!&lt;/p&gt;</summary><content type="html">&lt;p&gt;The quantum Fourier transform is a &lt;strong&gt;unitary matrix&lt;/strong&gt; &lt;span class="math"&gt;\(F\)&lt;/span&gt; that satisfies the following properties:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-04-07T00:00:00-04:00</updated><entry><title>Hamiltonian for Quantum Fourier Transform 3</title><link href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-quantum-fourier-transform-3/" rel="alternate"></link><published>2018-04-07T00:00:00-04:00</published><updated>2018-04-07T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-04-07:/posts/physics/hamiltonian-for-quantum-fourier-transform-3/</id><summary type="html">&lt;p&gt;Using the Hartley matrices for the hermitian phase matrix.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Given the unitary Fourier matrix &lt;span class="math"&gt;\(F\)&lt;/span&gt; and its inverse &lt;span class="math"&gt;\(F^{\dagger}\)&lt;/span&gt; you can construct the two Hartley matrices &lt;span class="math"&gt;\(P\)&lt;/span&gt; and &lt;span class="math"&gt;\(Q\)&lt;/span&gt; via:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    P &amp;amp;\equiv \frac{1}{2}(1 + i)F + \frac{1}{2}(1 - i)F^{\dagger} &amp;amp; Q &amp;amp;\equiv \frac{1}{2}(1 - i)F + \frac{1}{2}(1 + i)F^{\dagger}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that both &lt;span class="math"&gt;\(P\)&lt;/span&gt; and &lt;span class="math"&gt;\(Q\)&lt;/span&gt; are hermitian:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    P^{\dagger} &amp;amp;= P &amp;amp; Q^{\dagger} &amp;amp;= Q
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Both of the Hartley matrices square to the identity:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    P^{2} &amp;amp;= I &amp;amp; Q^{2} &amp;amp;= I
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The product of the Hartley matrices gives &lt;span class="math"&gt;\(S\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    P Q = S
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(S^{2} = I\)&lt;/span&gt; also. Thus, the four matrices &lt;span class="math"&gt;\(I\)&lt;/span&gt;, &lt;span class="math"&gt;\(P\)&lt;/span&gt;, &lt;span class="math"&gt;\(Q\)&lt;/span&gt;, and &lt;span class="math"&gt;\(S\)&lt;/span&gt; are a representation of the group &lt;span class="math"&gt;\(\mathbb{Z}_{2} \times \mathbb{Z}_{2}\)&lt;/span&gt;. On the other hand, the four matrices &lt;span class="math"&gt;\(F\)&lt;/span&gt;, &lt;span class="math"&gt;\(F^{2} = S\)&lt;/span&gt;, &lt;span class="math"&gt;\(F^{3} = F^{\dagger}\)&lt;/span&gt;, and &lt;span class="math"&gt;\(F^{4} = I\)&lt;/span&gt; are a representation of the group &lt;span class="math"&gt;\(\mathbb{Z}_{4}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The Fourier transform matrix and its inverse can be re-written in terms of the Hartley matrices:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    F &amp;amp;= \frac{1}{2}(1 - i) P + \frac{1}{2} (1+i) Q \\
+    F^{\dagger} &amp;amp;= \frac{1}{2}(1 + i) P + \frac{1}{2} (1-i) Q
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+In terms of the Hartley matrices, you have involutions. These allow you to use familiar results:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \exp{(i a P)} &amp;amp;= I\cos{(a)} + i P \sin{(a)} \\
+    \exp{(i b Q)} &amp;amp;= I\cos{(b)} + i Q \sin{(b)} \\
+    \exp{(i c S)} &amp;amp;= I\cos{(c)} + i S \sin{(c)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Then
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \exp{(i a P)} \exp{(i b Q)} \exp{(i c S)} = I C_{I}(a, b, c) - P C_{P}(a, b, c) - Q C_{Q}(a, b, c) - S C_{S}(a, b, c)
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+with
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    C_{I}(a, b, c) &amp;amp;= \cos{(a)} \cos{(b)} \cos{(c)} - i \sin{(a)} \sin{(b)} \sin{(c)} \\
+    C_{P}(a, b, c) &amp;amp;= \cos{(a)} \sin{(b)} \cos{(c)} - i \sin{(a)} \cos{(b)} \sin{(c)} \\
+    C_{Q}(a, b, c) &amp;amp;= \sin{(a)} \cos{(b)} \cos{(c)} - i \cos{(a)} \sin{(b)} \sin{(c)} \\
+    C_{S}(a, b, c) &amp;amp;= \sin{(a)} \sin{(b)} \cos{(c)} - i \cos{(a)} \cos{(b)} \sin{(c)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You need
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    C_{I}(a, b, c) &amp;amp;= 0 &amp;amp; C_{P}(a, b, c) &amp;amp;\neq 0 &amp;amp; C_{Q}(a, b, c) &amp;amp;\neq 0 &amp;amp; C_{S}(a, b, c) &amp;amp;= 0
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Use
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    a &amp;amp;= x + y &amp;amp; b &amp;amp;= x - y
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Then
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    2 C_{I}(x, y, c) &amp;amp;= \left[ \cos{(2y)} + \cos{(2x)} \right] \cos{(c)} - i \left[ \cos{(2y)} - \cos{(2x)} \right] \sin{(c)} \\
+    2 C_{P}(x, y, c) &amp;amp;= \left[ \sin{(2x)} - \sin{(2y)} \right] \cos{(c)} - i \left[ \sin{(2x)} + \sin{(2y)} \right] \sin{(c)} \\
+    2 C_{Q}(x, y, c) &amp;amp;= \left[ \sin{(2x)} + \sin{(2y)} \right] \cos{(c)} - i \left[ \sin{(2x)} - \sin{(2y)} \right] \sin{(c)} \\
+    2 C_{S}(x, y, c) &amp;amp;= \left[ \cos{(2y)} - \cos{(2x)} \right] \cos{(c)} - i \left[ \cos{(2y)} + \cos{(2x)} \right] \sin{(c)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The following solutions guarantee &lt;span class="math"&gt;\(C_{I} = C_{S} = 0\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    x_{k} &amp;amp;= \frac{(4 k + 1)\pi}{4} &amp;amp; x_{l} &amp;amp;= \frac{(4 l - 1)\pi}{4} &amp;amp; y_{m} &amp;amp;= \frac{(4 m + 1)\pi}{4} &amp;amp; y_{n} &amp;amp;= \frac{(4 n - 1)\pi}{4}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \sin{(2x_{k})} &amp;amp;= 1 &amp;amp; \sin{(2x_{l})} &amp;amp;= -1 &amp;amp; \sin{(2y_{m})} &amp;amp;= 1 &amp;amp; \sin{(2y_{n})} &amp;amp;= -1 
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The &lt;span class="math"&gt;\((x_{k}, y_{m})\)&lt;/span&gt; solution gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    C_{P} &amp;amp;= -i \sin{(c)} &amp;amp; C_{Q} &amp;amp;= \cos{(c)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    a_{km} &amp;amp;= \frac{\pi}{2} + (k + m)\pi &amp;amp; b_{km} &amp;amp;= (k - m) \pi
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The &lt;span class="math"&gt;\((x_{k}, y_{n})\)&lt;/span&gt; solution gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    C_{P} &amp;amp;= \cos{(c)} &amp;amp; C_{Q} &amp;amp;= -i\sin{(c)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    a_{kn} &amp;amp;= (k + n) \pi &amp;amp; b_{kn} &amp;amp;= \frac{\pi}{2} + (k - n) \pi
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The &lt;span class="math"&gt;\((x_{l}, y_{m})\)&lt;/span&gt; solution gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    C_{P} &amp;amp;= -\cos{(c)} &amp;amp; C_{Q} &amp;amp;= i\sin{(c)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    a_{lm} &amp;amp;= (l + m) \pi &amp;amp; b_{lm} &amp;amp;= -\frac{\pi}{2} + (l - m) \pi
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The &lt;span class="math"&gt;\((x_{l}, y_{n})\)&lt;/span&gt; solution gives
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    C_{P} &amp;amp;= i \sin{(c)} &amp;amp; C_{Q} &amp;amp;= -\cos{(c)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    a_{ln} &amp;amp;= -\frac{\pi}{2} + (l + n) \pi &amp;amp; b_{ln} &amp;amp;= (l - n) \pi
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+With &lt;span class="math"&gt;\(c = \pm \pi / 4\)&lt;/span&gt; and some more work, you can recover &lt;span class="math"&gt;\(F\)&lt;/span&gt; as an exponential of an anti-hermitian matrix.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Hamiltonian for Quantum Fourier Transform 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-quantum-fourier-transform-2/" rel="alternate"></link><published>2018-03-31T20:09:42-04:00</published><updated>2018-03-31T20:09:42-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-31:/posts/physics/hamiltonian-for-quantum-fourier-transform-2/</id><summary type="html">&lt;p&gt;Success! Read all about it!&lt;/p&gt;</summary><content type="html">&lt;p&gt;The quantum Fourier transform is a &lt;strong&gt;unitary matrix&lt;/strong&gt; &lt;span class="math"&gt;\(F\)&lt;/span&gt; that satisfies the following properties:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     F^{2} &amp;amp;= S, &amp;amp; F^{3} &amp;amp;= F^{\dagger} = F S, &amp;amp; F^{4} &amp;amp;= S^{2} = I
