@@ -312,6 +312,86 @@ With &lt;span class="math"&gt;\(c = \pm \pi / 4\)&lt;/span&gt; and some more wor
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Hexa-Hyperbolic Functions</title><link href="https://meirizarrygelpi.github.io/posts/physics/hexa-hyperbolic-functions/" rel="alternate"></link><published>2018-04-06T00:00:00-04:00</published><updated>2018-04-06T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-04-06:/posts/physics/hexa-hyperbolic-functions/</id><summary type="html">&lt;p&gt;Using the sixth-roots of unity to obtained generalized hyperbolic functions.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Consider the following six functions:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    h_{60}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(6n + 1)} z^{6n} &amp;amp; h_{61}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(6n + 2)} z^{6n+1} &amp;amp; h_{62}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(6n + 3)} z^{6n+2} \\
+    h_{63}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(6n + 4)} z^{6n+3} &amp;amp; h_{64}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(6n + 5)} z^{6n+4} &amp;amp; h_{65}(z) &amp;amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(6n + 6)} z^{6n+5}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+These functions are the 6-graded generalization of the 2-graded hyperbolic functions. Note the differentiation identities:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \frac{d h_{65}}{d z} &amp;amp;= h_{64} &amp;amp; \frac{d h_{64}}{d z} &amp;amp;= h_{63} &amp;amp; \frac{d h_{63}}{d z} &amp;amp;= h_{62} \\
+    \frac{d h_{62}}{d z} &amp;amp;= h_{61} &amp;amp; \frac{d h_{61}}{d z} &amp;amp;= h_{60} &amp;amp; \frac{d h_{60}}{d z} &amp;amp;= h_{65}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You can check that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    h_{60}(z) &amp;amp;= \frac{1}{3} \cosh{(z)} + \frac{2}{3} \cosh{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}}{2}z \right)} \\
+    h_{61}(z) &amp;amp;= \frac{1}{3} \sinh{(z)} + \frac{1}{3} \sinh{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}}{2}z \right)} - \frac{\sqrt{3}}{3} \cosh{\left( \frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}}{2}z \right)} \\
+    h_{62}(z) &amp;amp;= \frac{1}{3} \cosh{(z)} - \frac{1}{3} \cosh{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}}{2}z \right)} - \frac{\sqrt{3}}{3} \sinh{\left( \frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}}{2}z \right)} \\
+    h_{63}(z) &amp;amp;= \frac{1}{3} \sinh{(z)} - \frac{2}{3} \sinh{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}}{2}z \right)} \\
+    h_{64}(z) &amp;amp;= \frac{1}{3} \cosh{(z)} - \frac{1}{3} \cosh{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}}{2}z \right)} + \frac{\sqrt{3}}{3} \sinh{\left( \frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}}{2}z \right)} \\
+    h_{65}(z) &amp;amp;= \frac{1}{3} \sinh{(z)} + \frac{1}{3} \sinh{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}}{2}z \right)} + \frac{\sqrt{3}}{3} \cosh{\left( \frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}}{2}z \right)}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+These can be obtained in a similar way that the 3-graded (&lt;a href="https://meirizarrygelpi.github.io/posts/physics/cubic-functions/"&gt;here&lt;/a&gt;) and 4-graded (&lt;a href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-1/"&gt;here&lt;/a&gt; and &lt;a href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-2/"&gt;here&lt;/a&gt;) functions were obtained in previous posts.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
 &lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Hamiltonian for Quantum Fourier Transform 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-quantum-fourier-transform-2/" rel="alternate"></link><published>2018-03-31T20:09:42-04:00</published><updated>2018-03-31T20:09:42-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-03-31:/posts/physics/hamiltonian-for-quantum-fourier-transform-2/</id><summary type="html">&lt;p&gt;Success! Read all about it!&lt;/p&gt;</summary><content type="html">&lt;p&gt;The quantum Fourier transform is a &lt;strong&gt;unitary matrix&lt;/strong&gt; &lt;span class="math"&gt;\(F\)&lt;/span&gt; that satisfies the following properties:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
