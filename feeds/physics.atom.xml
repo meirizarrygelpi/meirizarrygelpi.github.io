@@ -1,5 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-04-09T18:45:43-04:00</updated><entry><title>Poly-Hyperbolic Sigmoids</title><link href="https://meirizarrygelpi.github.io/posts/physics/poly-hyperbolic-sigmoids/" rel="alternate"></link><published>2018-04-09T18:45:43-04:00</published><updated>2018-04-09T18:45:43-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-04-09:/posts/physics/poly-hyperbolic-sigmoids/</id><summary type="html">&lt;p&gt;Constructing sigmoid functions with the poly-hyperbolic functions from before.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The poly-hyperbolic function &lt;span class="math"&gt;\(h_{kl}(z)\)&lt;/span&gt; is defined as the infinite series
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-04-11T07:27:09-04:00</updated><entry><title>The Other Bell Basis and 24</title><link href="https://meirizarrygelpi.github.io/posts/physics/the-other-bell-basis-and-24/" rel="alternate"></link><published>2018-04-11T07:27:09-04:00</published><updated>2018-04-11T07:27:09-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-04-11:/posts/physics/the-other-bell-basis-and-24/</id><summary type="html">&lt;p&gt;A surprising property of a certain 2-by-2 matrix.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The following &lt;span class="math"&gt;\(2 \times 2\)&lt;/span&gt; matrix is very interesting:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    J = \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 &amp;amp; i \\
+        1 &amp;amp; -i
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+It satisfies the following identities:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    J^{3} &amp;amp;= \frac{1}{\sqrt{2}}(1 + i) I &amp;amp; J^{6} &amp;amp;= i I &amp;amp; J^{9} &amp;amp;= -\frac{1}{\sqrt{2}}(1 - i) I &amp;amp; J^{12} &amp;amp;= -I \\
+    J^{15} &amp;amp;= -\frac{1}{\sqrt{2}}(1 + i) I &amp;amp; J^{18} &amp;amp;= -i I &amp;amp; J^{21} &amp;amp;= \frac{1}{\sqrt{2}}(1 - i) I &amp;amp; J^{24} &amp;amp;= +I
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(J\)&lt;/span&gt; is unitary:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    J^{\dagger} = \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 &amp;amp; 1 \\
+        -i &amp;amp; i
+    \end{bmatrix} = J^{23} = J^{-1}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Thus
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    J^{4} &amp;amp;= \frac{1}{\sqrt{2}}(1 + i) J &amp;amp; J^{7} &amp;amp;= i J &amp;amp; J^{10} &amp;amp;= -\frac{1}{\sqrt{2}}(1 - i) J &amp;amp; J^{13} &amp;amp;= -J \\
+    J^{16} &amp;amp;= -\frac{1}{\sqrt{2}}(1 + i) J &amp;amp; J^{19} &amp;amp;= -i J &amp;amp; J^{22} &amp;amp;= \frac{1}{\sqrt{2}}(1 - i) J
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    J^{2} &amp;amp;= \frac{1}{\sqrt{2}}(1 + i) J^{\dagger} &amp;amp; J^{5} &amp;amp;= i J^{\dagger} &amp;amp; J^{8} &amp;amp;= -\frac{1}{\sqrt{2}}(1 - i) J^{\dagger} &amp;amp; J^{11} &amp;amp;= -J^{\dagger} \\
+    J^{14} &amp;amp;= -\frac{1}{\sqrt{2}}(1 + i) J^{\dagger} &amp;amp; J^{17} &amp;amp;= -i J^{\dagger} &amp;amp; J^{20} &amp;amp;= \frac{1}{\sqrt{2}}(1 - i) J^{\dagger}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that the coefficients correspond to the 8th-roots of unity, reflecting the fact that the cyclic group &lt;span class="math"&gt;\(\mathbb{Z}_{24}\)&lt;/span&gt; is the product group &lt;span class="math"&gt;\(\mathbb{Z}_{3} \times \mathbb{Z}_{8}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;If the kets &lt;span class="math"&gt;\(|0 \rangle\)&lt;/span&gt; and &lt;span class="math"&gt;\(|1 \rangle\)&lt;/span&gt; are defined via
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |0 \rangle &amp;amp;= \begin{bmatrix}
+        1 \\ 0
+    \end{bmatrix} &amp;amp; |1 \rangle &amp;amp;= \begin{bmatrix}
+        0 \\ 1
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+and the kets &lt;span class="math"&gt;\(|Y{-}\rangle\)&lt;/span&gt; and &lt;span class="math"&gt;\(|Y{+}\rangle\)&lt;/span&gt; are defined via
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |Y{-}\rangle &amp;amp;= \frac{1}{\sqrt{2}} \left( |0 \rangle - i | 1 \rangle \right) &amp;amp; |Y{+}\rangle &amp;amp;= \frac{1}{\sqrt{2}} \left( |0 \rangle + i | 1 \rangle \right)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+then &lt;span class="math"&gt;\(J\)&lt;/span&gt; and &lt;span class="math"&gt;\(J^{\dagger}\)&lt;/span&gt; transform between these two ortho-normal bases:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    J^{\dagger} |0 \rangle &amp;amp;= |Y{-} \rangle &amp;amp; J^{\dagger} |1 \rangle &amp;amp;= |Y{+} \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that the kets &lt;span class="math"&gt;\(|Y{-}\rangle\)&lt;/span&gt; and &lt;span class="math"&gt;\(|Y{+}\rangle\)&lt;/span&gt; are eigen-vectors of the unitary hermitian matrix &lt;span class="math"&gt;\(Y\)&lt;/span&gt; given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    Y |Y{-}\rangle &amp;amp;= -|Y{-}\rangle &amp;amp; Y |Y{+}\rangle &amp;amp;= |Y{+}\rangle &amp;amp; Y &amp;amp;= \begin{bmatrix}
+        0 &amp;amp; -i \\
+        i &amp;amp; 0
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+This is one of the Pauli matrices.&lt;/p&gt;
+&lt;p&gt;Let &lt;span class="math"&gt;\(J_{2} = J\)&lt;/span&gt;. It follows that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    (J_{2})^{24} = I_{2}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(J_{2}\)&lt;/span&gt; correspond to a 1-qubit gate. Consider the Kronecker product:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    J_{4} = J_{2} \otimes J_{2}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+It follows that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    (J_{4})^{12} = I_{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(J_{4}\)&lt;/span&gt; correspond to a 2-qubit gate. Now consider the Kronecker product:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    J_{16} = J_{4} \otimes J_{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+It follows that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    (J_{16})^{6} = I_{16}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(J_{16}\)&lt;/span&gt; correspond to a 4-qubit gate. Now consider the Kronecker product:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    J_{256} = J_{16} \otimes J_{16}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+It follows that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    (J_{256})^{3} = I_{256}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(J_{256}\)&lt;/span&gt; correspond to a 16-qubit gate.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>Poly-Hyperbolic Sigmoids</title><link href="https://meirizarrygelpi.github.io/posts/physics/poly-hyperbolic-sigmoids/" rel="alternate"></link><published>2018-04-09T18:45:43-04:00</published><updated>2018-04-09T18:45:43-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-04-09:/posts/physics/poly-hyperbolic-sigmoids/</id><summary type="html">&lt;p&gt;Constructing sigmoid functions with the poly-hyperbolic functions from before.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The poly-hyperbolic function &lt;span class="math"&gt;\(h_{kl}(z)\)&lt;/span&gt; is defined as the infinite series
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}
     h_{kl}(z) \equiv \sum_{n = 0}^{\infty} \frac{1}{\Gamma(kn + l + 1)} z^{kn + l}
