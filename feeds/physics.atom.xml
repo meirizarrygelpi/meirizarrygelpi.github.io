@@ -1,5 +1,256 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-04-11T07:27:09-04:00</updated><entry><title>The Other Bell Basis and 24</title><link href="https://meirizarrygelpi.github.io/posts/physics/the-other-bell-basis-and-24/" rel="alternate"></link><published>2018-04-11T07:27:09-04:00</published><updated>2018-04-11T07:27:09-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-04-11:/posts/physics/the-other-bell-basis-and-24/</id><summary type="html">&lt;p&gt;A surprising property of a certain 2-by-2 matrix.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The following &lt;span class="math"&gt;\(2 \times 2\)&lt;/span&gt; matrix is very interesting:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-04-13T16:09:19-04:00</updated><entry><title>More on Bell Transforms</title><link href="https://meirizarrygelpi.github.io/posts/physics/more-on-bell-transforms/" rel="alternate"></link><published>2018-04-13T16:09:19-04:00</published><updated>2018-04-13T16:09:19-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-04-13:/posts/physics/more-on-bell-transforms/</id><summary type="html">&lt;p&gt;Some weird properties of the matrices that transform to Bell bases.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The standard 1-qubit information ortho-normal basis is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |b_{0} \rangle &amp;amp;= | 0 \rangle &amp;amp; |b_{1} \rangle &amp;amp;= | 1 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The standard Bell ortho-normal basis is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |B_{20} \rangle &amp;amp;= \frac{| 0 \rangle + | 1 \rangle}{\sqrt{2}} &amp;amp; |B_{21} \rangle &amp;amp;= \frac{| 0 \rangle - | 1 \rangle}{\sqrt{2}}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+There are two ways to map the information basis to the Bell basis. The usual way involves the Hadamard transform:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    H_{2} = |B_{20} \rangle \langle 0 | + |B_{21} \rangle \langle 1 | = \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 &amp;amp; 1 \\
+        1 &amp;amp; -1
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+That is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    H_{2} |0 \rangle &amp;amp;= |B_{20} \rangle &amp;amp; H_{2} |1 \rangle &amp;amp;= |B_{21} \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    (H_{2})^{2} = I_{2}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The other way is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    J_{2} = |B_{21} \rangle \langle 0 | + |B_{20} \rangle \langle 1 | = \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 &amp;amp; 1 \\
+        -1 &amp;amp; 1
+    \end{bmatrix}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+That is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    J_{2} |0 \rangle &amp;amp;= |B_{21} \rangle &amp;amp; J_{2} |1 \rangle &amp;amp;= |B_{20} \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    (J_{2})^{2} &amp;amp;= \begin{bmatrix}
+        0 &amp;amp; 1 \\
+        -1 &amp;amp; 0
+    \end{bmatrix} &amp;amp; (J_{2})^{4} &amp;amp;= -I_{2} &amp;amp; (J_{2})^{6} &amp;amp;= \begin{bmatrix}
+        0 &amp;amp; -1 \\
+        1 &amp;amp; 0
+    \end{bmatrix} &amp;amp; (J_{2})^{8} &amp;amp;= I_{2}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Let
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    (J_{2})^{0} &amp;amp;= I_{2} &amp;amp; (J_{2})^{1} &amp;amp;= A &amp;amp; (J_{2})^{2} &amp;amp;= B &amp;amp; (J_{2})^{3} &amp;amp;= -A^{\dagger} \\
+    (J_{2})^{4} &amp;amp;= -I_{2} &amp;amp; (J_{2})^{5} &amp;amp;= -A &amp;amp; (J_{2})^{6} &amp;amp;= -B &amp;amp; (J_{2})^{7} &amp;amp;= A^{\dagger}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+That is, the powers of &lt;span class="math"&gt;\(J_{2}\)&lt;/span&gt; form a representation of &lt;span class="math"&gt;\(\mathbb{Z}_{2} \times \mathbb{Z}_{4}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;Complex 1-Bell Basis&lt;/h2&gt;
+&lt;p&gt;The ortho-normal complex Bell basis is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |C_{20} \rangle &amp;amp;= \frac{| 0 \rangle + i| 1 \rangle}{\sqrt{2}} &amp;amp; |C_{21} \rangle &amp;amp;= \frac{| 0 \rangle - i| 1 \rangle}{\sqrt{2}}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Again, you have two mappings from the information basis to the complex Bell basis:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    A_{2} &amp;amp;= |C_{20} \rangle \langle 0 | + |C_{21} \rangle \langle 1 | = \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 &amp;amp; 1 \\
+        i &amp;amp; -i
+    \end{bmatrix} &amp;amp; B_{2} &amp;amp;= |C_{21} \rangle \langle 0 | + |C_{20} \rangle \langle 1 | = \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 &amp;amp; 1 \\
+        -i &amp;amp; i
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    (A_{2})^{3} = I_{2} \exp\left( \frac{\pi i}{4} \right)
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+and also
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    (B_{2})^{3} = I_{2} \exp\left( -\frac{\pi i}{4} \right)
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The powers of each of these matrices form a representation of &lt;span class="math"&gt;\(\mathbb{Z}_{3} \times \mathbb{Z}_{8}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;Real 2-Bell Basis&lt;/h2&gt;
+&lt;p&gt;The standard 2-qubit information ortho-normal basis is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |b_{0} \rangle &amp;amp;= |00 \rangle &amp;amp; |b_{1} \rangle &amp;amp;= |01 \rangle \\
+    |b_{2} \rangle &amp;amp;= |10 \rangle &amp;amp; |b_{3} \rangle &amp;amp;= |11 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+The standard 2-Bell ortho-normal basis is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |B_{40} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left( |00 \rangle + |11 \rangle \right) &amp;amp; |B_{41} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left( |00 \rangle - |11 \rangle \right) \\
+    |B_{42} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left( |01 \rangle + |10 \rangle \right) &amp;amp; |B_{43} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left( |01 \rangle - |10 \rangle \right)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+There are 24 possible mappings from the information basis to the Bell basis:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    H_{4}(w x y z) = |B_{4w} \rangle \langle 00 | + |B_{4x} \rangle \langle 01 | + |B_{4y} \rangle \langle 10 | + |B_{4z} \rangle \langle 11 |
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(w x y z\)&lt;/span&gt; is one of the permutations of the sequence 0123. These 24 possibilities fall into 5 categories. Two satisfy:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \left[ H_{4}(0 2 3 1) \right]^{2} = \left[ H_{4}(2 0 1 3) \right]^{2} = I_{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Four satisfy:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \left[ H_{4}(0 1 3 2) \right]^{4} = \left[ H_{4}(2 1 0 3) \right]^{4} = \left[ H_{4}(3 0 1 2) \right]^{4} = \left[ H_{4}(3 2 0 1) \right]^{4} = I_{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Four satisfy:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \left[ H_{4}(1 0 3 2) \right]^{12} = \left[ H_{4}(2 1 3 0) \right]^{12} = \left[ H_{4}(2 3 0 1) \right]^{12} = \left[ H_{4}(3 0 2 1) \right]^{12} = I_{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Four satisfy:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \left[ H_{4}(0 1 2 3) \right]^{24} = \left[ H_{4}(0 3 1 2) \right]^{24} = \left[ H_{4}(1 2 0 3) \right]^{24} = \left[ H_{4}(3 2 1 0) \right]^{24} = I_{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The rest satisfy
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \left[ H_{4}(w x y z) \right]^{8} = I_{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Let &lt;span class="math"&gt;\(A_{2} \equiv H_{4}(0 2 3 1)\)&lt;/span&gt;. Then the powers of &lt;span class="math"&gt;\(A_{2}\)&lt;/span&gt; form a representation of &lt;span class="math"&gt;\(\mathbb{Z}_{2}\)&lt;/span&gt;. Let &lt;span class="math"&gt;\(A_{4} \equiv H_{4}(0 1 3 2)\)&lt;/span&gt;. Then the powers of &lt;span class="math"&gt;\(A_{4}\)&lt;/span&gt; form a representation of &lt;span class="math"&gt;\(\mathbb{Z}_{4}\)&lt;/span&gt;. Let &lt;span class="math"&gt;\(A_{8} \equiv H_{4}(0 2 1 3)\)&lt;/span&gt;. Then the powers of &lt;span class="math"&gt;\(A_{8}\)&lt;/span&gt; form a representation of &lt;span class="math"&gt;\(\mathbb{Z}_{8}\)&lt;/span&gt;. Let &lt;span class="math"&gt;\(A_{12} \equiv H_{4}(1 0 3 2)\)&lt;/span&gt;. Then the powers of &lt;span class="math"&gt;\(A_{12}\)&lt;/span&gt; form a representation of &lt;span class="math"&gt;\(\mathbb{Z}_{2} \times \mathbb{Z}_{6}\)&lt;/span&gt;. Let &lt;span class="math"&gt;\(A_{24} \equiv H_{4}(0 1 2 3)\)&lt;/span&gt;. Then the powers of &lt;span class="math"&gt;\(A_{24}\)&lt;/span&gt; form a representation of &lt;span class="math"&gt;\(\mathbb{Z}_{2} \times \mathbb{Z}_{12}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;Complex 2-Bell Basis&lt;/h2&gt;
+&lt;p&gt;The complex 2-Bell ortho-normal basis is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    |C_{40} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left( |00 \rangle + i|11 \rangle \right) &amp;amp; |C_{41} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left( |00 \rangle - i|11 \rangle \right) \\
+    |C_{42} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left( |01 \rangle + i|10 \rangle \right) &amp;amp; |C_{43} \rangle &amp;amp;= \frac{1}{\sqrt{2}} \left( |01 \rangle - i|10 \rangle \right)
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+There are 24 possible mappings from the information basis to the complex Bell basis:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    J_{4}(w x y z) = |C_{4w} \rangle \langle 00 | + |C_{4x} \rangle \langle 01 | + |C_{4y} \rangle \langle 10 | + |C_{4z} \rangle \langle 11 |
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(w x y z\)&lt;/span&gt; is one of the permutations of the sequence 0123. These 24 possibilities fall into 5 categories. Two satisfy:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \left[ J_{4}(2 1 3 0) \right]^{4} = \left[ J_{4}(3 0 2 1) \right]^{4} = I_{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Two satisfy:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \left[ J_{4}(0 3 1 2) \right]^{8} = \left[ J_{4}(1 2 0 3) \right]^{8} = I_{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Two satisfy:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \left[ J_{4}(2 1 0 3) \right]^{12} = \left[ J_{4}(3 0 1 2) \right]^{12} = I_{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Four satisfy:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \left[ J_{4}(0 1 2 3) \right]^{40} = \left[ J_{4}(1 0 3 2) \right]^{40} = \left[ J_{4}(2 3 0 1) \right]^{40} = \left[ J_{4}(3 2 1 0) \right]^{40} = I_{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The rest satisfy
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \left[ J_{4}(w x y z) \right]^{24} = I_{4}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Let &lt;span class="math"&gt;\(B_{4} \equiv J_{4}(2 1 3 0)\)&lt;/span&gt;. Then &lt;span class="math"&gt;\(B_{4}\)&lt;/span&gt; is a representation of &lt;span class="math"&gt;\(\mathbb{Z}_{4}\)&lt;/span&gt;. Let &lt;span class="math"&gt;\(B_{8} \equiv J_{4}(0 3 1 2)\)&lt;/span&gt;. Then &lt;span class="math"&gt;\(B_{8}\)&lt;/span&gt; is a representation of &lt;span class="math"&gt;\(\mathbb{Z}_{8}\)&lt;/span&gt;. Let &lt;span class="math"&gt;\(B_{12} \equiv J_{4}(0 2 1 3)\)&lt;/span&gt;. Then &lt;span class="math"&gt;\(B_{12}\)&lt;/span&gt; is a representation of &lt;span class="math"&gt;\(\mathbb{Z}_{2} \times \mathbb{Z}_{6}\)&lt;/span&gt;. Let &lt;span class="math"&gt;\(B_{24} \equiv J_{4}(0 1 3 2)\)&lt;/span&gt;. Then &lt;span class="math"&gt;\(B_{24}\)&lt;/span&gt; is a representation of &lt;span class="math"&gt;\(\mathbb{Z}_{2} \times \mathbb{Z}_{12}\)&lt;/span&gt;. Let &lt;span class="math"&gt;\(B_{40} \equiv J_{4}(0 1 2 3)\)&lt;/span&gt;. Then &lt;span class="math"&gt;\(B_{40}\)&lt;/span&gt; is a representation of &lt;span class="math"&gt;\(\mathbb{Z}_{5} \times \mathbb{Z}_{8}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.2x"></category></entry><entry><title>The Other Bell Basis and 24</title><link href="https://meirizarrygelpi.github.io/posts/physics/the-other-bell-basis-and-24/" rel="alternate"></link><published>2018-04-13T06:00:48-04:00</published><updated>2018-04-13T06:00:48-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-04-13:/posts/physics/the-other-bell-basis-and-24/</id><summary type="html">&lt;p&gt;A surprising property of a certain 2-by-2 matrix.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The following &lt;span class="math"&gt;\(2 \times 2\)&lt;/span&gt; matrix is very interesting:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}
     J = \frac{1}{\sqrt{2}} \begin{bmatrix}
@@ -113,7 +364,7 @@ It follows that
     (J_{256})^{3} = I_{256}
 \end{equation*}&lt;/div&gt;
 &lt;p&gt;
-Note that &lt;span class="math"&gt;\(J_{256}\)&lt;/span&gt; correspond to a 16-qubit gate.&lt;/p&gt;
+Note that &lt;span class="math"&gt;\(J_{256}\)&lt;/span&gt; correspond to an 8-qubit gate.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
