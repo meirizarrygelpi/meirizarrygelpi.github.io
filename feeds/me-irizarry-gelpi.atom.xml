@@ -1,5 +1,525 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-05-10T10:04:02-04:00</updated><entry><title>Hadamard Eigen-Basis</title><link href="https://meirizarrygelpi.github.io/posts/physics/hadamard-eigen-basis/" rel="alternate"></link><published>2018-05-10T10:04:02-04:00</published><updated>2018-05-10T10:04:02-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-05-10:/posts/physics/hadamard-eigen-basis/</id><summary type="html">&lt;p&gt;A short note on the eigen-basis for the single-qubit Hadamard gate.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Hadamard gate &lt;span class="math"&gt;\(H\)&lt;/span&gt; is given by
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/me-irizarry-gelpi.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-05-10T13:43:22-04:00</updated><entry><title>Ann, Bob, and Eve 3</title><link href="https://meirizarrygelpi.github.io/posts/physics/ann-bob-and-eve-3/" rel="alternate"></link><published>2018-05-10T13:43:22-04:00</published><updated>2018-05-10T13:43:22-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-05-10:/posts/physics/ann-bob-and-eve-3/</id><summary type="html">&lt;p&gt;Ann and Bob share a secret, and Eve uses a different eavesdropping method.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ann has two ortho-normal bases at her disposal for &lt;strong&gt;encoding&lt;/strong&gt; cbits into qbits:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert A_{0} \rangle &amp;amp;= \cos(\theta_{a}) \lvert 0 \rangle - \sin(\theta_{a}) \lvert 1 \rangle &amp;amp; \lvert A_{1} \rangle &amp;amp;= \sin(\theta_{a}) \lvert 0 \rangle + \cos(\theta_{a}) \lvert 1 \rangle \\
+    \lvert B_{0} \rangle &amp;amp;= \cos(\theta_{b}) \lvert 0 \rangle - \sin(\theta_{b}) \lvert 1 \rangle &amp;amp; \lvert B_{1} \rangle &amp;amp;= \sin(\theta_{b}) \lvert 0 \rangle + \cos(\theta_{b}) \lvert 1 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that for &lt;span class="math"&gt;\(\theta_{a} = 0\)&lt;/span&gt;, the &lt;span class="math"&gt;\(A\)&lt;/span&gt; basis becomes
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert A_{0} \rangle &amp;amp;= \lvert 0 \rangle &amp;amp; \lvert A_{1} \rangle &amp;amp;= \lvert 1 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+and for &lt;span class="math"&gt;\(\theta_{b} = \pi/4\)&lt;/span&gt;, the &lt;span class="math"&gt;\(B\)&lt;/span&gt; basis becomes
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert B_{0} \rangle &amp;amp;= \lvert {-} \rangle &amp;amp; \lvert B_{1} \rangle &amp;amp;= \lvert {+} \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Bob uses these two bases for &lt;strong&gt;decoding&lt;/strong&gt;. Eve can use a third ortho-normal basis:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert C_{0} \rangle &amp;amp;= \cos(\theta_{c}) \lvert 0 \rangle - \sin(\theta_{c}) \lvert 1 \rangle &amp;amp; \lvert C_{1} \rangle &amp;amp;= \sin(\theta_{c}) \lvert 0 \rangle + \cos(\theta_{c}) \lvert 1 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You can check that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert A_{0} \rangle \langle A_{0} \rvert &amp;amp;= \begin{bmatrix}
+        \cos^{2}(\theta_{a}) &amp;amp; -\cos(\theta_{a}) \sin(\theta_{a}) \\
+        -\cos(\theta_{a}) \sin(\theta_{a}) &amp;amp; \sin^{2}(\theta_{a})
+    \end{bmatrix} \\
+    \lvert A_{1} \rangle \langle A_{1} \rvert &amp;amp;= \begin{bmatrix}
+        \sin^{2}(\theta_{a}) &amp;amp; \cos(\theta_{a}) \sin(\theta_{a}) \\
+        \cos(\theta_{a}) \sin(\theta_{a}) &amp;amp; \cos^{2}(\theta_{a})
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Let
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \theta_{ab} &amp;amp;\equiv \theta_{a} - \theta_{b} &amp;amp; \theta_{ac} &amp;amp;\equiv \theta_{a} - \theta_{c} &amp;amp;\theta_{bc} &amp;amp;\equiv \theta_{b} - \theta_{c}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Then, for example:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \langle C_{0} \vert A_{0} \rangle &amp;amp;= \cos(\theta_{c})\cos(\theta_{a}) + \sin(\theta_{c}) \sin(\theta_{a}) = \cos(\theta_{ac}) \\
+    \langle C_{0} \vert A_{1} \rangle &amp;amp;= \cos(\theta_{c})\sin(\theta_{a}) - \sin(\theta_{c}) \cos(\theta_{a}) = \sin(\theta_{ac}) \\
+    \langle C_{1} \vert A_{0} \rangle &amp;amp;= \sin(\theta_{c})\cos(\theta_{a}) - \cos(\theta_{c}) \sin(\theta_{a}) = -\sin(\theta_{ac}) \\
+    \langle C_{1} \vert A_{1} \rangle &amp;amp;= \sin(\theta_{c})\sin(\theta_{a}) + \cos(\theta_{c}) \cos(\theta_{a}) = \cos(\theta_{ac})
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+We are going to consider three scenarios where Ann and Bob share a message and Eve eavesdrops:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Eve does not eavesdrops&lt;/li&gt;
+&lt;li&gt;Eve eavesdrops with a random choice of basis &lt;span class="math"&gt;\(A\)&lt;/span&gt; or &lt;span class="math"&gt;\(B\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Eve eavesdrops with basis &lt;span class="math"&gt;\(C\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In this post we will go over scenario 3, where Eve eavesdrops with basis &lt;span class="math"&gt;\(C\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Ann flips a fair coin and chooses an encoding basis from &lt;span class="math"&gt;\(A\)&lt;/span&gt; or &lt;span class="math"&gt;\(B\)&lt;/span&gt;. Bob flips another coin and chooses a decoding basis from &lt;span class="math"&gt;\(A\)&lt;/span&gt; or &lt;span class="math"&gt;\(B\)&lt;/span&gt;. If they do not make the same basis choice, they discard that event. Eve always uses the same eavesdropping basis (&lt;span class="math"&gt;\(C\)&lt;/span&gt;). Now there are two possible events:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ann encodes with &lt;span class="math"&gt;\(A\)&lt;/span&gt;, Eve eavesdrops with &lt;span class="math"&gt;\(C\)&lt;/span&gt;, Bob decodes with &lt;span class="math"&gt;\(A\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Ann encodes with &lt;span class="math"&gt;\(B\)&lt;/span&gt;, Eve eavesdrops with &lt;span class="math"&gt;\(C\)&lt;/span&gt;, Bob decodes with &lt;span class="math"&gt;\(B\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Consider event 1. Ann prepares the state &lt;span class="math"&gt;\(\lvert A_{0} \rangle\)&lt;/span&gt;. The density matrix is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \rho = \lvert A_{0} \rangle \langle A_{0} \rvert
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Then Eve eavesdrops with the &lt;span class="math"&gt;\(C\)&lt;/span&gt; basis. The probability that Eve gets &lt;span class="math"&gt;\(\lvert C_{0} \rangle\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p(C_{0} \vert \rho) = \langle C_{0} \vert \rho \vert C_{0} \rangle = \langle C_{0} \vert A_{0} \rangle \langle A_{0} \vert C_{0} \rangle = \cos^{2}(\theta_{ac})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+After the measurement, the density matrix is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \rho_{0} = \lvert C_{0} \rangle \langle C_{0} \rvert
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The probability that Eve gets &lt;span class="math"&gt;\(\lvert C_{1} \rangle\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p(C_{1} \vert \rho) = \langle C_{1} \vert \rho \vert C_{1} \rangle = \langle C_{1} \vert A_{0} \rangle \langle A_{0} \vert C_{1} \rangle = \sin^{2}(\theta_{ac})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Right after the measurement, the density matrix is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \rho_{1} = \lvert C_{1} \rangle \langle C_{1} \rvert
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Thus, the density matrix that Bob receives is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \rho = \cos^{2}(\theta_{ac}) \lvert C_{0} \rangle \langle C_{0} \rvert + \sin^{2}(\theta_{ac}) \lvert C_{1} \rangle \langle C_{1} \rvert
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Bob then decodes with the &lt;span class="math"&gt;\(A\)&lt;/span&gt; basis. The probability that Bob gets &lt;span class="math"&gt;\(\lvert A_{0} \rangle\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p(A_{0} \vert \rho) = \langle A_{0} \vert \rho \vert A_{0} \rangle = \cos^{4}(\theta_{ac}) + \sin^{4}(\theta_{ac})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The probability that Bob gets &lt;span class="math"&gt;\(\lvert A_{1} \rangle\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p(A_{1} \vert \rho) = \langle A_{1} \vert \rho \vert A_{1} \rangle = 2\cos^{2}(\theta_{ac}) \sin^{2}(\theta_{ac})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Thus, the probability of success for event 1 is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p_{1} = \cos^{4}(\theta_{ac}) + \sin^{4}(\theta_{ac})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+In a very similar manner, you can show that the probability of success for event 2 is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p_{2} = \cos^{4}(\theta_{bc}) + \sin^{4}(\theta_{bc})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Thus, the overall probability of success is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    P = \frac{p_{1} + p_{2}}{2} = \frac{\cos^{4}(\theta_{ac}) + \sin^{4}(\theta_{ac}) + \cos^{4}(\theta_{bc}) + \sin^{4}(\theta_{bc})}{2}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+(Yet again, we have assumed that there is no noise.)&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.3x"></category></entry><entry><title>Ann, Bob, and Eve 2</title><link href="https://meirizarrygelpi.github.io/posts/physics/ann-bob-and-eve-2/" rel="alternate"></link><published>2018-05-10T13:24:34-04:00</published><updated>2018-05-10T13:24:34-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-05-10:/posts/physics/ann-bob-and-eve-2/</id><summary type="html">&lt;p&gt;Ann and Bob share a secret, but Eve is eavesdropping.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ann has two ortho-normal bases at her disposal for &lt;strong&gt;encoding&lt;/strong&gt; cbits into qbits:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert A_{0} \rangle &amp;amp;= \cos(\theta_{a}) \lvert 0 \rangle - \sin(\theta_{a}) \lvert 1 \rangle &amp;amp; \lvert A_{1} \rangle &amp;amp;= \sin(\theta_{a}) \lvert 0 \rangle + \cos(\theta_{a}) \lvert 1 \rangle \\
+    \lvert B_{0} \rangle &amp;amp;= \cos(\theta_{b}) \lvert 0 \rangle - \sin(\theta_{b}) \lvert 1 \rangle &amp;amp; \lvert B_{1} \rangle &amp;amp;= \sin(\theta_{b}) \lvert 0 \rangle + \cos(\theta_{b}) \lvert 1 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that for &lt;span class="math"&gt;\(\theta_{a} = 0\)&lt;/span&gt;, the &lt;span class="math"&gt;\(A\)&lt;/span&gt; basis becomes
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert A_{0} \rangle &amp;amp;= \lvert 0 \rangle &amp;amp; \lvert A_{1} \rangle &amp;amp;= \lvert 1 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+and for &lt;span class="math"&gt;\(\theta_{b} = \pi/4\)&lt;/span&gt;, the &lt;span class="math"&gt;\(B\)&lt;/span&gt; basis becomes
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert B_{0} \rangle &amp;amp;= \lvert {-} \rangle &amp;amp; \lvert B_{1} \rangle &amp;amp;= \lvert {+} \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Bob uses these two bases for &lt;strong&gt;decoding&lt;/strong&gt;. Eve can use a third ortho-normal basis:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert C_{0} \rangle &amp;amp;= \cos(\theta_{c}) \lvert 0 \rangle - \sin(\theta_{c}) \lvert 1 \rangle &amp;amp; \lvert C_{1} \rangle &amp;amp;= \sin(\theta_{c}) \lvert 0 \rangle + \cos(\theta_{c}) \lvert 1 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You can check that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert A_{0} \rangle \langle A_{0} \rvert &amp;amp;= \begin{bmatrix}
+        \cos^{2}(\theta_{a}) &amp;amp; -\cos(\theta_{a}) \sin(\theta_{a}) \\
+        -\cos(\theta_{a}) \sin(\theta_{a}) &amp;amp; \sin^{2}(\theta_{a})
+    \end{bmatrix} \\
+    \lvert A_{1} \rangle \langle A_{1} \rvert &amp;amp;= \begin{bmatrix}
+        \sin^{2}(\theta_{a}) &amp;amp; \cos(\theta_{a}) \sin(\theta_{a}) \\
+        \cos(\theta_{a}) \sin(\theta_{a}) &amp;amp; \cos^{2}(\theta_{a})
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Let
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \theta_{ab} &amp;amp;\equiv \theta_{a} - \theta_{b} &amp;amp; \theta_{ac} &amp;amp;\equiv \theta_{a} - \theta_{c} &amp;amp;\theta_{bc} &amp;amp;\equiv \theta_{b} - \theta_{c}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Then, for example:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \langle C_{0} \vert A_{0} \rangle &amp;amp;= \cos(\theta_{c})\cos(\theta_{a}) + \sin(\theta_{c}) \sin(\theta_{a}) = \cos(\theta_{ac}) \\
+    \langle C_{0} \vert A_{1} \rangle &amp;amp;= \cos(\theta_{c})\sin(\theta_{a}) - \sin(\theta_{c}) \cos(\theta_{a}) = \sin(\theta_{ac}) \\
+    \langle C_{1} \vert A_{0} \rangle &amp;amp;= \sin(\theta_{c})\cos(\theta_{a}) - \cos(\theta_{c}) \sin(\theta_{a}) = -\sin(\theta_{ac}) \\
+    \langle C_{1} \vert A_{1} \rangle &amp;amp;= \sin(\theta_{c})\sin(\theta_{a}) + \cos(\theta_{c}) \cos(\theta_{a}) = \cos(\theta_{ac})
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+We are going to consider three scenarios where Ann and Bob share a message and Eve eavesdrops:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Eve does not eavesdrops&lt;/li&gt;
+&lt;li&gt;Eve eavesdrops with a random choice of basis &lt;span class="math"&gt;\(A\)&lt;/span&gt; or &lt;span class="math"&gt;\(B\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Eve eavesdrops with basis &lt;span class="math"&gt;\(C\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In this post we will go over scenario 2, where Eve eavesdrops with a random choice of basis &lt;span class="math"&gt;\(A\)&lt;/span&gt; or &lt;span class="math"&gt;\(B\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Ann flips a fair coin and chooses an encoding basis from &lt;span class="math"&gt;\(A\)&lt;/span&gt; or &lt;span class="math"&gt;\(B\)&lt;/span&gt;. Bob flips another coin and chooses a decoding basis from &lt;span class="math"&gt;\(A\)&lt;/span&gt; or &lt;span class="math"&gt;\(B\)&lt;/span&gt;. If they do not make the same basis choice, they discard that event. Eve also flips a coin and chooses an eavesdropping basis from &lt;span class="math"&gt;\(A\)&lt;/span&gt; or &lt;span class="math"&gt;\(B\)&lt;/span&gt;. Now there are four possible events:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ann encodes with &lt;span class="math"&gt;\(A\)&lt;/span&gt;, Eve eavesdrops with &lt;span class="math"&gt;\(A\)&lt;/span&gt;, Bob decodes with &lt;span class="math"&gt;\(A\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Ann encodes with &lt;span class="math"&gt;\(A\)&lt;/span&gt;, Eve eavesdrops with &lt;span class="math"&gt;\(B\)&lt;/span&gt;, Bob decodes with &lt;span class="math"&gt;\(A\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Ann encodes with &lt;span class="math"&gt;\(B\)&lt;/span&gt;, Eve eavesdrops with &lt;span class="math"&gt;\(A\)&lt;/span&gt;, Bob decodes with &lt;span class="math"&gt;\(B\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Ann encodes with &lt;span class="math"&gt;\(B\)&lt;/span&gt;, Eve eavesdrops with &lt;span class="math"&gt;\(B\)&lt;/span&gt;, Bob decodes with &lt;span class="math"&gt;\(B\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For events 1 and 4, the probability that Bob successfully decodes the qubit that Ann encoded is 1:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p_{4} = p_{1} = 1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+However, when Eve uses a basis for eavesdropping that is different from the encoding/decoding basis, the probability of success is less than 1.&lt;/p&gt;
+&lt;p&gt;Consider event 2. Ann prepares the state &lt;span class="math"&gt;\(\lvert A_{0} \rangle\)&lt;/span&gt;. The density matrix is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \rho = \lvert A_{0} \rangle \langle A_{0} \rvert
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Then Eve eavesdrops with the &lt;span class="math"&gt;\(B\)&lt;/span&gt; basis. The probability that Eve gets &lt;span class="math"&gt;\(\lvert B_{0} \rangle\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p(B_{0} \vert \rho) = \langle B_{0} \vert \rho \vert B_{0} \rangle = \langle B_{0} \vert A_{0} \rangle \langle A_{0} \vert B_{0} \rangle = \cos^{2}(\theta_{ab})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+After the measurement, the density matrix is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \rho_{0} = \lvert B_{0} \rangle \langle B_{0} \rvert
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The probability that Eve gets &lt;span class="math"&gt;\(\lvert B_{1} \rangle\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p(B_{1} \vert \rho) = \langle B_{1} \vert \rho \vert B_{1} \rangle = \langle B_{1} \vert A_{0} \rangle \langle A_{0} \vert B_{1} \rangle = \sin^{2}(\theta_{ab})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Right after the measurement, the density matrix is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \rho_{1} = \lvert B_{1} \rangle \langle B_{1} \rvert
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Thus, the density matrix that Bob receives is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \rho = \cos^{2}(\theta_{ab}) \lvert B_{0} \rangle \langle B_{0} \rvert + \sin^{2}(\theta_{ab}) \lvert B_{1} \rangle \langle B_{1} \rvert
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Bob then decodes with the &lt;span class="math"&gt;\(A\)&lt;/span&gt; basis. The probability that Bob gets &lt;span class="math"&gt;\(\lvert A_{0} \rangle\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p(A_{0} \vert \rho) = \langle A_{0} \vert \rho \vert A_{0} \rangle = \cos^{4}(\theta_{ab}) + \sin^{4}(\theta_{ab})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The probability that Bob gets &lt;span class="math"&gt;\(\lvert A_{1} \rangle\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p(A_{1} \vert \rho) = \langle A_{1} \vert \rho \vert A_{1} \rangle = 2\cos^{2}(\theta_{ab}) \sin^{2}(\theta_{ab})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+A similar argument holds true for the case of Ann sending &lt;span class="math"&gt;\(\lvert A_{1} \rangle\)&lt;/span&gt;. Thus, the probability of success in event 2 is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p_{2} = \cos^{4}(\theta_{ab}) + \sin^{4}(\theta_{ab})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+A similar argument shows that the probability of success in event 3 is the same:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p_{3} = p_{2} = \cos^{4}(\theta_{ab}) + \sin^{4}(\theta_{ab})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Thus, the overall probability of success is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    P = \frac{p_{1} + p_{2} + p_{3} + p_{4}}{4} = \frac{1 + \cos^{4}(\theta_{ab}) + \sin^{4}(\theta_{ab})}{2}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+(Again, we have assumed that there is no noise.)&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.3x"></category></entry><entry><title>Ann, Bob, and Eve 1</title><link href="https://meirizarrygelpi.github.io/posts/physics/ann-bob-and-eve-1/" rel="alternate"></link><published>2018-05-10T12:45:06-04:00</published><updated>2018-05-10T12:45:06-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-05-10:/posts/physics/ann-bob-and-eve-1/</id><summary type="html">&lt;p&gt;Ann and Bob share a secret with no eavesdropper.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ann has two ortho-normal bases at her disposal for &lt;strong&gt;encoding&lt;/strong&gt; cbits into qbits:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert A_{0} \rangle &amp;amp;= \cos(\theta_{a}) \lvert 0 \rangle - \sin(\theta_{a}) \lvert 1 \rangle &amp;amp; \lvert A_{1} \rangle &amp;amp;= \sin(\theta_{a}) \lvert 0 \rangle + \cos(\theta_{a}) \lvert 1 \rangle \\
+    \lvert B_{0} \rangle &amp;amp;= \cos(\theta_{b}) \lvert 0 \rangle - \sin(\theta_{b}) \lvert 1 \rangle &amp;amp; \lvert B_{1} \rangle &amp;amp;= \sin(\theta_{b}) \lvert 0 \rangle + \cos(\theta_{b}) \lvert 1 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Note that for &lt;span class="math"&gt;\(\theta_{a} = 0\)&lt;/span&gt;, the &lt;span class="math"&gt;\(A\)&lt;/span&gt; basis becomes
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert A_{0} \rangle &amp;amp;= \lvert 0 \rangle &amp;amp; \lvert A_{1} \rangle &amp;amp;= \lvert 1 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+and for &lt;span class="math"&gt;\(\theta_{b} = \pi/4\)&lt;/span&gt;, the &lt;span class="math"&gt;\(B\)&lt;/span&gt; basis becomes
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert B_{0} \rangle &amp;amp;= \lvert {-} \rangle &amp;amp; \lvert B_{1} \rangle &amp;amp;= \lvert {+} \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Bob uses these two bases for &lt;strong&gt;decoding&lt;/strong&gt;. Eve can use a third ortho-normal basis:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert C_{0} \rangle &amp;amp;= \cos(\theta_{c}) \lvert 0 \rangle - \sin(\theta_{c}) \lvert 1 \rangle &amp;amp; \lvert C_{1} \rangle &amp;amp;= \sin(\theta_{c}) \lvert 0 \rangle + \cos(\theta_{c}) \lvert 1 \rangle
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+You can check that
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \lvert A_{0} \rangle \langle A_{0} \rvert &amp;amp;= \begin{bmatrix}
+        \cos^{2}(\theta_{a}) &amp;amp; -\cos(\theta_{a}) \sin(\theta_{a}) \\
+        -\cos(\theta_{a}) \sin(\theta_{a}) &amp;amp; \sin^{2}(\theta_{a})
+    \end{bmatrix} \\
+    \lvert A_{1} \rangle \langle A_{1} \rvert &amp;amp;= \begin{bmatrix}
+        \sin^{2}(\theta_{a}) &amp;amp; \cos(\theta_{a}) \sin(\theta_{a}) \\
+        \cos(\theta_{a}) \sin(\theta_{a}) &amp;amp; \cos^{2}(\theta_{a})
+    \end{bmatrix}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Let
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \theta_{ab} &amp;amp;\equiv \theta_{a} - \theta_{b} &amp;amp; \theta_{ac} &amp;amp;\equiv \theta_{a} - \theta_{c} &amp;amp;\theta_{bc} &amp;amp;\equiv \theta_{b} - \theta_{c}
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+Then, for example:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{align*}
+    \langle C_{0} \vert A_{0} \rangle &amp;amp;= \cos(\theta_{c})\cos(\theta_{a}) + \sin(\theta_{c}) \sin(\theta_{a}) = \cos(\theta_{ac}) \\
+    \langle C_{0} \vert A_{1} \rangle &amp;amp;= \cos(\theta_{c})\sin(\theta_{a}) - \sin(\theta_{c}) \cos(\theta_{a}) = \sin(\theta_{ac}) \\
+    \langle C_{1} \vert A_{0} \rangle &amp;amp;= \sin(\theta_{c})\cos(\theta_{a}) - \cos(\theta_{c}) \sin(\theta_{a}) = -\sin(\theta_{ac}) \\
+    \langle C_{1} \vert A_{1} \rangle &amp;amp;= \sin(\theta_{c})\sin(\theta_{a}) + \cos(\theta_{c}) \cos(\theta_{a}) = \cos(\theta_{ac})
+\end{align*}&lt;/div&gt;
+&lt;p&gt;
+We are going to consider three scenarios where Ann and Bob share a message and Eve eavesdrops:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Eve does not eavesdrops&lt;/li&gt;
+&lt;li&gt;Eve eavesdrops with a random choice of basis &lt;span class="math"&gt;\(A\)&lt;/span&gt; or &lt;span class="math"&gt;\(B\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Eve eavesdrops with basis &lt;span class="math"&gt;\(C\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In this post we will go over scenario 1, where Eve does not eavesdrops.&lt;/p&gt;
+&lt;p&gt;Ann flips a fair coin and chooses an encoding basis from &lt;span class="math"&gt;\(A\)&lt;/span&gt; or &lt;span class="math"&gt;\(B\)&lt;/span&gt;. Bob flips another coin and chooses a decoding basis from &lt;span class="math"&gt;\(A\)&lt;/span&gt; or &lt;span class="math"&gt;\(B\)&lt;/span&gt;. If they do not make the same basis choice, they discard that event. Otherwise, there are two possible events:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ann encodes with basis &lt;span class="math"&gt;\(A\)&lt;/span&gt;, Bob decodes with basis &lt;span class="math"&gt;\(A\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Ann encodes with basis &lt;span class="math"&gt;\(B\)&lt;/span&gt;, Bob decodes with basis &lt;span class="math"&gt;\(B\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Lets consider the first event. Ann can send Bob the state &lt;span class="math"&gt;\(\lvert A_{0} \rangle\)&lt;/span&gt;. The density matrix is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \rho = \lvert A_{0} \rangle \langle A_{0} \rvert
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Bob receives this density matrix and uses the &lt;span class="math"&gt;\(A\)&lt;/span&gt; basis for decoding. The probability that Bob measures the state &lt;span class="math"&gt;\(\lvert A_{0} \rangle\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p(A_{0} \vert \rho ) = \langle A_{0} \vert \rho \vert A_{0} \rangle = 1
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+and the probability that Bob measures the state &lt;span class="math"&gt;\(\lvert A_{1} \rangle\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    p(A_{1} \vert \rho ) = \langle A_{1} \vert \rho \vert A_{1} \rangle = 0
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Thus, the probability that Bob successfully decodes the state that Ann encoded is 1. A similar argument holds when Ann sends Bob the &lt;span class="math"&gt;\(\lvert A_{1} \rangle\)&lt;/span&gt; state: Bob will successfully decode the state with probability 1.&lt;/p&gt;
+&lt;p&gt;The same story follows for event 2. Thus, as long as Ann and Bob use the same basis for encoding and decoding, they will always agree on the message. (We have assumed that there is no noise.)&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="8.370.3x"></category></entry><entry><title>Hadamard Eigen-Basis</title><link href="https://meirizarrygelpi.github.io/posts/physics/hadamard-eigen-basis/" rel="alternate"></link><published>2018-05-10T10:04:02-04:00</published><updated>2018-05-10T10:04:02-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-05-10:/posts/physics/hadamard-eigen-basis/</id><summary type="html">&lt;p&gt;A short note on the eigen-basis for the single-qubit Hadamard gate.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Hadamard gate &lt;span class="math"&gt;\(H\)&lt;/span&gt; is given by
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation*}
     H = \frac{1}{\sqrt{2}} \begin{bmatrix}
