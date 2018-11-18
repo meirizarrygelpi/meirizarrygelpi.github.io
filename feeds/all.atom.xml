@@ -2865,7 +2865,7 @@ Both of these cubic identities describe curves in 3-dimensional space. It turns 
 &lt;div class="math"&gt;\begin{align*}
     p_{0}(z) q_{0}(z) + p_{1}(z) q_{2}(z) - p_{2}(z)q_{1}(z) &amp;amp;= 1 \\
     p_{0}(z) q_{1}(z) - p_{1}(z) q_{0}(z) - p_{2}(z)q_{2}(z) &amp;amp;= 0 \\
-    p_{0}(z) q_{2}(z) - p_{1}(z) q_{1}(z) - p_{2}(z)q_{0}(z) &amp;amp;= 0
+    p_{0}(z) q_{2}(z) - p_{1}(z) q_{1}(z) + p_{2}(z)q_{0}(z) &amp;amp;= 0
 \end{align*}&lt;/div&gt;
 &lt;p&gt;
 These bilinear relations can be solved to write the &lt;span class="math"&gt;\(q\)&lt;/span&gt;-functions in terms of the &lt;span class="math"&gt;\(p\)&lt;/span&gt;-functions:
