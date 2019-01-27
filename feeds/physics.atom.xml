@@ -1,5 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2018-05-10T13:43:22-04:00</updated><entry><title>Ann, Bob, and Eve 3</title><link href="https://meirizarrygelpi.github.io/posts/physics/ann-bob-and-eve-3/" rel="alternate"></link><published>2018-05-10T13:43:22-04:00</published><updated>2018-05-10T13:43:22-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-05-10:/posts/physics/ann-bob-and-eve-3/</id><summary type="html">&lt;p&gt;Ann and Bob share a secret, and Eve uses a different eavesdropping method.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ann has two ortho-normal bases at her disposal for &lt;strong&gt;encoding&lt;/strong&gt; cbits into qbits:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2019-01-27T07:23:15-05:00</updated><entry><title>Dipole Interactions</title><link href="https://meirizarrygelpi.github.io/posts/physics/dipole-interactions/" rel="alternate"></link><published>2019-01-27T07:23:15-05:00</published><updated>2019-01-27T07:23:15-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2019-01-27:/posts/physics/dipole-interactions/</id><summary type="html">&lt;p&gt;Interaction terms for monopoles and dipoles.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The scalar potential due to a static electric monopole is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \phi = \frac{1}{4 \pi \epsilon_{0}} \frac{e}{r}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(e\)&lt;/span&gt; is the electric monopole moment. The electric field due to a static electric monopole is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \mathbf{E} \equiv -\nabla \phi = \frac{1}{4 \pi \epsilon_{0}} \frac{e \mathbf{r}}{r^{3}}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The scalar potential due to a static electric dipole is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \phi = \frac{1}{4 \pi \epsilon_{0}} \frac{\mathbf{f} \cdot \mathbf{r}}{r^{3}}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Here &lt;span class="math"&gt;\(\mathbf{f}\)&lt;/span&gt; is the electric dipole moment. The electric field due to a static electric dipole is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    \mathbf{E} \equiv - \nabla \phi = \frac{1}{4 \pi \epsilon_{0}} \frac{3 (\mathbf{f} \cdot \mathbf{r}) \mathbf{r}}{r^{5}} - \frac{1}{4 \pi \epsilon_{0}} \frac{\mathbf{f}}{r^{3}} - \frac{1}{3 \epsilon_{0}} \mathbf{f} \delta(\mathbf{r})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+The energy associated to the interaction of an electric monopole with an external scalar potential is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U = - e \phi
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Similarly, the energy associated to the interaction of an electric dipole with an external electric field is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U = - \mathbf{f} \cdot \mathbf{E}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Consider three cases.&lt;/p&gt;
+&lt;h2&gt;Monopole-Monopole&lt;/h2&gt;
+&lt;p&gt;The interaction energy between two electric monopoles is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U_{12} = -e_{1} \phi_{2} = -e_{2} \phi_{1} = - \frac{1}{4 \pi \epsilon_{0}} \frac{e_{1} e_{2}}{r}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+This is the familiar Coulomb potential energy. Note that this energy is invariant under &lt;span class="math"&gt;\(e_{1} \rightarrow -e_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(e_{2} \rightarrow -e_{2}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;Monopole-Dipole&lt;/h2&gt;
+&lt;p&gt;The interaction energy between an electric monopole and an electric dipole is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U_{12} = -e_{1} \phi_{2} = - \mathbf{f}_{2} \cdot \mathbf{E}_{1} = - \frac{1}{4 \pi \epsilon_{0}} \frac{e_{1} (\mathbf{f}_{2} \cdot \mathbf{r})}{r^{3}}
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+Note that this energy is invariant under &lt;span class="math"&gt;\(e_{1} \rightarrow -e_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathbf{f}_{2} \rightarrow -\mathbf{f}_{2}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;Dipole-Dipole&lt;/h2&gt;
+&lt;p&gt;The interaction energy between two electric dipoles is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation*}
+    U_{12} = - \mathbf{f}_{1} \cdot \mathbf{E}_{2} = - \mathbf{f}_{2} \cdot \mathbf{E}_{1} = \frac{1}{4 \pi \epsilon_{0}} \frac{3 (\mathbf{f}_{1} \cdot \mathbf{r}) (\mathbf{f}_{2} \cdot \mathbf{r})}{r^{5}} - \frac{1}{4 \pi \epsilon_{0}} \frac{(\mathbf{f}_{1} \cdot \mathbf{f}_{2})}{r^{3}} - \frac{1}{3 \epsilon_{0}} (\mathbf{f}_{1} \cdot \mathbf{f}_{2}) \delta(\mathbf{r})
+\end{equation*}&lt;/div&gt;
+&lt;p&gt;
+This energy is symmetric in both electric dipole moments. Note that this energy is invariant under &lt;span class="math"&gt;\(\mathbf{f}_{1} \rightarrow -\mathbf{f}_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathbf{f}_{2} \rightarrow -\mathbf{f}_{2}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="dipole"></category></entry><entry><title>Ann, Bob, and Eve 3</title><link href="https://meirizarrygelpi.github.io/posts/physics/ann-bob-and-eve-3/" rel="alternate"></link><published>2018-05-10T13:43:22-04:00</published><updated>2018-05-10T13:43:22-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2018-05-10:/posts/physics/ann-bob-and-eve-3/</id><summary type="html">&lt;p&gt;Ann and Bob share a secret, and Eve uses a different eavesdropping method.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ann has two ortho-normal bases at her disposal for &lt;strong&gt;encoding&lt;/strong&gt; cbits into qbits:
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     \lvert A_{0} \rangle &amp;amp;= \cos(\theta_{a}) \lvert 0 \rangle - \sin(\theta_{a}) \lvert 1 \rangle &amp;amp; \lvert A_{1} \rangle &amp;amp;= \sin(\theta_{a}) \lvert 0 \rangle + \cos(\theta_{a}) \lvert 1 \rangle \\
