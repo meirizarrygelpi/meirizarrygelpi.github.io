@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  CHSH Game 2 | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/chsh-game-2/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="The quantum improvement to the classical CHSH result.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  CHSH Game 2
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-02-04T00:00:00-05:00">
+          <i class="fa fa-clock-o"></i>
+          Sun 04 February 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83701x.html">#8.370.1x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Alice and Bob share a 2-qubit state. That is, a ket <span class="math">\(| \psi \rangle\)</span> of the form
+</p>
+<div class="math">$$| \psi \rangle = a_{00} | 00 \rangle + a_{01} | 01 \rangle + a_{10} | 10 \rangle + a_{11} | 11 \rangle. $$</div>
+<p>
+Just like before, Alice and Bob each get a random bit. Alice gets <span class="math">\(a\)</span> and Bob gets <span class="math">\(b\)</span>. They each use their bit to make a choice of a basis to make a measurement. The basis is ortho-normal, so for Alice it should have the form
+</p>
+<div class="math">$$ |A_{0}(\alpha) \rangle = \cos{(\alpha)} | 0 \rangle + \sin{(\alpha)} | 1 \rangle, \qquad |A_{1}(\alpha) \rangle = \sin{(\alpha)} | 0 \rangle - \cos{(\alpha)} | 1 \rangle; $$</div>
+<p>
+and similarly for Bob:
+</p>
+<div class="math">$$ |B_{0}(\beta) \rangle = \cos{(\beta)} | 0 \rangle + \sin{(\beta)} | 1 \rangle, \qquad |B_{1}(\beta) \rangle = \sin{(\beta)} | 0 \rangle - \cos{(\beta)} | 1 \rangle. $$</div>
+<p>
+If <span class="math">\(a = 0\)</span>, then <span class="math">\(\alpha = \alpha_{0}\)</span>; otherwise <span class="math">\(\alpha = \alpha_{1}\)</span>. Similarly, <span class="math">\(b = 0\)</span>, then <span class="math">\(\beta = \beta_{0}\)</span>; otherwise <span class="math">\(\beta = \beta_{1}\)</span>.</p>
+<p>For future reference, here I record the tensor products:
+</p>
+<div class="math">$$ |A_{0}(\alpha) B_{0}(\beta) \rangle = \cos{(\alpha)} \cos{(\beta)} |00 \rangle + \cos{(\alpha)} \sin{(\beta)} |01 \rangle + \sin{(\alpha)} \cos{(\beta)} |10 \rangle + \sin{(\alpha)} \sin{(\beta)} |11 \rangle $$</div>
+<div class="math">$$ |A_{0}(\alpha) B_{1}(\beta) \rangle = \cos{(\alpha)} \sin{(\beta)} |00 \rangle - \cos{(\alpha)} \cos{(\beta)} |01 \rangle + \sin{(\alpha)} \sin{(\beta)} |10 \rangle - \sin{(\alpha)} \cos{(\beta)} |11 \rangle $$</div>
+<div class="math">$$ |A_{1}(\alpha) B_{0}(\beta) \rangle = \sin{(\alpha)} \cos{(\beta)} |00 \rangle + \sin{(\alpha)} \sin{(\beta)} |01 \rangle - \cos{(\alpha)} \cos{(\beta)} |10 \rangle - \cos{(\alpha)} \sin{(\beta)} |11 \rangle $$</div>
+<div class="math">$$ |A_{1}(\alpha) B_{1}(\beta) \rangle = \sin{(\alpha)} \sin{(\beta)} |00 \rangle - \sin{(\alpha)} \cos{(\beta)} |01 \rangle - \cos{(\alpha)} \sin{(\beta)} |10 \rangle + \cos{(\alpha)} \cos{(\beta)} |11 \rangle $$</div>
+<p>There are four possible outcomes for the bits <span class="math">\((a, b)\)</span> that the referee produces:
+</p>
+<div class="math">$$ (0, 0), \qquad (0, 1), \qquad (1, 0), \qquad (1, 1). $$</div>
+<p>
+Recall that the game is won if the following condition is met:
+</p>
+<div class="math">$$ \operatorname{AND}(a, b) = \operatorname{XOR}(x, y). $$</div>
+<p>
+Let me check each of the possible referee outcomes.</p>
+<p>If <span class="math">\((a, b) = (0, 0)\)</span>, then <span class="math">\(\operatorname{AND}(a, b) = 0\)</span>. In order for <span class="math">\(\operatorname{XOR}(x, y) = 0\)</span> you need either <span class="math">\(x = y = 0\)</span>, or <span class="math">\(x = y = 1\)</span>. Thus, the probability of winning in this case has two contributions:
+</p>
+<div class="math">$$ p_{\text{win}}(0, 0) = \left| \langle A_{0}(\alpha_{0})B_{0}(\beta_{0}) | \psi \rangle \right|^{2} + \left| \langle A_{1}(\alpha_{0})B_{1}(\beta_{0}) | \psi \rangle \right|^{2}. $$</div>
+<p>
+That is, Alice projects along <span class="math">\(|A_{0}(\alpha_{0})\rangle\)</span> if <span class="math">\(x=0\)</span> or along <span class="math">\(|A_{1}(\alpha_{0})\rangle\)</span> if <span class="math">\(x=1\)</span>. Similarly, Bob projects along <span class="math">\(|B_{0}(\beta_{0})\rangle\)</span> if <span class="math">\(y=0\)</span> or along <span class="math">\(|B_{1}(\beta_{0})\rangle\)</span> if <span class="math">\(y=1\)</span>.</p>
+<p>If <span class="math">\((a, b) = (0, 1)\)</span>, then <span class="math">\(\operatorname{AND}(a, b) = 0\)</span>. In order for <span class="math">\(\operatorname{XOR}(x, y) = 0\)</span> you need either <span class="math">\(x = y = 0\)</span>, or <span class="math">\(x = y = 1\)</span>. Thus, the probability of winning in this case has two contributions:
+</p>
+<div class="math">$$ p_{\text{win}}(0, 1) = \left| \langle A_{0}(\alpha_{0})B_{0}(\beta_{1}) | \psi \rangle \right|^{2} + \left| \langle A_{1}(\alpha_{0})B_{1}(\beta_{1}) | \psi \rangle \right|^{2}. $$</div>
+<p>
+If <span class="math">\((a, b) = (1, 0)\)</span>, then <span class="math">\(\operatorname{AND}(a, b) = 0\)</span>. In order for <span class="math">\(\operatorname{XOR}(x, y) = 0\)</span> you need either <span class="math">\(x = y = 0\)</span>, or <span class="math">\(x = y = 1\)</span>. Thus, the probability of winning in this case has two contributions:
+</p>
+<div class="math">$$ p_{\text{win}}(1, 0) = \left| \langle A_{0}(\alpha_{1})B_{0}(\beta_{0}) | \psi \rangle \right|^{2} + \left| \langle A_{1}(\alpha_{1})B_{1}(\beta_{0}) | \psi \rangle \right|^{2}. $$</div>
+<p>
+If <span class="math">\((a, b) = (1, 1)\)</span>, then <span class="math">\(\operatorname{AND}(a, b) = 1\)</span>. In order for <span class="math">\(\operatorname{XOR}(x, y) = 1\)</span> you need either <span class="math">\(x = 0\)</span> and <span class="math">\(y = 1\)</span>, or <span class="math">\(x = 1\)</span> and <span class="math">\(y = 1\)</span>. Thus, the probability of winning in this case has two contributions:
+</p>
+<div class="math">$$ p_{\text{win}}(1, 1) = \left| \langle A_{0}(\alpha_{1})B_{1}(\beta_{1}) | \psi \rangle \right|^{2} + \left| \langle A_{1}(\alpha_{1})B_{0}(\beta_{1}) | \psi \rangle \right|^{2}. $$</div>
+<p>
+The total probability to win is given by adding each of the above terms with an appropriate weight:
+</p>
+<div class="math">$$ p_{\text{win}}(\psi) = \frac{1}{4} \left[ p_{\text{win}}(0, 0) + p_{\text{win}}(0, 1) + p_{\text{win}}(1, 0) + p_{\text{win}}(1, 1) \right]. $$</div>
+<h2>Bell States</h2>
+<p>If the quantum state <span class="math">\(| \psi \rangle\)</span> is one of the four Bell states
+</p>
+<div class="math">$$ | \Phi^{+} \rangle = \frac{1}{\sqrt{2}} \left( |00\rangle + |11\rangle \right), \quad | \Phi^{-} \rangle = \frac{1}{\sqrt{2}} \left( |00\rangle - |11\rangle \right), \quad | \Psi^{+} \rangle = \frac{1}{\sqrt{2}} \left( |01\rangle + |10\rangle \right), \quad | \Psi^{-} \rangle = \frac{1}{\sqrt{2}} \left( |01\rangle - |10\rangle \right); $$</div>
+<p>
+then the probabilities above greatly simplify.</p>
+<p>First, consider <span class="math">\(| \psi \rangle = | \Phi^{+} \rangle\)</span>. Then
+</p>
+<div class="math">$$ p_{\text{win}}(0, 0) = \cos^{2}{(\alpha_{0} - \beta_{0})}, \qquad p_{\text{win}}(0, 1) = \cos^{2}{(\alpha_{0} - \beta_{1})}, $$</div>
+<div class="math">$$ p_{\text{win}}(1, 0) = \cos^{2}{(\alpha_{1} - \beta_{0})}, \qquad p_{\text{win}}(1, 1) = \sin^{2}{(\alpha_{1} - \beta_{1})}; $$</div>
+<p>
+and thus the probability of winning the game is
+</p>
+<div class="math">$$ p_{\text{win}}(\Phi^{+}) = \frac{1}{4} \left[ \cos^{2}{(\alpha_{0} - \beta_{0})} + \cos^{2}{(\alpha_{0} - \beta_{1})} + \cos^{2}{(\alpha_{1} - \beta_{0})} + \sin^{2}{(\alpha_{1} - \beta_{1})} \right]. $$</div>
+<p>
+For the particular values
+</p>
+<div class="math">$$ \begin{pmatrix} \alpha_{0} &amp; \alpha_{1} &amp; \beta_{0} &amp; \beta_{1} \end{pmatrix} = \begin{pmatrix} 0 &amp; \dfrac{\pi}{4} &amp; \dfrac{\pi}{8} &amp; -\dfrac{\pi}{8} \end{pmatrix}; $$</div>
+<p>
+then
+</p>
+<div class="math">$$ p_{\text{win}}(\Phi^{+}) = \frac{1}{2} + \frac{1}{\sqrt{8}} \approx 0.853553390593274. $$</div>
+<p>
+Apparently, this is the largest possible value for the probability of winning. Currently, I am unable to prove this.</p>
+<p>Next, consider the case <span class="math">\(| \psi \rangle = | \Phi^{-} \rangle\)</span>. Then
+</p>
+<div class="math">$$ p_{\text{win}}(0, 0) = \cos^{2}{(\alpha_{0} + \beta_{0})}, \qquad p_{\text{win}}(0, 1) = \cos^{2}{(\alpha_{0} + \beta_{1})}, $$</div>
+<div class="math">$$ p_{\text{win}}(1, 0) = \cos^{2}{(\alpha_{1} + \beta_{0})}, \qquad p_{\text{win}}(1, 1) = \sin^{2}{(\alpha_{1} + \beta_{1})}; $$</div>
+<p>
+and thus the probability of winning the game is
+</p>
+<div class="math">$$ p_{\text{win}}(\Phi^{-}) = \frac{1}{4} \left[ \cos^{2}{(\alpha_{0} + \beta_{0})} + \cos^{2}{(\alpha_{0} + \beta_{1})} + \cos^{2}{(\alpha_{1} + \beta_{0})} + \sin^{2}{(\alpha_{1} + \beta_{1})} \right]. $$</div>
+<p>
+You can see that if you take the probability of winning for <span class="math">\(| \psi \rangle = | \Phi^{+} \rangle\)</span> and replace
+</p>
+<div class="math">$$ \beta_{0} \rightarrow -\beta_{0}, \qquad \beta_{1} \rightarrow -\beta_{1}; $$</div>
+<p>
+then you get the same expression for the probability of winning for <span class="math">\(| \psi \rangle = | \Phi^{-} \rangle\)</span>. That is, for the particular values
+</p>
+<div class="math">$$ \begin{pmatrix} \alpha_{0} &amp; \alpha_{1} &amp; \beta_{0} &amp; \beta_{1} \end{pmatrix} = \begin{pmatrix} 0 &amp; \dfrac{\pi}{4} &amp; -\dfrac{\pi}{8} &amp; \dfrac{\pi}{8} \end{pmatrix}; $$</div>
+<p>
+the probability of winning for <span class="math">\(| \psi \rangle = | \Phi^{-} \rangle\)</span> is maximized.</p>
+<p>Next, consider the case <span class="math">\(| \psi \rangle = | \Psi^{+} \rangle\)</span>. Then
+</p>
+<div class="math">$$ p_{\text{win}}(0, 0) = \sin^{2}{(\alpha_{0} + \beta_{0})}, \qquad p_{\text{win}}(0, 1) = \sin^{2}{(\alpha_{0} + \beta_{1})}, $$</div>
+<div class="math">$$ p_{\text{win}}(1, 0) = \sin^{2}{(\alpha_{1} + \beta_{0})}, \qquad p_{\text{win}}(1, 1) = \cos^{2}{(\alpha_{1} + \beta_{1})}; $$</div>
+<p>
+and thus the probability of winning the game is
+</p>
+<div class="math">$$ p_{\text{win}}(\Psi^{+}) = \frac{1}{4} \left[ \sin^{2}{(\alpha_{0} + \beta_{0})} + \sin^{2}{(\alpha_{0} + \beta_{1})} + \sin^{2}{(\alpha_{1} + \beta_{0})} + \cos^{2}{(\alpha_{1} + \beta_{1})} \right]. $$</div>
+<p>
+You can see that if you take the probability of winning for <span class="math">\(| \psi \rangle = | \Phi^{-} \rangle\)</span> and replace
+</p>
+<div class="math">$$ \alpha_{0} \rightarrow \alpha_{0} + \frac{\pi}{2}, \qquad \alpha_{1} \rightarrow \alpha_{1} + \frac{\pi}{2}; $$</div>
+<p>
+then you get the same expression for the probability of winning for <span class="math">\(| \psi \rangle = | \Psi^{+} \rangle\)</span>. That is, for the particular values
+</p>
+<div class="math">$$ \begin{pmatrix} \alpha_{0} &amp; \alpha_{1} &amp; \beta_{0} &amp; \beta_{1} \end{pmatrix} = \begin{pmatrix} \dfrac{\pi}{2} &amp; \dfrac{3\pi}{4} &amp; -\dfrac{\pi}{8} &amp; \dfrac{\pi}{8} \end{pmatrix}; $$</div>
+<p>
+the probability of winning for <span class="math">\(| \psi \rangle = | \Psi^{+} \rangle\)</span> is maximized.</p>
+<p>Next, consider the case <span class="math">\(| \psi \rangle = | \Psi^{-} \rangle\)</span>. Then
+</p>
+<div class="math">$$ p_{\text{win}}(0, 0) = \sin^{2}{(\alpha_{0} - \beta_{0})}, \qquad p_{\text{win}}(0, 1) = \sin^{2}{(\alpha_{0} - \beta_{1})}, $$</div>
+<div class="math">$$ p_{\text{win}}(1, 0) = \sin^{2}{(\alpha_{1} - \beta_{0})}, \qquad p_{\text{win}}(1, 1) = \cos^{2}{(\alpha_{1} - \beta_{1})}; $$</div>
+<p>
+and thus the probability of winning the game is
+</p>
+<div class="math">$$ p_{\text{win}}(\Psi^{-}) = \frac{1}{4} \left[ \sin^{2}{(\alpha_{0} - \beta_{0})} + \sin^{2}{(\alpha_{0} - \beta_{1})} + \sin^{2}{(\alpha_{1} - \beta_{0})} + \cos^{2}{(\alpha_{1} - \beta_{1})} \right]. $$</div>
+<p>
+You can see that if you take the probability of winning for <span class="math">\(| \psi \rangle = | \Phi^{+} \rangle\)</span> and replace
+</p>
+<div class="math">$$ \alpha_{0} \rightarrow \alpha_{0} + \frac{\pi}{2}, \qquad \alpha_{1} \rightarrow \alpha_{1} + \frac{\pi}{2}; $$</div>
+<p>
+then you get the same expression for the probability of winning for <span class="math">\(| \psi \rangle = | \Psi^{-} \rangle\)</span>. That is, for the particular values
+</p>
+<div class="math">$$ \begin{pmatrix} \alpha_{0} &amp; \alpha_{1} &amp; \beta_{0} &amp; \beta_{1} \end{pmatrix} = \begin{pmatrix} \dfrac{\pi}{2} &amp; \dfrac{3\pi}{4} &amp; \dfrac{\pi}{8} &amp; -\dfrac{\pi}{8} \end{pmatrix}; $$</div>
+<p>
+the probability of winning for <span class="math">\(| \psi \rangle = | \Psi^{-} \rangle\)</span> is maximized.</p>
+<p>Thus, there is a strategy to win the game with a probability larger than the classical 75%.</p>
+<h2>Reference</h2>
+<p>This <a href="https://sergworks.wordpress.com/2016/10/26/chsh-game-in-detail/">blog post</a> helped me understand how to relate the bits given by the referee to the choices made by Alice and Bob.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

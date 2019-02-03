@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  One-Loop Contributions in Scalars Toy Model | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/one-loop-toy/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="One-loop contributions to elastic four-point amplitudes in Scalars Toy Model.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  One-Loop Contributions in Scalars Toy Model
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2015-12-23T08:00:00-05:00">
+          <i class="fa fa-clock-o"></i>
+          Wed 23 December 2015
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/dynamics.html">#dynamics</a>,               <a href="https://meirizarrygelpi.github.io/tag/one-loop.html">#one-loop</a>,               <a href="https://meirizarrygelpi.github.io/tag/scalars.html">#scalars</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p><em>This post is part of a <a href="http://meirizarrygelpi.github.io/pages/few-body-forward-jwkb-dynamics">series</a> on few-body dynamics in the forward-JWKB approximation.</em></p>
+<p>In this post I will enumerate some one-loop contributions to the <em>elastic</em> process
+</p>
+<div class="math">$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{1}(p_{3}) + \Phi_{2}(p_{4}). $$</div>
+<p>
+This process has an associated four-point scattering amplitude in the <a href="http://meirizarrygelpi.github.io/posts/2015/Dec/scalars-toy-model/">Scalars Toy Model</a>. The one-loop contributions are either order <span class="math">\(g^{4}\)</span>, <span class="math">\(h^{4}\)</span>, or <span class="math">\(g^{2} h^{2}\)</span> depending on the kind of intermedia that are being exchanged.</p>
+<h2>Square</h2>
+<p>There are four <strong>square</strong> contributions:
+</p>
+<div class="math">$$ \mathcal{S}_{gg}(x) \equiv g^{4} G_{A}(x_{1} \mid x_{2}) G_{2}(x_{4} \mid x_{2}) G_{A}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$</div>
+<div class="math">$$ \mathcal{S}_{hh}(x) \equiv h^{4} G_{Y}(x_{1} \mid x_{2}) G_{2}(x_{4} \mid x_{2}) G_{Y}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$</div>
+<div class="math">$$ \mathcal{S}_{gh}(x) \equiv g^{2} h^{2} G_{A}(x_{1} \mid x_{2}) G_{2}(x_{4} \mid x_{2}) G_{Y}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$</div>
+<div class="math">$$ \mathcal{S}_{hg}(x) \equiv g^{2} h^{2} G_{Y}(x_{1} \mid x_{2}) G_{2}(x_{4} \mid x_{2}) G_{A}(x_{4} \mid x_{3}) G_{1}(x_{3} \mid x_{1}). $$</div>
+<h2>Twisted Square</h2>
+<p>There are four <strong>twisted square</strong> contributions:
+</p>
+<div class="math">$$ \mathcal{T}_{gg}(x) \equiv g^{4} G_{A}(x_{1} \mid x_{4}) G_{2}(x_{4} \mid x_{2}) G_{A}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$</div>
+<div class="math">$$ \mathcal{T}_{hh}(x) \equiv h^{4} G_{Y}(x_{1} \mid x_{4}) G_{2}(x_{4} \mid x_{2}) G_{Y}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$</div>
+<div class="math">$$ \mathcal{T}_{gh}(x) \equiv g^{2} h^{2} G_{A}(x_{1} \mid x_{4}) G_{2}(x_{4} \mid x_{2}) G_{Y}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}), $$</div>
+<div class="math">$$ \mathcal{T}_{hg}(x) \equiv g^{2} h^{2} G_{Y}(x_{1} \mid x_{4}) G_{2}(x_{4} \mid x_{2}) G_{A}(x_{2} \mid x_{3}) G_{1}(x_{3} \mid x_{1}). $$</div>
+<h2>Vertex Correction</h2>
+<p>There are two sets of four <strong>vertex correction</strong> contributions:
+</p>
+<div class="math">$$ \mathcal{U}_{gg}(x) \equiv g^{4} \delta( x_{4} - x_{2} ) G_{A}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{A}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$</div>
+<div class="math">$$ \mathcal{U}_{hh}(x) \equiv h^{4} \delta( x_{4} - x_{2} ) G_{Y}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{Y}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$</div>
+<div class="math">$$ \mathcal{U}_{gh}(x) \equiv g^{2} h^{2} \delta( x_{4} - x_{2} ) G_{A}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{Y}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right], $$</div>
+<div class="math">$$ \mathcal{U}_{hg}(x) \equiv g^{2} h^{2} \delta( x_{4} - x_{2} ) G_{Y}(x_{1} \mid x_{3}) \int \mathrm{d} y \left[ G_{1}(x_{1} \mid y) G_{A}(x_{2} \mid y) G_{1}(x_{3} \mid y) \right]; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ \mathcal{V}_{gg}(x) \equiv g^{4} \delta( x_{3} - x_{1} ) G_{A}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{A}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$</div>
+<div class="math">$$ \mathcal{V}_{hh}(x) \equiv h^{4} \delta( x_{3} - x_{1} ) G_{Y}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{Y}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$</div>
+<div class="math">$$ \mathcal{V}_{gh}(x) \equiv g^{2} h^{2} \delta( x_{3} - x_{1} ) G_{A}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{Y}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right], $$</div>
+<div class="math">$$ \mathcal{V}_{hg}(x) \equiv g^{2} h^{2} \delta( x_{3} - x_{1} ) G_{Y}(x_{2} \mid x_{4}) \int \mathrm{d} y \left[ G_{2}(x_{2} \mid y) G_{A}(x_{1} \mid y) G_{2}(x_{4} \mid y) \right]. $$</div>
+<h2>Vaccum Polarization</h2>
+<p>There are two sets of four <strong>vaccum polarization</strong> contributions:
+</p>
+<div class="math">$$ \mathcal{X}_{gg}(x) \equiv g^{4} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right], $$</div>
+<div class="math">$$ \mathcal{X}_{hh}(x) \equiv h^{4} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$</div>
+<div class="math">$$ \mathcal{X}_{gh}(x) \equiv g^{2} h^{2} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$</div>
+<div class="math">$$ \mathcal{X}_{hg}(x) \equiv g^{2} h^{2} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{1}(y_{1} \mid y_{2}) G_{1}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right]; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ \mathcal{Y}_{gg}(x) \equiv g^{4} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right], $$</div>
+<div class="math">$$ \mathcal{Y}_{hh}(x) \equiv h^{4} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$</div>
+<div class="math">$$ \mathcal{Y}_{gh}(x) \equiv g^{2} h^{2} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{A}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{Y}(y_{2} \mid x_{2}) \right], $$</div>
+<div class="math">$$ \mathcal{Y}_{hg}(x) \equiv g^{2} h^{2} \delta( x_{3} - x_{1} ) \delta( x_{4} - x_{2} ) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \left[ G_{Y}(x_{1} \mid y_{1}) G_{2}(y_{1} \mid y_{2}) G_{2}(y_{2} \mid y_{1}) G_{A}(y_{2} \mid x_{2}) \right]. $$</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Lecture Notes from Stat2.1x | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/notes/stat21x/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/notes.atom.xml">  
+  <meta name="description" content="My lecture notes from stat2.1x on edX.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Lecture Notes from Stat2.1x
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2016-03-23T00:00:00-04:00">
+          <i class="fa fa-clock-o"></i>
+          Wed 23 March 2016
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/notes.html">Notes</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/statistics.html">#statistics</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>These are my lecture notes from a MOOC I took some time ago on statistics. It is very embarrassing to admit that, as a holder of a doctorate in theoretical physics, I know very little statistics. Or more like I have learned some in the past and have forgotten most about it. It is interesting to try to learn something basic now, with all the mathematical maturity I have acquire over the years. This post is based on this <a href="https://www.dropbox.com/s/02bc8pbp39rbe0i/stat21xNotes.pdf?dl=0">.pdf</a> file.</p>
+<h2>Introduction</h2>
+<p>In this section I introduce variables and their different types. I also introduce a graphical way to describe a single categorical variable.</p>
+<h3>Terminology</h3>
+<p>A <strong>variable</strong> is a value or characteristic that can be different from individual to individual. One can have <strong>quantitative variables</strong> which have numerical values, often with units of measurements. Quantitative variables can be</p>
+<ul>
+<li><strong>continuous</strong>: values can be arbitrarily close to each other.</li>
+<li><strong>discrete</strong>: values are separated from each other by a fixed amount.</li>
+</ul>
+<p>One can also have <strong>qualitative</strong> or <strong>categorical</strong> variables which have values that have no particular order or ranking in relation to each other. Some example of qualitative variables are: favorite color, gender, nationality, etc. However there are <strong>qualitative ordinal</strong> variables that do not have numerical values but have a natural order or ranking. For example, the temperature can be low, medium or high.</p>
+<h3>Bar Graphs</h3>
+<p>A <strong>bar graph</strong> is a common way of graphically describing a categorical variable. One draws a bar for every value of the category. The human eye is good at comparing areas. In order to have an accurate reading of a bar graph it is important that each rectangular bar have the <strong>correct area</strong>. By keeping the width of the bars equal one ensures that not only the height but also the area of each bar is proportional to the number of individuals in that category. A good bar graph gives you an accurate reading of the relative proportions in each category (the percents).</p>
+<h2>Histograms</h2>
+<p>In this section I introduce the histogram which is a graphical device to visualize the distribution of a quantitative variable, analogous to the bar graph used for a qualitative variable.</p>
+<h3>Stem and Leaf Plot</h3>
+<p>Consider the following data set:
+</p>
+<div class="math">$$ 48, \qquad 59, \qquad 63, \qquad 63, \qquad 63, \qquad 67. $$</div>
+<p>
+More compactly, you can arrange it as
+</p>
+<div class="math">$$ \begin{split}
+    4 \; &amp;| \; 8 \\
+    5 \; &amp;| \; 9 \\
+    6 \; &amp;| \; 3 3 3 7
+\end{split} $$</div>
+<p>
+This is called a <strong>stem and leaf plot</strong>. This type of graphical representation is useful when the range of the data is relatively small. It retains all the data, which is not necessarily a good thing.</p>
+<h3>Drawing Histograms</h3>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Annual Income of U.S. Adults in 2010 (thousands of dollars)</th>
+      <th>Percent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0 - 10</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>10 - 25</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>25 - 50</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>50 - 100</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>100 - 150</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In the table above you have the distribution of annual incomes of U.S. adults in the year 2010. Whenever you are presented data in this way you need to know the <strong>endpoint convention</strong>: whether the income intervals contain the left endpoint but not the right, or the right endpoint but not the left. In this particular example the left endpoint convention was used. The percent of people that earn more than $150,000 is very small and has been <strong>swept in</strong> the last interval.</p>
+<p>We would like to use something like a bar graph to show how the incomes are distributed. But notice how each income interval has a different size. This means that we should not be using the percentages as the heights of our bars. Indeed, the <strong>area</strong> of each bar should correspond to the <strong>percentage</strong> in that interval. Since the bar is a rectangle, we have
+</p>
+<div class="math">$$ \text{area} = \text{length} \times \text{width}. $$</div>
+<p>
+The size of the first interval in the table above is $10,000 and it contains 20% of the data. Thus the height of the bar for this interval is 2% per thousand dollar. Using this type of bar leads to a graphical representation of the data that is called a <strong>histogram</strong>. A histogram shows how a quantitative variable is distributed over all its values.</p>
+<h3>Units and Density</h3>
+<p>It is important to specify the <strong>units</strong> along the horizontal axis in a histogram. Note that the vertical axis does not measure percents. The vertical axis measures individual percent per unit which is a <strong>density</strong>.</p>
+<p>Sometimes one can use the assumption that inside each bar of a histogram the percent is uniformly distributed over the interval. This assumption is more reliable for the bars with smaller widths than for the bars with larger widths.</p>
+<h3>Percentiles</h3>
+<p>The <strong>median</strong> is the halfway point in the data set. It is also known as the <strong>50th percentile</strong>. For example, consider the list
+</p>
+<div class="math">$$ 0, \qquad 2, \qquad 4, \qquad 7, \qquad 7. $$</div>
+<p>
+There are five values, so the median is the third value which is 4. If we add another value to this list, we end up with six values which does not have a clear halfway point. We deal with this ambiguity by defining the <span class="math">\(p\)</span><strong>-th percentile</strong> of a list of numbers as the <em>smallest</em> number that is at least as large as <span class="math">\(p\)</span>% of the list. For example, 2 is the 40th percentile, 4 is the 60th percentile and 7 is the 80th percentile of the list. Thus 4 is also the 50th percentile.</p>
+<p>The 25th percentile is also known as the <strong>lower quartile</strong> and the 75th percentile is also know as the <strong>upper quartile</strong>. The interval between the 25th percentile and the 75th percentile is known as the <strong>interquartile range</strong>. Note that the interquartile range contains 50% of the data.</p>
+<h2>Measures of Location</h2>
+<p>In this section I introduce the average and its properties. I also discuss Markov's inequality.</p>
+<h3>Median and Mode</h3>
+<p>Given a data set, one sometimes would like to know roughly where is the distribution located (i.e. along the histogram). We have already seen that the <strong>median</strong> describes the halfway point of the data: 50% of the data is before the median and 50% of the data is after the median. The median measures a sort of center value of the distribution. Another important measure is the <strong>mode</strong> which corresponds to the value(s) that has the largest frequency. One can have more than one mode, which means that the histogram will have many high peaks. A <strong>unimodal distribution</strong> is a distribution that has only one peak.</p>
+<h3>Average</h3>
+<p>Consider a list of <span class="math">\(N\)</span> numbers <span class="math">\(x_{j}\)</span>. The <strong>average</strong> of the list (also know as the <strong>mean</strong>) is denoted by <span class="math">\(\mu_{x}\)</span> and is defined as
+</p>
+<div class="math">$$ \mu_{x} \equiv \frac{1}{N} \sum_{j = 1}^{N} x_{j}. $$</div>
+<p>
+Note that the average carries the same units as the numbers <span class="math">\(x_{j}\)</span> in the list.</p>
+<p>Some properties of the average:</p>
+<ul>
+<li>It is not true that half of the numbers in the list are below average and half are above average. That is, in general the average is not equal to the median.</li>
+<li>In general, the average might not be equal to any of the numbers in the list.</li>
+<li>The average does not correspond to a possible value of the variable being measured.</li>
+<li>One should not round the value of the average in order to obtain a whole unit.</li>
+</ul>
+<p>One way to understand the meaning of the average is as a <strong>smoother</strong>: it tells you how much value each individual has to contribute to the data in order for each contribution to be equal.</p>
+<p>If one of the numbers in the list is changed, say by adding an amount <span class="math">\(C\)</span>, the average of that list is changed. One does not need to know which entry is changed, the net result is that the sum of the entries increases by <span class="math">\(C\)</span>. Thus the value of the average becomes
+</p>
+<div class="math">$$ \mu \rightarrow \mu + \frac{C}{N}. $$</div>
+<p>
+The interpretation of this change is that one takes the amount <span class="math">\(C\)</span> and divides it into <span class="math">\(N\)</span> equal parts.</p>
+<h4>Comparing Averages</h4>
+<p>A <strong>longitudinal</strong> data set is obtained when the same individuals are followed over time. On the other hand, a <strong>cross-sectional</strong> data set is the snapshot of all individuals at a given time. When working with different groups of individuals, each with its own average, it is wise first to understand how the groups are related (i.e. whether the data is longitudinal or cross-sectional) before comparing the numerical averages.</p>
+<h4>Combining Averages</h4>
+<p>One should never take the average of a list of averages. Consider two lists of numbers. The first list has <span class="math">\(N_{1}\)</span> numbers with average <span class="math">\(\mu_{1}\)</span> and the second list has <span class="math">\(N_{2}\)</span> numbers with average <span class="math">\(\mu_{2}\)</span>. The combined average <span class="math">\(\mu\)</span> corresponds to the weighted sum
+</p>
+<div class="math">$$ \mu = \left(\frac{N_{1}}{N_{1} + N_{2}}\right) \mu_{1} + \left( \frac{N_{2}}{N_{1} + N_{2}} \right) \mu_{2}. $$</div>
+<p>
+Only for the case <span class="math">\(N_{1} = N_{2}\)</span> does <span class="math">\(\mu\)</span> correspond to the average of <span class="math">\(\mu_{1}\)</span> and <span class="math">\(\mu_{2}\)</span>.</p>
+<h4>Average versus Median</h4>
+<p>An <strong>outlier</strong> is a data point that lies outside the general range of the data. The median is unaffected by outliers. However, the average is affected by each data point.</p>
+<p>A <strong>right-skewed distribution</strong> is an asymmetric distribution with a right-hand tail. The average is greater than the median for such distributions. You can instead have <strong>left-skewed distributions</strong> with a left-hand tail. For these distributions the average is less than the median.</p>
+<h4>Average and Histograms</h4>
+<p>The median in a histogram corresponds to the point that divides the histogram into two sections of equal area. One can think of the average as the <strong>equilibrium point</strong> of the histogram: the pivot point where the "weight" on each side of the histogram balances. Thus for asymmetric distributions the equilibrium point is not at the center and thus the average is off-centered.</p>
+<h3>Markov's Inequality</h3>
+<p>For a distribution with a long tail, one question that you can ask is how much is contained in the tail. For example, consider the following statement:</p>
+<blockquote>
+<p>The average age of a group of people is 20 years.</p>
+</blockquote>
+<p>You know that age distributions are asymmetric with right-hand tails. What fraction of the people are more than 80 years old? You cannot answer this question without looking at the data. But you can use an inequality due to Markov to provide a bound for this fraction. You want to know what fraction of the data lies more than 4 averages away from the average. According to Markov, this fraction cannot be greater than <span class="math">\(1/4\)</span>.</p>
+<p>In general, let <span class="math">\(k\)</span> be a positive number. <strong>Markov's inequality</strong> says that if a list with average <span class="math">\(\mu\)</span> has only non-negative entries, then the fraction <span class="math">\(F(k \mu)\)</span> of entries that are greater or equal to <span class="math">\(k \mu\)</span> cannot be greater than <span class="math">\(1 / k\)</span>. That is,
+</p>
+<div class="math">$$ F(k \mu) \leq \frac{1}{k}. $$</div>
+<p>
+This result is an example of a <strong>tail bound</strong> and it is most useful for large values of <span class="math">\(k\)</span>.</p>
+<h2>Measures of Spread</h2>
+<p>Given a data set you know that the median provides the halfway point of the data and the average provides the equilibrium point of the histogram. Both of these quantities describe a notion of a center. When looking at a data point it is useful to understand how far away from these centers is that data point. In this section I introduce the standard deviation, which is a useful measure of the spread of the data. I will also discuss Chebyshev's inequality and the notion of standard units.</p>
+<h3>Range and Interquartile Range</h3>
+<p>The largest measure of spread is the <strong>range</strong>: the interval over which the data is distributed. One can obtain the range by subtracting from the maximum value the minimum value:
+</p>
+<div class="math">$$ \text{range} = \text{maximum value} - \text{minimum value}. $$</div>
+<p>
+The range can be divided into four equal parts with the boundaries at the lower quartile (25th percentile), the median (50th percentile) and the upper quartile (75th percentile). As mentioned earlier, the interval between the lower and upper quartiles is called the interquartile range and it contains 50% of the data.</p>
+<h3>Standard Deviation</h3>
+<p>Given a number <span class="math">\(x_{j}\)</span> in a list of numbers with average <span class="math">\(\mu\)</span>, the <strong>deviation from average</strong> <span class="math">\(d_{j}\)</span> tells you roughly how far is that number from the average,
+</p>
+<div class="math">$$ d_{j} \equiv x_{j} - \mu. $$</div>
+<p>
+Note that <span class="math">\(d_{j}\)</span> can be positive or negative, depending on whether <span class="math">\(x_{j}\)</span> is below or above average. By definition, the average of the list of deviations is zero. A more useful quantity is the <strong>standard deviation</strong> <span class="math">\(\sigma\)</span> which is defined as the square root of the average of the square of the deviations from average. That is,
+</p>
+<div class="math">$$ \sigma \equiv \sqrt{\frac{1}{N} \sum_{j = 1}^{N} d_{j}^{2}} = \sqrt{\frac{1}{N} \sum_{j = 1}^{N} (x_{j} - \mu)^{2}}. $$</div>
+<p>
+In other words, <span class="math">\(\sigma\)</span> corresponds to the root-mean-square of deviations from average. The square of <span class="math">\(\sigma\)</span> is called the <strong>variance</strong>. Note that <span class="math">\(\sigma\)</span> is always positive and has the same units as the values of the list.</p>
+<p>The standard deviation (SD) measures roughly how far off the entries are from average. No matter what the values of a list are, the vast majority of the entries will be in the range <span class="math">\(\mu \pm n \sigma\)</span> with <span class="math">\(n\)</span> a small positive integer.</p>
+<h3>Chebyshev's Inequality</h3>
+<p>Markov's inequality helps in finding bounds for the fraction of the data that is <span class="math">\(k\)</span> units away from the average, where <span class="math">\(k\)</span> is measured in averages. The SD measures roughly how far away from the average one is in both directions (i.e. left and right). Consider a list of numbers <span class="math">\(x_{j}\)</span> with average <span class="math">\(\mu\)</span> and SD <span class="math">\(\sigma\)</span>. Let <span class="math">\(n\)</span> be a positive integer. <strong>Chebyshev's inequality</strong> says that the fraction <span class="math">\(F(n \sigma)\)</span> of the data that is outside the interval between <span class="math">\(\mu - n \sigma\)</span> and <span class="math">\(\mu + n \sigma\)</span> cannot be greater than <span class="math">\(1/n^{2}\)</span>. That is,
+</p>
+<div class="math">$$ F(n \sigma) \leq \frac{1}{n^{2}}. $$</div>
+<p>
+Note that with Markov's inequality you get a bound on one of the tails, but Chebyshev's inequality gives a bound for the two tails. However, you can use the two-tail bound on each tail. For example, outside of the interval between <span class="math">\(\mu - 3\sigma\)</span> and <span class="math">\(\mu + 3 \sigma\)</span> we have at most 11% of the data. This means that at least 89% of data must be inside the interval!</p>
+<h3>Standard Units</h3>
+<p>The numbers <span class="math">\(x_{j}\)</span> in a list typically have units. One can use many different units to describe the data. In order to change the units of <span class="math">\(x_{j}\)</span> one performs an "affine" transformation of the form
+</p>
+<div class="math">$$ x_{j}' = a x_{j} + b. $$</div>
+<p>
+Let us first consider the transformation with <span class="math">\(a = 1\)</span> and <span class="math">\(b \neq 0\)</span>. Under this transformation the average <span class="math">\(\mu\)</span> becomes <span class="math">\(\mu' = \mu + b\)</span> and the SD <span class="math">\(\sigma\)</span> remains invariant. On the other hand, under the transformation with <span class="math">\(a \neq 0\)</span> and <span class="math">\(b = 0\)</span> the average <span class="math">\(\mu\)</span> becomes <span class="math">\(\mu' = a \mu\)</span> and the SD <span class="math">\(\sigma\)</span> becomes <span class="math">\(\sigma' = |a| \sigma\)</span>.</p>
+<p>There is an affine transformation that takes us to a system of units where the average is at the origin and the units of measurement are standard deviations. This system of units is called <strong>standard units</strong>. Given a list of numbers <span class="math">\(x_{j}\)</span> with average <span class="math">\(\mu\)</span> and SD <span class="math">\(\sigma\)</span>, the list of numbers <span class="math">\(z_{j}\)</span> in standard units is
+</p>
+<div class="math">$$ z_{j} = \frac{x_{j} - \mu}{\sigma} \quad \Longrightarrow \quad x_{j} = \mu + \sigma z_{j}. $$</div>
+<p>
+Standard units measure how many SDs one is from average. This is sometimes called the <span class="math">\(z\)</span>-score. Note that by construction, in standard units the average of the list is 0 and the SD is 1. Thus, when working in standard units you expect most of the data to take values inside the interval between <span class="math">\(-4\)</span> and <span class="math">\(4\)</span>.</p>
+<h2>Normal Curve</h2>
+<p>In this section I introduce the normal curve. This is a very important curve that describes many distributions that have the shape of a bell.</p>
+<h3>Standard Normal Curve</h3>
+<p>There are many types of normal curves. The <strong>standard normal curve</strong> is described by the equation
+</p>
+<div class="math">$$ f(z) \equiv \frac{1}{\sqrt{2 \pi}} \exp{\left(- \frac{1}{2} z^{2} \right)}, \qquad - \infty &lt; z &lt; \infty. $$</div>
+<p>
+Note that <span class="math">\(f(z) = f(-z)\)</span> which means that this curve describes a <strong>symmetric</strong> distribution around the origin. Thus the equilibrium point is at <span class="math">\(z = 0\)</span>. We have points of inflection at <span class="math">\(z = \pm 1\)</span> (the points where <span class="math">\(f''(z)\)</span> changes sign). The area under the standard normal curve is 1:
+</p>
+<div class="math">$$ \int\limits_{-\infty}^{\infty} \mathrm{d}z \, f(z) = 1. $$</div>
+<p>
+Some useful facts about the standard normal curve are:</p>
+<ul>
+<li>Inside the interval <span class="math">\(-1 &lt; z &lt; 1\)</span> one has about 68.27% of the data.</li>
+<li>Inside the interval <span class="math">\(-2 &lt; z &lt; 2\)</span> one has about 95.45% of the data.</li>
+<li>Inside the interval <span class="math">\(-3 &lt; z &lt; 3\)</span> one has about 99.73% of the data.</li>
+<li>By Chebyshev's inequality and using the symmetry of <span class="math">\(f(z)\)</span> we find that each of the tails <span class="math">\(z &gt; 1\)</span> and <span class="math">\(z &lt; -1\)</span> has 16% of the data. Similarly, each of the tails <span class="math">\(z &gt; 2\)</span> and <span class="math">\(z &lt; -2\)</span> has 2.5% of the data.</li>
+<li>The 95th percentile is roughly at <span class="math">\(z = 1.65\)</span>. Symmetry implies that the 5th percentile is roughly at <span class="math">\(z = -1.65\)</span>.</li>
+</ul>
+<h3>Normal Curves</h3>
+<p>As you might suspect, the standard normal curve is a normal curve written in terms of standard units. So a general <strong>normal curve</strong> with average <span class="math">\(\mu\)</span> and SD <span class="math">\(\sigma\)</span> is of the form
+</p>
+<div class="math">$$ f(x|\mu, \sigma) \equiv \frac{1}{\sqrt{2 \pi} \sigma} \exp{\left[ -\frac{1}{2} \left( \frac{x - \mu}{\sigma} \right)^{2} \right]}, \qquad - \infty &lt; x &lt; \infty. $$</div>
+<p>
+The general normal curve <span class="math">\(f(x|\mu, \sigma)\)</span> has an equilibrium point at <span class="math">\(x = \mu\)</span> and inflection points at <span class="math">\(x = \mu \pm \sigma\)</span>. Note that a normal curve is completely specified by the value of the mean <span class="math">\(\mu\)</span> and the value of the SD <span class="math">\(\sigma\)</span>.</p>
+<p>If the histogram of a data set has a bell shape, then after computing its average <span class="math">\(\mu\)</span> and SD <span class="math">\(\sigma\)</span> one can use a normal curve <span class="math">\(f(x| \mu, \sigma)\)</span> to approximate the distribution of values on the histogram. This approximation will be mostly good  but also bad in some parts of the histogram. Such distributions are <strong>approximately normal</strong>. It is important for the bell to be centered around a value and not be skewed with more data on a given side.</p>
+<h3>Chebyshev Revisited</h3>
+<p>In most cases, though, the distribution is not normal or even approximately normal. But Chebyshev's bound always holds. Remember that it is better to have a correct bound than a bad approximation.</p>
+<h2>Relations Between Two Variables</h2>
+<p>In this section I will look at problems with two variables and introduce a graphical way to study them call scatter diagrams and a numerical way to study whether there is a relation between the two variables called the correlation coefficient.</p>
+<h3>Scatter Diagrams</h3>
+<p>With bivariate data each individual represents a pair of values. Graphically we can represent this with a <strong>scatter diagram</strong>. In a scatter diagram one has two axis, each corresponding to one of the pair of values for each individual. Thus, each individual is denoted by a point on the plane. In a scatter diagram one looks for <strong>clusters</strong> of accumulation of points. If the two variables are related, then the scatter diagram will exhibit a trend or pattern. If there is any relation between the variables, we have an <strong>association</strong>. We have a <strong>positive association</strong> when above average values of one variable tend to go with above average values of the other and thus the scatter goes up. We could also have a <strong>negative association</strong> where above average values of one variable tend to go with below average values of the other and thus the scatter goes down. The simplest example of association is a <strong>linear association</strong> where the scatter diagram is clustered around a straight line.</p>
+<p>Scatter diagrams with outliers are hard to analyze because the outliers can mislead on trends.</p>
+<h3>Correlation Coefficient</h3>
+<p>Now I turn to the question of how tightly clustered a scatter diagram is. The <strong>correlation coefficient</strong> <span class="math">\(r\)</span> is a <strong>measure of linear association</strong> that takes values between <span class="math">\(-1\)</span> and <span class="math">\(1\)</span>. When <span class="math">\(r = -1\)</span> you have a perfect linear negative association and when <span class="math">\(r = 1\)</span> you have perfect linear positive association. If <span class="math">\(r = 0\)</span> then there is no linear association between the two variables in the scatter diagram. Let <span class="math">\(x_{j}\)</span> and <span class="math">\(y_{j}\)</span> be two lists of <span class="math">\(N\)</span> numbers with averages <span class="math">\(\mu_{x}\)</span> and <span class="math">\(\mu_{y}\)</span> and SDs <span class="math">\(\sigma_{x}\)</span> and <span class="math">\(\sigma_{y}\)</span>. In standard units you have
+</p>
+<div class="math">$$ z_{j} = \frac{x_{j} - \mu_{x}}{\sigma_{x}}, \qquad w_{j} = \frac{y_{j} - \mu_{y}}{\sigma_{y}}. $$</div>
+<p>
+The <strong>correlation coefficient</strong> <span class="math">\(r\)</span> is defined as the average of the product of <span class="math">\(z_{j}\)</span> and <span class="math">\(w_{j}\)</span>
+</p>
+<div class="math">$$ r \equiv \frac{1}{N} \sum_{j = 1}^{N} z_{j} w_{j} = \frac{1}{N} \sum_{j = 1}^{N} \left( \frac{x_{j} - \mu_{x}}{\sigma_{x}} \right) \left( \frac{y_{j} - \mu_{y}}{\sigma_{y}} \right). $$</div>
+<p>
+Since <span class="math">\(r\)</span> is defined in terms of variables that are in standard units, it has no units. Note that <span class="math">\(\sigma_{x}\)</span> and <span class="math">\(\sigma_{y}\)</span> can be viewed as the magnitudes of  <span class="math">\(N\)</span>-dimensional vectors <span class="math">\(V_{x}\)</span> and <span class="math">\(V_{y}\)</span> with components
+</p>
+<div class="math">$$ (V_{x})_{j} = \frac{x_{j} - \mu_{x}}{\sqrt{N}}, \qquad (V_{y})_{j} = \frac{y_{j} - \mu_{y}}{\sqrt{N}} \quad \Longrightarrow \quad \sigma_{x} = |V_{x}|, \qquad \sigma_{y} = |V_{y}|; $$</div>
+<p>
+and thus <span class="math">\(r\)</span> can be understood as the inner product between two different unit vectors. This is proportional to the cosine of the angle between the two vectors and thus <span class="math">\(-1 \leq r \leq 1\)</span>.</p>
+<p>Adding a constant to any of the two list in the scatter diagram results in shifting the overall position of the scatter diagram. Thus, <span class="math">\(r\)</span> is invariant under this transformation. Since <span class="math">\(r\)</span> is defined in standard units, multiplying any of the two list by a <em>positive</em> constant also leaves <span class="math">\(r\)</span> invariant. However, if you multiply any of the lists (but not both) by a <em>negative</em> constant then the sign of <span class="math">\(r\)</span> will change (but its magnitude remains invariant).</p>
+<h3>Association is not Causation</h3>
+<p>If two variables have a nonzero correlation <span class="math">\(r\)</span>, then they are related to each other in some way, but that does not mean that one causes the other.</p>
+<p>It is important to emphasize that <span class="math">\(r\)</span> is a measure of linear association and thus should only be used in the case of an apparent linear association. Two variables are <strong>correlated</strong> if they are linearly related.</p>
+<p>Note that given a data set for which <span class="math">\(r = 0\)</span>, adding outliers can lead to a noticeable change in <span class="math">\(r\)</span>.</p>
+<p>A scatter plot of averages can lead to an artificial increase in clustering.</p>
+<h2>Regression</h2>
+<p>If two variables are correlated, then given one of them, you can compute an estimate of the other with a regression, the most commonly used statistical technique.</p>
+<h3>Univariate Estimation</h3>
+<p>Consider the following problem. You are told that a data set of heights of people has an average of 67 inches and an SD of 3 inches. Then one of these people is picked and you are asked to estimate that person's height. A natural estimate is the average, 67 inches. There will most likely be an <strong>error</strong> in your estimate,
+</p>
+<div class="math">$$ \text{error} = \text{actual} - 67 \text{ inches}. $$</div>
+<p>
+When using the average, the error corresponds to the deviation from average introduced in above. Thus, the rough size of the errors is the SD. If one makes another estimate <span class="math">\(c\)</span>, then the error is
+</p>
+<div class="math">$$ \text{error} = \text{actual} - c. $$</div>
+<p>
+How is <span class="math">\(c\)</span> determined? The best value of <span class="math">\(c\)</span> should make the smallest error. It is a mathematical fact that the root mean square of the errors will be smallest if you choose <span class="math">\(c\)</span> to be equal to the average. In this sense, the average is a <strong>least square estimate</strong>.</p>
+<h3>Bivariate Estimation</h3>
+<p>Consider now a scatter diagram. Given the value of one variable, say <span class="math">\(x_{j}\)</span>, you would like to estimate the value of the other variable, say <span class="math">\(y_{j}\)</span>. In order to do this, you look at the column of values over <span class="math">\(x_{j}\)</span>. The value of <span class="math">\(y_{j}\)</span> must be between the range of values in the column over <span class="math">\(x_{j}\)</span>. An estimate is simply to calculate the average of this column. This estimate is good when the column of values is small.</p>
+<h3>Footballs</h3>
+<p>When a scatter diagram has a <strong>football shape</strong>, then the distributions of both the horizontal and vertical variables can be approximated with a normal curve. The distribution along each vertical strip (column) or horizontal strip (row) is also roughly normal.</p>
+<h3>Regression Line</h3>
+<p>The <strong>regression line</strong> is a line that goes through the average of the vertical strips. The regression line depends only on the geometry of the oval that outlines the football shape in the scatter diagram. In standard units, the oval is centered at the origin. Given a list of numbers <span class="math">\(x_{j}\)</span> you go to standard units to obtain <span class="math">\(z_{j}\)</span>. The line that goes through the origin and the estimate at <span class="math">\(z_{j}\)</span> has slope <span class="math">\(r\)</span>. This gives the estimate for <span class="math">\(y_{j}\)</span> in standard units.</p>
+<h3>Regression Effect</h3>
+<p>When using a regression line to estimate values of a variable, you see the <strong>regression effect</strong>: those points which have high values in one variable <em>tend</em> not to be quite as high in the other variable. This happens whenever there is a spread about a straight line.</p>
+<h3>Galton</h3>
+<p>Sir Francis Galton was into eugenics (!). He made the following observation:</p>
+<blockquote>
+<p>Fathers who are tall tend to have sons who are not quite that tall, on average.</p>
+</blockquote>
+<p>This observation is known as <strong>regression to mediocrity</strong>.</p>
+<p>On average, points which have lower values in one variable tend to be slightly higher in the other variable. This is the opposite of the regression effect and is known as <strong>regression towards the mean</strong>.</p>
+<h3>Regression Fallacy</h3>
+<p>The believe that the regression effect is due to some external cause other than natural variability is known as the <strong>regression fallacy</strong>.</p>
+<h2>Error in the Regression Estimate</h2>
+<p>How good can a regression estimate be? In this section you study the error made when using a regression estimate.</p>
+<h3>Least Squares</h3>
+<p>Given a scatter diagram with a oval shape, we might draw a line to estimate the values of one of the variables from values of the other variable. The <strong>error</strong> at a point <span class="math">\(x_{j}\)</span> is defined as the difference between the actual value <span class="math">\(y_{j}\)</span> and the estimate <span class="math">\(E(x_{j})\)</span> from the line:
+</p>
+<div class="math">$$ \epsilon_{j} = y_{j} - E(x_{j}). $$</div>
+<p>
+The quantity <span class="math">\(\epsilon_{j}\)</span> is also known as the residual. The root-mean-square of the list of <span class="math">\(\epsilon_{j}\)</span> (the list of residuals) gives you a rough size of the error. The regression line will correspond to the line with the smallest r.m.s. error.</p>
+<h3>Residuals</h3>
+<p>There is a short formula for the r.m.s. of the residuals:
+</p>
+<div class="math">$$ \chi = \sqrt{1 - r^{2}} \sigma_{y}. $$</div>
+<p>
+Note that for perfect lines (<span class="math">\(r = \pm 1\)</span>) you have <span class="math">\(\chi = 0\)</span>. If <span class="math">\(r = 0\)</span>, then you should not be using a linear regression in the first place. However, <span class="math">\(\chi = \sigma_{y}\)</span> when <span class="math">\(r = 0\)</span> which means that you are doing as well as predicting the average of <span class="math">\(y_{j}\)</span> all the time. For all other values of <span class="math">\(r\)</span>, <span class="math">\(\chi\)</span> reduces to a fraction of the SD of <span class="math">\(y_{j}\)</span>.</p>
+<p>With a normal distribution you know that 68% of the data is contained in the interval made one SD from the average in both directions. For a scatter diagram, instead of the average, you have the regression line, and instead of the SD you have <span class="math">\(\chi\)</span>. You can look at a strip in the scatter diagram centered at the regression line and made by shifting the regression line one <span class="math">\(\chi\)</span> up and one <span class="math">\(\chi\)</span> down. This strip will contain 68% of the data. Thus, for 68% of the points the estimate will be correct within one unit of <span class="math">\(\chi\)</span>. Similarly, for 95% of the points the estimate will be correct within two units of <span class="math">\(\chi\)</span>.</p>
+<h3>Residual Plot</h3>
+<p>The <strong>residual plot</strong> is a scatter diagram made with the residuals. This plot cannot show any trend or linear relation. The residual plot is useful to see nonlinearity and other properties of the data.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

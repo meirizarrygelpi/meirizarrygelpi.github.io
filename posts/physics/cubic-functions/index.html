@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Cubic Functions | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/cubic-functions/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="On some functions that, in some ways, generalize the trigonometric and hyperbolic functions.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Cubic Functions
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-03-28T00:00:00-04:00">
+          <i class="fa fa-clock-o"></i>
+          Wed 28 March 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83702x.html">#8.370.2x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Consider the following equation:
+</p>
+<div class="math">\begin{equation*}
+    \mu^{3} = 1
+\end{equation*}</div>
+<p>
+The three solutions are
+</p>
+<div class="math">\begin{align*}
+    \mu_{0} &amp;= 1, &amp; \mu_{1} &amp;= -\frac{1}{2}(1 - \sqrt{3} i) \equiv \mu, &amp; \mu_{2} &amp;= -\frac{1}{2}(1 + \sqrt{3} i) \equiv \nu
+\end{align*}</div>
+<p>
+Note that
+</p>
+<div class="math">\begin{align*}
+    \mu + \nu &amp;= -1, &amp; \mu \nu &amp;= 1
+\end{align*}</div>
+<p>
+and
+</p>
+<div class="math">\begin{align*}
+    \mu^{2} &amp;= \nu &amp; \nu^{2} &amp;= \mu
+\end{align*}</div>
+<p>
+Now consider the following three functions:
+</p>
+<div class="math">\begin{align*}
+    f_{0}(z) &amp;= \exp{(\mu_{0}z)} = \exp{(z)}, \\
+    f_{1}(z) &amp;= \exp{(\mu_{1}z)} = \exp{(\mu z)} = \exp{\left( -\frac{z}{2} \right)} \left[ \cos{\left( \frac{\sqrt{3}z}{2} \right)} + i \sin{\left( \frac{\sqrt{3}z}{2} \right)} \right], \\
+    f_{2}(z) &amp;= \exp{(\mu_{2}z)} = \exp{(\nu z)} = \exp{\left( -\frac{z}{2} \right)} \left[ \cos{\left( \frac{\sqrt{3}z}{2} \right)} - i \sin{\left( \frac{\sqrt{3}z}{2} \right)} \right]
+\end{align*}</div>
+<p>
+First, you write <span class="math">\(f_{0}\)</span> as an infinite series:
+</p>
+<div class="math">\begin{equation*}
+    f_{0}(z) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n + 1)} z^{n} = p_{0}(z) + p_{1}(z) + p_{2}(z)
+\end{equation*}</div>
+<p>
+Here the <span class="math">\(p\)</span>-functions are given by
+</p>
+<div class="math">\begin{align*}
+    p_{0}(z) &amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(3n + 1)} z^{3n}, &amp; p_{1}(z) &amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(3n + 2)} z^{3n+1}, &amp; p_{2}(z) &amp;= \sum_{n = 0}^{\infty} \frac{1}{\Gamma(3n + 3)} z^{3n+2}
+\end{align*}</div>
+<p>
+You can also write <span class="math">\(f_{1}\)</span> and <span class="math">\(f_{2}\)</span> as an infinite series:
+</p>
+<div class="math">\begin{align*}
+    f_{1}(z) &amp;= \sum_{n = 0}^{\infty} \frac{\mu^{n}}{\Gamma(n + 1)} z^{n} = p_{0}(z) + \mu p_{1}(z) + \nu p_{2}(z) \\
+    f_{2}(z) &amp;= \sum_{n = 0}^{\infty} \frac{\nu^{n}}{\Gamma(n + 1)} z^{n} = p_{0}(z) + \nu p_{1}(z) + \mu p_{2}(z)
+\end{align*}</div>
+<p>
+The <span class="math">\(f\)</span>-functions are complex exponential functions. You can write the <span class="math">\(p\)</span>-functions in terms of the <span class="math">\(f\)</span>-functions:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(z) &amp;= \frac{f_{0}(z) + f_{1}(z) + f_{2}(z)}{3} \\
+    p_{1}(z) &amp;= \frac{2f_{0}(z) - f_{1}(z) - f_{2}(z) - i \sqrt{3} \left[ f_{1}(z) - f_{2}(z) \right]}{6} \\
+    p_{2}(z) &amp;= \frac{2f_{0}(z) - f_{1}(z) - f_{2}(z) + i \sqrt{3} \left[ f_{1}(z) - f_{2}(z) \right]}{6}
+\end{align*}</div>
+<p>
+More explicitly:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(z) &amp;= \frac{1}{3} \exp{(z)} + \frac{2}{3} \exp{\left( -\frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} \\
+    p_{1}(z) &amp;= \frac{1}{3} \exp{(z)} - \frac{1}{3} \exp{\left( -\frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} + \frac{1}{\sqrt{3}} \exp{\left( -\frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}z}{2} \right)} \\
+    p_{2}(z) &amp;= \frac{1}{3} \exp{(z)} - \frac{1}{3} \exp{\left( -\frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} - \frac{1}{\sqrt{3}} \exp{\left( -\frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}z}{2} \right)}
+\end{align*}</div>
+<p>
+Note that all coefficients are real.</p>
+<p>Similar to the exponential functions, the parity properties give rise to linearly-independent functions:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(-z) &amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(3n + 1)} z^{3n} \equiv q_{0}(z) \\
+    p_{1}(-z) &amp;= -\sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(3n + 2)} z^{3n+1} \equiv -q_{1}(z) \\
+    p_{2}(-z) &amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(3n + 3)} z^{3n+2} \equiv q_{2}(z)
+\end{align*}</div>
+<p>
+More explicitly:
+</p>
+<div class="math">\begin{align*}
+    q_{0}(z) &amp;= \frac{1}{3} \exp{(-z)} + \frac{2}{3} \exp{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} \\
+    q_{1}(z) &amp;= -\frac{1}{3} \exp{(-z)} + \frac{1}{3} \exp{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} + \frac{1}{\sqrt{3}} \exp{\left( \frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}z}{2} \right)} \\
+    q_{2}(z) &amp;= \frac{1}{3} \exp{(-z)} - \frac{1}{3} \exp{\left( \frac{z}{2} \right)} \cos{\left( \frac{\sqrt{3}z}{2} \right)} + \frac{1}{\sqrt{3}} \exp{\left( \frac{z}{2} \right)} \sin{\left( \frac{\sqrt{3}z}{2} \right)}
+\end{align*}</div>
+<p>
+When written out explicitly in terms of exponential and trigonometric functions, the <span class="math">\(p\)</span>-functions and the <span class="math">\(q\)</span>-functions do not look so impressive. But, I am still captivated by the fact that the three <span class="math">\(p\)</span>-functions satisfy a cubic identity. Note that
+</p>
+<div class="math">\begin{equation*}
+    f_{0}(z) f_{1}(z) f_{2}(z) = 1
+\end{equation*}</div>
+<p>
+In terms of the <span class="math">\(p\)</span>-functions, you get:
+</p>
+<div class="math">\begin{equation*}
+    [p_{0}(z)]^{3} + [p_{1}(z)]^{3} + [p_{2}(z)]^{3} - 3 p_{0}(z) p_{1}(z) p_{2}(z) = 1
+\end{equation*}</div>
+<p>
+Replacing <span class="math">\(z\)</span> with <span class="math">\(-z\)</span> gives
+</p>
+<div class="math">\begin{equation*}
+    [q_{0}(z)]^{3} - [q_{1}(z)]^{3} + [q_{2}(z)]^{3} + 3 q_{0}(z) q_{1}(z) q_{2}(z) = 1
+\end{equation*}</div>
+<p>
+Both of these cubic identities describe curves in 3-dimensional space. It turns out that these cubic identities follow from three bilinear relations involving both the <span class="math">\(p\)</span>-functions and the <span class="math">\(q\)</span>-functions:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(z) q_{0}(z) + p_{1}(z) q_{2}(z) - p_{2}(z)q_{1}(z) &amp;= 1 \\
+    p_{0}(z) q_{1}(z) - p_{1}(z) q_{0}(z) - p_{2}(z)q_{2}(z) &amp;= 0 \\
+    p_{0}(z) q_{2}(z) - p_{1}(z) q_{1}(z) + p_{2}(z)q_{0}(z) &amp;= 0
+\end{align*}</div>
+<p>
+These bilinear relations can be solved to write the <span class="math">\(q\)</span>-functions in terms of the <span class="math">\(p\)</span>-functions:
+</p>
+<div class="math">\begin{align*}
+    q_{0}(z) &amp;= [p_{0}(z)]^{2} - p_{1}(z) p_{2}(z) &amp; q_{1}(z) &amp;= -[p_{2}(z)]^{2} + p_{0}(z) p_{1}(z) &amp; q_{2}(z) &amp;= [p_{1}(z)]^{2} - p_{0}(z) p_{2}(z)
+\end{align*}</div>
+<p>
+These are Wronskians. Alternatively, you can solve the for <span class="math">\(p\)</span>-functions in terms of the <span class="math">\(q\)</span>-functions:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(z) &amp;= [q_{0}(z)]^{2} + q_{1}(z) q_{2}(z) &amp; p_{1}(z) &amp;= [q_{2}(z)]^{2} + q_{0}(z) q_{1}(z) &amp; p_{2}(z) &amp;= [q_{1}(z)]^{2} - q_{0}(z) q_{2}(z)
+\end{align*}</div>
+<p>
+Again, these are Wronskians.</p>
+<p>What about differentiation? Using the infinite series definition gives
+</p>
+<div class="math">\begin{align*}
+    \frac{d}{dz} p_{2}(z) &amp;= p_{1}(z), &amp; \frac{d}{dz} p_{1}(z) &amp;= p_{0}(z), &amp; \frac{d}{dz} p_{0}(z) &amp;= p_{2}(z)
+\end{align*}</div>
+<p>
+and also
+</p>
+<div class="math">\begin{align*}
+    \frac{d}{dz} q_{2}(z) &amp;= q_{1}(z), &amp; \frac{d}{dz} q_{1}(z) &amp;= q_{0}(z), &amp; \frac{d}{dz} q_{0}(z) &amp;= -q_{2}(z)
+\end{align*}</div>
+<p>
+Here are some argument-addition identities too:
+</p>
+<div class="math">\begin{align*}
+    p_{0}(w + z) &amp;= p_{0}(w) p_{0}(z) + p_{1}(w) p_{2}(z) + p_{2}(w) p_{1}(z) \\
+    p_{1}(w + z) &amp;= p_{0}(w) p_{1}(z) + p_{1}(w) p_{0}(z) + p_{2}(w) p_{2}(z) \\
+    p_{2}(w + z) &amp;= p_{0}(w) p_{2}(z) + p_{1}(w) p_{1}(z) + p_{2}(w) p_{0}(z)
+\end{align*}</div>
+<p>
+These are analogous to the trigonometric/hyperbolic identities. The simplest way to derive these is to work with the matrix-valued function
+</p>
+<div class="math">\begin{align*}
+    \exp{(z A)} &amp;= I p_{0}(z) + A p_{1}(z) + A^{2} p_{2}(z), &amp; A^{3} &amp;= I
+\end{align*}</div>
+<p>
+and use the property
+</p>
+<div class="math">\begin{equation*}
+    \exp{(w A)} \exp{(z A)} = \exp{(w A + z A)}
+\end{equation*}</div>
+<p>
+Unlike the trigonometric functions, the <span class="math">\(p\)</span>-functions are not periodic.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

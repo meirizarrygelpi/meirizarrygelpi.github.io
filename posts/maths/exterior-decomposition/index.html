@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Decompositions in Low-Dimensional Exterior Algebras | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/maths/exterior-decomposition/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/maths.atom.xml">  
+  <meta name="description" content="Star and dagger decompositions for low-dimensional exterior algebras.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Decompositions in Low-Dimensional Exterior Algebras
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2017-06-18T00:00:00-04:00">
+          <i class="fa fa-clock-o"></i>
+          Sun 18 June 2017
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/maths.html">Maths</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/parabolic.html">#parabolic</a>,               <a href="https://meirizarrygelpi.github.io/tag/exterior-algebra.html">#exterior-algebra</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>A Grassmann number is a member of an exterior algebra. There are two important operations on Grassmann numbers: the Hodge star conjugate and the dagger conjugate (parity). If these operations are involutions, then one can decompose a Grassmann number in terms of a self-conjugate and an anti-self-conjugate part.</p>
+<h2>1-Grassmann Numbers</h2>
+<p>A 1-Grassmann number has the form
+</p>
+<div class="math">$$A = a_{0} + a_{1} W.$$</div>
+<p>
+This variable has two pieces of information.</p>
+<h3>Star Conjugate and Star Decomposition</h3>
+<p>The <strong>Hodge star conjugate</strong> is
+</p>
+<div class="math">$$ A^{\star} = a_{1} + a_{0}W. $$</div>
+<p>
+Note that the star conjugate is an <strong>involution</strong>:
+</p>
+<div class="math">$$ (A^{\star})^{\star} = A. $$</div>
+<p>
+The <strong>star decomposition</strong> of <span class="math">\(A\)</span> is
+</p>
+<div class="math">$$ A = \frac{1}{2} \left( A + A^{\star} \right) + \frac{1}{2} \left( A - A^{\star} \right). $$</div>
+<p>
+The first term is the <strong>self-star-conjugate</strong> part:
+</p>
+<div class="math">$$ \frac{1}{2} \left( A + A^{\star} \right) = \frac{1}{2} \left( a_{0} + a_{1} \right) \left( 1 + W \right). $$</div>
+<p>
+The second term is the <strong>anti-self-star-conjugate</strong> part:
+</p>
+<div class="math">$$ \frac{1}{2} \left( A - A^{\star} \right) = \frac{1}{2} \left( a_{0} - a_{1} \right) \left( 1 - W \right). $$</div>
+<p>
+Each of these parts has one piece of information about <span class="math">\(A\)</span>.</p>
+<h3>Dagger Conjugate and Dagger Decomposition</h3>
+<p>The <strong>dagger conjugate</strong> is
+</p>
+<div class="math">$$ A^{\dagger} = a_{0} - a_{1}W. $$</div>
+<p>
+Note that the dagger conjugate is also an <strong>involution</strong>:
+</p>
+<div class="math">$$ (A^{\dagger})^{\dagger} = A. $$</div>
+<p>
+The <strong>dagger decomposition</strong> of <span class="math">\(A\)</span> is
+</p>
+<div class="math">$$ A = \frac{1}{2} \left( A + A^{\dagger} \right) + \frac{1}{2} \left( A - A^{\dagger} \right). $$</div>
+<p>
+The first term is the <strong>self-dagger-conjugate</strong> part:
+</p>
+<div class="math">$$ \frac{1}{2} \left( A + A^{\dagger} \right) = a_{0}. $$</div>
+<p>
+The second term is the <strong>anti-self-dagger-conjugate</strong> part:
+</p>
+<div class="math">$$ \frac{1}{2} \left( A - A^{\dagger} \right) = a_{1}W. $$</div>
+<p>
+Each of these parts has one piece of information about <span class="math">\(A\)</span>.</p>
+<p>Note that the star and dagger conjugates do not commute:
+</p>
+<div class="math">$$ (A^{\star})^{\dagger} = a_{1} - a_{0} W, \qquad (A^{\dagger})^{\star} = -a_{1} + a_{0} W = - (A^{\star})^{\dagger}. $$</div>
+<h2>2-Grassmann Numbers</h2>
+<p>A 2-Grassmann number has the form
+</p>
+<div class="math">$$ A = a_{1} + a_{W}W + a_{X}X + a_{WX}WX. $$</div>
+<p>
+Note that a 2-Grassmann number has four pieces of information.</p>
+<h3>Star and Dagger</h3>
+<p>The star conjugate is
+</p>
+<div class="math">$$ A^{\star} = a_{WX} - a_{X}W + a_{W}X + a_{1}WX. $$</div>
+<p>
+Note that the star conjugate is <strong>not</strong> an involution:
+</p>
+<div class="math">$$ (A^{\star})^{\star} = a_{1} - a_{W}W - a_{X}X + a_{WX}WX. $$</div>
+<p>
+Indeed, the <strong>double star conjugate</strong> is equivalent to the dagger conjugate:
+</p>
+<div class="math">$$ A^{\dagger} = a_{1} - a_{W}W - a_{X}X + a_{WX}WX. $$</div>
+<p>
+The dagger conjugate <em>is</em> an involution:
+</p>
+<div class="math">$$ (A^{\dagger}) = A. $$</div>
+<p>
+The <strong>dagger decomposition</strong> of <span class="math">\(A\)</span> is
+</p>
+<div class="math">$$ A = \frac{1}{2} \left( A + A^{\dagger} \right) + \frac{1}{2} \left( A - A^{\dagger} \right). $$</div>
+<p>
+The first term is the <strong>self-dagger-conjugate</strong> part:
+</p>
+<div class="math">$$ \frac{1}{2} \left( A + A^{\dagger} \right) = a_{1} + a_{WX}WX. $$</div>
+<p>
+The second term is the <strong>anti-self-dagger-conjugate</strong> part:
+</p>
+<div class="math">$$ \frac{1}{2} \left( A - A^{\dagger} \right) = a_{W}W + a_{X}X. $$</div>
+<p>
+Each part has two pieces of information about <span class="math">\(A\)</span>.</p>
+<p>Note that the star conjugate is an involution on the self-dagger-conjugate part:
+</p>
+<div class="math">$$((a_{1} + a_{WX}WX)^{\star})^{\star} = (a_{WX} + a_{1}WX)^{\star} = a_{1} + a_{WX}WX. $$</div>
+<p>
+Thus, the self-dagger-conjugate part can be decomposed into self-star-conjugate and anti-self-star-conjugate parts:
+</p>
+<div class="math">$$ a_{1} + a_{WX}WX = \frac{1}{2} \left( a_{1} + a_{WX} \right) \left( 1 + WX \right) + \frac{1}{2} \left( a_{1} - a_{WX} \right) \left( 1 - WX \right). $$</div>
+<p>
+On the other hand, the star conjugate is an anti-involution on the anti-self-dagger-conjugate part:
+</p>
+<div class="math">$$ ((a_{W}W + a_{X}X)^{\star})^{\star} = (-a_{X}W + a_{W}X)^{\star} = -(a_{W}W + a_{X}X). $$</div>
+<p>
+Indeed, the eigenvalues of the 2-dimensional star conjugate operation are <span class="math">\(\lambda = \pm 1\)</span> and <span class="math">\(\lambda \pm i\)</span>. All four satisfy <span class="math">\(\lambda^{4} = 1\)</span>. The star decomposition is as follows:
+</p>
+<div class="math">$$ A = w + x + y + z; $$</div>
+<p>
+where
+</p>
+<div class="math">$$ w^{\star} = w, \qquad x^{\star} = -x, \qquad y^{\star} = iy, \qquad z^{\star} = -iz. $$</div>
+<p>
+It follows that
+</p>
+<div class="math">$$ w = \frac{1}{4} \left( A + A^{\star} + A^{\dagger} + (A^{\dagger})^{\star} \right); $$</div>
+<div class="math">$$ x = \frac{1}{4} \left( A - A^{\star} + A^{\dagger} - (A^{\dagger})^{\star} \right); $$</div>
+<div class="math">$$ y = \frac{1}{4} \left( A - i A^{\star} - A^{\dagger} + i (A^{\dagger})^{\star} \right); $$</div>
+<div class="math">$$ z = \frac{1}{4} \left( A + i A^{\star} - A^{\dagger} - i (A^{\dagger})^{\star} \right). $$</div>
+<h2>3-Grassmann Numbers</h2>
+<p>A 3-Grassmann number has the form
+</p>
+<div class="math">$$ A = a_{1} + a_{W}W + a_{X}X + a_{WX}WX + a_{Y}Y + a_{WY}WY + a_{XY}XY + a_{WXY}(WX)Y. $$</div>
+<p>
+Note that a 3-Grassmann number has eight pieces of information.</p>
+<h3>Star Conjugate and Star Decomposition</h3>
+<p>The star conjugate is
+</p>
+<div class="math">$$ A^{\star} = a_{WXY} + a_{XY}W - a_{WY}X + a_{Y}WX + a_{WX}Y - a_{X}WY + a_{W}XY + a_{1}(WX)Y. $$</div>
+<p>
+Note that this is an involution. Thus, <span class="math">\(A\)</span> can be <strong>star-decomposed</strong>:
+</p>
+<div class="math">$$ A = \frac{1}{2} \left( A + A^{\star} \right) + \frac{1}{2} \left( A - A^{\star} \right). $$</div>
+<p>
+The <strong>self-star-conjugate</strong> part of <span class="math">\(A\)</span> is
+</p>
+<div class="math">$$ A + A^{\star} = (a_{1} + a_{WXY}) (1 + (WX)Y) + (a_{W} + a_{XY})(W + XY) + (a_{X} - a_{WY})(X - WY) + (a_{Y} + a_{WX})(Y + WX). $$</div>
+<p>
+The <strong>anti-self-star-conjugate</strong> part of <span class="math">\(A\)</span> is
+</p>
+<div class="math">$$ A - A^{\star} = (a_{1} - a_{WXY}) (1 - (WX)Y) + (a_{W} - a_{XY})(W - XY) + (a_{X} + a_{WY})(X + WY) + (a_{Y} - a_{WX})(Y - WX). $$</div>
+<p>
+Each part has four pieces of information.</p>
+<h3>Dagger Conjugate and Dagger Decomposition</h3>
+<p>The dagger conjugate is
+</p>
+<div class="math">$$ A^{\dagger} = a_{1} - a_{W}W - a_{X}X + a_{WX}WX - a_{Y}Y + a_{WY}WY + a_{XY}XY - a_{WXY}(WX)Y. $$</div>
+<p>
+Note that this is an involution. Thus, <span class="math">\(A\)</span> can be <strong>dagger-decomposed</strong>:
+</p>
+<div class="math">$$ A = \frac{1}{2} \left( A + A^{\dagger} \right) + \frac{1}{2} \left( A - A^{\dagger} \right). $$</div>
+<p>
+The <strong>self-dagger-conjugate</strong> part of <span class="math">\(A\)</span> is
+</p>
+<div class="math">$$ \frac{1}{2} (A + A^{\dagger}) = a_{1} + a_{WX}WX + a_{WY}WY + a_{XY}XY. $$</div>
+<p>
+The <strong>anti-self-dagger-conjugate</strong> part of <span class="math">\(A\)</span> is
+</p>
+<div class="math">$$ \frac{1}{2} (A - A^{\dagger}) = a_{W}W + a_{X}X + a_{Y}Y + a_{WXY}(WX)Y. $$</div>
+<p>
+Note that the dagger conjugate of the self-star-conjugate part is anti-self-star-conjugate:
+</p>
+<div class="math">$$ (A + A^{\star})^{\dagger} = (a_{1} + a_{WXY}) (1 - (WX)Y) - (a_{W} + a_{XY})(W - XY) - (a_{X} - a_{WY})(X + WY) - (a_{Y} + a_{WX})(Y - WX); $$</div>
+<p>
+and similarly, the dagger conjugate of the anti-self-star-conjugate part is self-star-conjugate:
+</p>
+<div class="math">$$ (A - A^{\star})^{\dagger} = (a_{1} - a_{WXY}) (1 + (WX)Y) - (a_{W} - a_{XY})(W + XY) - (a_{X} + a_{WY})(X - WY) - (a_{Y} - a_{WX})(Y + WX). $$</div>
+<p>
+Each part has four pieces of information.</p>
+<h2>4-Grassmann Numbers</h2>
+<p>A member of the 4-Grassmann algebra has the form
+</p>
+<div class="math">$$ A = A_{0} + A_{1} + A_{2} + A_{3} + A_{4}; $$</div>
+<p>
+where
+</p>
+<div class="math">$$ A_{0} = a_{1}; $$</div>
+<div class="math">$$ A_{1} = a_{W}W + a_{X}X + a_{Y}Y + a_{Z}Z; $$</div>
+<div class="math">$$ A_{2} = a_{WX}WX + a_{WY}WY + a_{WZ}WZ + a_{XY}XY + a_{XZ}XZ + a_{YZ}YZ; $$</div>
+<div class="math">$$ A_{3} = a_{WXY}(WX)Y + a_{WXZ}(WX)Z + a_{WYZ}(WY)Z + a_{XYZ}(XY)Z; $$</div>
+<div class="math">$$ A_{4} = a_{WXYZ} ((WX)Y)Z. $$</div>
+<p>
+Note that a 4-Grassmann number has sixteen pieces of information.</p>
+<h3>Star and Dagger</h3>
+<p>The star conjugate is
+</p>
+<div class="math">$$ A^{\star} = (A_{0})^{\star} + (A_{1})^{\star} + (A_{2})^{\star} + (A_{3})^{\star} + (A_{4})^{\star}; $$</div>
+<p>
+where
+</p>
+<div class="math">$$ (A_{0})^{\star} = a_{1}((WX)Y)Z; $$</div>
+<div class="math">$$ (A_{1})^{\star} = a_{W}(XY)Z - a_{X}(WY)Z + a_{Y}(WX)Z - a_{Z}(WX)Y; $$</div>
+<div class="math">$$ (A_{2})^{\star} = a_{WX}YZ - a_{WY}XZ + a_{WZ}XY + a_{XY}WZ - a_{XZ}WY + a_{YZ}WX; $$</div>
+<div class="math">$$ (A_{3})^{\star} = a_{WXY}Z - a_{WXZ}Y + a_{WYZ}X - a_{XYZ}W; $$</div>
+<div class="math">$$ (A_{4})^{\star} = a_{WXYZ}. $$</div>
+<p>
+Note that this operation is <strong>not</strong> an involution. Just as for 2-Grassmann numbers, you find that
+</p>
+<div class="math">$$ ((A_{0})^{\star})^{\star} = A_{0}, \qquad ((A_{2})^{\star})^{\star} = A_{2}, \qquad ((A_{4})^{\star})^{\star} = A_{4}. $$</div>
+<p>
+However, you also have
+</p>
+<div class="math">$$ ((A_{1})^{\star})^{\star} = -A_{1}, \qquad ((A_{3})^{\star})^{\star} = -A_{3}. $$</div>
+<p>
+Again, the double star conjugate is equivalent to the dagger conjugate:
+</p>
+<div class="math">$$ A^{\dagger} = (A^{\star})^{\star}. $$</div>
+<p>
+The dagger conjugate <em>is</em> an involution. The dagger conjugate is
+</p>
+<div class="math">$$ A^{\dagger} = (A_{0})^{\dagger} + (A_{1})^{\dagger} + (A_{2})^{\dagger} + (A_{3})^{\dagger} + (A_{4})^{\dagger}; $$</div>
+<p>
+where
+</p>
+<div class="math">$$ (A_{0})^{\dagger} = +A_{0}; $$</div>
+<div class="math">$$ (A_{1})^{\dagger} = -A_{1}; $$</div>
+<div class="math">$$ (A_{2})^{\dagger} = +A_{2}; $$</div>
+<div class="math">$$ (A_{3})^{\dagger} = -A_{3}; $$</div>
+<div class="math">$$ (A_{4})^{\dagger} = +A_{4}. $$</div>
+<p>
+This means that on <span class="math">\(A_{0}\)</span>, <span class="math">\(A_{2}\)</span>, and <span class="math">\(A_{4}\)</span> the star conjugate <em>is</em> an involution. Thus you can perform a star decomposition:
+</p>
+<div class="math">$$ A_{0} + A_{2} + A_{4} = \frac{1}{2} \left( A_{0} + A_{2} + A_{4} + (A_{0})^{\star} + (A_{2})^{\star} + (A_{4})^{\star} \right) + \frac{1}{2} \left( A_{0} + A_{2} + A_{4} - (A_{0})^{\star} - (A_{2})^{\star} - (A_{4})^{\star} \right). $$</div>
+<p>
+The self-star-conjugate part is
+</p>
+<div class="math">$$ \left(a_{1} + a_{WXYZ} \right) \left(1 + ((WX)Y)Z \right) + \left(a_{WX} + a_{YZ}\right)\left(WX + YZ \right) + \left(a_{WY} - a_{XZ}\right)\left(WY - XZ \right) + \left(a_{WZ} + a_{XY}\right)\left(WZ + XY \right). $$</div>
+<p>
+The anti-self-star-conjugate part is
+</p>
+<div class="math">$$ \left(a_{1} - a_{WXYZ} \right) \left(1 - ((WX)Y)Z \right) + \left(a_{WX} - a_{YZ}\right)\left(WX - YZ \right) + \left(a_{WY} + a_{XZ}\right)\left(WY + XZ \right) + \left(a_{WZ} - a_{XY}\right)\left(WZ - XY \right). $$</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
