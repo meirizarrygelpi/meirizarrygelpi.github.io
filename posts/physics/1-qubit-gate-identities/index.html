@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  1-Qubit Gate Identities | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/1-qubit-gate-identities/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Some identities involving 1-qubit gates.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  1-Qubit Gate Identities
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-03-07T12:27:10.166310-05:00">
+          <i class="fa fa-clock-o"></i>
+          Wed 07 March 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83702x.html">#8.370.2x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Here are some important 1-qubit gates. You have the three Pauli matrices:
+</p>
+<div class="math">\begin{align*}
+    X &amp;= \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}, &amp; Y &amp;= \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix}, &amp; Z &amp;= \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}
+\end{align*}</div>
+<p>
+You also have the Hadamard gate
+</p>
+<div class="math">\begin{equation*}
+    H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -1 \end{pmatrix}
+\end{equation*}</div>
+<p>
+It is true that
+</p>
+<div class="math">\begin{equation*}
+    H = \frac{1}{\sqrt{2}} (X + Z)
+\end{equation*}</div>
+<p>
+but I am not sure how the sum of two gates can be implemented. Indeed, if you interpret as the sum of two gates as applying them in parallel, then you cannot do that with a single qubit because that would involve cloning. Besides, the factor <span class="math">\(1/\sqrt{2}\)</span> is not unitary.</p>
+<p>Two more gates are <span class="math">\(S\)</span> and <span class="math">\(T\)</span>:
+</p>
+<div class="math">\begin{align*}
+    S &amp;= \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; i \end{pmatrix}, &amp; T &amp; = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; \exp{(i \pi / 4)} \end{pmatrix}
+\end{align*}</div>
+<p>
+The <span class="math">\(T\)</span> gate is the square root of the <span class="math">\(S\)</span> gate:
+</p>
+<div class="math">\begin{equation*}
+    S = T T
+\end{equation*}</div>
+<p>
+The <span class="math">\(S\)</span> gate in turn is the square root of the <span class="math">\(Z\)</span> gate:
+</p>
+<div class="math">\begin{equation*}
+    Z = S S = T T T T
+\end{equation*}</div>
+<p>
+Note that <span class="math">\(S\)</span> and <span class="math">\(T\)</span> are not hermitian but they are unitary.</p>
+<p>You can write an element of a subspace of matrices spanned by all powers of <span class="math">\(T\)</span>:
+</p>
+<div class="math">\begin{equation*}
+    a I + b T + c S + d ST + e Z + f ZT + g ZS + h ZST
+\end{equation*}</div>
+<p>
+This is closed under addition and multiplication. Note that
+</p>
+<div class="math">\begin{align*}
+    T^{\dagger} &amp;= Z S T, &amp; S^{\dagger} &amp;= Z S, &amp; Z^{\dagger} &amp;= Z, &amp; (S T)^{\dagger} &amp;= Z T
+\end{align*}</div>
+<p>The eigen-decomposition of <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> involve <span class="math">\(H\)</span>, <span class="math">\(Z\)</span>, and <span class="math">\(S\)</span>:
+</p>
+<div class="math">\begin{align*}
+    X &amp;= H Z H = H T T T T H, &amp; Y &amp;= S H Z H S^{\dagger} = T T H T T T T H T^{\dagger} T^{\dagger}
+\end{align*}</div>
+<p>
+This means that in principle you only need <span class="math">\(H\)</span> and <span class="math">\(T\)</span> (and <span class="math">\(T^{\dagger}\)</span>) to generate the Pauli matrices.</p>
+<p>What about the eigen-decomposition of <span class="math">\(H\)</span>? Well, you get
+</p>
+<div class="math">\begin{align*}
+    H &amp; = G Z G^{\dagger}, &amp; G &amp;= \begin{pmatrix} \cos{(\pi/8)} &amp; -\sin{(\pi/8)} \\ \sin{(\pi/8)} &amp; \cos{(\pi/8)} \end{pmatrix}, &amp; \cos{(\pi/8)} &amp;= \frac{\sqrt{2 + \sqrt{2}}}{2}, &amp; \sin{(\pi/8)} &amp;= \frac{\sqrt{2 - \sqrt{2}}}{2}
+\end{align*}</div>
+<p>
+Can you write <span class="math">\(G\)</span> in terms of <span class="math">\(T\)</span>? Note that both <span class="math">\(S\)</span> and <span class="math">\(T\)</span> can be re-written in a similar way:
+</p>
+<div class="math">\begin{align*}
+    S &amp;= \exp{(i \pi / 4)} \begin{pmatrix} \exp{(-i \pi /4)} &amp; 0 \\ 0 &amp; \exp{(i \pi / 4)} \end{pmatrix}, &amp; T &amp;= \exp{(i \pi / 8)} \begin{pmatrix} \exp{(-i \pi /8)} &amp; 0 \\ 0 &amp; \exp{(i \pi / 8)} \end{pmatrix}
+\end{align*}</div>
+<p>
+Indeed, <span class="math">\(Z\)</span> can also be re-written in this way:
+</p>
+<div class="math">\begin{equation*}
+    Z = \exp{(i \pi / 2)} \begin{pmatrix} \exp{(-i \pi /2)} &amp; 0 \\ 0 &amp; \exp{(i \pi / 2)} \end{pmatrix}
+\end{equation*}</div>
+<p>
+When written in this way, it seems plausible that <span class="math">\(G\)</span> can be written in terms of <span class="math">\(T\)</span>. Introduce two new unitary matrices:
+</p>
+<div class="math">\begin{align*}
+    P(\theta) &amp;= \exp{(i\theta)} \begin{pmatrix}
+        1 &amp; 0 \\
+        0 &amp; 1
+    \end{pmatrix}, &amp; Q(\theta) &amp;= \begin{pmatrix}
+        \exp{(-i\theta)} &amp; 0 \\
+        0 &amp; \exp{(i\theta)}
+    \end{pmatrix}
+\end{align*}</div>
+<p>
+Then
+</p>
+<div class="math">\begin{align*}
+    T &amp;= P(\pi/8) Q(\pi/8), &amp; S &amp;= P(\pi/4) Q(\pi/4), &amp; Z &amp;= P(\pi/2) Q(\pi/2)
+\end{align*}</div>
+<p>
+Note that
+</p>
+<div class="math">\begin{equation*}
+    P(\theta) + \left[ P(\theta) \right]^{\dagger} = Q(\theta) + \left[ Q(\theta) \right]^{\dagger} = 2 \cos{(\theta)} \begin{pmatrix}
+        1 &amp; 0 \\
+        0 &amp; 1
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+However, addition of unitary quantum gates requires parallel wires.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

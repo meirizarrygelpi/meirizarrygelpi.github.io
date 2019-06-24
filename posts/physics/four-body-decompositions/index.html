@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Four-Body Sudakov Decompositions | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/four-body-decompositions/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="On four-body Sudakov decompositions and beyond.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Four-Body Sudakov Decompositions
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2015-12-10T00:00:00-05:00">
+          <i class="fa fa-clock-o"></i>
+          Thu 10 December 2015
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/sudakov.html">#sudakov</a>,               <a href="https://meirizarrygelpi.github.io/tag/four-body.html">#four-body</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In previous posts I discussed <a href="http://meirizarrygelpi.github.io/posts/physics/two-body-sudakov/">two-body</a> and three-body Sudakov decompositions (<a href="http://meirizarrygelpi.github.io/posts/physics/three-point-sudakov/">here</a>, <a href="http://meirizarrygelpi.github.io/posts/physics/contiguous-three-body-sudakov/">here</a>, and <a href="http://meirizarrygelpi.github.io/posts/physics/composite-three-body-sudakov/">here</a>). By Sudakov decomposition, I mean the process of associating a null vector to each massive vector. In the two-body problem this decomposition is unique, but for the three-body problem there are least four distinct ones (one contiguous and three composite). Here in this post, I will consider four-body problems and the many kinds of Sudakov decompositions that can be done.</p>
+<p>There are plenty of kinematic variables in a four-body problem. You have four <strong>on-shell</strong> constraints:
+</p>
+<div class="math">$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}; $$</div>
+<p>
+six <strong>2-Mandelstam</strong> invariants:
+</p>
+<div class="math">$$ s_{ij} \equiv -\left\Vert p_{i} + p_{j} \right\Vert^{2}; $$</div>
+<p>
+six <strong>Regge-Mandelstam</strong> invariants:
+</p>
+<div class="math">$$ r_{ij} \equiv \frac{s_{ij} - m_{i}^{2} - m_{j}^{2}}{2 m_{i} m_{j}}; $$</div>
+<p>
+six <strong>2-Gram</strong> invariants:
+</p>
+<div class="math">$$ G_{ij} \equiv -\det{ \begin{pmatrix} \left\Vert p_{i} \right\Vert^{2} &amp; p_{i} \cdot p_{j} \\ p_{j} \cdot p_{i} &amp; \left\Vert p_{j} \right\Vert^{2} \end{pmatrix} }; $$</div>
+<p>
+four <strong>3-Mandelstam</strong> invariants:
+</p>
+<div class="math">$$ s_{ijk} \equiv -\left\Vert p_{i} + p_{j} + p_{k} \right\Vert^{2}; $$</div>
+<p>
+four <strong>3-Gram</strong> invariants:
+</p>
+<div class="math">$$ G_{ijk} \equiv -\det{ \begin{pmatrix} \left\Vert p_{i} \right\Vert^{2} &amp; p_{i} \cdot p_{j} &amp; p_{i} \cdot p_{k} \\ p_{j} \cdot p_{i} &amp; \left\Vert p_{j} \right\Vert^{2} &amp; p_{j} \cdot p_{k} \\ p_{k} \cdot p_{i} &amp; p_{k} \cdot p_{i} &amp; \left\Vert p_{k} \right\Vert^{2} \end{pmatrix} }; $$</div>
+<p>
+one <strong>4-Mandelstam</strong> invariant:
+</p>
+<div class="math">$$ s_{1234} \equiv -\left\Vert p_{1} + p_{2} + p_{3} + p_{4} \right\Vert^{2}; $$</div>
+<p>
+and one <strong>4-Gram</strong> invariant:
+</p>
+<div class="math">$$ G_{1234} \equiv -\det{ \begin{pmatrix} \left\Vert p_{1} \right\Vert^{2} &amp; p_{1} \cdot p_{2} &amp; p_{1} \cdot p_{3} &amp; p_{1} \cdot p_{4} \\ p_{2} \cdot p_{1} &amp; \left\Vert p_{2} \right\Vert^{2} &amp; p_{2} \cdot p_{3} &amp; p_{2} \cdot p_{4} \\ p_{3} \cdot p_{1} &amp; p_{3} \cdot p_{2} &amp; \left\Vert p_{3} \right\Vert^{2} &amp; p_{3} \cdot p_{4} \\ p_{4} \cdot p_{1} &amp; p_{4} \cdot p_{2} &amp; p_{4} \cdot p_{3} &amp; \left\Vert p_{4} \right\Vert^{2} \end{pmatrix} }. $$</div>
+<p>
+You also have <strong>Regge-Gram</strong> invariants:
+</p>
+<div class="math">$$ g_{ij} \equiv \frac{G_{ij}}{m_{i}^{2} m_{j}^{2}}, $$</div>
+<div class="math">$$ g_{ijk} \equiv \frac{G_{ijk}}{m_{i}^{2} m_{j}^{2} m_{k}^{2}}, $$</div>
+<div class="math">$$ g_{1234} \equiv \frac{G_{1234}}{m_{1}^{2} m_{2}^{2} m_{3}^{2} m_{4}^{2}}. $$</div>
+<p>
+All of these invariants should be enough to describe any four-body problem.</p>
+<h2>Contiguous</h2>
+<p>The four-body generalization of the contiguous three-body Sudakov decomposition is
+</p>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}. $$</div>
+<p>
+Here the <span class="math">\(n_{i}\)</span> vectors are null, and I have introduced <strong>2-Sudakov</strong> invariants:
+</p>
+<div class="math">$$ S_{ij} \equiv -\left\Vert n_{i} + n_{j} \right\Vert^{2} = -2 \left( n_{i} \cdot n_{j} \right). $$</div>
+<p>
+There are two other 2-Sudakov invariants besides the four that appear explicitly in the decomposition. Like before, the goal is to write the 2-Sudakov invariants in terms of 2-Mandelstam invariants and masses. Introduce <strong>Regge-Sudakov</strong> invariants:
+</p>
+<div class="math">$$ R_{ij} \equiv \frac{S_{ij}}{m_{i} m_{j}}. $$</div>
+<p>
+Using the six identities of the form
+</p>
+<div class="math">$$ r_{ij} = -\frac{p_{i} \cdot p_{j}}{m_{i} m_{j}}, $$</div>
+<p>
+you find the relations:
+</p>
+<div class="math">$$ 2r_{12} = R_{12} + \frac{R_{13}}{R_{23}} + \frac{1}{R_{12}}, $$</div>
+<div class="math">$$ 2r_{23} = R_{23} + \frac{R_{24}}{R_{34}} + \frac{1}{R_{23}}, $$</div>
+<div class="math">$$ 2r_{34} = R_{34} + \frac{R_{13}}{R_{41}} + \frac{1}{R_{34}}, $$</div>
+<div class="math">$$ 2r_{41} = R_{41} + \frac{R_{24}}{R_{12}} + \frac{1}{R_{41}}; $$</div>
+<div class="math">$$ 2r_{13} = R_{13} + \frac{R_{41}}{R_{34}} + \frac{R_{23}}{R_{12}} + \frac{R_{24}}{R_{12} R_{34}}, $$</div>
+<div class="math">$$ 2r_{24} = R_{24} + \frac{R_{12}}{R_{41}} + \frac{R_{34}}{R_{23}} + \frac{R_{13}}{R_{23} R_{41}}. $$</div>
+<p>
+This set of equations is harder to solve than the analogous set for the three-body case.</p>
+<p>Actually, there are two other non-equivalent contiguous four-body Sudakov decompositions:
+</p>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{41}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{24}} n_{2}, $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{24}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}, $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}. $$</div>
+<h2>Non-Contiguous</h2>
+<p>With four bodies you can also perform a non-contiguous Sudakov decomposition where you combine two two-body decompositions. For example,
+</p>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}; $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{34}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{34}} n_{3}. $$</div>
+<p>
+Then
+</p>
+<div class="math">$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}, $$</div>
+<div class="math">$$ 2 r_{34} = R_{34} + \frac{1}{R_{34}}; $$</div>
+<p>
+and you have a linear system for the remaining Regge-Sudakov invariants. In a previous post I discussed a particular case of this decomposition for a <a href="http://meirizarrygelpi.github.io/posts/physics/sudakov-kinematics/">four-point process</a>.</p>
+<p>Just like contiguous decompositions, there are two other non-equivalent non-contiguous four-body Sudakov decompositions:
+</p>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{13}} n_{3}, $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{13}} n_{1}; $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{24}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{24}} n_{2}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{41}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{41}} n_{1}; $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{23}} n_{3}, $$</div>
+<div class="math">$$ p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{23}} n_{2}. $$</div>
+<h2>Composite</h2>
+<p>There are two kinds of composite decompositions. Both kinds begin with a two-body step involving a 3-composite vector and a simple vector. For example, with
+</p>
+<div class="math">$$p_{123} \equiv p_{1} + p_{2} + p_{3}; \qquad s_{1234} = -\left\Vert p_{123} + p_{4} \right\Vert^{2}. $$</div>
+<p>
+The two-body decomposition is
+</p>
+<div class="math">$$ p_{123} = n_{123} + \frac{s_{123}}{S_{(123)4}} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} + \frac{m_{4}^{2}}{S_{(123)4}} n_{123}; $$</div>
+<p>
+where <span class="math">\(n_{123}\)</span> is a null vector, and
+</p>
+<div class="math">$$ S_{(123)4} \equiv -\left\Vert n_{123} + n_{4} \right\Vert^{2}. $$</div>
+<p>
+From
+</p>
+<div class="math">$$ \frac{p_{123} \cdot p_{4}}{\sqrt{s_{123}} m_{4}} = \frac{s_{1234} - s_{123} - m_{4}^{2}}{2 \sqrt{s_{123}} m_{4}}, $$</div>
+<p>
+it follows that
+</p>
+<div class="math">$$ S_{(123)4} = \frac{1}{2} \left( s_{1234} - s_{123} - m_{4}^{2} + \sqrt{ \left( s_{1234} - s_{123} - m_{4}^{2} \right)^{2} - 4 s_{123} m_{4}^{2}} \right). $$</div>
+<p>
+At this step you have a null vector for <span class="math">\(p_{4}\)</span>. What is left is to find null vectors for the rest of the massive momenta. Here is where the fork arises. You can either perform a contiguous three-body decomposition, or a composite three-body decomposition. The outcome in both cases will be very different from the contiguous four-body decomposition above.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

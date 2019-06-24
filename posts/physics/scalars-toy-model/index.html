@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  The Scalars Toy Model | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/scalars-toy-model/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Introducing the toy model with scalar quanta that I will study later.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  The Scalars Toy Model
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2015-12-20T00:00:00-05:00">
+          <i class="fa fa-clock-o"></i>
+          Sun 20 December 2015
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/dynamics.html">#dynamics</a>,               <a href="https://meirizarrygelpi.github.io/tag/scalars.html">#scalars</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p><em>This post is part of a <a href="http://meirizarrygelpi.github.io/pages/few-body-forward-jwkb-dynamics">series</a> on few-body dynamics in the forward-JWKB approximation.</em></p>
+<p>In this post I would like to introduce the toy model I will use to study the <em>forward-JWKB approximation</em>. This model only involves <em>scalar</em> quanta. There are <strong>two massive matter fields</strong>, <span class="math">\(\Phi_{1}\)</span> and <span class="math">\(\Phi_{2}\)</span>, which are <em>complex</em>. There are also <strong>two intermedium fields</strong>, <span class="math">\(A\)</span> and <span class="math">\(Y\)</span>, which are <em>real</em>. One of the intermedium fields is <strong>massive</strong> and the other is <strong>massless</strong>. The (free) <strong>kinetic operator</strong> for these fields are
+</p>
+<div class="math">$$ K_{1}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \hbar^{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2}m_{1}^{2} \right], $$</div>
+<div class="math">$$ K_{2}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \hbar^{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2}m_{2}^{2} \right], $$</div>
+<div class="math">$$ K_{A}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \left\Vert \partial \right\Vert^{2} \right], $$</div>
+<div class="math">$$ K_{Y}(x, y) \equiv i \delta(x - y) \left[- \frac{1}{2} \left\Vert \partial \right\Vert^{2} + \frac{1}{2 \lambda^{2}} \right]. $$</div>
+<p>
+That is, both matter fields and both intermedium fields propagate. Note the explicit factors of <span class="math">\(\hbar\)</span> in <span class="math">\(K_{1}\)</span> and <span class="math">\(K_{2}\)</span>. These indicate that, unlike the intermedium fields, the matter fields describe quantum mechanical matter (i.e. <em>particles</em>). The intermedium fields describe <em>waves</em>. The (free) <strong>Green function</strong> for these fields satisfy the relations
+</p>
+<div class="math">$$ \int \mathrm{d}z \left[K_{1}(x, z) G_{1}(z, y)\right] = \delta(x - y), $$</div>
+<div class="math">$$ \int \mathrm{d}z \left[K_{2}(x, z) G_{2}(z, y)\right] = \delta(x - y), $$</div>
+<div class="math">$$ \int \mathrm{d}z \left[K_{A}(x, z) G_{A}(z, y)\right] = \delta(x - y), $$</div>
+<div class="math">$$ \int \mathrm{d}z \left[K_{Y}(x, z) G_{Y}(z, y)\right] = \delta(x - y). $$</div>
+<p>
+These Green functions are given by
+</p>
+<div class="math">$$ G_{1}(x, y) = \left( \frac{1}{\hbar} \right)^{D} \int \mathrm{d}q \left( -\frac{2 i}{ \left\Vert q \right\Vert^{2} + m_{1}^{2} - i \epsilon_{1}} \exp{\left[ - \frac{i}{\hbar} q \cdot \left( x - y \right) \right]} \right), $$</div>
+<div class="math">$$ G_{2}(x, y) = \left( \frac{1}{\hbar} \right)^{D} \int \mathrm{d}q \left( -\frac{2 i}{ \left\Vert q \right\Vert^{2} + m_{2}^{2} - i \epsilon_{2}} \exp{\left[ - \frac{i}{\hbar} q \cdot \left( x - y \right) \right]} \right), $$</div>
+<div class="math">$$ G_{A}(x, y) = \int \mathrm{d}k \left( -\frac{2 i}{ \left\Vert k \right\Vert^{2} - i \epsilon_{A}} \exp{\left[ - i k \cdot \left( x - y \right) \right]} \right), $$</div>
+<div class="math">$$ G_{Y}(x, y) = \int \mathrm{d}k \left( -\frac{2 i \lambda^{2} }{ \lambda^{2} \left\Vert k \right\Vert^{2} + 1 - i \lambda^{2} \epsilon_{Y}} \exp{\left[ - i k \cdot \left( x - y \right) \right]} \right). $$</div>
+<p>
+Note the <span class="math">\(i \epsilon\)</span> prescription. The <strong>kinetic part of the action functional</strong> is
+</p>
+<div class="math">$$ S_{\text{kin}}\left[ \Phi_{1}, \Phi_{2}, A, Y \right] \equiv S_{0}\left[ \Phi_{1} \right] + S_{0}\left[ \Phi_{2} \right] + S_{0}\left[ A \right] + S_{0}\left[ Y \right], $$</div>
+<p>
+with
+</p>
+<div class="math">$$ S_{0}\left[ \Phi_{1} \right] \equiv \int \mathrm{d}x \mathrm{d}y \left[ \Phi_{1}^{*}(x) K_{1}(x, y) \Phi_{1}(y) \right], $$</div>
+<div class="math">$$ S_{0}\left[ \Phi_{2} \right] \equiv \int \mathrm{d}x \mathrm{d}y \left[ \Phi_{2}^{*}(x) K_{2}(x, y) \Phi_{2}(y) \right], $$</div>
+<div class="math">$$ S_{0}\left[ A \right] \equiv \frac{1}{2 g^{2}} \int \mathrm{d}x \mathrm{d}y \left[ A(x) K_{A}(x, y) A(y) \right], $$</div>
+<div class="math">$$ S_{0}\left[ Y \right] \equiv \frac{1}{2 h^{2}} \int \mathrm{d}x \mathrm{d}y \left[ Y(x) K_{Y}(x, y) Y(y) \right]. $$</div>
+<p>
+Here <span class="math">\(g\)</span> and <span class="math">\(h\)</span> are <em>dimensionful</em> <strong>coupling strengths</strong>. The <strong>interaction part of the action functional</strong> is
+</p>
+<div class="math">$$ S_{\text{int}}\left[ \Phi_{1}, \Phi_{2}, A, Y \right] \equiv S_{g}\left[ \Phi_{1}, \Phi_{2}, A \right] + S_{h}\left[ \Phi_{1}, \Phi_{2}, Y \right], $$</div>
+<p>
+with
+</p>
+<div class="math">$$ S_{g}\left[ \Phi_{1}, \Phi_{2}, A \right] \equiv \int \mathrm{d}x \left[ g_{1} \Phi_{1}^{*} A \Phi_{1} + g_{2} \Phi_{2}^{*} A \Phi_{2} \right], $$</div>
+<div class="math">$$ S_{h}\left[ \Phi_{1}, \Phi_{2}, Y \right] \equiv \int \mathrm{d}x \left[ h_{1} \Phi_{1}^{*} Y \Phi_{1} + h_{2} \Phi_{2}^{*} Y \Phi_{2} \right]. $$</div>
+<p>
+Here <span class="math">\(g_{1}\)</span>, <span class="math">\(g_{2}\)</span>, <span class="math">\(h_{1}\)</span>, and <span class="math">\(h_{2}\)</span> are <em>dimensionless</em> <strong>charges</strong>. Both matter fields are coupled to each intermedium field in a <em>cubic</em> way.</p>
+<h2>Dimensional Analysis</h2>
+<p>It is always good to be aware of the units of the different quantities that have been introduced so far. I will work with units such that <span class="math">\(c = 1\)</span> but <span class="math">\(\hbar\)</span> is kept explicit and <em>dimensionful</em>. Since <span class="math">\(c = 1\)</span>, you have
+</p>
+<div class="math">$$ \left[ \text{time} \right] = \left[ \text{length} \right], $$</div>
+<div class="math">$$ \left[ \text{energy} \right] = \left[ \text{momentum} \right] = \left[ \text{mass} \right]. $$</div>
+<p>
+Since <span class="math">\(\hbar\)</span> is dimensionful, you have
+</p>
+<div class="math">$$ \left[ \text{length} \right] = \left[ \hbar \right] - \left[ \text{mass} \right]. $$</div>
+<p>
+Action functionals have units of <span class="math">\(\hbar\)</span>. From the kinetic term of <span class="math">\(\Phi_{1}\)</span> and <span class="math">\(\Phi_{2}\)</span> you find the units of the matter fields:
+</p>
+<div class="math">$$ \left[ \Phi_{1} \right] = \left[ \Phi_{2} \right] = \left( \frac{1 - D}{2} \right) \left[ \hbar \right] + \left( \frac{D - 2}{2} \right) \left[ \text{mass} \right]. $$</div>
+<p>
+Here <span class="math">\(D\)</span> is the number of dimensions of spacetime. From the interaction terms you find the units of the intermedium fields:
+</p>
+<div class="math">$$ \left[ A \right] = \left[ Y \right] = 2 \left[ \text{mass} \right]. $$</div>
+<p>
+Obviously, you must have
+</p>
+<div class="math">$$ \left[ \lambda \right] = \left[ \text{length} \right] = \left[ \hbar \right] - \left[ \text{mass} \right]. $$</div>
+<p>
+Finally, from the kinetic terms of <span class="math">\(A\)</span> and <span class="math">\(Y\)</span> you find the units of the coupling strengths:
+</p>
+<div class="math">$$ \left[ g \right] = \left[ h \right] = \left( \frac{D - 3}{2} \right) \left[ \hbar \right] + \left( \frac{6 - D}{2} \right) \left[ \text{mass} \right]. $$</div>
+<p>
+Note that for both coupling strengths the mass-dimension vanishes in <span class="math">\(D = 6\)</span>, and the <span class="math">\(\hbar\)</span>-dimension vanishes in <span class="math">\(D = 3\)</span>. Also, the <span class="math">\(\hbar\)</span>-dimension is positive for <span class="math">\(D &gt; 3\)</span>, and the mass-dimension is positive for <span class="math">\(D &lt; 6\)</span>. You can construct <em>dimensionless coupling strengths</em> via:
+</p>
+<div class="math">$$ \alpha_{g} \equiv \hbar^{(3 - D)} \mu^{(D - 6)} g^{2}, $$</div>
+<div class="math">$$ \alpha_{h} \equiv \hbar^{(3 - D)} \mu^{(D - 6)} h^{2}. $$</div>
+<p>
+Here <span class="math">\(\mu\)</span> is a constant with units of mass. When <span class="math">\(D &gt; 3\)</span>, the <em>JWKB approximation</em> <span class="math">\(\hbar \rightarrow 0\)</span> corresponds to <span class="math">\(\alpha_{g} \rightarrow \infty\)</span> and <span class="math">\(\alpha_{h} \rightarrow \infty\)</span> (i.e. <em>strong-coupling</em>). In this regime you also have
+</p>
+<div class="math">$$ \frac{\hbar}{m_{1}} \rightarrow 0, $$</div>
+<div class="math">$$ \frac{\hbar}{m_{2}} \rightarrow 0; $$</div>
+<p>
+which leads to <em>small Compton lenghts</em>, or equivalently, to <em>large matter masses</em>. More details about the semiclassical approximation and dimensional analysis <a href="http://meirizarrygelpi.github.io/posts/2015/Jun/semiclassical-dimensional-analysis/">here</a>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
