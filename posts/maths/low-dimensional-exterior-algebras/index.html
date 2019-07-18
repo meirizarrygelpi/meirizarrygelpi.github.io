@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Low-Dimensional Exterior Algebras | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/maths/low-dimensional-exterior-algebras/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/maths.atom.xml">  
+  <meta name="description" content="On low-dimensional exterior algebras and parabolic Cayley-Dickson constructs.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Low-Dimensional Exterior Algebras
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2017-06-12T00:00:00-04:00">
+          <i class="fa fa-clock-o"></i>
+          Mon 12 June 2017
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/maths.html">Maths</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/exterior-algebra.html">#exterior-algebra</a>,               <a href="https://meirizarrygelpi.github.io/tag/parabolic.html">#parabolic</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>The Cayley-Dickson construction can be generalized to yield other kinds of algebras other than quaternions and octonions. The parabolic constructs involve adjoining elements that square to zero. At first I thought that these constructs were the dual numbers (2-dimensional) and the hyper numbers (4-dimensional). It turns out that the parabolic Cayley-Dickson constructs are closer to <a href="https://en.wikipedia.org/wiki/Exterior_algebra">exterior algebras</a>.</p>
+<p>Recall that an exterior algebra <span class="math">\(\Lambda(V)\)</span> over an <span class="math">\(n\)</span>-dimensional vector space <span class="math">\(V\)</span> is a direct sum of spaces:
+</p>
+<div class="math">$$ \Lambda(V) = \Lambda_{0}(V) \oplus \Lambda_{1}(V) \oplus \Lambda_{2}(V) \oplus \ldots \oplus \Lambda_{n}(V). $$</div>
+<p>
+Here, <span class="math">\(\Lambda_{0}\)</span> is the space spanned by the 0-blade, which in our case, are scalar real numbers; <span class="math">\(\Lambda_{1}\)</span> is the space spanned by the 1-blades; <span class="math">\(\Lambda_{2}\)</span> is the space spanend by the 2-blades, and in general, <span class="math">\(\Lambda_{k}\)</span> is the space spanned by the <span class="math">\(k\)</span>-blades (with <span class="math">\(0 \leq k \leq n\)</span>). A member of <span class="math">\(\Lambda_{1}\)</span> is a vector. A 2-blade is obtained by multiplying two 1-blades with the <strong>wedge product</strong>. Given two 1-blades <span class="math">\(X\)</span> and <span class="math">\(Y\)</span>, the wedge product
+</p>
+<div class="math">$$ XY \equiv X \wedge Y. $$</div>
+<p>
+The wedge product of two 1-blades is <strong>anti-symmetric</strong>:
+</p>
+<div class="math">$$ YX = - XY. $$</div>
+<p>
+In general, the dimension of <span class="math">\(\Lambda_{k}\)</span> is the binomial coefficient:
+</p>
+<div class="math">$$ \dim{(\Lambda_{k})} = {n \choose k}. $$</div>
+<p>
+Thus,
+</p>
+<div class="math">$$ \dim{(\Lambda)} = \sum_{k = 0}^{n} {n \choose k} = 2^{n}. $$</div>
+<p>
+We are going to explore the cases <span class="math">\(n = 1\)</span>, <span class="math">\(n = 2\)</span>, <span class="math">\(n = 3\)</span>, and <span class="math">\(n = 4\)</span>.</p>
+<h2>One-Dimensional</h2>
+<p>In the 1-dimensional case, the dimension of the exterior algebra is 2. This exterior algebra coincides with the <strong>dual numbers</strong>:
+</p>
+<div class="math">$$ \Lambda(\mathbb{R}) = \left\lbrace a + b W \mid (a, b) \in \mathbb{R}^2 \right\rbrace. $$</div>
+<p>
+If <span class="math">\(x\)</span> and <span class="math">\(y\)</span> are elements of <span class="math">\(\Lambda(\mathbb{R})\)</span>, then their wedge product is given by
+</p>
+<div class="math">$$ xy = (a_{1} + b_{1}W)(a_{2} + b_{2}W) = a_{1}a_{2} + (a_{1}b_{2} + b_{1}a_{2})W + b_{1}b_{2} (WW). $$</div>
+<p>
+The third term is zero because of the anti-symmetry of the wedge product of two 1-blades. However, note that in this 1-dimensional case the multiplication is <strong>commutative</strong>:
+</p>
+<div class="math">$$ yx = (a_{2} + b_{2}W)(a_{1} + b_{1}W) = a_{2}a_{1} + (a_{2}b_{1} + b_{2} a_{1})W. $$</div>
+<p>
+This is the only case when the multiplication is commutative.</p>
+<h3>Hodge Star Conjugate</h3>
+<p>The Hodge star conjugate relates a <span class="math">\(k\)</span>-blade to an <span class="math">\((n - k)\)</span>-blade. In this case, it provides a relation between 0-blades and 1-blades. If
+</p>
+<div class="math">$$x = a + bW, $$</div>
+<p>
+then the <strong>Hodge star conjugate</strong> on <span class="math">\(x\)</span> is
+</p>
+<div class="math">$$ x^{\star} = b + aW. $$</div>
+<p>
+That is, the star conjugate swaps the real and unreal parts of <span class="math">\(x\)</span>. Note that
+</p>
+<div class="math">$$ (x^{\star})^{\star} = x.$$</div>
+<p>
+That is, the 1-dimensional star conjugate is an <strong>involution</strong>.</p>
+<p>Note that
+</p>
+<div class="math">$$x (x^{\star}) = ab + (a^{2} + b^{2})W.$$</div>
+<h2>Two-Dimensional</h2>
+<p>In the 2-dimensional case, the dimension of the exterior algebra is 4. This algebra can be obtained by performing a parabolic Cayley-Dickson construct with the dual numbers. At first I thought that this lead to the hyper numbers. However, the nilpotent units in the hyper numbers commute. Because of the anti-symmetry of the wedge product, the nilpotent units in the exterior algebra anti-commute. The full algebra is:
+</p>
+<div class="math">$$ \Lambda(\mathbb{R}^{2}) = \left\lbrace a + b W + c X + d WX \mid (a, b,c,d) \in \mathbb{R}^4 \right\rbrace. $$</div>
+<p>
+You can make the Cayley-Dickson construct obvious by writing <span class="math">\(\Lambda(\mathbb{R}^{2})\)</span> like
+</p>
+<div class="math">$$ \Lambda(\mathbb{R}^{2}) = \left\lbrace A + BX \mid (A, B) \in \Lambda(\mathbb{R}) \times \Lambda(\mathbb{R}) \right\rbrace. $$</div>
+<p>
+If <span class="math">\(x\)</span> and <span class="math">\(y\)</span> are elements of <span class="math">\(\Lambda\)</span>, then their wedge product is given by
+</p>
+<div class="math">$$ xy = \left[a_{1} + b_{1}W + c_{1}X + d_{1}WX\right]\left[a_{2} + b_{2}W + c_{2}X + d_{2}WX\right]. $$</div>
+<p>
+More explicitly:
+</p>
+<div class="math">$$ xy = a_{1}a_{2} + (a_{1}b_{2} + b_{1}a_{2})W + (a_{1}c_{2} + c_{1}a_{2})X + (a_{1}d_{2} + d_{1}a_{2} + b_{1}c_{2} - c_{1}b_{2})WX. $$</div>
+<p>
+Because of the anti-symmetry of <span class="math">\(WX\)</span>, the product of two elements of <span class="math">\(\Lambda(\mathbb{R}^{2})\)</span> is <strong>non-commutative</strong>. However, it is <strong>associative</strong>.</p>
+<h3>Hodge Star</h3>
+<p>The Hodge star operation relates a <span class="math">\(k\)</span>-blade to an <span class="math">\((n - k)\)</span>-blade. In the 2-dimensional case, it provides a relation between 0-blades and 2-blades; and a relation between 1-blades:
+</p>
+<div class="math">$$ 1^{\star} = WX, \qquad W^{\star} = X, \qquad X^{\star} = - W, \qquad (WX)^{\star} = 1.$$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ (1^{\star})^{\star} = 1, \qquad ((WX)^{\star})^{\star} = WX; $$</div>
+<p>
+but
+</p>
+<div class="math">$$ (W^{\star})^{\star} = -W, \qquad (X^{\star})^{\star} = -X. $$</div>
+<p>
+To be specific, if
+</p>
+<div class="math">$$x = a + b W + c X + d WX; $$</div>
+<p>
+then the Hodge star operation on <span class="math">\(x\)</span> is
+</p>
+<div class="math">$$ x^{\star} = d - c W + b X + a WX. $$</div>
+<p>
+Thinking of <span class="math">\(x\)</span> (an element of <span class="math">\(\Lambda(\mathbb{R}^{2})\)</span>) as a pair construct with <span class="math">\(A\)</span> and <span class="math">\(B\)</span> (elements of <span class="math">\(\Lambda(\mathbb{R})\)</span>) gives
+</p>
+<div class="math">$$x = A + BX, \qquad x^{\star} = (\operatorname{Conj}(B))^{\star} + A^{\star}X.$$</div>
+<p>
+This is a way to express the 2-dimensional Hodge star operation in terms of the one-dimensional Hodge star operation and the one-dimensional conjugation operation.</p>
+<p>Acting a second time with the Hodge star gives
+</p>
+<div class="math">$$ (x^{\star})^{\star} = a - b W - c X + d WX. $$</div>
+<p>
+Acting a third time gives
+</p>
+<div class="math">$$((x^{\star})^{\star})^{\star} = d + c W - bY + aWX. $$</div>
+<p>
+Finally, acting a fourth time gives the identity operation
+</p>
+<div class="math">$$(((x^{\star})^{\star})^{\star})^{\star} = x. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ x(x^{\star}) = ad - (ac - bd)W + (ab + cd)X + (a^{2} + b^{2} + c^{2} + d^{2})(WX). $$</div>
+<h2>Three-Dimensional</h2>
+<p>In the 3-dimensional case, the dimension of the exterior algebra is 8. This algebra can be obtained by performing a parabolic Cayley-Dickson construct with <span class="math">\(\Lambda(\mathbb{R}^{2})\)</span>. The full algebra is
+</p>
+<div class="math">$$ \Lambda(\mathbb{R}^{3}) = \lbrace a + bW + cX + d WX + eY + f WY + g XY + h (WX)Z \mid (a,b,c,d,e,f,g,h) \in \mathbb{R}^{8} \rbrace. $$</div>
+<p>
+Note that the wedge product of two elements of <span class="math">\(\Lambda(\mathbb{R}^{3})\)</span> is non-commutative and non-associative.</p>
+<h3>Hodge Star</h3>
+<p>If you write the 3-dimensional Hodge star operation in terms of the 2-dimensional Hodge star operation and the 2-dimensional conjugation operation as before,
+</p>
+<div class="math">$$ x^{*} = (\operatorname{Conj}{(B)})^{\star} + A^{\star}Y; $$</div>
+<p>
+for
+</p>
+<div class="math">$$x = a + bW + cX + d WX + eY + f WY + g XY + h (WX)Y;$$</div>
+<p>
+you get
+</p>
+<div class="math">$$ x^{*} = h + gW - fX - e WX + dY - c WY + b XY + a (WX)Y.$$</div>
+<p>
+However, this is <strong>not</strong> the Hodge star operation. Instead, it should be
+</p>
+<div class="math">$$ x^{\star} = (B^{\dagger})^{\star} + A^{\star} Y; $$</div>
+<p>
+where
+</p>
+<div class="math">$$ (a + bW + cX + d WX)^{\dagger} = a - bW - cX + d WX. $$</div>
+<p>
+This gives the star conjugate:
+</p>
+<div class="math">$$ x^{\star} = h + gW - fX + e WX + dY - c WY + b XY + a (WX)Y.$$</div>
+<p>
+That is:
+</p>
+<div class="math">$$ 1^{\star} = (WX)Y, \qquad ((WX)Y)^{\star} = 1; $$</div>
+<div class="math">$$ W^{\star} = XY, \qquad X^{\star} = -WY, \qquad Y^{\star} = WX; $$</div>
+<div class="math">$$ (WX)^{\star} = Y, \qquad (WY)^{\star} = -X, \qquad (XY)^{\star} = W. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ (1^{\star})^{\star} = 1, \qquad (((WX)Y)^{\star})^{\star} = (WX)Y; $$</div>
+<div class="math">$$ (W^{\star})^{\star} = W, \qquad (X^{\star})^{\star} = X, \qquad (Y^{\star})^{\star} = Y; $$</div>
+<div class="math">$$ ((WX)^{\star})^{\star} = WX, \qquad ((WY)^{\star})^{\star} = WY, \qquad ((XY)^{\star})^{\star} = XY. $$</div>
+<p>
+That is, the 3-dimensional Hodge star operation is an <strong>involution</strong>.</p>
+<h2>Four-Dimensional</h2>
+<p>In the 4-dimensional case, the dimension of the exterior algebra is 16. This algebra can be obtained by performing a parabolic Cayley-Dickson construct with <span class="math">\(\Lambda(\mathbb{R}^{3})\)</span>. An element has the form
+</p>
+<div class="math">$$ x = x_{0} + x_{1} + x_{2} + x_{3} + x_{4}; $$</div>
+<p>
+where
+</p>
+<div class="math">$$ x_{0} = a_{0}; $$</div>
+<div class="math">$$ x_{1} = a_{W} W + a_{X} X + a_{Y} Y + a_{Z} Z; $$</div>
+<div class="math">$$ x_{2} = a_{WX} WX + a_{WY} WY + a_{WZ} WZ + a_{XY} XY + a_{XZ} XZ + a_{YZ} YZ; $$</div>
+<div class="math">$$ x_{3} = a_{WXY} (WX)Y + a_{WXZ} (WX)Z + a_{WYZ} (WY)Z + a_{XYZ} (XY)Z; $$</div>
+<div class="math">$$ x_{4} = a_{WXYZ} ((WX)Y)Z. $$</div>
+<h3>Hodge Star</h3>
+<p>In the 4-dimensional case, the Hodge star operation provides a relation between 0-blades and 4-blades, a relation between 1-blades and 3-blades, and a relation between 2-blades. Explicitly, you have
+</p>
+<div class="math">$$ 1^{\star} = ((WX)Y)Z; $$</div>
+<div class="math">$$ W^{\star} = (XY)Z, \qquad X^{\star} = -(WY)Z; $$</div>
+<div class="math">$$ Y^{\star} = (WX)Z, \qquad Z^{\star} = -(WX)Y; $$</div>
+<div class="math">$$ (WX)^{\star} = YZ, \qquad (WY)^{\star} = -XZ, \qquad (WZ)^{\star} = XY; $$</div>
+<div class="math">$$ (XY)^{\star} = WZ, \qquad (XZ)^{\star} = -WY, \qquad (YZ)^{\star} = WX; $$</div>
+<div class="math">$$ ((WX)Y)^{\star} = Z, \qquad ((WX)Z)^{\star} = -Y; $$</div>
+<div class="math">$$ ((WY)Z)^{\star} = X, \qquad ((XY)Z)^{\star} = -W; $$</div>
+<div class="math">$$ (((WX)Y)Z)^{\star} = 1. $$</div>
+<p>
+Note that, like in 2-dimensions, in 4-dimensions the Hodge star operation is not an involution.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

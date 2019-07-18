@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  GHZ Game 1 | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/ghz-game-1/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="The classical GHZ game.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  GHZ Game 1
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-02-10T00:00:00-05:00">
+          <i class="fa fa-clock-o"></i>
+          Sat 10 February 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83701x.html">#8.370.1x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>The GHZ game involves three players (Alice, Barbara, and Candida), and one referee (Rosa). Rosa randomly chooses one of four possible binary strings:
+</p>
+<div class="math">$$ 000, \qquad 011, \qquad 101, \qquad 110. $$</div>
+<p>
+From her choice, she sends the first bit <span class="math">\(a\)</span> to Alice, the second bit <span class="math">\(b\)</span> to Barbara, and the third bit <span class="math">\(c\)</span> to Candida. Each of the players uses a deterministic function to produce three bits <span class="math">\(x\)</span>, <span class="math">\(y\)</span>, and <span class="math">\(z\)</span>:
+</p>
+<div class="math">$$ x = f(a), \qquad y = g(b), \qquad z = h(c). $$</div>
+<p>
+The players then send their outputs back to Rosa. The game is won if the following condition is met:
+</p>
+<div class="math">$$ a \lor b \lor c = x \oplus y \oplus z. $$</div>
+<p>
+Here <span class="math">\(\lor\)</span> is the OR logic operator and <span class="math">\(\oplus\)</span> is the XOR logic operator.</p>
+<p>Note that
+</p>
+<div class="math">$$ 0 \lor 0 \lor 0 = 0, \qquad 0 \lor 1 \lor 1 = 1. $$</div>
+<p>
+Thus, if Rosa picks <span class="math">\(000\)</span>, then you need
+</p>
+<div class="math">$$ x \oplus y \oplus z = 0. $$</div>
+<p>
+This is achieved if either one variable is 0, or the three variables are 0. Thus, there are four scenarios:
+</p>
+<div class="math">$$ (0,0,0), \qquad (0,1,1), \qquad (1,0,1), \qquad (1,1,0). $$</div>
+<p>
+Otherwise, you need
+</p>
+<div class="math">$$ x \oplus y \oplus z = 1. $$</div>
+<p>
+This is achieved if either two variables are 0, or none of the variables are 0. Thus, again, there are four scenarios:
+</p>
+<div class="math">$$ (1,1,1), \qquad (1,0,0), \qquad (0,1,0), \qquad (0,0,1). $$</div>
+<p>
+But, it is more likely for Rosa to choose this outcome.</p>
+<p>Each player has four possible deterministic ways to produce their corresponding bits. There are two constant functions: either always return 0, or always return 1. Then you can either return whatever you are given, or the negation of what you are given.</p>
+<p>Here is some code to simulate this classical game. First, you do some imports:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Then you introduce some variables:</p>
+<div class="highlight"><pre><span></span><span class="n">booleans</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">])</span>
+
+<span class="n">rosa_option</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">alice_option</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">barbara_option</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">candida_option</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">64000</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">rosa_option</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">alice_option</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">barbara_option</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">candida_option</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+</pre></div>
+
+
+<p>The you define some functions for playing the game:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">deterministic</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">strategy</span><span class="p">,</span> <span class="n">option</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">option</span><span class="p">[</span><span class="n">strategy</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+
+<span class="k">def</span> <span class="nf">fraction_of_wins</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span>
+    <span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span>
+    <span class="n">option_a</span><span class="p">,</span> <span class="n">option_b</span><span class="p">,</span> <span class="n">option_c</span><span class="p">,</span>
+    <span class="n">n</span><span class="p">):</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">deterministic</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">option_a</span><span class="p">)</span>
+    <span class="n">Y</span> <span class="o">=</span> <span class="n">deterministic</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">option_b</span><span class="p">)</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">deterministic</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">option_c</span><span class="p">)</span>
+
+    <span class="n">A</span> <span class="o">=</span> <span class="n">booleans</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+    <span class="n">B</span> <span class="o">=</span> <span class="n">booleans</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="n">booleans</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+
+    <span class="n">wins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">bitwise_or</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bitwise_or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">C</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">bitwise_xor</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bitwise_xor</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">),</span> <span class="n">Z</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">wins</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+</pre></div>
+
+
+<p>Here is some code for printing the probability of winning when using different combination of strategies:</p>
+<div class="highlight"><pre><span></span><span class="n">strategy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">product</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">2</span><span class="p">)])</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">M</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">M</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
+            <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">fraction_of_wins</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span>
+            <span class="n">strategy</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">strategy</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">strategy</span><span class="p">[</span><span class="n">k</span><span class="p">],</span>
+            <span class="n">alice_option</span><span class="p">,</span> <span class="n">barbara_option</span><span class="p">,</span> <span class="n">candida_option</span><span class="p">,</span>
+            <span class="n">N</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+
+
+<p>As before, each deterministic strategy correspond to one of the four possible binary 2-tuples. The output is a <span class="math">\(4 \times 4 \times 4\)</span> array:</p>
+<div class="highlight"><pre><span></span><span class="p">[[[</span> <span class="mf">0.25003125</span>  <span class="mf">0.75132813</span>  <span class="mf">0.24867187</span>  <span class="mf">0.74996875</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74964062</span>  <span class="mf">0.7490625</span>   <span class="mf">0.2509375</span>   <span class="mf">0.25035937</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.25035937</span>  <span class="mf">0.2509375</span>   <span class="mf">0.7490625</span>   <span class="mf">0.74964062</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74996875</span>  <span class="mf">0.24867187</span>  <span class="mf">0.75132813</span>  <span class="mf">0.25003125</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">0.25003125</span>  <span class="mf">0.75132813</span>  <span class="mf">0.24867187</span>  <span class="mf">0.74996875</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74964062</span>  <span class="mf">0.7490625</span>   <span class="mf">0.2509375</span>   <span class="mf">0.25035937</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.25035937</span>  <span class="mf">0.2509375</span>   <span class="mf">0.7490625</span>   <span class="mf">0.74964062</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74996875</span>  <span class="mf">0.24867187</span>  <span class="mf">0.75132813</span>  <span class="mf">0.25003125</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">0.25003125</span>  <span class="mf">0.75132813</span>  <span class="mf">0.24867187</span>  <span class="mf">0.74996875</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74964062</span>  <span class="mf">0.7490625</span>   <span class="mf">0.2509375</span>   <span class="mf">0.25035937</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.25035937</span>  <span class="mf">0.2509375</span>   <span class="mf">0.7490625</span>   <span class="mf">0.74964062</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74996875</span>  <span class="mf">0.24867187</span>  <span class="mf">0.75132813</span>  <span class="mf">0.25003125</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">0.25003125</span>  <span class="mf">0.75132813</span>  <span class="mf">0.24867187</span>  <span class="mf">0.74996875</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74964062</span>  <span class="mf">0.7490625</span>   <span class="mf">0.2509375</span>   <span class="mf">0.25035937</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.25035937</span>  <span class="mf">0.2509375</span>   <span class="mf">0.7490625</span>   <span class="mf">0.74964062</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">0.74996875</span>  <span class="mf">0.24867187</span>  <span class="mf">0.75132813</span>  <span class="mf">0.25003125</span><span class="p">]]]</span>
+</pre></div>
+
+
+<p>That is, there are two kinds of strategies: one allows you to win 75% of the time. The other allows you to win only 25% of the time.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

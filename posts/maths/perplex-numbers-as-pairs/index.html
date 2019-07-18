@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Perplex Numbers as Pairs | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/maths/perplex-numbers-as-pairs/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/maths.atom.xml">  
+  <meta name="description" content="On perplex numbers as pairs of real numbers and two-dimensional real vectors.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Perplex Numbers as Pairs
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2017-05-31T00:00:00-04:00">
+          <i class="fa fa-clock-o"></i>
+          Wed 31 May 2017
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/maths.html">Maths</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/two-dimensional.html">#two-dimensional</a>,               <a href="https://meirizarrygelpi.github.io/tag/hyperbolic.html">#hyperbolic</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>A perplex number <span class="math">\(z\)</span> can be written as
+</p>
+<div class="math">$$ z = a + s b; $$</div>
+<p>
+where both <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are real numbers, and <span class="math">\(s^{2} = +1\)</span>. Note that <span class="math">\(s \neq \pm 1\)</span>: <span class="math">\(s\)</span> is a non-trivial element that squares to 1. Perplex numbers are also known as <a href="https://en.wikipedia.org/wiki/Split-complex_number">split-complex numbers</a>. This post on perplex numbers follows closely the format of a previous post on <a href="http://meirizarrygelpi.github.io/posts/maths/complex-numbers-as-pairs/">complex numbers</a>.</p>
+<p>Another way to represent a perplex number is as <strong>a pair</strong> of real numbers:
+</p>
+<div class="math">$$ z = \begin{pmatrix} a &amp; b \end{pmatrix}. $$</div>
+<p>
+I will prefer this way since it is more compatible with how a perplex number is represented computationally. The <strong>left</strong> component is called the <strong>real part</strong>:
+</p>
+<div class="math">$$ \operatorname{Real}{(z)} = a; $$</div>
+<p>
+and the <strong>right</strong> component is called the <strong>unreal part</strong>:
+</p>
+<div class="math">$$ \operatorname{Unreal}{(z)} = b. $$</div>
+<h2>Addition and Scaling</h2>
+<p>You can define two operations on perplex numbers. The <strong>addition operation</strong> is given by
+</p>
+<div class="math">$$ z_{1} = \begin{pmatrix} a_{1} &amp; b_{1} \end{pmatrix}, \qquad z_{2} = \begin{pmatrix} a_{2} &amp; b_{2} \end{pmatrix} \quad \longrightarrow \quad \operatorname{Add}{(z_{1}, z_{2})} = \begin{pmatrix} a_{1} + a_{2} &amp; b_{1} + b_{2} \end{pmatrix}. $$</div>
+<p>
+The <strong>scale operation</strong> is given by
+</p>
+<div class="math">$$ z = \begin{pmatrix} a &amp; b \end{pmatrix} \quad \longrightarrow \quad \operatorname{Scale}{(z, c)} = \begin{pmatrix} c a &amp; c b \end{pmatrix}. $$</div>
+<p>
+The addition and scale operations are essential for vector spaces. Indeed, you can assign a perplex number to a <strong>2-dimensional real vector</strong> and vice-versa:
+</p>
+<div class="math">$$ \mathbf{v} = \begin{bmatrix} a &amp; b \end{bmatrix} \quad \longleftrightarrow \quad z = \begin{pmatrix} a &amp; b \end{pmatrix}. $$</div>
+<h2>Conjugation and Negation</h2>
+<p>You can have two operations on perplex numbers that translate to discrete transformations of real 2-vectors. The first is the <strong>conjugation operation</strong>:
+</p>
+<div class="math">$$ z = \begin{pmatrix} a &amp; b \end{pmatrix} \quad \longrightarrow \quad \operatorname{Conj}{(z)} = \begin{pmatrix} a &amp; -b \end{pmatrix}. $$</div>
+<p>
+The second is the <strong>negation operation</strong>:
+</p>
+<div class="math">$$ z = \begin{pmatrix} a &amp; b \end{pmatrix} \quad \longrightarrow \quad \operatorname{Neg}{(z)} = \begin{pmatrix} -a &amp; -b \end{pmatrix}. $$</div>
+<p>
+Both conjugation and negation are <strong>involutions</strong>:
+</p>
+<div class="math">$$ \operatorname{Conj}{(\operatorname{Conj}{(z)})} = z; \qquad \operatorname{Neg}{(\operatorname{Neg}{(z)})} = z. $$</div>
+<h2>Subtraction</h2>
+<p>With negation and addition you can define the <strong>subtraction operation</strong>:
+</p>
+<div class="math">$$ z_{1} = \begin{pmatrix} a_{1} &amp; b_{1} \end{pmatrix}, \qquad z_{2} = \begin{pmatrix} a_{2} &amp; b_{2} \end{pmatrix} \quad \longrightarrow \quad \operatorname{Sub}{(z_{1}, z_{2})} = \operatorname{Add}{(z_{1}, \operatorname{Neg}{(z_{2})})} = \begin{pmatrix} a_{1} - a_{2} &amp; b_{1} - b_{2} \end{pmatrix}. $$</div>
+<h2>Multiplication</h2>
+<p>The <strong>multiplication operation</strong> for two perplex numbers is
+</p>
+<div class="math">$$ z_{1} = \begin{pmatrix} a &amp; b \end{pmatrix}, \qquad z_{2} = \begin{pmatrix} c &amp; d \end{pmatrix} \quad \longrightarrow \quad \operatorname{Mul}{(z_{1}, z_{2})} = \begin{pmatrix} ac + db &amp; da + bc \end{pmatrix}. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ \operatorname{Mul}{(z_{1}, z_{2})} = \operatorname{Mul}{(z_{2}, z_{1})}. $$</div>
+<p>
+That is, the multiplication operation for perplex numbers is <strong>commutative</strong>.</p>
+<p>Now for perplex numbers you have
+</p>
+<div class="math">$$ \operatorname{Mul}{(\operatorname{Conj}{(z_{1})}, z_{2})} = \begin{pmatrix} ac - db &amp; da - bc \end{pmatrix}. $$</div>
+<p>
+Just as for complex numbers, you can identify the real and unreal parts of this perplex number with the dot and cross products of two real 2-dimensional vectors:
+</p>
+<div class="math">$$ \operatorname{Dot}{(\mathbf{v}, \mathbf{w})} = \operatorname{Real}{(\operatorname{Mul}{(\operatorname{Conj}{(z_{1})}, z_{2})})}, \qquad \operatorname{Cross}{(\mathbf{v}, \mathbf{w})} = \operatorname{Unreal}{(\operatorname{Mul}{(\operatorname{Conj}{(z_{1})}, z_{2})})}. $$</div>
+<p>
+The <strong>cross product</strong> is the same as with complex numbers,
+</p>
+<div class="math">$$ \mathbf{v} = \begin{bmatrix} v_{1} &amp; v_{2} \end{bmatrix}, \qquad \mathbf{w} = \begin{bmatrix} w_{1} &amp; w_{2} \end{bmatrix} \quad \longrightarrow \quad \operatorname{Cross}{(\mathbf{v}, \mathbf{w})} = v_{1} w_{2} - v_{2} w_{1}; $$</div>
+<p>
+but the <strong>dot product</strong> now implies a split metric signature:
+</p>
+<div class="math">$$ \mathbf{v} = \begin{bmatrix} v_{1} &amp; v_{2} \end{bmatrix}, \qquad \mathbf{w} = \begin{bmatrix} w_{1} &amp; w_{2} \end{bmatrix} \quad \longrightarrow \quad \operatorname{Dot}{(\mathbf{v}, \mathbf{w})} = v_{1} w_{1} - v_{2} w_{2}. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ \operatorname{Dot}{(\mathbf{v}, \mathbf{w})} = \operatorname{Dot}{(\mathbf{w}, \mathbf{v})}, \qquad \operatorname{Cross}{(\mathbf{v}, \mathbf{w})} = -\operatorname{Cross}{(\mathbf{w}, \mathbf{v})}. $$</div>
+<h2>Quadrance</h2>
+<p>The square magnitude of a real 2-vector is now given by
+</p>
+<div class="math">$$ \mathbf{v} = \begin{bmatrix} v_{1} &amp; v_{2} \end{bmatrix} \quad \Longrightarrow \quad \operatorname{Quad}{(\mathbf{v})} = v_{1}^{2} - v_{2}^{2}. $$</div>
+<p>
+This is known as the <strong>hyperbolic quadrance</strong>. The hyperbolic quadrance can be positive, negative or zero. A perplex number also has a quadrance:
+</p>
+<div class="math">$$ z = \begin{pmatrix} a &amp; b \end{pmatrix} \quad \Longrightarrow \quad \operatorname{Quad}{(z)} = \operatorname{Mul}{(\operatorname{Conj}{(z)}, z)} = a^{2} - b^{2}. $$</div>
+<p>
+The quadrance of a perplex number can also be positive, negative or zero.</p>
+<h2>Inversion and Division</h2>
+<p>Since the quadrance of a perplex number is a non-negative real number, in general you can define the <strong>inversion operation</strong> by
+</p>
+<div class="math">$$ \operatorname{Inv}{(z)} = \operatorname{Scale}{(\operatorname{Conj}{(z)}, 1/ \operatorname{Quad}{(z)})}. $$</div>
+<p>
+However, if the quadrance is zero then the inversion operation cannot be performed. The perplex numbers with zero quadrance have the form:
+</p>
+<div class="math">$$ z = \begin{pmatrix} a &amp; a \end{pmatrix}; $$</div>
+<p>
+or
+</p>
+<div class="math">$$ z = \begin{pmatrix} b &amp; -b \end{pmatrix}. $$</div>
+<p>
+A perplex number with zero quadrance is a <strong>zero-divisor</strong>. When <span class="math">\(a = 1/2\)</span> or <span class="math">\(b = 1/2\)</span>, you have <strong>idempotents</strong>:
+</p>
+<div class="math">$$ z^{2} = z; \qquad z \neq 1. $$</div>
+<p>Division can be defined in terms of multiplication and inversion. The <strong>division operation</strong> is
+</p>
+<div class="math">$$ \operatorname{Quo}{(z_{1}, z_{2})} = \operatorname{Mul}{(z_{1}, \operatorname{Inv}{(z_{2})})}. $$</div>
+<p>
+Since the multiplication operation is commutative, the division operation is unique:
+</p>
+<div class="math">$$\operatorname{Mul}{(z_{1}, \operatorname{Inv}{(z_{2})})} = \operatorname{Mul}{(\operatorname{Inv}{(z_{2})}, z_{1})}$$</div>
+<p>
+That is, there is no difference between left or right quotients.</p>
+<p>The division operation can be define in a way that is analogous to the multiplication operation:
+</p>
+<div class="math">$$ z_{1} = \begin{pmatrix} a &amp; b \end{pmatrix}, \qquad z_{2} = \begin{pmatrix} c &amp; d \end{pmatrix} \quad \longrightarrow \quad \operatorname{Quo}{(z_{1}, z_{2})} = \begin{pmatrix} \dfrac{ac + db}{c^{2} + d^{2}} &amp; \dfrac{bc - da}{c^{2} + d^{2}} \end{pmatrix}. $$</div>
+<h2>Möbius Transformation</h2>
+<p>Given a perplex number <span class="math">\(z\)</span> and four other perplex numbers <span class="math">\(a\)</span>, <span class="math">\(b\)</span>, <span class="math">\(c\)</span>, and <span class="math">\(d\)</span>, the <strong>Möbius transformation</strong> of <span class="math">\(z\)</span> is given by
+</p>
+<div class="math">$$ \operatorname{Mobius}{(z, a,b,c,d)} = \frac{a z + b}{c z + d}. $$</div>
+<h2>Cross-Ratio</h2>
+<p>Given four perplex numbers <span class="math">\(w\)</span>, <span class="math">\(x\)</span>, <span class="math">\(y\)</span>, and <span class="math">\(z\)</span>, the cross-ratio is given by
+</p>
+<div class="math">$$ \operatorname{CrossRatio}{(w,x,y,z)} = \frac{(w - y)(x - z)}{(x - y)(w - z)}. $$</div>
+<p>
+The cross-ratio is invariant under Möbius transformations.</p>
+<h2>Differentiation</h2>
+<p>You can use two real variables <span class="math">\(x\)</span> and <span class="math">\(t\)</span> to construct a <strong>perplex variable</strong> <span class="math">\(z\)</span>:
+</p>
+<div class="math">$$ z = x + s t = \begin{pmatrix} x &amp; t \end{pmatrix}. $$</div>
+<p>
+Similarly, you can use two real differential operators <span class="math">\(\partial_{x}\)</span> and <span class="math">\(\partial_{t}\)</span> to construct a <strong>perplex differential operator</strong>:
+</p>
+<div class="math">$$ \partial \equiv \frac{1}{2} \left( \partial_{x} + s \partial_{t} \right). $$</div>
+<p>
+This is the perplex analog of the Wirtinger derivative. Note that
+</p>
+<div class="math">$$ \partial z = 1, \qquad \partial \operatorname{Conj}{(z)} = 0, \qquad \operatorname{Conj}{(\partial)} z = 0, \qquad \operatorname{Conj}{(\partial)} \operatorname{Conj}{(z)} = 1. $$</div>
+<p>
+A more useful operator is the <strong>perplex gradient operator</strong>:
+</p>
+<div class="math">$$ \nabla \equiv \partial_{x} + s \partial_{t}. $$</div>
+<p>
+In terms of real 2-vectors, you have the <strong>spacetime position 2-vector</strong>:
+</p>
+<div class="math">$$ \mathbf{r} = \begin{bmatrix} x &amp; t \end{bmatrix}. $$</div>
+<p>
+and the <strong>spacetime gradient 2-vector</strong>:
+</p>
+<div class="math">$$ \nabla = \begin{bmatrix} \partial_{x} &amp; \partial_{t} \end{bmatrix}. $$</div>
+<p>
+A <strong>function 2-vector</strong> has two real functions as components:
+</p>
+<div class="math">$$ \mathbf{F}(\mathbf{r}) = \begin{bmatrix} F_{x}(x, t) &amp; F_{t}(x, t) \end{bmatrix}. $$</div>
+<p>
+Two important spacetime derivatives are the <strong>spacetime divergence</strong>:
+</p>
+<div class="math">$$ \nabla \cdot \mathbf{F} = \partial_{x} F_{x} - \partial_{t} F_{t}; $$</div>
+<p>
+and the <strong>spacetime curl</strong>:
+</p>
+<div class="math">$$ \nabla \times \mathbf{F} = \partial_{x} F_{t} - \partial_{t} F_{x}. $$</div>
+<p>
+Note that for real spacetime 2-vectors, you have
+</p>
+<div class="math">$$ \nabla \cdot \mathbf{r} = 1 - 1 = 0; \qquad \nabla \times \mathbf{r} = 0. $$</div>
+<p>
+Writing the function 2-vector as a perplex number,
+</p>
+<div class="math">$$ F = \begin{pmatrix} F_{x}(x, t) &amp; F_{t}(x, t) \end{pmatrix}; $$</div>
+<p>
+you have
+</p>
+<div class="math">$$ 2 \operatorname{Real}{(\operatorname{Conj}{(\partial)} F)} = \operatorname{Real}{(\operatorname{Conj}{(\nabla)} F)} = \nabla \cdot \mathbf{F}, \qquad 2 \operatorname{Unreal}{(\operatorname{Conj}{(\partial)} F)} = \operatorname{Unreal}{(\operatorname{Conj}{(\nabla)} F)} = \nabla \times \mathbf{F}. $$</div>
+<p>
+Assuming that the components of <span class="math">\(F\)</span> are smooth, you also have
+</p>
+<div class="math">$$ 4 \partial \operatorname{Conj}{(\partial)} F = \begin{pmatrix} \partial_{x}^{2} F_{x} - \partial_{t}^{2} F_{x} &amp; \partial_{x}^{2} F_{t} - \partial_{t}^{2} F_{t} \end{pmatrix}. $$</div>
+<p>
+Instead of the 2-dimensional Laplace operator for complex numbers, you get the 2-dimensional d'Alembert operator for perplex numbers.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

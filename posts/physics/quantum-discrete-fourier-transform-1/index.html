@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Quantum Discrete Fourier Transform 1 | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/quantum-discrete-fourier-transform-1/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Exploring the quantum discrete Fourier transform.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Quantum Discrete Fourier Transform 1
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-03-15T00:00:00-04:00">
+          <i class="fa fa-clock-o"></i>
+          Thu 15 March 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83702x.html">#8.370.2x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Given a sequence of <span class="math">\(N\)</span> complex numbers <span class="math">\(x_{n}\)</span>, the Fourier-transformed sequence of <span class="math">\(N\)</span> complex numbers <span class="math">\(y_{n}\)</span> is given by
+</p>
+<div class="math">\begin{equation*}
+    y_{n} = \frac{1}{\sqrt{N}} \sum_{m = 0}^{N-1} x_{m} \exp{\left(- \frac{2 \pi m n i}{N} \right)}
+\end{equation*}</div>
+<p>
+This expression can be re-written in terms of <span class="math">\(f_{N}\)</span>:
+</p>
+<div class="math">\begin{equation*}
+    f_{N} = \exp{\left(- \frac{2 \pi i}{N} \right)}
+\end{equation*}</div>
+<p>
+The first few values for <span class="math">\(f_{N}\)</span> are
+</p>
+<div class="math">\begin{align*}
+    f_{1} &amp;= 1, &amp; f_{2} &amp;= -1, &amp; f_{3} &amp;= -\frac{1}{2} - \frac{\sqrt{3}}{2}i, &amp; f_{4} &amp;= -i, &amp; f_{5} &amp;= \frac{\sqrt{5} - 1}{4} - \frac{\sqrt{5 + \sqrt{5}}}{2\sqrt{2}}i, &amp; f_{6} &amp;= \frac{1}{2} - \frac{\sqrt{3}}{2}i
+\end{align*}</div>
+<p>
+For quantum state vectors, you can introduce a transform for basis vectors. Given an <span class="math">\(N\)</span>-dimensional quantum state space with ortho-normal basis vectors <span class="math">\(| x_{n} \rangle\)</span>, the quantum Fourier transform of that basis is
+</p>
+<div class="math">\begin{equation*}
+    |y_{n} \rangle = \frac{1}{\sqrt{N}} \sum_{m = 0}^{N-1} (f_{N})^{mn} |x_{m} \rangle
+\end{equation*}</div>
+<p>
+This can be stated in terms of a unitary matrix
+</p>
+<div class="math">\begin{equation*}
+    F_{N} = \frac{1}{\sqrt{N}} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\
+        1 &amp; f_{N} &amp; (f_{N})^{2} &amp; (f_{N})^{3} &amp; \cdots &amp; (f_{N})^{N-1} \\
+        1 &amp; (f_{N})^{2} &amp; (f_{N})^{4} &amp; (f_{N})^{6} &amp; \cdots &amp; (f_{N})^{2(N-1)} \\
+        1 &amp; (f_{N})^{3} &amp; (f_{N})^{6} &amp; (f_{N})^{9} &amp; \cdots &amp; (f_{N})^{3(N-1)} \\
+        \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+        1 &amp; (f_{N})^{N-1} &amp; (f_{N})^{2(N-1)} &amp; (f_{N})^{3(N-1)} &amp; \cdots  &amp; (f_{N})^{(N-1)(N-1)}
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+Let us look at the first few cases.</p>
+<p>The <span class="math">\(N = 1\)</span> case is pretty boring. Only one state, so the transform is trivial:
+</p>
+<div class="math">\begin{equation*}
+    | y_{0} \rangle = | x_{0} \rangle
+\end{equation*}</div>
+<p>
+The <span class="math">\(N = 2\)</span> case is slightly more interesting. The relevant coefficients are
+</p>
+<div class="math">\begin{align*}
+    f_{2} &amp;= -1, &amp; (f_{2})^{2} &amp;= 1
+\end{align*}</div>
+<p>
+The <span class="math">\(F_{2}\)</span> matrix is given by
+</p>
+<div class="math">\begin{equation*}
+    F_{2} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+        1 &amp; 1 \\
+        1 &amp; -1
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+You can recognize this as the Hadamard transform. For the Fourier basis vectors, you have
+</p>
+<div class="math">\begin{align*}
+    |y_{0} \rangle &amp;= \frac{1}{\sqrt{2}} \left( |x_{0} \rangle + |x_{1} \rangle \right), &amp; |y_{1} \rangle &amp;= \frac{1}{\sqrt{2}} \left( |x_{0} \rangle - |x_{1} \rangle \right)
+\end{align*}</div>
+<p>
+Note that this value of <span class="math">\(N\)</span> is a power of 2 and is also prime.</p>
+<p>The <span class="math">\(N = 3\)</span> case is next. The relevant coefficients are
+</p>
+<div class="math">\begin{align*}
+    f_{3} &amp;= -\frac{1}{2} - \frac{\sqrt{3}}{2}i, &amp; (f_{3})^{2} &amp;= -\frac{1}{2} + \frac{\sqrt{3}}{2}i = (f_{3})^{*}, &amp; (f_{3})^{4} &amp;= -\frac{1}{2} - \frac{\sqrt{3}}{2}i = f_{3}
+\end{align*}</div>
+<p>
+The <span class="math">\(F_{3}\)</span> matrix is given by
+</p>
+<div class="math">\begin{align*}
+    F_{3} &amp;= \frac{1}{\sqrt{3}} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 \\
+        1 &amp; c &amp; c^{2} \\
+        1 &amp; c^{2} &amp; c
+    \end{pmatrix}, &amp; c &amp;= f_{3}
+\end{align*}</div>
+<p>
+Then, the Fourier basis is
+</p>
+<div class="math">\begin{align*}
+    |y_{0} \rangle &amp;= \frac{1}{\sqrt{3}} \left( |x_{0} \rangle + |x_{1} \rangle + |x_{2} \rangle \right), &amp; |y_{1} \rangle &amp;= \frac{1}{\sqrt{3}} \left( |x_{0} \rangle + c|x_{1} \rangle + c^{2}|x_{2} \rangle \right), &amp; |y_{2} \rangle &amp;= \frac{1}{\sqrt{3}} \left( |x_{0} \rangle + c^{2}|x_{1} \rangle + c|x_{2} \rangle \right)
+\end{align*}</div>
+<p>
+Note that this value of <span class="math">\(N\)</span> is not a power of 2 but it is also prime.</p>
+<p>The case of <span class="math">\(N = 4\)</span> follows. The relevant coefficients are
+</p>
+<div class="math">\begin{align*}
+    f_{4} &amp;= -i, &amp; (f_{4})^{2} &amp;= -1, &amp; (f_{4})^{3} &amp;= i \\
+    (f_{4})^{2} &amp;= -1, &amp; (f_{4})^{4} &amp;= 1, &amp; (f_{4})^{6} &amp;= -1 \\
+    (f_{4})^{3} &amp;= i, &amp; (f_{4})^{6} &amp;= -1, &amp; (f_{4})^{9} &amp;= -i
+\end{align*}</div>
+<p>
+The <span class="math">\(F_{4}\)</span> matrix is given by
+</p>
+<div class="math">\begin{equation*}
+    F_{4} = \frac{1}{\sqrt{4}} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 &amp; 1 \\
+        1 &amp; -i &amp; -1 &amp; i \\
+        1 &amp; -1 &amp; 1 &amp; -1 \\
+        1 &amp; i &amp; -1 &amp; -i
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+The Fourier basis is
+</p>
+<div class="math">\begin{align*}
+    |y_{0} \rangle &amp;= \frac{1}{\sqrt{4}} \left( |x_{0} \rangle + |x_{1} \rangle + |x_{2} \rangle + |x_{3} \rangle \right), &amp; |y_{1} \rangle &amp;= \frac{1}{\sqrt{4}} \left( |x_{0} \rangle -i |x_{1} \rangle - |x_{2} \rangle +i |x_{3} \rangle \right) \\
+    |y_{2} \rangle &amp;= \frac{1}{\sqrt{4}} \left( |x_{0} \rangle - |x_{1} \rangle + |x_{2} \rangle - |x_{3} \rangle \right), &amp; |y_{3} \rangle &amp;= \frac{1}{\sqrt{4}} \left( |x_{0} \rangle +i |x_{1} \rangle - |x_{2} \rangle -i |x_{3} \rangle \right)
+\end{align*}</div>
+<p>
+Note that this value of <span class="math">\(N\)</span> is a power of 2 and thus not prime. Thus, you can write the basis states in binary
+</p>
+<div class="math">\begin{align*}
+    |x_{0}\rangle &amp;= |00\rangle, &amp; |x_{1}\rangle &amp;= |01\rangle, &amp; |x_{2}\rangle &amp;= |10\rangle, &amp; |x_{3}\rangle &amp;= |11\rangle
+\end{align*}</div>
+<p>
+Thinking of the four basis states as tensor products gives
+</p>
+<div class="math">\begin{align*}
+    |y_{00} \rangle &amp;= \frac{1}{\sqrt{4}} \left( |00\rangle + |01 \rangle + |10 \rangle + |11\rangle \right) = \frac{1}{\sqrt{2}}\left(|0\rangle + |1\rangle \right) \otimes \frac{1}{\sqrt{2}}\left(|0\rangle + |1\rangle \right) \\
+    |y_{01} \rangle &amp;= \frac{1}{\sqrt{4}} \left( |00\rangle -i |01 \rangle - |10 \rangle +i |11\rangle \right) = \frac{1}{\sqrt{2}}\left(|0\rangle - |1\rangle \right) \otimes \frac{1}{\sqrt{2}}\left(|0\rangle -i |1\rangle \right) \\
+    |y_{10} \rangle &amp;= \frac{1}{\sqrt{4}} \left( |00\rangle - |01 \rangle + |10 \rangle - |11\rangle \right) = \frac{1}{\sqrt{2}}\left(|0\rangle + |1\rangle \right) \otimes \frac{1}{\sqrt{2}}\left(|0\rangle - |1\rangle \right) \\
+    |y_{11} \rangle &amp;= \frac{1}{\sqrt{4}} \left( |00\rangle +i |01 \rangle - |10 \rangle -i |11\rangle \right) = \frac{1}{\sqrt{2}}\left(|0\rangle - |1\rangle \right) \otimes \frac{1}{\sqrt{2}}\left(|0\rangle +i |1\rangle \right)
+\end{align*}</div>
+<p>
+Thus, the Fourier transform takes you to another basis where the basis vectors are again tensor products and thus separable into two individual qubits. Note that <span class="math">\(F_{4}\)</span> is distinct from the tensor product of two <span class="math">\(F_{2}\)</span> matrices:
+</p>
+<div class="math">\begin{equation*}
+    F_{2} \otimes F_{2} = \frac{1}{\sqrt{4}} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 &amp; 1 \\
+        1 &amp; -1 &amp; 1 &amp; -1 \\
+        1 &amp; 1 &amp; -1 &amp; -1 \\
+        1 &amp; -1 &amp; -1 &amp; 1
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+The <span class="math">\(F_{4}\)</span> is the Fourier transform over <span class="math">\(\mathbb{Z}_{4}\)</span> whereas the tensor product of two <span class="math">\(F_{2}\)</span> matrices is the Fourier transform over <span class="math">\(\mathbb{Z}_{2} \times \mathbb{Z}_{2}\)</span>. These two are the only finite groups of order 4.</p>
+<p>Next you would have <span class="math">\(N = 5\)</span>. This value of <span class="math">\(N\)</span> is not a power of 2, but it is prime. Thus this case does not allow an interpretation in terms of basis states as tensor products.</p>
+<p>Finally, consider the <span class="math">\(N = 6\)</span> case. This value of <span class="math">\(N\)</span> is not a power of 2 and it is also not prime. The <span class="math">\(F_{6}\)</span> matrix is given by
+</p>
+<div class="math">\begin{align*}
+    F_{6} &amp;= \frac{1}{\sqrt{6}} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\
+        1 &amp; g &amp; g^{2} &amp; -1 &amp; -g &amp; -g^{2} \\
+        1 &amp; g^{2} &amp; -g &amp; 1 &amp; g^{2} &amp; -g \\
+        1 &amp; -1 &amp; 1 &amp; -1 &amp; 1 &amp; -1 \\
+        1 &amp; -g &amp; g^{2} &amp; 1 &amp; -g &amp; g^{2} \\
+        1 &amp; -g^{2} &amp; -g &amp; -1 &amp; g^{2} &amp; g
+    \end{pmatrix}, &amp; g &amp;= f_{6}
+\end{align*}</div>
+<p>
+Comparing <span class="math">\(f_{6}\)</span> to <span class="math">\(f_{3}\)</span>, you have
+</p>
+<div class="math">\begin{align*}
+    g^{2} &amp;= c, &amp; c^2 &amp;= -g
+\end{align*}</div>
+<p>
+In terms of <span class="math">\(f_{3}\)</span>, you have
+</p>
+<div class="math">\begin{equation*}
+    F_{6} = \frac{1}{\sqrt{6}} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\
+        1 &amp; -c^{2} &amp; c &amp; -1 &amp; c^{2} &amp; -c \\
+        1 &amp; c &amp; c^{2} &amp; 1 &amp; c &amp; c^{2} \\
+        1 &amp; -1 &amp; 1 &amp; -1 &amp; 1 &amp; -1 \\
+        1 &amp; c^{2} &amp; c &amp; 1 &amp; c^{2} &amp; c \\
+        1 &amp; -c &amp; c^{2} &amp; -1 &amp; c &amp; -c^{2}
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+You can interpret the six basis vectors as tensor products of a qubit and a qutrit:
+</p>
+<div class="math">\begin{align*}
+    |x_{0}\rangle &amp;= |0\rangle |0\rangle, &amp; |x_{1}\rangle &amp;= |1\rangle |1\rangle, &amp; |x_{2}\rangle &amp;= |0\rangle |2\rangle, &amp; |x_{3}\rangle &amp;= |1\rangle |0\rangle, &amp; |x_{4}\rangle &amp;= |0\rangle |1\rangle, &amp; |x_{5}\rangle &amp;= |1\rangle |2\rangle
+\end{align*}</div>
+<p>
+Then it follows that
+</p>
+<div class="math">\begin{equation*}
+    F_{6} = F_{2} \otimes F_{3}
+\end{equation*}</div>
+<p>
+This is not that surprising, considering that
+</p>
+<div class="math">\begin{equation*}
+    \mathbb{Z}_{6} = \mathbb{Z}_{2} \times \mathbb{Z}_{3}
+\end{equation*}</div>
+<p>
+That is, <span class="math">\(\mathbb{Z}_{6}\)</span> is isomorphic to <span class="math">\(\mathbb{Z}_{2} \times \mathbb{Z}_{3}\)</span>.</p>
+<p>I know I promised to end with <span class="math">\(N = 6\)</span>, but let me say that a similar situation happens with <span class="math">\(N = 10\)</span>, <span class="math">\(N = 14\)</span>, <span class="math">\(N = 15\)</span>, and beyond:
+</p>
+<div class="math">\begin{align*}
+    \mathbb{Z}_{10} &amp;= \mathbb{Z}_{2} \times \mathbb{Z}_{5}, &amp; \mathbb{Z}_{14} &amp;= \mathbb{Z}_{2} \times \mathbb{Z}_{7}, &amp; \mathbb{Z}_{15} &amp;= \mathbb{Z}_{3} \times \mathbb{Z}_{5}
+\end{align*}</div>
+<p>
+and thus
+</p>
+<div class="math">\begin{align*}
+    F_{10} &amp;= F_{2} \otimes F_{5}, &amp; F_{14} &amp;= F_{2} \otimes F_{7}, &amp; F_{15} &amp;= F_{3} \otimes F_{5}
+\end{align*}</div>
+<p>
+Also, a quick comment about <span class="math">\(N = 8\)</span>. There are three abelian finite groups of order eight:
+</p>
+<div class="math">\begin{align*}
+    \mathbb{Z}_{8} &amp;&amp; \mathbb{Z}_{2} \times \mathbb{Z}_{4} &amp;&amp; \mathbb{Z}_{2} \times \mathbb{Z}_{2} \times \mathbb{Z}_{2}
+\end{align*}</div>
+<p>
+Thus you expect three Fourier-like matrices acting on eight-dimensional spaces:
+</p>
+<div class="math">\begin{align*}
+    F_{8} &amp;&amp; F_{2} \otimes F_{4} &amp;&amp; F_{2} \otimes F_{2} \otimes F_{2}
+\end{align*}</div>
+<p>
+From this point of view, you can distinguish an octit, a tetrit-and-bit sequence, and a three-bit sequence.</p>
+<p>Okay, for real, this is the last remark. There is one non-abelian group of order six (<span class="math">\(D_{6}\)</span>), and two non-abelian groups of order eight (<span class="math">\(D_{8}\)</span> and <span class="math">\(Q_{8}\)</span>).</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
