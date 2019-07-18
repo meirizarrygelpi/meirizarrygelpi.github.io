@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Bash</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/bash.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2014-09-10T00:00:00-04:00</updated><entry><title>Files from Script</title><link href="https://meirizarrygelpi.github.io/posts/bash/files-from-script/" rel="alternate"></link><published>2014-09-10T00:00:00-04:00</published><updated>2014-09-10T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-09-10:/posts/bash/files-from-script/</id><summary type="html">&lt;p&gt;A shell script that creates other files.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I use this now and then:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat &lt;span class="s"&gt;&amp;lt;&amp;lt; EOF &amp;gt; filename.ext&lt;/span&gt;
-&lt;span class="s"&gt;contents&lt;/span&gt;
-&lt;span class="s"&gt;EOF&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Having it here will be easier to find in the future.&lt;/p&gt;</content><category term="cat"></category></entry></feed>
