@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Two-Dimensional Energy-Momentum | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/two-dimensional-energy-momentum/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Energy-momentum vectors in two-dimensional spacetime.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Two-Dimensional Energy-Momentum
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2016-11-03T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Thu 03 November 2016
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/kinematics.html">#kinematics</a>,               <a href="https://meirizarrygelpi.github.io/tag/two-dimensional.html">#two-dimensional</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In two-dimensional spacetime, an energy-momentum vector <span class="math">\(P\)</span> has only two components:
+</p>
+<div class="math">$$ P = \begin{pmatrix} E &amp; p \end{pmatrix}. $$</div>
+<p>
+Given an energy-momentum vector <span class="math">\(P\)</span>, you can compute the <span class="math">\(\mathcal{T}\)</span>-conjugate:
+</p>
+<div class="math">$$ \mathcal{T}(P) = \begin{pmatrix} -E &amp; p \end{pmatrix}; $$</div>
+<p>
+the <span class="math">\(\mathcal{P}\)</span>-conjugate:
+</p>
+<div class="math">$$ \mathcal{P}(P) = \begin{pmatrix} E &amp; -p \end{pmatrix}; $$</div>
+<p>
+and the <span class="math">\(\mathcal{C}\)</span>-conjugate:
+</p>
+<div class="math">$$ \mathcal{C}(P) = \begin{pmatrix} -E &amp; -p \end{pmatrix}. $$</div>
+<p>
+These three operations are <strong>involutions</strong>:
+</p>
+<div class="math">$$ \mathcal{T}(\mathcal{T}(P)) = P, \qquad \mathcal{P}(\mathcal{P}(P)) = P, \qquad \mathcal{C}(\mathcal{C}(P)) = P. $$</div>
+<p>
+You also have:
+</p>
+<div class="math">$$ \mathcal{C}(P) = \mathcal{T}(\mathcal{P}(P)) = \mathcal{P}(\mathcal{T}(P)) = - P. $$</div>
+<p>
+Let us look at the three kinds of energy-momentum vectors that you can have.</p>
+<h2>Slow Energy-Momenta</h2>
+<p>An energy-momentum vector <span class="math">\(P\)</span> is <strong>slow</strong> if it satisfies the equation
+</p>
+<div class="math">$$ -m^{2} = \Vert P \Vert^{2} = -E^{2} + p^{2}, $$</div>
+<p>
+with <span class="math">\(m &gt; 0\)</span>. You can introduce a <strong>slow rapidity</strong> variable <span class="math">\(\xi\)</span> via
+</p>
+<div class="math">$$ E = m \cosh{(\xi)}, \qquad p = m \sinh{(\xi)}. $$</div>
+<p>
+Here <span class="math">\(- \infty &lt; \xi &lt; \infty\)</span>. In order to obtain all possible slow energy-momentum vectors, you also need to consider the <span class="math">\(\mathcal{T}\)</span>-conjugates:
+</p>
+<div class="math">$$ \mathcal{T}(P) = \begin{pmatrix} -m \cosh{(\xi)} &amp; m \sinh{(\xi)} \end{pmatrix}. $$</div>
+<p>
+Note that the <span class="math">\(\mathcal{P}\)</span>-conjugates correspond to changing the sign of the slow rapidity variable:
+</p>
+<div class="math">$$ \begin{pmatrix} m \cosh{(\xi)} &amp; -m \sinh{(\xi)} \end{pmatrix} = \begin{pmatrix} m \cosh{(-\xi)} &amp; m \sinh{(-\xi)} \end{pmatrix}. $$</div>
+<p>
+The <strong>slow speed</strong> is defined as
+</p>
+<div class="math">$$ v^{2} \equiv \frac{p^{2}}{E^{2}} = \tanh^{2}{(\xi)}. $$</div>
+<p>
+Since the hyperbolic tangent satisfies
+</p>
+<div class="math">$$ \tanh^{2}{(\xi)} &lt; 1; $$</div>
+<p>
+it follows that the slow speed is bounded from above:
+</p>
+<div class="math">$$ v^{2} &lt; 1. $$</div>
+<h2>Null Energy-Momenta</h2>
+<p>An energy-momentum vector <span class="math">\(P\)</span> is <strong>null</strong> if it satisfies the equation
+</p>
+<div class="math">$$ 0 = \Vert P \Vert^{2} = -E^{2} + p^{2}. $$</div>
+<p>
+You can solve this via
+</p>
+<div class="math">$$ E = k, \qquad p = k; $$</div>
+<p>
+with <span class="math">\(k &gt; 0\)</span>. However, the three conjugates need to be included in order to obtain all possible null vectors:
+</p>
+<div class="math">$$ P, \qquad \mathcal{T}(P), \qquad \mathcal{P}(P), \qquad \mathcal{C}(P). $$</div>
+<p>
+The <strong>null speed</strong> is defined in the same way as the slow speed:
+</p>
+<div class="math">$$ v^{2} = \frac{p^{2}}{E^{2}}; $$</div>
+<p>
+but since <span class="math">\(p^{2} = E^{2}\)</span>, the null speed is fixed to a specific value:
+</p>
+<div class="math">$$ v^{2} = 1. $$</div>
+<h2>Fast Energy-Momenta</h2>
+<p>An energy-momentum vector <span class="math">\(P\)</span> is <strong>fast</strong> if it satisfies the equation
+</p>
+<div class="math">$$ w^{2} = \Vert P \Vert^{2} = -E^{2} + p^{2}. $$</div>
+<p>
+You can introduce a <strong>fast rapidity</strong> variable <span class="math">\(\rho\)</span> via
+</p>
+<div class="math">$$ E = w \sinh{(\rho)}, \qquad p = w \cosh{(\rho)}. $$</div>
+<p>
+Here <span class="math">\(-\infty &lt; \rho &lt; \infty\)</span>. In order to obtain all the fast energy-momentum vectors, you also need to consider the <span class="math">\(\mathcal{P}\)</span>-conjugates:
+</p>
+<div class="math">$$ \mathcal{P}(P) = \begin{pmatrix} w \sinh{(\rho)} &amp; -w \cosh{(\rho)} \end{pmatrix}. $$</div>
+<p>
+Note that the <span class="math">\(\mathcal{T}\)</span>-conjugates correspond to changing the sign of the fast rapidity variable:
+</p>
+<div class="math">$$ \begin{pmatrix} -w \sinh{(\rho)} &amp; w \cosh{(\rho)} \end{pmatrix} = \begin{pmatrix} w \sinh{(-\rho)} &amp; w \cosh{(-\rho)} \end{pmatrix}. $$</div>
+<p>
+The <strong>fast speed</strong> is defined in the same way as the slow and null speeds:
+</p>
+<div class="math">$$ v^{2} = \frac{p^{2}}{E^{2}} = \coth^{2}{(\rho)}. $$</div>
+<p>
+Since the hyperbolic cotangent satisfies
+</p>
+<div class="math">$$ \coth^{2}{(\rho)} &gt; 1; $$</div>
+<p>
+the fast speed is bounded from below:
+</p>
+<div class="math">$$ 1 &lt; v^{2}. $$</div>
+<h2>Invariants</h2>
+<p>There are six kind of Lorentz invariants that you can construct.</p>
+<h3>Slow and Slow</h3>
+<p>If <span class="math">\(P_{1}\)</span> and <span class="math">\(P_{2}\)</span> are both slow and given by
+</p>
+<div class="math">$$ P_{1} = \begin{pmatrix} m_{1} \cosh{(\xi_{1})} &amp; m_{1} \sinh{(\xi_{1})} \end{pmatrix}, \qquad P_{2} = \begin{pmatrix} m_{2} \cosh{(\xi_{2})} &amp; m_{2} \sinh{(\xi_{2})} \end{pmatrix} $$</div>
+<p>
+with both <span class="math">\(m_{1} &gt; 0\)</span> and <span class="math">\(m_{2} &gt; 0\)</span>, then the inner product is given by
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -E_{1} E_{2} + p_{1} p_{2} = -m_{1} m_{2} \left(\cosh{(\xi_{1})} \cosh{(\xi_{2})} - \sinh{(\xi_{1})} \sinh{(\xi_{2})} \right). $$</div>
+<p>
+This is equivalent to
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -m_{1} m_{2} \cosh{(\xi_{1} - \xi_{2})}. $$</div>
+<p>
+Since <span class="math">\(m_{1}\)</span> and <span class="math">\(m_{2}\)</span> are positive, and the hyperbolic cosine is greater or equal to 1, you have
+</p>
+<div class="math">$$ -\frac{P_{1} \cdot P_{2}}{m_{1} m_{2}} \geq 1. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ P_{1} \cdot \mathcal{P}(P_{2}) = \mathcal{P}(P_{1}) \cdot P_{2} = -E_{1}E_{2} - p_{1}p_{2} = -m_{1} m_{2} \cosh{(\xi_{1} + \xi_{2})}; $$</div>
+<p>
+as expected from <span class="math">\(\mathcal{P}\)</span>-conjugation changing the sign of the slow rapidity. Furthermore,
+</p>
+<div class="math">$$ P_{1} \cdot \mathcal{T}(P_{2}) = \mathcal{T}(P_{1}) \cdot P_{2} = E_{1}E_{2} + p_{1}p_{2} = m_{1} m_{2} \cosh{(\xi_{1} + \xi_{2})}; $$</div>
+<p>
+and also
+</p>
+<div class="math">$$ P_{1} \cdot \mathcal{C}(P_{2}) = \mathcal{C}(P_{1}) \cdot P_{2} = - P_{1} \cdot P_{2} = m_{1} m_{2} \cosh{(\xi_{1} - \xi_{2})}. $$</div>
+<h3>Null and Null</h3>
+<p>If <span class="math">\(P_{1}\)</span> and <span class="math">\(P_{2}\)</span> are both null and given by
+</p>
+<div class="math">$$ P_{1} = \begin{pmatrix} k_{1} &amp; k_{1} \end{pmatrix}, \qquad P_{2} = \begin{pmatrix} k_{2} &amp; k_{2} \end{pmatrix}; $$</div>
+<p>
+with both <span class="math">\(k_{1} &gt; 0\)</span> and <span class="math">\(k_{2} &gt; 0\)</span>, then the inner product is
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -E_{1} E_{2} + p_{1} p_{2} = -k_{1} k_{2} + k_{1} k_{2} = 0. $$</div>
+<p>
+However, you have
+</p>
+<div class="math">$$ P_{1} \cdot \mathcal{T}(P_{2}) = \mathcal{T}(P_{1}) \cdot P_{2} = E_{1} E_{2} + p_{1} p_{2} = 2 k_{1} k_{2}; $$</div>
+<div class="math">$$ P_{1} \cdot \mathcal{P}(P_{2}) = \mathcal{P}(P_{1}) \cdot P_{2} = -E_{1} E_{2} - p_{1} p_{2} = -2 k_{1} k_{2}; $$</div>
+<div class="math">$$ P_{1} \cdot \mathcal{C}(P_{2}) = \mathcal{C}(P_{1}) \cdot P_{2} = E_{1} E_{2} - p_{1} p_{2} = 0. $$</div>
+<p>
+Note that both non-zero invariants are factorizable.</p>
+<h3>Fast and Fast</h3>
+<p>If <span class="math">\(P_{1}\)</span> and <span class="math">\(P_{2}\)</span> are both fast and given by
+</p>
+<div class="math">$$ P_{1} = \begin{pmatrix} w_{1} \sinh{(\rho_{1})} &amp; w_{1} \cosh{(\rho_{1})} \end{pmatrix}, \qquad P_{2} = \begin{pmatrix} w_{2} \sinh{(\rho_{2})} &amp; w_{2} \cosh{(\rho_{2})} \end{pmatrix} $$</div>
+<p>
+with both <span class="math">\(w_{1} &gt; 0\)</span> and <span class="math">\(w_{2} &gt; 0\)</span>, then the inner product is given by
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -E_{1} E_{2} + p_{1} p_{2} = -w_{1} w_{2} \left(\sinh{(\rho_{1})} \sinh{(\rho_{2})} - \cosh{(\rho_{1})} \cosh{(\rho_{2})} \right). $$</div>
+<p>
+This is equivalent to
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = w_{1} w_{2} \cosh{(\rho_{1} - \rho_{2})}. $$</div>
+<p>
+Since <span class="math">\(w_{1}\)</span> and <span class="math">\(w_{2}\)</span> are positive, and the hyperbolic cosine is greater or equal to 1, you have
+</p>
+<div class="math">$$ \frac{P_{1} \cdot P_{2}}{w_{1} w_{2}} \geq 1. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ P_{1} \cdot \mathcal{T}(P_{2}) = \mathcal{T}(P_{1}) \cdot P_{2} = E_{1}E_{2} + p_{1}p_{2} = w_{1} w_{2} \cosh{(\rho_{1} + \rho_{2})}; $$</div>
+<p>
+as expected from <span class="math">\(\mathcal{T}\)</span>-conjugation changing the sign of the fast rapidity. Furthermore,
+</p>
+<div class="math">$$ P_{1} \cdot \mathcal{P}(P_{2}) = \mathcal{P}(P_{1}) \cdot P_{2} = -E_{1}E_{2} - p_{1}p_{2} = -w_{1} w_{2} \cosh{(\rho_{1} + \rho_{2})}; $$</div>
+<p>
+and also
+</p>
+<div class="math">$$ P_{1} \cdot \mathcal{C}(P_{2}) = \mathcal{C}(P_{1}) \cdot P_{2} = - P_{1} \cdot P_{2} = -w_{1} w_{2} \cosh{(\rho_{1} - \rho_{2})}. $$</div>
+<h3>Slow and Null</h3>
+<p>If <span class="math">\(P_{1}\)</span> is slow and given by
+</p>
+<div class="math">$$ P_{1} = \begin{pmatrix} m_{1} \cosh{(\xi_{1})} &amp; m_{1} \sinh{(\xi_{1})} \end{pmatrix}; $$</div>
+<p>
+and <span class="math">\(P_{2}\)</span> is null and given by
+</p>
+<div class="math">$$ P_{2} = \begin{pmatrix} k_{2} &amp; k_{2} \end{pmatrix}; $$</div>
+<p>
+with both <span class="math">\(m_{1} &gt; 0\)</span> and <span class="math">\(k_{2} &gt; 0\)</span>, then the inner product is
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -E_{1} E_{2} + p_{1} p_{2} = -m_{1} k_{2} (\cosh{(\xi_{1})} - \sinh{(\xi_{1})}) .$$</div>
+<p>
+This is equivalent to
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -m_{1} k_{2} \exp{(-\xi_{1})}. $$</div>
+<p>
+Since <span class="math">\(m_{1}\)</span> and <span class="math">\(k_{2}\)</span> are positive, and the exponential function is never negative, you have
+</p>
+<div class="math">$$ -\frac{P_{1} \cdot P_{2}}{m_{1} k_{2}} \geq 0 $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ P_{1} \cdot \mathcal{T}(P_{2}) = \mathcal{T}(P_{1}) \cdot P_{2} = E_{1} E_{2} + p_{1} p_{2} = m_{1} k_{2} \exp{(\xi_{1})}. $$</div>
+<p>
+Both of these inner products are factorizable.</p>
+<h3>Slow and Fast</h3>
+<p>If <span class="math">\(P_{1}\)</span> is slow and given by
+</p>
+<div class="math">$$ P_{1} = \begin{pmatrix} m_{1} \cosh{(\xi_{1})} &amp; m_{1} \sinh{(\xi_{1})} \end{pmatrix} ; $$</div>
+<p>
+and <span class="math">\(P_{2}\)</span> is fast and given by
+</p>
+<div class="math">$$ P_{2} = \begin{pmatrix} w_{2} \sinh{(\rho_{2})} &amp; w_{2} \cosh{(\rho_{2})} \end{pmatrix} ; $$</div>
+<p>
+with <span class="math">\(m_{1} &gt; 0\)</span> and <span class="math">\(w_{2} &gt; 0\)</span>, then the inner product is given by
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -E_{1} E_{2} + p_{1} p_{2} = -m_{1}w_{2}(\cosh{(\xi_{1})} \sinh{(\rho_{2})} - \sinh{(\xi_{1})} \cosh{(\rho_{2})}). $$</div>
+<p>
+This is equivalent to
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = m_{1} w_{2} \sinh{(\xi_{1} - \rho_{2})}. $$</div>
+<p>
+Since <span class="math">\(m_{1}\)</span> and <span class="math">\(w_{2}\)</span> are positive, and the hyperbolic sine takes all values in the real line, you have
+</p>
+<div class="math">$$ -\infty &lt; \frac{P_{1} \cdot P_{2}}{m_{1} w_{2}} &lt; \infty. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ P_{1} \cdot \mathcal{T}(P_{2}) = \mathcal{T}(P_{1}) \cdot P_{2} = E_{1} E_{2} + p_{1} p_{2} = m_{1} w_{2} \sinh{(\xi_{1} + \rho_{2})}; $$</div>
+<div class="math">$$ P_{1} \cdot \mathcal{P}(P_{2}) = \mathcal{P}(P_{1}) \cdot P_{2} = -E_{1} E_{2} - p_{1} p_{2} = -m_{1} w_{2} \sinh{(\xi_{1} + \rho_{2})}; $$</div>
+<div class="math">$$ P_{1} \cdot \mathcal{C}(P_{2}) = \mathcal{C}(P_{1}) \cdot P_{2} = E_{1} E_{2} - p_{1} p_{2} = -m_{1} w_{2} \sinh{(\xi_{1} - \rho_{2})}. $$</div>
+<h3>Null and Fast</h3>
+<p>If <span class="math">\(P_{1}\)</span> is null and given by
+</p>
+<div class="math">$$ P_{1} = \begin{pmatrix} k_{1} &amp; k_{1} \end{pmatrix}; $$</div>
+<p>
+and <span class="math">\(P_{2}\)</span> is fast and given by
+</p>
+<div class="math">$$ P_{2} = \begin{pmatrix} w_{2} \sinh{(\rho_{2})} &amp; w_{2} \cosh{(\rho_{2})} \end{pmatrix}; $$</div>
+<p>
+with <span class="math">\(k_{1} &gt; 0\)</span> and <span class="math">\(w_{2} &gt; 0\)</span>, then the inner product is
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -E_{1} E_{2} + p_{1} p_{2} = - k_{1} w_{2} (\sinh{(\rho_{2})} - \cosh{(\rho_{2})}) = k_{1} w_{2} \exp{(-\rho_{2})}. $$</div>
+<p>
+Since <span class="math">\(k_{1}\)</span> and <span class="math">\(w_{2}\)</span> are positive, and the exponential function is never negative, you have
+</p>
+<div class="math">$$ \frac{P_{1} \cdot P_{2}}{k_{1} w_{2}} \geq 0. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ P_{1} \cdot \mathcal{T}(P_{2}) = \mathcal{T}(P_{1}) \cdot P_{2} = E_{1} E_{2} + p_{1} p_{2} = k_{1} w_{2} \exp{(\rho_{2})}; $$</div>
+<div class="math">$$ P_{1} \cdot \mathcal{P}(P_{2}) = \mathcal{P}(P_{1}) \cdot P_{2} = -E_{1} E_{2} - p_{1} p_{2} = -k_{1} w_{2} \exp{(\rho_{2})}; $$</div>
+<div class="math">$$ P_{1} \cdot \mathcal{C}(P_{2}) = \mathcal{C}(P_{1}) \cdot P_{2} = E_{1} E_{2} - p_{1} p_{2} = -k_{1} w_{2} \exp{(-\rho_{2})}. $$</div>
+<p>
+All of these inner products are factorizable.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

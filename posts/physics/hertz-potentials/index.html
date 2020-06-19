@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Hertz Potentials | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/hertz-potentials/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Hertz potentials and singular multipolar sources.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Hertz Potentials
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2019-01-30T07:37:16-05:00">
+          <i class="fas fa-clock"></i>
+          Wed 30 January 2019
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/hertz.html">#hertz</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In classical electrodynamics, you have three important objects: the <span class="math">\(A\)</span> potential, the <span class="math">\(F\)</span> field, and the <span class="math">\(J\)</span> current. The potential and the field are related via
+</p>
+<div class="math">\begin{equation*}
+    F^{ab} = \partial^{a} A^{b} - \partial^{b} A^{a}
+\end{equation*}</div>
+<p>
+The field and the source density are (dynamically) related via
+</p>
+<div class="math">\begin{equation*}
+    J^{b} = \partial_{a} F^{ab}
+\end{equation*}</div>
+<p>
+These are a subset of the Maxwell equations. Since <span class="math">\(F^{ab}\)</span> is antisymmetric, you have the (dynamic) continuity equation:
+</p>
+<div class="math">\begin{equation*}
+    \partial_{a} J^{a} = 0
+\end{equation*}</div>
+<p>
+From the potential, differentiation gets you to the field. From the field, differentiation gets you to the source density.</p>
+<p>The Lorenz equation for the <span class="math">\(A\)</span> potential is
+</p>
+<div class="math">\begin{equation*}
+    \partial_{a} A^{a} = 0
+\end{equation*}</div>
+<p>
+When the Lorenz equation for <span class="math">\(A\)</span> holds, you have
+</p>
+<div class="math">\begin{equation*}
+    \partial_{a} F^{ab} = \partial^{2} A^{b} = J^{b}
+\end{equation*}</div>
+<p>
+Thus, <span class="math">\(J\)</span> acts as the source term in the inhomogeneous wave equation for <span class="math">\(A\)</span>.</p>
+<p>The Lorenz equation for <span class="math">\(A\)</span> looks just like the continuity equation, which suggests writing the potential as
+</p>
+<div class="math">\begin{equation*}
+    A^{b} = \partial_{a} B^{ab}
+\end{equation*}</div>
+<p>
+Here <span class="math">\(B\)</span> is the Hertz potential. The Hertz potential is antisymmetric, since it plays the role of the <span class="math">\(F\)</span> field. In terms of the Hertz potential, you have
+</p>
+<div class="math">\begin{equation*}
+    F^{ab} = \partial^{a} \partial_{c} B^{cb} - \partial^{b} \partial_{c} B^{ca}
+\end{equation*}</div>
+<p>
+Suppose that the <span class="math">\(B\)</span> potential satisfies a Bianchi equation:
+</p>
+<div class="math">\begin{equation*}
+    \partial^{c} B^{ab} + \partial^{b} B^{ca} + \partial^{a} B^{bc} = 0
+\end{equation*}</div>
+<p>
+Then it follows that
+</p>
+<div class="math">\begin{equation*}
+    F^{ab} = \partial^{2} B^{ab}
+\end{equation*}</div>
+<p>
+That is, <span class="math">\(F\)</span> acts as the source term in the inhomogeneous wave equation for <span class="math">\(B\)</span>.</p>
+<p>Now suppose that <span class="math">\(B\)</span> can be further written as
+</p>
+<div class="math">\begin{equation*}
+    B^{ab} = \partial^{a} C^{b} - \partial^{b} C^{a}
+\end{equation*}</div>
+<p>
+Here <span class="math">\(C\)</span> is a secondary Hertz potential. If you impose a Hertz equation on <span class="math">\(C\)</span>,
+</p>
+<div class="math">\begin{equation*}
+    \partial_{a} C^{a} = 0
+\end{equation*}</div>
+<p>
+then it follows that
+</p>
+<div class="math">\begin{equation*}
+    A^{a} = \partial^{2} C^{a}
+\end{equation*}</div>
+<p>
+That is, <span class="math">\(A\)</span> acts as the source term in the inhomogeneous wave equation for <span class="math">\(C\)</span>.</p>
+<p>At this stage, after all these assumptions, you have <span class="math">\(A\)</span> playing the role of <span class="math">\(J\)</span>, <span class="math">\(B\)</span> playing the role of <span class="math">\(F\)</span>, and <span class="math">\(C\)</span> playing the role of <span class="math">\(A\)</span>. Since <span class="math">\(J\)</span> can contribute singular terms from monopoles (1-poles), and <span class="math">\(F\)</span> can contribute singular terms from dipoles (2-poles), I wonder if it is also true that <span class="math">\(A\)</span> can contribute singular terms from quadrupoles (4-poles), that <span class="math">\(B\)</span> can contribute singular terms from octupoles (8-poles), and that <span class="math">\(C\)</span> can contribute singular terms from hexadecapoles (16-poles).</p>
+<p>More generally, you have the <span class="math">\(H\)</span> field related to the current:
+</p>
+<div class="math">\begin{equation*}
+    \partial_{a} H^{ab} = J^{b}
+\end{equation*}</div>
+<p>
+The <span class="math">\(H\)</span> and <span class="math">\(F\)</span> fields are related via
+</p>
+<div class="math">\begin{equation*}
+    H^{ab} = F^{ab} - P^{ab}
+\end{equation*}</div>
+<p>
+Here, <span class="math">\(P\)</span> describes the polarization and magnetization. Both <span class="math">\(H\)</span> and <span class="math">\(F\)</span> are antisymmetric.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

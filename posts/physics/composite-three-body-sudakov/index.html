@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Composite Three-Body Sudakov Decomposition | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/composite-three-body-sudakov/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="A three-body problem with composite Sudakov null momenta.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Composite Three-Body Sudakov Decomposition
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2015-12-09T00:00:00-05:00">
+          <i class="fas fa-clock"></i>
+          Wed 09 December 2015
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/sudakov.html">#sudakov</a>,               <a href="https://meirizarrygelpi.github.io/tag/three-body.html">#three-body</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In two previous posts I discussed the <a href="http://meirizarrygelpi.github.io/posts/physics/three-body-kinematics/">simple</a> and <a href="http://meirizarrygelpi.github.io/posts/physics/three-body-composite-kinematics/">composite</a> kinematics of three-body problems. The <strong>composite Sudakov decomposition</strong> is done in two two-body stages. First, you write
+</p>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, \qquad p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}.$$</div>
+<p>
+This is just a two-body Sudakov decomposition of two of the three momenta. Next, you perform another two-body decomposition with a 2-composite vector and the remaining simple vector:
+</p>
+<div class="math">$$ p_{12} = n_{12} + \frac{s_{12}}{S_{(12)3}} n_{3}, \qquad p_{3} = n_{3} + \frac{m_{3}^{2}}{S_{(12)3}} n_{12}.$$</div>
+<p>
+Here <span class="math">\(n_{1}\)</span>, <span class="math">\(n_{2}\)</span>, <span class="math">\(n_{12}\)</span>, and <span class="math">\(n_{3}\)</span> are null vectors, and I have introduced two <strong>2-Sudakov</strong> invariants:
+</p>
+<div class="math">$$ S_{12} \equiv \left\Vert n_{1} + n_{2} \right\Vert^{2} = 2 \left( n_{1} \cdot n_{2} \right), \qquad S_{(12)3} \equiv \left\Vert n_{12} + n_{3} \right\Vert^{2} = 2 \left( n_{12} \cdot n_{3} \right).$$</div>
+<p>
+From the familiar <a href="http://meirizarrygelpi.github.io/posts/physics/two-body-sudakov/">two-body Sudakov decomposition</a> you have
+</p>
+<div class="math">$$ S_{12} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right); $$</div>
+<div class="math">$$ S_{(12)3} = \frac{1}{2} \left( s_{123} - s_{12} - m_{3}^{2} + \sqrt{ \left( s_{123} - s_{12} - m_{3}^{2} \right)^{2} - 4 s_{12} m_{3}^{2} } \right). $$</div>
+<p>
+But you can further introduce two other 2-Sudakov invariants:
+</p>
+<div class="math">$$ S_{23} \equiv \left\Vert n_{2} + n_{3} \right\Vert^{2} = 2 \left( n_{2} \cdot n_{3} \right), \qquad S_{31} \equiv \left\Vert n_{3} + n_{1} \right\Vert^{2} = 2 \left( n_{3} \cdot n_{1} \right).$$</div>
+<p>
+The goal here is to write these 2-Sudakov invariants in terms of the Mandelstam invariants and the masses. Using
+</p>
+<div class="math">$$ p_{12} \equiv p_{1} + p_{2} = \left(1 + \frac{m_{2}^{2}}{S_{12}} \right) n_{1} + \left(1 + \frac{m_{1}^{2}}{S_{12}} \right) n_{2} \quad \Longrightarrow \quad n_{12} = \left(1 + \frac{m_{2}^{2}}{S_{12}} \right) n_{1} + \left(1 + \frac{m_{1}^{2}}{S_{12}} \right) n_{2} - \frac{s_{12}}{S_{(12)3}} n_{3}, $$</div>
+<p>
+you find that
+</p>
+<div class="math">$$ p_{3} = \frac{m_{3}^{2}}{S_{(12)3}} \left(1 + \frac{m_{2}^{2}}{S_{12}} \right) n_{1} + \frac{m_{3}^{2}}{S_{(12)3}} \left(1 + \frac{m_{1}^{2}}{S_{12}} \right) n_{2} + \left(1 - \frac{s_{12} m_{3}^{2}}{S_{(12)3}^{2}} \right) n_{3}. $$</div>
+<p>
+At this stage you introduce <strong>Regge-Sudakov</strong> invariants:
+</p>
+<div class="math">$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}, \qquad R_{23} \equiv \frac{S_{23}}{m_{2} m_{3}}, \qquad R_{31} \equiv \frac{S_{31}}{m_{3} m_{1}}, \qquad R_{(12)3} \equiv \frac{S_{(12)3}}{\sqrt{s_{12}} m_{3}}. $$</div>
+<p>
+Using the identities
+</p>
+<div class="math">$$ r_{23} = \frac{p_{2} \cdot p_{3}}{m_{2} m_{3}}, \qquad r_{31} = \frac{p_{3} \cdot p_{1}}{m_{3} m_{1}}; $$</div>
+<p>
+you find the relations
+</p>
+<div class="math">$$ 2r_{23} = \frac{m_{2}}{ \sqrt{s_{12}} R_{(12)3}} \left( 2 + \frac{m_{1} R_{12}}{m_{2}} + \frac{m_{1}}{m_{2} R_{12}} \right) + \left( 1 - \frac{1}{R_{(12)3}^{2}}\right) \left( R_{23} + \frac{R_{31}}{R_{12}} \right), $$</div>
+<div class="math">$$ 2r_{31} = \frac{m_{1}}{ \sqrt{s_{12}} R_{(12)3}} \left( 2 + \frac{m_{2} R_{12}}{m_{1}} + \frac{m_{2}}{m_{1} R_{12}} \right) + \left( 1 - \frac{1}{R_{(12)3}^{2}}\right) \left( R_{31} + \frac{R_{23}}{R_{12}} \right). $$</div>
+<p>
+Note that <span class="math">\(R_{23}\)</span> and <span class="math">\(R_{31}\)</span> appear only in a linear way. You can easily solve for <span class="math">\(R_{23}\)</span> and <span class="math">\(R_{31}\)</span>, but the important point is that this "recursive" decomposition is very different from the <a href="http://meirizarrygelpi.github.io/posts/physics/contiguous-three-body-sudakov/">contiguous decomposition</a> presented earlier.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

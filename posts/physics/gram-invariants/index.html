@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Gram Momentum Invariants | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/gram-invariants/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="On Gram momentum invariants, with explicit details on the invariants for working with 2 and 3 quanta.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Gram Momentum Invariants
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-08-28T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Thu 28 August 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/kinematics.html">#kinematics</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In this post I will mention some facts about what I call Gram momentum invariants. I will assume that every energy-momentum vector <span class="math">\(p_{I}\)</span> satisfies an on-shell constraint of the form
+</p>
+<div class="math">$$p_{I}^{2} = - m_{I}^{2}$$</div>
+<p>
+with the mass <span class="math">\(m_{I}\)</span> being real and positive.</p>
+<h2>Introduction</h2>
+<p>In a <a href="http://meirizarrygelpi.github.io/posts/2014/Aug/mandelstam-invariants/">previous post</a> I introduced the Mandelstam momentum invariants. You can construct <span class="math">\(n\)</span>-Mandelstam invariants with <span class="math">\(n\)</span> distinct energy-momentum vectors. With a similar collection of <span class="math">\(n\)</span> distinct energy-momentum vectors, you can also construct an <span class="math">\(n\)</span>-Gram invariant:
+</p>
+<div class="math">$$G_{I_{1} I_{2} \cdots I_{n}} = -\det{ \begin{pmatrix} p_{I_{1}} \cdot p_{I_{1}} &amp; \cdots &amp; p_{I_{1}} \cdot p_{I_{n}} \\ \vdots &amp; \ddots &amp; \vdots \\ p_{I_{1}} \cdot p_{I_{n}} &amp; \cdots &amp; p_{I_{n}} \cdot p_{I_{n}} \end{pmatrix} }.$$</div>
+<p>
+That is, an <span class="math">\(n\)</span>-Gram invariant correspond to the Gram determinant associated with a collection of <span class="math">\(n\)</span> energy-momentum vectors. Hence, by construction, the Gram momentum invariants are sensitive to collinearity of the external energy-momentum vectors (i.e. they vanish whenever a pair of energy-momentum vectors are collinear).</p>
+<h2>Two Quanta</h2>
+<p>Given two linearly-independent energy-momentum vectors, the <strong>2-Gram</strong> invariant is
+</p>
+<div class="math">$$G_{IJ} \equiv -\det{ \begin{pmatrix} p_{I}^{2} &amp; p_{I} \cdot p_{J} \\ p_{I} \cdot p_{J} &amp; p_{J}^{2} \end{pmatrix} } = -p_{I}^{2} p_{J}^{2} + (p_{I} \cdot p_{J})^{2}.$$</div>
+<p>
+Using
+</p>
+<div class="math">$$p_{I}^{2} = - m_{I}^{2} \qquad (p_{I} + p_{J})^{2} = -s_{IJ} \qquad p_{J}^{2} = - m_{J}^{2}$$</div>
+<p>
+we can write
+</p>
+<div class="math">$$p_{I} \cdot p_{J} = \frac{m_{I}^{2} + m_{J}^{2} - s_{IJ}}{2}$$</div>
+<p>
+This allows you to write the 2-Gram invariant in terms of masses and 2-Mandelstam invariants:
+</p>
+<div class="math">$$G_{IJ} = \frac{1}{4} [s_{IJ} - (m_{I} - m_{J})^{2}] [s_{IJ} - (m_{I} + m_{J})^{2}].$$</div>
+<p>
+In this form, the <strong>sign properties</strong> of a 2-Gram invariant are obvious. You have <span class="math">\(G_{IJ}\)</span> being <strong>positive</strong> whenever <span class="math">\(s_{IJ} &lt; (m_{I} - m_{J})^{2}\)</span> or <span class="math">\(s_{IJ} &gt; (m_{I} + m_{J})^{2}\)</span>. Part of this region lies <strong>above the 2-threshold</strong>; the another part lies <strong>below the 2-pseudothreshold</strong>. On the other hand, you have <span class="math">\(G_{IJ}\)</span> being <strong>negative</strong> whenever <span class="math">\((m_{I} - m_{J})^{2} &lt; s_{IJ} &lt; (m_{I} + m_{J})^{2}\)</span>. All of this region lies <strong>below the 2-threshold</strong> and <strong>above the 2-pseudothreshold</strong>.</p>
+<p>Expanding the expression for <span class="math">\(G_{IJ}\)</span> you find a surprisingly symmetric expression:
+</p>
+<div class="math">$$G_{IJ} = \frac{1}{4} \left( s^{2} + m_{I}^{4} + m_{J}^{4} - 2 m_{I}^{2} s - 2 m_{J}^{2} s - 2 m_{I}^{2} m_{J}^{2} \right). $$</div>
+<p>
+This can be rewritten in terms of a symmetric multivariate polynomial:
+</p>
+<div class="math">$$G_{IJ} = \frac{1}{4}\Upsilon_{2}(s_{IJ}, m_{I}^{2}, m_{J}^{2}), \qquad \Upsilon_{2}(x, y, z) = x^{2} + y^{2} + z^{2} - 2 xy - 2 xz - 2 yz .$$</div>
+<p>
+The function <span class="math">\(\Upsilon_{2}\)</span> is a <strong>Källén polynomial</strong>.</p>
+<h2>Three Quanta</h2>
+<p>Given three linearly-independent energy-momentum vectors, the <strong>3-Gram</strong> invariant is
+</p>
+<div class="math">$$G_{IJK} \equiv -\det{ \begin{pmatrix} p_{I}^{2} &amp; p_{I} \cdot p_{J} &amp; p_{I} \cdot p_{K} \\ p_{I} \cdot p_{J} &amp; p_{J}^{2} &amp; p_{J} \cdot p_{K} \\ p_{I} \cdot p_{K} &amp; p_{J} \cdot p_{K} &amp; p_{K}^{2} \end{pmatrix} } = -p_{I}^{2} p_{J}^{2} p_{K}^{2} + p_{I}^{2} (p_{J} \cdot p_{K})^{2} + p_{J}^{2} (p_{I} \cdot p_{K})^{2} + p_{K}^{2} (p_{I} \cdot p_{J})^{2} - 2 (p_{I} \cdot p_{J})(p_{I} \cdot p_{K})(p_{J} \cdot p_{K}) .$$</div>
+<p>
+In general, this cannot be simplified further in terms of masses and Mandelstam invariants.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

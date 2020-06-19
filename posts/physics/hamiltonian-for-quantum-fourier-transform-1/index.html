@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Hamiltonian for Quantum Fourier Transform 1 | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-quantum-fourier-transform-1/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Hermitian Hamiltonians for quantum Fourier transforms.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Hamiltonian for Quantum Fourier Transform 1
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-03-27T11:14:42-04:00">
+          <i class="fas fa-clock"></i>
+          Tue 27 March 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83702x.html">#8.370.2x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Consider an <span class="math">\(N \times N\)</span> matrix <span class="math">\(A\)</span> that squares to the identity:
+</p>
+<div class="math">\begin{equation*}
+    A^{2} = I_{N}
+\end{equation*}</div>
+<p>
+Now consider the exponential of such a matrix:
+</p>
+<div class="math">\begin{equation*}
+    \exp{\left( \frac{i}{2} \theta A \right)} = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n+1)} \left( \frac{i}{2} \theta A \right)^{n}
+\end{equation*}</div>
+<p>
+Using the familiar trick of splitting the infinite sum into even and odd powers gives
+</p>
+<div class="math">\begin{equation*}
+    \exp{\left( \frac{i}{2} \theta A \right)} = I_{N} \cos{\left( \frac{\theta}{2} \right)} + i A \sin{\left( \frac{\theta}{2} \right)}
+\end{equation*}</div>
+<p>
+Setting <span class="math">\(\theta = \pi (4n + 1)\)</span> with <span class="math">\(n \in \mathbb{Z}\)</span> gives
+</p>
+<div class="math">\begin{equation*}
+    \exp{\left( \frac{i}{2} \pi (4 n + 1) A \right)} = i A
+\end{equation*}</div>
+<p>
+Writing
+</p>
+<div class="math">\begin{align*}
+    -i I_{N} &amp;= \exp{\left( \frac{i}{2} \pi (4 m - 1) I_{N} \right)}, &amp; m &amp;\in \mathbb{Z}
+\end{align*}</div>
+<p>
+lets you write <span class="math">\(A\)</span> as an exponential:
+</p>
+<div class="math">\begin{align*}
+    A &amp;= \exp{\left[ i B(m, n) \right]}, &amp; B(m, n) &amp;= \frac{\pi}{2} (4 m - 1) I_{N} + \frac{\pi}{2} (4 n + 1) A
+\end{align*}</div>
+<p>
+This procedure works for any matrix that squares to the identity, not just Pauli matrices!</p>
+<p>Recall that the quantum Fourier transform matrix <span class="math">\(F_{N}\)</span> satisfies the following properties
+</p>
+<div class="math">\begin{align*}
+    (F_{N})^{2} &amp;= S_{N}, &amp; (S_{N})^{2} &amp;= (F_{N})^{4} = I_{N}
+\end{align*}</div>
+<p>
+Here <span class="math">\(S_{N}\)</span> is a certain permutation matrix
+</p>
+<div class="math">\begin{equation*}
+    S_{N} = \begin{bmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 &amp; 0 \\
+        \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+    \end{bmatrix}
+\end{equation*}</div>
+<p>
+If you write the Fourier transform matrix in an exponential form,
+</p>
+<div class="math">\begin{equation*}
+    F_{N} = \exp{(i E_{N})}
+\end{equation*}</div>
+<p>
+then it follows that
+</p>
+<div class="math">\begin{align*}
+    S_{N} &amp;= \exp{(2 i E_{N})}, &amp; I_{N} &amp;= \exp{(4 i E_{N})}
+\end{align*}</div>
+<p>
+Since the permutation matrix <span class="math">\(S_{N}\)</span> squares to the identity, it follows that
+</p>
+<div class="math">\begin{align*}
+    S_{N} &amp;= \exp{[i R_{N}(m, n)]}, &amp; R_{N}(m, n) &amp;= \frac{\pi}{2}(4 m - 1) I_{N} + \frac{\pi}{2}(4 n + 1) S_{N}
+\end{align*}</div>
+<p>
+Thus, the "Hamiltonian" for the quantum Fourier transform is given by
+</p>
+<div class="math">\begin{equation*}
+    E_{N}(m, n) = \frac{\pi}{4}(4 m - 1) I_{N} + \frac{\pi}{4}(4 n + 1) S_{N}
+\end{equation*}</div>
+<p>
+Let us check this for the first few cases.</p>
+<p>For <span class="math">\(N = 3\)</span>, you get:
+</p>
+<div class="math">\begin{equation*}
+    E_{3}(m, n) = \frac{\pi}{4}(4 m - 1) \begin{bmatrix}
+        1 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 1
+    \end{bmatrix} + \frac{\pi}{4}(4 n + 1) \begin{bmatrix}
+        1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 \\
+        0 &amp; 1 &amp; 0
+    \end{bmatrix} = \frac{\pi}{4} \begin{bmatrix}
+        4(m+n) &amp; 0 &amp; 0 \\
+        0 &amp; 4m-1 &amp; 4n+1 \\
+        0 &amp; 4n+1 &amp; 4m-1
+    \end{bmatrix}
+\end{equation*}</div>
+<p>
+In particular,
+</p>
+<div class="math">\begin{equation*}
+    E_{3}(0, 0) = \frac{\pi}{4} \begin{bmatrix}
+        0 &amp; 0 &amp; 0 \\
+        0 &amp; -1 &amp; 1 \\
+        0 &amp; 1 &amp; -1
+    \end{bmatrix}
+\end{equation*}</div>
+<p>
+Well, checking with Wolfram Alpha or NumPy/SciPy, this Hamiltonian <strong>does not produce the 3-dimensional Fourier transform</strong>:
+</p>
+<div class="math">\begin{equation*}
+    \exp{(i E_{3})} = \frac{1}{2} \begin{bmatrix}
+        2 &amp; 0 &amp; 0 \\
+        0 &amp; 1-i &amp; 1+i \\
+        0 &amp; 1+i &amp; 1-i
+    \end{bmatrix}
+\end{equation*}</div>
+<p>
+Indeed, this is just a square root of <span class="math">\(S_{3}\)</span>.</p>
+<p>Let us see if this also does not work for even values of <span class="math">\(N\)</span>. For <span class="math">\(N = 4\)</span>, you get:
+</p>
+<div class="math">\begin{equation*}
+    E_{4}(m, n) = \frac{\pi}{4}(4 m - 1) \begin{bmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1
+    \end{bmatrix} + \frac{\pi}{4}(4 n + 1) \begin{bmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0
+    \end{bmatrix}
+\end{equation*}</div>
+<p>
+That is,
+</p>
+<div class="math">\begin{equation*}
+    E_{4}(m, n) = \frac{\pi}{4} \begin{bmatrix}
+        4(m+n) &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 4m-1 &amp; 0 &amp; 4n+1 \\
+        0 &amp; 0 &amp; 4(m+n) &amp; 0 \\
+        0 &amp; 4n+1 &amp; 0 &amp; 4m-1
+    \end{bmatrix}
+\end{equation*}</div>
+<p>
+In particular,
+</p>
+<div class="math">\begin{equation*}
+    E_{4}(0, 0) = \frac{\pi}{4} \begin{bmatrix}
+        0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; -1 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; -1
+    \end{bmatrix}
+\end{equation*}</div>
+<p>
+Again, checking with Wolfram Alpha or NumPy/SciPy, this Hamiltonian <strong>does not produce the 4-dimensional Fourier transform</strong>:
+</p>
+<div class="math">\begin{equation*}
+    \exp{(i E_{4})} = \frac{1}{2} \begin{bmatrix}
+        2 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 1-i &amp; 0 &amp; 1+i \\
+        0 &amp; 0 &amp; 2 &amp; 0 \\
+        0 &amp; 1+i &amp; 0 &amp; 1-i
+    \end{bmatrix}
+\end{equation*}</div>
+<p>
+Indeed, this is just a square root of <span class="math">\(S_{4}\)</span>.</p>
+<p>I guess you are not going to get the Hamiltonian for the quantum Fourier transform this way.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Discrete Hartley Transforms 2 | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/discrete-hartley-transforms-2/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Matrices for the discrete Hartley transform.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Discrete Hartley Transforms 2
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-03-17T13:53:21-04:00">
+          <i class="fas fa-clock"></i>
+          Sat 17 March 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83702x.html">#8.370.2x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Here is a quick recap of four distinct transforms that can be adapted to quantum Hilbert spaces. First, the most important one: the <strong>discrete Fourier transforms</strong>:
+</p>
+<div class="math">\begin{align*}
+    (F_{N})_{mn} &amp;= \frac{1}{\sqrt{N}} \left[ \exp{\left(- \frac{2 \pi i}{N} \right)} \right]^{mn}, &amp; (G_{N})_{mn} &amp;= \frac{1}{\sqrt{N}} \left[ \exp{\left( \frac{2 \pi i}{N} \right)} \right]^{mn}
+\end{align*}</div>
+<p>
+Next, the two <strong>discrete Hartley transforms</strong>:
+</p>
+<div class="math">\begin{align*}
+    (P_{N})_{mn} &amp;= \sqrt{\frac{2}{N}} \operatorname{cps}{\left( \frac{2 \pi m n}{N} \right)}, &amp; (Q_{N})_{mn} &amp;= \sqrt{\frac{2}{N}} \operatorname{cqs}{\left( \frac{2 \pi m n}{N} \right)}
+\end{align*}</div>
+<p>
+with the Hartley functions given by
+</p>
+<div class="math">\begin{align*}
+    \operatorname{cps}{(x)} &amp;= \frac{\cos{(x)} + \sin{(x)}}{\sqrt{2}} &amp; \operatorname{cqs}{(x)} &amp;= \frac{\cos{(x)} - \sin{(x)}}{\sqrt{2}}
+\end{align*}</div>
+<p>
+And finally, the <strong>discrete Hadamard transform</strong>, which is defined recursively:
+</p>
+<div class="math">\begin{align*}
+    H_{2} &amp;= \frac{1}{\sqrt{2}} \begin{pmatrix}
+        1 &amp; 1 \\
+        1 &amp; -1
+    \end{pmatrix}, &amp; H_{4} &amp;= H_{2} \otimes H_{2}, &amp; H_{8} &amp;= H_{4} \otimes H_{2}, &amp; H_{16} &amp;= H_{8} \otimes H_{2}, &amp; H_{32} &amp;= \ldots
+\end{align*}</div>
+<p>
+Let us look at these transforms for different values of <span class="math">\(N\)</span>.</p>
+<h2>One-Dimensional Hilbert Space</h2>
+<p>For <span class="math">\(N = 1\)</span>, all of these transforms agree:
+</p>
+<div class="math">\begin{equation*}
+    F_{1} = G_{1} = P_{1} = Q_{1} = H_{1} = 1
+\end{equation*}</div>
+<p>
+One-dimensional Hilbert spaces are not interesting, so not much to see here.</p>
+<h2>Two-Dimensional Hilbert Space</h2>
+<p>The first non-trivial dimension is the <span class="math">\(N = 2\)</span> case. However, all transforms agree:
+</p>
+<div class="math">\begin{equation*}
+    F_{2} = G_{2} = P_{2} = Q_{2} = H_{2} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+        1 &amp; 1 \\
+        1 &amp; -1
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+So Fourier and Hartley are all equivalent to Hadamard. Note that
+</p>
+<div class="math">\begin{equation*}
+    (F_{2})^{2} = I_{2}
+\end{equation*}</div>
+<p>
+That is, each transform is its own inverse.</p>
+<h2>Three-Dimensional Hilbert Space</h2>
+<p>For <span class="math">\(N = 3\)</span> you cannot have the Hadamard transform. The Fourier transforms are
+</p>
+<div class="math">\begin{align*}
+    F_{3} &amp;= \frac{1}{\sqrt{3}} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 \\
+        1 &amp; c &amp; c^{2} \\
+        1 &amp; c^{2} &amp; c
+    \end{pmatrix}, &amp; G_{3} &amp;= \frac{1}{\sqrt{3}} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 \\
+        1 &amp; c^{2} &amp; c \\
+        1 &amp; c &amp; c^{2}
+    \end{pmatrix}, &amp; c &amp;= -\frac{1}{2} - \frac{\sqrt{3}}{2}i, &amp; c^{2} &amp;= \frac{1}{c}
+\end{align*}</div>
+<p>
+Note that the squared Fourier transforms give a permutation matrix
+</p>
+<div class="math">\begin{equation*}
+    (F_{3})^{2} = (G_{3})^{2} = \begin{pmatrix}
+        1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 \\
+        0 &amp; 1 &amp; 0
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+The fourth power of the Fourier transforms gives the identity:
+</p>
+<div class="math">\begin{equation*}
+    (F_{3})^{4} = (G_{3})^{4} = I_{3}
+\end{equation*}</div>
+<p>
+You also have <span class="math">\(F_{3} G_{3} = G_{3} F_{3} = I_{3}\)</span>.</p>
+<p>The Hartley transforms are
+</p>
+<div class="math">\begin{align*}
+    P_{3} &amp;= \frac{1}{\sqrt{3}} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 \\
+        1 &amp; \operatorname{cps}{\left(\dfrac{2 \pi}{3}\right)} &amp; \operatorname{cps}{\left(\dfrac{4 \pi}{3}\right)} \\
+        1 &amp; \operatorname{cps}{\left(\dfrac{4 \pi}{3}\right)} &amp; \operatorname{cps}{\left(\dfrac{2 \pi}{3}\right)}
+    \end{pmatrix}, &amp; Q_{3} &amp;= \frac{1}{\sqrt{3}} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 \\
+        1 &amp; \operatorname{cps}{\left(\dfrac{4 \pi}{3}\right)} &amp; \operatorname{cps}{\left(\dfrac{2 \pi}{3}\right)} \\
+        1 &amp; \operatorname{cps}{\left(\dfrac{2 \pi}{3}\right)} &amp; \operatorname{cps}{\left(\dfrac{4 \pi}{3}\right)}
+    \end{pmatrix}
+\end{align*}</div>
+<p>
+Note that the squared Hartley transforms give the identity:
+</p>
+<div class="math">\begin{equation*}
+    (P_{3})^{2} = (Q_{3})^{2} = I_{3}
+\end{equation*}</div>
+<p>
+That is, each Hartley transform is its own inverse.</p>
+<p>If <span class="math">\(r_{3}\)</span> is the permutation matrix given by
+</p>
+<div class="math">\begin{equation*}
+    r_{3} = \begin{pmatrix}
+        1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 \\
+        0 &amp; 1 &amp; 0
+    \end{pmatrix} = P_{3} Q_{3} = Q_{3} P_{3}
+\end{equation*}</div>
+<p>
+then <span class="math">\(P_{3}\)</span> and <span class="math">\(Q_{3}\)</span> are related via
+</p>
+<div class="math">\begin{equation*}
+    P_{3} = Q_{3} r_{3}
+\end{equation*}</div>
+<h2>Four-Dimensional Hilbert Space</h2>
+<p>For <span class="math">\(N = 4\)</span>, the Hadamard transform is given by
+</p>
+<div class="math">\begin{equation*}
+    H_{4} = H_{2} \otimes H_{2} = \frac{1}{2} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 &amp; 1 \\
+        1 &amp; -1 &amp; 1 &amp; -1 \\
+        1 &amp; 1 &amp; -1 &amp; -1 \\
+        1 &amp; -1 &amp; -1 &amp; 1
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+The Fourier transforms are given by
+</p>
+<div class="math">\begin{align*}
+    F_{4} &amp;= \frac{1}{2} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 &amp; 1 \\
+        1 &amp; -i &amp; -1 &amp; i \\
+        1 &amp; -1 &amp; 1 &amp; -1 \\
+        1 &amp; i &amp; -1 &amp; -i
+    \end{pmatrix}, &amp; G_{4} &amp;= \frac{1}{2} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 &amp; 1 \\
+        1 &amp; i &amp; -1 &amp; -i \\
+        1 &amp; -1 &amp; 1 &amp; -1 \\
+        1 &amp; -i &amp; -1 &amp; i
+    \end{pmatrix}
+\end{align*}</div>
+<p>
+The squared Fourier transforms give a permutation matrix:
+</p>
+<div class="math">\begin{equation*}
+    (F_{4})^{2} = (G_{4})^{2} = \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+The fourth power of the Fourier transforms give the identity
+</p>
+<div class="math">\begin{equation*}
+    (F_{4})^{4} = (G_{4})^{4} = I_{4}
+\end{equation*}</div>
+<p>
+You also have <span class="math">\(F_{4} G_{4} = G_{4} F_{4} = I_{4}\)</span>.</p>
+<p>The Hartley transforms are given by
+</p>
+<div class="math">\begin{align*}
+    P_{4} &amp;= \frac{1}{2} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 &amp; 1 \\
+        1 &amp; 1 &amp; -1 &amp; -1 \\
+        1 &amp; -1 &amp; 1 &amp; -1 \\
+        1 &amp; -1 &amp; -1 &amp; 1
+    \end{pmatrix}, &amp; Q_{4} &amp;= \frac{1}{2} \begin{pmatrix}
+        1 &amp; 1 &amp; 1 &amp; 1 \\
+        1 &amp; -1 &amp; -1 &amp; 1 \\
+        1 &amp; -1 &amp; 1 &amp; -1 \\
+        1 &amp; 1 &amp; -1 &amp; -1
+    \end{pmatrix}
+\end{align*}</div>
+<p>
+Note that the squared Hartley transforms give the identity:
+</p>
+<div class="math">\begin{equation*}
+    (P_{4})^{2} = (Q_{4})^{2} = I_{4}
+\end{equation*}</div>
+<p>
+That is, each Hartley transform is its own inverse.</p>
+<p>Clearly, the Fourier transforms are in their own class, since they contain complex entries whereas the other transforms are real. The Hartley transforms are however related to the Hadamard transform. If <span class="math">\(p_{4}\)</span>, <span class="math">\(q_{4}\)</span>, and <span class="math">\(r_{4}\)</span> are permutation matrices given by
+</p>
+<div class="math">\begin{align*}
+    p_{4} &amp;= \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1
+    \end{pmatrix} = P_{4}H_{4} = H_{4}P_{4} \\
+    q_{4} &amp;= \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 1 &amp; 0 &amp; 0
+    \end{pmatrix} = H_{4}Q_{4}, &amp; (q_{4})^{T} &amp;= \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0
+    \end{pmatrix} = Q_{4}H_{4} \\
+    r_{4} &amp;= \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0
+    \end{pmatrix} = P_{4}Q_{4} = Q_{4}P_{4}
+\end{align*}</div>
+<p>
+then <span class="math">\(P_{4}\)</span>, <span class="math">\(Q_{4}\)</span>, and <span class="math">\(H_{4}\)</span> are related via
+</p>
+<div class="math">\begin{align*}
+    P_{4} &amp;= H_{4} p_{4}, &amp; Q_{4} &amp;= H_{4} q_{4}, &amp; P_{4} &amp;= Q_{4} r_{4}
+\end{align*}</div>
+<h2>Five-Dimensional Hilbert Space</h2>
+<p>Since five is not a power of two, you cannot have a Hadamard transform. The Fourier transforms satisfy the property
+</p>
+<div class="math">\begin{equation*}
+    (F_{5})^{2} = (G_{5})^{2} = \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; 0
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+and also
+</p>
+<div class="math">\begin{equation*}
+    (F_{5})^{4} = (G_{5})^{4} = I_{5}
+\end{equation*}</div>
+<p>
+The Hartley transforms satisfy
+</p>
+<div class="math">\begin{equation*}
+    (P_{5})^{2} = (Q_{5})^{2} = I_{5}
+\end{equation*}</div>
+<p>
+and also
+</p>
+<div class="math">\begin{equation*}
+    P_{5} Q_{5} = Q_{5} P_{5} = \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; 0
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+The explicit details are gnarly.</p>
+<h2>Six-Dimensional Hilbert Space</h2>
+<p>Here is the <span class="math">\(N = 6\)</span> case. Since six is not a power of two, you cannot have a Hadamard transform. The Fourier transforms satisfy the property
+</p>
+<div class="math">\begin{equation*}
+    (F_{6})^{2} = (G_{6})^{2} = \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+    \end{pmatrix}
+\end{equation*}</div>
+<p>
+and also
+</p>
+<div class="math">\begin{equation*}
+    (F_{6})^{4} = (G_{6})^{4} = I_{6}
+\end{equation*}</div>
+<p>
+However, since six is not prime, and the only finite group of order six is a product group, the six-dimensional Fourier transforms is equivalent to the Kronecker product of the two-dimensional and three-dimensional Fourier transforms:
+</p>
+<div class="math">\begin{align*}
+    F_{2} \otimes F_{3} &amp;= L_{23} F_{6} R_{23}, &amp; L_{23} &amp;= \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+    \end{pmatrix}, &amp; R_{23} &amp;= \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+    \end{pmatrix}
+\end{align*}</div>
+<p>
+Note that <span class="math">\(L_{23}\)</span> and <span class="math">\(R_{23}\)</span> are permutation matrices. Another set of matrices works equally well:
+</p>
+<div class="math">\begin{align*}
+    L_{23} &amp;= \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+    \end{pmatrix}, &amp; R_{23} &amp;= \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0
+    \end{pmatrix}
+\end{align*}</div>
+<p>
+The tensor products <span class="math">\(F_{2} \otimes F_{3}\)</span> and <span class="math">\(F_{3} \otimes F_{2}\)</span> as usual, are related by permutation matrices:
+</p>
+<div class="math">\begin{equation*}
+    F_{3} \otimes F_{2} = A \left( F_{2} \otimes F_{3} \right) B
+\end{equation*}</div>
+<p>
+with <span class="math">\(A\)</span> and <span class="math">\(B\)</span> given by
+</p>
+<div class="math">\begin{align*}
+    A &amp;= \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+    \end{pmatrix}, &amp; B &amp;= \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+    \end{pmatrix}
+\end{align*}</div>
+<p>
+or also
+</p>
+<div class="math">\begin{align*}
+    A &amp;= \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0
+    \end{pmatrix}, &amp; B &amp;= \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0
+    \end{pmatrix}
+\end{align*}</div>
+<p>
+I personally believe it is good to know these things. The same permutation matrices also work with <span class="math">\(G_{6}\)</span>, <span class="math">\(G_{2}\)</span>, and <span class="math">\(G_{3}\)</span>.</p>
+<p>The Hartley transforms satisfy
+</p>
+<div class="math">\begin{equation*}
+    (P_{6})^{2} = (Q_{6})^{2} = I_{6}
+\end{equation*}</div>
+<p>
+and also
+</p>
+<div class="math">\begin{equation*}
+    P_{6} Q_{6} = Q_{6} P_{6} = \begin{pmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+    \end{pmatrix}
+\end{equation*}</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

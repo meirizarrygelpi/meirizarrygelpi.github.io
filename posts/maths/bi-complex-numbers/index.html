@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Bi-Complex Numbers | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/maths/bi-complex-numbers/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/maths.atom.xml">  
+  <meta name="description" content="On bi-complex numbers.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Bi-Complex Numbers
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2017-08-03T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Thu 03 August 2017
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/maths.html">Maths</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/bi-complex.html">#bi-complex</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Complex numbers are a staple of mathematics and physics. A complex number <span class="math">\(z\)</span> can be written as the sum of two terms:
+</p>
+<div class="math">$$z = a + bi.$$</div>
+<p>
+Here <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are real numbers, and <span class="math">\(i^{2} = -1\)</span>. For a long time, I thought of <span class="math">\(i\)</span> as the one and only imaginary unit, the only "number" that squares to -1. But you also have quaternions, which can be written as a sum of four terms:
+</p>
+<div class="math">$$ a + bi + cj + dk. $$</div>
+<p>
+Here <span class="math">\(a\)</span>, <span class="math">\(b\)</span>, <span class="math">\(c\)</span>, and <span class="math">\(d\)</span> are real numbers. The quaternion units <span class="math">\(i\)</span>, <span class="math">\(j\)</span>, and <span class="math">\(k\)</span> all square to -1:
+</p>
+<div class="math">$$ i^{2} = -1; \qquad j^{2} = -1; \qquad k^{2} = -1. $$</div>
+<p>
+However, multiplication is more complicated:
+</p>
+<div class="math">$$ ij + ji = 0; \qquad jk + kj = 0; \qquad ki + ik = 0; $$</div>
+<div class="math">$$ ij - ji = 2k; \qquad jk - kj = 2i; \qquad ki - ik = 2j. $$</div>
+<p>
+Obviously, there are many ways to restrict a quaternion to a complex number:
+</p>
+<div class="math">$$ a +bi; \qquad a + cj; \qquad a + dk. $$</div>
+<p>
+Each of these is a complex number, but with a different unit!</p>
+<p>There is another sum of four terms:
+</p>
+<div class="math">$$ a + bJ + CK + dS. $$</div>
+<p>
+Here, again, <span class="math">\(a\)</span>, <span class="math">\(b\)</span>, <span class="math">\(c\)</span>, and <span class="math">\(d\)</span> are real numbers. However, the units <span class="math">\(J\)</span>, <span class="math">\(K\)</span>, and <span class="math">\(S\)</span> do not all square to -1:
+</p>
+<div class="math">$$ J^{2} = -1; \qquad K^{2} = -1; \qquad S^{2} = +1. $$</div>
+<p>
+The multiplication of these units is different from the quaternion units:
+</p>
+<div class="math">$$ JK + KJ = 2S; \qquad KS + SK = -2J; \qquad SJ + JS = -2K; $$</div>
+<div class="math">$$ JK - KJ = 0; \qquad KS - SK = 0; \qquad SJ - JS = 0. $$</div>
+<p>
+That is, this multiplication operation is commutative. Numbers of this form are called <strong>bi-complex numbers</strong>.</p>
+<p>For quaternions, there is only one <strong>conjugation</strong> operation:
+</p>
+<div class="math">$$ (a+bi+cj+dk)^{*} = a-bi-cj-dk. $$</div>
+<p>
+This conjugation operation is an involution. With this conjugation operation you can define one <strong>quadrance</strong> operation:
+</p>
+<div class="math">$$ (a+bi+cj+dk)^{*} (a+bi+cj+dk) = a^{2} + b^{2} + c^{2} + d^{2}. $$</div>
+<p>
+For bi-complex numbers it is more useful to define three conjugation operations:
+</p>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{J}} = a-bJ+cK-dS; $$</div>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{K}} = a+bJ-cK-dS; $$</div>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{S}} = a-bJ-cK+dS. $$</div>
+<p>
+Each of these conjugation operations is an involution. You can define three quadrance operations:
+</p>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{J}} (a+bJ+cK+dS) = a^{2} + b^{2} - c^{2} - d^{2} + 2(ac + bd)K; $$</div>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{K}} (a+bJ+cK+dS) = a^{2} - b^{2} + c^{2} - d^{2} + 2(ab + cd)J; $$</div>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{S}} (a+bJ+cK+dS) = a^{2} + b^{2} + c^{2} + d^{2} + 2(ad - bc)S. $$</div>
+<p>
+None of these three quadrance operations are real. However, the quadrance of each quadrance gives a real number. This is the <strong>bi-quadrance</strong>:
+</p>
+<div class="math">$$ (a+bJ+cK+dS)^{*_{S}} (a+bJ+cK+dS)^{*_{K}} (a+bJ+cK+dS)^{*_{J}} (a+bJ+cK+dS). $$</div>
+<p>
+The bi-quadrance is real and can be written in many equivalent forms:
+</p>
+<div class="math">$$ (a^{2} + b^{2} - c^{2} - d^{2})^{2} + 4 (ac + bd)^{2}; $$</div>
+<div class="math">$$ (a^{2} - b^{2} + c^{2} - d^{2})^{2} + 4 (ab + cd)^{2}; $$</div>
+<div class="math">$$ (a^{2} + b^{2} + c^{2} + d^{2})^{2} - 4 (ad - bc)^{2}. $$</div>
+<p>
+The last form can be factorized:
+</p>
+<div class="math">$$ ((a+d)^{2} + (b-c)^{2}) ((a-d)^{2} + (b+c)^{2}). $$</div>
+<p>
+Two things are clear from this expression. First, the bi-quadrance is always <strong>non-negative</strong>. Second, the bi-quadrance can be zero for non-trivial bi-complex numbers. A bi-complex number with zero bi-quadrance is a <strong>zero divisor</strong>. There are two kinds of zero divisors:
+</p>
+<div class="math">$$ a+bJ+bK-aS; \qquad a+bJ-bK+aS. $$</div>
+<p>
+These two kinds of zero divisors are interesting because they are linear combinations of terms that are idempotents or square roots of minus idempotents. For example,
+</p>
+<div class="math">$$ \left( \frac{1 + S}{2} \right)^{2} = \frac{1 + 1 + 2S}{4} = \frac{1 + S}{2}; $$</div>
+<div class="math">$$ \left( \frac{1 - S}{2} \right)^{2} = \frac{1 + 1 - 2S}{4} = \frac{1 - S}{2}; $$</div>
+<div class="math">$$ -\left( \frac{J + K}{2} \right)^{2} = \frac{1 + 1 - 2S}{4} = \frac{1 - S}{2}; $$</div>
+<div class="math">$$ -\left( \frac{J - K}{2} \right)^{2} = \frac{1 + 1 + 2S}{4} = \frac{1 + S}{2}. $$</div>
+<p>
+Note that you also have
+</p>
+<div class="math">$$ \left( \frac{1 + S}{2} \right) \left( \frac{J - K}{2} \right) = \frac{J - K - K + J}{4} = \frac{J - K}{2}; $$</div>
+<div class="math">$$ \left( \frac{1 - S}{2} \right) \left( \frac{J + K}{2} \right) = \frac{J + K + K + J}{4} = \frac{J + K}{2}. $$</div>
+<p>
+One kind of zero divisor can be written as
+</p>
+<div class="math">$$ a \left( \frac{1 - S}{2} \right) + b \left( \frac{J + K}{2} \right). $$</div>
+<p>
+It is funny that this follows the pattern of complex numbers in the sense that a complex number is written as
+</p>
+<div class="math">$$ a(1) + b(i), $$</div>
+<p>
+where <span class="math">\(1^{2} = 1\)</span> (1 is the idempotent), <span class="math">\(-i^{2} = 1\)</span> (<span class="math">\(i\)</span> is the square root of minus the idempotent), and <span class="math">\(1 i = i\)</span> (multiplying <span class="math">\(i\)</span> by the idempotent is the identity operation). The same holds for the other kind of zero divisor:
+</p>
+<div class="math">$$ a \left( \frac{1 + S}{2} \right) + b \left( \frac{J - K}{2} \right). $$</div>
+<p>
+Note that <span class="math">\(*_{S}\)</span> does not change the kind of a zero divisor, but <span class="math">\(*_{J}\)</span> and <span class="math">\(*_{K}\)</span> do.</p>
+<h2>Zero Bi-Quadrance Decomposition</h2>
+<p>Any bi-complex number can be written in terms of these combinations:
+</p>
+<div class="math">$$ a+bJ+cK+dS = (a + d) \left( \frac{1 + S}{2} \right) + (b - c) \left( \frac{J - K}{2} \right) + (b + c) \left( \frac{J + K}{2} \right) + (a - d) \left( \frac{1 - S}{2} \right). $$</div>
+<p>
+The bi-quadrance of each individual term is zero.</p>
+<h2>Segre Star Operation</h2>
+<p>In analogy with the Hodge star operation, you can define a <strong>Segre star</strong> operation as follows:
+</p>
+<div class="math">$$ (1)^{\star} = S, \qquad (J)^{\star} = -K, \qquad (K)^{\star} = -J, \qquad (S)^{\star} = 1. $$</div>
+<p>
+This is an involution. This means that you can star-decompose any bi-complex number <span class="math">\(z\)</span> into a <strong>self-star</strong> and an <strong>anti-self-star</strong> component:
+</p>
+<div class="math">$$ z = \left( \frac{z + z^{\star}}{2} \right) + \left( \frac{z - z^{\star}}{2} \right). $$</div>
+<p>
+If <span class="math">\(z = a+bJ+cK+dS\)</span>, then the Segre star is:
+</p>
+<div class="math">$$ z^{\star} = d - cJ - bK + aS. $$</div>
+<p>
+The self-star part of <span class="math">\(z\)</span> is:
+</p>
+<div class="math">$$ \frac{z + z^{\star}}{2} = (a + d)\left( \frac{1 + S}{2} \right) + (b - c)\left( \frac{J - K}{2} \right); $$</div>
+<p>
+and the anti-self-star part of <span class="math">\(z\)</span> is:
+</p>
+<div class="math">$$ \frac{z - z^{\star}}{2} = (a - d)\left( \frac{1 - S}{2} \right) + (b + c)\left( \frac{J + K}{2} \right). $$</div>
+<p>
+Each component of the Segre star decomposition is a zero divisor. The Segre star decomposition is equivalent to the zero bi-quadrance decomposition.</p>
+<p>The product of the self-star and anti-self-star components is zero, because
+</p>
+<div class="math">$$ \left( \frac{1 + S}{2} \right) \left( \frac{1 - S}{2} \right) = \frac{1 - 1}{4} = 0; $$</div>
+<div class="math">$$ \left( \frac{1 + S}{2} \right) \left( \frac{J + K}{2} \right) = \frac{J + K - K - J}{4} = 0; $$</div>
+<div class="math">$$ \left( \frac{1 - S}{2} \right) \left( \frac{J - K}{2} \right) = \frac{J - K + K - J}{4} = 0; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ \left( \frac{J + K}{2} \right) \left( \frac{J - K}{2} \right) = \frac{-1 + 1}{4} = 0; $$</div>
+<p>
+This is a form of orthogonality.</p>
+<p>The Segre star operation is equivalent to multiplying by <span class="math">\(S\)</span>.</p>
+<h2>Exponential Function</h2>
+<p>The exponential of a complex number involves exponential and trigonometric functions of real numbers:
+</p>
+<div class="math">$$ \exp{(a + bi)} = \exp{(a)} \left[ \cos{(b)} + i \sin{(b)} \right]. $$</div>
+<p>
+The exponential of a bi-complex number involves exponential, trigonometric, and hyperbolic functions of real numbers. Since the multiplication is commutative, there is factorization:
+</p>
+<div class="math">$$ \exp{(a + bJ + cK + dS)} = \exp{(a)} \exp{(bJ)} \exp{(cK)} \exp{(dS)}. $$</div>
+<p>
+Using
+</p>
+<div class="math">$$ \exp{(bJ)} = \cos{(b)} + J \sin{(b)} ; $$</div>
+<div class="math">$$ \exp{(cK)} = \cos{(c)} + K \sin{(c)}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ \exp{(dS)} = \cosh{(d)} + S \sinh{(d)}; $$</div>
+<p>
+you can find that
+</p>
+<div class="math">$$ \exp{(a + bJ + cK + dS)} = A + BJ + CK + DS; $$</div>
+<p>
+where
+</p>
+<div class="math">$$ A = \exp{(a)} \left[ \cos{(b)} \cos{(c)} \cosh{(d)} + \sin{(b)} \sin{(c)} \sinh{(d)} \right]; $$</div>
+<div class="math">$$ B = \exp{(a)} \left[ \sin{(b)} \cos{(c)} \cosh{(d)} - \cos{(b)} \sin{(c)} \sinh{(d)} \right]; $$</div>
+<div class="math">$$ C = \exp{(a)} \left[ \cos{(b)} \sin{(c)} \cosh{(d)} - \sin{(b)} \cos{(c)} \sinh{(d)} \right]; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ D = \exp{(a)} \left[ \sin{(b)} \sin{(c)} \cosh{(d)} + \cos{(b)} \cos{(c)} \sinh{(d)} \right]. $$</div>
+<h2>Lozenge Invariant</h2>
+<p>With two complex numbers <span class="math">\(x\)</span> and <span class="math">\(y\)</span> you can construct the expression
+</p>
+<div class="math">$$ x^{*}y. $$</div>
+<p>
+This is invariant under the following transformation:
+</p>
+<div class="math">$$ x \rightarrow \exp(ib) x, \qquad y \rightarrow \exp(ib) y. $$</div>
+<p>
+With four bi-complex numbers <span class="math">\(w\)</span>, <span class="math">\(x\)</span>, <span class="math">\(y\)</span>, and <span class="math">\(z\)</span> you can construct the <strong>lozenge</strong> expression
+</p>
+<div class="math">$$ w x^{*_{J}} y^{*_{K}} z^{*_{S}}. $$</div>
+<p>
+The lozenge is invariant under the following transformation:
+</p>
+<div class="math">$$ w \rightarrow \exp{(bJ+cK+dS)} w, \qquad x \rightarrow \exp{(bJ+cK+dS)} x, \qquad y \rightarrow \exp{(bJ+cK+dS)} y, \qquad z \rightarrow \exp{(bJ+cK+dS)} z.$$</div>
+<p>
+You can permute the variables in the lozenge to obtain an invariant that is symmetric and an invariant that is anti-symmetric.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

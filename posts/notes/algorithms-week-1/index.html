@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Algorithms (Week 1) | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/notes/algorithms-week-1/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/notes.atom.xml">  
+  <meta name="description" content="Some notes from week 1 of a MOOC on algorithms from Stanford University via Coursera.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Algorithms (Week 1)
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-05-04T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Sun 04 May 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/notes.html">Notes</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/algorithms.html">#algorithms</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>As part of my journey towards data science I am taking a MOOC on algorithms by Tim Roughgarden from Stanford University. I took my first MOOC some years ago from MIT and enjoyed it quite a lot. Algorithms are things I know very little about and I hope this is no longer true by the end of the course. As part of my study I will keep some lecture notes with important points from each of the six weeks. Currently, I am planning on solving the programming questions with Python (using this as an opportunity to write some code in Python 3.x).</p>
+<h2>Introduction</h2>
+<p>An <strong>algorithm</strong> is "a set of well-defined rules, a recipe in effect, for solving some computational problem".</p>
+<p>Define a computational problem, with an <em>input</em> and an <em>output</em>, then provide an algorithm that transforms the input into the output.</p>
+<p>The algorithm's designer mantra:</p>
+<blockquote>
+<p>"Perhaps the most important principle for the good algorithm designer is to refuse to be content." - Aho, Hopcroft, and Ullman, <em>The Design and Analysis of Computer Algorithms</em></p>
+</blockquote>
+<p>In other words: <strong><em>Can we do better?</em></strong></p>
+<h3>Merge Sort</h3>
+<p>Merge sort is an old algorithm. A good example of the divide-and-conquer paradigm. One breaks a problem into smaller sub-problems that are solved recursively. Merge sort achives sorting with a number of operations that is less than quadratic in size.</p>
+<p>The sorting problem: as input we are given an array of <span class="math">\(N\)</span> numbers, which are not sorted, and we are asked to provide the <span class="math">\(N\)</span> numbers in sorted order (say in increasing order).</p>
+<p>I wrote a short function that takes as input a non-negative integer <code>n</code>, and gives as output an unsorted list containing the <code>n + 1</code> integers between <code>0</code> and <code>n</code>. Here it is:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+
+<span class="k">def</span> <span class="nf">unsorted_list</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+    <span class="n">l2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+        <span class="n">l2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">l1</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">l2</span>
+</code></pre></div>
+
+
+<p>With this function I can create list of integers that need to be sorted. Next, we implement Merge Sort. My implementation involves two parts. The first part is a function that takes as input two sorted lists of integers <code>a</code> and <code>b</code>, and gives as output a third sorted list <code>c</code> made by merging <code>a</code> and <code>b</code>. Here is the code:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mel_merge</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">i_a</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i_b</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">i_a</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i_b</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">]:</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">])</span>
+            <span class="n">i_a</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">]:</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">])</span>
+            <span class="n">i_b</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">])</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">])</span>
+            <span class="n">i_a</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">i_b</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i_a</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i_b</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)):</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="n">i_b</span><span class="p">:]</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">i_b</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i_a</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i_a</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="n">c</span>
+</code></pre></div>
+
+
+<p>The second part is a recursive function that takes an unsorted list <code>l</code>, splits it into two smaller lists, then recursively calls itself on those smaller lists producing sorted lists <code>l1</code> and <code>l2</code>, and finally calls <code>mel_merge</code> to merge these two into a sorted list:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mel_merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="n">len_l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">len_l</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">len_l</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">l</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">len_l</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="n">l1</span> <span class="o">=</span> <span class="n">mel_merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">[:</span><span class="n">k</span><span class="p">])</span>
+        <span class="n">l2</span> <span class="o">=</span> <span class="n">mel_merge_sort</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="n">k</span><span class="p">:])</span>
+        <span class="k">return</span> <span class="n">mel_merge</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h3>Analysis of Algorithms</h3>
+<p>One can adopt three guiding principles for how to reason about algorithms and also how to define a fast algorithm.</p>
+<p>The first guiding principle is <strong>worst-case analysis</strong>. This principle will help us find results that hold quite generally with no assumptions about the specific details of the input. A related, but different principle is <strong>average-case analysis</strong>, where one makes some assumptions about the frequencies of certain kinds of inputs and develops algorithms optimized for those particular cases. However, this requires some domain knowledge, whereas the worst-case analysis holds in general.</p>
+<p>The second guiding principle consist of not worrying to much about constant factors, or lowest order terms. This means that we are really interested in looking at the leading (dominant) behavior.</p>
+<p>The third guiding principle consist of using asymptotic analysis. This means that we will focus on large input sizes. In some sense, the interesting problems are the ones with large inputs.</p>
+<p>With these three principles we can define a <strong>fast algorithm</strong> as an algorithm where the wors-case running time grows slowly with the input size. For most of the problems we will encounter, the "holy grail" is to find an algorithm that solves the problem in linear time (or close to linear time).</p>
+<h2>Asymptotic Analysis</h2>
+<p>Asymptotic analysis is the language used to discuss the high-level performance of an algorithm. It is coarse enough to suppress specific details like architecture/language/compiler-dependent details. It is also sharp enough to make useful comparisons between different algorithms, especially on large inputs.</p>
+<p>The high-level idea is to supress constant factors (which are system-specific) and lower-order terms (which are irrelevant for large inputs). A somewhat careful analysis of Merge Sort yields a running time of the form</p>
+<div class="math">$$T(n) = 6n \lg(n) + 6n$$</div>
+<p>Using asymptotic analysis we just provide <span class="math">\(n \lg(n)\)</span>. That is, we ignore the constant factor <span class="math">\(6\)</span> and the lower-order term <span class="math">\(6n\)</span>. In this sense we say that the running time of Merge Sort is <span class="math">\(O(n \lg(n))\)</span>.</p>
+<h3>Big-O</h3>
+<p>In general, we only consider functions defined for positive integers (i.e. sizes of inputs). One such function is the worst-case running time of an algorithm as a function of the input size <span class="math">\(n\)</span>, which we denote by <span class="math">\(T(n)\)</span>. If <span class="math">\(T(n) = O(f(n))\)</span>, this means that eventually (i.e. for all sufficiently large <span class="math">\(n\)</span>), <span class="math">\(T(n)\)</span> is bounded from <em>above</em> by <span class="math">\(f(n)\)</span>. A more formal definition is:</p>
+<blockquote>
+<p><strong>Big-O Notation:</strong> <span class="math">\(T(n) = O(f(n))\)</span> if and only if there exist positive constants <span class="math">\(c\)</span> and <span class="math">\(n_{0}\)</span> such that<div class="math">$$T(n) \leq c f(n)$$</div>for all <span class="math">\(n \geq n_{0}\)</span>.</p>
+</blockquote>
+<h3>Big-Omega and Big-Theta</h3>
+<p>Similar to big-O, we use <span class="math">\(T(n) = \Omega(g(n))\)</span> to mean that eventually <span class="math">\(T(n)\)</span> is bounded from <em>below</em> by <span class="math">\(g(n)\)</span>. A more formal definition is:</p>
+<blockquote>
+<p><strong>Big-Omega Notation:</strong> <span class="math">\(T(n) = \Omega(g(n))\)</span> if and only if there exist positive constants <span class="math">\(c\)</span> and <span class="math">\(n_{0}\)</span> such that<div class="math">$$T(n) \geq c g(n)$$</div>for all <span class="math">\(n \geq n_{0}\)</span>.</p>
+</blockquote>
+<p>Finally, we can use <span class="math">\(T(n) = \Theta(h(n))\)</span> to mean that both <span class="math">\(T(n) = O(h(n))\)</span> and <span class="math">\(T(n) = \Omega(h(n))\)</span>. That is,</p>
+<blockquote>
+<p><strong>Big-Theta Notation:</strong> <span class="math">\(T(n) = \Theta(h(n))\)</span> if there exist positive constants <span class="math">\(c_{1}\)</span>, <span class="math">\(c_{2}\)</span> and <span class="math">\(n_{0}\)</span> such that <div class="math">$$c_{1} h(n) \leq T(n) \leq c_{2} h(n)$$</div>for all <span class="math">\(n \geq n_{0}\)</span>.</p>
+</blockquote>
+<h2>Divide and Conquer Algorithms</h2>
+<p>The divide and conquer paradigm for solving problems consist of two main steps. One first divides the main problem into smaller subproblems, that are solvable (the conquering). After combining the solutions of the smaller subproblems, the starting problem can be solved.</p>
+<h3>Counting Inversions</h3>
+<p>Given an array <span class="math">\(A\)</span> of <span class="math">\(n\)</span> distinct integers, an <strong>inversion</strong> is a pair of array indices <span class="math">\(i\)</span> and <span class="math">\(j\)</span> such that <span class="math">\(i &lt; j\)</span> and <span class="math">\(A_{i} &gt; A_{j}\)</span>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Notes</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/notes.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2016-03-25T00:00:00-04:00</updated><subtitle>Physics impostor. Mathematics interloper. Husband. Father.</subtitle><entry><title>Lecture Notes from Stat2.2x</title><link href="https://meirizarrygelpi.github.io/posts/notes/stat22x/" rel="alternate"></link><published>2016-03-25T00:00:00-04:00</published><updated>2016-03-25T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2016-03-25:/posts/notes/stat22x/</id><summary type="html">&lt;p&gt;My lecture notes from Stat2.2x on &lt;a href="https://www.edx.org/"&gt;edX&lt;/a&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post contains my lectures notes from Stat2.2x, a MOOC I took in 2013 to learn the basics of probability.&lt;/p&gt;
+&lt;h2&gt;Two Fundamental Rules&lt;/h2&gt;
+&lt;p&gt;In this section I introduce probability and two basic rules to aggregate probability.&lt;/p&gt;
+&lt;h3&gt;Probability&lt;/h3&gt;
+&lt;p&gt;The goal of probability theory is to understand and quantify randomness. There is no universally accepted answer to the question "what is probability?". If all outcomes in an event are &lt;strong&gt;equally likely&lt;/strong&gt;, then the probability for a given event to occur is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \text{probability of an event } = \frac{\text{number of outcomes in the event}}{\text{total number of outcomes}}. $$&lt;/div&gt;
+&lt;p&gt;
+This definition already illustrates that probabilities are real numbers between 0 and 1 because they are fractions. Another approach to defining probability is via &lt;strong&gt;frequency theory&lt;/strong&gt;. Consider an experiment that consists of performing a coin toss multiple times. In the long run you find that the outcome of the experiment is heads &lt;strong&gt;roughly&lt;/strong&gt; half of the time. This provides a way of defining the probability of the outcome of the coin toss as the &lt;strong&gt;long run fraction of times&lt;/strong&gt; that it occurs as the experiment is repeated indefinetely.&lt;/p&gt;
+&lt;p&gt;However, many events cannot be repeated (e.g. sport events). For this type of events you can use &lt;strong&gt;subjective probabilities&lt;/strong&gt; which are essentially &lt;strong&gt;opinions&lt;/strong&gt;: a subjective probability is defined as the degree of belief that an event might happen. It is important to note that subjectivity propagates throught an analysis (i.e. the slightest subjective element will yield a completely subjective analysis).&lt;/p&gt;
+&lt;p&gt;More abstractly, a probability &lt;span class="math"&gt;\(P(A)\)&lt;/span&gt; for an event &lt;span class="math"&gt;\(A\)&lt;/span&gt; to happen is a real number such that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 0 \leq P(A) \leq 1. $$&lt;/div&gt;
+&lt;p&gt;
+The case &lt;span class="math"&gt;\(P(A) = 0\)&lt;/span&gt; means that the event &lt;span class="math"&gt;\(A\)&lt;/span&gt; is &lt;strong&gt;impossible to happen&lt;/strong&gt; while &lt;span class="math"&gt;\(P(A) = 1\)&lt;/span&gt; means that &lt;span class="math"&gt;\(A\)&lt;/span&gt; is &lt;strong&gt;certain to happen&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;Standard Set of Cards&lt;/h3&gt;
+&lt;p&gt;Let me introduce the &lt;strong&gt;standard set of cards&lt;/strong&gt;. You have 52 &lt;strong&gt;cards&lt;/strong&gt; which split into 4 &lt;strong&gt;suits&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \clubsuit, \qquad {\color{red} \diamondsuit}, \qquad {\color{red} \heartsuit}, \qquad \spadesuit. $$&lt;/div&gt;
+&lt;p&gt;
+Each suit has 13 &lt;strong&gt;ranks&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ A, \quad 2, \quad 3, \quad 4, \quad 5, \quad 6, \quad 7, \quad 8, \quad 9, \quad 10, \quad J, \quad Q, \quad K. $$&lt;/div&gt;
+&lt;p&gt;
+There is only one card that is of rank &lt;span class="math"&gt;\(A\)&lt;/span&gt; &lt;strong&gt;and&lt;/strong&gt; suit &lt;span class="math"&gt;\({\color{red} \heartsuit}\)&lt;/span&gt;. However, you get more cards if you look for cards of rank &lt;span class="math"&gt;\(A\)&lt;/span&gt; &lt;strong&gt;or&lt;/strong&gt; suit &lt;span class="math"&gt;\({\color{red} \heartsuit}\)&lt;/span&gt;: all 13 ranks of the suit &lt;span class="math"&gt;\({\color{red} \heartsuit}\)&lt;/span&gt; plus the 3 other rank &lt;span class="math"&gt;\(A\)&lt;/span&gt; cards giving 16. This example illustrates how the conditional &lt;strong&gt;and&lt;/strong&gt; is more restrictive than the conditional &lt;strong&gt;or&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;well shuffled deck&lt;/strong&gt; is one where all 52 cards are equally likely to appear. This means that initially each card has a probability of &lt;span class="math"&gt;\(1/52\)&lt;/span&gt; to be drawn.&lt;/p&gt;
+&lt;h3&gt;Addition Rule&lt;/h3&gt;
+&lt;p&gt;Consider asking what is the probability for drawing an &lt;span class="math"&gt;\(A\)&lt;/span&gt; or a &lt;span class="math"&gt;\(K\)&lt;/span&gt;. Since there are four &lt;span class="math"&gt;\(A\)&lt;/span&gt;'s and there are four &lt;span class="math"&gt;\(K\)&lt;/span&gt;'s you have eight possible cards in the deck that satisfy the condition. Thus the probability is &lt;span class="math"&gt;\(8/52\)&lt;/span&gt;. Note that you can write
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(A \text{ or } K) = P(A) + P(K) = \frac{4}{52} + \frac{4}{52} = \frac{8}{52}. $$&lt;/div&gt;
+&lt;p&gt;
+Thus you find that you can write the probability for a conditional &lt;strong&gt;or&lt;/strong&gt; event as the &lt;em&gt;sum&lt;/em&gt; of the probability for the possible outcomes. This result is correct but not general. Look at another example. Consider asking instead what is the probability for drawing an &lt;span class="math"&gt;\(A\)&lt;/span&gt; or a &lt;span class="math"&gt;\({\color{red} \heartsuit}\)&lt;/span&gt;. You know that the result is &lt;span class="math"&gt;\(16/52\)&lt;/span&gt;. However, if you naively add the probability to obtain an &lt;span class="math"&gt;\(A\)&lt;/span&gt; (&lt;span class="math"&gt;\(4/52\)&lt;/span&gt;) and the probability to obtain a &lt;span class="math"&gt;\({\color{red} \heartsuit}\)&lt;/span&gt; (&lt;span class="math"&gt;\(13/52\)&lt;/span&gt;) you find a wrong probability of &lt;span class="math"&gt;\(17/52\)&lt;/span&gt;. The error is that there is one card that is being counted twice: the &lt;span class="math"&gt;\(A\)&lt;/span&gt; of &lt;span class="math"&gt;\({\color{red} \heartsuit}\)&lt;/span&gt;. Thus you can fix the addition rule by writing
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(A \text{ or } {\color{red} \heartsuit}) = P(A) + P({\color{red} \heartsuit}) - P(A \text{ and } {\color{red} \heartsuit}). $$&lt;/div&gt;
+&lt;p&gt;
+This is an example of &lt;strong&gt;inclusion-exclusion&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Both of these examples can be visualized in terms of &lt;strong&gt;Venn diagrams&lt;/strong&gt;. In the first example you find that the set of &lt;span class="math"&gt;\(A\)&lt;/span&gt;'s and the set of &lt;span class="math"&gt;\(K\)&lt;/span&gt;'s are disjoint: the share nothing in common. You say that the two events are &lt;strong&gt;mutually exclusive&lt;/strong&gt;. However, in the second example you find that the set of &lt;span class="math"&gt;\(A\)&lt;/span&gt;'s and the set of &lt;span class="math"&gt;\(K\)&lt;/span&gt;'s overlap. This overlap was counted twice in our problem so you substract it once.&lt;/p&gt;
+&lt;p&gt;In summary you can write down some general rules. The &lt;strong&gt;addition rule&lt;/strong&gt; allows you to write
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(a \text{ or } b) = P(a) + P(b). $$&lt;/div&gt;
+&lt;p&gt;
+if &lt;span class="math"&gt;\(a\)&lt;/span&gt; and &lt;span class="math"&gt;\(b\)&lt;/span&gt; are &lt;strong&gt;mutually exclusive&lt;/strong&gt;. More generally, you have the &lt;strong&gt;inclusion-exclusion&lt;/strong&gt; formula:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(a \text{ or } b) = P(a) + P(b) - P(a \text{ and } b). $$&lt;/div&gt;
+&lt;p&gt;
+That is, if &lt;span class="math"&gt;\(a\)&lt;/span&gt; and &lt;span class="math"&gt;\(b\)&lt;/span&gt; are mutually exclusive, then
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(a \text{ and } b) = 0. $$&lt;/div&gt;
+&lt;p&gt;
+Another useful thing to introduce is the &lt;strong&gt;complement rule&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(\text{not } a) = 1 - P(a). $$&lt;/div&gt;
+&lt;p&gt;
+This is useful when it is easier to count the ways for an event &lt;span class="math"&gt;\(a\)&lt;/span&gt; to &lt;em&gt;not&lt;/em&gt; happen.&lt;/p&gt;
+&lt;h3&gt;Multiplication Rules&lt;/h3&gt;
+&lt;p&gt;The addition rule involves the probability &lt;span class="math"&gt;\(P(a \text{ and } b)\)&lt;/span&gt; for two events &lt;span class="math"&gt;\(a\)&lt;/span&gt; &lt;strong&gt;and&lt;/strong&gt; &lt;span class="math"&gt;\(b\)&lt;/span&gt; to occur. In this subsection I will study some cases where this type of probability can be computed.&lt;/p&gt;
+&lt;p&gt;Consider &lt;span class="math"&gt;\(N_{T}\)&lt;/span&gt; tickets inside a box. Each ticket has a color. You can draw a ticket &lt;strong&gt;with replacement&lt;/strong&gt; (returning the ticket to the box) or &lt;strong&gt;without replacement&lt;/strong&gt; (keeping the ticket outside the box). You perform two draws without replacement and would like to compute the probability that the first draw gives a green ticket and the second draw gives a red ticket. The probability to draw a green ticket first is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(\text{draw green first}) = \frac{N_{\text{green}}}{N_{T}}. $$&lt;/div&gt;
+&lt;p&gt;
+Given that a green ticket was drawn, the number of red tickets remains the same but the total number of tickets is reduced by 1. The probability to draw a red ticket given that a green ticket was drawn is thus
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(\text{draw red second}) = \frac{N_{\text{red}}}{N_{T} - 1}. $$&lt;/div&gt;
+&lt;p&gt;
+This probability is subjected to the first event occuring and thus is &lt;em&gt;not&lt;/em&gt; independent or isolated. It is called a &lt;strong&gt;conditional probability&lt;/strong&gt;. The probability for the entire event is:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(\text{draw green first, red second}) = \left( \frac{N_{\text{green}}}{N_{T}} \right) \left( \frac{N_{\text{red}}}{N_{T} - 1} \right). $$&lt;/div&gt;
+&lt;p&gt;
+This example illustrates the &lt;strong&gt;multiplication rule&lt;/strong&gt;: the probability for event &lt;span class="math"&gt;\(a\)&lt;/span&gt; and &lt;span class="math"&gt;\(b\)&lt;/span&gt; to occur is given by the product of the probability for &lt;span class="math"&gt;\(a\)&lt;/span&gt; times the conditional probability for &lt;span class="math"&gt;\(b\)&lt;/span&gt; given that &lt;span class="math"&gt;\(a\)&lt;/span&gt; occured:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(a \text{ and } b) = P(a) \times P(b|a). $$&lt;/div&gt;
+&lt;h3&gt;Conditional versus Unconditional&lt;/h3&gt;
+&lt;p&gt;Consider the following situation. You have five tickets, one of them is red and the other four are green. You would like to know what is the probability to draw a red ticket during the second trial with replacement or with no replacement. Drawing with replacement is easy: the probability to draw a red ticket is &lt;span class="math"&gt;\(1/5\)&lt;/span&gt;. The problem appears to be more complicated when drawing without replacement. In order to obtain a red on the second ticket, you must draw a green on the first ticket. Thus, the probability to draw a red ticket on the second trial is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \frac{4}{5} \times \frac{1}{4} = \frac{1}{5}. $$&lt;/div&gt;
+&lt;p&gt;
+which is the same probability as drawing with replacement. This result is surprising, but follows as long as the outcome from the first drawing remains unknown. This is an example of &lt;strong&gt;symmetry in sampling without replacement&lt;/strong&gt;: even if you are doing sampling without replacement, since no information is being given about the outcomes of the initial samplings, the probability for a given event during a later trial is the same as performing the trial with replacement and the chances are unconditional (even though the question "what is the probability of getting a red ticket on the second trial?" appears to be conditional).&lt;/p&gt;
+&lt;h3&gt;Bayes' Rule&lt;/h3&gt;
+&lt;p&gt;You can rewrite the multiplication rule as
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(b|a) = \frac{P(a \text{ and } b)}{P(a)}. $$&lt;/div&gt;
+&lt;p&gt;
+This result is known as &lt;strong&gt;Bayes' rule&lt;/strong&gt; and it can be used to find the conditional probability of an event at an earlier stage, given the result of a later stage. The equation can be read as: the probability of &lt;span class="math"&gt;\(b\)&lt;/span&gt; given that &lt;span class="math"&gt;\(a\)&lt;/span&gt; has happened can be found by dividing the probability for &lt;span class="math"&gt;\(a\)&lt;/span&gt; and &lt;span class="math"&gt;\(b\)&lt;/span&gt; to happen by the probability for &lt;span class="math"&gt;\(a\)&lt;/span&gt; to happen.&lt;/p&gt;
+&lt;h2&gt;Random Sampling&lt;/h2&gt;
+&lt;p&gt;In this section, I introduce the notion of independence along with different probability distributions.&lt;/p&gt;
+&lt;h3&gt;Independence&lt;/h3&gt;
+&lt;p&gt;Many conditional probabilities can be found without using Bayes' rule. If you are asked to find the unconditional outcomes for a given event to happen, it does not matter if you have replacement or not. However, once you consider conditional outcomes you have to distinguish sampling with replacement and without replacement. Each sample taken with replacement is &lt;strong&gt;independent&lt;/strong&gt;. Samples taken without replacement are &lt;strong&gt;dependent&lt;/strong&gt;. Example of independent trials are: tossing a coin, rolling a die, drawing &lt;strong&gt;with&lt;/strong&gt; replacement. Example of dependent trials are: dealing cards from a deck, drawing &lt;strong&gt;without&lt;/strong&gt; replacement.&lt;/p&gt;
+&lt;p&gt;A rough definition of independence: Two random quantities are &lt;strong&gt;independent&lt;/strong&gt; if knowing how one of them turned out does not change chances for the other. More explicitly, two events &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt; are independent if
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(B|A) = P(B|\text{not } A) = P(B). $$&lt;/div&gt;
+&lt;p&gt;
+The multiplication rule simplifies when the two events are independent:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(A \text{ and } B) = P(A) P(B). $$&lt;/div&gt;
+&lt;p&gt;
+That is, for two independent events &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt; the probability for both events to hapen is the product of the probability for each event to happen.&lt;/p&gt;
+&lt;h3&gt;Sampling with Replacement: Binomial Distribution&lt;/h3&gt;
+&lt;p&gt;In this subsection I will focus on trials that have &lt;strong&gt;two&lt;/strong&gt; possible outcomes: &lt;em&gt;success&lt;/em&gt; or &lt;em&gt;failure&lt;/em&gt;. This type of trial is also known as a &lt;strong&gt;Bernoulli trial&lt;/strong&gt;. As an example, consider rolling a die 3 times and counting the number of times you get a six. Success in the trial means you get a six (with probability &lt;span class="math"&gt;\(1/6\)&lt;/span&gt;) and failure in the trial means you do not get a six (with probability &lt;span class="math"&gt;\(5/6\)&lt;/span&gt;). The number of sixes &lt;span class="math"&gt;\(n_{6}\)&lt;/span&gt; is our &lt;strong&gt;random variable&lt;/strong&gt;: depending on the outcomes you can either have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ n_{6} = 0, \qquad n_{6} = 1, \qquad n_{6} = 2, \qquad n_{6} = 3. $$&lt;/div&gt;
+&lt;p&gt;
+You would like to know the probability to get each of the four possible values of &lt;span class="math"&gt;\(n_{6}\)&lt;/span&gt;. If &lt;span class="math"&gt;\(n_{6} = 0\)&lt;/span&gt;, you did not get any six. The probability for each independent failure is &lt;span class="math"&gt;\(5/6\)&lt;/span&gt; so the probability to get no sixes is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(n_{6} = 0) = \left( \frac{5}{6} \right)^{3}. $$&lt;/div&gt;
+&lt;p&gt;
+How about the probability to get only one six? Well, you can get a six on either the first, the second or the third roll. Each of these events is indepenent and has probability &lt;span class="math"&gt;\((1/6)(5/6)^{2}\)&lt;/span&gt;, so the probabilty to get 1 six is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(n_{6} = 1) = 3 \left( \frac{1}{6} \right) \left( \frac{5}{6} \right)^{2}. $$&lt;/div&gt;
+&lt;p&gt;
+Note the factor &lt;span class="math"&gt;\(3\)&lt;/span&gt;. This factor correspond to the 3-choose-1 ways of drawing 1 six. Similarly, you find
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(n_{6} = 2) = 3 \left( \frac{1}{6} \right)^{2} \left( \frac{5}{6} \right). $$&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P(n_{6} = 3) = \left( \frac{1}{6} \right)^{3}. $$&lt;/div&gt;
+&lt;p&gt;It is impractical to make a list of all possible outcomes in every problem. The &lt;strong&gt;binomial formula&lt;/strong&gt; nicely summarizes the probabilities you wish to compute. Consider &lt;span class="math"&gt;\(n\)&lt;/span&gt; &lt;strong&gt;independent&lt;/strong&gt; Bernoulli trials, each trial with chance of success given by &lt;span class="math"&gt;\(p\)&lt;/span&gt;. The chance for &lt;span class="math"&gt;\(k\)&lt;/span&gt; successes in &lt;span class="math"&gt;\(n\)&lt;/span&gt; trials is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{n}(k) = {n \choose k} p^{k} (1-p)^{n-k} = \frac{\Gamma(n+1)}{\Gamma(k+1) \Gamma(n - k + 1)} p^{k} (1-p)^{n-k}. $$&lt;/div&gt;
+&lt;p&gt;
+This is simply the product of the probabilities for &lt;span class="math"&gt;\(k\)&lt;/span&gt; successes and &lt;span class="math"&gt;\(n - k\)&lt;/span&gt; failures times an overall combinatorial factor that counts the different order the successes can occur. You can use the binomial theorem to show that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sum_{k = 0}^{n} P_{n}(k) = (p + 1 - p)^{n} = 1. $$&lt;/div&gt;
+&lt;p&gt;
+That is, the sum of the &lt;span class="math"&gt;\(n + 1\)&lt;/span&gt; probabilities &lt;span class="math"&gt;\(P_{n}(k)\)&lt;/span&gt; is correctly normalized.&lt;/p&gt;
+&lt;h3&gt;Sampling without Replacement: Hypergeometric Distribution&lt;/h3&gt;
+&lt;p&gt;Drawing at random &lt;strong&gt;without&lt;/strong&gt; replacement is called &lt;strong&gt;simple random sampling&lt;/strong&gt;. The binomial formula is useful when sampling with replacement. The analogous result for sampling without replacement is the &lt;strong&gt;hypergeometric formula&lt;/strong&gt;. This is derived as follows. Consider a population of size &lt;span class="math"&gt;\(N\)&lt;/span&gt;. This population has two types of members: good and bad. Let &lt;span class="math"&gt;\(G\)&lt;/span&gt; be the number of good members in the population (thus, &lt;span class="math"&gt;\(N - G\)&lt;/span&gt; is the number of bad members). You make a simple random sample of size &lt;span class="math"&gt;\(n\)&lt;/span&gt; and would like to know what is the probability that this simple random sample has &lt;span class="math"&gt;\(g\)&lt;/span&gt; good members (and thus &lt;span class="math"&gt;\(n - g\)&lt;/span&gt; bad members). The number &lt;span class="math"&gt;\(\mathcal{N}_{n}\)&lt;/span&gt; of possible simple random samples of size &lt;span class="math"&gt;\(n\)&lt;/span&gt; out of a population of size &lt;span class="math"&gt;\(N\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mathcal{N}_{n} = {N \choose n} = \frac{\Gamma(N + 1)}{\Gamma(n + 1) \Gamma(N - n + 1)}. $$&lt;/div&gt;
+&lt;p&gt;
+Similarly, out of &lt;span class="math"&gt;\(G\)&lt;/span&gt; good elements, the number &lt;span class="math"&gt;\(\mathcal{N}_{g}\)&lt;/span&gt; of ways of choosing &lt;span class="math"&gt;\(g\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mathcal{N}_{g} = {G \choose g} = \frac{\Gamma(G + 1)}{\Gamma(g + 1) \Gamma(G - g + 1)}. $$&lt;/div&gt;
+&lt;p&gt;
+For each of these &lt;span class="math"&gt;\(\mathcal{N}_{g}\)&lt;/span&gt; ways of choosing &lt;span class="math"&gt;\(g\)&lt;/span&gt; good members, you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mathcal{N}_{n - g} = {N - G \choose n - g} = \frac{\Gamma(N - G + 1)}{\Gamma(n - g + 1) \Gamma(N - G - n + g + 1)} $$&lt;/div&gt;
+&lt;p&gt;
+ways of choosing &lt;span class="math"&gt;\(n - g\)&lt;/span&gt; bad members. Thus, the probability that the simple random sample has &lt;span class="math"&gt;\(g\)&lt;/span&gt; good elements is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{N}(n, g, G) = \frac{\mathcal{N}_{g} \times \mathcal{N}_{n - g}}{\mathcal{N}_{n}}. $$&lt;/div&gt;
+&lt;p&gt;
+Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sum_{g = 0}^{G} P_{N}(n, g, G) = 1. $$&lt;/div&gt;
+&lt;p&gt;
+That is, the sum of the &lt;span class="math"&gt;\(G + 1\)&lt;/span&gt; propabilities &lt;span class="math"&gt;\(P_{N}(n, g, G)\)&lt;/span&gt; is also correctly normalized.&lt;/p&gt;
+&lt;p&gt;A special case of the hypergeometric formula tells you that the probability for a given memember of the population to be in the sample is simply the fraction of the population being sample. This follows from the case &lt;span class="math"&gt;\(g = G = 1\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{N}(n, 1, 1) = \frac{\mathcal{N}_{1} \times \mathcal{N}_{n - 1}}{\mathcal{N}_{n}} = \frac{n}{N}. $$&lt;/div&gt;
+&lt;p&gt;
+More generally, the case &lt;span class="math"&gt;\(g = G = k\)&lt;/span&gt; with &lt;span class="math"&gt;\(k \geq 1\)&lt;/span&gt; gives
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{N}(n, k, k) = \prod_{l = 0}^{k - 1} \left(\frac{n - l}{N - l} \right) = \frac{n (n - 1) \cdots (n - k + 1)}{N (N - 1) \cdots (N - k + 1)}, $$&lt;/div&gt;
+&lt;p&gt;
+which correspond to the familiar result from drawing &lt;span class="math"&gt;\(n\)&lt;/span&gt; out of &lt;span class="math"&gt;\(N\)&lt;/span&gt; without replacement.&lt;/p&gt;
+&lt;h3&gt;Geometric Distribution&lt;/h3&gt;
+&lt;p&gt;Both the binomial and hypergeometric distributions are useful when you are counting the number of successes/failures in a &lt;strong&gt;fixed number of trials&lt;/strong&gt;. You could study another situation: having a &lt;strong&gt;fixed number of successes/failures&lt;/strong&gt; and counting the number of trials it takes to get that number of successes/failures. This other type of problems involve &lt;strong&gt;waiting time&lt;/strong&gt; randon variables.&lt;/p&gt;
+&lt;p&gt;Consider the case of &lt;strong&gt;independent trials&lt;/strong&gt;. You have an event that occurs with success chance &lt;span class="math"&gt;\(p\)&lt;/span&gt; (and thus failure chance &lt;span class="math"&gt;\(1-p\)&lt;/span&gt;). The smallest number of successes that you can have is 1. The probability for one success after performing exactly &lt;span class="math"&gt;\(k\)&lt;/span&gt; trials is given by the product of &lt;span class="math"&gt;\(k-1\)&lt;/span&gt; failures and 1 success trial. Thus, the probability is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{k}(p) = (1-p)^{k-1} p. $$&lt;/div&gt;
+&lt;p&gt;
+This is called the &lt;strong&gt;geometric distribution&lt;/strong&gt;. Note that since you have independent trials (with replacement), the number of failures before the first success can be any positive integer. This leads to
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sum_{k = 1}^{\infty} P_{k}(p) = p \left( \frac{1}{1 - (1 - p)} \right) = 1; $$&lt;/div&gt;
+&lt;p&gt;
+which shows that &lt;span class="math"&gt;\(P_{k}(p)\)&lt;/span&gt; has the correct normalization.&lt;/p&gt;
+&lt;p&gt;Now consider a slightly different problem: finding the probability that more than &lt;span class="math"&gt;\(n\)&lt;/span&gt; trials are needed to get a single success. First recall the geometric sum,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sum_{k = 1}^{n} r^{k-1} = \frac{1 - r^{n}}{1 - r}. $$&lt;/div&gt;
+&lt;p&gt;
+Thus
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ Q_{n} \equiv \sum_{k = 1}^{n} P_{k}(p) = p \left( \frac{1 - (1-p)^{n}}{1 - (1-p)} \right) = 1 - (1-p)^{n}. $$&lt;/div&gt;
+&lt;p&gt;
+This corresponds to the sum of the probabilities for the first success after at least &lt;span class="math"&gt;\(n\)&lt;/span&gt; trials. Hence the probability &lt;span class="math"&gt;\(R_{n}\)&lt;/span&gt; that more than &lt;span class="math"&gt;\(n\)&lt;/span&gt; trials are needed to get a \textbf{single success} is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ R_{n} = 1 - Q_{n} = (1 - p)^{n}. $$&lt;/div&gt;
+&lt;p&gt;
+This answer corresponds to the probability to get &lt;span class="math"&gt;\(n\)&lt;/span&gt; failures in a row.&lt;/p&gt;
+&lt;h3&gt;Negative Binomial Distribution&lt;/h3&gt;
+&lt;p&gt;The geometric distribution is used when you wish to know the probability for a &lt;strong&gt;single success&lt;/strong&gt; after a given number of trials. You can now generalize to the problem of finding the probability for &lt;span class="math"&gt;\(r\)&lt;/span&gt; successes after &lt;span class="math"&gt;\(k\)&lt;/span&gt; trials with the chance of success &lt;span class="math"&gt;\(p\)&lt;/span&gt;. This probability is the same as finding &lt;span class="math"&gt;\(r - 1\)&lt;/span&gt; successes after &lt;span class="math"&gt;\(k - 1\)&lt;/span&gt; trials &lt;strong&gt;and&lt;/strong&gt; then a success on the last trial. You can use the product rule to find
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{k}(p, r) = { k - 1 \choose r - 1} p^{r} (1 - p)^{k - r}, \qquad r \geq 1, \qquad k \geq 1. $$&lt;/div&gt;
+&lt;p&gt;
+This distribution is called the &lt;strong&gt;negative binomial distribution&lt;/strong&gt;. Note that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sum_{k = r}^{\infty} P_{k}(p, r) = 1, $$&lt;/div&gt;
+&lt;p&gt;
+which shows that the &lt;span class="math"&gt;\(P_{k}(p, r)\)&lt;/span&gt; are correctly normalized.&lt;/p&gt;
+&lt;h3&gt;Waiting Times and Sampling Without Replacement&lt;/h3&gt;
+&lt;p&gt;Now I turn to waiting time problems when sampling without replacement (e.g. dealing cards). First, consider the case of getting one success after &lt;span class="math"&gt;\(k\)&lt;/span&gt; trials. This is equivalent to getting &lt;span class="math"&gt;\(k - 1\)&lt;/span&gt; failures followed by success. The probability for this event is found by using the product rule:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{k} = \left[ \prod_{j = 1}^{k-1} P(F|j - 1) \right] P(S| k - 1); $$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(P(F|j)\)&lt;/span&gt; stands for the probability for failure given &lt;span class="math"&gt;\(j\)&lt;/span&gt; previous failures and &lt;span class="math"&gt;\(P(S|j)\)&lt;/span&gt; stands for the probability for success given &lt;span class="math"&gt;\(j\)&lt;/span&gt; previous failures. Since you are sampling without replacement, the events are not independent and you need to handle conditional probabilities. Note that unlike the case of sampling with replacement, the variable &lt;span class="math"&gt;\(k\)&lt;/span&gt; is bounded by the population size (i.e. you can draw at most 51 cards before finding a given card).&lt;/p&gt;
+&lt;p&gt;Next, consider the case of getting &lt;span class="math"&gt;\(n\)&lt;/span&gt; successes after &lt;span class="math"&gt;\(k\)&lt;/span&gt; trials. This is equivalent to getting &lt;span class="math"&gt;\(n - 1\)&lt;/span&gt; successes in the first &lt;span class="math"&gt;\(k - 1\)&lt;/span&gt; trials &lt;strong&gt;and&lt;/strong&gt; then success in the last trial. Again, you use the product rule:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{k}(n) = P(n - 1 \text{ successes in } k - 1) \times P(S| n - 1 \text{ successes in } k - 1). $$&lt;/div&gt;
+&lt;p&gt;
+If you have cards, you can use the hypergeometric formula to obtain the first factor.&lt;/p&gt;
+&lt;h2&gt;The Law of Averages and Expected Values&lt;/h2&gt;
+&lt;p&gt;In this section I study the notion of expected value, and some results.&lt;/p&gt;
+&lt;h3&gt;The Law of Averages&lt;/h3&gt;
+&lt;p&gt;Up to this point, the size of the the population and sample you worked with was relatively small. You could compute probabilities exactly. In order to make use of statistics you need to work with large random samples. Because of the combinatorial nature of some probabilities, the numbers become intractable for large samples. You thus require a set of &lt;strong&gt;approximations&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The simplest case of a large sample is a large sample of success/failure trials. As an example, consider a large number of coin tosses. You know the frequency theory interpretation of probability. This is also sometimes known as the &lt;strong&gt;law of averages&lt;/strong&gt;. Applied to the coin toss, the law of averages says that as you keep tossing the coin, in the &lt;strong&gt;long run&lt;/strong&gt; you get &lt;strong&gt;about&lt;/strong&gt; half heads.&lt;/p&gt;
+&lt;p&gt;Before going into more details about the law of averages, its time to discuss some &lt;em&gt;misconceptions&lt;/em&gt;. Consider tossing a coin 99 times and obtaining 99 heads. What can you say about the hundreth toss? The law of averages &lt;strong&gt;does not&lt;/strong&gt; say that you are due a tail in order to balance the previous heads: each coin toss in independent of the previous outcomes and the probability for a head is &lt;span class="math"&gt;\(1/2\)&lt;/span&gt;. There is no contradiction with the law of averages because although 100 is a large number it is still a finite number and it leads to a &lt;strong&gt;short run&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Consider performing &lt;span class="math"&gt;\(2N\)&lt;/span&gt; coin tosses. You can compute the probability to obtain &lt;span class="math"&gt;\(N\)&lt;/span&gt; heads and &lt;span class="math"&gt;\(N\)&lt;/span&gt; tails by using the binomial formula:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{2N}(N) = \frac{\Gamma(2N + 1)}{\Gamma(N + 1) \Gamma(N + 1)} \left( \frac{1}{2} \right)^{2N}. $$&lt;/div&gt;
+&lt;p&gt;
+As &lt;span class="math"&gt;\(2N\)&lt;/span&gt; becomes large, the probability to obtain exactly &lt;span class="math"&gt;\(N\)&lt;/span&gt; heads becomes very small. This contradicts what you wrongly expect (that the probability tends to &lt;span class="math"&gt;\(1/2\)&lt;/span&gt; as &lt;span class="math"&gt;\(N \rightarrow \infty\)&lt;/span&gt;). The resolution is that the law of averages does not say that you will obtain exactly &lt;span class="math"&gt;\(1/2\)&lt;/span&gt;, but &lt;strong&gt;about&lt;/strong&gt; &lt;span class="math"&gt;\(1/2\)&lt;/span&gt;. That is, there is room for &lt;strong&gt;error&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Now, consider performing &lt;span class="math"&gt;\(100\)&lt;/span&gt; coin tosses and asking what is the chance of getting between &lt;span class="math"&gt;\(50 - 5 = 45\)&lt;/span&gt; and &lt;span class="math"&gt;\(50 + 5 = 55\)&lt;/span&gt; heads. The probability is given by adding different contributions from the binomial distribution:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sum_{k = 45}^{55} P_{100}(k) \approx 0.7287. $$&lt;/div&gt;
+&lt;p&gt;
+Similarly, you can perform &lt;span class="math"&gt;\(1000\)&lt;/span&gt; coin tosses to find what is the chance of getting between &lt;span class="math"&gt;\(500 - 5 = 495\)&lt;/span&gt; and &lt;span class="math"&gt;\(500 + 5 = 505\)&lt;/span&gt; heads. You find:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sum_{k = 494}^{505} P_{1000}(k) \approx 0.2720. $$&lt;/div&gt;
+&lt;p&gt;
+The probability is still &lt;em&gt;decreasing&lt;/em&gt;. This example is meant to illustrate how the law of averages says nothing about the actual number of heads, but about the &lt;strong&gt;fraction&lt;/strong&gt; of heads.&lt;/p&gt;
+&lt;p&gt;Consider instead performing &lt;span class="math"&gt;\(100\)&lt;/span&gt; coin tosses and asking what is the chance of getting &lt;span class="math"&gt;\(50\% \pm 5\%\)&lt;/span&gt; heads. This will give the same probability as before,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sum_{k = 45}^{55} P_{100}(k) \approx 0.7287. $$&lt;/div&gt;
+&lt;p&gt;
+Next, perform &lt;span class="math"&gt;\(1000\)&lt;/span&gt; coin tosses and again ask what is the chance of getting &lt;span class="math"&gt;\(50\% \pm 5\%\)&lt;/span&gt; heads. Five-percent of &lt;span class="math"&gt;\(1000\)&lt;/span&gt; is 50, so you need to add 100 contributions:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sum_{k = 450}^{550} P_{1000}(k) \approx 0.9986. $$&lt;/div&gt;
+&lt;p&gt;
+Now you find the probability is &lt;em&gt;increasing&lt;/em&gt; and is close to &lt;span class="math"&gt;\(1\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Here is a more complete statement of the law of averages applied to coin tossing: As you keep tossing, in the long run, the chance that the &lt;strong&gt;fraction&lt;/strong&gt; of heads is in the range
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \frac{1}{2} \pm \text{ fixed amount} $$&lt;/div&gt;
+&lt;p&gt;
+converges to &lt;span class="math"&gt;\(1\)&lt;/span&gt;. The fixed amount in this statement can be arbitrarily small.&lt;/p&gt;
+&lt;p&gt;The law of averages applies to more general settings than coin tosses. Consider independent, repeated, success/failure trials where the probability for success is &lt;span class="math"&gt;\(p\)&lt;/span&gt;. The &lt;strong&gt;law of average&lt;/strong&gt; says that as the number of trials increases, the chance that the fraction of successes is in the range
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ p \pm \epsilon $$&lt;/div&gt;
+&lt;p&gt;
+converges to &lt;span class="math"&gt;\(1\)&lt;/span&gt; for arbitrary &lt;span class="math"&gt;\(0 &amp;lt; \epsilon &amp;lt; 1\)&lt;/span&gt; as long as &lt;span class="math"&gt;\(\epsilon\)&lt;/span&gt; is kept fixed.&lt;/p&gt;
+&lt;h3&gt;Expected Value of Random Sum&lt;/h3&gt;
+&lt;p&gt;A &lt;strong&gt;random variable&lt;/strong&gt; is a variable that takes values which are subject to chance. I will denote random variables with uppercase letters from the end of the Latin alphabet. Every random variable has a probability distribution that contains the probability for the random variable to take any of its possible values.&lt;/p&gt;
+&lt;p&gt;As an example, consider rolling a die. The random variable &lt;span class="math"&gt;\(X\)&lt;/span&gt; corresponds to the number of spots that is drawn after a roll. This random variable can take six possible values: &lt;span class="math"&gt;\(1\)&lt;/span&gt;, &lt;span class="math"&gt;\(2\)&lt;/span&gt;, &lt;span class="math"&gt;\(3\)&lt;/span&gt;, &lt;span class="math"&gt;\(4\)&lt;/span&gt;, &lt;span class="math"&gt;\(5\)&lt;/span&gt; and &lt;span class="math"&gt;\(6\)&lt;/span&gt;. If the die is fair, then each value of &lt;span class="math"&gt;\(X\)&lt;/span&gt; is equally likely with probability &lt;span class="math"&gt;\(1/6\)&lt;/span&gt;. The &lt;strong&gt;long run average value&lt;/strong&gt; of &lt;span class="math"&gt;\(X\)&lt;/span&gt; is found by multiplying each value that &lt;span class="math"&gt;\(X\)&lt;/span&gt; can take by its probability and adding all possible outcomes:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \begin{split}
+    E(X) &amp;amp;= \sum_{X} X P(X) \\
+    &amp;amp;= 1 \cdot \frac{1}{6} + 2 \cdot \frac{1}{6} + 3 \cdot \frac{1}{6} + 4 \cdot \frac{1}{6} + 5 \cdot \frac{1}{6} + 6 \cdot \frac{1}{6} = \frac{7}{2} = 3.5.   
+\end{split} $$&lt;/div&gt;
+&lt;p&gt;
+This is known as the &lt;strong&gt;expected value&lt;/strong&gt; of &lt;span class="math"&gt;\(X\)&lt;/span&gt; (also known as the &lt;strong&gt;expectation&lt;/strong&gt; of &lt;span class="math"&gt;\(X\)&lt;/span&gt;). The quantity &lt;span class="math"&gt;\(E(X)\)&lt;/span&gt; has the same properties as the average:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It has the same units as the variable.&lt;/li&gt;
+&lt;li&gt;Its value may not correspond to a possible value that the random variable can take.&lt;/li&gt;
+&lt;li&gt;It corresponds to the equilibrium point of the (probability) histogram.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Consider now performing &lt;span class="math"&gt;\(N\)&lt;/span&gt; rolls. On the &lt;span class="math"&gt;\(i\)&lt;/span&gt;-th roll you obtain the number of spots &lt;span class="math"&gt;\(X_{i}\)&lt;/span&gt;. The total number of spots obtained is given by adding the &lt;span class="math"&gt;\(N\)&lt;/span&gt; random variables &lt;span class="math"&gt;\(X_{i}\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{N} = \sum_{i = 1}^{N} X_{i}. $$&lt;/div&gt;
+&lt;p&gt;
+Each random variable &lt;span class="math"&gt;\(X_{i}\)&lt;/span&gt; has expectation value &lt;span class="math"&gt;\(E(X_{i}) = 3.5\)&lt;/span&gt;, so the expected value of this sum is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ E(S_{N}) = \sum_{i = 1}^{N} E(X_{i}) = 3.5 \times N. $$&lt;/div&gt;
+&lt;p&gt;
+The smallest value that &lt;span class="math"&gt;\(S_{N}\)&lt;/span&gt; can take is &lt;span class="math"&gt;\(N\)&lt;/span&gt; since this correspond to getting all 1's. This however has very small probability. Similarly, the largest value that &lt;span class="math"&gt;\(S_{N}\)&lt;/span&gt; can take is &lt;span class="math"&gt;\(6N\)&lt;/span&gt;, corresponding to getting all 6's. The expected value &lt;span class="math"&gt;\(E(S_{N})\)&lt;/span&gt; is exactly the midpoint between the two extreme cases (due to the symmetric properties of the distribution governing this process).&lt;/p&gt;
+&lt;p&gt;More generally, given &lt;span class="math"&gt;\(N\)&lt;/span&gt; independent and identically distributed (i.i.d.) random variables &lt;span class="math"&gt;\(X_{i}\)&lt;/span&gt;, the expectation of the sum is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ E(S_{N}) = N E(X), $$&lt;/div&gt;
+&lt;p&gt;
+since the expectation of each random variable is the same.&lt;/p&gt;
+&lt;h3&gt;Expected Value of Random Average&lt;/h3&gt;
+&lt;p&gt;After computing the sum of all the values that a random variable takes after &lt;span class="math"&gt;\(N\)&lt;/span&gt; trials, you can compute the sample average:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ A_{N} = \frac{1}{N} \sum_{i = 1}^{N} X_{i}. $$&lt;/div&gt;
+&lt;p&gt;
+The expected value of &lt;span class="math"&gt;\(A_{N}\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ E(A_{N}) = \frac{1}{N} \sum_{i = 1}^{N} E(X_{i}) = E(X). $$&lt;/div&gt;
+&lt;p&gt;
+That is, the expected value of the &lt;strong&gt;sample&lt;/strong&gt; average is the same as the expected value of the &lt;strong&gt;population&lt;/strong&gt;. Note that &lt;span class="math"&gt;\(E(A_{N})\)&lt;/span&gt; does not depend on the number of trials.&lt;/p&gt;
+&lt;h2&gt;Central Limit Theorem&lt;/h2&gt;
+&lt;p&gt;In this section I will introduce a measure of error and discuss an important theorem: the central limit theorem.&lt;/p&gt;
+&lt;h3&gt;Standard Error&lt;/h3&gt;
+&lt;p&gt;You know how to provide an estimate for the value of a random variable. Now you need to provide a measure of error in this estimate. This error measures how far off the random variable is from the expected value. So you arrive at the &lt;strong&gt;chance error&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \text{chance error } \equiv \Delta X = X - E(X). $$&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(\Delta X\)&lt;/span&gt; is also a random variable, but its expected value is zero:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ E(\Delta X) = E(X) - E(E(X)) = 0. $$&lt;/div&gt;
+&lt;p&gt;
+This outcome is analogous with how the average of the deviations from average is zero. Back in &lt;a href="http://meirizarrygelpi.github.io/posts/notes/stat21x/"&gt;Stat2.1x&lt;/a&gt; I introduced the root-mean-square average of the deviations as a measure of spread. This lead to the standard deviation. Stretching this analogy farther, I will introduce the &lt;strong&gt;standard error&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ SE(X) \equiv \sqrt{E((\Delta X)^{2})}. $$&lt;/div&gt;
+&lt;p&gt;
+That is, the standard error corresponds to the square root of the expected value of the square of the chance error. Note that &lt;span class="math"&gt;\(SE(X)\)&lt;/span&gt; corresponds to the standard deviation of the box sample.&lt;/p&gt;
+&lt;p&gt;The standard error measures the rough size of the chance error in &lt;span class="math"&gt;\(X\)&lt;/span&gt;: roughly how far off is &lt;span class="math"&gt;\(X\)&lt;/span&gt; from the expected value &lt;span class="math"&gt;\(E(X)\)&lt;/span&gt;. Independent of the probability distribution of &lt;span class="math"&gt;\(X\)&lt;/span&gt;, with high probability the value of &lt;span class="math"&gt;\(X\)&lt;/span&gt; will be in the range &lt;span class="math"&gt;\(E(X) \pm k SE(X)\)&lt;/span&gt; for some small integer &lt;span class="math"&gt;\(k\)&lt;/span&gt;. This statement is analogous with averages and standard deviations. You can also apply &lt;strong&gt;Chebyshev's inequality&lt;/strong&gt;: the probability &lt;span class="math"&gt;\(P\)&lt;/span&gt; for &lt;span class="math"&gt;\(X\)&lt;/span&gt; to be inside the interval &lt;span class="math"&gt;\(E(X) \pm k SE(E)\)&lt;/span&gt; is bounded:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P \geq 1 - \frac{1}{k^{2}}. $$&lt;/div&gt;
+&lt;p&gt;
+for some positive integer &lt;span class="math"&gt;\(k\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h4&gt;Random Sum&lt;/h4&gt;
+&lt;p&gt;Consider the following situation: You make &lt;span class="math"&gt;\(n\)&lt;/span&gt; draws with replacement from a box. The average of the box is denoted by &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; and the SD of the box is denoted by &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;. As you saw earlier, the &lt;em&gt;expected value&lt;/em&gt; of the sum of the draws is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ (\text{number of draws}) \times (\text{average of the box}) = n \mu. $$&lt;/div&gt;
+&lt;p&gt;
+The &lt;em&gt;standard error&lt;/em&gt; of the sum of the draws is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sqrt{\text{number of draws}} \times (\text{SD of the box}) = \sqrt{n} \sigma. $$&lt;/div&gt;
+&lt;h3&gt;Normal Approximation of Binomial Distribution&lt;/h3&gt;
+&lt;p&gt;Sometimes, when the number of trials &lt;span class="math"&gt;\(n\)&lt;/span&gt; is held fixed, the histogram of the binomial distribution resembles the histogram of the normal distribution. Recall that the probability for &lt;span class="math"&gt;\(k\)&lt;/span&gt; successes in &lt;span class="math"&gt;\(n\)&lt;/span&gt; trials with probability of success &lt;span class="math"&gt;\(p\)&lt;/span&gt; is given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{n}(k) = \frac{\Gamma(n + 1)}{\Gamma(k + 1) \Gamma( n - k + 1)} p^{k} (1 - p)^{(n - k)}, \qquad 0 \leq k \leq n. $$&lt;/div&gt;
+&lt;p&gt;
+You can promote &lt;span class="math"&gt;\(k\)&lt;/span&gt; to a random variable &lt;span class="math"&gt;\(X\)&lt;/span&gt;. The posible values that &lt;span class="math"&gt;\(X\)&lt;/span&gt; can take are the integers between &lt;span class="math"&gt;\(0\)&lt;/span&gt; and &lt;span class="math"&gt;\(n\)&lt;/span&gt; (including the boundary points). Thus, the expectation value &lt;span class="math"&gt;\(E(X)\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ E(X) = \sum_{X = 0}^{n} X P_{n}(X) = \sum_{X = 0}^{n} \frac{X \Gamma(n + 1)}{\Gamma(X + 1) \Gamma( n - X + 1)} p^{X} (1 - p)^{(n - X)} = n p. $$&lt;/div&gt;
+&lt;p&gt;
+The chance error &lt;span class="math"&gt;\(\Delta_{X}\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \Delta_{X} = X - E(X) = X - np, $$&lt;/div&gt;
+&lt;p&gt;
+so the expected value of the square of the chance error is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ E(\Delta_{X}^{2}) = \sum_{X = 0}^{n} \Delta_{X}^{2} P_{n}(X) = \sum_{X = 0}^{n} \frac{\left( X - n p \right)^{2} \Gamma(n + 1)}{\Gamma(X + 1) \Gamma( n - X + 1)} p^{X} (1 - p)^{(n - X)} = n p (1 - p), $$&lt;/div&gt;
+&lt;p&gt;
+and thus, the standard error of the binomial distribution is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ SE(X) = \sqrt{E(\Delta_{X}^{2})} = \sqrt{n p (1 - p)}. $$&lt;/div&gt;
+&lt;p&gt;
+Comparing this with the standard error of a random sum you find that &lt;span class="math"&gt;\(\sigma = \sqrt{p (1 - p)}\)&lt;/span&gt; which is largest for &lt;span class="math"&gt;\(p = 1/2\)&lt;/span&gt; (giving &lt;span class="math"&gt;\(\sigma = 1/2\)&lt;/span&gt;). This is the case of the fair coin.&lt;/p&gt;
+&lt;p&gt;For large values of &lt;span class="math"&gt;\(n\)&lt;/span&gt;, it becomes impractical to compute the exact values of the probabilities from &lt;span class="math"&gt;\(P_{n}(k)\)&lt;/span&gt;. However, since you have already noticed that the distribution resembles a normal distribution, you can approximate the binomial distribution with a &lt;strong&gt;normal distribution&lt;/strong&gt;. To specify the normal distribution you need the average &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; and the SD &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;. You can use
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mu = n p, \qquad \sigma = \sqrt{n p (1 - p)}. $$&lt;/div&gt;
+&lt;p&gt;
+The claim is that the normal distribution,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{N}(X|n, p) = \frac{1}{\sqrt{2 \pi n p (1 - p)}} \exp{\left[- \frac{1}{2} \left( \frac{X - n p}{\sqrt{n p (1 - p)}} \right)^{2} \right]}; $$&lt;/div&gt;
+&lt;p&gt;
+is an &lt;strong&gt;approximation&lt;/strong&gt; of the exact binomial distribution
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ P_{B}(X|n, p) = \frac{\Gamma(n + 1)}{\Gamma(X + 1) \Gamma( n - X + 1)} p^{X} (1 - p)^{(n - X)}. $$&lt;/div&gt;
+&lt;p&gt;When plotting the binomial distribution, you draw bars that are centered at the values that &lt;span class="math"&gt;\(X\)&lt;/span&gt; can take. Since &lt;span class="math"&gt;\(X\)&lt;/span&gt; takes integer powers, the edges of the bars are located at &lt;span class="math"&gt;\(X \pm 1/2\)&lt;/span&gt;. When you use the approximate normal distribution you can draw a continuous curve, but you should apply the &lt;strong&gt;continuity correction&lt;/strong&gt;: the ranges on the axis of the normal distribution range between the edges of the bars, not the centers of the bars. For example, consider a binomial distribution with &lt;span class="math"&gt;\(n = 100\)&lt;/span&gt; and &lt;span class="math"&gt;\(p = 0.5\)&lt;/span&gt;. You wish to obtain the probability that &lt;span class="math"&gt;\(X\)&lt;/span&gt; is between &lt;span class="math"&gt;\(45\)&lt;/span&gt; and &lt;span class="math"&gt;\(55\)&lt;/span&gt; (inclusive). It is easy to find that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ E(X) = 50, \qquad SE(X) = 5. $$&lt;/div&gt;
+&lt;p&gt;
+Since the number of trials is large, you can use an approximate normal distribution. Thus, the problem reduces to finding the area between the bar centered at &lt;span class="math"&gt;\(45\)&lt;/span&gt; and the bar centered at &lt;span class="math"&gt;\(55\)&lt;/span&gt;. The left edge of the first bar is at &lt;span class="math"&gt;\(44.5\)&lt;/span&gt; and the right edge of the second bar is at &lt;span class="math"&gt;\(55.5\)&lt;/span&gt;. This accounts for the continuity correction. You convert these values to normal units and use the standard normal curve.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;de Moivre-Laplace theorem&lt;/strong&gt; formalizes the relation between the binomial and normal distributions. It roughly says that as the number of trials increases, the probability histogram for the binomial distribution looks like a normal curve with average &lt;span class="math"&gt;\(\mu = n p\)&lt;/span&gt; and SD &lt;span class="math"&gt;\(\sigma = \sqrt{n p (1 - p)}\)&lt;/span&gt;. This theorem is a special case of the central limit theorem.&lt;/p&gt;
+&lt;h3&gt;Central Limit Theorem&lt;/h3&gt;
+&lt;p&gt;In plain English, the &lt;strong&gt;central limit theorem&lt;/strong&gt; says that the probability histogram for the sum of a large number of draws at random with replacement from a box is approximately normal, regardless of the content of the box.&lt;/p&gt;
+&lt;p&gt;More specifically, let &lt;span class="math"&gt;\(X_{j}\)&lt;/span&gt; (with &lt;span class="math"&gt;\(j\)&lt;/span&gt; taking &lt;span class="math"&gt;\(n\)&lt;/span&gt; values) be independent and identically distributed, each with expected value &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; and standard error &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;. Denote
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S_{n} = \sum_{j = 1}^{n} X_{j}. $$&lt;/div&gt;
+&lt;p&gt;
+Then for large &lt;span class="math"&gt;\(n\)&lt;/span&gt;, the probability distribution of &lt;span class="math"&gt;\(S_{n}\)&lt;/span&gt; is approximately normal with mean &lt;span class="math"&gt;\(n \mu\)&lt;/span&gt; and SD &lt;span class="math"&gt;\(\sqrt{n} \sigma\)&lt;/span&gt;, no matter what the distribution of each &lt;span class="math"&gt;\(X_{j}\)&lt;/span&gt; is.&lt;/p&gt;
+&lt;h3&gt;Scope of Normal Approximation&lt;/h3&gt;
+&lt;p&gt;There is not a fixed number of trials where the central limit theorem becomes accurate. Given a value of &lt;span class="math"&gt;\(n\)&lt;/span&gt; and &lt;span class="math"&gt;\(p\)&lt;/span&gt; it could be the case that the resulting binomial distribution is skewed and the normal approximation does not hold. A good way to determine whether normality is appropriate is to compute the expected value &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; and the standard error &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; and then check to see if one has valid values in the range &lt;span class="math"&gt;\(\mu \pm 3 \sigma\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;Accuracy of Simple Random Sampling&lt;/h2&gt;
+&lt;p&gt;In this section I will discuss the accuracy of some random sampling schemes.&lt;/p&gt;
+&lt;h3&gt;Accuracy of Sample Average&lt;/h3&gt;
+&lt;p&gt;Previously you looked at the &lt;strong&gt;sample sum&lt;/strong&gt;: the sum of the outcome value a random variable takes after a trial. The &lt;strong&gt;sample average&lt;/strong&gt; is simply the box average: the sample sum divided by the number of trials. The expected value of the sample average is the box average.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;population&lt;/strong&gt; is a list of numbers. Consider &lt;span class="math"&gt;\(n\)&lt;/span&gt; draws at random &lt;em&gt;with&lt;/em&gt; replacement from a population that has average &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; and SD &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;. The &lt;strong&gt;sample sum&lt;/strong&gt; is denoted by &lt;span class="math"&gt;\(S\)&lt;/span&gt;. You have already seen that the expected value of &lt;span class="math"&gt;\(S\)&lt;/span&gt; is &lt;span class="math"&gt;\(E(S) = n \mu\)&lt;/span&gt; and the standard error is &lt;span class="math"&gt;\(SE(S) = \sqrt{n} \sigma\)&lt;/span&gt;. According to the central limit theorem, if &lt;span class="math"&gt;\(n\)&lt;/span&gt; is large, the distribution of &lt;span class="math"&gt;\(S\)&lt;/span&gt; is roughly normal. Now consider the &lt;strong&gt;sample mean&lt;/strong&gt; defined as &lt;span class="math"&gt;\(M \equiv S / n\)&lt;/span&gt;. The expected value of &lt;span class="math"&gt;\(M\)&lt;/span&gt; is &lt;span class="math"&gt;\(E(M) = \mu\)&lt;/span&gt; and the standard error is &lt;span class="math"&gt;\(SE(M) = \sigma / \sqrt{n}\)&lt;/span&gt;. Note that &lt;span class="math"&gt;\(E(M)\)&lt;/span&gt; is independent of the number of trials, but &lt;span class="math"&gt;\(SE(M)\)&lt;/span&gt; becomes smaller as &lt;span class="math"&gt;\(n\)&lt;/span&gt; increases. That is, the estimate &lt;span class="math"&gt;\(E(M)\)&lt;/span&gt; becomes better for large number of trials. The estimate for the sample &lt;em&gt;mean&lt;/em&gt; becomes sharp, but the estimate for the sample &lt;em&gt;sum&lt;/em&gt; becomes more variable (the standar error &lt;span class="math"&gt;\(SE(S)\)&lt;/span&gt; grows for large &lt;span class="math"&gt;\(n\)&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;A special case is when the population consists of &lt;strong&gt;zeroes and ones&lt;/strong&gt;. You make &lt;span class="math"&gt;\(n\)&lt;/span&gt; draws &lt;em&gt;with&lt;/em&gt; replacement from a population where the fraction of ones is &lt;span class="math"&gt;\(p\)&lt;/span&gt; and the fraction of zeroes is &lt;span class="math"&gt;\(1-p\)&lt;/span&gt;. The population mean is &lt;span class="math"&gt;\(p\)&lt;/span&gt; and the population SD is given by &lt;span class="math"&gt;\(\sqrt{p (1 - p)}\)&lt;/span&gt;. Consider the &lt;strong&gt;sample sum&lt;/strong&gt; random variable &lt;span class="math"&gt;\(S\)&lt;/span&gt;. The expected value is &lt;span class="math"&gt;\(E(S) = n p\)&lt;/span&gt; and the standard error is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ SE(S) = \sqrt{n p (1 - p)}. $$&lt;/div&gt;
+&lt;p&gt;
+Now consider the &lt;strong&gt;sample mean&lt;/strong&gt; random variable &lt;span class="math"&gt;\(M\)&lt;/span&gt;. The expected value is &lt;span class="math"&gt;\(E(M) = p\)&lt;/span&gt; and the standard error is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ SE(M) = \sqrt{\frac{p (1 - p)}{n}}. $$&lt;/div&gt;
+&lt;p&gt;
+As before, &lt;span class="math"&gt;\(E(M)\)&lt;/span&gt; is independent of &lt;span class="math"&gt;\(n\)&lt;/span&gt; and &lt;span class="math"&gt;\(SE(M)\)&lt;/span&gt; becomes smaller as &lt;span class="math"&gt;\(n\)&lt;/span&gt; is increased.&lt;/p&gt;
+&lt;h3&gt;Sampling Without Replacement&lt;/h3&gt;
+&lt;p&gt;When you repeat the same task over and over (like throwing a die or tossing a coin) you use sampling &lt;em&gt;with&lt;/em&gt; replacement. However, when you sample people it makes more sense to use sampling &lt;em&gt;without&lt;/em&gt; replacement.&lt;/p&gt;
+&lt;p&gt;Consider making &lt;span class="math"&gt;\(n\)&lt;/span&gt; draws without replacement from a population of size &lt;span class="math"&gt;\(N\)&lt;/span&gt; that follows the hypergeometric distribution. That is, there are two types of members in the population: good and bad. The number of good members in the population is &lt;span class="math"&gt;\(G\)&lt;/span&gt;. Your random variable &lt;span class="math"&gt;\(X\)&lt;/span&gt; is the number of good members out of the &lt;span class="math"&gt;\(n\)&lt;/span&gt; in the sample. You can either have &lt;span class="math"&gt;\(n \geq G\)&lt;/span&gt; or &lt;span class="math"&gt;\(n &amp;lt; G\)&lt;/span&gt;. For now, assume that &lt;span class="math"&gt;\(n \geq G\)&lt;/span&gt;. Thus, the random variable &lt;span class="math"&gt;\(X\)&lt;/span&gt; can take &lt;span class="math"&gt;\(G + 1\)&lt;/span&gt; possible values. The expected value of &lt;span class="math"&gt;\(X\)&lt;/span&gt; is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ E(X) = \sum_{X = 0}^{G} X P_{N}(n, X, G) = n \left( \frac{G}{N} \right). $$&lt;/div&gt;
+&lt;p&gt;
+This corresponds to &lt;span class="math"&gt;\(n\)&lt;/span&gt; times the fraction of good members, which is analogous to the result with the binomial distribution. The squared of the standard error is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ SE^{2}(X) = \sum_{X = 0}^{G} \left( X - \frac{n G}{N} \right)^{2} P_{N}(n, X, G) = n \left( \frac{G}{N} \right) \left(1 - \frac{G}{N} \right) \left( \frac{N - n}{N  - 1} \right). $$&lt;/div&gt;
+&lt;p&gt;
+Thus, the standard error is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ SE(X) = \sqrt{n \left( \frac{G}{N} \right) \left(1 - \frac{G}{N} \right) \left( \frac{N - n}{N  - 1} \right)}. $$&lt;/div&gt;
+&lt;p&gt;
+Comparing this result with the standard error of the sample sum for a binary population, you see the appearance of a new factor, the &lt;strong&gt;finite population correction&lt;/strong&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ F(n, N) \equiv \sqrt{\frac{N - n}{N - 1}}. $$&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(F(n, N) \leq 1\)&lt;/span&gt;. You can also look at the expected value of the sample mean &lt;span class="math"&gt;\(Y \equiv X / n\)&lt;/span&gt;:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ E(Y) = \frac{1}{n} \sum_{X = 0}^{G} X P_{N}(n, X, G) = \frac{G}{N}. $$&lt;/div&gt;
+&lt;p&gt;
+Thus, the squared of the standard error is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ SE^{2}(Y) = \sum_{X = 0}^{G} \left( \frac{X}{n} - \frac{G}{N} \right)^{2} P_{N}(n, X, G) = \frac{1}{n} \left( \frac{G}{N} \right) \left(1 - \frac{G}{N} \right) \left( \frac{N - n}{N  - 1} \right). $$&lt;/div&gt;
+&lt;p&gt;
+Hence the standard error is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ SE(Y) = \sqrt{\frac{1}{n} \left( \frac{G}{N} \right) \left(1 - \frac{G}{N} \right) \left( \frac{N - n}{N  - 1} \right)}. $$&lt;/div&gt;
+&lt;p&gt;
+Again, the finite population correction appears in contrast with the standard error of the sample mean for a binary population.&lt;/p&gt;
+&lt;p&gt;The typical situation in statistics involves a very large population of size &lt;span class="math"&gt;\(N\)&lt;/span&gt; and taking a relatively small simple random sample of size &lt;span class="math"&gt;\(n\)&lt;/span&gt;. Thus, &lt;span class="math"&gt;\(N - n \sim N\)&lt;/span&gt; and &lt;span class="math"&gt;\(N - 1 \sim N\)&lt;/span&gt; so the finite population correction gives &lt;span class="math"&gt;\(F(n, N) \sim 1\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h3&gt;Accuracy&lt;/h3&gt;
+&lt;p&gt;For an estimate to be more accurate, the standard error must be smaller. Consider simple random sample averages. In general, the standard error for the sample average is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ S(A) = \frac{\sigma}{\sqrt{n}} \sqrt{\frac{N - n}{N - 1}}. $$&lt;/div&gt;
+&lt;p&gt;
+As you increase the size of the sample &lt;span class="math"&gt;\(n\)&lt;/span&gt;, you have &lt;span class="math"&gt;\(\sigma / \sqrt{n}\)&lt;/span&gt; becoming smaller and the finite size correction also becoming smaller. Thus, as you increase the sample size, the sample average becomes more accurate.&lt;/p&gt;
+&lt;p&gt;Suppose you wish to increase the accuracy by a factor of &lt;span class="math"&gt;\(k\)&lt;/span&gt;. This means that you want the standard error to decrease by a factor of &lt;span class="math"&gt;\(k\)&lt;/span&gt;. Suppose that &lt;span class="math"&gt;\(F(n, N) \approx 1\)&lt;/span&gt;. Then
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ SE(A) \approx \frac{\sigma}{\sqrt{n}}. $$&lt;/div&gt;
+&lt;p&gt;
+So you can accomplish an increase in accuracy by increasing the size of the sample from size &lt;span class="math"&gt;\(n\)&lt;/span&gt; to size &lt;span class="math"&gt;\(k^{2} n\)&lt;/span&gt;. Accuracy is expensive. A related observation is the &lt;strong&gt;square root law&lt;/strong&gt;: If you multiply the sample size by a factor &lt;span class="math"&gt;\(k\)&lt;/span&gt;, the accuracy goes up by a factor &lt;span class="math"&gt;\(\sqrt{k}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Notes"></category><category term="statistics"></category></entry><entry><title>Lecture Notes from Stat2.1x</title><link href="https://meirizarrygelpi.github.io/posts/notes/stat21x/" rel="alternate"></link><published>2016-03-23T00:00:00-04:00</published><updated>2016-03-23T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2016-03-23:/posts/notes/stat21x/</id><summary type="html">&lt;p&gt;My lecture notes from stat2.1x on &lt;a href="https://www.edx.org/"&gt;edX&lt;/a&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;These are my lecture notes from a MOOC I took some time ago on statistics. It is very embarrassing to admit that, as a holder of a doctorate in theoretical physics, I know very little statistics. Or more like I have learned some in the past and have forgotten most about it. It is interesting to try to learn something basic now, with all the mathematical maturity I have acquire over the years. This post is based on this &lt;a href="https://www.dropbox.com/s/02bc8pbp39rbe0i/stat21xNotes.pdf?dl=0"&gt;.pdf&lt;/a&gt; file.&lt;/p&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this section I introduce variables and their different types. I also introduce a graphical way to describe a single categorical variable.&lt;/p&gt;
+&lt;h3&gt;Terminology&lt;/h3&gt;
+&lt;p&gt;A &lt;strong&gt;variable&lt;/strong&gt; is a value or characteristic that can be different from individual to individual. One can have &lt;strong&gt;quantitative variables&lt;/strong&gt; which have numerical values, often with units of measurements. Quantitative variables can be&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;continuous&lt;/strong&gt;: values can be arbitrarily close to each other.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;discrete&lt;/strong&gt;: values are separated from each other by a fixed amount.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One can also have &lt;strong&gt;qualitative&lt;/strong&gt; or &lt;strong&gt;categorical&lt;/strong&gt; variables which have values that have no particular order or ranking in relation to each other. Some example of qualitative variables are: favorite color, gender, nationality, etc. However there are &lt;strong&gt;qualitative ordinal&lt;/strong&gt; variables that do not have numerical values but have a natural order or ranking. For example, the temperature can be low, medium or high.&lt;/p&gt;
+&lt;h3&gt;Bar Graphs&lt;/h3&gt;
+&lt;p&gt;A &lt;strong&gt;bar graph&lt;/strong&gt; is a common way of graphically describing a categorical variable. One draws a bar for every value of the category. The human eye is good at comparing areas. In order to have an accurate reading of a bar graph it is important that each rectangular bar have the &lt;strong&gt;correct area&lt;/strong&gt;. By keeping the width of the bars equal one ensures that not only the height but also the area of each bar is proportional to the number of individuals in that category. A good bar graph gives you an accurate reading of the relative proportions in each category (the percents).&lt;/p&gt;
+&lt;h2&gt;Histograms&lt;/h2&gt;
+&lt;p&gt;In this section I introduce the histogram which is a graphical device to visualize the distribution of a quantitative variable, analogous to the bar graph used for a qualitative variable.&lt;/p&gt;
+&lt;h3&gt;Stem and Leaf Plot&lt;/h3&gt;
+&lt;p&gt;Consider the following data set:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 48, \qquad 59, \qquad 63, \qquad 63, \qquad 63, \qquad 67. $$&lt;/div&gt;
+&lt;p&gt;
+More compactly, you can arrange it as
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \begin{split}
+    4 \; &amp;amp;| \; 8 \\
+    5 \; &amp;amp;| \; 9 \\
+    6 \; &amp;amp;| \; 3 3 3 7
+\end{split} $$&lt;/div&gt;
+&lt;p&gt;
+This is called a &lt;strong&gt;stem and leaf plot&lt;/strong&gt;. This type of graphical representation is useful when the range of the data is relatively small. It retains all the data, which is not necessarily a good thing.&lt;/p&gt;
+&lt;h3&gt;Drawing Histograms&lt;/h3&gt;
+&lt;table class="table table-striped table-hover "&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Annual Income of U.S. Adults in 2010 (thousands of dollars)&lt;/th&gt;
+      &lt;th&gt;Percent&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0 - 10&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10 - 25&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;25 - 50&lt;/td&gt;
+      &lt;td&gt;27&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;50 - 100&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;100 - 150&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;In the table above you have the distribution of annual incomes of U.S. adults in the year 2010. Whenever you are presented data in this way you need to know the &lt;strong&gt;endpoint convention&lt;/strong&gt;: whether the income intervals contain the left endpoint but not the right, or the right endpoint but not the left. In this particular example the left endpoint convention was used. The percent of people that earn more than $150,000 is very small and has been &lt;strong&gt;swept in&lt;/strong&gt; the last interval.&lt;/p&gt;
+&lt;p&gt;We would like to use something like a bar graph to show how the incomes are distributed. But notice how each income interval has a different size. This means that we should not be using the percentages as the heights of our bars. Indeed, the &lt;strong&gt;area&lt;/strong&gt; of each bar should correspond to the &lt;strong&gt;percentage&lt;/strong&gt; in that interval. Since the bar is a rectangle, we have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \text{area} = \text{length} \times \text{width}. $$&lt;/div&gt;
+&lt;p&gt;
+The size of the first interval in the table above is $10,000 and it contains 20% of the data. Thus the height of the bar for this interval is 2% per thousand dollar. Using this type of bar leads to a graphical representation of the data that is called a &lt;strong&gt;histogram&lt;/strong&gt;. A histogram shows how a quantitative variable is distributed over all its values.&lt;/p&gt;
+&lt;h3&gt;Units and Density&lt;/h3&gt;
+&lt;p&gt;It is important to specify the &lt;strong&gt;units&lt;/strong&gt; along the horizontal axis in a histogram. Note that the vertical axis does not measure percents. The vertical axis measures individual percent per unit which is a &lt;strong&gt;density&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Sometimes one can use the assumption that inside each bar of a histogram the percent is uniformly distributed over the interval. This assumption is more reliable for the bars with smaller widths than for the bars with larger widths.&lt;/p&gt;
+&lt;h3&gt;Percentiles&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;median&lt;/strong&gt; is the halfway point in the data set. It is also known as the &lt;strong&gt;50th percentile&lt;/strong&gt;. For example, consider the list
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ 0, \qquad 2, \qquad 4, \qquad 7, \qquad 7. $$&lt;/div&gt;
+&lt;p&gt;
+There are five values, so the median is the third value which is 4. If we add another value to this list, we end up with six values which does not have a clear halfway point. We deal with this ambiguity by defining the &lt;span class="math"&gt;\(p\)&lt;/span&gt;&lt;strong&gt;-th percentile&lt;/strong&gt; of a list of numbers as the &lt;em&gt;smallest&lt;/em&gt; number that is at least as large as &lt;span class="math"&gt;\(p\)&lt;/span&gt;% of the list. For example, 2 is the 40th percentile, 4 is the 60th percentile and 7 is the 80th percentile of the list. Thus 4 is also the 50th percentile.&lt;/p&gt;
+&lt;p&gt;The 25th percentile is also known as the &lt;strong&gt;lower quartile&lt;/strong&gt; and the 75th percentile is also know as the &lt;strong&gt;upper quartile&lt;/strong&gt;. The interval between the 25th percentile and the 75th percentile is known as the &lt;strong&gt;interquartile range&lt;/strong&gt;. Note that the interquartile range contains 50% of the data.&lt;/p&gt;
+&lt;h2&gt;Measures of Location&lt;/h2&gt;
+&lt;p&gt;In this section I introduce the average and its properties. I also discuss Markov's inequality.&lt;/p&gt;
+&lt;h3&gt;Median and Mode&lt;/h3&gt;
+&lt;p&gt;Given a data set, one sometimes would like to know roughly where is the distribution located (i.e. along the histogram). We have already seen that the &lt;strong&gt;median&lt;/strong&gt; describes the halfway point of the data: 50% of the data is before the median and 50% of the data is after the median. The median measures a sort of center value of the distribution. Another important measure is the &lt;strong&gt;mode&lt;/strong&gt; which corresponds to the value(s) that has the largest frequency. One can have more than one mode, which means that the histogram will have many high peaks. A &lt;strong&gt;unimodal distribution&lt;/strong&gt; is a distribution that has only one peak.&lt;/p&gt;
+&lt;h3&gt;Average&lt;/h3&gt;
+&lt;p&gt;Consider a list of &lt;span class="math"&gt;\(N\)&lt;/span&gt; numbers &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt;. The &lt;strong&gt;average&lt;/strong&gt; of the list (also know as the &lt;strong&gt;mean&lt;/strong&gt;) is denoted by &lt;span class="math"&gt;\(\mu_{x}\)&lt;/span&gt; and is defined as
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mu_{x} \equiv \frac{1}{N} \sum_{j = 1}^{N} x_{j}. $$&lt;/div&gt;
+&lt;p&gt;
+Note that the average carries the same units as the numbers &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt; in the list.&lt;/p&gt;
+&lt;p&gt;Some properties of the average:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It is not true that half of the numbers in the list are below average and half are above average. That is, in general the average is not equal to the median.&lt;/li&gt;
+&lt;li&gt;In general, the average might not be equal to any of the numbers in the list.&lt;/li&gt;
+&lt;li&gt;The average does not correspond to a possible value of the variable being measured.&lt;/li&gt;
+&lt;li&gt;One should not round the value of the average in order to obtain a whole unit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One way to understand the meaning of the average is as a &lt;strong&gt;smoother&lt;/strong&gt;: it tells you how much value each individual has to contribute to the data in order for each contribution to be equal.&lt;/p&gt;
+&lt;p&gt;If one of the numbers in the list is changed, say by adding an amount &lt;span class="math"&gt;\(C\)&lt;/span&gt;, the average of that list is changed. One does not need to know which entry is changed, the net result is that the sum of the entries increases by &lt;span class="math"&gt;\(C\)&lt;/span&gt;. Thus the value of the average becomes
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mu \rightarrow \mu + \frac{C}{N}. $$&lt;/div&gt;
+&lt;p&gt;
+The interpretation of this change is that one takes the amount &lt;span class="math"&gt;\(C\)&lt;/span&gt; and divides it into &lt;span class="math"&gt;\(N\)&lt;/span&gt; equal parts.&lt;/p&gt;
+&lt;h4&gt;Comparing Averages&lt;/h4&gt;
+&lt;p&gt;A &lt;strong&gt;longitudinal&lt;/strong&gt; data set is obtained when the same individuals are followed over time. On the other hand, a &lt;strong&gt;cross-sectional&lt;/strong&gt; data set is the snapshot of all individuals at a given time. When working with different groups of individuals, each with its own average, it is wise first to understand how the groups are related (i.e. whether the data is longitudinal or cross-sectional) before comparing the numerical averages.&lt;/p&gt;
+&lt;h4&gt;Combining Averages&lt;/h4&gt;
+&lt;p&gt;One should never take the average of a list of averages. Consider two lists of numbers. The first list has &lt;span class="math"&gt;\(N_{1}\)&lt;/span&gt; numbers with average &lt;span class="math"&gt;\(\mu_{1}\)&lt;/span&gt; and the second list has &lt;span class="math"&gt;\(N_{2}\)&lt;/span&gt; numbers with average &lt;span class="math"&gt;\(\mu_{2}\)&lt;/span&gt;. The combined average &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; corresponds to the weighted sum
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mu = \left(\frac{N_{1}}{N_{1} + N_{2}}\right) \mu_{1} + \left( \frac{N_{2}}{N_{1} + N_{2}} \right) \mu_{2}. $$&lt;/div&gt;
+&lt;p&gt;
+Only for the case &lt;span class="math"&gt;\(N_{1} = N_{2}\)&lt;/span&gt; does &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; correspond to the average of &lt;span class="math"&gt;\(\mu_{1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mu_{2}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h4&gt;Average versus Median&lt;/h4&gt;
+&lt;p&gt;An &lt;strong&gt;outlier&lt;/strong&gt; is a data point that lies outside the general range of the data. The median is unaffected by outliers. However, the average is affected by each data point.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;right-skewed distribution&lt;/strong&gt; is an asymmetric distribution with a right-hand tail. The average is greater than the median for such distributions. You can instead have &lt;strong&gt;left-skewed distributions&lt;/strong&gt; with a left-hand tail. For these distributions the average is less than the median.&lt;/p&gt;
+&lt;h4&gt;Average and Histograms&lt;/h4&gt;
+&lt;p&gt;The median in a histogram corresponds to the point that divides the histogram into two sections of equal area. One can think of the average as the &lt;strong&gt;equilibrium point&lt;/strong&gt; of the histogram: the pivot point where the "weight" on each side of the histogram balances. Thus for asymmetric distributions the equilibrium point is not at the center and thus the average is off-centered.&lt;/p&gt;
+&lt;h3&gt;Markov's Inequality&lt;/h3&gt;
+&lt;p&gt;For a distribution with a long tail, one question that you can ask is how much is contained in the tail. For example, consider the following statement:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The average age of a group of people is 20 years.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You know that age distributions are asymmetric with right-hand tails. What fraction of the people are more than 80 years old? You cannot answer this question without looking at the data. But you can use an inequality due to Markov to provide a bound for this fraction. You want to know what fraction of the data lies more than 4 averages away from the average. According to Markov, this fraction cannot be greater than &lt;span class="math"&gt;\(1/4\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;In general, let &lt;span class="math"&gt;\(k\)&lt;/span&gt; be a positive number. &lt;strong&gt;Markov's inequality&lt;/strong&gt; says that if a list with average &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; has only non-negative entries, then the fraction &lt;span class="math"&gt;\(F(k \mu)\)&lt;/span&gt; of entries that are greater or equal to &lt;span class="math"&gt;\(k \mu\)&lt;/span&gt; cannot be greater than &lt;span class="math"&gt;\(1 / k\)&lt;/span&gt;. That is,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ F(k \mu) \leq \frac{1}{k}. $$&lt;/div&gt;
+&lt;p&gt;
+This result is an example of a &lt;strong&gt;tail bound&lt;/strong&gt; and it is most useful for large values of &lt;span class="math"&gt;\(k\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;Measures of Spread&lt;/h2&gt;
+&lt;p&gt;Given a data set you know that the median provides the halfway point of the data and the average provides the equilibrium point of the histogram. Both of these quantities describe a notion of a center. When looking at a data point it is useful to understand how far away from these centers is that data point. In this section I introduce the standard deviation, which is a useful measure of the spread of the data. I will also discuss Chebyshev's inequality and the notion of standard units.&lt;/p&gt;
+&lt;h3&gt;Range and Interquartile Range&lt;/h3&gt;
+&lt;p&gt;The largest measure of spread is the &lt;strong&gt;range&lt;/strong&gt;: the interval over which the data is distributed. One can obtain the range by subtracting from the maximum value the minimum value:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \text{range} = \text{maximum value} - \text{minimum value}. $$&lt;/div&gt;
+&lt;p&gt;
+The range can be divided into four equal parts with the boundaries at the lower quartile (25th percentile), the median (50th percentile) and the upper quartile (75th percentile). As mentioned earlier, the interval between the lower and upper quartiles is called the interquartile range and it contains 50% of the data.&lt;/p&gt;
+&lt;h3&gt;Standard Deviation&lt;/h3&gt;
+&lt;p&gt;Given a number &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt; in a list of numbers with average &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;, the &lt;strong&gt;deviation from average&lt;/strong&gt; &lt;span class="math"&gt;\(d_{j}\)&lt;/span&gt; tells you roughly how far is that number from the average,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ d_{j} \equiv x_{j} - \mu. $$&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(d_{j}\)&lt;/span&gt; can be positive or negative, depending on whether &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt; is below or above average. By definition, the average of the list of deviations is zero. A more useful quantity is the &lt;strong&gt;standard deviation&lt;/strong&gt; &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; which is defined as the square root of the average of the square of the deviations from average. That is,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sigma \equiv \sqrt{\frac{1}{N} \sum_{j = 1}^{N} d_{j}^{2}} = \sqrt{\frac{1}{N} \sum_{j = 1}^{N} (x_{j} - \mu)^{2}}. $$&lt;/div&gt;
+&lt;p&gt;
+In other words, &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; corresponds to the root-mean-square of deviations from average. The square of &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; is called the &lt;strong&gt;variance&lt;/strong&gt;. Note that &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; is always positive and has the same units as the values of the list.&lt;/p&gt;
+&lt;p&gt;The standard deviation (SD) measures roughly how far off the entries are from average. No matter what the values of a list are, the vast majority of the entries will be in the range &lt;span class="math"&gt;\(\mu \pm n \sigma\)&lt;/span&gt; with &lt;span class="math"&gt;\(n\)&lt;/span&gt; a small positive integer.&lt;/p&gt;
+&lt;h3&gt;Chebyshev's Inequality&lt;/h3&gt;
+&lt;p&gt;Markov's inequality helps in finding bounds for the fraction of the data that is &lt;span class="math"&gt;\(k\)&lt;/span&gt; units away from the average, where &lt;span class="math"&gt;\(k\)&lt;/span&gt; is measured in averages. The SD measures roughly how far away from the average one is in both directions (i.e. left and right). Consider a list of numbers &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt; with average &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; and SD &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;. Let &lt;span class="math"&gt;\(n\)&lt;/span&gt; be a positive integer. &lt;strong&gt;Chebyshev's inequality&lt;/strong&gt; says that the fraction &lt;span class="math"&gt;\(F(n \sigma)\)&lt;/span&gt; of the data that is outside the interval between &lt;span class="math"&gt;\(\mu - n \sigma\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mu + n \sigma\)&lt;/span&gt; cannot be greater than &lt;span class="math"&gt;\(1/n^{2}\)&lt;/span&gt;. That is,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ F(n \sigma) \leq \frac{1}{n^{2}}. $$&lt;/div&gt;
+&lt;p&gt;
+Note that with Markov's inequality you get a bound on one of the tails, but Chebyshev's inequality gives a bound for the two tails. However, you can use the two-tail bound on each tail. For example, outside of the interval between &lt;span class="math"&gt;\(\mu - 3\sigma\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mu + 3 \sigma\)&lt;/span&gt; we have at most 11% of the data. This means that at least 89% of data must be inside the interval!&lt;/p&gt;
+&lt;h3&gt;Standard Units&lt;/h3&gt;
+&lt;p&gt;The numbers &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt; in a list typically have units. One can use many different units to describe the data. In order to change the units of &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt; one performs an "affine" transformation of the form
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ x_{j}' = a x_{j} + b. $$&lt;/div&gt;
+&lt;p&gt;
+Let us first consider the transformation with &lt;span class="math"&gt;\(a = 1\)&lt;/span&gt; and &lt;span class="math"&gt;\(b \neq 0\)&lt;/span&gt;. Under this transformation the average &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; becomes &lt;span class="math"&gt;\(\mu' = \mu + b\)&lt;/span&gt; and the SD &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; remains invariant. On the other hand, under the transformation with &lt;span class="math"&gt;\(a \neq 0\)&lt;/span&gt; and &lt;span class="math"&gt;\(b = 0\)&lt;/span&gt; the average &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; becomes &lt;span class="math"&gt;\(\mu' = a \mu\)&lt;/span&gt; and the SD &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; becomes &lt;span class="math"&gt;\(\sigma' = |a| \sigma\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;There is an affine transformation that takes us to a system of units where the average is at the origin and the units of measurement are standard deviations. This system of units is called &lt;strong&gt;standard units&lt;/strong&gt;. Given a list of numbers &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt; with average &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; and SD &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, the list of numbers &lt;span class="math"&gt;\(z_{j}\)&lt;/span&gt; in standard units is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ z_{j} = \frac{x_{j} - \mu}{\sigma} \quad \Longrightarrow \quad x_{j} = \mu + \sigma z_{j}. $$&lt;/div&gt;
+&lt;p&gt;
+Standard units measure how many SDs one is from average. This is sometimes called the &lt;span class="math"&gt;\(z\)&lt;/span&gt;-score. Note that by construction, in standard units the average of the list is 0 and the SD is 1. Thus, when working in standard units you expect most of the data to take values inside the interval between &lt;span class="math"&gt;\(-4\)&lt;/span&gt; and &lt;span class="math"&gt;\(4\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;Normal Curve&lt;/h2&gt;
+&lt;p&gt;In this section I introduce the normal curve. This is a very important curve that describes many distributions that have the shape of a bell.&lt;/p&gt;
+&lt;h3&gt;Standard Normal Curve&lt;/h3&gt;
+&lt;p&gt;There are many types of normal curves. The &lt;strong&gt;standard normal curve&lt;/strong&gt; is described by the equation
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ f(z) \equiv \frac{1}{\sqrt{2 \pi}} \exp{\left(- \frac{1}{2} z^{2} \right)}, \qquad - \infty &amp;lt; z &amp;lt; \infty. $$&lt;/div&gt;
+&lt;p&gt;
+Note that &lt;span class="math"&gt;\(f(z) = f(-z)\)&lt;/span&gt; which means that this curve describes a &lt;strong&gt;symmetric&lt;/strong&gt; distribution around the origin. Thus the equilibrium point is at &lt;span class="math"&gt;\(z = 0\)&lt;/span&gt;. We have points of inflection at &lt;span class="math"&gt;\(z = \pm 1\)&lt;/span&gt; (the points where &lt;span class="math"&gt;\(f''(z)\)&lt;/span&gt; changes sign). The area under the standard normal curve is 1:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \int\limits_{-\infty}^{\infty} \mathrm{d}z \, f(z) = 1. $$&lt;/div&gt;
+&lt;p&gt;
+Some useful facts about the standard normal curve are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inside the interval &lt;span class="math"&gt;\(-1 &amp;lt; z &amp;lt; 1\)&lt;/span&gt; one has about 68.27% of the data.&lt;/li&gt;
+&lt;li&gt;Inside the interval &lt;span class="math"&gt;\(-2 &amp;lt; z &amp;lt; 2\)&lt;/span&gt; one has about 95.45% of the data.&lt;/li&gt;
+&lt;li&gt;Inside the interval &lt;span class="math"&gt;\(-3 &amp;lt; z &amp;lt; 3\)&lt;/span&gt; one has about 99.73% of the data.&lt;/li&gt;
+&lt;li&gt;By Chebyshev's inequality and using the symmetry of &lt;span class="math"&gt;\(f(z)\)&lt;/span&gt; we find that each of the tails &lt;span class="math"&gt;\(z &amp;gt; 1\)&lt;/span&gt; and &lt;span class="math"&gt;\(z &amp;lt; -1\)&lt;/span&gt; has 16% of the data. Similarly, each of the tails &lt;span class="math"&gt;\(z &amp;gt; 2\)&lt;/span&gt; and &lt;span class="math"&gt;\(z &amp;lt; -2\)&lt;/span&gt; has 2.5% of the data.&lt;/li&gt;
+&lt;li&gt;The 95th percentile is roughly at &lt;span class="math"&gt;\(z = 1.65\)&lt;/span&gt;. Symmetry implies that the 5th percentile is roughly at &lt;span class="math"&gt;\(z = -1.65\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Normal Curves&lt;/h3&gt;
+&lt;p&gt;As you might suspect, the standard normal curve is a normal curve written in terms of standard units. So a general &lt;strong&gt;normal curve&lt;/strong&gt; with average &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; and SD &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; is of the form
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ f(x|\mu, \sigma) \equiv \frac{1}{\sqrt{2 \pi} \sigma} \exp{\left[ -\frac{1}{2} \left( \frac{x - \mu}{\sigma} \right)^{2} \right]}, \qquad - \infty &amp;lt; x &amp;lt; \infty. $$&lt;/div&gt;
+&lt;p&gt;
+The general normal curve &lt;span class="math"&gt;\(f(x|\mu, \sigma)\)&lt;/span&gt; has an equilibrium point at &lt;span class="math"&gt;\(x = \mu\)&lt;/span&gt; and inflection points at &lt;span class="math"&gt;\(x = \mu \pm \sigma\)&lt;/span&gt;. Note that a normal curve is completely specified by the value of the mean &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; and the value of the SD &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;If the histogram of a data set has a bell shape, then after computing its average &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; and SD &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; one can use a normal curve &lt;span class="math"&gt;\(f(x| \mu, \sigma)\)&lt;/span&gt; to approximate the distribution of values on the histogram. This approximation will be mostly good  but also bad in some parts of the histogram. Such distributions are &lt;strong&gt;approximately normal&lt;/strong&gt;. It is important for the bell to be centered around a value and not be skewed with more data on a given side.&lt;/p&gt;
+&lt;h3&gt;Chebyshev Revisited&lt;/h3&gt;
+&lt;p&gt;In most cases, though, the distribution is not normal or even approximately normal. But Chebyshev's bound always holds. Remember that it is better to have a correct bound than a bad approximation.&lt;/p&gt;
+&lt;h2&gt;Relations Between Two Variables&lt;/h2&gt;
+&lt;p&gt;In this section I will look at problems with two variables and introduce a graphical way to study them call scatter diagrams and a numerical way to study whether there is a relation between the two variables called the correlation coefficient.&lt;/p&gt;
+&lt;h3&gt;Scatter Diagrams&lt;/h3&gt;
+&lt;p&gt;With bivariate data each individual represents a pair of values. Graphically we can represent this with a &lt;strong&gt;scatter diagram&lt;/strong&gt;. In a scatter diagram one has two axis, each corresponding to one of the pair of values for each individual. Thus, each individual is denoted by a point on the plane. In a scatter diagram one looks for &lt;strong&gt;clusters&lt;/strong&gt; of accumulation of points. If the two variables are related, then the scatter diagram will exhibit a trend or pattern. If there is any relation between the variables, we have an &lt;strong&gt;association&lt;/strong&gt;. We have a &lt;strong&gt;positive association&lt;/strong&gt; when above average values of one variable tend to go with above average values of the other and thus the scatter goes up. We could also have a &lt;strong&gt;negative association&lt;/strong&gt; where above average values of one variable tend to go with below average values of the other and thus the scatter goes down. The simplest example of association is a &lt;strong&gt;linear association&lt;/strong&gt; where the scatter diagram is clustered around a straight line.&lt;/p&gt;
+&lt;p&gt;Scatter diagrams with outliers are hard to analyze because the outliers can mislead on trends.&lt;/p&gt;
+&lt;h3&gt;Correlation Coefficient&lt;/h3&gt;
+&lt;p&gt;Now I turn to the question of how tightly clustered a scatter diagram is. The &lt;strong&gt;correlation coefficient&lt;/strong&gt; &lt;span class="math"&gt;\(r\)&lt;/span&gt; is a &lt;strong&gt;measure of linear association&lt;/strong&gt; that takes values between &lt;span class="math"&gt;\(-1\)&lt;/span&gt; and &lt;span class="math"&gt;\(1\)&lt;/span&gt;. When &lt;span class="math"&gt;\(r = -1\)&lt;/span&gt; you have a perfect linear negative association and when &lt;span class="math"&gt;\(r = 1\)&lt;/span&gt; you have perfect linear positive association. If &lt;span class="math"&gt;\(r = 0\)&lt;/span&gt; then there is no linear association between the two variables in the scatter diagram. Let &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt; and &lt;span class="math"&gt;\(y_{j}\)&lt;/span&gt; be two lists of &lt;span class="math"&gt;\(N\)&lt;/span&gt; numbers with averages &lt;span class="math"&gt;\(\mu_{x}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mu_{y}\)&lt;/span&gt; and SDs &lt;span class="math"&gt;\(\sigma_{x}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\sigma_{y}\)&lt;/span&gt;. In standard units you have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ z_{j} = \frac{x_{j} - \mu_{x}}{\sigma_{x}}, \qquad w_{j} = \frac{y_{j} - \mu_{y}}{\sigma_{y}}. $$&lt;/div&gt;
+&lt;p&gt;
+The &lt;strong&gt;correlation coefficient&lt;/strong&gt; &lt;span class="math"&gt;\(r\)&lt;/span&gt; is defined as the average of the product of &lt;span class="math"&gt;\(z_{j}\)&lt;/span&gt; and &lt;span class="math"&gt;\(w_{j}\)&lt;/span&gt;
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ r \equiv \frac{1}{N} \sum_{j = 1}^{N} z_{j} w_{j} = \frac{1}{N} \sum_{j = 1}^{N} \left( \frac{x_{j} - \mu_{x}}{\sigma_{x}} \right) \left( \frac{y_{j} - \mu_{y}}{\sigma_{y}} \right). $$&lt;/div&gt;
+&lt;p&gt;
+Since &lt;span class="math"&gt;\(r\)&lt;/span&gt; is defined in terms of variables that are in standard units, it has no units. Note that &lt;span class="math"&gt;\(\sigma_{x}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\sigma_{y}\)&lt;/span&gt; can be viewed as the magnitudes of  &lt;span class="math"&gt;\(N\)&lt;/span&gt;-dimensional vectors &lt;span class="math"&gt;\(V_{x}\)&lt;/span&gt; and &lt;span class="math"&gt;\(V_{y}\)&lt;/span&gt; with components
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ (V_{x})_{j} = \frac{x_{j} - \mu_{x}}{\sqrt{N}}, \qquad (V_{y})_{j} = \frac{y_{j} - \mu_{y}}{\sqrt{N}} \quad \Longrightarrow \quad \sigma_{x} = |V_{x}|, \qquad \sigma_{y} = |V_{y}|; $$&lt;/div&gt;
+&lt;p&gt;
+and thus &lt;span class="math"&gt;\(r\)&lt;/span&gt; can be understood as the inner product between two different unit vectors. This is proportional to the cosine of the angle between the two vectors and thus &lt;span class="math"&gt;\(-1 \leq r \leq 1\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Adding a constant to any of the two list in the scatter diagram results in shifting the overall position of the scatter diagram. Thus, &lt;span class="math"&gt;\(r\)&lt;/span&gt; is invariant under this transformation. Since &lt;span class="math"&gt;\(r\)&lt;/span&gt; is defined in standard units, multiplying any of the two list by a &lt;em&gt;positive&lt;/em&gt; constant also leaves &lt;span class="math"&gt;\(r\)&lt;/span&gt; invariant. However, if you multiply any of the lists (but not both) by a &lt;em&gt;negative&lt;/em&gt; constant then the sign of &lt;span class="math"&gt;\(r\)&lt;/span&gt; will change (but its magnitude remains invariant).&lt;/p&gt;
+&lt;h3&gt;Association is not Causation&lt;/h3&gt;
+&lt;p&gt;If two variables have a nonzero correlation &lt;span class="math"&gt;\(r\)&lt;/span&gt;, then they are related to each other in some way, but that does not mean that one causes the other.&lt;/p&gt;
+&lt;p&gt;It is important to emphasize that &lt;span class="math"&gt;\(r\)&lt;/span&gt; is a measure of linear association and thus should only be used in the case of an apparent linear association. Two variables are &lt;strong&gt;correlated&lt;/strong&gt; if they are linearly related.&lt;/p&gt;
+&lt;p&gt;Note that given a data set for which &lt;span class="math"&gt;\(r = 0\)&lt;/span&gt;, adding outliers can lead to a noticeable change in &lt;span class="math"&gt;\(r\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;A scatter plot of averages can lead to an artificial increase in clustering.&lt;/p&gt;
+&lt;h2&gt;Regression&lt;/h2&gt;
+&lt;p&gt;If two variables are correlated, then given one of them, you can compute an estimate of the other with a regression, the most commonly used statistical technique.&lt;/p&gt;
+&lt;h3&gt;Univariate Estimation&lt;/h3&gt;
+&lt;p&gt;Consider the following problem. You are told that a data set of heights of people has an average of 67 inches and an SD of 3 inches. Then one of these people is picked and you are asked to estimate that person's height. A natural estimate is the average, 67 inches. There will most likely be an &lt;strong&gt;error&lt;/strong&gt; in your estimate,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \text{error} = \text{actual} - 67 \text{ inches}. $$&lt;/div&gt;
+&lt;p&gt;
+When using the average, the error corresponds to the deviation from average introduced in above. Thus, the rough size of the errors is the SD. If one makes another estimate &lt;span class="math"&gt;\(c\)&lt;/span&gt;, then the error is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \text{error} = \text{actual} - c. $$&lt;/div&gt;
+&lt;p&gt;
+How is &lt;span class="math"&gt;\(c\)&lt;/span&gt; determined? The best value of &lt;span class="math"&gt;\(c\)&lt;/span&gt; should make the smallest error. It is a mathematical fact that the root mean square of the errors will be smallest if you choose &lt;span class="math"&gt;\(c\)&lt;/span&gt; to be equal to the average. In this sense, the average is a &lt;strong&gt;least square estimate&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;Bivariate Estimation&lt;/h3&gt;
+&lt;p&gt;Consider now a scatter diagram. Given the value of one variable, say &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt;, you would like to estimate the value of the other variable, say &lt;span class="math"&gt;\(y_{j}\)&lt;/span&gt;. In order to do this, you look at the column of values over &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt;. The value of &lt;span class="math"&gt;\(y_{j}\)&lt;/span&gt; must be between the range of values in the column over &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt;. An estimate is simply to calculate the average of this column. This estimate is good when the column of values is small.&lt;/p&gt;
+&lt;h3&gt;Footballs&lt;/h3&gt;
+&lt;p&gt;When a scatter diagram has a &lt;strong&gt;football shape&lt;/strong&gt;, then the distributions of both the horizontal and vertical variables can be approximated with a normal curve. The distribution along each vertical strip (column) or horizontal strip (row) is also roughly normal.&lt;/p&gt;
+&lt;h3&gt;Regression Line&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;regression line&lt;/strong&gt; is a line that goes through the average of the vertical strips. The regression line depends only on the geometry of the oval that outlines the football shape in the scatter diagram. In standard units, the oval is centered at the origin. Given a list of numbers &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt; you go to standard units to obtain &lt;span class="math"&gt;\(z_{j}\)&lt;/span&gt;. The line that goes through the origin and the estimate at &lt;span class="math"&gt;\(z_{j}\)&lt;/span&gt; has slope &lt;span class="math"&gt;\(r\)&lt;/span&gt;. This gives the estimate for &lt;span class="math"&gt;\(y_{j}\)&lt;/span&gt; in standard units.&lt;/p&gt;
+&lt;h3&gt;Regression Effect&lt;/h3&gt;
+&lt;p&gt;When using a regression line to estimate values of a variable, you see the &lt;strong&gt;regression effect&lt;/strong&gt;: those points which have high values in one variable &lt;em&gt;tend&lt;/em&gt; not to be quite as high in the other variable. This happens whenever there is a spread about a straight line.&lt;/p&gt;
+&lt;h3&gt;Galton&lt;/h3&gt;
+&lt;p&gt;Sir Francis Galton was into eugenics (!). He made the following observation:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Fathers who are tall tend to have sons who are not quite that tall, on average.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This observation is known as &lt;strong&gt;regression to mediocrity&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;On average, points which have lower values in one variable tend to be slightly higher in the other variable. This is the opposite of the regression effect and is known as &lt;strong&gt;regression towards the mean&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;Regression Fallacy&lt;/h3&gt;
+&lt;p&gt;The believe that the regression effect is due to some external cause other than natural variability is known as the &lt;strong&gt;regression fallacy&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;Error in the Regression Estimate&lt;/h2&gt;
+&lt;p&gt;How good can a regression estimate be? In this section you study the error made when using a regression estimate.&lt;/p&gt;
+&lt;h3&gt;Least Squares&lt;/h3&gt;
+&lt;p&gt;Given a scatter diagram with a oval shape, we might draw a line to estimate the values of one of the variables from values of the other variable. The &lt;strong&gt;error&lt;/strong&gt; at a point &lt;span class="math"&gt;\(x_{j}\)&lt;/span&gt; is defined as the difference between the actual value &lt;span class="math"&gt;\(y_{j}\)&lt;/span&gt; and the estimate &lt;span class="math"&gt;\(E(x_{j})\)&lt;/span&gt; from the line:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \epsilon_{j} = y_{j} - E(x_{j}). $$&lt;/div&gt;
+&lt;p&gt;
+The quantity &lt;span class="math"&gt;\(\epsilon_{j}\)&lt;/span&gt; is also known as the residual. The root-mean-square of the list of &lt;span class="math"&gt;\(\epsilon_{j}\)&lt;/span&gt; (the list of residuals) gives you a rough size of the error. The regression line will correspond to the line with the smallest r.m.s. error.&lt;/p&gt;
+&lt;h3&gt;Residuals&lt;/h3&gt;
+&lt;p&gt;There is a short formula for the r.m.s. of the residuals:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ \chi = \sqrt{1 - r^{2}} \sigma_{y}. $$&lt;/div&gt;
+&lt;p&gt;
+Note that for perfect lines (&lt;span class="math"&gt;\(r = \pm 1\)&lt;/span&gt;) you have &lt;span class="math"&gt;\(\chi = 0\)&lt;/span&gt;. If &lt;span class="math"&gt;\(r = 0\)&lt;/span&gt;, then you should not be using a linear regression in the first place. However, &lt;span class="math"&gt;\(\chi = \sigma_{y}\)&lt;/span&gt; when &lt;span class="math"&gt;\(r = 0\)&lt;/span&gt; which means that you are doing as well as predicting the average of &lt;span class="math"&gt;\(y_{j}\)&lt;/span&gt; all the time. For all other values of &lt;span class="math"&gt;\(r\)&lt;/span&gt;, &lt;span class="math"&gt;\(\chi\)&lt;/span&gt; reduces to a fraction of the SD of &lt;span class="math"&gt;\(y_{j}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;With a normal distribution you know that 68% of the data is contained in the interval made one SD from the average in both directions. For a scatter diagram, instead of the average, you have the regression line, and instead of the SD you have &lt;span class="math"&gt;\(\chi\)&lt;/span&gt;. You can look at a strip in the scatter diagram centered at the regression line and made by shifting the regression line one &lt;span class="math"&gt;\(\chi\)&lt;/span&gt; up and one &lt;span class="math"&gt;\(\chi\)&lt;/span&gt; down. This strip will contain 68% of the data. Thus, for 68% of the points the estimate will be correct within one unit of &lt;span class="math"&gt;\(\chi\)&lt;/span&gt;. Similarly, for 95% of the points the estimate will be correct within two units of &lt;span class="math"&gt;\(\chi\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h3&gt;Residual Plot&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;residual plot&lt;/strong&gt; is a scatter diagram made with the residuals. This plot cannot show any trend or linear relation. The residual plot is useful to see nonlinearity and other properties of the data.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Notes"></category><category term="statistics"></category></entry><entry><title>Introduction to Big Data and Data Science</title><link href="https://meirizarrygelpi.github.io/posts/notes/intro-big-data-data-science/" rel="alternate"></link><published>2015-06-13T00:00:00-04:00</published><updated>2015-06-13T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2015-06-13:/posts/notes/intro-big-data-data-science/</id><summary type="html">&lt;p&gt;Notes from lecture 1 of CS100.1x Introduction to Big Data with Apache Spark.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;These are my notes from lecture 1 of the MOOC CS100.1x Introduction to Big Data with Apache Spark by BerkeleyX.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The outline of this lecture is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Brief History of Data Analysis&lt;/li&gt;
+&lt;li&gt;Big Data and Data Science: Why All the Excitement?&lt;/li&gt;
+&lt;li&gt;Where Big Data Comes From?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full disclosure: I have a technical background, but I do not have much experience with statistics or working with data. Hopefully, that will change soon. In the mean time, I am providing my own interpretation of the material provided in this lecture.&lt;/p&gt;
+&lt;p&gt;It is always a good idea to look back and provide a brief history of how things have change leading up to the current state. In the mid 1930s R.A. Fisher proposed "The Design of Experiments", along with some statistical tests. I suppose this was on the topic of designing experiments that would accurately lead to proving or disproving hypothesis and thus gaining knowledge. Fisher is also credited with the statement "correlation does not imply causation". This is a statement about how one interprets an outcome from a statistical experiment.&lt;/p&gt;
+&lt;p&gt;Towards the end of the 1930s W.E. Demming propose the idea of quality control using statistical sampling. I guess this is an application of statistics to improving the quality of products made by a business, so it serves as an example of how statistics can make a company better.&lt;/p&gt;
+&lt;p&gt;Later in the 1950s P. Luhn in "A Business Intelligence System" propose using indexing and information retrieval methods with text and data for business intelligence. According to Wikipedia:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Business Intelligence (BI) is the set of techniques and tools for the transformation of raw data into meaningful and useful information for business analysis purposes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So apparently Luhn was one of the first to suggest a way of interacting with the business data that is similar to the way it is done currently.&lt;/p&gt;
+&lt;p&gt;In 1977 J.W. Tukey wrote the book "Exploratory Data Analysis" which lead later to the development of the programming languages S, S-PLUS and also R. According to Wikipedia:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Exploratory Data Analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So when you do EDA, you are basically getting to know the data.&lt;/p&gt;
+&lt;p&gt;As the years passed, technology and businesses change greatly. Towards the end of the 1980s H. Dresner proposed a modern approach to BI.&lt;/p&gt;
+&lt;p&gt;The book on machine learning by T. Mitchell from 1997 is mentioned. I guess in 2015 it is still a bestseller. Perhaps this was one of the first signs that machine learning could be useful and important for businesses.&lt;/p&gt;
+&lt;p&gt;The search engine Google started in 1996 by two PhD candidates in Stanford University. Google search was immensely useful in making the Internet useful for everyone. More abstractly, it helped organized the content and information on the Internet. It can also be viewed as an example of a big data problem.&lt;/p&gt;
+&lt;p&gt;In 2007 Microsoft released the eBook &lt;a href="http://research.microsoft.com/en-us/collaboration/fourthparadigm/"&gt;The Fourth Paradigm&lt;/a&gt; on data-driven science. The idea is that besides the traditional "small science" and "mid science" projects, there are "big science" projects like the Large Hadron Collider. New tools and new methods are needed in order to make new discoveries. Presumably these remarks about data-driven science can be adapted to data-driven businesses and industry.&lt;/p&gt;
+&lt;p&gt;Then in 2009 P. Norvig and others published "The Unreasonable Effectiveness of Data" where they presented the idea that "multiple small models and lots of data is much more effective than building very complex models".&lt;/p&gt;
+&lt;p&gt;So extracting information from data is a sure way to obtain evidence and knowledge. Well, not always. There are some steps to be taken in order for the analysis of data to lead to correct conclusions. There is the example of a study by A. Keys where he found a correlation between the fat calories consumed and deaths by degenerative heart disease. But there was a lot of controversy about this study because, among other things, he only studied a subset of all the countries involve (a selection bias?) and also failed to consider other factors. Always remember: correlation does not imply causation.&lt;/p&gt;
+&lt;p&gt;Like most task, there are common ways to do the task wrong, but there are also ways of doing the task right. There are ways of extracting correct information from data. Many companies have been acquiring lots of data for many years. With the advent of powerful analytical tools, it is hoped that all of these data will lead to better businesses.&lt;/p&gt;
+&lt;p&gt;One of the things that can be done with lots of data is nowcasting. Traditionally, data is used for forecasting. That is, they use data to make a model that predicts the future. With nowcasting you collect a lot of data and you build a model to explain what is happening in now. An example of this is Google Flu Trends, where data from Google searches was used to determined when influenza outbreaks were happening. Traditionally, outbreaks are declared by the CDC after receiving data from state health departments, who receive data from county health departments, who receive data from local town departments, who receive data from doctors and hospitals who treat sick people. In the traditional process it takes many weeks for the data to be communicated along the hierarchy, so there is a long period of time where, if there is an outbreak, nothing is being about it. Google developed a model based on analyzing data from searches during known outbreaks and extracting common search terms associated to people with the flu. Eventually, in 2010 they were able to predict an outbreak two weeks before the CDC. For a while the model was very accurate with CDC data, about 97% agreement. But during a time period the model disagree with CDC data by 200%, i.e. it was predicting twice as many flu cases as the CDC was finding. The reason was that people were reading and searching for flu on the Internet and skewing the results for the model. After taking into account these factors, the model became again accurate. Later, similar models were developed to predict other outbreaks, like Ebola. The take-away from this example is that just because a given model works well one time it does not necessarily mean that it will always work well. A healthy dose of skepticism seems to be a good thing to have when working with data. Also, being willing to always allow room for improvement.&lt;/p&gt;
+&lt;p&gt;Google Flu Trends is an example where search trends was used to make accurate predictions (in this case, about flu outbreaks). This does not mean that every analysis of search trends will lead to correct conclusions: correlation does not imply causation. There is the example of some researchers from Princeton University that used search trends for "MySpace" to predict the demise of another social network, Facebook. This essentially assumed that the correlation in the decrease of searches for MySpace was the causation of MySpace's demise. Facebook &lt;a href="https://www.facebook.com/notes/mike-develin/debunking-princeton/10151947421191849"&gt;responded&lt;/a&gt; in turn by providing a bunch of examples of "causal correlations".&lt;/p&gt;
+&lt;p&gt;Increasingly more and more things are done over the Internet. Whether is via a computer, a smartphone, or a tablet, many aspects of a person's interaction with other people or services via the Internet are recorded as data. Not all of this data is analyzed. I will refer to this data as online activity data. Another source of data is the user who produces content. This data is referred to as user generated content. A single user might not generate much data, but considering all users of a single service leads to very large data sets. Yet another source of big data is any "big science" project like the LHC.&lt;/p&gt;
+&lt;p&gt;Graphs are convenient ways to encode connections between objects. In a social network like Facebook, graphs can be very large.&lt;/p&gt;
+&lt;p&gt;Log files are another source of big data. These are files that are generated by an application that contain a record of the activity performed by that application. For example, some web servers logs contain a record of every click. Accounting for many servers leads to very large data sets.&lt;/p&gt;
+&lt;p&gt;An emerging source of big data is the so-called Internet of Things, where objects are equipped with sensors that gather all sorts of data.&lt;/p&gt;</content><category term="Notes"></category><category term="big data"></category><category term="mooc"></category></entry><entry><title>Algorithm Theory Problems (Week 1)</title><link href="https://meirizarrygelpi.github.io/posts/notes/algorithms-theory-problems-week-1/" rel="alternate"></link><published>2014-05-04T00:00:00-04:00</published><updated>2014-05-04T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-04:/posts/notes/algorithms-theory-problems-week-1/</id><summary type="html">&lt;p&gt;Some algorithm theory problems to consider in the near future.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;These problems were taken from Tim Roughgarden's course on algorithms.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Here are some theory problems that I should consider solving in the near future.&lt;/p&gt;
+&lt;h1&gt;Problem 1&lt;/h1&gt;
+&lt;p&gt;You are given as input an unsorted array of &lt;span class="math"&gt;\(n\)&lt;/span&gt; distinct numbers, where &lt;span class="math"&gt;\(n\)&lt;/span&gt; is a power of &lt;span class="math"&gt;\(2\)&lt;/span&gt;. Provide an algorithm that identifies the second largest number in the array, and that uses at most &lt;span class="math"&gt;\(n + \lg{(n)} - 2\)&lt;/span&gt; comparisons.&lt;/p&gt;
+&lt;h1&gt;Problem 2&lt;/h1&gt;
+&lt;p&gt;You are given a unimodal array of &lt;span class="math"&gt;\(n\)&lt;/span&gt; distinct elements, meaning that its entries are in increasing order up until its maximum element, after which its elements are in decreasing order. Provide an algorithm to compute the maximum element that runs in &lt;span class="math"&gt;\(O(\log(n))\)&lt;/span&gt; time.&lt;/p&gt;
+&lt;h1&gt;Problem 3&lt;/h1&gt;
+&lt;p&gt;You are given a sorted (from smallest to largest) array &lt;span class="math"&gt;\(A\)&lt;/span&gt; of &lt;span class="math"&gt;\(n\)&lt;/span&gt; distinct integers which can be positive, negative, or zero. You want to decide whether or not there is an index &lt;span class="math"&gt;\(i\)&lt;/span&gt; such that &lt;span class="math"&gt;\(A_{i} = i\)&lt;/span&gt;. Design the fastest algorithm that you can for solving this problem.&lt;/p&gt;
+&lt;h1&gt;Problem 4&lt;/h1&gt;
+&lt;p&gt;Give the best upper bound that you can on the solution to the following recurrence:&lt;/p&gt;
+&lt;div class="math"&gt;$$T(1) = 1, \qquad T(n) \leq T([\sqrt{n}]) + 1, \qquad n &amp;gt; 1$$&lt;/div&gt;
+&lt;p&gt;(Here &lt;span class="math"&gt;\([x]\)&lt;/span&gt; denotes the "floor" function, which rounds down to the nearest integer.)&lt;/p&gt;
+&lt;h1&gt;Problem 5&lt;/h1&gt;
+&lt;p&gt;You are given an &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt; grid of distinct numbers. A number is a local minimum if it is smaller than all of its neighbors. (A neighbor of a number is one immediately above, below, to the left, or the right. Most numbers have four neighbors; numbers on the side have three; the four corners have two.) Use the divide-and-conquer algorithm design paradigm to compute a local minimum with only &lt;span class="math"&gt;\(O(n)\)&lt;/span&gt; comparisons between pairs of numbers. (&lt;strong&gt;Note:&lt;/strong&gt; since there are &lt;span class="math"&gt;\(n^{2}\)&lt;/span&gt; numbers in the input, you cannot afford to look at all of them. &lt;strong&gt;Hint:&lt;/strong&gt; think about what types of recurrences would give you the desired upper bound.)&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Notes"></category><category term="algorithms"></category></entry><entry><title>Algorithms (Week 1)</title><link href="https://meirizarrygelpi.github.io/posts/notes/algorithms-week-1/" rel="alternate"></link><published>2014-05-04T00:00:00-04:00</published><updated>2014-05-04T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2014-05-04:/posts/notes/algorithms-week-1/</id><summary type="html">&lt;p&gt;Some notes from week 1 of a MOOC on algorithms from Stanford University via Coursera.&lt;/p&gt;</summary><content type="html">&lt;p&gt;As part of my journey towards data science I am taking a MOOC on algorithms by Tim Roughgarden from Stanford University. I took my first MOOC some years ago from MIT and enjoyed it quite a lot. Algorithms are things I know very little about and I hope this is no longer true by the end of the course. As part of my study I will keep some lecture notes with important points from each of the six weeks. Currently, I am planning on solving the programming questions with Python (using this as an opportunity to write some code in Python 3.x).&lt;/p&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;An &lt;strong&gt;algorithm&lt;/strong&gt; is "a set of well-defined rules, a recipe in effect, for solving some computational problem".&lt;/p&gt;
+&lt;p&gt;Define a computational problem, with an &lt;em&gt;input&lt;/em&gt; and an &lt;em&gt;output&lt;/em&gt;, then provide an algorithm that transforms the input into the output.&lt;/p&gt;
+&lt;p&gt;The algorithm's designer mantra:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"Perhaps the most important principle for the good algorithm designer is to refuse to be content." - Aho, Hopcroft, and Ullman, &lt;em&gt;The Design and Analysis of Computer Algorithms&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In other words: &lt;strong&gt;&lt;em&gt;Can we do better?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;Merge Sort&lt;/h3&gt;
+&lt;p&gt;Merge sort is an old algorithm. A good example of the divide-and-conquer paradigm. One breaks a problem into smaller sub-problems that are solved recursively. Merge sort achives sorting with a number of operations that is less than quadratic in size.&lt;/p&gt;
+&lt;p&gt;The sorting problem: as input we are given an array of &lt;span class="math"&gt;\(N\)&lt;/span&gt; numbers, which are not sorted, and we are asked to provide the &lt;span class="math"&gt;\(N\)&lt;/span&gt; numbers in sorted order (say in increasing order).&lt;/p&gt;
+&lt;p&gt;I wrote a short function that takes as input a non-negative integer &lt;code&gt;n&lt;/code&gt;, and gives as output an unsorted list containing the &lt;code&gt;n + 1&lt;/code&gt; integers between &lt;code&gt;0&lt;/code&gt; and &lt;code&gt;n&lt;/code&gt;. Here it is:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;choice&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;unsorted_list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;l1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+    &lt;span class="n"&gt;l2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;choice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;l2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;l1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;l2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;With this function I can create list of integers that need to be sorted. Next, we implement Merge Sort. My implementation involves two parts. The first part is a function that takes as input two sorted lists of integers &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt;, and gives as output a third sorted list &lt;code&gt;c&lt;/code&gt; made by merging &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt;. Here is the code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;mel_merge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;i_a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="n"&gt;i_b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i_a&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i_b&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i_a&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i_b&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+            &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i_a&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+            &lt;span class="n"&gt;i_a&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i_b&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i_a&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+            &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i_b&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+            &lt;span class="n"&gt;i_b&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i_a&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+            &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i_b&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+            &lt;span class="n"&gt;i_a&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="n"&gt;i_b&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i_a&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i_b&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+        &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i_b&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i_b&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i_a&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+        &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i_a&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The second part is a recursive function that takes an unsorted list &lt;code&gt;l&lt;/code&gt;, splits it into two smaller lists, then recursively calls itself on those smaller lists producing sorted lists &lt;code&gt;l1&lt;/code&gt; and &lt;code&gt;l2&lt;/code&gt;, and finally calls &lt;code&gt;mel_merge&lt;/code&gt; to merge these two into a sorted list:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;mel_merge_sort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;len_l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;len_l&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;len_l&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;len_l&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+        &lt;span class="n"&gt;l1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mel_merge_sort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+        &lt;span class="n"&gt;l2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mel_merge_sort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;:])&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;mel_merge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;l2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Analysis of Algorithms&lt;/h3&gt;
+&lt;p&gt;One can adopt three guiding principles for how to reason about algorithms and also how to define a fast algorithm.&lt;/p&gt;
+&lt;p&gt;The first guiding principle is &lt;strong&gt;worst-case analysis&lt;/strong&gt;. This principle will help us find results that hold quite generally with no assumptions about the specific details of the input. A related, but different principle is &lt;strong&gt;average-case analysis&lt;/strong&gt;, where one makes some assumptions about the frequencies of certain kinds of inputs and develops algorithms optimized for those particular cases. However, this requires some domain knowledge, whereas the worst-case analysis holds in general.&lt;/p&gt;
+&lt;p&gt;The second guiding principle consist of not worrying to much about constant factors, or lowest order terms. This means that we are really interested in looking at the leading (dominant) behavior.&lt;/p&gt;
+&lt;p&gt;The third guiding principle consist of using asymptotic analysis. This means that we will focus on large input sizes. In some sense, the interesting problems are the ones with large inputs.&lt;/p&gt;
+&lt;p&gt;With these three principles we can define a &lt;strong&gt;fast algorithm&lt;/strong&gt; as an algorithm where the wors-case running time grows slowly with the input size. For most of the problems we will encounter, the "holy grail" is to find an algorithm that solves the problem in linear time (or close to linear time).&lt;/p&gt;
+&lt;h2&gt;Asymptotic Analysis&lt;/h2&gt;
+&lt;p&gt;Asymptotic analysis is the language used to discuss the high-level performance of an algorithm. It is coarse enough to suppress specific details like architecture/language/compiler-dependent details. It is also sharp enough to make useful comparisons between different algorithms, especially on large inputs.&lt;/p&gt;
+&lt;p&gt;The high-level idea is to supress constant factors (which are system-specific) and lower-order terms (which are irrelevant for large inputs). A somewhat careful analysis of Merge Sort yields a running time of the form&lt;/p&gt;
+&lt;div class="math"&gt;$$T(n) = 6n \lg(n) + 6n$$&lt;/div&gt;
+&lt;p&gt;Using asymptotic analysis we just provide &lt;span class="math"&gt;\(n \lg(n)\)&lt;/span&gt;. That is, we ignore the constant factor &lt;span class="math"&gt;\(6\)&lt;/span&gt; and the lower-order term &lt;span class="math"&gt;\(6n\)&lt;/span&gt;. In this sense we say that the running time of Merge Sort is &lt;span class="math"&gt;\(O(n \lg(n))\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h3&gt;Big-O&lt;/h3&gt;
+&lt;p&gt;In general, we only consider functions defined for positive integers (i.e. sizes of inputs). One such function is the worst-case running time of an algorithm as a function of the input size &lt;span class="math"&gt;\(n\)&lt;/span&gt;, which we denote by &lt;span class="math"&gt;\(T(n)\)&lt;/span&gt;. If &lt;span class="math"&gt;\(T(n) = O(f(n))\)&lt;/span&gt;, this means that eventually (i.e. for all sufficiently large &lt;span class="math"&gt;\(n\)&lt;/span&gt;), &lt;span class="math"&gt;\(T(n)\)&lt;/span&gt; is bounded from &lt;em&gt;above&lt;/em&gt; by &lt;span class="math"&gt;\(f(n)\)&lt;/span&gt;. A more formal definition is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Big-O Notation:&lt;/strong&gt; &lt;span class="math"&gt;\(T(n) = O(f(n))\)&lt;/span&gt; if and only if there exist positive constants &lt;span class="math"&gt;\(c\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{0}\)&lt;/span&gt; such that&lt;div class="math"&gt;$$T(n) \leq c f(n)$$&lt;/div&gt;for all &lt;span class="math"&gt;\(n \geq n_{0}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Big-Omega and Big-Theta&lt;/h3&gt;
+&lt;p&gt;Similar to big-O, we use &lt;span class="math"&gt;\(T(n) = \Omega(g(n))\)&lt;/span&gt; to mean that eventually &lt;span class="math"&gt;\(T(n)\)&lt;/span&gt; is bounded from &lt;em&gt;below&lt;/em&gt; by &lt;span class="math"&gt;\(g(n)\)&lt;/span&gt;. A more formal definition is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Big-Omega Notation:&lt;/strong&gt; &lt;span class="math"&gt;\(T(n) = \Omega(g(n))\)&lt;/span&gt; if and only if there exist positive constants &lt;span class="math"&gt;\(c\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{0}\)&lt;/span&gt; such that&lt;div class="math"&gt;$$T(n) \geq c g(n)$$&lt;/div&gt;for all &lt;span class="math"&gt;\(n \geq n_{0}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Finally, we can use &lt;span class="math"&gt;\(T(n) = \Theta(h(n))\)&lt;/span&gt; to mean that both &lt;span class="math"&gt;\(T(n) = O(h(n))\)&lt;/span&gt; and &lt;span class="math"&gt;\(T(n) = \Omega(h(n))\)&lt;/span&gt;. That is,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Big-Theta Notation:&lt;/strong&gt; &lt;span class="math"&gt;\(T(n) = \Theta(h(n))\)&lt;/span&gt; if there exist positive constants &lt;span class="math"&gt;\(c_{1}\)&lt;/span&gt;, &lt;span class="math"&gt;\(c_{2}\)&lt;/span&gt; and &lt;span class="math"&gt;\(n_{0}\)&lt;/span&gt; such that &lt;div class="math"&gt;$$c_{1} h(n) \leq T(n) \leq c_{2} h(n)$$&lt;/div&gt;for all &lt;span class="math"&gt;\(n \geq n_{0}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Divide and Conquer Algorithms&lt;/h2&gt;
+&lt;p&gt;The divide and conquer paradigm for solving problems consist of two main steps. One first divides the main problem into smaller subproblems, that are solvable (the conquering). After combining the solutions of the smaller subproblems, the starting problem can be solved.&lt;/p&gt;
+&lt;h3&gt;Counting Inversions&lt;/h3&gt;
+&lt;p&gt;Given an array &lt;span class="math"&gt;\(A\)&lt;/span&gt; of &lt;span class="math"&gt;\(n\)&lt;/span&gt; distinct integers, an &lt;strong&gt;inversion&lt;/strong&gt; is a pair of array indices &lt;span class="math"&gt;\(i\)&lt;/span&gt; and &lt;span class="math"&gt;\(j\)&lt;/span&gt; such that &lt;span class="math"&gt;\(i &amp;lt; j\)&lt;/span&gt; and &lt;span class="math"&gt;\(A_{i} &amp;gt; A_{j}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Notes"></category><category term="algorithms"></category></entry></feed>

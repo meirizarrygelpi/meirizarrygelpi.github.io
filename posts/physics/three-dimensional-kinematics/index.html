@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Three-Dimensional Relativistic Kinematics | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/three-dimensional-kinematics/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="On kinematics in three-dimensional spacetime.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Three-Dimensional Relativistic Kinematics
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2016-11-25T00:00:00-05:00">
+          <i class="fas fa-clock"></i>
+          Fri 25 November 2016
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/three-dimensional.html">#three-dimensional</a>,               <a href="https://meirizarrygelpi.github.io/tag/kinematics.html">#kinematics</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In three-dimensional spacetime, there are two kinds of <strong>slow</strong> energy-momentum vectors:
+</p>
+<div class="math">$$ \begin{bmatrix} \pm m \cosh{(\xi)} &amp; m \sinh{(\xi)} \cos{(\theta)} &amp; m \sinh{(\xi)} \sin{(\theta)} \end{bmatrix}. $$</div>
+<p>
+Similarly, there are two kinds of <strong>null</strong> energy-momentum vectors:
+</p>
+<div class="math">$$ \begin{bmatrix} \pm k &amp; k \cos{(\theta)} &amp; k \sin{(\theta)} \end{bmatrix}. $$</div>
+<p>
+However, there is only one kind of <strong>fast</strong> energy-momentum vectors:
+</p>
+<div class="math">$$ \begin{bmatrix} w \sinh{(\rho)} &amp; w \cosh{(\rho)} \cos{(\theta)} &amp; w \cosh{(\rho)} \sin{(\theta)} \end{bmatrix}. $$</div>
+<p>
+In all three examples, you have
+</p>
+<div class="math">$$ m &gt; 0, \qquad k &gt; 0, \qquad w &gt; 0, \qquad -\infty &lt; \xi &lt; \infty, \qquad -\infty &lt; \rho &lt; \infty, \qquad -\pi &lt; \theta \leq \pi. $$</div>
+<p>
+You can construct Lorentz invariants by looking at the inner product of two energy-momentum vectors.</p>
+<h2>Slow and Slow</h2>
+<p>The inner product of two slow energy-momentum vectors is:
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -m_{1} m_{2} \left[ \cosh{(\xi_{1})} \cosh{(\xi_{2})} - \sinh{(\xi_{1})} \sinh{(\xi_{2})} \cos{(\theta_{1} - \theta_{2})} \right]. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ \cos{(\theta_{1} - \theta_{2})} = \cos^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)} - \sin^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ 1 = \cos^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)} + \sin^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)}. $$</div>
+<p>
+Thus,
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = - m_{1} m_{2} \left[ \cos^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)} \cosh{(\xi_{1} - \xi_{2})} + \sin^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)} \cosh{(\xi_{1} + \xi_{2})} \right]. $$</div>
+<h2>Slow and Null</h2>
+<p>The inner product of one slow and one null energy-momentum vector is:
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -m_{1} k_{2} \left[ \cosh{(\xi_{1})} - \sinh{(\xi_{1})} \cos{(\theta_{1} - \theta_{2})} \right]. $$</div>
+<p>
+This can also be written as
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -m_{1} k_{2} \left[ \cos^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)} \exp{(-\xi_{1})} + \sin^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)} \exp{(\xi_{1})} \right]. $$</div>
+<h2>Slow and Fast</h2>
+<p>The inner product of one slow and one fast energy-momentum vector is:
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -m_{1} w_{2} \left[ \cosh{(\xi_{1})} \sinh{(\rho_{2})} - \sinh{(\xi_{1})} \cosh{(\rho_{2})} \cos{(\theta_{1} - \theta_{2})} \right]. $$</div>
+<p>
+This can also be written as
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = m_{1} w_{2} \left[ \cos^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)} \sinh{(\xi_{1} - \rho_{2})} - \sin^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)} \sinh{(\xi_{1} + \rho_{2})} \right]. $$</div>
+<h2>Null and Null</h2>
+<p>The inner product of two null energy-momentum vectors is
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = - k_{1} k_{2} \left[ 1 - \cos{(\theta_{1} - \theta_{2})} \right]. $$</div>
+<p>
+This can also be written as
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = - 2 k_{1} k_{2} \sin^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)}. $$</div>
+<h2>Null and Fast</h2>
+<p>The inner product of one null and one fast energy-momentum vector is
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -k_{1} w_{2} \left[ \sinh{(\rho_{2})} - \cosh{(\rho_{2})} \cos{(\theta_{1} - \theta_{2})} \right]. $$</div>
+<p>
+This can also be written as
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = k_{1} w_{2} \left[ \cos^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)} \exp{(-\rho_{2})} - \sin^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)} \exp{(\rho_{2})} \right]. $$</div>
+<h2>Fast and Fast</h2>
+<p>The inner product of two fast energy-momentum vectors is
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = -w_{1} w_{2} \left[ \sinh{(\rho_{1})} \sinh{(\rho_{2})} - \cosh{(\rho_{1})} \cosh{(\rho_{2})} \cos{(\theta_{1} - \theta_{2})} \right]. $$</div>
+<p>
+This can also be written as
+</p>
+<div class="math">$$ P_{1} \cdot P_{2} = w_{1} w_{2} \left[ \cos^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)} \cosh{(\rho_{1} - \rho_{2})} - \sin^{2}{\left( \frac{\theta_{1} - \theta_{2}}{2} \right)} \cosh{(\rho_{1} + \rho_{2})} \right]. $$</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

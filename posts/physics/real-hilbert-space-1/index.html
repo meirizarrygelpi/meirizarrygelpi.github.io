@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Real Hilbert Space 1 | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/real-hilbert-space-1/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Can you do anything useful with a real Hilbert space?">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Real Hilbert Space 1
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-02-09T00:00:00-05:00">
+          <i class="fas fa-clock"></i>
+          Fri 09 February 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/quantum.html">#quantum</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>The qubit is the workhorse in quantum computation. Since it is based on an actual physical system, it uses the full technology of quantum mechanics: complex numbers and a 2-dimensional <strong>complex Hilbert space</strong>. A 1-qubit quantum state is given by
+</p>
+<div class="math">$$ | \psi \rangle = a | 0 \rangle + b | 1 \rangle. $$</div>
+<p>
+Here <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are complex numbers that satisfy
+</p>
+<div class="math">$$ |a|^{2} + |b|^{2} = 1. $$</div>
+<p>
+So instead of four real degrees of freedom, you have three. Actually, if you also allow quantum states to be equivalent up to a constant phase factor, then you only have two real degrees of freedom.</p>
+<p>Consider restricting the coefficients to be real instead of complex. Then, instead of unitary matrices (members of the group <span class="math">\(U(2)\)</span>), then you have <strong>orthogonal matrices</strong> (members of the group <span class="math">\(O(2)\)</span>). These are matrices <span class="math">\(M\)</span> that satisfy the identity
+</p>
+<div class="math">$$ M M^{T} = M^{T} M = I. $$</div>
+<p>
+The 2-by-2 orthogonal matrices come in two kinds:
+</p>
+<div class="math">$$ O(2) = O_{+}(2) \oplus O_{-}(2). $$</div>
+<p>
+Members of <span class="math">\(O_{+}(2)\)</span> have determinant <span class="math">\(+1\)</span>, and have the form:
+</p>
+<div class="math">$$ R_{+}(\alpha) = \begin{pmatrix} \cos{(\alpha)} &amp; -\sin{(\alpha)} \\ \sin{(\alpha)} &amp; \cos{(\alpha)} \end{pmatrix} = \cos{(\alpha)} I + \sin{(\alpha)} Q, \qquad I \equiv \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}, \qquad Q \equiv \begin{pmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{pmatrix}. $$</div>
+<p>
+Similarly, members of <span class="math">\(O_{-}(2)\)</span> have determinant <span class="math">\(-1\)</span>, and have the form:
+</p>
+<div class="math">$$ R_{-}(\beta) = \begin{pmatrix} \sin{(\beta)} &amp; \cos{(\beta)} \\ \cos{(\beta)} &amp; -\sin{(\beta)} \end{pmatrix} = \cos{(\beta)} J + \sin{(\beta)} P, \qquad J \equiv \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}, \qquad P \equiv \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ J^2 = P^2 = I, \qquad Q^2 = -I. $$</div>
+<p>
+Also
+</p>
+<div class="math">$$ JP + PJ = PQ + QP = QJ + JQ = 0. $$</div>
+<p>
+However,
+</p>
+<div class="math">$$ JP = Q, \qquad JQ = P, \qquad QP = J. $$</div>
+<p>
+You can write a member of <span class="math">\(O_{+}(2)\)</span> in exponential form
+</p>
+<div class="math">$$ R_{+}(\alpha) = \exp{\left( \alpha Q \right)}. $$</div>
+<p>
+In this form, it is clear that
+</p>
+<div class="math">$$ R_{+}(\alpha) R_{+}(\beta) = R_{+}(\alpha + \beta). $$</div>
+<p>
+This also means that
+</p>
+<div class="math">$$ R_{+}(\alpha) R_{+}(\beta) - R_{+}(\beta) R_{+}(\alpha) = 0. $$</div>
+<p>
+That is, the elements of <span class="math">\(O_{+}(2)\)</span> commute with each other.</p>
+<p>You can also check that
+</p>
+<div class="math">$$ R_{+}(\alpha) R_{-}(\beta) = R_{-}(\beta - \alpha), \qquad R_{-}(\alpha) R_{+}(\beta) = R_{-}(\alpha + \beta), \qquad R_{-}(\alpha)R_{-}(\beta) = R_{+}(\beta - \alpha). $$</div>
+<p>
+The last identity implies that the elements of <span class="math">\(O_{-}(2)\)</span> do not commute with each other:
+</p>
+<div class="math">$$ R_{-}(\alpha)R_{-}(\beta) - R_{-}(\beta)R_{-}(\alpha) = 2 \sin{(\beta - \alpha)} Q. $$</div>
+<p>
+Indeed, you can use <span class="math">\(J\)</span> to write elements of one kind in terms of elements of the other kind:
+</p>
+<div class="math">$$ R_{-}(\alpha) = J R_{+}(\alpha), \qquad R_{+}(\alpha) = J R_{-}(\alpha). $$</div>
+<p>Instead of two real degrees of freedom, a (normalized) state vector can only have <strong>one real degree of freedom</strong>:
+</p>
+<div class="math">$$ | \theta \rangle = \cos{(\theta)} |0^{\circ} \rangle + \sin{(\theta)} | 90^{\circ} \rangle. $$</div>
+<p>
+Instead of being equivalent up to a complex phase factor, now states are <strong>equivalent up to a sign</strong>. Thus, the angle <span class="math">\(\theta\)</span> above is restricted to
+</p>
+<div class="math">$$ 0 \leq \theta &lt; \pi. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ R_{+}(\alpha) | \theta \rangle = | \theta + \alpha \rangle, \qquad R_{-}(\alpha) J | \theta \rangle = | \theta - \alpha \rangle. $$</div>
+<p>
+The inner product between two state vectors is
+</p>
+<div class="math">$$ \langle \alpha | \beta \rangle = \cos{(\alpha - \beta)}. $$</div>
+<p>
+Other interesting invariants are
+</p>
+<div class="math">$$ \langle \alpha | J | \beta \rangle = \sin{(\alpha + \beta)}, \qquad \langle \alpha | P | \beta \rangle = \cos{(\alpha + \beta)}, \qquad \langle \alpha | Q | \beta \rangle = \sin{(\alpha - \beta)}. $$</div>
+<p>
+In particular, the last one means that <span class="math">\(Q | \theta \rangle\)</span> is orthogonal to <span class="math">\(| \theta \rangle\)</span>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>
