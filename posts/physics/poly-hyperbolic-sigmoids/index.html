@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Poly-Hyperbolic Sigmoids | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/poly-hyperbolic-sigmoids/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Constructing sigmoid functions with the poly-hyperbolic functions from before.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Poly-Hyperbolic Sigmoids
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-04-09T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Mon 09 April 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83702x.html">#8.370.2x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>The poly-hyperbolic function <span class="math">\(h_{kl}(z)\)</span> is defined as the infinite series
+</p>
+<div class="math">\begin{equation*}
+    h_{kl}(z) \equiv \sum_{n = 0}^{\infty} \frac{1}{\Gamma(kn + l + 1)} z^{kn + l}
+\end{equation*}</div>
+<p>
+Here <span class="math">\(k \geq 1\)</span> and <span class="math">\(0 \leq l \leq k - 1\)</span>. The integer <span class="math">\(k\)</span> is called the grade. For a fixed even value of <span class="math">\(k\)</span>, the resulting <span class="math">\(k\)</span> functions behave like hyperbolic functions.</p>
+<p>Note that
+</p>
+<div class="math">\begin{equation*}
+    \exp{(z)} = \sum_{l = 0}^{k-1} h_{kl}(z)
+\end{equation*}</div>
+<p>
+You can also define two kinds of ratios:
+</p>
+<div class="math">\begin{align*}
+    S_{kmn}(z) &amp;= \frac{h_{km}(z)}{h_{kn}(z)} &amp; U_{kmn}(z) &amp;= \frac{h_{km}(z)}{h_{kn}(z)}
+\end{align*}</div>
+<p>
+For both <span class="math">\(S_{kmn}\)</span> and <span class="math">\(U_{kmn}\)</span> you have <span class="math">\(m &gt; n\)</span> but <span class="math">\(m\)</span> and <span class="math">\(n\)</span> are either both even or both odd for <span class="math">\(U_{kmn}\)</span>. Either <span class="math">\(m\)</span> is even and <span class="math">\(n\)</span> is odd, or vice-versa, for <span class="math">\(S_{kmn}\)</span>.</p>
+<p>Let us look at three specific cases.</p>
+<h2>2-Graded</h2>
+<p>You have two functions:
+</p>
+<div class="math">\begin{align*}
+    h_{20}(z) &amp;= \cosh{(z)} &amp; h_{21}(z) &amp;= \sinh{(z)}
+\end{align*}</div>
+<p>
+Note the differentiation identities:
+</p>
+<div class="math">\begin{align*}
+    \frac{d h_{21}}{dz} &amp;= h_{20} &amp; \frac{d h_{20}}{dz} &amp;= h_{21}
+\end{align*}</div>
+<p>
+The only possible ratio is
+</p>
+<div class="math">\begin{equation*}
+    S_{210}(z) = \frac{h_{21}(z)}{h_{20}(z)} = \tanh{(z)}
+\end{equation*}</div>
+<p>
+This ratio behaves like a monotonic sigmoid.</p>
+<h2>4-Graded</h2>
+<p>You have four functions:
+</p>
+<div class="math">\begin{align*}
+    h_{40}(z) &amp;= \frac{\cosh{(z)} + \cos{(z)}}{2} &amp; h_{41}(z) &amp;= \frac{\sinh{(z)} + \sin{(z)}}{2} \\
+    h_{42}(z) &amp;= \frac{\cosh{(z)} - \cos{(z)}}{2} &amp; h_{43}(z) &amp;= \frac{\sinh{(z)} - \sin{(z)}}{2}
+\end{align*}</div>
+<p>
+Note the differentiation identities:
+</p>
+<div class="math">\begin{align*}
+    \frac{d h_{43}}{dz} &amp;= h_{42} &amp; \frac{d h_{42}}{dz} &amp;= h_{41} &amp; \frac{d h_{41}}{dz} &amp;= h_{40} &amp; \frac{d h_{40}}{dz} &amp;= h_{43}
+\end{align*}</div>
+<p>
+There are six possible ratios. Four of them are of the <span class="math">\(S\)</span>-kind:
+</p>
+<div class="math">\begin{align*}
+    S_{410}(z) &amp;= \frac{h_{41}(z)}{h_{40}(z)} &amp; S_{421}(z) &amp;= \frac{h_{42}(z)}{h_{41}(z)} \\
+    S_{430}(z) &amp;= \frac{h_{43}(z)}{h_{40}(z)} &amp; S_{432}(z) &amp;= \frac{h_{43}(z)}{h_{42}(z)}
+\end{align*}</div>
+<p>
+Here is a graph of <span class="math">\(S_{410}(z)\)</span>: <img alt="S410" src="/images/tetra-hyperbolic/s410.png"></p>
+<p>Here is a graph of the derivative of <span class="math">\(S_{410}(z)\)</span>: <img alt="dS410" src="/images/tetra-hyperbolic/ds410.png"></p>
+<p>Here is a graph of <span class="math">\(S_{421}(z)\)</span>: <img alt="S421" src="/images/tetra-hyperbolic/s421.png"></p>
+<p>Here is a graph of the derivative of <span class="math">\(S_{421}(z)\)</span>: <img alt="dS421" src="/images/tetra-hyperbolic/ds421.png"></p>
+<p>Here is a graph of <span class="math">\(S_{430}(z)\)</span>: <img alt="S430" src="/images/tetra-hyperbolic/s430.png"></p>
+<p>Here is a graph of the derivative of <span class="math">\(S_{430}(z)\)</span>: <img alt="dS430" src="/images/tetra-hyperbolic/ds430.png"></p>
+<p>Here is a graph of <span class="math">\(S_{432}(z)\)</span>: <img alt="S432" src="/images/tetra-hyperbolic/s432.png"></p>
+<p>Here is a graph of the derivative of <span class="math">\(S_{432}(z)\)</span>: <img alt="dS432" src="/images/tetra-hyperbolic/ds432.png"></p>
+<p>The other two are of the <span class="math">\(U\)</span>-kind:
+</p>
+<div class="math">\begin{align*}
+    U_{420}(z) &amp;= \frac{h_{42}(z)}{h_{40}(z)} &amp; U_{431}(z) &amp;= \frac{h_{43}(z)}{h_{41}(z)}
+\end{align*}</div>
+<p>
+Here is a graph of <span class="math">\(U_{420}(z)\)</span>: <img alt="U420" src="/images/tetra-hyperbolic/u420.png"></p>
+<p>Here is a graph of the derivative of <span class="math">\(U_{420}(z)\)</span>: <img alt="dU420" src="/images/tetra-hyperbolic/du420.png"></p>
+<p>Here is a graph of <span class="math">\(U_{431}(z)\)</span>: <img alt="U431" src="/images/tetra-hyperbolic/u431.png"></p>
+<p>Here is a graph of the derivative of <span class="math">\(U_{431}(z)\)</span>: <img alt="dU431" src="/images/tetra-hyperbolic/du431.png"></p>
+<p>Note that
+</p>
+<div class="math">\begin{align*}
+    \frac{d S_{410}}{dz} &amp;= 1 - S_{410} S_{430} &amp; \frac{d S_{421}}{dz} &amp;= 1 - \frac{S_{421}}{S_{410}} \\
+    \frac{d S_{430}}{dz} &amp;= U_{420} - S_{430}^{2} &amp; \frac{d S_{432}}{dz} &amp;= 1 - \frac{S_{432}}{S_{421}} \\
+    \frac{d U_{420}}{dz} &amp;= S_{410} - U_{420} S_{430} &amp; \frac{d U_{431}}{dz} &amp;= S_{421} - \frac{U_{431}}{S_{410}}
+\end{align*}</div>
+<p>
+These relations generalize the derivatives of the hyperbolic tangent.</p>
+<h2>6-Graded</h2>
+<p>There are six functions. You have the differentiation identities:
+</p>
+<div class="math">\begin{align*}
+    \frac{d h_{65}}{dz} &amp;= h_{64} &amp; \frac{d h_{64}}{dz} &amp;= h_{63} &amp; \frac{d h_{63}}{dz} &amp;= h_{62} &amp; \frac{d h_{62}}{dz} &amp;= h_{61} &amp; \frac{d h_{61}}{dz} &amp;= h_{60} &amp; \frac{d h_{60}}{dz} &amp;= h_{65}
+\end{align*}</div>
+<p>
+With these six functions you can construct 15 ratios. Of these, 9 ratios are of <span class="math">\(S\)</span>-kind:
+</p>
+<div class="math">\begin{align*}
+    S_{610}(z) &amp;= \frac{h_{61}(z)}{h_{60}(z)} &amp; S_{621}(z) &amp;= \frac{h_{62}(z)}{h_{61}(z)} &amp; S_{630}(z) &amp;= \frac{h_{63}(z)}{h_{60}(z)} \\
+    S_{632}(z) &amp;= \frac{h_{63}(z)}{h_{62}(z)} &amp; S_{643}(z) &amp;= \frac{h_{64}(z)}{h_{63}(z)} &amp; S_{641}(z) &amp;= \frac{h_{64}(z)}{h_{61}(z)} \\
+    S_{654}(z) &amp;= \frac{h_{65}(z)}{h_{64}(z)} &amp; S_{652}(z) &amp;= \frac{h_{65}(z)}{h_{62}(z)} &amp; S_{650}(z) &amp;= \frac{h_{65}(z)}{h_{60}(z)}
+\end{align*}</div>
+<p>
+Here is a graph of <span class="math">\(S_{610}(z)\)</span>: <img alt="S610" src="/images/hexa-hyperbolic/s610.png"></p>
+<p>Here is a graph of <span class="math">\(S_{621}(z)\)</span>: <img alt="S621" src="/images/hexa-hyperbolic/s621.png"></p>
+<p>Here is a graph of <span class="math">\(S_{630}(z)\)</span>: <img alt="S630" src="/images/hexa-hyperbolic/s630.png"></p>
+<p>Here is a graph of <span class="math">\(S_{632}(z)\)</span>: <img alt="S632" src="/images/hexa-hyperbolic/s632.png"></p>
+<p>Here is a graph of <span class="math">\(S_{641}(z)\)</span>: <img alt="S641" src="/images/hexa-hyperbolic/s641.png"></p>
+<p>Here is a graph of <span class="math">\(S_{643}(z)\)</span>: <img alt="S643" src="/images/hexa-hyperbolic/s643.png"></p>
+<p>Here is a graph of <span class="math">\(S_{650}(z)\)</span>: <img alt="S650" src="/images/hexa-hyperbolic/s650.png"></p>
+<p>Here is a graph of <span class="math">\(S_{652}(z)\)</span>: <img alt="S652" src="/images/hexa-hyperbolic/s652.png"></p>
+<p>Here is a graph of <span class="math">\(S_{654}(z)\)</span>: <img alt="S654" src="/images/hexa-hyperbolic/s654.png"></p>
+<p>The other 6 ratios are of <span class="math">\(U\)</span>-kind:
+</p>
+<div class="math">\begin{align*}
+    U_{620}(z) &amp;= \frac{h_{62}(z)}{h_{60}(z)} &amp; U_{631}(z) &amp;= \frac{h_{63}(z)}{h_{61}(z)} &amp; U_{642}(z) &amp;= \frac{h_{64}(z)}{h_{62}(z)} \\
+    U_{640}(z) &amp;= \frac{h_{64}(z)}{h_{60}(z)} &amp; U_{653}(z) &amp;= \frac{h_{65}(z)}{h_{63}(z)} &amp; U_{651}(z) &amp;= \frac{h_{65}(z)}{h_{61}(z)}
+\end{align*}</div>
+<p>
+Here is a graph of <span class="math">\(U_{620}(z)\)</span>: <img alt="U620" src="/images/hexa-hyperbolic/u620.png"></p>
+<p>Here is a graph of <span class="math">\(U_{631}(z)\)</span>: <img alt="U631" src="/images/hexa-hyperbolic/u631.png"></p>
+<p>Here is a graph of <span class="math">\(U_{640}(z)\)</span>: <img alt="U640" src="/images/hexa-hyperbolic/u640.png"></p>
+<p>Here is a graph of <span class="math">\(U_{642}(z)\)</span>: <img alt="U642" src="/images/hexa-hyperbolic/u642.png"></p>
+<p>Here is a graph of <span class="math">\(U_{651}(z)\)</span>: <img alt="U651" src="/images/hexa-hyperbolic/u651.png"></p>
+<p>Here is a graph of <span class="math">\(U_{653}(z)\)</span>: <img alt="U653" src="/images/hexa-hyperbolic/u653.png"></p>
+<h2>Applications in Neural Networks</h2>
+<p>The hyperbolic tangent is used in neural networks as an <a href="https://en.wikipedia.org/wiki/Activation_function">activation function</a>. Although the functions described here are not monotonic, they might still be useful.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

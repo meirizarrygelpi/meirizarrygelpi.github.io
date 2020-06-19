@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Three-Body Kinematics | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/three-body-kinematics/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Kinematics for three-body problems.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Three-Body Kinematics
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2015-11-26T00:00:00-05:00">
+          <i class="fas fa-clock"></i>
+          Thu 26 November 2015
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/kinematics.html">#kinematics</a>,               <a href="https://meirizarrygelpi.github.io/tag/three-body.html">#three-body</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In this post I will consider the kinematics of problems with three independent momentum vectors, each of which describe a distinct massive body. That is, you do not have any conservation constraint relating these three momenta. But you still have three <strong>massive on-shell</strong> constraints:
+</p>
+<div class="math">$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}. $$</div>
+<p>
+You can introduce three <strong>2-Mandelstam</strong> invariants:
+</p>
+<div class="math">$$ s_{ij} \equiv -\left\Vert p_{i} + p_{j} \right\Vert^{2}; $$</div>
+<p>
+and one <strong>3-Mandelstam</strong> invariant:
+</p>
+<div class="math">$$ s_{123} \equiv -\left\Vert p_{1} + p_{2} + p_{3} \right\Vert^{2} = s_{12} + s_{23} + s_{31} - m_{1}^{2} - m_{2}^{2} - m_{3}^{2}. $$</div>
+<p>
+You can also introduce three <strong>Regge-Mandelstam</strong> invariants:
+</p>
+<div class="math">$$ r_{ij} \equiv \frac{s_{ij} - m_{i}^{2} - m_{j}^{2}}{2 m_{i} m_{j}}. $$</div>
+<p>
+There are three <strong>2-Gram</strong> invariants:
+</p>
+<div class="math">$$ G_{ij} \equiv - \det{ \begin{pmatrix} \left\Vert p_{i} \right\Vert^{2} &amp; p_{i} \cdot p_{j} \\ p_{j} \cdot p_{i} &amp; \left\Vert p_{j} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{ij} - m_{i}^{2} - m_{j}^{2} \right)^{2} - 4 m_{i}^{2} m_{j}^{2} \right] = m_{i}^{2} m_{j}^{2} \left( r_{ij}^{2} - 1 \right); $$</div>
+<p>
+and one <strong>3-Gram</strong> invariant:
+</p>
+<div class="math">$$G_{123} = -\det{ \begin{pmatrix} \left\Vert p_{1} \right\Vert^{2} &amp; p_{1} \cdot p_{2} &amp; p_{1} \cdot p_{3} \\ p_{2} \cdot p_{1} &amp; \left\Vert p_{2} \right\Vert^{2} &amp; p_{2} \cdot p_{3} \\ p_{3} \cdot p_{1} &amp; p_{3} \cdot p_{2} &amp; \left\Vert p_{3} \right\Vert^{2} \end{pmatrix} }  = m_{1}^{2} m_{2}^{2} m_{3}^{2} \left( 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{23}^{2} - r_{31}^{2} + 1 \right).$$</div>
+<p>
+More explicitly,
+</p>
+<div class="math">$$ G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) - m_{1}^{2} \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right)^{2} - m_{2}^{2} \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right)^{2} - m_{3}^{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} + 4 m_{1}^{2} m_{2}^{2} m_{3}^{2} \right]. $$</div>
+<p>
+Note the <strong>massless limits</strong> of the Gram invariants:
+</p>
+<div class="math">$$ \lim_{m_{1} \rightarrow 0} G_{12} = \frac{1}{4} \left( s_{12} - m_{2}^{2} \right)^{2}, $$</div>
+<div class="math">$$ \lim_{m_{2} \rightarrow 0} G_{12} = \frac{1}{4} \left( s_{12} - m_{1}^{2} \right)^{2}; $$</div>
+<div class="math">$$ \lim_{m_{2} \rightarrow 0} G_{23} = \frac{1}{4} \left( s_{23} - m_{3}^{2} \right)^{2}, $$</div>
+<div class="math">$$ \lim_{m_{3} \rightarrow 0} G_{23} = \frac{1}{4} \left( s_{23} - m_{2}^{2} \right)^{2}; $$</div>
+<div class="math">$$ \lim_{m_{3} \rightarrow 0} G_{31} = \frac{1}{4} \left( s_{31} - m_{1}^{2} \right)^{2}, $$</div>
+<div class="math">$$ \lim_{m_{1} \rightarrow 0} G_{31} = \frac{1}{4} \left( s_{31} - m_{3}^{2} \right)^{2}; $$</div>
+<div class="math">$$ \lim_{m_{1} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} \right) - m_{2}^{2} \left( s_{31} - m_{3}^{2} \right)^{2} - m_{3}^{2} \left( s_{12} - m_{2}^{2} \right)^{2} \right], $$</div>
+<div class="math">$$ \lim_{m_{2} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} \right) \left( s_{23} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} - m_{1}^{2} \right) - m_{1}^{2} \left( s_{23} - m_{3}^{2} \right)^{2} - m_{3}^{2} \left( s_{12} - m_{1}^{2} \right)^{2} \right], $$</div>
+<div class="math">$$ \lim_{m_{3} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} \right) \left( s_{31} - m_{1}^{2} \right) - m_{1}^{2} \left( s_{23} - m_{2}^{2} \right)^{2} - m_{2}^{2} \left( s_{31} - m_{1}^{2} \right)^{2} \right]; $$</div>
+<div class="math">$$ \lim_{m_{1} \rightarrow 0} \lim_{m_{2} \rightarrow 0} G_{123} = \frac{1}{4} \left[ s_{12} \left( s_{23} - m_{3}^{2} \right) \left( s_{31} - m_{3}^{2} \right) - m_{3}^{2} s_{12}^{2} \right], $$</div>
+<div class="math">$$ \lim_{m_{2} \rightarrow 0} \lim_{m_{3} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} \right) s_{23} \left( s_{31} - m_{1}^{2} \right) - m_{1}^{2} s_{23}^{2} \right], $$</div>
+<div class="math">$$ \lim_{m_{3} \rightarrow 0} \lim_{m_{1} \rightarrow 0} G_{123} = \frac{1}{4} \left[ \left( s_{12} - m_{2}^{2} \right) \left( s_{23} - m_{2}^{2} \right) s_{31} - m_{2}^{2} s_{31}^{2} \right]. $$</div>
+<p>
+For convenience, I will also introduce <strong>Regge-Gram</strong> invariants:
+</p>
+<div class="math">$$ g_{12} \equiv \frac{G_{12}}{m_{1}^{2} m_{2}^{2}}, $$</div>
+<div class="math">$$ g_{23} \equiv \frac{G_{23}}{m_{2}^{2} m_{3}^{2}}, $$</div>
+<div class="math">$$ g_{31} \equiv \frac{G_{31}}{m_{3}^{2} m_{1}^{2}}, $$</div>
+<div class="math">$$ g_{123} \equiv \frac{G_{123}}{m_{1}^{2} m_{2}^{2} m_{3}^{2}}. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ g_{123} + g_{12} = 2 r_{12} r_{23} r_{31} - r_{23}^{2} - r_{31}^{2}, $$</div>
+<div class="math">$$ g_{123} + g_{23} = 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{31}^{2}, $$</div>
+<div class="math">$$ g_{123} + g_{31} = 2 r_{12} r_{23} r_{31} - r_{12}^{2} - r_{23}^{2}. $$</div>
+<p>
+All of these invariants are present in any three-body problem.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

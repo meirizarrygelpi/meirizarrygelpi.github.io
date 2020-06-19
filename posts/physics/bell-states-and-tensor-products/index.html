@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Bell States and Tensor Products | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/bell-states-and-tensor-products/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="On 2-qubit Bell states versus tensor products of 1-qubit states.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Bell States and Tensor Products
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-02-27T00:00:00-05:00">
+          <i class="fas fa-clock"></i>
+          Tue 27 February 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83702x.html">#8.370.2x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>The 1-qubit Bell states are given by
+</p>
+<div class="math">\begin{align*}
+    |{+}\rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}\rangle + |{1}\rangle \right) &amp; |{-}\rangle = \frac{1}{\sqrt{2}} \left(|{0}\rangle - |{1}\rangle \right)
+\end{align*}</div>
+<p>
+These are ortho-normal eigen-states of <span class="math">\(X\)</span>:
+</p>
+<div class="math">\begin{align*}
+    X |{+} \rangle &amp;= +1 |{+} \rangle &amp; X |{-} \rangle &amp;= -1 |{-} \rangle
+\end{align*}</div>
+<p>
+Taking tensor products gives a 2-qubit ortho-normal basis:
+</p>
+<div class="math">\begin{align*}
+    |{+}{+} \rangle &amp;\equiv |{+} \rangle \otimes |{+} \rangle = \frac{1}{2} \left(|{0}{0} \rangle + |{0}{1} \rangle + |{1}{0} \rangle + |{1}{1} \rangle \right) \\
+    |{+}{-} \rangle &amp;\equiv |{+} \rangle \otimes |{-} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - |{0}{1} \rangle + |{1}{0} \rangle - |{1}{1} \rangle \right) \\
+    |{-}{+} \rangle &amp;\equiv |{-} \rangle \otimes |{+} \rangle = \frac{1}{2} \left(|{0}{0} \rangle + |{0}{1} \rangle - |{1}{0} \rangle - |{1}{1} \rangle \right) \\
+    |{-}{-} \rangle &amp;\equiv |{-} \rangle \otimes |{-} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - |{0}{1} \rangle - |{1}{0} \rangle + |{1}{1} \rangle \right)
+\end{align*}</div>
+<p>
+Note that, by construction, the four vectors in this 2-qubit basis do not describe 2-body entanglement since they are all tensor products. Linear combinations do, giving the 2-qubit Bell states:
+</p>
+<div class="math">\begin{align*}
+    |\Phi^{+} \rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}{0}\rangle + |{1}{1}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{+}{+}\rangle + |{-}{-}\rangle \right) \\
+    |\Phi^{-} \rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}{0}\rangle - |{1}{1}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{-}{+}\rangle + |{+}{-}\rangle \right) \\
+    |\Psi^{+} \rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}{1}\rangle + |{1}{0}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{+}{+}\rangle - |{-}{-}\rangle \right) \\
+    |\Psi^{-} \rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}{1}\rangle - |{1}{0}\rangle \right) = \frac{1}{\sqrt{2}} \left(|{-}{+}\rangle - |{+}{-}\rangle \right)
+\end{align*}</div>
+<p>
+These states cannot be factorized as tensor products.</p>
+<p>Another 1-qubit basis is the two eigen-states of <span class="math">\(Y\)</span>:
+</p>
+<div class="math">\begin{align*}
+    |{\circ}\rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}\rangle + i|{1}\rangle\right) &amp; |{\star}\rangle &amp;= \frac{1}{\sqrt{2}} \left(|{0}\rangle - i|{1}\rangle\right)
+\end{align*}</div>
+<p>
+Taking tensor products gives another 2-qubit ortho-normal basis:
+</p>
+<div class="math">\begin{align*}
+    |{\circ}{\circ} \rangle &amp; \equiv |{\circ} \rangle \otimes |{\circ} \rangle = \frac{1}{2} \left(|{0}{0} \rangle + i|{0}{1} \rangle + i|{1}{0} \rangle - |{1}{1} \rangle \right) \\
+    |{\circ}{\star} \rangle &amp; \equiv |{\circ} \rangle \otimes |{\star} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - i|{0}{1} \rangle + i|{1}{0} \rangle + |{1}{1} \rangle \right) \\
+    |{\star}{\circ} \rangle &amp; \equiv |{\star} \rangle \otimes |{\circ} \rangle = \frac{1}{2} \left(|{0}{0} \rangle + i|{0}{1} \rangle - i|{1}{0} \rangle + |{1}{1} \rangle \right) \\
+    |{\star}{\star} \rangle &amp; \equiv |{\star} \rangle \otimes |{\star} \rangle = \frac{1}{2} \left(|{0}{0} \rangle - i|{0}{1} \rangle - i|{1}{0} \rangle - |{1}{1} \rangle \right)
+\end{align*}</div>
+<p>
+I kind of like this notation: the star suggests complex conjugation.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Two-Body Rapidity from Sudakov Decomposition | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/two-body-rapidity/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="A rapidity interpretation for the two-body Sudakov decomposition.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Two-Body Rapidity from Sudakov Decomposition
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2015-12-01T00:00:00-05:00">
+          <i class="fas fa-clock"></i>
+          Tue 01 December 2015
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/sudakov.html">#sudakov</a>,               <a href="https://meirizarrygelpi.github.io/tag/two-body.html">#two-body</a>,               <a href="https://meirizarrygelpi.github.io/tag/kinematics.html">#kinematics</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In a previous post I discussed the <a href="http://meirizarrygelpi.github.io/posts/physics/two-body-sudakov/">two-body Sudakov decomposition</a>. I found that the Regge-Mandelstam invariant <span class="math">\(r_{12}\)</span> and the Regge-Sudakov invariant <span class="math">\(R_{12}\)</span> satisfy the equation
+</p>
+<div class="math">$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}. $$</div>
+<p>
+You can introduce a rapidity <span class="math">\(\rho_{12}\)</span> via
+</p>
+<div class="math">$$ R_{12} = \exp{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \log{ \left( R_{12} \right) }. $$</div>
+<p>
+Thus,
+</p>
+<div class="math">$$ r_{12} = \operatorname{cosh}{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \operatorname{acosh}{ \left( r_{12} \right) }. $$</div>
+<p>
+You also have the Regge-Gram invariant:
+</p>
+<div class="math">$$ g_{12} \equiv \frac{G_{12}}{m_{1}^{2} m_{2}^{2}} = r_{12}^{2} - 1 = \operatorname{sinh}^{2}{ \left( \rho_{12} \right) } \quad \Longrightarrow \quad \rho_{12} = \operatorname{asinh}{ \left( \sqrt{ g_{12} } \right) }. $$</div>
+<p>
+In terms of the Mandelstam invariant and the two masses, you have
+</p>
+<div class="math">$$ \rho_{12} = \log{ \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} }}{2 m_{1} m_{2}} \right) }. $$</div>
+<p>
+The double and half argument formulas are also relevant:
+</p>
+<div class="math">$$ \operatorname{cosh}{ \left( 2 \rho_{12} \right) } = \operatorname{cosh}^{2}{ \left( \rho_{12} \right) } + \operatorname{sinh}^{2}{ \left( \rho_{12} \right) } = 2 r_{12}^{2} - 1, $$</div>
+<div class="math">$$ \operatorname{sinh}{ \left( 2 \rho_{12} \right) } = 2\operatorname{cosh}{ \left( \rho_{12} \right) } \operatorname{sinh}{ \left( \rho_{12} \right) } = 2 r_{12} \sqrt{r_{12}^{2} - 1} ; $$</div>
+<div class="math">$$ \operatorname{cosh}^{2}{ \left( \frac{\rho_{12}}{2} \right) } = \frac{r_{12} + 1}{2} = \frac{s_{12} - \left( m_{1} - m_{2} \right)^{2}}{4 m_{1} m_{2}}, $$</div>
+<div class="math">$$ \operatorname{sinh}^{2}{ \left( \frac{\rho_{12}}{2} \right) } = \frac{r_{12} - 1}{2} = \frac{s_{12} - \left( m_{1} + m_{2} \right)^{2}}{4 m_{1} m_{2}}. $$</div>
+<p>
+These provide an argument for restricting only to the range <span class="math">\(s_{12} \geq \left( m_{1} + m_{2} \right)^{2}\)</span>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

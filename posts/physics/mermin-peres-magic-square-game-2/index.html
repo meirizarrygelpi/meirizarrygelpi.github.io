@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Mermin-Peres Magic Square Game 2 | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/mermin-peres-magic-square-game-2/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="The quantum Mermin-Peres magic square game.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Mermin-Peres Magic Square Game 2
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-02-20T00:00:00-05:00">
+          <i class="fas fa-clock"></i>
+          Tue 20 February 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83701x.html">#8.370.1x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>When players in the Mermin-Peres magic square game use a deterministic strategy, the largest probability of winning is 8/9. If the players share a quantum state, then there is a strategy for winning 100% of the time. The idea is to introduce commuting observables.</p>
+<p>Alice produces a row of 3 squares with an even number of red squares. There are four such options: GGG, GRR, RGR, RRG. Similarly, Barbara produces a column of 3 squares with an odd number of red squares. There are also four such options: RRR, RGG, GRG, GGR. Thus, Alice and Barbara each need a 2-qubit state and the system is described by a 4-qubit state.</p>
+<p>First, Alice and Barbara share a particular <strong>4-qubit</strong> quantum state:
+</p>
+<div class="math">$$ | \psi \rangle = \frac{1}{2} \left( |00 \rangle_{AB} + |11 \rangle_{AB} \right) \otimes \left( |00 \rangle_{AB} + |11 \rangle_{AB} \right). $$</div>
+<p>
+This state vector can be re-written as:
+</p>
+<div class="math">$$ | \psi \rangle = \frac{1}{2} \left( |00 \rangle_{A} |00 \rangle_{B} + |01 \rangle_{A} |01 \rangle_{B} + |10 \rangle_{A} |10 \rangle_{B} + |11 \rangle_{A} |11 \rangle_{B} \right). $$</div>
+<p>
+Note that this state vector is entangled because it cannot be factorized into Alice and Barbara pieces.</p>
+<p>Next, consider the following array of <strong>2-qubit</strong> operators:
+</p>
+<div class="math">$$ G = \begin{pmatrix} X \otimes I_{2} &amp; I_{2} \otimes X &amp; X \otimes X \\ I_{2} \otimes Z &amp; Z \otimes I_{2} &amp; Z \otimes Z \\ -X \otimes Z &amp; -Z \otimes X &amp; Y \otimes Y \end{pmatrix}. $$</div>
+<p>
+Using the properties of the Pauli matrices,
+</p>
+<div class="math">$$ XY + YX = 0, \qquad YZ + ZY = 0, \qquad ZX + XZ = 0; $$</div>
+<div class="math">$$ X^{2} = Y^{2} = Z^{2} = I_{2}; $$</div>
+<p>
+you can check that:</p>
+<ol>
+<li>Any two operators in the same column commute.</li>
+<li>Any two operators in the same row commute.</li>
+<li>The product of the operators in a row is <span class="math">\(I_{4}\)</span>.</li>
+<li>The product of the operators in a column is <span class="math">\(-I_{4}\)</span>.</li>
+</ol>
+<p>Since the three operators in each row or column commute with each other, you can have simultaneous eigen-kets. For the <strong>first row</strong>, the simultaneous eigen-kets are
+</p>
+<div class="math">$$ |{+}{+}{+} \rangle = |X+ \rangle \otimes |X+ \rangle = \frac{1}{2} \left( |00 \rangle + |01 \rangle + |10 \rangle + |11 \rangle \right); $$</div>
+<div class="math">$$ |{+}{-}{-} \rangle = |X+ \rangle \otimes |X- \rangle = \frac{1}{2} \left( |00 \rangle - |01 \rangle + |10 \rangle - |11 \rangle \right); $$</div>
+<div class="math">$$ |{-}{+}{-} \rangle = |X- \rangle \otimes |X+ \rangle = \frac{1}{2} \left( |00 \rangle + |01 \rangle - |10 \rangle - |11 \rangle \right); $$</div>
+<div class="math">$$ |{-}{-}{+} \rangle = |X- \rangle \otimes |X- \rangle = \frac{1}{2} \left( |00 \rangle - |01 \rangle - |10 \rangle + |11 \rangle \right). $$</div>
+<p>
+For the <strong>first column</strong>, the simultaneous eigen-kets are
+</p>
+<div class="math">$$ |{+}{+}{-} \rangle = |X+ \rangle \otimes |Z+ \rangle = \frac{1}{\sqrt{2}} \left( |00 \rangle + |10 \rangle \right); $$</div>
+<div class="math">$$ |{+}{-}{+} \rangle = |X+ \rangle \otimes |Z- \rangle = \frac{1}{\sqrt{2}} \left( |01 \rangle + |11 \rangle \right); $$</div>
+<div class="math">$$ |{-}{+}{+} \rangle = |X- \rangle \otimes |Z+ \rangle = \frac{1}{\sqrt{2}} \left( |00 \rangle - |10 \rangle \right); $$</div>
+<div class="math">$$ |{-}{-}{-} \rangle = |X- \rangle \otimes |Z- \rangle = \frac{1}{\sqrt{2}} \left( |01 \rangle - |11 \rangle \right). $$</div>
+<p>
+For the <strong>second row</strong>, the simultaneous eigen-kets are
+</p>
+<div class="math">$$ |{+}{+}{+} \rangle = |Z+ \rangle \otimes |Z+ \rangle = |00 \rangle; $$</div>
+<div class="math">$$ |{-}{+}{-} \rangle = |Z+ \rangle \otimes |Z- \rangle = |01 \rangle; $$</div>
+<div class="math">$$ |{+}{-}{-} \rangle = |Z- \rangle \otimes |Z+ \rangle = |10 \rangle; $$</div>
+<div class="math">$$ |{-}{-}{+} \rangle = |Z- \rangle \otimes |Z- \rangle = |11 \rangle. $$</div>
+<p>
+For the <strong>second column</strong>, the simultaneous eigen-kets are
+</p>
+<div class="math">$$ |{+}{+}{-} \rangle = |Z+ \rangle \otimes |X+ \rangle = \frac{1}{\sqrt{2}} \left( |00 \rangle + |01 \rangle \right); $$</div>
+<div class="math">$$ |{-}{+}{+} \rangle = |Z+ \rangle \otimes |X- \rangle = \frac{1}{\sqrt{2}} \left( |00 \rangle - |01 \rangle \right); $$</div>
+<div class="math">$$ |{+}{-}{+} \rangle = |Z- \rangle \otimes |X+ \rangle = \frac{1}{\sqrt{2}} \left( |10 \rangle + |11 \rangle \right); $$</div>
+<div class="math">$$ |{-}{-}{-} \rangle = |Z- \rangle \otimes |X- \rangle = \frac{1}{\sqrt{2}} \left( |10 \rangle - |11 \rangle \right). $$</div>
+<p>
+The third row and the third column are non-trivial because they involve degree-2 Pauli operators. For the <strong>third row</strong>, the simultaneous eigen-kets are
+</p>
+<div class="math">$$ |{+}{+}{+} \rangle = \frac{1}{2} \left( |00 \rangle - |01 \rangle - |10 \rangle - |11 \rangle \right); $$</div>
+<div class="math">$$ |{-}{+}{-} \rangle = \frac{1}{2} \left( |00 \rangle - |01 \rangle + |10 \rangle + |11 \rangle \right); $$</div>
+<div class="math">$$ |{+}{-}{-} \rangle = \frac{1}{2} \left( |00 \rangle + |01 \rangle - |10 \rangle + |11 \rangle \right); $$</div>
+<div class="math">$$ |{-}{-}{+} \rangle = \frac{1}{2} \left( |00 \rangle + |01 \rangle + |10 \rangle - |11 \rangle \right). $$</div>
+<p>
+Finally, the simultaneous eigen-kets for the <strong>third column</strong> are
+</p>
+<div class="math">$$ |{+}{+}{-} \rangle = \frac{1}{\sqrt{2}} \left( |00 \rangle + |11 \rangle \right); $$</div>
+<div class="math">$$ |{+}{-}{+} \rangle = \frac{1}{\sqrt{2}} \left( |01 \rangle + |10 \rangle \right); $$</div>
+<div class="math">$$ |{-}{+}{+} \rangle = \frac{1}{\sqrt{2}} \left( |00 \rangle - |11 \rangle \right); $$</div>
+<div class="math">$$ |{-}{-}{-} \rangle = \frac{1}{\sqrt{2}} \left( |01 \rangle - |10 \rangle \right). $$</div>
+<p>
+Note that <span class="math">\(| \psi \rangle\)</span> is a vector in a 16-dimensional space. Alice gets a row number <span class="math">\(m\)</span> and Barbara gets a column number <span class="math">\(n\)</span>. There are 9 possible referee outcomes. The probability of winning the game is
+</p>
+<div class="math">$$ p_{\text{win}}(\psi) = \frac{1}{9} \sum_{m = 1}^{3} \sum_{n = 1}^{3} p_{\text{win}}(m, n | \psi). $$</div>
+<p>
+The probability of winning for the <span class="math">\(m\)</span>-th row and the <span class="math">\(n\)</span>-th column involves the different ways that Alice and Barbara agree.</p>
+<p>For definiteness, consider the case <span class="math">\((m, n) = (1, 1)\)</span>. There are eight possible scenarios where Alice and Barbara agree:</p>
+<ol>
+<li>Alice measures <span class="math">\({+}{+}{+}\)</span> and Barbara measures <span class="math">\({+}{+}{-}\)</span></li>
+<li>Alice measures <span class="math">\({+}{+}{+}\)</span> and Barbara measures <span class="math">\({+}{-}{+}\)</span></li>
+<li>Alice measures <span class="math">\({+}{-}{-}\)</span> and Barbara measures <span class="math">\({+}{+}{-}\)</span></li>
+<li>Alice measures <span class="math">\({+}{-}{-}\)</span> and Barbara measures <span class="math">\({+}{-}{+}\)</span></li>
+<li>Alice measures <span class="math">\({-}{+}{-}\)</span> and Barbara measures <span class="math">\({-}{+}{+}\)</span></li>
+<li>Alice measures <span class="math">\({-}{+}{-}\)</span> and Barbara measures <span class="math">\({-}{-}{-}\)</span></li>
+<li>Alice measures <span class="math">\({-}{-}{+}\)</span> and Barbara measures <span class="math">\({-}{+}{+}\)</span></li>
+<li>Alice measures <span class="math">\({-}{-}{+}\)</span> and Barbara measures <span class="math">\({-}{-}{-}\)</span></li>
+</ol>
+<p>For <strong>scenario 1</strong>, the bra that Alice and Barbara use to measure is
+</p>
+<div class="math">\begin{multline*} {}_{A}\langle {+}{+}{+} | \otimes {}_{B}\langle {+}{+}{-} | = \frac{1}{\sqrt{8}} \left( {}_{A}\langle 00 | {}_{B}\langle 00 | + {}_{A}\langle 00 | {}_{B}\langle 10 | + {}_{A}\langle 01 | {}_{B}\langle 00 | + {}_{A}\langle 01 | {}_{B}\langle 10 | \right. \\ \left. {} + {}_{A}\langle 10 | {}_{B}\langle 00 | + {}_{A}\langle 10 | {}_{B}\langle 10 | + {}_{A}\langle 11 | {}_{B}\langle 00 | + {}_{A}\langle 11 | {}_{B}\langle 10 | \right). \end{multline*}</div>
+<p>
+The probability of winning <strong>scenario 1</strong> is
+</p>
+<div class="math">$$ |({}_{A}\langle {+}{+}{+}| \otimes {}_{B}\langle {+}{+}{-}|)|\psi \rangle|^{2} = \left| \frac{1}{2 \sqrt{8}} + \frac{1}{2 \sqrt{8}} \right|^{2} = \frac{1}{8}. $$</div>
+<p>
+The probability of winning the other seven scenarios is the same. Thus, the probability of winning this site in the grid is 100%. A similar argument shows that the probability of winning any site in the grid is 100%. Hence, Alice and Bob can <strong>always win the game</strong>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

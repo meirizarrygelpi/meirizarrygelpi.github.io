@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Two-Body Sudakov Decomposition | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/two-body-sudakov/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="The simplest example of a Sudakov decomposition involves two quanta.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Two-Body Sudakov Decomposition
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2015-11-25T00:00:00-05:00">
+          <i class="fas fa-clock"></i>
+          Wed 25 November 2015
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/sudakov.html">#sudakov</a>,               <a href="https://meirizarrygelpi.github.io/tag/two-body.html">#two-body</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In this post I will consider a problem with two independent momentum vectors, each of which describes a distinct massive body. That is, you do not have any conservation constraint relating these two massive momenta. But you still have two <strong>massive on-shell</strong> constraints:
+</p>
+<div class="math">$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}. $$</div>
+<p>
+You can introduce a <strong>2-Mandelstam</strong> invariant:
+</p>
+<div class="math">$$ s_{12} \equiv -\left\Vert p_{1} + p_{2} \right\Vert^{2}. $$</div>
+<p>
+You can also introduce the corresponding <strong>Regge-Mandelstam</strong> invariant:
+</p>
+<div class="math">$$ r_{12} \equiv \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}. $$</div>
+<p>
+There is one <strong>2-Gram</strong> invariant:
+</p>
+<div class="math">$$ G_{12} \equiv - \det{ \begin{pmatrix} \left\Vert p_{1} \right\Vert^{2} &amp; p_{1} \cdot p_{2} \\ p_{2} \cdot p_{1} &amp; \left\Vert p_{2} \right\Vert^{2} \end{pmatrix} } = \frac{1}{4} \left[ \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} \right] = m_{1}^{2} m_{2}^{2} \left( r_{12}^{2} - 1 \right). $$</div>
+<p>
+It is useful to introduce a <strong>Källén function</strong>:
+</p>
+<div class="math">$$ \Lambda_{12} \equiv \left( s_{12} - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2}. $$</div>
+<p>
+All of these invariants are present in any two-body problem.</p>
+<p>The <strong>two-body Sudakov decomposition</strong> is given by
+</p>
+<div class="math">$$ p_{1} = n_{1} + \frac{m_{1}^{2}}{S_{12}} n_{2}, $$</div>
+<div class="math">$$ p_{2} = n_{2} + \frac{m_{2}^{2}}{S_{12}} n_{1}. $$</div>
+<p>
+Here <span class="math">\(n_{1}\)</span> and <span class="math">\(n_{2}\)</span> are (null) <strong>Sudakov vectors</strong>, and I have introduced a <strong>2-Sudakov</strong> invariant:
+</p>
+<div class="math">$$ S_{12} \equiv -\left\Vert n_{1} + n_{2} \right\Vert^{2} = -2 \left( n_{1} \cdot n_{2} \right).$$</div>
+<p>
+This decomposition can be thought of as a way to explicitly solve the on-shell constraints. The labeling of the Sudakov vectors is such that in a massless limit <span class="math">\(m_{i} \rightarrow 0\)</span> the momentum <span class="math">\(p_{i}\)</span> becomes the Sudakov vector <span class="math">\(n_{i}\)</span>. At first glance, this might lead you to believe that <span class="math">\(n_{1}\)</span> is only associated with <span class="math">\(p_{1}\)</span>, but that is not the case. In matrix form, the above decomposition is
+</p>
+<div class="math">$$ \begin{pmatrix} p_{1} \\ p_{2} \end{pmatrix} = \mathcal{S}_{2} \cdot \begin{pmatrix} n_{1} \\ n_{2} \end{pmatrix}, \qquad \mathcal{S}_{2} \equiv \begin{pmatrix} 1 &amp; \dfrac{m_{1}^{2}}{S_{12}} \\ \dfrac{m_{2}^{2}}{S_{12}} &amp; 1 \end{pmatrix}. $$</div>
+<p>
+The determinant of <span class="math">\(\mathcal{S}_{2}\)</span> is
+</p>
+<div class="math">$$ \det{ \left( \mathcal{S}_{2} \right) } = 1 - \frac{m_{1}^{2} m_{2}^{2}}{S_{12}^{2}}. $$</div>
+<p>
+The inverse of <span class="math">\(\mathcal{S}_{2}\)</span> is
+</p>
+<div class="math">$$ \operatorname{inv}{\left( \mathcal{S}_{2} \right)} = \frac{1}{\det{ \left( \mathcal{S}_{2} \right) }} \begin{pmatrix} 1 &amp; -\dfrac{m_{1}^{2}}{S_{12}} \\ -\dfrac{m_{2}^{2}}{S_{12}} &amp; 1 \end{pmatrix}. $$</div>
+<p>
+From here it is clear that both <span class="math">\(n_{1}\)</span> and <span class="math">\(n_{2}\)</span> can be written as linear combinations of <span class="math">\(p_{1}\)</span> and <span class="math">\(p_{2}\)</span>. Thus, the "individual content" from each quantum is carried by both Sudakov vectors.</p>
+<p>My goal is to write <span class="math">\(S_{12}\)</span> in terms of <span class="math">\(s_{12}\)</span> and the masses. It is helpful to introduce a <strong>Regge-Sudakov</strong> invariant:
+</p>
+<div class="math">$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}. $$</div>
+<p>
+Using the identity
+</p>
+<div class="math">$$ r_{12} = -\frac{p_{1} \cdot p_{2}}{m_{1} m_{2}}, $$</div>
+<p>
+you find the relation
+</p>
+<div class="math">$$ 2r_{12} = R_{12} + \frac{1}{R_{12}}. $$</div>
+<p>
+This is an <strong>univariate Laurent polynomial</strong> in <span class="math">\(R_{12}\)</span>. Solving this equation for <span class="math">\(R_{12}\)</span> gives
+</p>
+<div class="math">$$ R_{12} = r_{12} + \sqrt{r_{12}^{2} - 1}. $$</div>
+<p>
+Thus,
+</p>
+<div class="math">$$ S_{12} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \Lambda_{12} } \right). $$</div>
+<p>
+Note that in order for <span class="math">\(R_{12}\)</span> to be real, you need
+</p>
+<div class="math">$$ r_{12} \leq -1 \text{ or } r_{12} \geq 1. $$</div>
+<p>
+That is,
+</p>
+<div class="math">$$ s_{12} \leq \left( m_{1} - m_{2} \right)^{2} \text{ or } s_{12} \geq \left( m_{1} + m_{2} \right)^{2}. $$</div>
+<p>
+This is equivalent to <span class="math">\(G_{12} \geq 0\)</span>.</p>
+<p>The following relations are useful:
+</p>
+<div class="math">$$ S_{12} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \Lambda_{12} } \right), $$</div>
+<div class="math">$$ S_{12} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \Lambda_{12} } \right);$$</div>
+<div class="math">$$ \frac{\left(S_{12} + m_{1}^{2} \right) \left(S_{12} + m_{2}^{2} \right)}{S_{12}} = s_{12} ;$$</div>
+<div class="math">$$ S_{12} = \frac{2 m_{1}^{2} m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} }};$$</div>
+<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \frac{1}{2} \left( s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} } \right);$$</div>
+<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{1}^{2} = \frac{1}{2} \left( s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} } \right), $$</div>
+<div class="math">$$ \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} + m_{2}^{2} = \frac{1}{2} \left( s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \Lambda_{12} } \right);$$</div>
+<div class="math">$$ S_{12} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} - m_{2}^{2}, $$</div>
+<div class="math">$$ S_{12} - \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = \sqrt{ \Lambda_{12} }; $$</div>
+<div class="math">$$ S_{12} + 2 m_{1}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} + m_{1}^{2} - m_{2}^{2}, $$</div>
+<div class="math">$$ S_{12} + 2 m_{2}^{2} + \frac{m_{1}^{2} m_{2}^{2}}{S_{12}} = s_{12} - m_{1}^{2} + m_{2}^{2}; $$</div>
+<div class="math">$$ \frac{S_{12} \left( S_{12} + m_{1}^{2} \right)}{m_{1}^{2} \left( S_{12} + m_{2}^{2} \right)} = \frac{s_{12} + m_{1}^{2} - m_{2}^{2} + \sqrt{ \Lambda_{12} }}{s_{12} + m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} }}; $$</div>
+<div class="math">$$ \frac{S_{12} \left( S_{12} + m_{2}^{2} \right)}{m_{2}^{2} \left( S_{12} + m_{1}^{2} \right)} = \frac{s_{12} - m_{1}^{2} + m_{2}^{2} + \sqrt{ \Lambda_{12} }}{s_{12} - m_{1}^{2} + m_{2}^{2} - \sqrt{ \Lambda_{12} }}; $$</div>
+<div class="math">$$ S_{12}^{2} = m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \Lambda_{12} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} }} \right); $$</div>
+<div class="math">$$ S_{12}^{2} + m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{s_{12} - m_{1}^{2} - m_{2}^{2}}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} }} \right); $$</div>
+<div class="math">$$ S_{12}^{2} - m_{1}^{2} m_{2}^{2} = 2m_{1}^{2} m_{2}^{2} \left( \frac{\sqrt{ \Lambda_{12} }}{s_{12} - m_{1}^{2} - m_{2}^{2} - \sqrt{ \Lambda_{12} }} \right); $$</div>
+<div class="math">$$ \det{\left( \mathcal{S}_{2} \right)} = \frac{2 \sqrt{ \Lambda_{12} } }{s_{12} - m_{1}^{2} - m_{2}^{2} + \sqrt{ \Lambda_{12} }}. $$</div>
+<p>
+The logarithm of some of these expressions appear as rapidities in the center-of-momentum frame for either a 2-to-<span class="math">\(N\)</span> or an <span class="math">\(N\)</span>-to-2 scattering problem.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  The Triangle Product with NumPy | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/python/numpy-triangle-product/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/python.atom.xml">  
+  <meta name="description" content="An implementation of the triangle product for 3-arrays in NumPy.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  The Triangle Product with NumPy
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2015-12-13T00:00:00-05:00">
+          <i class="fas fa-clock"></i>
+          Sun 13 December 2015
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/python.html">Python</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/three-array.html">#three-array</a>,               <a href="https://meirizarrygelpi.github.io/tag/numpy.html">#numpy</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In this post I will discuss an implementation of the <a href="http://meirizarrygelpi.github.io/posts/maths/triangle-product-3-arrays/">triangle product for 3-arrays</a> in NumPy. You start by importing and setting the seed of the random number generator:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">random</span>
+
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>A 3-array with random integer entries between 0 and 9, and size <span class="math">\(\left(2, 3, 4\right)\)</span> can be obtain with <code>random.random_integers(0, 9, (2, 3, 4))</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[[</span><span class="mi">5</span> <span class="mi">0</span> <span class="mi">3</span> <span class="mi">3</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">7</span> <span class="mi">9</span> <span class="mi">3</span> <span class="mi">5</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">2</span> <span class="mi">4</span> <span class="mi">7</span> <span class="mi">6</span><span class="p">]]</span>
+
+ <span class="p">[[</span><span class="mi">8</span> <span class="mi">8</span> <span class="mi">1</span> <span class="mi">6</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">7</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">1</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">5</span> <span class="mi">9</span> <span class="mi">8</span> <span class="mi">9</span><span class="p">]]]</span>
+</code></pre></div>
+
+
+<p>Given three 3-arrays <code>A</code>, <code>B</code>, and <code>C</code>, the triangle product can be implemented by the function <code>mul_3</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mul_3</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">p</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">B</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="n">xrange</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">xrange</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="n">xrange</span><span class="p">(</span><span class="n">c</span><span class="p">)):</span>
+        <span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">))</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="n">xrange</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="n">xrange</span><span class="p">(</span><span class="n">q</span><span class="p">),</span> <span class="n">xrange</span><span class="p">(</span><span class="n">r</span><span class="p">)):</span>
+            <span class="n">P</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span> <span class="o">*</span> <span class="n">B</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">z</span><span class="p">]</span> <span class="o">*</span> <span class="n">C</span><span class="p">[</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">k</span><span class="p">]</span>
+        <span class="n">D</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">P</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">D</span>
+</code></pre></div>
+
+
+<p>This is a very yanky implementation, since it implicitly assumes that the size of the three input arrays are such that the triangle product exists. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">q</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random_integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random_integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">r</span><span class="p">))</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random_integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
+
+<span class="n">D</span> <span class="o">=</span> <span class="n">mul_3</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Here <code>A</code> has size <span class="math">\(\left(2, 3, 4\right)\)</span>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[[</span><span class="mi">4</span> <span class="mi">3</span> <span class="mi">0</span> <span class="mi">3</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">5</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">8</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">3</span><span class="p">]]</span>
+
+ <span class="p">[[</span><span class="mi">3</span> <span class="mi">7</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">9</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">4</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">7</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">7</span><span class="p">]]]</span>
+</code></pre></div>
+
+
+<p><code>B</code> has size <span class="math">\(\left(3, 2, 5\right)\)</span>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[[</span><span class="mi">2</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">5</span> <span class="mi">6</span> <span class="mi">8</span> <span class="mi">4</span> <span class="mi">1</span><span class="p">]]</span>
+
+ <span class="p">[[</span><span class="mi">4</span> <span class="mi">9</span> <span class="mi">8</span> <span class="mi">1</span> <span class="mi">1</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">7</span> <span class="mi">9</span> <span class="mi">9</span> <span class="mi">3</span> <span class="mi">6</span><span class="p">]]</span>
+
+ <span class="p">[[</span><span class="mi">7</span> <span class="mi">2</span> <span class="mi">0</span> <span class="mi">3</span> <span class="mi">5</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">9</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">6</span> <span class="mi">4</span><span class="p">]]]</span>
+</code></pre></div>
+
+
+<p><code>C</code> has size <span class="math">\(\left(4, 5, 2\right)\)</span>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[[</span><span class="mi">4</span> <span class="mi">3</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">4</span> <span class="mi">4</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">8</span> <span class="mi">4</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">3</span> <span class="mi">7</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">5</span> <span class="mi">5</span><span class="p">]]</span>
+
+ <span class="p">[[</span><span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">5</span> <span class="mi">9</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">3</span> <span class="mi">0</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">5</span> <span class="mi">0</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span><span class="p">]]</span>
+
+ <span class="p">[[</span><span class="mi">4</span> <span class="mi">2</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">0</span> <span class="mi">3</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">2</span> <span class="mi">0</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">7</span> <span class="mi">5</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">9</span> <span class="mi">0</span><span class="p">]]</span>
+
+ <span class="p">[[</span><span class="mi">2</span> <span class="mi">7</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">2</span> <span class="mi">9</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">3</span> <span class="mi">2</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">3</span> <span class="mi">4</span><span class="p">]]]</span>
+</code></pre></div>
+
+
+<p>and <code>D</code> has size <span class="math">\(\left(2, 2, 2\right)\)</span>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[[</span> <span class="mf">2206.</span>  <span class="mf">2374.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">3832.</span>  <span class="mf">3985.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">3386.</span>  <span class="mf">3821.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">5417.</span>  <span class="mf">5907.</span><span class="p">]]]</span>
+</code></pre></div>
+
+
+<p>Now lets consider three cubic 3-arrays with the same size:</p>
+<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random_integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random_integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random_integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+</code></pre></div>
+
+
+<p>You can compute six triangle products corresponding to the six possible permutations of the inputs:
+</p>
+<div class="math">$$ \operatorname{mul}_{3}\left(\mathbf{X}, \mathbf{Y}, \mathbf{Z} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Y}, \mathbf{Z}, \mathbf{X} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Z}, \mathbf{X}, \mathbf{Y} \right), $$</div>
+<div class="math">$$ \operatorname{mul}_{3}\left(\mathbf{Z}, \mathbf{Y}, \mathbf{X} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{Y}, \mathbf{X}, \mathbf{Z} \right), \qquad \operatorname{mul}_{3}\left(\mathbf{X}, \mathbf{Z}, \mathbf{Y} \right). $$</div>
+<p>
+Each of these products yields a different 3-array. Explicitly, <code>mul_3(X, Y, Z)</code> gives:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[[</span> <span class="mf">2917.</span>  <span class="mf">3313.</span>  <span class="mf">1870.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2174.</span>  <span class="mf">2617.</span>  <span class="mf">1412.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">3773.</span>  <span class="mf">4375.</span>  <span class="mf">2698.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">2658.</span>  <span class="mf">2780.</span>  <span class="mf">1955.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2173.</span>  <span class="mf">2202.</span>  <span class="mf">1575.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">3498.</span>  <span class="mf">3706.</span>  <span class="mf">2647.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">3017.</span>  <span class="mf">4176.</span>  <span class="mf">1873.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2775.</span>  <span class="mf">3216.</span>  <span class="mf">1796.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">4315.</span>  <span class="mf">5436.</span>  <span class="mf">2937.</span><span class="p">]]]</span>
+</code></pre></div>
+
+
+<p><code>mul_3(Y, Z, X)</code> gives:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[[</span> <span class="mf">2268.</span>  <span class="mf">2044.</span>  <span class="mf">4254.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2243.</span>  <span class="mf">1942.</span>  <span class="mf">3578.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">1716.</span>  <span class="mf">1550.</span>  <span class="mf">3384.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">2904.</span>  <span class="mf">2824.</span>  <span class="mf">5646.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2578.</span>  <span class="mf">1982.</span>  <span class="mf">4482.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">1880.</span>  <span class="mf">2172.</span>  <span class="mf">4745.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">3205.</span>  <span class="mf">1942.</span>  <span class="mf">4949.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2626.</span>  <span class="mf">1557.</span>  <span class="mf">3865.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2362.</span>  <span class="mf">1574.</span>  <span class="mf">3979.</span><span class="p">]]]</span>
+</code></pre></div>
+
+
+<p><code>mul_3(Z, X, Y)</code> gives:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[[</span> <span class="mf">3406.</span>  <span class="mf">2945.</span>  <span class="mf">3785.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2895.</span>  <span class="mf">3055.</span>  <span class="mf">3398.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">4697.</span>  <span class="mf">4184.</span>  <span class="mf">5530.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">2469.</span>  <span class="mf">2436.</span>  <span class="mf">3299.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2165.</span>  <span class="mf">2311.</span>  <span class="mf">2924.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">3114.</span>  <span class="mf">2966.</span>  <span class="mf">4680.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">2491.</span>  <span class="mf">2186.</span>  <span class="mf">2813.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2238.</span>  <span class="mf">2178.</span>  <span class="mf">2546.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">3777.</span>  <span class="mf">3448.</span>  <span class="mf">4690.</span><span class="p">]]]</span>
+</code></pre></div>
+
+
+<p><code>mul_3(Z, Y, X)</code> gives:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[[</span> <span class="mf">2826.</span>  <span class="mf">2768.</span>  <span class="mf">4890.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2035.</span>  <span class="mf">2209.</span>  <span class="mf">3423.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">3515.</span>  <span class="mf">3538.</span>  <span class="mf">6302.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">2528.</span>  <span class="mf">1922.</span>  <span class="mf">3687.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">1987.</span>  <span class="mf">1414.</span>  <span class="mf">2816.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">3282.</span>  <span class="mf">2555.</span>  <span class="mf">5036.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">2446.</span>  <span class="mf">2282.</span>  <span class="mf">3737.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">1475.</span>  <span class="mf">1930.</span>  <span class="mf">3222.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2569.</span>  <span class="mf">2898.</span>  <span class="mf">5009.</span><span class="p">]]]</span>
+</code></pre></div>
+
+
+<p><code>mul_3(Y, X, Z)</code> gives:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[[</span> <span class="mf">2481.</span>  <span class="mf">2799.</span>  <span class="mf">1741.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2148.</span>  <span class="mf">2367.</span>  <span class="mf">1561.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">3692.</span>  <span class="mf">4362.</span>  <span class="mf">2781.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">3121.</span>  <span class="mf">3833.</span>  <span class="mf">2235.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2612.</span>  <span class="mf">3306.</span>  <span class="mf">1817.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">4718.</span>  <span class="mf">5600.</span>  <span class="mf">3897.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">2579.</span>  <span class="mf">3197.</span>  <span class="mf">1738.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2491.</span>  <span class="mf">2674.</span>  <span class="mf">1571.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">4290.</span>  <span class="mf">4765.</span>  <span class="mf">2884.</span><span class="p">]]]</span>
+</code></pre></div>
+
+
+<p><code>mul_3(X, Z, Y)</code> gives:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[[</span> <span class="mf">2678.</span>  <span class="mf">2724.</span>  <span class="mf">4463.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">1895.</span>  <span class="mf">2292.</span>  <span class="mf">3367.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">1890.</span>  <span class="mf">2000.</span>  <span class="mf">3541.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">2439.</span>  <span class="mf">2352.</span>  <span class="mf">3538.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2421.</span>  <span class="mf">1986.</span>  <span class="mf">3397.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2128.</span>  <span class="mf">2008.</span>  <span class="mf">3253.</span><span class="p">]]</span>
+
+ <span class="p">[[</span> <span class="mf">2381.</span>  <span class="mf">3040.</span>  <span class="mf">4967.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">2234.</span>  <span class="mf">2564.</span>  <span class="mf">4066.</span><span class="p">]</span>
+  <span class="p">[</span> <span class="mf">1952.</span>  <span class="mf">2343.</span>  <span class="mf">3900.</span><span class="p">]]]</span>
+</code></pre></div>
+
+
+<p>Thus, the 2-array notion of non-commutativity carries over to 3-arrays with the triangle product.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

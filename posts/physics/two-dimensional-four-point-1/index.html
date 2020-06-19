@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Two-Dimensional Four-Point Kinematics (1) | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/two-dimensional-four-point-1/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="A look at the 2-to-2 relativistic kinematics in two-dimensional spacetime.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Two-Dimensional Four-Point Kinematics (1)
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2016-11-04T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Fri 04 November 2016
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/kinematics.html">#kinematics</a>,               <a href="https://meirizarrygelpi.github.io/tag/two-dimensional.html">#two-dimensional</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>You have two incoming slow momenta (<span class="math">\(P_{1}\)</span> and <span class="math">\(P_{2}\)</span>) and two outgoing slow momenta (<span class="math">\(P_{3}\)</span> and <span class="math">\(P_{4}\)</span>). In order to be consistent with <a href="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-elastic/">the non-relativistic result</a>, I will assume elasticity:
+</p>
+<div class="math">$$ \Vert P_{1} \Vert^{2} = \Vert P_{3} \Vert^{2}, \qquad \Vert P_{2} \Vert^{2} = \Vert P_{4} \Vert^{2}. $$</div>
+<h2>Energy-Momentum Vectors</h2>
+<p>The four external slow momenta can be written as
+</p>
+<div class="math">$$ P_{1} = \begin{pmatrix} m_{1} \cosh{(\xi_{1})} &amp; m_{1} \sinh{(\xi_{1})} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{2} = \begin{pmatrix} m_{2} \cosh{(\xi_{2})} &amp; m_{2} \sinh{(\xi_{2})} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{3} = \begin{pmatrix} m_{1} \cosh{(\xi_{3})} &amp; m_{1} \sinh{(\xi_{3})} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{4} = \begin{pmatrix} m_{2} \cosh{(\xi_{4})} &amp; m_{2} \sinh{(\xi_{4})} \end{pmatrix}. $$</div>
+<h2>Conservation</h2>
+<p>The conservation of energy leads to
+</p>
+<div class="math">$$ m_{1} \cosh{(\xi_{1})} + m_{2} \cosh{(\xi_{2})} = m_{1} \cosh{(\xi_{3})} + m_{2} \cosh{(\xi_{4})}. $$</div>
+<p>
+Similarly, the conservation of momentum leads to
+</p>
+<div class="math">$$ m_{1} \sinh{(\xi_{1})} + m_{2} \sinh{(\xi_{2})} = m_{1} \sinh{(\xi_{3})} + m_{2} \sinh{(\xi_{4})}. $$</div>
+<p>
+These two expressions can be combined to yield two equivalent expressions:
+</p>
+<div class="math">$$ m_{1} \exp{(\xi_{1})} + m_{2} \exp{(\xi_{2})} = m_{1} \exp{(\xi_{3})} + m_{2} \exp{(\xi_{4})}; $$</div>
+<div class="math">$$ \frac{m_{1}}{\exp{(\xi_{1})}} + \frac{m_{2}}{\exp{(\xi_{2})}} = \frac{m_{1}}{\exp{(\xi_{3})}} + \frac{m_{2}}{\exp{(\xi_{4})}}. $$</div>
+<h2>2-Mandelstam Invariants</h2>
+<p>You can introduce three <strong>2-Mandelstam</strong> invariants:
+</p>
+<div class="math">$$ s = -(P_{1} + P_{2})^{2} = -(P_{3} + P_{4})^{2}; $$</div>
+<div class="math">$$ t = -(P_{1} - P_{3})^{2} = -(P_{2} - P_{4})^{2}; $$</div>
+<div class="math">$$ u = -(P_{1} - P_{4})^{2} = -(P_{2} - P_{3})^{2}. $$</div>
+<p>
+Due to the conservation laws, you have
+</p>
+<div class="math">$$ s + t + u = 2 m_{1}^{2} + 2 m_{2}^{2}. $$</div>
+<h2>Regge-Mandelstam Invariants</h2>
+<p>You can introduce six <strong>Regge-Mandelstam</strong> invariants:
+</p>
+<div class="math">$$ r_{12} \equiv -\frac{P_{1} \cdot P_{2}}{m_{1} m_{2}} = \frac{s - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}} = \cosh{(\xi_{1} - \xi_{2})}; $$</div>
+<div class="math">$$ r_{34} \equiv -\frac{P_{3} \cdot P_{4}}{m_{1} m_{2}} = \frac{s - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}} = \cosh{(\xi_{3} - \xi_{4})}; $$</div>
+<div class="math">$$ r_{13} \equiv -\frac{P_{1} \cdot P_{3}}{m_{1}^{2}} = \frac{2m_{1}^{2} - t}{2 m_{1}^{2}} = \cosh{(\xi_{1} - \xi_{3})}; $$</div>
+<div class="math">$$ r_{24} \equiv -\frac{P_{2} \cdot P_{4}}{m_{2}^{2}} = \frac{2m_{2}^{2} - t}{2 m_{2}^{2}} = \cosh{(\xi_{2} - \xi_{4})}; $$</div>
+<div class="math">$$ r_{14} \equiv -\frac{P_{1} \cdot P_{4}}{m_{1} m_{2}} = \frac{m_{1}^{2} + m_{2}^{2} - u}{2 m_{1} m_{2}} = \cosh{(\xi_{1} - \xi_{4})}; $$</div>
+<div class="math">$$ r_{23} \equiv -\frac{P_{2} \cdot P_{3}}{m_{1} m_{2}} = \frac{m_{1}^{2} + m_{2}^{2} - u}{2 m_{1} m_{2}} = \cosh{(\xi_{2} - \xi_{3})}. $$</div>
+<p>
+Since the hyperbolic cosine satisfies
+</p>
+<div class="math">$$ \cosh{(x)} \geq 1; $$</div>
+<p>
+you have the conditions:
+</p>
+<div class="math">$$ s \geq (m_{1} + m_{2})^{2}, \qquad t \leq 0, \qquad u \leq (m_{1} - m_{2})^{2}. $$</div>
+<p>
+These conditions define the range of values allowed for the 2-Mandelstam invariants. The first one says that <span class="math">\(s\)</span> only takes positive values above the threshold value <span class="math">\((m_{1} + m_{2})^{2}\)</span>. Thus, the vector <span class="math">\(P_{s} = P_{1} + P_{2} = P_{3} + P_{4}\)</span> is slow and you can write
+</p>
+<div class="math">$$ P_{s} = \begin{pmatrix} \sqrt{s} \cosh{(\xi_{s})} &amp; \sqrt{s} \sinh{(\xi_{s})} \end{pmatrix}. $$</div>
+<p>
+The second condition says that <span class="math">\(t\)</span> only takes negative values. This means that the vector <span class="math">\(P_{t} = P_{1} - P_{3} = P_{4} - P_{2}\)</span> is fast and you can write:
+</p>
+<div class="math">$$ P_{t} = \begin{pmatrix} \sqrt{-t} \sinh{(\rho_{t})} &amp; \sqrt{-t} \cosh{(\rho_{t})} \end{pmatrix}. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ P_{s} \cdot P_{t} = \sqrt{s} \sqrt{-t} \sinh{(\xi_{s} - \rho_{t})}. $$</div>
+<p>
+When <span class="math">\(\xi_{s} = 0\)</span> and <span class="math">\(\rho_{t} = 0\)</span>, you have the center-of-momentum frame.</p>
+<p>Since <span class="math">\(r_{12} = r_{34}\)</span>, you have
+</p>
+<div class="math">$$ \cosh{(\xi_{1} - \xi_{2})} = \cosh{(\xi_{3} - \xi_{4})}. $$</div>
+<p>
+This has two solutions:
+</p>
+<div class="math">$$ \xi_{1} - \xi_{2} = \xi_{3} - \xi_{4}; $$</div>
+<p>
+or
+</p>
+<div class="math">$$ \xi_{1} - \xi_{2} = \xi_{4} - \xi_{3}. $$</div>
+<p>
+The first solution implies that
+</p>
+<div class="math">$$ \xi_{3} = \xi_{1} - \xi_{2} + \xi_{4}. $$</div>
+<p>
+Combining this with the conservation law gives
+</p>
+<div class="math">$$ \xi_{3} = \xi_{1}, \qquad \xi_{4} = \xi_{2}. $$</div>
+<p>
+This is the forward solution. The second solution is compatible with <span class="math">\(r_{14} = r_{23}\)</span>. Indeed, since you can write the slow rapidity in terms of the slow speed as
+</p>
+<div class="math">$$ \xi = \operatorname{atanh}{(v)}, $$</div>
+<p>
+it follows that
+</p>
+<div class="math">$$ \operatorname{atanh}{(v_{1})} - \operatorname{atanh}{(v_{2})} = \operatorname{atanh}{(v_{4})} - \operatorname{atanh}{(v_{3})}. $$</div>
+<p>
+This is the relativistic analog of the relation
+</p>
+<div class="math">$$ u_{1} - u_{2} = v_{2} - v_{1}; $$</div>
+<p>
+found for <a href="http://meirizarrygelpi.github.io/posts/physics/two-dimensional-elastic/">the non-relativistic problem</a>.</p>
+<p>Although <span class="math">\(r_{13} \neq r_{24}\)</span>, you have
+</p>
+<div class="math">$$ t = 2 m_{1}^{2} (1 - r_{13}) = 2 m_{2}^{2} (1 - r_{24}). $$</div>
+<p>
+This means that
+</p>
+<div class="math">$$ m_{1}^{2} (1 - \cosh{(\xi_{1} - \xi_{3})}) = m_{2}^{2} (1 - \cosh{(\xi_{2} - \xi_{4})}). $$</div>
+<p>
+But recall that
+</p>
+<div class="math">$$ \sinh^{2}{\left( \frac{x}{2} \right)} = \frac{\cosh{(x)} - 1}{2}. $$</div>
+<p>
+Thus,
+</p>
+<div class="math">$$ m_{1}^{2} \sinh^{2}{\left( \frac{\xi_{1} - \xi_{3}}{2} \right)} = m_{2}^{2} \sinh^{2}{\left( \frac{\xi_{2} - \xi_{4}}{2} \right)}. $$</div>
+<h2>Solving for the Outgoing Data</h2>
+<p>You can first write
+</p>
+<div class="math">$$ \xi_{4} = \xi_{1} - \xi_{2} + \xi_{3}. $$</div>
+<p>
+Then it follows that
+</p>
+<div class="math">$$ \exp{(\xi_{4})} = \frac{\exp{(\xi_{1})} \exp{(\xi_{3})}}{\exp{(\xi_{2})}}. $$</div>
+<p>
+From the conservation law you find
+</p>
+<div class="math">$$ m_{1} \exp{(\xi_{1})} + m_{2} \exp{(\xi_{2})} = m_{1} \exp{(\xi_{3})} + m_{2} \left( \frac{\exp{(\xi_{1})} \exp{(\xi_{3})}}{\exp{(\xi_{2})}} \right). $$</div>
+<p>
+This gives
+</p>
+<div class="math">$$ \exp{(\xi_{3})} = \left[\frac{ m_{1} \exp{(\xi_{1})} + m_{2} \exp{(\xi_{2})} }{m_{1} \exp{(\xi_{2})} + m_{2} \exp{(\xi_{1})} }\right] \exp{(\xi_{2})}. $$</div>
+<p>
+Plugin this back into the first expression gives
+</p>
+<div class="math">$$ \exp{(\xi_{4})} = \left[\frac{ m_{1} \exp{(\xi_{1})} + m_{2} \exp{(\xi_{2})} }{m_{1} \exp{(\xi_{2})} + m_{2} \exp{(\xi_{1})} }\right] \exp{(\xi_{1})}. $$</div>
+<p>
+The speeds can be introduced back via the relation
+</p>
+<div class="math">$$ v = \tanh{(\xi)} \quad \Longrightarrow \quad \exp{(2 \xi)} = \frac{1 + v}{1 - v}. $$</div>
+<p>
+You find
+</p>
+<div class="math">$$ \frac{\sqrt{1 + v_{3}}}{\sqrt{1 - v_{3}}} = \frac{\sqrt{1 + v_{2}}}{\sqrt{1 - v_{2}}} \frac{m_{1} \sqrt{(1 + v_{1})(1 - v_{2})} + m_{2} \sqrt{(1 - v_{1})(1 + v_{2})}}{m_{1} \sqrt{(1 - v_{1})(1 + v_{2})} + m_{2} \sqrt{(1 + v_{1})(1 - v_{2})}}; $$</div>
+<div class="math">$$ \frac{\sqrt{1 + v_{4}}}{\sqrt{1 - v_{4}}} = \frac{\sqrt{1 + v_{1}}}{\sqrt{1 - v_{1}}} \frac{m_{1} \sqrt{(1 + v_{1})(1 - v_{2})} + m_{2} \sqrt{(1 - v_{1})(1 + v_{2})}}{m_{1} \sqrt{(1 - v_{1})(1 + v_{2})} + m_{2} \sqrt{(1 + v_{1})(1 - v_{2})}}. $$</div>
+<p>
+This leads to the identity
+</p>
+<div class="math">$$ \frac{(1 + v_{3})(1 - v_{4})}{(1 - v_{3})(1 + v_{4})} = \frac{(1 + v_{2})(1 - v_{1})}{(1 - v_{2})(1 + v_{1})}. $$</div>
+<p>
+When <span class="math">\(m_{2} = m_{1}\)</span>, this solution reduces to
+</p>
+<div class="math">$$ \xi_{3} = \xi_{2}, \qquad \xi_{4} = \xi_{1}. $$</div>
+<p>
+This is the exchange solution.</p>
+<p>The article in Wikipedia on <a href="https://en.wikipedia.org/wiki/Elastic_collision">elastic collisions</a> was helpful and it was fun to verify its results.</p>
+<h2>Composite Rapidities</h2>
+<p>The slow rapidity <span class="math">\(\xi_{s}\)</span> associated to <span class="math">\(P_{s}\)</span> can be writen as
+</p>
+<div class="math">$$ \xi_{s} = \log{\left( \frac{m_{1} \exp{(\xi_{1})} + m_{2} \exp{(\xi_{2})}}{\sqrt{s}} \right)} = \log{\left( \frac{m_{1} \exp{(\xi_{3})} + m_{2} \exp{(\xi_{4})}}{\sqrt{s}} \right)}. $$</div>
+<p>
+Similarly, the fast rapidity <span class="math">\(\rho_{t}\)</span> associated to <span class="math">\(P_{t}\)</span> can be written as
+</p>
+<div class="math">$$ \rho_{t} = \log{\left( \frac{m_{1} \exp{(\xi_{1})} - m_{1} \exp{(\xi_{3})}}{\sqrt{-t}} \right)} = \log{\left( \frac{m_{2} \exp{(\xi_{4})} - m_{2} \exp{(\xi_{2})}}{\sqrt{-t}} \right)}. $$</div>
+<h2>Regimes</h2>
+<p>The condition on <span class="math">\(u\)</span> does not allow for a specific kind of rapidity for the vector <span class="math">\(P_{u} = P_{1} - P_{4} = P_{3} - P_{2}\)</span>. Depending on the values of <span class="math">\(s\)</span> and <span class="math">\(t\)</span>, you can have all three cases.</p>
+<h3>Slow <span class="math">\(u\)</span>-channel</h3>
+<p>In the region
+</p>
+<div class="math">$$ 0 &lt; u \leq (m_{1} - m_{2})^{2} $$</div>
+<p>
+the vector <span class="math">\(P_{u}\)</span> is slow and given by
+</p>
+<div class="math">$$ P_{u} = \begin{pmatrix} \sqrt{u} \cosh{(\xi_{u})} &amp; \sqrt{u} \sinh{(\xi_{u})} \end{pmatrix}. $$</div>
+<p>
+Then
+</p>
+<div class="math">$$ P_{s} \cdot P_{u} = - \sqrt{s} \sqrt{u} \cosh{(\xi_{s} - \xi_{u})}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ P_{t} \cdot P_{u} = - \sqrt{-t} \sqrt{u} \sinh{(\rho_{t} - \xi_{u})}. $$</div>
+<p>
+The composite slow rapidity <span class="math">\(\xi_{u}\)</span> is given by
+</p>
+<div class="math">$$ \xi_{u} = \log{\left( \frac{m_{1} \exp{(\xi_{1})} - m_{2} \exp{(\xi_{4})}}{\sqrt{u}} \right)} = \log{\left( \frac{m_{1} \exp{(\xi_{3})} - m_{2} \exp{(\xi_{2})}}{\sqrt{u}} \right)}. $$</div>
+<h3>Null <span class="math">\(u\)</span>-channel</h3>
+<p>If <span class="math">\(u = 0\)</span>, then the vector <span class="math">\(P_{u}\)</span> is null and can be written as
+</p>
+<div class="math">$$ P_{u} = \begin{pmatrix} k_{u} &amp; k_{u} \end{pmatrix}. $$</div>
+<p>
+Then
+</p>
+<div class="math">$$ P_{s} \cdot P_{u} = \sqrt{s} k_{u} \exp{(-\xi_{s})}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ P_{t} \cdot P_{u} = \sqrt{-t} k_{u} \exp{(\rho_{t})}. $$</div>
+<p>
+You also have
+</p>
+<div class="math">$$ k_{u} = m_{1} \cosh{(\xi_{1})} - m_{2} \cosh{(\xi_{4})} = m_{1} \sinh{(\xi_{1})} - m_{2} \sinh{(\xi_{4})}. $$</div>
+<p>
+From here it follows that
+</p>
+<div class="math">$$ \xi_{4} = \xi_{1} - \log{\left( \frac{m_{1}}{m_{2}} \right)}. $$</div>
+<p>
+Using the conservation law, you can also write
+</p>
+<div class="math">$$ k_{u} = m_{1} \cosh{(\xi_{3})} - m_{2} \cosh{(\xi_{2})} = m_{1} \sinh{(\xi_{3})} - m_{2} \sinh{(\xi_{2})}. $$</div>
+<p>
+From here it follows that
+</p>
+<div class="math">$$ \xi_{3} = \xi_{2} + \log{\left( \frac{m_{1}}{m_{2}} \right)}. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ \xi_{1} + \xi_{2} = \xi_{3} + \xi_{4}. $$</div>
+<h3>Fast <span class="math">\(u\)</span>-channel</h3>
+<p>If <span class="math">\(u &lt; 0\)</span>, then the vector <span class="math">\(P_{u}\)</span> is fast and given by
+</p>
+<div class="math">$$ P_{u} = \begin{pmatrix} \sqrt{-u} \sinh{(\rho_{u})} &amp; \sqrt{-u} \cosh{(\rho_{u})} \end{pmatrix}. $$</div>
+<p>
+Then
+</p>
+<div class="math">$$ P_{s} \cdot P_{u} = \sqrt{s} \sqrt{-u} \sinh{(\xi_{s} - \rho_{u})}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ P_{t} \cdot P_{u} = \sqrt{-t} \sqrt{-u} \cosh{(\rho_{t} - \rho_{u})}. $$</div>
+<p>
+The composite fast rapidity <span class="math">\(\rho_{u}\)</span> can be written as
+</p>
+<div class="math">$$ \rho_{u} = \log{\left( \frac{m_{1} \exp{(\xi_{1})} - m_{2} \exp{(\xi_{4})}}{\sqrt{-u}} \right)} = \log{\left( \frac{m_{1} \exp{(\xi_{3})} - m_{2} \exp{(\xi_{2})}}{\sqrt{-u}} \right)}. $$</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

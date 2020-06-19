@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Euler's Formula for Involutions | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/eulers-formula-for-involutions/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Understanding different representations of the identity matrix when working with an involution.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Euler's Formula for Involutions
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-04-08T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Sun 08 April 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83702x.html">#8.370.2x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Euler's formula for scalar complex numbers is
+</p>
+<div class="math">\begin{equation*}
+    \exp{(iz)} = \cos{(z)} + i \sin{(z)}
+\end{equation*}</div>
+<p>
+Recall that
+</p>
+<div class="math">\begin{align*}
+    \cos{(z_{k})} &amp;= 1 &amp; \sin{(z_{k})} &amp;= 0 &amp; z_{k} &amp;= 2k \pi &amp; k &amp;\in \mathbb{Z} \\
+    \cos{(z_{l})} &amp;= -1 &amp; \sin{(z_{l})} &amp;= 0 &amp; z_{l} &amp;= (2l-1) \pi &amp; l &amp;\in \mathbb{Z} \\
+    \cos{(z_{m})} &amp;= 0 &amp; \sin{(z_{m})} &amp;= 1 &amp; z_{m} &amp;= \frac{(4m+1) \pi}{2} &amp; m &amp;\in \mathbb{Z} \\
+    \cos{(z_{n})} &amp;= 0 &amp; \sin{(z_{n})} &amp;= -1 &amp; z_{n} &amp;= \frac{(4n-1) \pi}{2} &amp; n &amp;\in \mathbb{Z}
+\end{align*}</div>
+<p>
+Thus, you have the exponential representations
+</p>
+<div class="math">\begin{align*}
+    1 &amp;= \exp{[2 k \pi i]} &amp; {-1} &amp;= \exp{[(2l - 1) \pi i]} &amp; i &amp;= \exp{\left[ \frac{(4m+1) \pi i}{2} \right]} &amp; {-i} &amp;= \exp{\left[ \frac{(4n-1) \pi i}{2} \right]}
+\end{align*}</div>
+<p>
+Now consider taking the matrix exponential of a matrix proportional to the identity matrix <span class="math">\(I\)</span>:
+</p>
+<div class="math">\begin{equation*}
+    \exp{(izI)} = I \left[\cos{(z)} + i \sin{(z)}\right]
+\end{equation*}</div>
+<p>
+Thus, you have the following exponential representations:
+</p>
+<div class="math">\begin{align*}
+    I &amp;= \exp{[2 k \pi i I]} &amp; {-I} &amp;= \exp{[(2l - 1) \pi i I]} &amp; iI &amp;= \exp{\left[ \frac{(4m+1) \pi i}{2}I \right]} &amp; {-i}I &amp;= \exp{\left[ \frac{(4n-1) \pi i}{2}I \right]}
+\end{align*}</div>
+<p>
+Let the matrix <span class="math">\(A\)</span> be an involution:
+</p>
+<div class="math">\begin{equation*}
+    A^{2} = I
+\end{equation*}</div>
+<p>
+Then
+</p>
+<div class="math">\begin{equation*}
+    \exp{(iz A)} = I \cos{(z)} + i A \sin{(z)}
+\end{equation*}</div>
+<p>
+Now you have the following exponential representations:
+</p>
+<div class="math">\begin{align*}
+    I &amp;= \exp{\left[ 2 k \pi i A \right]} &amp; k &amp;\in \mathbb{Z} \\
+    {-I} &amp;= \exp{\left[ (2 l - 1) \pi i A \right]} &amp; l &amp;\in \mathbb{Z} \\
+    iA &amp;= \exp{\left[ \frac{1}{2} (4m+1) \pi i A \right]} &amp; m &amp;\in \mathbb{Z} \\
+    {-iA} &amp;= \exp{\left[ \frac{1}{2} (4n-1) \pi i A \right]} &amp; n &amp;\in \mathbb{Z}
+\end{align*}</div>
+<p>
+Using the above result, you can have another exponential representation of the identity:
+</p>
+<div class="math">\begin{align*}
+    I &amp;= \exp{\left[ (2k - 1) \pi i I + (2l - 1) \pi i A \right]} &amp; k, l &amp;\in \mathbb{Z}
+\end{align*}</div>
+<p>
+and two exponential representations of the involution:
+</p>
+<div class="math">\begin{align*}
+    A &amp;= \exp{\left[ \frac{1}{2}(4k-1) \pi i I + \frac{1}{2} (4l+1) \pi i A \right]} &amp; k, l &amp;\in \mathbb{Z} \\
+    A &amp;= \exp{\left[ \frac{1}{2}(4m+1) \pi i I + \frac{1}{2} (4n-1) \pi i A \right]} &amp; m, n &amp;\in \mathbb{Z}
+\end{align*}</div>
+<p>
+You can define the principal values as the cases when <span class="math">\(k = l = m = n = 0\)</span>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

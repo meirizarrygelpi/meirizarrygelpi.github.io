@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  More on CNOT gates | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/more-on-cnot-gates/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="More on the many possibilities for a controlled gate.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  More on CNOT gates
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-03-25T09:18:40-04:00">
+          <i class="fas fa-clock"></i>
+          Sun 25 March 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83702x.html">#8.370.2x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>For 2-qubit state vectors, there are two traditional CNOT gates:
+</p>
+<div class="math">\begin{align*}
+    \operatorname{CNOT}_{4}(1, 2) &amp;= \begin{bmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 1 &amp; 0
+    \end{bmatrix}, &amp; \operatorname{CNOT}_{4}(2, 1) &amp;= \begin{bmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0
+    \end{bmatrix}
+\end{align*}</div>
+<p>
+Here, <span class="math">\(\operatorname{CNOT}_{4}(1, 2)\)</span> uses qubit 1 as the <strong>control qubit</strong>, and qubit 2 as the <strong>target qubit</strong>. The other CNOT gate swaps the role of qubits 1 and 2. These two gate are related:
+</p>
+<div class="math">\begin{align*}
+    \operatorname{CNOT}_{4}(2, 1) &amp;= H_{4} \operatorname{CNOT}_{4}(1, 2) H_{4}, &amp; H_{4} &amp;= H_{2} \otimes H_{2}, &amp; H_{2} &amp;= \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 &amp; 1 \\
+        1 &amp; -1
+    \end{bmatrix}
+\end{align*}</div>
+<p>
+I mentioned this relation earlier. In my opinion, this relation is not obvious. The more obvious relation would involve SWAP gates:
+</p>
+<div class="math">\begin{align*}
+    \operatorname{CNOT}_{4}(2, 1) &amp;= \operatorname{SWAP}_{4}(1, 2) \operatorname{CNOT}_{4}(1, 2) \operatorname{SWAP}_{4}(1, 2), &amp; \operatorname{SWAP}_{4}(1, 2) &amp;= \begin{bmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1
+    \end{bmatrix}
+\end{align*}</div>
+<p>
+Indeed, the SWAP gate can be implemented in terms of CNOT gates:
+</p>
+<div class="math">\begin{equation*}
+    \operatorname{SWAP}_{4}(1, 2) = \operatorname{CNOT}_{4}(1, 2) \operatorname{CNOT}_{4}(2, 1) \operatorname{CNOT}_{4}(1, 2)
+\end{equation*}</div>
+<p>
+These controlled-NOT gates apply the NOT gate if the control qubit is set to 1:
+</p>
+<div class="math">\begin{align*}
+    \operatorname{CNOT}_{4}(1, 2) |00 \rangle &amp;= |00 \rangle, &amp; \operatorname{CNOT}_{4}(1, 2) |01 \rangle &amp;= |01 \rangle, \\
+    \operatorname{CNOT}_{4}(1, 2) |10 \rangle &amp;= |11 \rangle, &amp; \operatorname{CNOT}_{4}(1, 2) |11 \rangle &amp;= |10 \rangle
+\end{align*}</div>
+<p>
+You can denote this explicitly with the following notation:
+</p>
+<div class="math">\begin{align*}
+    \operatorname{CNOT}_{4}(1, 2 | 1) &amp;= \begin{bmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 1 &amp; 0
+    \end{bmatrix}, &amp; \operatorname{CNOT}_{4}(2, 1 | 1) &amp;= \begin{bmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0
+    \end{bmatrix}
+\end{align*}</div>
+<p>
+You can distinguish these gates from the case when applying the NOT if the control qubit is set to 0:
+</p>
+<div class="math">\begin{align*}
+    \operatorname{CNOT}_{4}(1, 2 | 0) |00 \rangle &amp;= |01 \rangle, &amp; \operatorname{CNOT}_{4}(1, 2 | 0) |01 \rangle &amp;= |00 \rangle, \\
+    \operatorname{CNOT}_{4}(1, 2 | 0) |10 \rangle &amp;= |10 \rangle, &amp; \operatorname{CNOT}_{4}(1, 2 | 0) |11 \rangle &amp;= |11 \rangle
+\end{align*}</div>
+<p>
+That is
+</p>
+<div class="math">\begin{align*}
+    \operatorname{CNOT}_{4}(1, 2 | 0) &amp;= \begin{bmatrix}
+        0 &amp; 1 &amp; 0 &amp; 0 \\
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1
+    \end{bmatrix}, &amp; \operatorname{CNOT}_{4}(2, 1 | 0) &amp;= \begin{bmatrix}
+        0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 \\
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1
+    \end{bmatrix}
+\end{align*}</div>
+<p>
+Note that these two sets of controlled gates are related via
+</p>
+<div class="math">\begin{align*}
+    \operatorname{CNOT}_{4}(1, 2 | 0) &amp;= \operatorname{NOT}_{4}(1) \operatorname{CNOT}_{4}(1, 2 | 1) \operatorname{NOT}_{4}(1), \\
+    \operatorname{CNOT}_{4}(2, 1 | 0) &amp;= \operatorname{NOT}_{4}(2) \operatorname{CNOT}_{4}(2, 1 | 1) \operatorname{NOT}_{4}(2)
+\end{align*}</div>
+<p>
+Here the 4-dimensional NOT gates are given by
+</p>
+<div class="math">\begin{align*}
+    \operatorname{NOT}_{4}(1) &amp;= \operatorname{NOT}_{2} \otimes I_{2}, &amp; \operatorname{NOT}_{4}(2) &amp;= I_{2} \otimes \operatorname{NOT}_{2}, &amp; \operatorname{NOT}_{2} &amp;= \begin{bmatrix}
+        0 &amp; 1 \\ 1 &amp; 0
+    \end{bmatrix}
+\end{align*}</div>
+<p>
+In circuit diagrams, the controlled gates when the control qubit is set to 1 are denoted with a solid black circle, and the controlled gates when the control qubit is set to 0 are denoted with a solid white circle.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>
