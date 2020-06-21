@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Two-Dimensional Four-Point Kinematics (5) | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/two-dimensional-four-point-5/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/flatly.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="A look at the 2-to-2 relativistic kinematics in two-dimensional spacetime with null quanta.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Two-Dimensional Four-Point Kinematics (5)
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2016-11-17T00:00:00-05:00">
+          <i class="fas fa-clock"></i>
+          Thu 17 November 2016
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/kinematics.html">#kinematics</a>,               <a href="https://meirizarrygelpi.github.io/tag/two-dimensional.html">#two-dimensional</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>You have two incoming <strong>null</strong> momenta (<span class="math">\(P_{1}\)</span> and <span class="math">\(P_{2}\)</span>) and two outgoing <strong>null</strong> momenta (<span class="math">\(P_{3}\)</span> and <span class="math">\(P_{4}\)</span>). This problem does not have a non-relativistic limit.</p>
+<h2>Energy-Momentum Vectors</h2>
+<p>In a more traditional approach, I would have chosen the four external null momenta as
+</p>
+<div class="math">$$ P_{i} = \begin{pmatrix} k_{i} &amp; k_{i} \end{pmatrix}. $$</div>
+<p>
+But then any sum or difference of momenta will be null too. This leads to all invariants being zero.</p>
+<p>The four external null momenta are
+</p>
+<div class="math">$$ P_{1} = \begin{pmatrix} k_{1} &amp; k_{1} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{2} = \begin{pmatrix} k_{2} &amp; -k_{2} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{3} = \begin{pmatrix} k_{3} &amp; k_{3} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{4} = \begin{pmatrix} k_{4} &amp; -k_{4} \end{pmatrix}. $$</div>
+<p>
+Here <span class="math">\(k_{1} &gt; 0\)</span>, <span class="math">\(k_{2} &gt; 0\)</span>, <span class="math">\(k_{3} &gt; 0\)</span>, and <span class="math">\(k_{4} &gt; 0\)</span>.</p>
+<h2>Conservation</h2>
+<p>The conservation of energy leads to
+</p>
+<div class="math">$$ k_{1} + k_{2} = k_{3} + k_{4}. $$</div>
+<p>
+Similarly, the conservation of momentum leads to
+</p>
+<div class="math">$$ k_{1} - k_{2} = k_{3} - k_{4}. $$</div>
+<p>
+These two expressions can be combined to yield two equivalent expressions:
+</p>
+<div class="math">$$ k_{1} = k_{3}; \qquad k_{2} = k_{4}. $$</div>
+<p>
+That is, this particular set of external momenta corresponds to the identity permutation.</p>
+<h2>2-Mandelstam Invariants</h2>
+<p>You can introduce three <strong>2-Mandelstam</strong> invariants:
+</p>
+<div class="math">$$ s = -(P_{1} + P_{2})^{2} = -(P_{3} + P_{4})^{2}; $$</div>
+<div class="math">$$ t = -(P_{1} - P_{3})^{2} = -(P_{2} - P_{4})^{2}; $$</div>
+<div class="math">$$ u = -(P_{1} - P_{4})^{2} = -(P_{2} - P_{3})^{2}. $$</div>
+<p>
+Due to the conservation laws, you have
+</p>
+<div class="math">$$ s + t + u = 0. $$</div>
+<h2>Regge-Mandelstam Invariants</h2>
+<p>You can introduce six <strong>Regge-Mandelstam</strong> invariants:
+</p>
+<div class="math">$$ r_{12} \equiv -\frac{P_{1} \cdot P_{2}}{k_{1} k_{2}} = \frac{s}{2 k_{1} k_{2}} = 2; $$</div>
+<div class="math">$$ r_{34} \equiv -\frac{P_{3} \cdot P_{4}}{k_{3} k_{4}} = \frac{s}{2 k_{1} k_{2}} = 2; $$</div>
+<div class="math">$$ r_{13} \equiv -\frac{P_{1} \cdot P_{3}}{k_{1} k_{3}} = -\frac{t}{2 k_{1}^{2}} = 0; $$</div>
+<div class="math">$$ r_{24} \equiv -\frac{P_{2} \cdot P_{4}}{k_{2} k_{4}} = -\frac{t}{2 k_{2}^{2}} = 0; $$</div>
+<div class="math">$$ r_{14} \equiv -\frac{P_{1} \cdot P_{4}}{k_{1} k_{4}} = -\frac{u}{2 k_{1} k_{2}} = 2; $$</div>
+<div class="math">$$ r_{23} \equiv -\frac{P_{2} \cdot P_{3}}{k_{2} k_{3}} = -\frac{u}{2 k_{1} k_{2}} = 2. $$</div>
+<p>
+It follows that
+</p>
+<div class="math">$$ s \geq 0, \qquad t = 0, \qquad  u \leq 0. $$</div>
+<p>
+These conditions define the range of values allowed for the 2-Mandelstam invariants. The first one says that <span class="math">\(s\)</span> only takes positive values. Thus, the vector <span class="math">\(P_{s} = P_{1} + P_{2} = P_{3} + P_{4}\)</span> is slow and you can write
+</p>
+<div class="math">$$ P_{s} = \begin{pmatrix} \sqrt{s} \cosh{(\xi_{s})} &amp; \sqrt{s} \sinh{(\xi_{s})} \end{pmatrix}. $$</div>
+<p>
+The second condition says that <span class="math">\(t\)</span> is zero. But since <span class="math">\(k_{3} = k_{1}\)</span>, it follows that <span class="math">\(P_{3} = P_{1}\)</span> and thus the vector <span class="math">\(P_{t} = P_{1} - P_{3}\)</span> is identically zero. The third condition says that <span class="math">\(u\)</span> is negative. This means that the vector <span class="math">\(P_{u} = P_{1} - P_{4} = P_{3} - P_{2}\)</span> is fast and you can write
+</p>
+<div class="math">$$ P_{u} = \begin{pmatrix} \sqrt{-u} \sinh{(\rho_{u})} &amp; \sqrt{-u} \cosh{(\rho_{u})} \end{pmatrix}. $$</div>
+<p>
+However, since <span class="math">\(P_{s} \cdot P_{u} = 0\)</span>, you have <span class="math">\(\rho_{u} = \xi_{s}\)</span>.</p>
+<p>You can write <span class="math">\(k_{2}\)</span>, <span class="math">\(k_{3}\)</span>, and <span class="math">\(k_{4}\)</span> in terms of <span class="math">\(k_{1}\)</span> and <span class="math">\(s\)</span>:
+</p>
+<div class="math">$$ k_{2} = \frac{s}{4 k_{1}}, \qquad k_{3} = k_{1}, \qquad k_{4} = \frac{s}{4 k_{1}}. $$</div>
+<h2>Composite Rapidities</h2>
+<p>The slow rapidity <span class="math">\(\xi_{s}\)</span> associated to <span class="math">\(P_{s}\)</span> can be writen as
+</p>
+<div class="math">$$ \xi_{s} = \log{\left( \frac{2 k_{1}}{\sqrt{s}} \right)}. $$</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

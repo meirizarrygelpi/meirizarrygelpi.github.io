@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Quartic Functions 2 | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/quartic-functions-2/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/flatly.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="The other quartic functions.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Quartic Functions 2
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-03-30T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Fri 30 March 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83702x.html">#8.370.2x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Consider the following equation:
+</p>
+<div class="math">\begin{equation*}
+    \kappa^{4} = -1
+\end{equation*}</div>
+<p>
+The four solutions are
+</p>
+<div class="math">\begin{align*}
+    \kappa_{0} &amp;= \frac{1 + i}{\sqrt{2}} \equiv \kappa, &amp; \kappa_{1} &amp;= -\frac{1 - i}{\sqrt{2}} = -\lambda, &amp; \kappa_{2} &amp;= -\frac{1 + i}{\sqrt{2}} = -\kappa, &amp; \kappa_{3} &amp;= \frac{1 - i}{\sqrt{2}} \equiv \lambda
+\end{align*}</div>
+<p>
+Note that
+</p>
+<div class="math">\begin{align*}
+    \kappa + \lambda &amp;= \sqrt{2}, &amp; \kappa - \lambda &amp;= \sqrt{2}i, &amp; \kappa \lambda &amp;= 1, &amp; \kappa^{2} &amp;= i, &amp; \lambda^{2} &amp;= -i
+\end{align*}</div>
+<p>
+and
+</p>
+<div class="math">\begin{align*}
+    \kappa^{3} &amp;= i \kappa = - \lambda, &amp; \lambda^{3} &amp;= -i \lambda = -\kappa
+\end{align*}</div>
+<p>
+Now consider the following four functions:
+</p>
+<div class="math">\begin{align*}
+    g_{0}(z) &amp;\equiv \exp{(\kappa_{0} z)} = \exp{( \kappa z)} \\
+    g_{1}(z) &amp;\equiv \exp{(\kappa_{1} z)} = \exp{( - \lambda z)} \\
+    g_{2}(z) &amp;\equiv \exp{(\kappa_{2} z)} = \exp{( - \kappa z)} \\
+    g_{3}(z) &amp;\equiv \exp{(\kappa_{3} z)} = \exp{( \lambda z)}
+\end{align*}</div>
+<p>
+More explicitly:
+</p>
+<div class="math">\begin{align*}
+    g_{0}(z) &amp;= \exp{\left( \frac{z}{\sqrt{2}} \right)} \left[ \cos{\left( \frac{z}{\sqrt{2}} \right)} + i \sin{\left( \frac{z}{\sqrt{2}} \right)} \right] \\
+    g_{1}(z) &amp;= \exp{\left( -\frac{z}{\sqrt{2}} \right)} \left[ \cos{\left( \frac{z}{\sqrt{2}} \right)} + i \sin{\left( \frac{z}{\sqrt{2}} \right)} \right] \\
+    g_{2}(z) &amp;= \exp{\left( -\frac{z}{\sqrt{2}} \right)} \left[ \cos{\left( \frac{z}{\sqrt{2}} \right)} - i \sin{\left( \frac{z}{\sqrt{2}} \right)} \right] \\
+    g_{3}(z) &amp;= \exp{\left( \frac{z}{\sqrt{2}} \right)} \left[ \cos{\left( \frac{z}{\sqrt{2}} \right)} - i \sin{\left( \frac{z}{\sqrt{2}} \right)} \right]
+\end{align*}</div>
+<p>
+First, you write <span class="math">\(g_{0}\)</span> as an infinite series, split into four sums:
+</p>
+<div class="math">\begin{equation*}
+    g_{0}(z) = \sum_{n = 0}^{\infty} \frac{1}{\Gamma(n + 1)} \kappa^{n} z^{n} = q_{0}(z) + \kappa q_{1}(z) + i q_{2}(z) - \lambda q_{3}(z)
+\end{equation*}</div>
+<p>
+Here, the <span class="math">\(q\)</span>-functions are given by
+</p>
+<div class="math">\begin{align*}
+    q_{0}(z) &amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(4n + 1)} z^{4n} \\
+    q_{1}(z) &amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(4n + 2)} z^{4n+1} \\
+    q_{2}(z) &amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(4n + 3)} z^{4n+2} \\
+    q_{3}(z) &amp;= \sum_{n = 0}^{\infty} \frac{(-1)^{n}}{\Gamma(4n + 4)} z^{4n+3}
+\end{align*}</div>
+<p>
+You can also write the other <span class="math">\(g\)</span>-functions in terms of the <span class="math">\(q\)</span>-functions:
+</p>
+<div class="math">\begin{align*}
+    g_{1}(z) &amp;= q_{0}(z) - \lambda q_{1}(z) - i q_{2}(z) + \kappa q_{3}(z) \\
+    g_{2}(z) &amp;= q_{0}(z) - \kappa q_{1}(z) + i q_{2}(z) + \lambda q_{3}(z) \\
+    g_{3}(z) &amp;= q_{0}(z) + \lambda q_{1}(z) - i q_{2}(z) - \kappa q_{3}(z)
+\end{align*}</div>
+<p>
+Note that this definition of the <span class="math">\(q\)</span>-functions can be stated as a matrix equation:
+</p>
+<div class="math">\begin{equation*}
+    \begin{bmatrix}
+        g_{0}(z) \\
+        g_{1}(z) \\
+        g_{2}(z) \\
+        g_{3}(z)
+    \end{bmatrix} = \begin{bmatrix}
+        1 &amp; \kappa &amp; i &amp; -\lambda \\
+        1 &amp; -\lambda &amp; -i &amp; \kappa \\
+        1 &amp; -\kappa &amp; i &amp; \lambda \\
+        1 &amp; \lambda &amp; -i &amp; -\kappa
+    \end{bmatrix} \begin{bmatrix}
+        q_{0}(z) \\
+        q_{1}(z) \\
+        q_{2}(z) \\
+        q_{3}(z)
+    \end{bmatrix}
+\end{equation*}</div>
+<p>
+Inverting this matrix gives
+</p>
+<div class="math">\begin{equation*}
+    \begin{bmatrix}
+        q_{0}(z) \\
+        q_{1}(z) \\
+        q_{2}(z) \\
+        q_{3}(z)
+    \end{bmatrix} = \frac{1}{4} \begin{bmatrix}
+        1 &amp; 1 &amp; 1 &amp; 1 \\
+        \lambda &amp; -\kappa &amp; -\lambda &amp; \kappa \\
+        -i &amp; i &amp; -i &amp; i \\
+        -\kappa &amp; \lambda &amp; \kappa &amp; -\lambda
+    \end{bmatrix} \begin{bmatrix}
+        g_{0}(z) \\
+        g_{1}(z) \\
+        g_{2}(z) \\
+        g_{3}(z)
+    \end{bmatrix}
+\end{equation*}</div>
+<p>
+More explicitly:
+</p>
+<div class="math">\begin{align*}
+    q_{0}(z) &amp;= \frac{g_{0}(z) + g_{1}(z) + g_{2}(z) + g_{3}(z)}{4} \\
+    q_{1}(z) &amp;= \frac{\lambda g_{0}(z) - \kappa g_{1}(z) - \lambda g_{2}(z) + \kappa g_{3}(z)}{4} \\
+    q_{2}(z) &amp;= \frac{-ig_{0}(z) +i g_{1}(z) -i g_{2}(z) +i g_{3}(z)}{4} \\
+    q_{3}(z) &amp;= \frac{- \kappa g_{0}(z) + \lambda g_{1}(z) + \kappa g_{2}(z) - \lambda g_{3}(z)}{4}
+\end{align*}</div>
+<p>
+Even more explicitly:
+</p>
+<div class="math">\begin{align*}
+    q_{0}(z) &amp;= \cos{\left( \frac{z}{\sqrt{2}} \right)} \cosh{\left( \frac{z}{\sqrt{2}} \right)} \\
+    q_{1}(z) &amp;= \frac{1}{\sqrt{2}} \sin{\left( \frac{z}{\sqrt{2}} \right)} \cosh{\left( \frac{z}{\sqrt{2}} \right)} + \frac{1}{\sqrt{2}} \cos{\left( \frac{z}{\sqrt{2}} \right)} \sinh{\left( \frac{z}{\sqrt{2}} \right)} \\
+    q_{2}(z) &amp;= \sin{\left( \frac{z}{\sqrt{2}} \right)} \sinh{\left( \frac{z}{\sqrt{2}} \right)} \\
+    q_{3}(z) &amp;= \frac{1}{\sqrt{2}} \sin{\left( \frac{z}{\sqrt{2}} \right)} \cosh{\left( \frac{z}{\sqrt{2}} \right)} - \frac{1}{\sqrt{2}} \cos{\left( \frac{z}{\sqrt{2}} \right)} \sinh{\left( \frac{z}{\sqrt{2}} \right)}
+\end{align*}</div>
+<p>
+The parity properties are as follow:
+</p>
+<div class="math">\begin{align*}
+    q_{0}(-z) &amp;= q_{0}(z), &amp; q_{1}(-z) &amp;= -q_{1}(z), &amp; q_{2}(-z) &amp;= q_{2}(z), &amp; q_{3}(-z) &amp;= -q_{3}(z) \\
+    q_{0}(iz) &amp;= q_{0}(z), &amp; q_{1}(iz) &amp;= iq_{1}(z), &amp; q_{2}(iz) &amp;= -q_{2}(z), &amp; q_{3}(iz) &amp;= -iq_{3}(z) \\
+    q_{0}(-iz) &amp;= q_{0}(z), &amp; q_{1}(-iz) &amp;= -iq_{1}(z), &amp; q_{2}(-iz) &amp;= -q_{2}(z), &amp; q_{3}(-iz) &amp;= iq_{3}(z)
+\end{align*}</div>
+<p>
+Note that
+</p>
+<div class="math">\begin{align*}
+    g_{0}(z) g_{2}(z) &amp;= 1 &amp; g_{1}(z) g_{3}(z) &amp;= 1
+\end{align*}</div>
+<p>
+These equations are equivalent to the following two quadratic equations:
+</p>
+<div class="math">\begin{align*}
+    q_{0}^{2} - q_{2}^{2} + 2q_{1} q_{3} &amp;= 1, &amp; q_{1}^{2} - q_{3}^{2} - 2q_{0} q_{2} &amp;= 0
+\end{align*}</div>
+<p>
+Thus, you can interpret the four <span class="math">\(q\)</span>-functions as coordinates in a 4-dimensional space describing certain quadratic curves.</p>
+<p>What about differentiation? Using the infinite series definition gives
+</p>
+<div class="math">\begin{align*}
+    \frac{d}{dz} q_{3}(z) &amp;= q_{2}(z), &amp; \frac{d}{dz} q_{2}(z) &amp;= q_{1}(z), &amp; \frac{d}{dz} q_{1}(z) &amp;= q_{0}(z), &amp; \frac{d}{dz} q_{0}(z) &amp;= -q_{3}(z)
+\end{align*}</div>
+<p>
+This is similar to what we found for the cubic functions.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

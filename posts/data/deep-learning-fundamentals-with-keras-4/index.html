@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Deep Learning Fundamentals with Keras 4 | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/data/deep-learning-fundamentals-with-keras-4/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/flatly.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/data.atom.xml">  
+  <meta name="description" content="The fourth module of the Deep Learning Fundamentals with Keras course.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Deep Learning Fundamentals with Keras 4
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="1898-09-30T00:00:00-04:56">
+          <i class="fas fa-clock"></i>
+          Fri 30 September 1898
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/data.html">Data</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/keras.html">#keras</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>A <strong>shallow</strong> neural network consist of one hidden layer. Not sure if there is a restriction on the amount of neurons in that hidden layer. A <strong>deep</strong> neural network consist of <strong>many hidden layers</strong> and has a <strong>large number of neurons</strong> on each layer. These can automatically extract features to learn data better.</p>
+<p>Here are three factors that can be attributed to the recent surge in success of deep learning methods:</p>
+<ol>
+<li>The topic has made progress. For example, overcoming the vanishing gradient problem with ReLU activation functions.</li>
+<li>Data has become more available. Large amounts of data needs to be used in order to avoid over-fitting during training.</li>
+<li>Computational power has improved too.</li>
+</ol>
+<p>There are supervised and unsupervised deep learning algorithms.</p>
+<h2>Convolutional Neural Networks</h2>
+<p>A convolutional neural network (CNN) is an example of a supervised deep learning algorithm. These typically take an image in the input layer. Convolutions make the training more efficient. CNNs can solve problems involving image recognition, object detection, and other computer vision applications.</p>
+<p>The <strong>architecture</strong> of a CNN is as follows. You have the <strong>input</strong> layer, which takes an image. There are <strong>convoluting</strong> layers, <strong>pooling</strong> layers, <strong>fully-connected</strong> layers, and the <strong>output</strong> layer. The fully-connected layers are necessary to generate the output.</p>
+<p>An image can be a grey-scale image or a color image. Grey-scale images consist of a single two-dimensional array of pixels. Color images consist of three two-dimensional arrays of pixels (one array each for red, green, and blue). The input layer takes the image array (grey-scale) or image arrays (color).</p>
+<p>The <strong>convoluting</strong> layers have filters that are used to convolute with the input. For example, let <span class="math">\(R\)</span> be the <span class="math">\(m \times n\)</span> matrix corresponding to a red image, and <span class="math">\(F\)</span> be the <span class="math">\(p \times q\)</span> matrix corresponding to a filter. The convolution of <span class="math">\(R\)</span> with <span class="math">\(F\)</span> will be a matrix <span class="math">\(C\)</span> such that
+</p>
+<div class="math">\begin{equation*}
+    C_{jk} = R(j, k) \cdot F
+\end{equation*}</div>
+<p>
+Here <span class="math">\(R(j, k)\)</span> is the <span class="math">\(p \times q\)</span> block in <span class="math">\(R\)</span> with <span class="math">\(R_{jk}\)</span> in the top left corner. Note that the matrix dot product (also known as the Frobenius product) is taken here. Here is some Python code with an example:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">34</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">66</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">65</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">210</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">176</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">89</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">63</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">175</span><span class="p">],</span>
+<span class="p">])</span>
+
+<span class="n">F</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="p">])</span>
+
+<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">tensordot</span><span class="p">(</span><span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span><span class="n">k</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span> <span class="n">F</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>The result for the convolution is</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[</span><span class="mi">124</span>  <span class="mi">75</span>  <span class="mi">54</span> <span class="mi">100</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">90</span>  <span class="mi">64</span> <span class="mi">254</span> <span class="mi">276</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">81</span> <span class="mi">127</span> <span class="mi">267</span> <span class="mi">299</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">95</span> <span class="mi">168</span> <span class="mi">178</span> <span class="mi">264</span><span class="p">]]</span>
+</code></pre></div>
+
+
+<p>Convolution is a great way to decrease the number of parameters, instead of just flattening the image as a one-dimensional array. After the convolution step, a ReLU layer may be applied.</p>
+<p>The <strong>pooling</strong> layers reduced the spatial dimension of the data. One kind of pooling layer is MaxPooling, where one keeps the largest value of the region that is scanned. For example, MaxPooling on the convolution matrix from above with a (2, 2) stride gives</p>
+<div class="highlight"><pre><span></span><code><span class="n">MaxPooling</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span><span class="n">k</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">MaxPooling</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>The result is</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[</span><span class="mi">124</span> <span class="mi">276</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">168</span> <span class="mi">299</span><span class="p">]]</span>
+</code></pre></div>
+
+
+<p>MaxPooling is one of the most common pooling layers. Another kind is AveragePooling or MeanPooling, where one keeps the mean value of the region that is scanned. For example, MeanPooling on the convolution matrix from above with a (2, 2) stride gives</p>
+<div class="highlight"><pre><span></span><code><span class="n">MeanPooling</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span><span class="n">k</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">MeanPooling</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>The result is</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[</span> <span class="mi">88</span> <span class="mi">171</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">117</span> <span class="mi">252</span><span class="p">]]</span>
+</code></pre></div>
+
+
+<p>Pooling also provides spatial variance to the CNN that enables it to recognize objects that do not exactly resemble the original objects trained on.</p>
+<p>In the fully-connected layer, you flatten the output of the previous layer and use as many neurons as there are classes of objects for classification.</p>
+<h3>CNNs in Keras</h3>
+<p>CNNs can be implemented in Keras as follows. You start with a sequential model:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">keras</span>
+
+<span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+</code></pre></div>
+
+
+<p>Of course, you also need layers:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
+<span class="kn">from</span> <span class="nn">keras.utils</span> <span class="kn">import</span> <span class="n">to_categorical</span>
+<span class="kn">from</span> <span class="nn">keras.layers.convolutional</span> <span class="kn">import</span> <span class="n">Conv2D</span>
+<span class="kn">from</span> <span class="nn">keras.layers.convolutional</span> <span class="kn">import</span> <span class="n">MaxPooling2D</span>
+<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Flatten</span>
+</code></pre></div>
+
+
+<p>And data:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">keras.datasets</span> <span class="kn">import</span> <span class="n">mnist</span>
+</code></pre></div>
+
+
+<p>You load the data, which is already split into training and testing sets:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+</code></pre></div>
+
+
+<p>You need to <code>reshape</code> the data for proper processing:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span>
+    <span class="n">X_train</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span>
+    <span class="n">X_test</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>And normalize the data:</p>
+<div class="highlight"><pre><span></span><code><span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span> <span class="o">/</span> <span class="mi">255</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">X_test</span> <span class="o">/</span> <span class="mi">255</span>
+</code></pre></div>
+
+
+<p>The target data must be but into binary categories:</p>
+<div class="highlight"><pre><span></span><code><span class="n">y_train</span> <span class="o">=</span> <span class="n">to_categorical</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">to_categorical</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Now we are ready to roll. Here is a <strong>convoluting</strong> layer, followed by a <strong>pooling</strong> layer:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Convolution layer</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span>
+    <span class="mi">16</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="n">strides</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span>
+    <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">))</span>
+
+<span class="c1"># Pooling layer</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">(</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="n">strides</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+<span class="p">))</span>
+</code></pre></div>
+
+
+<p>Another possibility is to use multiple convoluting and pooling layers:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># First Convolution layer</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span>
+    <span class="mi">16</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="n">strides</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span>
+    <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">))</span>
+
+<span class="c1"># First Pooling layer</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">(</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="n">strides</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+<span class="p">))</span>
+
+<span class="c1"># Second Convolution layer</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span>
+    <span class="mi">8</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="n">strides</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span>
+    <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">))</span>
+
+<span class="c1"># Second Pooling layer</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">(</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="n">strides</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+<span class="p">))</span>
+</code></pre></div>
+
+
+<p>After this you can add a <strong>flattening</strong> layer:</p>
+<div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Flatten</span><span class="p">())</span>
+</code></pre></div>
+
+
+<p>Now you are ready for the fully-connected layer:</p>
+<div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span>
+    <span class="mi">100</span><span class="p">,</span>
+    <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span>
+<span class="p">))</span>
+</code></pre></div>
+
+
+<p>Finally, you have the output layer:</p>
+<div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span>
+    <span class="n">num_classes</span><span class="p">,</span>
+    <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">,</span>
+<span class="p">))</span>
+</code></pre></div>
+
+
+<p>You <code>compile</code> the model:</p>
+<div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span>
+    <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span>
+    <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>You <code>fit</code> the model (training):</p>
+<div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span>
+    <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">),</span>
+    <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Finally, you <code>evaluate</code> the model:</p>
+<div class="highlight"><pre><span></span><code><span class="n">scores</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>You can compare this to the network previously used with the MNIST data, which only had dense layers.</p>
+<h2>Recurrent Neural Networks</h2>
+<p>Another kind of supervised deep learning model is the <strong>recurrent neural network</strong> (RNN). In the previous examples, each data point was assumed to be an independent instance. RNNs are neural networks with loops that take new inputs, as well as the value in the previous instance.</p>
+<p>For example, consider the following RNN. For the first layer, the input is <span class="math">\(x_{0}\)</span>, you have weight <span class="math">\(w_{0}\)</span>, bias <span class="math">\(b_{0}\)</span>. You compute
+</p>
+<div class="math">\begin{equation*}
+    x_{0} \longrightarrow z_{0} = w_{0} x_{0} + b_{0} \longrightarrow a_{0} = f(z_{0})
+\end{equation*}</div>
+<p>
+The output <span class="math">\(a_{0}\)</span> appears weighted by a recursion weight <span class="math">\(w_{01}\)</span> in the computation for the next input:
+</p>
+<div class="math">\begin{equation*}
+    x_{1} \longrightarrow z_{1} = w_{1} x_{1} + b_{1} + w_{01} a_{0} \longrightarrow a_{1} = f(z_{1})
+\end{equation*}</div>
+<p>
+And similarly for the next case:
+</p>
+<div class="math">\begin{equation*}
+    x_{2} \longrightarrow z_{2} = w_{2} x_{2} + b_{2} + w_{12} a_{1} \longrightarrow a_{2} = f(z_{2})
+\end{equation*}</div>
+<p>
+And so on. These kinds of algorithm have a sort-of temporal dimension. A popular type of RNN is the <strong>Long Short-Term Memory</strong> (LSTM) model, which has been use for many applications.</p>
+<h2>Autoencoders</h2>
+<p>Autoencoders are an example of an unsupervised deep learning model. Autoencoding refers to a data compression algorithm where the compression and decompression functions are learned automatically from the data, and not engineered externally. An autoencoder will work on data similar to the data for which it was trained on. Some example applications of autoencoders are data denoising and dimensionality reduction.</p>
+<p>The basic architecture consist of an encoder, that finds the optimal compressed representation of an input, and a decoder, that restores the image. In a sense, it is a non-trivial version of the identity operation. Due to the use of non-linear activation functions, autoencoders can learn data projection techniques that are more sophisticated than basic techniques like principal component analysis.</p>
+<p>The <strong>Restricted Boltzmann Machine</strong> (RBM) is a very popular type of autoencoders. These can be used for fixing imbalanced data sets, estimating missing values or automatic feature extraction of unstructured data.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

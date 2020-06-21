@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Two-Dimensional Four-Point Slow Kinematics | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/two-dimensional-four-point-slow/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/flatly.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="A look at the 2-to-2 relativistic kinematics in two-dimensional spacetime with slow quanta.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Two-Dimensional Four-Point Slow Kinematics
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2016-11-20T00:00:00-05:00">
+          <i class="fas fa-clock"></i>
+          Sun 20 November 2016
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/kinematics.html">#kinematics</a>,               <a href="https://meirizarrygelpi.github.io/tag/two-dimensional.html">#two-dimensional</a>,               <a href="https://meirizarrygelpi.github.io/tag/four-point.html">#four-point</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>You have two incoming slow momenta (<span class="math">\(P_{1}\)</span> and <span class="math">\(P_{2}\)</span>) and two outgoing slow momenta (<span class="math">\(P_{3}\)</span> and <span class="math">\(P_{4}\)</span>).</p>
+<h2>Energy-Momentum Vectors</h2>
+<p>Each of the four external slow momenta can be written as
+</p>
+<div class="math">$$ P_{i} = \begin{pmatrix} m_{i} \cosh{(\xi_{i})} &amp; m_{i} \sinh{(\xi_{i})} \end{pmatrix}. $$</div>
+<p>
+Here <span class="math">\(m_{i} &gt; 0\)</span> and <span class="math">\(-\infty &lt; \xi_{i} &lt; \infty\)</span>.</p>
+<h2>Conservation</h2>
+<p>The <strong>conservation of energy</strong> leads to
+</p>
+<div class="math">$$ \sum_{i = 1}^{2} m_{i} \cosh{(\xi_{i})} = \sum_{j = 3}^{4} m_{j} \cosh{(\xi_{j})}. $$</div>
+<p>
+Similarly, the <strong>conservation of momentum</strong> leads to
+</p>
+<div class="math">$$ \sum_{i = 1}^{2} m_{i} \sinh{(\xi_{i})} = \sum_{j = 3}^{4} m_{j} \sinh{(\xi_{j})}. $$</div>
+<p>
+These two expressions can be combined to yield two equivalent expressions:
+</p>
+<div class="math">$$ \sum_{i = 1}^{2} m_{i} \exp{(\xi_{i})} = \sum_{j = 3}^{4} m_{j} \exp{(\xi_{j})}; $$</div>
+<div class="math">$$ \sum_{i = 1}^{2} \frac{m_{i}}{\exp{(\xi_{i})}} = \sum_{j = 3}^{4} \frac{m_{j}}{\exp{(\xi_{j})}}. $$</div>
+<h2>2-Mandelstam Invariants</h2>
+<p>The most relevant <strong>2-Mandelstam</strong> invariant is
+</p>
+<div class="math">$$ s = - \Vert P_{1} + P_{2} \Vert^{2} = - \Vert P_{3} + P_{4} \Vert^{2}. $$</div>
+<h2>Regge-Mandelstam Invariants</h2>
+<p>The most relevant <strong>Regge-Mandelstam</strong> invariants are:
+</p>
+<div class="math">$$ r_{12} \equiv -\frac{P_{1} \cdot P_{2}}{m_{1} m_{2}} = \frac{s - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}} = \cosh{(\xi_{1} - \xi_{2})}; $$</div>
+<div class="math">$$ r_{34} \equiv -\frac{P_{3} \cdot P_{4}}{m_{3} m_{4}} = \frac{s - m_{3}^{2} - m_{4}^{2}}{2 m_{3} m_{4}} = \cosh{(\xi_{3} - \xi_{4})}. $$</div>
+<p>
+Since the hyperbolic cosine satisfies
+</p>
+<div class="math">$$ \cosh{(x)} \geq 1; $$</div>
+<p>
+you have the conditions:
+</p>
+<div class="math">$$ s \geq (m_{1} + m_{2})^{2}, \qquad s \geq (m_{3} + m_{4})^{2}. $$</div>
+<p>
+Note that you can write the 2-Mandelstam invariant in terms of the masses and the difference in rapidities:
+</p>
+<div class="math">$$ s = m_{1}^{2} + m_{2}^{2} + 2 m_{1} m_{2} \cosh{(\xi_{1} - \xi_{2})} = m_{3}^{2} + m_{4}^{2} + 2 m_{3} m_{4} \cosh{(\xi_{3} - \xi_{4})}. $$</div>
+<h2>Solving for the Outgoing Data</h2>
+<p>If you introduce variables <span class="math">\(f_{i}\)</span> via
+</p>
+<div class="math">$$ f_{i} = \exp{(\xi_{i})}; $$</div>
+<p>
+then the conservation laws can be rewritten as
+</p>
+<div class="math">$$ A = m_{3} f_{3} + m_{4} f_{4}, \qquad B = \frac{m_{3}}{f_{3}} + \frac{m_{4}}{f_{4}}. $$</div>
+<p>
+Here
+</p>
+<div class="math">$$ A = m_{1} f_{1} + m_{2} f_{2}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ B = \frac{m_{1}}{f_{1}} + \frac{m_{2}}{f_{2}}. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ A B = - \Vert P_{1} + P_{2} \Vert^{2} = s. $$</div>
+<p>
+You can write
+</p>
+<div class="math">$$ A = \sqrt{s} C, \qquad B = \frac{\sqrt{s}}{C}. $$</div>
+<p>
+Then it follows that
+</p>
+<div class="math">$$ C = \sqrt{\frac{A}{B}} = \sqrt{f_{1} f_{2}} \sqrt{\frac{m_{1} f_{1} + m_{2} f_{2}}{m_{1} f_{2} + m_{2} f_{1}}}. $$</div>
+<p>
+Solving for <span class="math">\(f_{3}\)</span> and <span class="math">\(f_{4}\)</span> gives
+</p>
+<div class="math">$$ f_{3} = \frac{AB + m_{3}^{2} - m_{4}^{2} + \sqrt{\left[ AB - (m_{3} + m_{4})^{2} \right] \left[ AB - (m_{3} - m_{4})^{2} \right]}}{2 m_{3} B}; $$</div>
+<div class="math">$$ f_{4} = \frac{AB - m_{3}^{2} + m_{4}^{2} - \sqrt{\left[ AB - (m_{3} + m_{4})^{2} \right] \left[ AB - (m_{3} - m_{4})^{2} \right]}}{2 m_{4} B}. $$</div>
+<p>
+In terms of <span class="math">\(s\)</span> and the variables <span class="math">\(f_{1}\)</span> and <span class="math">\(f_{2}\)</span> you have
+</p>
+<div class="math">$$ f_{3} = \left(\frac{s + m_{3}^{2} - m_{4}^{2} + \sqrt{\left[ s - (m_{3} + m_{4})^{2} \right] \left[ s - (m_{3} - m_{4})^{2} \right]}}{2 \sqrt{s} m_{3}}\right) \sqrt{f_{1} f_{2}} \sqrt{ \frac{m_{1} f_{1} + m_{2} f_{2}}{m_{1} f_{2} + m_{2} f_{1}} }; $$</div>
+<div class="math">$$ f_{4} = \left(\frac{s - m_{3}^{2} + m_{4}^{2} - \sqrt{\left[ s - (m_{3} + m_{4})^{2} \right] \left[ s - (m_{3} - m_{4})^{2} \right]}}{2 \sqrt{s} m_{4}}\right) \sqrt{f_{1} f_{2}} \sqrt{ \frac{m_{1} f_{1} + m_{2} f_{2}}{m_{1} f_{2} + m_{2} f_{1}} }. $$</div>
+<p>
+Solving for the rapidities gives
+</p>
+<div class="math">$$ \xi_{3} = \frac{\xi_{1} + \xi_{2}}{2} + \frac{1}{2} \log{\left( \frac{m_{1} \exp{(\xi_{1} - \xi_{2})} + m_{2}}{m_{1} + m_{2} \exp{(\xi_{1} - \xi_{2})}} \right)} + \log{\left(\frac{s + m_{3}^{2} - m_{4}^{2} + \sqrt{\left[ s - (m_{3} + m_{4})^{2} \right] \left[ s - (m_{3} - m_{4})^{2} \right]}}{2 \sqrt{s} m_{3}}\right)}; $$</div>
+<div class="math">$$ \xi_{4} = \frac{\xi_{1} + \xi_{2}}{2} + \frac{1}{2} \log{\left( \frac{m_{1} \exp{(\xi_{1} - \xi_{2})} + m_{2}}{m_{1} + m_{2} \exp{(\xi_{1} - \xi_{2})}} \right)} + \log{\left(\frac{s - m_{3}^{2} + m_{4}^{2} - \sqrt{\left[ s - (m_{3} + m_{4})^{2} \right] \left[ s - (m_{3} - m_{4})^{2} \right]}}{2 \sqrt{s} m_{4}}\right)}. $$</div>
+<p>
+A simpler relation between <span class="math">\(\xi_{3}\)</span> and <span class="math">\(\xi_{4}\)</span> follows from <span class="math">\(r_{34}\)</span>:
+</p>
+<div class="math">$$ \exp{(\xi_{3} - \xi_{4})} = \frac{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\left[ s - (m_{3} + m_{4})^{2} \right] \left[ s - (m_{3} - m_{4})^{2} \right]}}{2 m_{3} m_{4}}. $$</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

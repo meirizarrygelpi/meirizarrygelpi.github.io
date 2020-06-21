@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Sudakov Kinematics | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/sudakov-kinematics/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/flatly.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="On expressing massive momenta in terms of null vectors.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Sudakov Kinematics
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2015-10-14T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Wed 14 October 2015
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/kinematics.html">#kinematics</a>,               <a href="https://meirizarrygelpi.github.io/tag/four-point.html">#four-point</a>,               <a href="https://meirizarrygelpi.github.io/tag/sudakov.html">#sudakov</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Recently I learned a cool trick. It allows you to write a set of massive momenta in terms of null vectors. By massive momentum I mean an energy-momentum vector that describes a quantum that moves slower than light. For concreteness, consider a 2-to-2 scattering process:
+</p>
+<div class="math">$$ \Phi_{1}(p_{1}) + \Phi_{2}(p_{2}) \longrightarrow \Phi_{3}(p_{3}) + \Phi_{4}(p_{4}). $$</div>
+<p>
+You have the <strong>conservation</strong> constraint,
+</p>
+<div class="math">$$p_{1} + p_{2} = p_{3} + p_{4}, $$</div>
+<p>
+and the four <strong>massive on-shell</strong> constraints,
+</p>
+<div class="math">$$ m_{i}^{2} = -\left\Vert p_{i} \right\Vert^{2}. $$</div>
+<p>
+Traditionally, you use the <strong>2-Mandelstam</strong> invariants to describe the kinematics of this process:
+</p>
+<div class="math">$$ s = -\left\Vert p_{1} + p_{2} \right\Vert^{2} = -\left\Vert p_{3} + p_{4} \right\Vert^{2}, $$</div>
+<div class="math">$$ t = -\left\Vert p_{1} - p_{3} \right\Vert^{2} = -\left\Vert p_{4} - p_{2} \right\Vert^{2}, $$</div>
+<div class="math">$$ u = -\left\Vert p_{1} - p_{4} \right\Vert^{2} = -\left\Vert p_{3} - p_{2} \right\Vert^{2}. $$</div>
+<p>
+Due to the conservation constraint, the three 2-Mandelstam invariants satisfy a linear constraint:
+</p>
+<div class="math">$$ s + t + u = m_{1}^{2} + m_{2}^{2} + m_{3}^{2} + m_{4}^{2}. $$</div>
+<p>
+I will refer to the process of writing all physically-relevant quantities (e.g. energy, spatial momentum, speed, rapidity, scattering angles) in terms of the masses and the 2-Mandelstam invariants as the <strong>Mandelstam kinematic analysis</strong>.</p>
+<p>What I call the <strong>Sudakov kinematic analysis</strong> consist of decomposing the incoming/outgoing massive momenta into incoming/outgoing null vectors. That is, let <span class="math">\(n_{1}\)</span>, <span class="math">\(n_{2}\)</span>, <span class="math">\(n_{3}\)</span>, and <span class="math">\(n_{4}\)</span> be <strong>null vectors</strong> and consider the following Sudakov decomposition:
+</p>
+<div class="math">$$ p_{1} = n_{1} - \frac{m_{1}^{2}}{2 \left( n_{1} \cdot n_{2} \right)} n_{2}, $$</div>
+<div class="math">$$ p_{2} = n_{2} - \frac{m_{2}^{2}}{2 \left( n_{1} \cdot n_{2} \right)} n_{1}, $$</div>
+<div class="math">$$ p_{3} = n_{3} - \frac{m_{3}^{2}}{2 \left( n_{3} \cdot n_{4} \right)} n_{4}, $$</div>
+<div class="math">$$ p_{4} = n_{4} - \frac{m_{4}^{2}}{2 \left( n_{3} \cdot n_{4} \right)} n_{3}. $$</div>
+<p>
+This is valid because, in general, a linear combination of two null vectors is not null. The null vectors <span class="math">\(n_{i}\)</span> are the <strong>Sudakov vectors</strong>. Note that
+</p>
+<div class="math">$$ p_{1} + p_{2} = \left[ 1 - \frac{m_{2}^{2}}{2 \left( n_{1} \cdot n_{2} \right)} \right] n_{1} + \left[ 1 - \frac{m_{1}^{2}}{2 \left( n_{1} \cdot n_{2} \right)} \right] n_{2}, $$</div>
+<div class="math">$$ p_{3} + p_{4} = \left[ 1 - \frac{m_{4}^{2}}{2 \left( n_{3} \cdot n_{4} \right)} \right] n_{3} + \left[ 1 - \frac{m_{3}^{2}}{2 \left( n_{3} \cdot n_{4} \right)} \right] n_{4}. $$</div>
+<p>
+You can introduce six <strong>2-Sudakov</strong> invariants:
+</p>
+<div class="math">$$ S_{12} \equiv -\left\Vert n_{1} + n_{2} \right\Vert^{2} = -2 \left( n_{1} \cdot n_{2} \right), $$</div>
+<div class="math">$$ T_{13} \equiv -\left\Vert n_{1} - n_{3} \right\Vert^{2} = 2 \left( n_{1} \cdot n_{3} \right), $$</div>
+<div class="math">$$ U_{14} \equiv -\left\Vert n_{1} - n_{4} \right\Vert^{2} = 2 \left( n_{1} \cdot n_{4} \right), $$</div>
+<div class="math">$$ U_{23} \equiv -\left\Vert n_{3} - n_{2} \right\Vert^{2} = 2 \left( n_{2} \cdot n_{3} \right), $$</div>
+<div class="math">$$ T_{24} \equiv -\left\Vert n_{4} - n_{2} \right\Vert^{2} = 2 \left( n_{2} \cdot n_{4} \right), $$</div>
+<div class="math">$$ S_{34} \equiv -\left\Vert n_{3} + n_{4} \right\Vert^{2} = -2 \left( n_{3} \cdot n_{4} \right). $$</div>
+<p>
+You can write the 2-Sudakov invariants in terms of the masses and the 2-Mandelstam invariants. Introduce six <strong>Regge-Mandelstam</strong> invariants
+</p>
+<div class="math">$$ r_{12} \equiv \frac{s - m_{1}^{2} - m_{2}^{2}}{2 m_{1} m_{2}}, $$</div>
+<div class="math">$$ r_{13} \equiv \frac{m_{1}^{2} + m_{3}^{2} - t}{2 m_{1} m_{3}}, $$</div>
+<div class="math">$$ r_{14} \equiv \frac{m_{1}^{2} + m_{4}^{2} - u}{2 m_{1} m_{4}}, $$</div>
+<div class="math">$$ r_{23} \equiv \frac{m_{2}^{2} + m_{3}^{2} - u}{2 m_{2} m_{3}}, $$</div>
+<div class="math">$$ r_{24} \equiv \frac{m_{2}^{2} + m_{4}^{2} - t}{2 m_{2} m_{4}}, $$</div>
+<div class="math">$$ r_{34} \equiv \frac{s - m_{3}^{2} - m_{4}^{2}}{2 m_{3} m_{4}}; $$</div>
+<p>
+and six <strong>Regge-Sudakov</strong> invariants
+</p>
+<div class="math">$$ R_{12} \equiv \frac{S_{12}}{m_{1} m_{2}}, $$</div>
+<div class="math">$$ R_{13} \equiv -\frac{T_{13}}{m_{1} m_{3}}, $$</div>
+<div class="math">$$ R_{14} \equiv -\frac{U_{14}}{m_{1} m_{4}}, $$</div>
+<div class="math">$$ R_{23} \equiv -\frac{U_{23}}{m_{2} m_{3}}, $$</div>
+<div class="math">$$ R_{24} \equiv -\frac{T_{24}}{m_{2} m_{4}}, $$</div>
+<div class="math">$$ R_{34} \equiv \frac{S_{34}}{m_{3} m_{4}}. $$</div>
+<p>
+Using the six relations
+</p>
+<div class="math">$$ r_{ij} = - \frac{p_{i} \cdot p_{j}}{m_{i} m_{j}}, $$</div>
+<p>
+along with the Sudakov decomposition, you find the system of six equations to solve:
+</p>
+<div class="math">$$ 2 r_{12} = R_{12} + \frac{1}{R_{12}}, $$</div>
+<div class="math">$$ 2 r_{13} = R_{13} + \frac{R_{14}}{R_{34}} + \frac{R_{23}}{R_{12}} + \frac{R_{24}}{R_{12} R_{34}}, $$</div>
+<div class="math">$$ 2 r_{14} = R_{14} + \frac{R_{13}}{R_{34}} + \frac{R_{24}}{R_{12}} + \frac{R_{23}}{R_{12} R_{34}}, $$</div>
+<div class="math">$$ 2 r_{23} = R_{23} + \frac{R_{24}}{R_{34}} + \frac{R_{13}}{R_{12}} + \frac{R_{14}}{R_{12} R_{34}}, $$</div>
+<div class="math">$$ 2 r_{24} = R_{24} + \frac{R_{23}}{R_{34}} + \frac{R_{14}}{R_{12}} + \frac{R_{13}}{R_{12} R_{34}}, $$</div>
+<div class="math">$$ 2 r_{34} = R_{34} + \frac{1}{R_{34}}. $$</div>
+<p>
+The solution is
+</p>
+<div class="math">$$ R_{12} = r_{12} + \sqrt{r_{12}^{2} - 1}, $$</div>
+<div class="math">$$ R_{13} = \frac{2 R_{12}^{2} R_{34}^{2}}{\left( R_{12}^{2} - 1 \right) \left( R_{34}^{2} - 1 \right)} \left[ r_{13} - \frac{r_{14}}{R_{34}} - \frac{r_{23}}{R_{12}} + \frac{r_{24}}{R_{12} R_{34}} \right], $$</div>
+<div class="math">$$ R_{14} = \frac{2 R_{12}^{2} R_{34}^{2}}{\left( R_{12}^{2} - 1 \right) \left( R_{34}^{2} - 1 \right)} \left[ r_{14} - \frac{r_{13}}{R_{34}} - \frac{r_{24}}{R_{12}} + \frac{r_{23}}{R_{12} R_{34}} \right], $$</div>
+<div class="math">$$ R_{23} = \frac{2 R_{12}^{2} R_{34}^{2}}{\left( R_{12}^{2} - 1 \right) \left( R_{34}^{2} - 1 \right)} \left[ r_{23} - \frac{r_{24}}{R_{34}} - \frac{r_{13}}{R_{12}} + \frac{r_{14}}{R_{12} R_{34}} \right], $$</div>
+<div class="math">$$ R_{24} = \frac{2 R_{12}^{2} R_{34}^{2}}{\left( R_{12}^{2} - 1 \right) \left( R_{34}^{2} - 1 \right)} \left[ r_{24} - \frac{r_{23}}{R_{34}} - \frac{r_{14}}{R_{12}} + \frac{r_{13}}{R_{12} R_{34}} \right], $$</div>
+<div class="math">$$ R_{34} = r_{34} + \sqrt{r_{34}^{2} - 1}. $$</div>
+<p>
+In terms of the masses and the 2-Mandelstam invariants, you have
+</p>
+<div class="math">$$ S_{12} = \frac{1}{2} \left( s - m_{1}^{2} - m_{2}^{2} + \sqrt{ \left( s - m_{1}^{2} - m_{2}^{2} \right)^{2} - 4 m_{1}^{2} m_{2}^{2} } \right), $$</div>
+<div class="math">$$ S_{34} = \frac{1}{2} \left( s - m_{3}^{2} - m_{4}^{2} + \sqrt{ \left( s - m_{3}^{2} - m_{4}^{2} \right)^{2} - 4 m_{3}^{2} m_{4}^{2} } \right). $$</div>
+<p>
+Note that in four spacetime dimensions all Sudakov invariants can be written in terms of twistor products.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

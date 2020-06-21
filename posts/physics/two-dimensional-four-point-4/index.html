@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Two-Dimensional Four-Point Kinematics (4) | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/two-dimensional-four-point-4/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/flatly.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="A look at the 2-to-2 relativistic kinematics in two-dimensional spacetime with fast quanta.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Two-Dimensional Four-Point Kinematics (4)
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2016-11-13T00:00:00-05:00">
+          <i class="fas fa-clock"></i>
+          Sun 13 November 2016
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/kinematics.html">#kinematics</a>,               <a href="https://meirizarrygelpi.github.io/tag/two-dimensional.html">#two-dimensional</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>You have two incoming <strong>fast</strong> momenta (<span class="math">\(P_{1}\)</span> and <span class="math">\(P_{2}\)</span>) and two outgoing <strong>fast</strong> momenta (<span class="math">\(P_{3}\)</span> and <span class="math">\(P_{4}\)</span>). This problem does not have a non-relativistic limit. I will assume elasticity:
+</p>
+<div class="math">$$ \Vert P_{1} \Vert^{2} = \Vert P_{3} \Vert^{2}, \qquad \Vert P_{2} \Vert^{2} = \Vert P_{4} \Vert^{2}. $$</div>
+<h2>Energy-Momentum Vectors</h2>
+<p>The four external fast momenta can be written as
+</p>
+<div class="math">$$ P_{1} = \begin{pmatrix} w_{1} \sinh{(\rho_{1})} &amp; w_{1} \cosh{(\rho_{1})} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{2} = \begin{pmatrix} w_{2} \sinh{(\rho_{2})} &amp; w_{2} \cosh{(\rho_{2})} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{3} = \begin{pmatrix} w_{1} \sinh{(\rho_{3})} &amp; w_{1} \cosh{(\rho_{3})} \end{pmatrix}; $$</div>
+<div class="math">$$ P_{4} = \begin{pmatrix} w_{2} \sinh{(\rho_{4})} &amp; w_{2} \cosh{(\rho_{4})} \end{pmatrix}. $$</div>
+<h2>Conservation</h2>
+<p>The conservation of energy leads to
+</p>
+<div class="math">$$ w_{1} \sinh{(\rho_{1})} + w_{2} \sinh{(\rho_{2})} = w_{1} \sinh{(\rho_{3})} + w_{2} \sinh{(\rho_{4})}. $$</div>
+<p>
+Similarly, the conservation of momentum leads to
+</p>
+<div class="math">$$ w_{1} \cosh{(\rho_{1})} + w_{2} \cosh{(\rho_{2})} = w_{1} \cosh{(\rho_{3})} + w_{2} \cosh{(\rho_{4})}. $$</div>
+<p>
+These two expressions can be combined to yield two equivalent expressions:
+</p>
+<div class="math">$$ w_{1} \exp{(\rho_{1})} + w_{2} \exp{(\rho_{2})} = w_{1} \exp{(\rho_{3})} + w_{2} \exp{(\rho_{4})}; $$</div>
+<div class="math">$$ \frac{w_{1}}{\exp{(\rho_{1})}} + \frac{w_{2}}{\exp{(\rho_{2})}} = \frac{w_{1}}{\exp{(\rho_{3})}} + \frac{w_{2}}{\exp{(\rho_{4})}}. $$</div>
+<h2>2-Mandelstam Invariants</h2>
+<p>You can introduce three <strong>2-Mandelstam</strong> invariants:
+</p>
+<div class="math">$$ s = -(P_{1} + P_{2})^{2} = -(P_{3} + P_{4})^{2}; $$</div>
+<div class="math">$$ t = -(P_{1} - P_{3})^{2} = -(P_{2} - P_{4})^{2}; $$</div>
+<div class="math">$$ u = -(P_{1} - P_{4})^{2} = -(P_{2} - P_{3})^{2}. $$</div>
+<p>
+Due to the conservation laws, you have
+</p>
+<div class="math">$$ s + t + u = -2 w_{1}^{2} - 2 w_{2}^{2}. $$</div>
+<h2>Regge-Mandelstam Invariants</h2>
+<p>You can introduce six <strong>Regge-Mandelstam</strong> invariants:
+</p>
+<div class="math">$$ r_{12} \equiv \frac{P_{1} \cdot P_{2}}{w_{1} w_{2}} = -\frac{s + w_{1}^{2} + w_{2}^{2}}{2 w_{1} w_{2}} = \cosh{(\rho_{1} - \rho_{2})}; $$</div>
+<div class="math">$$ r_{34} \equiv \frac{P_{3} \cdot P_{4}}{w_{1} w_{2}} = -\frac{s + w_{1}^{2} + w_{2}^{2}}{2 w_{1} w_{2}} = \cosh{(\rho_{3} - \rho_{4})}; $$</div>
+<div class="math">$$ r_{13} \equiv \frac{P_{1} \cdot P_{3}}{w_{1}^{2}} = \frac{t + 2w_{1}^{2}}{2 w_{1}^{2}} = \cosh{(\rho_{1} - \rho_{3})}; $$</div>
+<div class="math">$$ r_{24} \equiv \frac{P_{2} \cdot P_{4}}{w_{2}^{2}} = \frac{t + 2w_{2}^{2}}{2 w_{2}^{2}} = \cosh{(\rho_{2} - \rho_{4})}; $$</div>
+<div class="math">$$ r_{14} \equiv \frac{P_{1} \cdot P_{4}}{w_{1} w_{2}} = \frac{u + w_{1}^{2} + w_{2}^{2}}{2 w_{1} w_{2}} = \cosh{(\rho_{1} - \rho_{4})}; $$</div>
+<div class="math">$$ r_{23} \equiv \frac{P_{2} \cdot P_{3}}{w_{1} w_{2}} = \frac{u + w_{1}^{2} + w_{2}^{2}}{2 w_{1} w_{2}} = \cosh{(\rho_{2} - \rho_{3})}. $$</div>
+<p>
+Since the hyperbolic cosine satisfies
+</p>
+<div class="math">$$ \cosh{(x)} \geq 1; $$</div>
+<p>
+you have the conditions:
+</p>
+<div class="math">$$ s \leq -(w_{1} + w_{2})^{2}, \qquad t \geq 0, \qquad u \geq -(w_{1} - w_{2})^{2}. $$</div>
+<p>
+These conditions define the range of values allowed for the 2-Mandelstam invariants. The first one says that <span class="math">\(s\)</span> only takes negative values below the threshold value <span class="math">\(-(w_{1} + w_{2})^{2}\)</span>. Thus, the vector <span class="math">\(P_{s} = P_{1} + P_{2} = P_{3} + P_{4}\)</span> is fast and you can write
+</p>
+<div class="math">$$ P_{s} = \begin{pmatrix} \sqrt{-s} \sinh{(\rho_{s})} &amp; \sqrt{-s} \cosh{(\rho_{s})} \end{pmatrix}. $$</div>
+<p>
+The second condition says that <span class="math">\(t\)</span> only takes negative values. This means that the vector <span class="math">\(P_{t} = P_{1} - P_{3} = P_{4} - P_{2}\)</span> is slow and you can write:
+</p>
+<div class="math">$$ P_{t} = \begin{pmatrix} \sqrt{t} \cosh{(\xi_{t})} &amp; \sqrt{t} \sinh{(\xi_{t})} \end{pmatrix}. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ P_{s} \cdot P_{t} = -\sqrt{-s} \sqrt{t} \sinh{(\rho_{s} - \xi_{t})}. $$</div>
+<p>
+When <span class="math">\(\rho_{s} = 0\)</span> and <span class="math">\(\xi_{t} = 0\)</span>, you have the center-of-energy frame.</p>
+<p>Since <span class="math">\(r_{12} = r_{34}\)</span>, you have
+</p>
+<div class="math">$$ \cosh{(\rho_{1} - \rho_{2})} = \cosh{(\rho_{3} - \rho_{4})}. $$</div>
+<p>
+This has two solutions:
+</p>
+<div class="math">$$ \rho_{1} - \rho_{2} = \rho_{3} - \rho_{4}; $$</div>
+<p>
+or
+</p>
+<div class="math">$$ \rho_{1} - \rho_{2} = \rho_{4} - \rho_{3}. $$</div>
+<p>
+The first solution implies that
+</p>
+<div class="math">$$ \rho_{3} = \rho_{1} - \rho_{2} + \rho_{4}. $$</div>
+<p>
+Combining this with the conservation law gives
+</p>
+<div class="math">$$ \rho_{3} = \rho_{1}, \qquad \rho_{4} = \rho_{2}. $$</div>
+<p>
+This is the identity solution. The second solution is compatible with <span class="math">\(r_{14} = r_{23}\)</span>. Indeed, since you can write the fast rapidity in terms of the fast speed as
+</p>
+<div class="math">$$ \rho = \operatorname{acoth}{(v)}, $$</div>
+<p>
+it follows that
+</p>
+<div class="math">$$ \operatorname{acoth}{(v_{1})} - \operatorname{acoth}{(v_{2})} = \operatorname{acoth}{(v_{4})} - \operatorname{acoth}{(v_{3})}. $$</div>
+<p>Although <span class="math">\(r_{13} \neq r_{24}\)</span>, you have
+</p>
+<div class="math">$$ t = 2 w_{1}^{2} (1 + r_{13}) = 2 w_{2}^{2} (1 + r_{24}). $$</div>
+<p>
+This means that
+</p>
+<div class="math">$$ w_{1}^{2} (1 + \cosh{(\rho_{1} - \rho_{3})}) = w_{2}^{2} (1 + \cosh{(\rho_{2} - \rho_{4})}). $$</div>
+<p>
+But recall that
+</p>
+<div class="math">$$ \cosh^{2}{\left( \frac{x}{2} \right)} = \frac{\cosh{(x)} + 1}{2}. $$</div>
+<p>
+Thus,
+</p>
+<div class="math">$$ w_{1}^{2} \cosh^{2}{\left( \frac{\rho_{1} - \rho_{3}}{2} \right)} = w_{2}^{2} \cosh^{2}{\left( \frac{\rho_{2} - \rho_{4}}{2} \right)}. $$</div>
+<h2>Solving for the Outgoing Data</h2>
+<p>You can first write
+</p>
+<div class="math">$$ \rho_{4} = \rho_{1} - \rho_{2} + \rho_{3}. $$</div>
+<p>
+Then it follows that
+</p>
+<div class="math">$$ \exp{(\rho_{4})} = \frac{\exp{(\rho_{1})} \exp{(\rho_{3})}}{\exp{(\rho_{2})}}. $$</div>
+<p>
+From the conservation law you find
+</p>
+<div class="math">$$ w_{1} \exp{(\rho_{1})} + w_{2} \exp{(\rho_{2})} = w_{1} \exp{(\rho_{3})} + w_{2} \left( \frac{\exp{(\rho_{1})} \exp{(\rho_{3})}}{\exp{(\rho_{2})}} \right). $$</div>
+<p>
+This gives
+</p>
+<div class="math">$$ \exp{(\rho_{3})} = \left[\frac{ w_{1} \exp{(\rho_{1})} + w_{2} \exp{(\rho_{2})} }{w_{1} \exp{(\rho_{2})} + w_{2} \exp{(\rho_{1})} }\right] \exp{(\rho_{2})}. $$</div>
+<p>
+Plugin this back into the first expression gives
+</p>
+<div class="math">$$ \exp{(\rho_{4})} = \left[\frac{ w_{1} \exp{(\rho_{1})} + w_{2} \exp{(\rho_{2})} }{w_{1} \exp{(\rho_{2})} + w_{2} \exp{(\rho_{1})} }\right] \exp{(\rho_{1})}. $$</div>
+<p>
+The speeds can be introduced back via the relation
+</p>
+<div class="math">$$ v = \coth{(\rho)} \quad \Longrightarrow \quad \exp{(2 \rho)} = \frac{v + 1}{v - 1}. $$</div>
+<p>
+You find
+</p>
+<div class="math">$$ \frac{\sqrt{v_{3} + 1}}{\sqrt{v_{3} - 1}} = \frac{\sqrt{v_{2} + 1}}{\sqrt{v_{2} - 1}} \frac{w_{1} \sqrt{(v_{1} + 1)(v_{2} - 1)} + w_{2} \sqrt{(v_{1} - 1)(v_{2} + 1)}}{w_{1} \sqrt{(v_{1} - 1)(v_{2} + 1)} + w_{2} \sqrt{(v_{1} + 1)(v_{2} - 1)}}; $$</div>
+<div class="math">$$ \frac{\sqrt{v_{4} + 1}}{\sqrt{v_{4} - 1}} = \frac{\sqrt{v_{1} + 1}}{\sqrt{v_{1} - 1}} \frac{w_{1} \sqrt{(v_{1} + 1)(v_{2} - 1)} + w_{2} \sqrt{(v_{1} - 1)(v_{2} + 1)}}{w_{1} \sqrt{(v_{1} - 1)(v_{2} + 1)} + w_{2} \sqrt{(v_{1} + 1)(v_{2} - 1)}}. $$</div>
+<p>
+This leads to the identity
+</p>
+<div class="math">$$ \frac{(v_{3} + 1)(v_{4} - 1)}{(v_{3} - 1)(v_{4} + 1)} = \frac{(v_{2} + 1)(v_{1} - 1)}{(v_{2} - 1)(v_{1} + 1)}. $$</div>
+<p>
+When <span class="math">\(w_{2} = w_{1}\)</span>, this solution reduces to
+</p>
+<div class="math">$$ \rho_{3} = \rho_{2}, \qquad \rho_{4} = \rho_{1}. $$</div>
+<p>
+This is the permutation solution.</p>
+<h2>Composite Rapidities</h2>
+<p>The fast rapidity <span class="math">\(\rho_{s}\)</span> associated to <span class="math">\(P_{s}\)</span> can be writen as
+</p>
+<div class="math">$$ \rho_{s} = \log{\left( \frac{w_{1} \exp{(\rho_{1})} + w_{2} \exp{(\rho_{2})}}{\sqrt{-s}} \right)} = \log{\left( \frac{w_{1} \exp{(\rho_{3})} + w_{2} \exp{(\rho_{4})}}{\sqrt{-s}} \right)}. $$</div>
+<p>
+Similarly, the slow rapidity <span class="math">\(\xi_{t}\)</span> associated to <span class="math">\(P_{t}\)</span> can be written as
+</p>
+<div class="math">$$ \xi_{t} = \log{\left( \frac{w_{1} \exp{(\rho_{1})} - w_{1} \exp{(\rho_{3})}}{\sqrt{t}} \right)} = \log{\left( \frac{w_{2} \exp{(\rho_{4})} - w_{2} \exp{(\rho_{2})}}{\sqrt{t}} \right)}. $$</div>
+<h2>Regimes</h2>
+<p>The condition on <span class="math">\(u\)</span> does not allow for a specific kind of rapidity for the vector <span class="math">\(P_{u} = P_{1} - P_{4} = P_{3} - P_{2}\)</span>. Depending on the values of <span class="math">\(s\)</span> and <span class="math">\(t\)</span>, you can have all three cases.</p>
+<h3>Fast <span class="math">\(u\)</span>-channel</h3>
+<p>In the region
+</p>
+<div class="math">$$ -(w_{1} - w_{2})^{2} &lt; u &lt; 0 $$</div>
+<p>
+the vector <span class="math">\(P_{u}\)</span> is fast and given by
+</p>
+<div class="math">$$ P_{u} = \begin{pmatrix} \sqrt{-u} \sinh{(\rho_{u})} &amp; \sqrt{-u} \cosh{(\rho_{u})} \end{pmatrix}. $$</div>
+<p>
+Then
+</p>
+<div class="math">$$ P_{s} \cdot P_{u} = \sqrt{-s} \sqrt{-u} \cosh{(\rho_{s} - \rho_{u})}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ P_{t} \cdot P_{u} = \sqrt{t} \sqrt{-u} \sinh{(\xi_{t} - \rho_{u})}. $$</div>
+<p>
+The composite slow rapidity <span class="math">\(\rho_{u}\)</span> is given by
+</p>
+<div class="math">$$ \rho_{u} = \log{\left( \frac{w_{1} \exp{(\rho_{1})} - w_{2} \exp{(\rho_{4})}}{\sqrt{u}} \right)} = \log{\left( \frac{w_{1} \exp{(\rho_{3})} - w_{2} \exp{(\rho_{2})}}{\sqrt{u}} \right)}. $$</div>
+<h3>Null <span class="math">\(u\)</span>-channel</h3>
+<p>If <span class="math">\(u = 0\)</span>, then the vector <span class="math">\(P_{u}\)</span> is null and can be written as
+</p>
+<div class="math">$$ P_{u} = \begin{pmatrix} k_{u} &amp; k_{u} \end{pmatrix}. $$</div>
+<p>
+Then
+</p>
+<div class="math">$$ P_{s} \cdot P_{u} = \sqrt{s} k_{u} \exp{(-\rho_{s})}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ P_{t} \cdot P_{u} = \sqrt{-t} k_{u} \exp{(\rho_{t})}. $$</div>
+<p>
+You also have
+</p>
+<div class="math">$$ k_{u} = w_{1} \sinh{(\rho_{1})} - w_{2} \sinh{(\rho_{4})} = w_{1} \cosh{(\rho_{1})} - w_{2} \cosh{(\rho_{4})}. $$</div>
+<p>
+From here it follows that
+</p>
+<div class="math">$$ \rho_{4} = \rho_{1} - \log{\left( \frac{w_{1}}{w_{2}} \right)}. $$</div>
+<p>
+Using the conservation law, you can also write
+</p>
+<div class="math">$$ k_{u} = w_{1} \sinh{(\rho_{3})} - w_{2} \sinh{(\rho_{2})} = w_{1} \cosh{(\rho_{3})} - w_{2} \cosh{(\rho_{2})}. $$</div>
+<p>
+From here it follows that
+</p>
+<div class="math">$$ \rho_{3} = \rho_{2} + \log{\left( \frac{w_{1}}{w_{2}} \right)}. $$</div>
+<p>
+Note that
+</p>
+<div class="math">$$ \rho_{1} + \rho_{2} = \rho_{3} + \rho_{4}. $$</div>
+<h3>Fast <span class="math">\(u\)</span>-channel</h3>
+<p>If <span class="math">\(u &lt; 0\)</span>, then the vector <span class="math">\(P_{u}\)</span> is fast and given by
+</p>
+<div class="math">$$ P_{u} = \begin{pmatrix} \sqrt{-u} \cosh{(\rho_{u})} &amp; \sqrt{-u} \sinh{(\rho_{u})} \end{pmatrix}. $$</div>
+<p>
+Then
+</p>
+<div class="math">$$ P_{s} \cdot P_{u} = \sqrt{s} \sqrt{-u} \cosh{(\rho_{s} - \rho_{u})}; $$</div>
+<p>
+and
+</p>
+<div class="math">$$ P_{t} \cdot P_{u} = \sqrt{-t} \sqrt{-u} \sinh{(\rho_{t} - \rho_{u})}. $$</div>
+<p>
+The composite fast rapidity <span class="math">\(\rho_{u}\)</span> can be written as
+</p>
+<div class="math">$$ \rho_{u} = \log{\left( \frac{w_{1} \exp{(\rho_{1})} - w_{2} \exp{(\rho_{4})}}{\sqrt{-u}} \right)} = \log{\left( \frac{w_{1} \exp{(\rho_{3})} - w_{2} \exp{(\rho_{2})}}{\sqrt{-u}} \right)}. $$</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

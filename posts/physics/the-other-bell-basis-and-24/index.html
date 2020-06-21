@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  The Other Bell Basis and 24 | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/the-other-bell-basis-and-24/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/flatly.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="A surprising property of a certain 2-by-2 matrix.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  The Other Bell Basis and 24
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-04-11T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Wed 11 April 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83702x.html">#8.370.2x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>The following <span class="math">\(2 \times 2\)</span> matrix is very interesting:
+</p>
+<div class="math">\begin{equation*}
+    J = \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 &amp; i \\
+        1 &amp; -i
+    \end{bmatrix}
+\end{equation*}</div>
+<p>
+It satisfies the following identities:
+</p>
+<div class="math">\begin{align*}
+    J^{3} &amp;= \frac{1}{\sqrt{2}}(1 + i) I &amp; J^{6} &amp;= i I &amp; J^{9} &amp;= -\frac{1}{\sqrt{2}}(1 - i) I &amp; J^{12} &amp;= -I \\
+    J^{15} &amp;= -\frac{1}{\sqrt{2}}(1 + i) I &amp; J^{18} &amp;= -i I &amp; J^{21} &amp;= \frac{1}{\sqrt{2}}(1 - i) I &amp; J^{24} &amp;= +I
+\end{align*}</div>
+<p>
+Note that <span class="math">\(J\)</span> is unitary:
+</p>
+<div class="math">\begin{equation*}
+    J^{\dagger} = \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 &amp; 1 \\
+        -i &amp; i
+    \end{bmatrix} = J^{23} = J^{-1}
+\end{equation*}</div>
+<p>
+Thus
+</p>
+<div class="math">\begin{align*}
+    J^{4} &amp;= \frac{1}{\sqrt{2}}(1 + i) J &amp; J^{7} &amp;= i J &amp; J^{10} &amp;= -\frac{1}{\sqrt{2}}(1 - i) J &amp; J^{13} &amp;= -J \\
+    J^{16} &amp;= -\frac{1}{\sqrt{2}}(1 + i) J &amp; J^{19} &amp;= -i J &amp; J^{22} &amp;= \frac{1}{\sqrt{2}}(1 - i) J
+\end{align*}</div>
+<p>
+and
+</p>
+<div class="math">\begin{align*}
+    J^{2} &amp;= \frac{1}{\sqrt{2}}(1 + i) J^{\dagger} &amp; J^{5} &amp;= i J^{\dagger} &amp; J^{8} &amp;= -\frac{1}{\sqrt{2}}(1 - i) J^{\dagger} &amp; J^{11} &amp;= -J^{\dagger} \\
+    J^{14} &amp;= -\frac{1}{\sqrt{2}}(1 + i) J^{\dagger} &amp; J^{17} &amp;= -i J^{\dagger} &amp; J^{20} &amp;= \frac{1}{\sqrt{2}}(1 - i) J^{\dagger}
+\end{align*}</div>
+<p>
+Note that the coefficients correspond to the 8th-roots of unity, reflecting the fact that the cyclic group <span class="math">\(\mathbb{Z}_{24}\)</span> is the product group <span class="math">\(\mathbb{Z}_{3} \times \mathbb{Z}_{8}\)</span>.</p>
+<p>If the kets <span class="math">\(|0 \rangle\)</span> and <span class="math">\(|1 \rangle\)</span> are defined via
+</p>
+<div class="math">\begin{align*}
+    |0 \rangle &amp;= \begin{bmatrix}
+        1 \\ 0
+    \end{bmatrix} &amp; |1 \rangle &amp;= \begin{bmatrix}
+        0 \\ 1
+    \end{bmatrix}
+\end{align*}</div>
+<p>
+and the kets <span class="math">\(|Y{-}\rangle\)</span> and <span class="math">\(|Y{+}\rangle\)</span> are defined via
+</p>
+<div class="math">\begin{align*}
+    |Y{-}\rangle &amp;= \frac{1}{\sqrt{2}} \left( |0 \rangle - i | 1 \rangle \right) &amp; |Y{+}\rangle &amp;= \frac{1}{\sqrt{2}} \left( |0 \rangle + i | 1 \rangle \right)
+\end{align*}</div>
+<p>
+then <span class="math">\(J\)</span> and <span class="math">\(J^{\dagger}\)</span> transform between these two ortho-normal bases:
+</p>
+<div class="math">\begin{align*}
+    J^{\dagger} |0 \rangle &amp;= |Y{-} \rangle &amp; J^{\dagger} |1 \rangle &amp;= |Y{+} \rangle
+\end{align*}</div>
+<p>
+Note that the kets <span class="math">\(|Y{-}\rangle\)</span> and <span class="math">\(|Y{+}\rangle\)</span> are eigen-vectors of the unitary hermitian matrix <span class="math">\(Y\)</span> given by
+</p>
+<div class="math">\begin{align*}
+    Y |Y{-}\rangle &amp;= -|Y{-}\rangle &amp; Y |Y{+}\rangle &amp;= |Y{+}\rangle &amp; Y &amp;= \begin{bmatrix}
+        0 &amp; -i \\
+        i &amp; 0
+    \end{bmatrix}
+\end{align*}</div>
+<p>
+This is one of the Pauli matrices.</p>
+<p>Let <span class="math">\(J_{2} = J\)</span>. It follows that
+</p>
+<div class="math">\begin{equation*}
+    (J_{2})^{24} = I_{2}
+\end{equation*}</div>
+<p>
+Note that <span class="math">\(J_{2}\)</span> correspond to a 1-qubit gate. Consider the Kronecker product:
+</p>
+<div class="math">\begin{equation*}
+    J_{4} = J_{2} \otimes J_{2}
+\end{equation*}</div>
+<p>
+It follows that
+</p>
+<div class="math">\begin{equation*}
+    (J_{4})^{12} = I_{4}
+\end{equation*}</div>
+<p>
+Note that <span class="math">\(J_{4}\)</span> correspond to a 2-qubit gate. Now consider the Kronecker product:
+</p>
+<div class="math">\begin{equation*}
+    J_{16} = J_{4} \otimes J_{4}
+\end{equation*}</div>
+<p>
+It follows that
+</p>
+<div class="math">\begin{equation*}
+    (J_{16})^{6} = I_{16}
+\end{equation*}</div>
+<p>
+Note that <span class="math">\(J_{16}\)</span> correspond to a 4-qubit gate. Now consider the Kronecker product:
+</p>
+<div class="math">\begin{equation*}
+    J_{256} = J_{16} \otimes J_{16}
+\end{equation*}</div>
+<p>
+It follows that
+</p>
+<div class="math">\begin{equation*}
+    (J_{256})^{3} = I_{256}
+\end{equation*}</div>
+<p>
+Note that <span class="math">\(J_{256}\)</span> correspond to an 8-qubit gate.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Hamiltonian for Hadamard Transforms | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/hamiltonian-for-hadamard-transforms/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/flatly.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Hermitian Hamiltonians for two- and four-dimensional Hadamard transforms.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Hamiltonian for Hadamard Transforms
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-03-26T16:29:10-04:00">
+          <i class="fas fa-clock"></i>
+          Mon 26 March 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/83702x.html">#8.370.2x</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>A <strong>unitary</strong> matrix <span class="math">\(U\)</span> satisfies the following relation
+</p>
+<div class="math">\begin{equation*}
+    U^{\dagger} = U^{-1}
+\end{equation*}</div>
+<p>
+A <strong>hermitian</strong> matrix <span class="math">\(V\)</span> satisfies the following relation
+</p>
+<div class="math">\begin{equation*}
+    V^{\dagger} = V
+\end{equation*}</div>
+<p>
+The simplest case involves 2×2 matrices. The most general 2×2 hermitian matrix is given by
+</p>
+<div class="math">\begin{equation*}
+    V = \frac{1}{2} \begin{bmatrix}
+        w + z &amp; x - yi \\
+        x + yi &amp; w - z
+    \end{bmatrix} = \frac{w}{2} I_{2} + \frac{x}{2} X + \frac{y}{2} Y + \frac{z}{2} Z
+\end{equation*}</div>
+<p>
+Recall that
+</p>
+<div class="math">\begin{equation*}
+    [X, I_{2}] = [Y, I_{2}] = [Z, I_{2}] = 0
+\end{equation*}</div>
+<p>
+A unitary matrix can be written in <strong>exponential</strong> form:
+</p>
+<div class="math">\begin{equation*}
+    U = \exp{(iV)} = \exp{\left( \frac{iw}{2} \right)} \exp{\left( \frac{i}{2} \left[x X + y Y + z Z \right] \right)}
+\end{equation*}</div>
+<p>
+Using the familiar result for exponentiation of Pauli matrices gives
+</p>
+<div class="math">\begin{equation*}
+    U = \exp{\left( \frac{iw}{2} \right)} \left[ I_{2} \cos{\left( \frac{\sqrt{x^{2} + y^{2} + z^{2}}}{2} \right)} + i \left( \frac{x X + y Y + z Z}{\sqrt{x^{2} + y^{2} + z^{2}}} \right) \sin{\left( \frac{\sqrt{x^{2} + y^{2} + z^{2}}}{2} \right)} \right]
+\end{equation*}</div>
+<p>
+As an example, consider the <strong>2-dimensional Hadamard transform</strong>:
+</p>
+<div class="math">\begin{equation*}
+    H_{2} = \frac{1}{\sqrt{2}} \begin{bmatrix}
+        1 &amp; 1 \\ 1 &amp; -1
+    \end{bmatrix} = \frac{1}{\sqrt{2}}\left( X + Z \right)
+\end{equation*}</div>
+<p>
+Thus, we need
+</p>
+<div class="math">\begin{align*}
+    w &amp;= -\pi, &amp; y &amp;= 0, &amp; \sqrt{x^{2} + z^{2}} &amp;= \pi
+\end{align*}</div>
+<p>
+Then
+</p>
+<div class="math">\begin{equation*}
+    U = \frac{xX + zZ}{\pi}
+\end{equation*}</div>
+<p>
+Finally, choose
+</p>
+<div class="math">\begin{equation*}
+    x = z = \frac{\pi}{\sqrt{2}}
+\end{equation*}</div>
+<p>
+Thus,
+</p>
+<div class="math">\begin{align*}
+    H_{2} &amp;= \exp{\left(i V \right)}, &amp; V &amp;= -\frac{\pi}{2} I_{2} + \frac{\pi}{2} H_{2}
+\end{align*}</div>
+<p>
+Recall that <span class="math">\(H_{2}\)</span> is equivalent to the <strong>2-dimensional Fourier transform</strong>, so the above result gives you the <strong>Hamiltonian</strong> of the 2-dimensional Fourier transform. In general, the <span class="math">\(N\)</span>-dimensional discrete Fourier transform <span class="math">\(F_{N}\)</span> satisfies the following relations:
+</p>
+<div class="math">\begin{align*}
+    (F_{N})^{2} &amp;= S_{N}, &amp; (S_{N})^{2} &amp;= (F_{N})^{4} = I_{N}
+\end{align*}</div>
+<p>
+Let
+</p>
+<div class="math">\begin{equation*}
+    F_{N} = \exp{(i G_{N})}
+\end{equation*}</div>
+<p>
+Then
+</p>
+<div class="math">\begin{equation*}
+    (F_{N})^{2} = \exp{(2i G_{N})} = S_{N}
+\end{equation*}</div>
+<p>
+and also
+</p>
+<div class="math">\begin{equation*}
+    (F_{N})^{4} = \exp{(4i G_{N})} = I_{N}
+\end{equation*}</div>
+<p>
+Note that this does not necessarily implies that <span class="math">\(G_{N} = 0\)</span>. Indeed, looking back at our result for 2×2 matrices, setting
+</p>
+<div class="math">\begin{align*}
+    w &amp;= 4 \pi m, &amp; \sqrt{x^{2} + y^{2} + z^{2}} &amp;= 4 \pi n, &amp; m, n &amp;\in \mathbb{Z}
+\end{align*}</div>
+<p>
+you get
+</p>
+<div class="math">\begin{align*}
+    \exp{(i V(m, n))} &amp;= I_{2}, &amp; V(m, n) &amp;= 2 \pi m I_{2} + 2 \pi n \left(xX + yY + zZ \right), &amp; x^{2} + y^{2} + z^{2} &amp;= 1
+\end{align*}</div>
+<p>
+Thus, the exponential of a 2×2 hermitian matrix of the above form will be the 2×2 identity matrix.</p>
+<p>For two qubits you can have the <strong>4-dimensional Fourier transform</strong>. The Hamiltonian for this matrix would presumably require understanding 4×4 hermitian matrices in more detail. However, since the <strong>4-dimensional Hadamard transform</strong> is given by a <strong>Kronecker product</strong>,
+</p>
+<div class="math">\begin{equation*}
+    H_{4} = H_{2} \otimes H_{2}
+\end{equation*}</div>
+<p>
+you can find the Hamiltonian for this transform with what we have seen so far. There is an important identity that I will not prove:
+</p>
+<div class="math">\begin{equation*}
+    \exp{(A)} \otimes \exp{(B)} = \exp{(A \oplus B)}
+\end{equation*}</div>
+<p>
+Here <span class="math">\(\oplus\)</span> is the <strong>Kronecker sum</strong>. If <span class="math">\(A\)</span> is <span class="math">\(M \times M\)</span> and <span class="math">\(B\)</span> is <span class="math">\(N \times N\)</span>, then the Kronecker sum is given by
+</p>
+<div class="math">\begin{equation*}
+    A \oplus B = (A \otimes I_{N}) + (I_{M} \otimes B)
+\end{equation*}</div>
+<p>
+Thus
+</p>
+<div class="math">\begin{equation*}
+    H_{4} = \exp{(iG_{2})} \otimes \exp{(iG_{2})} = \exp{(i G_{2} \oplus iG_{2})} = \exp{(i G_{4})}
+\end{equation*}</div>
+<p>
+That is
+</p>
+<div class="math">\begin{align*}
+    G_{4} &amp;= G_{2} \oplus G_{2}, &amp; G_{2} = -\frac{\pi}{2} I_{2} + \frac{\pi}{2} H_{2} = \frac{\pi}{2\sqrt{2}} \begin{bmatrix}
+        1 - \sqrt{2} &amp; 1 \\
+        1 &amp; -1 - \sqrt{2}
+    \end{bmatrix}
+\end{align*}</div>
+<p>
+More explicitly,
+</p>
+<div class="math">\begin{equation*}
+    G_{4} = \frac{\pi}{2 \sqrt{2}} \begin{bmatrix}
+        2 - \sqrt{8} &amp; 1 &amp; 1 &amp; 0 \\
+        1 &amp; -\sqrt{8} &amp; 0 &amp; 1 \\
+        1 &amp; 0 &amp; -\sqrt{8} &amp; 1 \\
+        0 &amp; 1 &amp; 1 &amp; -2 - \sqrt{8}
+    \end{bmatrix} = -\pi I_{4} + \frac{\pi}{2} \left( H_{2} \oplus H_{2} \right)
+\end{equation*}</div>
+<p>
+This is the <strong>Hamiltonian</strong> for the <strong>4-dimensional Hadamard transform</strong>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>
