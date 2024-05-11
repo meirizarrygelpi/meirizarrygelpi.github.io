@@ -1,5 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2019-02-03T15:48:31-05:00</updated><subtitle>Physics impostor. Mathematics interloper. Husband. Father.</subtitle><entry><title>Hertz Potential and Current Forms</title><link href="https://meirizarrygelpi.github.io/posts/physics/hertz-potential-and-current-forms/" rel="alternate"></link><published>2019-02-03T15:48:31-05:00</published><updated>2019-02-03T15:48:31-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2019-02-03:/posts/physics/hertz-potential-and-current-forms/</id><summary type="html">&lt;p&gt;Hertz potential and currents in the language of differential forms.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In terms of differential forms, in Minkowski spacetime, the Maxwell equations are
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí - Physics</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2024-05-10T00:00:00-04:00</updated><subtitle>Physics impostor. Mathematics interloper. Husband. Father.</subtitle><entry><title>Winter Break 2024 (Zeta Part 1)</title><link href="https://meirizarrygelpi.github.io/posts/physics/jan-feb-2024/" rel="alternate"></link><published>2024-05-10T00:00:00-04:00</published><updated>2024-05-10T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2024-05-10:/posts/physics/jan-feb-2024/</id><summary type="html">&lt;p&gt;How I spent part of my "sabbatical" break.&lt;/p&gt;</summary><content type="html">&lt;p&gt;On December 2023 I finished teaching Thermal Physics at Sarah Lawrence College. I had not bother to find a job for spring 2024, so I began an adjunct sabbatical term after 15 semesters of teaching at various institutions.&lt;/p&gt;
+&lt;p&gt;After New Years Eve I eventually caught whatever sickness my family had (a minor cold). I wrote evaluations, I submitted grades and I concluded with my responsibilities. I was free to do whatever I wanted.&lt;/p&gt;
+&lt;p&gt;One of the last topics covered in the Thermal Physics course was applications of the partition function formalism. For the final exam, I wanted students to do a non-trivial problem. In class we found the partition function for a two-state system, and also for the quantum harmonic oscillator. The energy levels for the quantum harmonic oscillator are evenly spaced:&lt;/p&gt;
+&lt;div class="math"&gt;$$ E(n) = \hbar \omega \left( n + \frac{1}{2} \right) $$&lt;/div&gt;
+&lt;p&gt;Here &lt;span class="math"&gt;\(n\)&lt;/span&gt; is a non-negative integer, and &lt;span class="math"&gt;\(\omega\)&lt;/span&gt; is a parameter that describes the strength of the harmonic potential and corresponds to the classical angular frequency. The partition function for this energy spectrum is&lt;/p&gt;
+&lt;div class="math"&gt;$$ Z(\beta) = \sum_{n = 0}^{\infty} \exp\left[ - \beta E(n) \right] = \exp\left( -\beta E_{0} \right) \sum_{n = 0}^{\infty} \left[ \exp(-\beta \hbar \omega) \right]^{n} $$&lt;/div&gt;
+&lt;p&gt;The series can be summed to give&lt;/p&gt;
+&lt;div class="math"&gt;$$ Z(\beta) = \exp(-\beta E_{0}) \frac{1}{1 - \exp(-\beta \hbar \omega)} $$&lt;/div&gt;
+&lt;p&gt;Here &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; is proportional to the inverse temperature:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \beta = \frac{1}{k_{\text{B}} T} $$&lt;/div&gt;
+&lt;p&gt;and &lt;span class="math"&gt;\(E_{0}\)&lt;/span&gt; is the ground state energy:&lt;/p&gt;
+&lt;div class="math"&gt;$$ E_{0} = \frac{1}{2} \hbar \omega $$&lt;/div&gt;
+&lt;p&gt;Thinking of problems for my students, I tried to changed the geometric series trick. Instead of using&lt;/p&gt;
+&lt;div class="math"&gt;$$ \frac{1}{1 - x} = \sum_{n = 0}^{\infty} x^{n} $$&lt;/div&gt;
+&lt;p&gt;I thought of considering a sum like&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sum_{n = 1}^{\infty} n^{x} $$&lt;/div&gt;
+&lt;p&gt;Then I realized that this is related to the Riemann zeta function:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \zeta(s) = \sum_{n = 1}^{\infty} \frac{1}{n^{s}} $$&lt;/div&gt;
+&lt;p&gt;That lead me to the question: What is the energy spectrum that produces a Riemann zeta partition function? Working backwards gives&lt;/p&gt;
+&lt;div class="math"&gt;$$ E(n) = b + a \log(n) $$&lt;/div&gt;
+&lt;p&gt;Here &lt;span class="math"&gt;\(a\)&lt;/span&gt; and &lt;span class="math"&gt;\(b\)&lt;/span&gt; are constants with units of energy. The value of &lt;span class="math"&gt;\(b\)&lt;/span&gt; corresponds to the lowest energy:&lt;/p&gt;
+&lt;div class="math"&gt;$$ E(1) = b $$&lt;/div&gt;
+&lt;p&gt;The value of &lt;span class="math"&gt;\(a\)&lt;/span&gt; is related to the spacing between energy levels.&lt;/p&gt;
+&lt;p&gt;With this logarithmic energy sequence the partition function becomes&lt;/p&gt;
+&lt;div class="math"&gt;$$ Z(\beta) = \exp(-\beta b) \sum_{n = 1}^{\infty} n^{-\beta a} = \exp(-\beta b) \zeta(\beta a) $$&lt;/div&gt;
+&lt;p&gt;I saw this logarithmic energy spectrum and thought: "Hmmm, I wonder what kind of quantum system produces such a spectrum?" I also searched the internet and quickly found the work of Bernard Julia and others on the so-called "primon" gas. It turns out that this system can be thought of as being composed of infinitely-many distinct harmonic oscillators. One hint of this is the Euler product formula:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \zeta(s) = \prod_{j = 1}^{\infty} \frac{1}{1 - (p_{j})^{-s}} $$&lt;/div&gt;
+&lt;p&gt;Here &lt;span class="math"&gt;\(p_{j}\)&lt;/span&gt; is the &lt;span class="math"&gt;\(j\)&lt;/span&gt;-th prime number. Using&lt;/p&gt;
+&lt;div class="math"&gt;$$ (p_{j})^{-\beta a} = \exp\left[ - \beta a \log(p_{j}) \right] $$&lt;/div&gt;
+&lt;p&gt;leads to another form of the Euler product formula:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \zeta(\beta a) = \prod_{j = 1}^{\infty} \frac{1}{1 - \exp(-\beta \hbar \omega_{j})} $$&lt;/div&gt;
+&lt;p&gt;where we have introduced &lt;span class="math"&gt;\(\omega_{j}\)&lt;/span&gt; via:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \hbar \omega_{j} = a \log(p_{j}) $$&lt;/div&gt;
+&lt;p&gt;That is, the Euler product can be re-interpreted as the product of partition functions for harmonic oscillators with distinct frequencies. These frequencies consist of a common constant &lt;span class="math"&gt;\(a / \hbar\)&lt;/span&gt; multiplied by the logarithm of a prime number.&lt;/p&gt;
+&lt;p&gt;If you have a big system made up of small independent subsystems, then the partition function of the big system is the product of the partition functions of the small subsystems. This suggests that the quantum system with the logarithmic energy spectrum can be decomposed into infinitely-many independent harmonic oscillator systems! In other words, this system has &lt;strong&gt;infinitely-many degrees of freedom&lt;/strong&gt;. This points to a non-trivial physical object that might be extended like a string (i.e. not a simple particle).&lt;/p&gt;
+&lt;p&gt;You can also see this harmonic oscillator decomposition in the energy spectrum. Recall the fundamental theorem of arithmetic: Each positive integer has a unique prime factorization. This means that you can write any positive integer as&lt;/p&gt;
+&lt;div class="math"&gt;$$ n = \prod_{j = 1}^{\infty} (p_{j})^{k_{j}} $$&lt;/div&gt;
+&lt;p&gt;For example, &lt;span class="math"&gt;\(15 = 3 \cdot 5\)&lt;/span&gt;, so &lt;span class="math"&gt;\(k_{2} = 1\)&lt;/span&gt; and &lt;span class="math"&gt;\(k_{3} = 1\)&lt;/span&gt; but &lt;span class="math"&gt;\(k_{1} = 0\)&lt;/span&gt; and also &lt;span class="math"&gt;\(k_{j} = 0\)&lt;/span&gt; for any &lt;span class="math"&gt;\(j &amp;gt; 3\)&lt;/span&gt;. Only a finite set of the &lt;span class="math"&gt;\(k_{j}\)&lt;/span&gt; values are non-zero. Taking the logarithm on both sides gives a sum:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \log(n) = \sum_{j = 1}^{\infty} k_{j}  \log(p_{j})$$&lt;/div&gt;
+&lt;p&gt;Each &lt;span class="math"&gt;\(k_{j}\)&lt;/span&gt; is a non-negative integer.&lt;/p&gt;
+&lt;p&gt;The Riemann zeta function has a divergence at a particular value:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \zeta(1) \to \infty $$&lt;/div&gt;
+&lt;p&gt;This is expected since the series becomes the harmonic series. But if the partition function is proportional to the Riemann zeta function, then the partition function for this system will have a divergence at a finite value of the temperature:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \beta a = 1 \to T = \frac{a}{k_{\text{B}}} $$&lt;/div&gt;
+&lt;p&gt;This means that this system has a finite Hagedorn temperature. I recall mentions of the Hagedorn temperature in string theory textbooks (e.g. Fields).&lt;/p&gt;
+&lt;p&gt;In the end, I gave students the logarithmic energy spectrum sequence and asked them to calculate the partition function, the internal energy, and a few other things. I scaffolded a problem where they had to discover the Hagedorn temperature and realize that this system appears to have a maximum temperature allowed. Although the Riemann zeta function can be analytically continued beyond the Hagedorn temperature in the real line, it appears to take negative values which are problematic for a physical interpretation as a partition function. I also mentioned to students the Riemann hypothesis, and as a joke I asked the students to prove it for extra credit.&lt;/p&gt;
+&lt;p&gt;But I could not stop thinking about this problem...&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Physics"></category><category term="zeta"></category></entry><entry><title>Hertz Potential and Current Forms</title><link href="https://meirizarrygelpi.github.io/posts/physics/hertz-potential-and-current-forms/" rel="alternate"></link><published>2019-02-03T15:48:31-05:00</published><updated>2019-02-03T15:48:31-05:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2019-02-03:/posts/physics/hertz-potential-and-current-forms/</id><summary type="html">&lt;p&gt;Hertz potential and currents in the language of differential forms.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In terms of differential forms, in Minkowski spacetime, the Maxwell equations are
 &lt;/p&gt;
 &lt;div class="math"&gt;\begin{align*}
     \partial \wedge F = 0 &amp;amp;&amp;amp; \partial \wedge \star H = \star J &amp;amp;&amp;amp; H = F - P

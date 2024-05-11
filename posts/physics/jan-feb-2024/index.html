@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Winter Break 2024 (Zeta Part 1) | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/jan-feb-2024/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootswatch/cerulean.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="How I spent part of my "sabbatical" break.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Winter Break 2024 (Zeta Part 1)
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2024-05-10T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Fri 10 May 2024
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/zeta.html">#zeta</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>On December 2023 I finished teaching Thermal Physics at Sarah Lawrence College. I had not bother to find a job for spring 2024, so I began an adjunct sabbatical term after 15 semesters of teaching at various institutions.</p>
+<p>After New Years Eve I eventually caught whatever sickness my family had (a minor cold). I wrote evaluations, I submitted grades and I concluded with my responsibilities. I was free to do whatever I wanted.</p>
+<p>One of the last topics covered in the Thermal Physics course was applications of the partition function formalism. For the final exam, I wanted students to do a non-trivial problem. In class we found the partition function for a two-state system, and also for the quantum harmonic oscillator. The energy levels for the quantum harmonic oscillator are evenly spaced:</p>
+<div class="math">$$ E(n) = \hbar \omega \left( n + \frac{1}{2} \right) $$</div>
+<p>Here <span class="math">\(n\)</span> is a non-negative integer, and <span class="math">\(\omega\)</span> is a parameter that describes the strength of the harmonic potential and corresponds to the classical angular frequency. The partition function for this energy spectrum is</p>
+<div class="math">$$ Z(\beta) = \sum_{n = 0}^{\infty} \exp\left[ - \beta E(n) \right] = \exp\left( -\beta E_{0} \right) \sum_{n = 0}^{\infty} \left[ \exp(-\beta \hbar \omega) \right]^{n} $$</div>
+<p>The series can be summed to give</p>
+<div class="math">$$ Z(\beta) = \exp(-\beta E_{0}) \frac{1}{1 - \exp(-\beta \hbar \omega)} $$</div>
+<p>Here <span class="math">\(\beta\)</span> is proportional to the inverse temperature:</p>
+<div class="math">$$ \beta = \frac{1}{k_{\text{B}} T} $$</div>
+<p>and <span class="math">\(E_{0}\)</span> is the ground state energy:</p>
+<div class="math">$$ E_{0} = \frac{1}{2} \hbar \omega $$</div>
+<p>Thinking of problems for my students, I tried to changed the geometric series trick. Instead of using</p>
+<div class="math">$$ \frac{1}{1 - x} = \sum_{n = 0}^{\infty} x^{n} $$</div>
+<p>I thought of considering a sum like</p>
+<div class="math">$$ \sum_{n = 1}^{\infty} n^{x} $$</div>
+<p>Then I realized that this is related to the Riemann zeta function:</p>
+<div class="math">$$ \zeta(s) = \sum_{n = 1}^{\infty} \frac{1}{n^{s}} $$</div>
+<p>That lead me to the question: What is the energy spectrum that produces a Riemann zeta partition function? Working backwards gives</p>
+<div class="math">$$ E(n) = b + a \log(n) $$</div>
+<p>Here <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are constants with units of energy. The value of <span class="math">\(b\)</span> corresponds to the lowest energy:</p>
+<div class="math">$$ E(1) = b $$</div>
+<p>The value of <span class="math">\(a\)</span> is related to the spacing between energy levels.</p>
+<p>With this logarithmic energy sequence the partition function becomes</p>
+<div class="math">$$ Z(\beta) = \exp(-\beta b) \sum_{n = 1}^{\infty} n^{-\beta a} = \exp(-\beta b) \zeta(\beta a) $$</div>
+<p>I saw this logarithmic energy spectrum and thought: "Hmmm, I wonder what kind of quantum system produces such a spectrum?" I also searched the internet and quickly found the work of Bernard Julia and others on the so-called "primon" gas. It turns out that this system can be thought of as being composed of infinitely-many distinct harmonic oscillators. One hint of this is the Euler product formula:</p>
+<div class="math">$$ \zeta(s) = \prod_{j = 1}^{\infty} \frac{1}{1 - (p_{j})^{-s}} $$</div>
+<p>Here <span class="math">\(p_{j}\)</span> is the <span class="math">\(j\)</span>-th prime number. Using</p>
+<div class="math">$$ (p_{j})^{-\beta a} = \exp\left[ - \beta a \log(p_{j}) \right] $$</div>
+<p>leads to another form of the Euler product formula:</p>
+<div class="math">$$ \zeta(\beta a) = \prod_{j = 1}^{\infty} \frac{1}{1 - \exp(-\beta \hbar \omega_{j})} $$</div>
+<p>where we have introduced <span class="math">\(\omega_{j}\)</span> via:</p>
+<div class="math">$$ \hbar \omega_{j} = a \log(p_{j}) $$</div>
+<p>That is, the Euler product can be re-interpreted as the product of partition functions for harmonic oscillators with distinct frequencies. These frequencies consist of a common constant <span class="math">\(a / \hbar\)</span> multiplied by the logarithm of a prime number.</p>
+<p>If you have a big system made up of small independent subsystems, then the partition function of the big system is the product of the partition functions of the small subsystems. This suggests that the quantum system with the logarithmic energy spectrum can be decomposed into infinitely-many independent harmonic oscillator systems! In other words, this system has <strong>infinitely-many degrees of freedom</strong>. This points to a non-trivial physical object that might be extended like a string (i.e. not a simple particle).</p>
+<p>You can also see this harmonic oscillator decomposition in the energy spectrum. Recall the fundamental theorem of arithmetic: Each positive integer has a unique prime factorization. This means that you can write any positive integer as</p>
+<div class="math">$$ n = \prod_{j = 1}^{\infty} (p_{j})^{k_{j}} $$</div>
+<p>For example, <span class="math">\(15 = 3 \cdot 5\)</span>, so <span class="math">\(k_{2} = 1\)</span> and <span class="math">\(k_{3} = 1\)</span> but <span class="math">\(k_{1} = 0\)</span> and also <span class="math">\(k_{j} = 0\)</span> for any <span class="math">\(j &gt; 3\)</span>. Only a finite set of the <span class="math">\(k_{j}\)</span> values are non-zero. Taking the logarithm on both sides gives a sum:</p>
+<div class="math">$$ \log(n) = \sum_{j = 1}^{\infty} k_{j}  \log(p_{j})$$</div>
+<p>Each <span class="math">\(k_{j}\)</span> is a non-negative integer.</p>
+<p>The Riemann zeta function has a divergence at a particular value:</p>
+<div class="math">$$ \zeta(1) \to \infty $$</div>
+<p>This is expected since the series becomes the harmonic series. But if the partition function is proportional to the Riemann zeta function, then the partition function for this system will have a divergence at a finite value of the temperature:</p>
+<div class="math">$$ \beta a = 1 \to T = \frac{a}{k_{\text{B}}} $$</div>
+<p>This means that this system has a finite Hagedorn temperature. I recall mentions of the Hagedorn temperature in string theory textbooks (e.g. Fields).</p>
+<p>In the end, I gave students the logarithmic energy spectrum sequence and asked them to calculate the partition function, the internal energy, and a few other things. I scaffolded a problem where they had to discover the Hagedorn temperature and realize that this system appears to have a maximum temperature allowed. Although the Riemann zeta function can be analytically continued beyond the Hagedorn temperature in the real line, it appears to take negative values which are problematic for a physical interpretation as a partition function. I also mentioned to students the Riemann hypothesis, and as a joke I asked the students to prove it for extra credit.</p>
+<p>But I could not stop thinking about this problem...</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>
