@@ -1,5 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2024-05-10T00:00:00-04:00</updated><subtitle>Physics impostor. Mathematics interloper. Husband. Father.</subtitle><entry><title>Winter Break 2024 (Zeta Part 1)</title><link href="https://meirizarrygelpi.github.io/posts/physics/jan-feb-2024/" rel="alternate"></link><published>2024-05-10T00:00:00-04:00</published><updated>2024-05-10T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2024-05-10:/posts/physics/jan-feb-2024/</id><summary type="html">&lt;p&gt;How I spent part of my "sabbatical" break.&lt;/p&gt;</summary><content type="html">&lt;p&gt;On December 2023 I finished teaching Thermal Physics at Sarah Lawrence College. I had not bother to find a job for spring 2024, so I began an adjunct sabbatical term after 15 semesters of teaching at various institutions.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>M.E. Irizarry-Gelpí</title><link href="https://meirizarrygelpi.github.io/" rel="alternate"></link><link href="https://meirizarrygelpi.github.io/feeds/all.atom.xml" rel="self"></link><id>https://meirizarrygelpi.github.io/</id><updated>2024-05-16T00:00:00-04:00</updated><subtitle>Physics impostor. Mathematics interloper. Husband. Father.</subtitle><entry><title>Dilatation operators (Zeta Part 2)</title><link href="https://meirizarrygelpi.github.io/posts/physics/dilatation-zeta/" rel="alternate"></link><published>2024-05-16T00:00:00-04:00</published><updated>2024-05-16T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2024-05-16:/posts/physics/dilatation-zeta/</id><summary type="html">&lt;p&gt;Dilatation operators and the Riemann zeta function.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In the previous post I mentioned the logarithmic energy spectrum sequence:&lt;/p&gt;
+&lt;div class="math"&gt;$$ E_{n} = b + a \log(n) $$&lt;/div&gt;
+&lt;p&gt;This energy spectrum sequence is very different from the ones encountered in a quantum mechanics course. I was pleasantly surprised to learn that the quantum harmonic oscillator is actually relevant to this problem, because every positive integer can be uniquely factorized into prime factors:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \log(n) = \sum_{j = 1}^{\infty} k_{j} \log(p_{j}) $$&lt;/div&gt;
+&lt;p&gt;Here &lt;span class="math"&gt;\(p_{j}\)&lt;/span&gt; is the &lt;span class="math"&gt;\(j\)&lt;/span&gt;-th prime number and &lt;span class="math"&gt;\(k_{j}\)&lt;/span&gt; is a non-negative integer.&lt;/p&gt;
+&lt;p&gt;This logarithmic energy sequence is related to the Riemann zeta function. Consider the Boltzmann operator:&lt;/p&gt;
+&lt;div class="math"&gt;$$ B(\beta) \equiv \exp(-\beta H) $$&lt;/div&gt;
+&lt;p&gt;The trace of this operator corresponds to the partition function:&lt;/p&gt;
+&lt;div class="math"&gt;$$ Z(\beta) = \operatorname{tr}(B) $$&lt;/div&gt;
+&lt;p&gt;Since the Boltzmann operator involves the hamiltonian operator &lt;span class="math"&gt;\(H\)&lt;/span&gt;, it makes sense to calculate the trace with the energy eigenstates:&lt;/p&gt;
+&lt;div class="math"&gt;$$ H \vert n \rangle = E_{n} \vert n \rangle $$&lt;/div&gt;
+&lt;p&gt;Then:&lt;/p&gt;
+&lt;div class="math"&gt;$$ Z(\beta) = \sum_{n = 1}^{\infty} \langle n \vert B(\beta) \vert n \rangle = \exp(-\beta b) \zeta(\beta a) $$&lt;/div&gt;
+&lt;p&gt;Here &lt;span class="math"&gt;\(\zeta\)&lt;/span&gt; is the Riemann zeta function. Due to the Euler product formula, you can write this partition function as an infinite product of distinct harmonic oscillator partition functions with angular frequencies given by&lt;/p&gt;
+&lt;div class="math"&gt;$$ \omega_{j} = \frac{a \log(p_{j})}{\hbar} $$&lt;/div&gt;
+&lt;p&gt;That is, each oscillator has a prime number associated to it. Since there are infinitely-many prime numbers, there are infinitely-many oscillators.&lt;/p&gt;
+&lt;p&gt;One of my first thoughts was along the lines of: "There is a string theory hiding inside the Riemann zeta function". A string because you need an infinite number of degrees of freedom, and these degrees of freedom appear to be oscillating harmonically in this particular dynamical regime. This realization was very exciting. However, harmonic oscillators are kind of boring, since they interact trivially. In fact, thinking about strings is kind of dicey: the traditional string has vibrational frequencies that are evenly-spaced. This "zeta string" has vibrational frequencies that are not evenly-spaced. Since these frequencies are associated with prime numbers, the spacing is somewhat unpredictable (i.e. the gaps between primes is not uniform). Indeed, one of the most important properties of the Riemann zeta function is its connection to the distribution of prime numbers.&lt;/p&gt;
+&lt;p&gt;Given a harmonic oscillator degree of freedom with classical angular frequency &lt;span class="math"&gt;\(\omega\)&lt;/span&gt;, the quantum energy levels are given by&lt;/p&gt;
+&lt;div class="math"&gt;$$ E_{n} = \frac{1}{2} \hbar \omega + n \hbar \omega $$&lt;/div&gt;
+&lt;p&gt;Here &lt;span class="math"&gt;\(n\)&lt;/span&gt; is a non-negative integer. The partition function for a &lt;strong&gt;single oscillator&lt;/strong&gt; is&lt;/p&gt;
+&lt;div class="math"&gt;$$ Z(\beta) = \exp\left( -\frac{1}{2} \beta \hbar \omega \right) \frac{1}{1 - \exp(-\beta \hbar \omega)} $$&lt;/div&gt;
+&lt;p&gt;If you have a system of many independent oscillators, then the partition function is the product of such factors:&lt;/p&gt;
+&lt;div class="math"&gt;$$ Z(\beta) = \prod_{j} Z_{j}(\beta) = \prod_{j} \exp\left( -\frac{1}{2} \beta \hbar \omega_{j} \right) \frac{1}{1 - \exp(-\beta \hbar \omega_{j})} $$&lt;/div&gt;
+&lt;p&gt;Using the above angular frequency proportional to the logarithm of a prime number gives&lt;/p&gt;
+&lt;div class="math"&gt;$$ Z(\beta) = \prod_{j = 1}^{\infty} \exp\left( -\frac{1}{2} \beta a \log(p_{j})  \right) \frac{1}{1 - (p_{j})^{\beta a}} = \zeta(\beta a) \prod_{j = 1}^{\infty} \exp\left( -\frac{1}{2} \beta a \log(p_{j})  \right) $$&lt;/div&gt;
+&lt;p&gt;Comparing this with a previous expression suggest that the parameter &lt;span class="math"&gt;\(b\)&lt;/span&gt; in the logarithmic energy sequence must be related to &lt;span class="math"&gt;\(a\)&lt;/span&gt; via:&lt;/p&gt;
+&lt;div class="math"&gt;$$ b = \frac{1}{2} a \sum_{j = 1}^{\infty} \log(p_{j}) $$&lt;/div&gt;
+&lt;p&gt;That is, proportional to the sum of the logarithm of prime numbers. This series is, of course, divergent. But, similar to the divergent sum of positive integers,&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sum_{n = 1}^{\infty} n = -\frac{1}{12} + ... $$&lt;/div&gt;
+&lt;p&gt;the logarithm sum can be regularized to give&lt;/p&gt;
+&lt;div class="math"&gt;$$ \sum_{j = 1}^{\infty} \log(p_{j}) = 2 \log(2 \pi) + ... $$&lt;/div&gt;
+&lt;p&gt;(This need for regularization when working with infinitely-many oscillators is also present in traditional string theory!) Thus&lt;/p&gt;
+&lt;div class="math"&gt;$$ b = a \log(2 \pi) $$&lt;/div&gt;
+&lt;p&gt;With this, the logarithmic energy sequence can be written as&lt;/p&gt;
+&lt;div class="math"&gt;$$ E_{n} = a \log(2 \pi n) $$&lt;/div&gt;
+&lt;p&gt;Since &lt;span class="math"&gt;\(a\)&lt;/span&gt; has units of energy, you can introduce a frequency parameter &lt;span class="math"&gt;\(\Omega\)&lt;/span&gt; via&lt;/p&gt;
+&lt;div class="math"&gt;$$ a = \hbar \Omega $$&lt;/div&gt;
+&lt;p&gt;The oscillator frequencies are&lt;/p&gt;
+&lt;div class="math"&gt;$$ \omega_{j} = \Omega \log(p_{j}) $$&lt;/div&gt;
+&lt;p&gt;Alright, so the picture in terms of distinct oscillators is not that crazy.&lt;/p&gt;
+&lt;p&gt;Any internet search about quantum mechanics and the Riemann zeta function will take you to the Hilbert-Pólya conjecture, and the work of Michael Berry and collaborators. The idea is, in a simplified way, to use hermiticity of observables in quantum mechanics to show that the non-trivial zeroes of the Riemann zeta function all have real part equal to &lt;span class="math"&gt;\(1/2\)&lt;/span&gt;. Berry and Keating suggested the dilatation operator as a possible candidate for an operator to analyze. The dilatation operator is a general operator that can be constructed from position and momentum operators for any system. Since it is part of the conformal algebra, it should be a hermitian operator. A hermitian combination inspired by the classical analog in 1D is&lt;/p&gt;
+&lt;div class="math"&gt;$$ D = - \frac{1}{2}(X P + PX) $$&lt;/div&gt;
+&lt;p&gt;Note that this operator has units of action and/or angular momentum. Position and momentum satisfy the Heisenberg commutator:&lt;/p&gt;
+&lt;div class="math"&gt;$$ XP - PX = i \hbar I $$&lt;/div&gt;
+&lt;p&gt;Here &lt;span class="math"&gt;\(I\)&lt;/span&gt; is the identity operator. Using the Heisenberg commutator allows you to write&lt;/p&gt;
+&lt;div class="math"&gt;$$ D = \frac{i \hbar}{2} I - XP $$&lt;/div&gt;
+&lt;p&gt;Let&lt;/p&gt;
+&lt;div class="math"&gt;$$ R \equiv XP = \frac{i \hbar}{2} I - D$$&lt;/div&gt;
+&lt;p&gt;The previous equation states that &lt;span class="math"&gt;\(D\)&lt;/span&gt; and &lt;span class="math"&gt;\(R\)&lt;/span&gt; share eigenvectors. Note that&lt;/p&gt;
+&lt;div class="math"&gt;$$ R^{\dagger} = PX = XP - i \hbar I = R - i \hbar I = -\frac{i \hbar}{2} I - D $$&lt;/div&gt;
+&lt;p&gt;This means that &lt;span class="math"&gt;\(R\)&lt;/span&gt; and &lt;span class="math"&gt;\(R^{\dagger}\)&lt;/span&gt; also share eigenvectors. Since &lt;span class="math"&gt;\(D\)&lt;/span&gt; is hermitian, the eigenvectors have &lt;strong&gt;real&lt;/strong&gt; eigenvalues:&lt;/p&gt;
+&lt;div class="math"&gt;$$ D \vert \tau \rangle = \hbar \tau \vert \tau \rangle $$&lt;/div&gt;
+&lt;p&gt;Since &lt;span class="math"&gt;\(R\)&lt;/span&gt; is non-hermitian, the eigenvectors have &lt;strong&gt;complex&lt;/strong&gt; eigenvalues. However, the eigenvectors of &lt;span class="math"&gt;\(D\)&lt;/span&gt; and &lt;span class="math"&gt;\(R\)&lt;/span&gt; are the same. It follows that&lt;/p&gt;
+&lt;div class="math"&gt;$$ R \vert \tau \rangle = \left( \frac{i \hbar}{2}I - D \right) \vert \tau \rangle = i \hbar \left( \frac{1}{2} + i \tau \right) \vert \tau \rangle $$&lt;/div&gt;
+&lt;p&gt;Let&lt;/p&gt;
+&lt;div class="math"&gt;$$ \rho \equiv \frac{1}{2} + i \tau $$&lt;/div&gt;
+&lt;p&gt;You also have&lt;/p&gt;
+&lt;div class="math"&gt;$$ R^{\dagger} \vert \tau \rangle = \left( R - i \hbar I \right) \vert \tau \rangle = i \hbar \left(\rho - 1 \right) \vert \tau \rangle = - i \hbar \left( \frac{1}{2} - i \tau \right) \vert \tau \rangle $$&lt;/div&gt;
+&lt;p&gt;Since &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; is real, the real part of &lt;span class="math"&gt;\(\rho\)&lt;/span&gt; is &lt;span class="math"&gt;\(1/2\)&lt;/span&gt;. The expression for &lt;span class="math"&gt;\(\rho\)&lt;/span&gt; suggests a relation with a zero of the Riemann zeta function. The trouble is that &lt;span class="math"&gt;\(D\)&lt;/span&gt; usually has a &lt;strong&gt;continuous&lt;/strong&gt; spectrum, so it is not as simple as saying that the eigenvalues of &lt;span class="math"&gt;\(D\)&lt;/span&gt; are related to the discrete sequence of zeroes.&lt;/p&gt;
+&lt;p&gt;The above discussion applies generally to any system. The quantum harmonic oscillator has a &lt;strong&gt;discrete&lt;/strong&gt; energy spectrum. This energy spectrum is bounded from below: there is a positive value &lt;span class="math"&gt;\(E_{0}\)&lt;/span&gt; and all the energy eigenvalues satisfy &lt;span class="math"&gt;\(E_{0} \leq E_{n}\)&lt;/span&gt;. The harmonic potential is globally defined across the entire &lt;span class="math"&gt;\(x\)&lt;/span&gt;-axis. When the energy eigenfunctions are written in the position basis, they are also defined across the entire &lt;span class="math"&gt;\(x\)&lt;/span&gt;-axis. However, each position-basis energy eigenfunction will have (or lack) a discrete set of node points where the wave function vanishes. It turns out that you can relate the location of these node points, which will form a &lt;strong&gt;discrete&lt;/strong&gt; set of position values, to the energy eigenvalue.&lt;/p&gt;
+&lt;p&gt;Again, the partition function is defined as the trace of the Boltzmann operator. This trace is most conveniently calculated with the energy eigenvectors. In the case of the logarithmic energy spectrum sequence, the trace gives the Riemann zeta function in the traditional series form that is only valid beyond the critical strip. One idea is that the trace can be equivalently calculated with the dilatation eigenvectors to give essentially the same result, but maybe giving the Riemann zeta function in a form that is valid inside the critical strip, thus exhibiting the zeroes.&lt;/p&gt;
+&lt;p&gt;This idea led me to take a closer look at the operators involved for a single oscillator degree of freedom.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Physics"></category><category term="zeta"></category></entry><entry><title>Winter Break 2024 (Zeta Part 1)</title><link href="https://meirizarrygelpi.github.io/posts/physics/jan-feb-2024/" rel="alternate"></link><published>2024-05-10T00:00:00-04:00</published><updated>2024-05-10T00:00:00-04:00</updated><author><name>M.E. Irizarry-Gelpí</name></author><id>tag:meirizarrygelpi.github.io,2024-05-10:/posts/physics/jan-feb-2024/</id><summary type="html">&lt;p&gt;How I spent part of my "sabbatical" break.&lt;/p&gt;</summary><content type="html">&lt;p&gt;On December 2023 I finished teaching Thermal Physics at Sarah Lawrence College. I had not bother to find a job for spring 2024, so I began an adjunct sabbatical term after 15 semesters of teaching at various institutions.&lt;/p&gt;
 &lt;p&gt;After New Years Eve I eventually caught whatever sickness my family had (a minor cold). I wrote evaluations, I submitted grades and I concluded with my responsibilities. I was free to do whatever I wanted.&lt;/p&gt;
 &lt;p&gt;One of the last topics covered in the Thermal Physics course was applications of the partition function formalism. For the final exam, I wanted students to do a non-trivial problem. In class we found the partition function for a two-state system, and also for the quantum harmonic oscillator. The energy levels for the quantum harmonic oscillator are evenly spaced:&lt;/p&gt;
 &lt;div class="math"&gt;$$ E(n) = \hbar \omega \left( n + \frac{1}{2} \right) $$&lt;/div&gt;

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Dilatation operators (Zeta Part 2) | M.E. Irizarry-Gelpí
+</title>
+  <link rel="canonical" href="https://meirizarrygelpi.github.io/posts/physics/dilatation-zeta/index.html">
+
+
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/bootswatch/cerulean.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/pygments/dracula.min.css">
+  <link rel="stylesheet" href="https://meirizarrygelpi.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/main.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://meirizarrygelpi.github.io/feeds/physics.atom.xml">  
+  <meta name="description" content="Dilatation operators and the Riemann zeta function.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://meirizarrygelpi.github.io/">
+        <img class="img-fluid rounded" src=https://meirizarrygelpi.github.io/images/melvin-prisma.jpg alt="M.E. Irizarry-Gelpí">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://meirizarrygelpi.github.io/">M.E. Irizarry-Gelpí</a></h1>
+      <p class="text-muted">Physics impostor. Mathematics interloper. Husband. Father.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/projects/" target="_blank">projects</a></li>
+          <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/pages/about/" target="_blank">about</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/melvineloy" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-bitbucket" href="https://bitbucket.org/meirizarrygelpi" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fas fa-rss" href="https://meirizarrygelpi.github.io/feeds/main.xml" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Dilatation operators (Zeta Part 2)
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2024-05-16T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Thu 16 May 2024
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://meirizarrygelpi.github.io/category/physics.html">Physics</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="https://meirizarrygelpi.github.io/tag/zeta.html">#zeta</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>In the previous post I mentioned the logarithmic energy spectrum sequence:</p>
+<div class="math">$$ E_{n} = b + a \log(n) $$</div>
+<p>This energy spectrum sequence is very different from the ones encountered in a quantum mechanics course. I was pleasantly surprised to learn that the quantum harmonic oscillator is actually relevant to this problem, because every positive integer can be uniquely factorized into prime factors:</p>
+<div class="math">$$ \log(n) = \sum_{j = 1}^{\infty} k_{j} \log(p_{j}) $$</div>
+<p>Here <span class="math">\(p_{j}\)</span> is the <span class="math">\(j\)</span>-th prime number and <span class="math">\(k_{j}\)</span> is a non-negative integer.</p>
+<p>This logarithmic energy sequence is related to the Riemann zeta function. Consider the Boltzmann operator:</p>
+<div class="math">$$ B(\beta) \equiv \exp(-\beta H) $$</div>
+<p>The trace of this operator corresponds to the partition function:</p>
+<div class="math">$$ Z(\beta) = \operatorname{tr}(B) $$</div>
+<p>Since the Boltzmann operator involves the hamiltonian operator <span class="math">\(H\)</span>, it makes sense to calculate the trace with the energy eigenstates:</p>
+<div class="math">$$ H \vert n \rangle = E_{n} \vert n \rangle $$</div>
+<p>Then:</p>
+<div class="math">$$ Z(\beta) = \sum_{n = 1}^{\infty} \langle n \vert B(\beta) \vert n \rangle = \exp(-\beta b) \zeta(\beta a) $$</div>
+<p>Here <span class="math">\(\zeta\)</span> is the Riemann zeta function. Due to the Euler product formula, you can write this partition function as an infinite product of distinct harmonic oscillator partition functions with angular frequencies given by</p>
+<div class="math">$$ \omega_{j} = \frac{a \log(p_{j})}{\hbar} $$</div>
+<p>That is, each oscillator has a prime number associated to it. Since there are infinitely-many prime numbers, there are infinitely-many oscillators.</p>
+<p>One of my first thoughts was along the lines of: "There is a string theory hiding inside the Riemann zeta function". A string because you need an infinite number of degrees of freedom, and these degrees of freedom appear to be oscillating harmonically in this particular dynamical regime. This realization was very exciting. However, harmonic oscillators are kind of boring, since they interact trivially. In fact, thinking about strings is kind of dicey: the traditional string has vibrational frequencies that are evenly-spaced. This "zeta string" has vibrational frequencies that are not evenly-spaced. Since these frequencies are associated with prime numbers, the spacing is somewhat unpredictable (i.e. the gaps between primes is not uniform). Indeed, one of the most important properties of the Riemann zeta function is its connection to the distribution of prime numbers.</p>
+<p>Given a harmonic oscillator degree of freedom with classical angular frequency <span class="math">\(\omega\)</span>, the quantum energy levels are given by</p>
+<div class="math">$$ E_{n} = \frac{1}{2} \hbar \omega + n \hbar \omega $$</div>
+<p>Here <span class="math">\(n\)</span> is a non-negative integer. The partition function for a <strong>single oscillator</strong> is</p>
+<div class="math">$$ Z(\beta) = \exp\left( -\frac{1}{2} \beta \hbar \omega \right) \frac{1}{1 - \exp(-\beta \hbar \omega)} $$</div>
+<p>If you have a system of many independent oscillators, then the partition function is the product of such factors:</p>
+<div class="math">$$ Z(\beta) = \prod_{j} Z_{j}(\beta) = \prod_{j} \exp\left( -\frac{1}{2} \beta \hbar \omega_{j} \right) \frac{1}{1 - \exp(-\beta \hbar \omega_{j})} $$</div>
+<p>Using the above angular frequency proportional to the logarithm of a prime number gives</p>
+<div class="math">$$ Z(\beta) = \prod_{j = 1}^{\infty} \exp\left( -\frac{1}{2} \beta a \log(p_{j})  \right) \frac{1}{1 - (p_{j})^{\beta a}} = \zeta(\beta a) \prod_{j = 1}^{\infty} \exp\left( -\frac{1}{2} \beta a \log(p_{j})  \right) $$</div>
+<p>Comparing this with a previous expression suggest that the parameter <span class="math">\(b\)</span> in the logarithmic energy sequence must be related to <span class="math">\(a\)</span> via:</p>
+<div class="math">$$ b = \frac{1}{2} a \sum_{j = 1}^{\infty} \log(p_{j}) $$</div>
+<p>That is, proportional to the sum of the logarithm of prime numbers. This series is, of course, divergent. But, similar to the divergent sum of positive integers,</p>
+<div class="math">$$ \sum_{n = 1}^{\infty} n = -\frac{1}{12} + ... $$</div>
+<p>the logarithm sum can be regularized to give</p>
+<div class="math">$$ \sum_{j = 1}^{\infty} \log(p_{j}) = 2 \log(2 \pi) + ... $$</div>
+<p>(This need for regularization when working with infinitely-many oscillators is also present in traditional string theory!) Thus</p>
+<div class="math">$$ b = a \log(2 \pi) $$</div>
+<p>With this, the logarithmic energy sequence can be written as</p>
+<div class="math">$$ E_{n} = a \log(2 \pi n) $$</div>
+<p>Since <span class="math">\(a\)</span> has units of energy, you can introduce a frequency parameter <span class="math">\(\Omega\)</span> via</p>
+<div class="math">$$ a = \hbar \Omega $$</div>
+<p>The oscillator frequencies are</p>
+<div class="math">$$ \omega_{j} = \Omega \log(p_{j}) $$</div>
+<p>Alright, so the picture in terms of distinct oscillators is not that crazy.</p>
+<p>Any internet search about quantum mechanics and the Riemann zeta function will take you to the Hilbert-Pólya conjecture, and the work of Michael Berry and collaborators. The idea is, in a simplified way, to use hermiticity of observables in quantum mechanics to show that the non-trivial zeroes of the Riemann zeta function all have real part equal to <span class="math">\(1/2\)</span>. Berry and Keating suggested the dilatation operator as a possible candidate for an operator to analyze. The dilatation operator is a general operator that can be constructed from position and momentum operators for any system. Since it is part of the conformal algebra, it should be a hermitian operator. A hermitian combination inspired by the classical analog in 1D is</p>
+<div class="math">$$ D = - \frac{1}{2}(X P + PX) $$</div>
+<p>Note that this operator has units of action and/or angular momentum. Position and momentum satisfy the Heisenberg commutator:</p>
+<div class="math">$$ XP - PX = i \hbar I $$</div>
+<p>Here <span class="math">\(I\)</span> is the identity operator. Using the Heisenberg commutator allows you to write</p>
+<div class="math">$$ D = \frac{i \hbar}{2} I - XP $$</div>
+<p>Let</p>
+<div class="math">$$ R \equiv XP = \frac{i \hbar}{2} I - D$$</div>
+<p>The previous equation states that <span class="math">\(D\)</span> and <span class="math">\(R\)</span> share eigenvectors. Note that</p>
+<div class="math">$$ R^{\dagger} = PX = XP - i \hbar I = R - i \hbar I = -\frac{i \hbar}{2} I - D $$</div>
+<p>This means that <span class="math">\(R\)</span> and <span class="math">\(R^{\dagger}\)</span> also share eigenvectors. Since <span class="math">\(D\)</span> is hermitian, the eigenvectors have <strong>real</strong> eigenvalues:</p>
+<div class="math">$$ D \vert \tau \rangle = \hbar \tau \vert \tau \rangle $$</div>
+<p>Since <span class="math">\(R\)</span> is non-hermitian, the eigenvectors have <strong>complex</strong> eigenvalues. However, the eigenvectors of <span class="math">\(D\)</span> and <span class="math">\(R\)</span> are the same. It follows that</p>
+<div class="math">$$ R \vert \tau \rangle = \left( \frac{i \hbar}{2}I - D \right) \vert \tau \rangle = i \hbar \left( \frac{1}{2} + i \tau \right) \vert \tau \rangle $$</div>
+<p>Let</p>
+<div class="math">$$ \rho \equiv \frac{1}{2} + i \tau $$</div>
+<p>You also have</p>
+<div class="math">$$ R^{\dagger} \vert \tau \rangle = \left( R - i \hbar I \right) \vert \tau \rangle = i \hbar \left(\rho - 1 \right) \vert \tau \rangle = - i \hbar \left( \frac{1}{2} - i \tau \right) \vert \tau \rangle $$</div>
+<p>Since <span class="math">\(\tau\)</span> is real, the real part of <span class="math">\(\rho\)</span> is <span class="math">\(1/2\)</span>. The expression for <span class="math">\(\rho\)</span> suggests a relation with a zero of the Riemann zeta function. The trouble is that <span class="math">\(D\)</span> usually has a <strong>continuous</strong> spectrum, so it is not as simple as saying that the eigenvalues of <span class="math">\(D\)</span> are related to the discrete sequence of zeroes.</p>
+<p>The above discussion applies generally to any system. The quantum harmonic oscillator has a <strong>discrete</strong> energy spectrum. This energy spectrum is bounded from below: there is a positive value <span class="math">\(E_{0}\)</span> and all the energy eigenvalues satisfy <span class="math">\(E_{0} \leq E_{n}\)</span>. The harmonic potential is globally defined across the entire <span class="math">\(x\)</span>-axis. When the energy eigenfunctions are written in the position basis, they are also defined across the entire <span class="math">\(x\)</span>-axis. However, each position-basis energy eigenfunction will have (or lack) a discrete set of node points where the wave function vanishes. It turns out that you can relate the location of these node points, which will form a <strong>discrete</strong> set of position values, to the energy eigenvalue.</p>
+<p>Again, the partition function is defined as the trace of the Boltzmann operator. This trace is most conveniently calculated with the energy eigenvectors. In the case of the logarithmic energy spectrum sequence, the trace gives the Riemann zeta function in the traditional series form that is only valid beyond the critical strip. One idea is that the trace can be equivalently calculated with the dilatation eigenvectors to give essentially the same result, but maybe giving the Riemann zeta function in a form that is valid inside the critical strip, thus exhibiting the zeroes.</p>
+<p>This idea led me to take a closer look at the operators involved for a single oscillator degree of freedom.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://meirizarrygelpi.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>
